@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1.Bearer: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-bearer.html" title="The /org/freedesktop/ModemManager/Bearers objects">
+<link rel="prev" href="ref-dbus-object-bearer.html" title="The /org/freedesktop/ModemManager/Bearers objects">
+<link rel="next" href="ref-dbus-object-sim.html" title="The /org/freedesktop/ModemManager/SIMs objects">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Bearer.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Bearer.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-bearer.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ref-dbus-object-bearer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-dbus-object-sim.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1.Bearer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1-Bearer.top_of_page"></a>org.freedesktop.ModemManager1.Bearer</span></h2>
+<p>org.freedesktop.ModemManager1.Bearer — The ModemManager Bearer interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-method-org-freedesktop-ModemManager1-Bearer.Connect" title="The Connect() method">Connect</a>    ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-method-org-freedesktop-ModemManager1-Bearer.Disconnect" title="The Disconnect() method">Disconnect</a> ();
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.6.3.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Interface" title='The "Interface" property'>Interface</a>             readable   s
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Connected" title='The "Connected" property'>Connected</a>             readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.ConnectionError" title='The "ConnectionError" property'>ConnectionError</a>       readable   (ss)
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Suspended" title='The "Suspended" property'>Suspended</a>             readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Multiplexed" title='The "Multiplexed" property'>Multiplexed</a>           readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip4Config" title='The "Ip4Config" property'>Ip4Config</a>             readable   a{sv}
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip6Config" title='The "Ip6Config" property'>Ip6Config</a>             readable   a{sv}
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Stats" title='The "Stats" property'>Stats</a>                 readable   a{sv}
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.ReloadStatsSupported" title='The "ReloadStatsSupported" property'>ReloadStatsSupported</a>  readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.IpTimeout" title='The "IpTimeout" property'>IpTimeout</a>             readable   u
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.BearerType" title='The "BearerType" property'>BearerType</a>            readable   u
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.ProfileId" title='The "ProfileId" property'>ProfileId</a>             readable   i
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Properties" title='The "Properties" property'>Properties</a>            readable   a{sv}
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1-Bearer"></a><h2>Description</h2>
+<p>
+This interface provides access to specific actions that may be performed
+on available bearers.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1.Bearer"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Bearer.Connect"></a><h3>The Connect() method</h3>
+<pre class="programlisting">
+Connect ();
+</pre>
+<p>
+Requests activation of a packet data connection with the network using
+this bearer's properties. Upon successful activation, the modem can
+send and receive packet data and, depending on the addressing
+capability of the modem, a connection manager may need to start PPP,
+perform DHCP, or assign the IP address returned by the modem to the
+data interface. Upon successful return, the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip4Config" title='The "Ip4Config" property'>"Ip4Config"</a>
+and/or
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip6Config" title='The "Ip6Config" property'>"Ip6Config"</a>
+properties become valid and may contain IP configuration information for
+the data interface associated with this bearer.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Bearer.Disconnect"></a><h3>The Disconnect() method</h3>
+<pre class="programlisting">
+Disconnect ();
+</pre>
+<p>
+Disconnect and deactivate this packet data connection.
+</p>
+<p>
+Any ongoing data session will be terminated and IP addresses become
+invalid when this method is called.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.ModemManager1.Bearer"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Interface"></a><h3>The "Interface" property</h3>
+<pre class="programlisting">
+Interface  readable   s
+</pre>
+<p>
+The operating system name for the network data interface that provides
+packet data using this bearer.
+</p>
+<p>
+Connection managers must configure this interface depending on the IP
+<code class="literal">"method"</code> given by the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip4Config" title='The "Ip4Config" property'>"Ip4Config"</a>
+or
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip6Config" title='The "Ip6Config" property'>"Ip6Config"</a>
+properties set by bearer activation.
+</p>
+<p>
+If <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-BEARER-IP-METHOD-STATIC:CAPS">MM_BEARER_IP_METHOD_STATIC</a>
+or
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-BEARER-IP-METHOD-DHCP:CAPS">MM_BEARER_IP_METHOD_DHCP</a>
+methods are given, the interface
+will be an ethernet-style interface suitable for DHCP or setting static
+IP configuration on, while if the
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-BEARER-IP-METHOD-PPP:CAPS">MM_BEARER_IP_METHOD_PPP</a>
+method is given, the interface
+will be a serial TTY which must then have PPP run over it.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Connected"></a><h3>The "Connected" property</h3>
+<pre class="programlisting">
+Connected  readable   b
+</pre>
+<p>
+Indicates whether or not the bearer is connected and thus whether
+packet data communication using this bearer is possible.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.ConnectionError"></a><h3>The "ConnectionError" property</h3>
+<pre class="programlisting">
+ConnectionError  readable   (ss)
+</pre>
+<p>
+Provides additional information specifying the reason why the modem is
+not connected (either due to a failed connection attempt, or due to a
+a network initiated disconnection).
+</p>
+<p>
+The value is composed of two strings: the registered DBus error name,
+and an optional error message.
+</p>
+<p>
+Since: 1.18
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Suspended"></a><h3>The "Suspended" property</h3>
+<pre class="programlisting">
+Suspended  readable   b
+</pre>
+<p>
+In some devices, packet data service will be suspended while the device
+is handling other communication, like a voice call. If packet data
+service is suspended (but not deactivated) this property will be <code class="constant">TRUE</code>.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Multiplexed"></a><h3>The "Multiplexed" property</h3>
+<pre class="programlisting">
+Multiplexed  readable   b
+</pre>
+<p>
+This property will be <code class="constant">TRUE</code> if the bearer is connected through a
+multiplexed network link.
+</p>
+<p>
+Since: 1.18
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip4Config"></a><h3>The "Ip4Config" property</h3>
+<pre class="programlisting">
+Ip4Config  readable   a{sv}
+</pre>
+<p>
+If the bearer was configured for IPv4 addressing, upon activation this
+property contains the addressing details for assignment to the data
+interface.
+</p>
+<p>
+Mandatory items include:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"method"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerIpMethod" title="enum MMBearerIpMethod">MMBearerIpMethod</a>,
+given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+If the bearer specifies configuration via PPP or DHCP, only the
+<code class="literal">"method"</code> item is guaranteed to be present.
+</p>
+<p>
+Additional items which are only applicable when using the
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-BEARER-IP-METHOD-STATIC:CAPS">MM_BEARER_IP_METHOD_STATIC</a>
+method are:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"address"</code></span></p></td>
+<td>
+IP address, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"prefix"</code></span></p></td>
+<td>
+Numeric CIDR network prefix (ie, 24, 32, etc), given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns1"</code></span></p></td>
+<td>
+IP address of the first DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns2"</code></span></p></td>
+<td>
+IP address of the second DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns3"</code></span></p></td>
+<td>
+IP address of the third DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"gateway"</code></span></p></td>
+<td>
+IP address of the default gateway, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+This property may also include the following items when such information is available:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"mtu"</code></span></p></td>
+<td>
+Maximum transmission unit (MTU), given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Ip6Config"></a><h3>The "Ip6Config" property</h3>
+<pre class="programlisting">
+Ip6Config  readable   a{sv}
+</pre>
+<p>
+If the bearer was configured for IPv6 addressing, upon activation this
+property contains the addressing details for assignment to the data
+interface.
+</p>
+<p>
+Mandatory items include:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"method"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerIpMethod" title="enum MMBearerIpMethod">MMBearerIpMethod</a>,
+given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+If the bearer specifies configuration via PPP or DHCP, often only the
+<code class="literal">"method"</code> item will be present.  IPv6 SLAAC should
+be used to retrieve correct addressing and DNS information via Router
+Advertisements and DHCPv6.  In some cases an IPv6 Link-Local
+<code class="literal">"address"</code> item will be present, which should be
+assigned to the data port before performing SLAAC, as the mobile network
+may expect SLAAC setup to use this address.
+</p>
+<p>
+Additional items which are usually only applicable when using the
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-BEARER-IP-METHOD-STATIC:CAPS">MM_BEARER_IP_METHOD_STATIC</a>
+method are:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"address"</code></span></p></td>
+<td>
+IP address, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"prefix"</code></span></p></td>
+<td>
+Numeric CIDR network prefix (ie, 24, 32, etc), given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns1"</code></span></p></td>
+<td>
+IP address of the first DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns2"</code></span></p></td>
+<td>
+IP address of the second DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"dns3"</code></span></p></td>
+<td>
+IP address of the third DNS server, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"gateway"</code></span></p></td>
+<td>
+IP address of the default gateway, given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+This property may also include the following items when such information is available:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"mtu"</code></span></p></td>
+<td>
+Maximum transmission unit (MTU), given as an unsigned integer value (signature <code class="literal">"u"</code>). Since 1.4.
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Stats"></a><h3>The "Stats" property</h3>
+<pre class="programlisting">
+Stats  readable   a{sv}
+</pre>
+<p>
+If the modem supports it, this property will show statistics associated
+to the bearer.
+</p>
+<p>
+There are two main different statistic types reported: either applicable
+to the ongoing connection, or otherwise compiled for all connections
+that have been done on this bearer object.
+</p>
+<p>
+When the connection is disconnected automatically or explicitly by the
+user, the values applicable to the ongoing connection will show the last
+values cached.
+</p>
+<p>
+The following items may appear in the list of statistics:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"rx-bytes"</code></span></p></td>
+<td>
+Number of bytes received without error in the ongoing connection,
+given as an unsigned 64-bit integer value (signature
+<code class="literal">"t"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"tx-bytes"</code></span></p></td>
+<td>
+Number of bytes transmitted without error in the ongoing
+connection, given as an unsigned 64-bit integer value (signature
+<code class="literal">"t"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"start-date"</code></span></p></td>
+<td>
+Timestamp indicating when the ongoing connection started, given
+as an unsigned 64-bit integer value representing seconds
+since the epoch (signature <code class="literal">"t"</code>).
+Since 1.20.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"duration"</code></span></p></td>
+<td>
+Duration of the ongoing connection, in seconds, given as an
+unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"attempts"</code></span></p></td>
+<td>
+Total number of connection attempts done with this bearer, given
+as an unsigned integer value (signature <code class="literal">"u"</code>).
+Since 1.14.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"failed-attempts"</code></span></p></td>
+<td>
+Number of failed connection attempts done with this bearer,
+given as an unsigned integer value (signature
+<code class="literal">"u"</code>). Since 1.14.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"total-rx-bytes"</code></span></p></td>
+<td>
+Total number of bytes received without error in all the successful
+connection establishments, given as an unsigned 64-bit integer
+value (signature <code class="literal">"t"</code>). Since 1.14.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"total-tx-bytes"</code></span></p></td>
+<td>
+Total number of bytes transmitted without error in all the
+successful connection establishments, given as an unsigned 64-bit
+integer value (signature <code class="literal">"t"</code>). Since 1.14.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"total-duration"</code></span></p></td>
+<td>
+Total duration of all the successful connection establishments, in
+seconds, given as an unsigned integer value (signature
+<code class="literal">"u"</code>). Since 1.14.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"uplink-speed"</code></span></p></td>
+<td>
+Uplink bit rate negotiated with network, in bits per second, given
+as an unsigned 64-bit integer value (signature <code class="literal">"t"</code>).
+Since 1.20.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"downlink-speed"</code></span></p></td>
+<td>
+Downlink bit rate negotiated with network, in bits per second, given
+as an unsigned 64-bit integer value (signature <code class="literal">"t"</code>).
+Since 1.20.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.ReloadStatsSupported"></a><h3>The "ReloadStatsSupported" property</h3>
+<pre class="programlisting">
+ReloadStatsSupported  readable   b
+</pre>
+<p>
+Indicates whether reloading ongoing statistics is supported or not.
+</p>
+<p>
+This property applies exclusively to the statistics that are queried from
+the modem periodically; i.e. "rx-bytes", "tx-bytes", "uplink-speed" and
+"downlink-speed".
+</p>
+<p>
+The property is initialized to a fixed value as soon as the first
+connection attempt has successfully finished. Reading this value before
+the first successful connection attempt will always report <code class="constant">FALSE</code>.
+</p>
+<p>
+Since: 1.20
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.IpTimeout"></a><h3>The "IpTimeout" property</h3>
+<pre class="programlisting">
+IpTimeout  readable   u
+</pre>
+<p>
+Maximum time to wait for a successful IP establishment, when PPP is used.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.BearerType"></a><h3>The "BearerType" property</h3>
+<pre class="programlisting">
+BearerType  readable   u
+</pre>
+<p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerType" title="enum MMBearerType">MMBearerType</a>
+</p>
+<p>
+Since: 1.10
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.ProfileId"></a><h3>The "ProfileId" property</h3>
+<pre class="programlisting">
+ProfileId  readable   i
+</pre>
+<p>
+The profile ID this bearer object is associated with, only applicable if
+the modem supports profile management operations, and if the bearer is
+connected.
+</p>
+<p>
+If the bearer is disconnected, or if profile management operations are
+not supported, -1 will be reported.
+</p>
+<p>
+Since: 1.18
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Bearer.Properties"></a><h3>The "Properties" property</h3>
+<pre class="programlisting">
+Properties  readable   a{sv}
+</pre>
+<p>
+List of settings used to create the bearer.
+</p>
+<p>
+Bearers may be implicitly created (e.g. the default initial EPS bearer
+created during the network registration process in 4G and 5G networks)
+or explicitly created by the user (e.g. via the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.html#gdbus-method-org-freedesktop-ModemManager1-Modem.CreateBearer" title="The CreateBearer() method">CreateBearer()</a>
+or <a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Connect" title="The Connect() method">Connect()</a>
+calls).
+</p>
+<p>
+The following settings apply to 3GPP (GSM/UMTS/LTE/5GNR) devices:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"apn"</code></span></p></td>
+<td><p>
+The Access Point Name to use in the connection, given as a string
+value (signature <code class="literal">"s"</code>). For 5G NGC, this field
+contains the Data Network Name (DNN).
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"ip-type"</code></span></p></td>
+<td>
+The IP addressing type to use, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerIpFamily" title="enum MMBearerIpFamily">MMBearerIpFamily</a>
+value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"apn-type"</code></span></p></td>
+<td>
+The purposes of the specified APN, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerApnType" title="enum MMBearerApnType">MMBearerApnType</a>
+value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"allowed-auth"</code></span></p></td>
+<td>
+The authentication method to use, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerAllowedAuth" title="enum MMBearerAllowedAuth">MMBearerAllowedAuth</a>
+value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"user"</code></span></p></td>
+<td>
+The user name (if any) required by the network, given as a string
+value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"password"</code></span></p></td>
+<td>
+The password (if any) required by the network, given as a string
+value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"access-type-preference"</code></span></p></td>
+<td><p>
+Access type preference for 5G devices, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerAccessTypePreference" title="enum MMBearerAccessTypePreference">MMBearerAccessTypePreference</a>
+value (signature <code class="literal">"u"</code>. Since 1.20.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"roaming-allowance"</code></span></p></td>
+<td><p>
+Roaming allowance, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerRoamingAllowance" title="enum MMBearerRoamingAllowance">MMBearerRoamingAllowance</a>
+value (signature <code class="literal">"u"</code>. If supported, this setting should
+be used instead of 'allow-roaming'. Since 1.20.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"profile-id"</code></span></p></td>
+<td>
+The ID of the 3GPP profile to connect to (signature
+<code class="literal">"i"</code>), as given in the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.List" title="The List() method">profile list</a>.
+In this case, if additional profile settings are given in the properties
+and they already exist in the profile (e.g. <code class="literal">"apn"</code>),
+the new settings will be explicitly ignored; the settings stored in the
+profile itself always take preference. The value -1 is used to
+indicate an invalid or uninitialized profile id. Since 1.18.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"profile-name"</code></span></p></td>
+<td><p>
+The name of the profile, given as a string
+value (signature <code class="literal">"s"</code>).
+This value has no effect on the connection, but can be used by the host
+to identify the profiles. This setting only applies on profile management
+operations, it should not be used as part of the settings of an explicit
+connection attempt. Since 1.20.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"profile-enabled"</code></span></p></td>
+<td><p>
+Boolean flag specifying whether the profile is enabled or disabled,
+given as a boolean value (signature <code class="literal">"b"</code>).
+Profiles that are disabled will not be automatically connected by the
+modem in any way, and attempting to connect them explicitly will fail.
+This setting only applies on profile management operations, it should
+not be used as part of the settings of an explicit connection attempt.
+Since 1.20.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"profile-source"</code></span></p></td>
+<td><p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerProfileSource" title="enum MMBearerProfileSource">MMBearerProfileSource</a>
+value (signature <code class="literal">"u"</code>, specifying how the profile
+was created. This setting only applies on profile management operations,
+it should not be used as part of the settings of an explicit connection
+attempt. Since 1.20.
+</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+The following settings apply to 3GPP2 (CDMA/EVDO) devices:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"rm-protocol"</code></span></p></td>
+<td>
+The protocol of the Rm interface, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemCdmaRmProtocol" title="enum MMModemCdmaRmProtocol">MMModemCdmaRmProtocol</a>
+value (signature <code class="literal">"u"</code>).
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+The following settings apply to all devices types:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"allow-roaming"</code></span></p></td>
+<td>
+Specifies whether the connections are allowed even when the device
+is registered in a roaming (partner or non-partner) network, given as
+a boolean value (signature <code class="literal">"b"</code>). This setting
+applies only to the connection attempts started via
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Connect" title="The Connect() method">Simple.Connect()</a>
+or <a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-method-org-freedesktop-ModemManager1-Bearer.Connect" title="The Connect() method">Bearer.Connect()</a>.
+This is a volatile setting, never stored in the device.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"multiplex"</code></span></p></td>
+<td>
+The multiplex support requested by the user, given as a
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MMBearerMultiplexSupport" title="enum MMBearerMultiplexSupport">MMBearerMultiplexSupport</a>
+value (signature <code class="literal">"u"</code>). Since 1.18.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+The following settings are no longer supported, but they are kept on the
+interface for compatibility purposes:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">"number"</code></span></p></td>
+<td>
+Number to dial for the data connection, given as a string value
+(signature <code class="literal">"s"</code>).
+Deprecated since version 1.10.0.
+</td>
+</tr></tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

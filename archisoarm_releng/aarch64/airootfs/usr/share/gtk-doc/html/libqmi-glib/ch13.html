@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Location Service (LOC): libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="prev" href="libqmi-glib-VOICE-Stop-Continuous-DTMF-response.html" title="VOICE Stop Continuous DTMF response">
+<link rel="next" href="QmiClientLoc.html" title="QmiClientLoc">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="libqmi-glib-VOICE-Stop-Continuous-DTMF-response.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiClientLoc.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.14"></a>Location Service (LOC)</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="QmiClientLoc.html">QmiClientLoc</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the LOC service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-enumerations-and-flags.html">LOC enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the LOC service.</span>
+</dt>
+<dt><span class="section"><a href="ch13.html#id-1.14.4">LOC Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Position-Report-indication.html">LOC Position Report indication</a></span><span class="refpurpose"> — Methods to manage the LOC Position Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-NMEA-indication.html">LOC NMEA indication</a></span><span class="refpurpose"> — Methods to manage the LOC NMEA indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-GNSS-Sv-Info-indication.html">LOC GNSS Sv Info indication</a></span><span class="refpurpose"> — Methods to manage the LOC GNSS Sv Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Engine-State-indication.html">LOC Engine State indication</a></span><span class="refpurpose"> — Methods to manage the LOC Engine State indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Fix-Recurrence-Type-indication.html">LOC Fix Recurrence Type indication</a></span><span class="refpurpose"> — Methods to manage the LOC Fix Recurrence Type indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Operation-Mode-indication.html">LOC Get Operation Mode indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Operation Mode indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Operation-Mode-indication.html">LOC Set Operation Mode indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Operation Mode indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Engine-Lock-indication.html">LOC Get Engine Lock indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Engine Lock indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Engine-Lock-indication.html">LOC Set Engine Lock indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Engine Lock indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-NMEA-Types-indication.html">LOC Set NMEA Types indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set NMEA Types indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-NMEA-Types-indication.html">LOC Get NMEA Types indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get NMEA Types indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Server-indication.html">LOC Set Server indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Server indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Server-indication.html">LOC Get Server indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Server indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Predicted-Orbits-Data-indication.html">LOC Inject Predicted Orbits Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Predicted Orbits Data indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Predicted-Orbits-Data-Source-indication.html">LOC Get Predicted Orbits Data Source indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Predicted Orbits Data Source indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Delete-Assistance-Data-indication.html">LOC Delete Assistance Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Delete Assistance Data indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Xtra-Data-indication.html">LOC Inject Xtra Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Xtra Data indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch13s02.html">LOC Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Start-response.html">LOC Start response</a></span><span class="refpurpose"> — Methods to manage the LOC Start response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Stop-response.html">LOC Stop response</a></span><span class="refpurpose"> — Methods to manage the LOC Stop response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Register-Events-response.html">LOC Register Events response</a></span><span class="refpurpose"> — Methods to manage the LOC Register Events response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Operation-Mode-response.html">LOC Get Operation Mode response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Operation Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Operation-Mode-response.html">LOC Set Operation Mode response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Operation Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Engine-Lock-response.html">LOC Get Engine Lock response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Engine Lock response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Engine-Lock-response.html">LOC Set Engine Lock response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Engine Lock response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-NMEA-Types-response.html">LOC Set NMEA Types response</a></span><span class="refpurpose"> — Methods to manage the LOC Set NMEA Types response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-NMEA-Types-response.html">LOC Get NMEA Types response</a></span><span class="refpurpose"> — Methods to manage the LOC Get NMEA Types response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Server-response.html">LOC Set Server response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Server response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Server-response.html">LOC Get Server response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Server response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Predicted-Orbits-Data-response.html">LOC Inject Predicted Orbits Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Predicted Orbits Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Predicted-Orbits-Data-Source-response.html">LOC Get Predicted Orbits Data Source response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Predicted Orbits Data Source response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Delete-Assistance-Data-response.html">LOC Delete Assistance Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Delete Assistance Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Xtra-Data-response.html">LOC Inject Xtra Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Xtra Data response.</span>
+</dt>
+</dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.14.4"></a>LOC Indications</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

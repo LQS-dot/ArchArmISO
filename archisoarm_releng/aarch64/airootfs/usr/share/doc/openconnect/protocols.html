@@ -1,0 +1,125 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>OpenConnect VPN client.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="VPN client compatible with Cisco AnyConnect SSL VPN" />
+    <meta name="keywords" content="OpenConnect, AnyConnect, Cisco, VPN, SSLVPN, SSL VPN" />
+    <link href="./styles/main.css" rel="styleSheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+ </head>
+
+<body>
+   <div id="logo" align="right">
+     <img src="./images/openconnect.png" height="96px" alt="OpenConnect" />
+   </div>
+   <div id="main">
+
+
+	
+	
+	
+	<div id="menu1">
+
+	<span class="nonsel">
+<a href="index.html"><span>Home</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="features.html"><span>Features</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="connecting.html"><span>Getting Started</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="mail.html"><span>Mailing List / Help</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="contribute.html"><span>Contribute</span></a>
+</span>
+
+	<span class="sel">
+<a href="protocols.html"><span>Protocols</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="https://www.infradead.org/ocserv/"><span>VPN Server</span></a>
+</span>
+
+	<p>OpenConnect VPN client</p>
+
+	</div>
+
+	
+	<div id="menu2">
+
+        <span class="sel">
+<a href="anyconnect.html"><span>AnyConnect</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="array.html"><span>Array</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="fortinet.html"><span>Fortinet</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="f5.html"><span>F5</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="globalprotect.html"><span>GlobalProtect</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="juniper.html"><span>Juniper</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="pulse.html"><span>Pulse Secure</span></a>
+</span>
+
+	</div>
+
+
+	     <div id="textbox">
+       <div id="text">
+	</div>
+
+
+<h1>Protocols</h1>
+
+<p>OpenConnect was initially created to support Cisco's AnyConnect SSL VPN. This remains the default protocol used by the client, if not otherwise specified.
+See <a href="manual.xml">the <tt>--protocol</tt> option</a> for how to use a different protocol with the command-line client.</p>
+
+<p>The following pages document protocol-specific features and deficiencies:</p>
+
+<ul>
+  <li><a href="anyconnect.html">Details</a> on support for
+  Cisco's <a href="https://www.cisco.com/site/us/en/products/security/secure-client/index.html">AnyConnect SSL VPN</a> (<tt>--protocol=anyconnect</tt>).
+  The OpenConnect VPN server, <a href="https://ocserv.gitlab.io/www/index.html">ocserv</a>, now implements an improved version of this protocol.</li>
+  <li><a href="juniper.html">Details</a> on support for
+  Juniper SSL VPN (<tt>--protocol=nc</tt>)</li>
+  <li><a href="juniper.html">Details</a> on support for
+  <a href="https://www.ivanti.com/products/connect-secure-vpn">Pulse Connect Secure</a> SSL VPN (<tt>--protocol=pulse</tt>;
+  most Pulse VPNs also support the older Juniper protocol, unless explicitly disabled)</li>
+  <li><a href="globalprotect.html">Details</a> on support for
+  <a href="https://www.paloaltonetworks.com/features/vpn">Palo Alto Networks GlobalProtect SSL VPN</a> (<tt>--protocol=gp</tt>)</li>
+  <li><a href="f5.html">Details</a> on support for
+  <a href="https://www.f5.com/products/big-ip-services">F5 Big-IP SSL VPN</a> (<tt>--protocol=f5</tt>; PPP-based)</li>
+  <li><a href="fortinet.html">Details</a> on support for
+  <a href="https://www.fortinet.com/products/vpn">Fortinet Fortigate SSL VPN</a> (<tt>--protocol=fortinet</tt>; PPP-based)</li>
+  <li><a href="array.html">Details</a> on support for <a href="https://arraynetworks.com/products-secure-access-gateways-ag-series.html">Array Networks AG SSL VPN</a> (<tt>--protocol=array</tt>)</li>
+</ul>
+
+	      </div>
+   </div>
+  </body>
+</html>

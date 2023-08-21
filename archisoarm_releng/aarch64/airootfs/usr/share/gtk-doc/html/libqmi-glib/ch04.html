@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Wireless Data Service (WDS): libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="prev" href="libqmi-glib-NAS-Get-DRX-response.html" title="NAS Get DRX response">
+<link rel="next" href="QmiClientWds.html" title="QmiClientWds">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="libqmi-glib-NAS-Get-DRX-response.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiClientWds.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.5"></a>Wireless Data Service (WDS)</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="QmiClientWds.html">QmiClientWds</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the WDS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-enumerations-and-flags.html">WDS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the WDS service.</span>
+</dt>
+<dt><span class="section"><a href="ch04.html#id-1.5.4">WDS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Event-Report-indication.html">WDS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the WDS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Packet-Service-Status-indication.html">WDS Packet Service Status indication</a></span><span class="refpurpose"> — Methods to manage the WDS Packet Service Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-LTE-Attach-PDN-List-indication.html">WDS Set LTE Attach PDN List indication</a></span><span class="refpurpose"> — Methods to manage the WDS Set LTE Attach PDN List indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Extended-Ip-Config-indication.html">WDS Extended Ip Config indication</a></span><span class="refpurpose"> — Methods to manage the WDS Extended Ip Config indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch04s02.html">WDS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Reset-response.html">WDS Reset response</a></span><span class="refpurpose"> — Methods to manage the WDS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Event-Report-response.html">WDS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Start-Network-response.html">WDS Start Network response</a></span><span class="refpurpose"> — Methods to manage the WDS Start Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Stop-Network-response.html">WDS Stop Network response</a></span><span class="refpurpose"> — Methods to manage the WDS Stop Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Packet-Service-Status-response.html">WDS Get Packet Service Status response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Packet Service Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Packet-Statistics-response.html">WDS Get Packet Statistics response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Packet Statistics response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Go-Dormant-response.html">WDS Go Dormant response</a></span><span class="refpurpose"> — Methods to manage the WDS Go Dormant response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Go-Active-response.html">WDS Go Active response</a></span><span class="refpurpose"> — Methods to manage the WDS Go Active response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Create-Profile-response.html">WDS Create Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Create Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Modify-Profile-response.html">WDS Modify Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Modify Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Delete-Profile-response.html">WDS Delete Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Delete Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Profile-List-response.html">WDS Get Profile List response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Profile List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Profile-Settings-response.html">WDS Get Profile Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Profile Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Default-Profile-Number-response.html">WDS Get Default Profile Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Default Profile Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Default-Profile-Number-response.html">WDS Set Default Profile Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Default Profile Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Default-Settings-response.html">WDS Get Default Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Default Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Current-Settings-response.html">WDS Get Current Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Current Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Dormancy-Status-response.html">WDS Get Dormancy Status response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Dormancy Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Autoconnect-Settings-response.html">WDS Get Autoconnect Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Autoconnect Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Autoconnect-Settings-response.html">WDS Set Autoconnect Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Autoconnect Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Data-Bearer-Technology-response.html">WDS Get Data Bearer Technology response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Data Bearer Technology response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Current-Data-Bearer-Technology-response.html">WDS Get Current Data Bearer Technology response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Current Data Bearer Technology response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-IP-Family-response.html">WDS Set IP Family response</a></span><span class="refpurpose"> — Methods to manage the WDS Set IP Family response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Supported-Messages-response.html">WDS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-PDN-Throttle-Info-response.html">WDS Get PDN Throttle Info response</a></span><span class="refpurpose"> — Methods to manage the WDS Get PDN Throttle Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-LTE-Attach-Parameters-response.html">WDS Get LTE Attach Parameters response</a></span><span class="refpurpose"> — Methods to manage the WDS Get LTE Attach Parameters response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Max-LTE-Attach-PDN-Number-response.html">WDS Get Max LTE Attach PDN Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Max LTE Attach PDN Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-LTE-Attach-PDN-List-response.html">WDS Get LTE Attach PDN List response</a></span><span class="refpurpose"> — Methods to manage the WDS Get LTE Attach PDN List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-LTE-Attach-PDN-List-response.html">WDS Set LTE Attach PDN List response</a></span><span class="refpurpose"> — Methods to manage the WDS Set LTE Attach PDN List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Bind-Data-Port-response.html">WDS Bind Data Port response</a></span><span class="refpurpose"> — Methods to manage the WDS Bind Data Port response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Bind-Mux-Data-Port-response.html">WDS Bind Mux Data Port response</a></span><span class="refpurpose"> — Methods to manage the WDS Bind Mux Data Port response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Channel-Rates-response.html">WDS Get Channel Rates response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Channel Rates response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Swi-Create-Profile-Indexed-response.html">WDS Swi Create Profile Indexed response</a></span><span class="refpurpose"> — Methods to manage the WDS Swi Create Profile Indexed response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Indication-Register-response.html">WDS Indication Register response</a></span><span class="refpurpose"> — Methods to manage the WDS Indication Register response.</span>
+</dt>
+</dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.5.4"></a>WDS Indications</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

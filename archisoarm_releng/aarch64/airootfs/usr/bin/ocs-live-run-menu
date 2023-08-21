@@ -1,0 +1,245 @@
+#!/bin/bash
+# Author: Steven Shiau <steven _at_ nchc org tw>
+# License: GPL
+
+# We need to know ocsroot.
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+
+# Load the options from config file
+[ -e /etc/ocs/ocs-live.conf ] && . /etc/ocs/ocs-live.conf
+
+# Set initial value if not set
+[ -z "$ocs_live_run" ] && ocs_live_run="ocs-live-general"
+[ -z "$ocs_live_keymap" ] && ocs_live_keymap="NONE"
+[ -z "$ocs_live_batch" ] && ocs_live_batch="no"
+[ -z "$ocs_lang" ] && ocs_lang="en_US.UTF-8"
+
+
+# Functions
+decide_use_fb_term_or_not(){
+  get_fb_term
+  [ "$fb_term" = "bterm" -a ! -e "$uni_font" ] && exit 1
+  
+  use_fb_term=""
+  # Ex. zh_TW.UTF-8 -> zh_TW
+  locale_region="$(echo "$ocs_lang" | sed -e "s|\..*||g")"
+  if `locale_required_bterm_or_not "$locale_region"` && \
+     [ -n "$fb_term" ] && \
+     ([ -e /dev/fb/0 ] || [ -e /dev/fb0 ]); then 
+     use_fb_term="yes"
+  else
+     use_fb_term="no"
+  fi
+} # end of decide_use_fb_term_or_not
+
+###############
+#####MAIN######
+###############
+if [ -z "$ocs_live_run" ]; then
+  echo "No \$ocs_live_run was assigned (Either from /etc/ocs/ocs-live.conf or command kernel parameters). Skip Clonezilla-related action."
+  exit 3
+fi
+
+ask_and_load_lang_set en_US.UTF-8
+
+# Get the live media mount point.
+get_live_media_mnt_point
+
+if [ -z "$LIVE_MEDIA" -o ! -d "/$LIVE_MEDIA" ]; then
+  echo "$0 is run in Clonezilla Live!"
+  echo "Program terminated!"
+  exit 1
+fi
+
+#
+decide_use_fb_term_or_not
+
+#
+gen_locale_if_not_found $locale_region $ocs_lang
+
+# export these variables so that they can be passed to $ocs_live_run in bterm
+export LANG="$ocs_lang"
+export CURRENT_TTY="$(tty)"  # e.g. /dev/tty1
+
+# By default we will run $ocs_live_run in /dev/tty1 if ocs_live_run_tty is not specified.
+if [ -n "$ocs_live_run_tty" ]; then
+  # tty is specified. Check if it the current tty
+  [ "$CURRENT_TTY" != "$ocs_live_run_tty" ] && exit 3
+else
+  # No tty is specified to run $ocs_live_run_tty. Default to run only on /dev/tty1 (no more ttyS0). If you want to use ttyS0, add live-getty and console=ttyS0,38400n81 in the boot parameter 
+  # If it's not in /dev/tty1, just exit.
+  [ "$CURRENT_TTY" != "/dev/tty1" ] && exit 3
+fi
+
+# Waiting for the jobs in /etc/ocs/ocs-live.d are finished.
+to_wait=""
+while [ -z "$to_wait" ]; do
+  if [ -e /var/lib/live/clonezilla/ocs-live.d ]; then
+    echo "The jobs in /etc/ocs/ocs-live.d/ are finished. Start \"$ocs_live_run\" now."
+    to_wait="no"
+  else
+    sleep 0.2
+  fi
+done
+
+# Prepare the state dir
+mkdir -p /var/lib/clonezilla/
+
+# Pre run
+ocs-run-boot-param ocs_prerun
+
+# Pre load. This must be after pre-run since it might need network connection
+# which could be done in ocs-live-prerun
+ocs-live-preload
+if [ -e /var/lib/clonezilla/overwrite_proc_boot_param ]; then
+  # If ocs-live-preload is run and /etc/ocs-live.conf is updated,
+  # we need to reread it
+  . /etc/ocs/ocs-live.conf
+  if [ -n "$ocs_lang" ]; then
+    locale_region="$(echo "$ocs_lang" | sed -e "s|\..*||g")"
+    gen_locale_if_not_found $locale_region $ocs_lang
+    # Make it work now
+    export LANG=$ocs_lang
+    decide_use_fb_term_or_not
+  fi
+  if [ -n "$live_keyboard_layouts" ]; then
+    ( # Run in subshell to avoid affecting running env.
+      kb_conf_run="$(LC_ALL=C find /lib/live/config/ -iname "*keyboard-configuration*" -print)"
+      rm /var/lib/live/config/keyboard-configuration
+      export LIVE_KEYBOARD_LAYOUTS=$live_keyboard_layouts
+      . $kb_conf_run
+      # Make it work now
+      setupcon
+    )
+  fi
+fi
+
+# Prepare image repository if ocs_repository is assigned.
+# Only when clonezilla lite server mode is not enabled. If it's enabled,
+# we won't deal with repository here and let ocs-live-feed-img to handle that.
+if [ -z "$(echo $ocs_live_run | grep -Ew "ocs-live-feed-img")" ]; then
+  rc=""
+  ocs-live-repository
+  rc=$?
+  if [ "$rc" -eq 1 ]; then
+    # Only when ocs-live-repository fails to mount repository in ocs-live-repository,
+    # this program will exit. If ocs_repository is not assigned in /proc/cmdline,
+    # the exit code of ocs-live-repository is 9, not 1. This program will continue.
+    ocs-live-final-action
+    exit 1
+  fi
+fi
+
+#
+if [ "$use_fb_term" = "yes" ];then
+  # (1) For bterm
+  # Since bterm can only use one parameter (i.e. not working if we run 'bterm -l zh_TW.UTF-8 -f $uni_font ls -alF /etc/', i.e. only ls will be respected. There is no such issue for jfbterm). Here we use a workaround to make it work for bterm, i.e. use a tmp file to run it.
+  # (2) For jfbterm
+  # Although jfbterm can use more than one parameters. However, if a variable command is like:
+  # ocs_live_run="ocs-restore-mdisks -batch -p '-g auto -e1 auto -e2 -cm -r -j2 -k1 -p true' ask_user sda sdb"
+  # jfbterm -q -e $ocs_live_run -> Won't work. The single quotation and double quotation will be wrong. If there is no jfbterm, we can use "eval $ocs_live_run" to run it. However, jfbterm will has issue.
+  # Here we use a workaround to make it work for jbterm, i.e. use a tmp file to run it.
+  ocs_live_run_tmp="$(mktemp /tmp/ocs_live_run_tmp.XXXXXX)"
+  cat <<-RUN_END > $ocs_live_run_tmp
+#!/bin/bash
+$ocs_live_run
+echo "\${PIPESTATUS[0]}" > ${ocs_live_run_tmp}.rc
+RUN_END
+  chmod 755 $ocs_live_run_tmp
+  case "$fb_term" in
+   "bterm")
+       export TERM=bterm
+       set +e
+       # bterm need full path command even it's in the PATH already.
+       bterm -l $LANG -f $uni_font $ocs_live_run_tmp
+       EXIT="$(cat ${ocs_live_run_tmp}.rc)"
+       ;;
+  "jfbterm")
+       export TERM=jfbterm
+       set +e
+       jfbterm -q -e $ocs_live_run_tmp
+       EXIT="$(cat ${ocs_live_run_tmp}.rc)"
+       ;;
+  esac
+  [ -e "$ocs_live_run_tmp" ] && rm -f $ocs_live_run_tmp
+  [ -e "${ocs_live_run_tmp}.rc" ] && rm -f ${ocs_live_run_tmp}.rc
+else
+  eval $ocs_live_run
+  EXIT=$?
+fi
+if [ "$EXIT" -eq 0 ]; then
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+  # The return code is not 100% accurate. Therefore we do not show it's successful or not.
+  echo "\"$ocs_live_run\" finished."
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo "Check $OCS_LOGFILE for more details."
+elif [ "$EXIT" -eq 99 ]; then
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+  # Return code 99 is specially for entering command line
+  echo "Entering command line prompt."
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+else
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  echo "\"$ocs_live_run\" finished with error!"
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo "Check $OCS_LOGFILE for more details."
+  if [ "$ocs_live_batch" != "yes" ]; then
+    echo -n "$msg_press_enter_to_continue "
+    read
+  fi
+fi
+
+# Post run
+ocs-run-boot-param ocs_postrun
+
+# Post actions
+# Clonezilla SE's client: comment the execution to avoid it's run twice (since all the commands are from /proc/cmdline, and if user inputs "exit" in the shell, the job will be started again in batch mode without stop. While in Clonezilla live interactive mode, it won't be run in batch mode.)
+if [ -n "$(LC_ALL=C grep -iE "ocs_server" /proc/cmdline)" ]; then
+  # Case 1: Clonezilla SE's client 
+  # Once the job is done, and if it's started by Clonezilla Server (ocs_server found in /proc/cmdline), we have to comment the autologin account's ~/.bash_profile
+  # The job is started by Clonezilla SE, comment the line "sudo -i ocs-live-run-menu"
+  get_live_autologin_account
+  if [ -z "$live_autologin_account" ]; then
+     echo "No account with NOPASSWD sudo privilege was found!"
+     echo "Program terminated!"
+     exit 1
+  fi
+  get_live_auto_login_id_home
+  LANG=C perl -pi -e 's|(^[^#]*[[:space:]]*)(sudo -i ocs-live-run-menu)|$1true # $2 # commented after clonezilla job is done.|g' $live_auto_login_id_home/.bash_profile
+fi
+
+# For both Clonezilla live interactive mode and Clonezilla SE client.
+# Ask if want to reboot, shutdown or in command line...
+if [ "$use_fb_term" = "yes" ]; then
+  ocs_live_final_tmp="$(mktemp /tmp/ocs_live_final_tmp.XXXXXX)"
+  cat <<-RUN_END > $ocs_live_final_tmp
+#!/bin/bash
+ocs-live-final-action $EXIT
+RUN_END
+  chmod 755 $ocs_live_final_tmp
+  case "$fb_term" in
+   "bterm")
+       # Since bterm can only use one parameter (i.e. not working if we run 'bterm -l zh_TW.UTF-8 -f $uni_font ls -alF /etc/', i.e. only ls will be respected. There is no such issue for jfbterm). Here we use a workaround to make it work for bterm, i.e. use a tmp file to run it.
+       export TERM=bterm
+       set +e
+       # bterm need full path command even it's in the PATH already.
+       bterm -l $LANG -f $uni_font $ocs_live_final_tmp
+       EXIT=$?
+       ;;
+  "jfbterm")
+       export TERM=jfbterm
+       set +e
+       jfbterm -q -e $ocs_live_final_tmp
+       EXIT=$?
+       ;;
+  esac
+  [ -e "$ocs_live_final_tmp" ] && rm -f $ocs_live_final_tmp
+else
+  # At this point, it's not in bterm/jfbterm, only text console. Use English. 
+  ask_and_load_lang_set en_US.UTF-8
+  ocs-live-final-action $EXIT
+fi

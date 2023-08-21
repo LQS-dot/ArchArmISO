@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Modem object: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="pt01.html" title="Part I. High level API">
+<link rel="prev" href="MMKernelEventProperties.html" title="MMKernelEventProperties">
+<link rel="next" href="MMObject.html" title="MMObject">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pt01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMKernelEventProperties.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMObject.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="id-1.2.4"></a>The Modem object</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="MMObject.html">MMObject</a></span><span class="refpurpose"> — Generic object representing a modem in ModemManager</span>
+</dt>
+<dt><span class="section"><a href="ch03.html#id-1.2.4.3">Generic interfaces</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModem.html">MMModem</a></span><span class="refpurpose"> — The Modem interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMModem3gpp.html">MMModem3gpp</a></span><span class="refpurpose"> — The 3GPP interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMModemCdma.html">MMModemCdma</a></span><span class="refpurpose"> — The CDMA interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCdmaManualActivationProperties.html">MMCdmaManualActivationProperties</a></span><span class="refpurpose"> — Helper object to handle manual CDMA activation properties.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMUnlockRetries.html">MMUnlockRetries</a></span><span class="refpurpose"> — Helper object to report unlock retries.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfo.html">MMCellInfo</a></span><span class="refpurpose"> — Helper base object to report cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoCdma.html">MMCellInfoCdma</a></span><span class="refpurpose"> — Helper object to report CDMA cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoGsm.html">MMCellInfoGsm</a></span><span class="refpurpose"> — Helper object to report GSM cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoUmts.html">MMCellInfoUmts</a></span><span class="refpurpose"> — Helper object to report UMTS cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoTdscdma.html">MMCellInfoTdscdma</a></span><span class="refpurpose"> — Helper object to report TDSCDMA cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoLte.html">MMCellInfoLte</a></span><span class="refpurpose"> — Helper object to report LTE cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMCellInfoNr5g.html">MMCellInfoNr5g</a></span><span class="refpurpose"> — Helper object to report 5GNR cell info</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMPco.html">MMPco</a></span><span class="refpurpose"> — Helper object to handle 3GPP PCO.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMNr5gRegistrationSettings.html">MMNr5gRegistrationSettings</a></span><span class="refpurpose"> — Helper object to handle 5GNR registration settings.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s02.html">Simple interface support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModemSimple.html">MMModemSimple</a></span><span class="refpurpose"> — The Simple interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMSimpleConnectProperties.html">MMSimpleConnectProperties</a></span><span class="refpurpose"> — Helper object to handle connection properties.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMSimpleStatus.html">MMSimpleStatus</a></span><span class="refpurpose"> — Helper object to handle overall modem status.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s03.html">USSD support</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MMModem3gppUssd.html">MMModem3gppUssd</a></span><span class="refpurpose"> — The 3GPP USSD interface</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch03s04.html">Profile management support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModem3gppProfileManager.html">MMModem3gppProfileManager</a></span><span class="refpurpose"> — The 3GPP profile manager interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libmm-glib-3GPP-profile.html">MM3gppProfile</a></span><span class="refpurpose"> — Helper object to handle 3GPP profile settings.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s05.html">Location support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModemLocation.html">MMModemLocation</a></span><span class="refpurpose"> — The Location interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMLocation3gpp.html">MMLocation3gpp</a></span><span class="refpurpose"> — Helper object to handle 3GPP location information.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMLocationGpsNmea.html">MMLocationGpsNmea</a></span><span class="refpurpose"> — Helper object to handle NMEA-based GPS location information.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMLocationGpsRaw.html">MMLocationGpsRaw</a></span><span class="refpurpose"> — Helper object to handle generic GPS location information.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMLocationCdmaBs.html">MMLocationCdmaBs</a></span><span class="refpurpose"> — Helper object to handle CDMA Base Station location information.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s06.html">Messaging support</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MMModemMessaging.html">MMModemMessaging</a></span><span class="refpurpose"> — The Messaging interface</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch03s07.html">Time support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModemTime.html">MMModemTime</a></span><span class="refpurpose"> — The Time interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMNetworkTimezone.html">MMNetworkTimezone</a></span><span class="refpurpose"> — Helper object to handle network timezone information.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s08.html">Firmware support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModemFirmware.html">MMModemFirmware</a></span><span class="refpurpose"> — The Firmware interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMFirmwareProperties.html">MMFirmwareProperties</a></span><span class="refpurpose"> — Helper object to handle firmware information.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMFirmwareUpdateSettings.html">MMFirmwareUpdateSettings</a></span><span class="refpurpose"> — Helper object to handle firmware update settings.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s09.html">Extended signal information</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MMModemSignal.html">MMModemSignal</a></span><span class="refpurpose"> — The extended Signal interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMSignal.html">MMSignal</a></span><span class="refpurpose"> — Helper object to handle extended Signal information.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MMSignalThresholdProperties.html">MMSignalThresholdProperties</a></span><span class="refpurpose"> — Helper object to handle signal threshold properties.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s10.html">OMA support</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MMModemOma.html">MMModemOma</a></span><span class="refpurpose"> — The OMA interface</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch03s11.html">Voice support</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MMModemVoice.html">MMModemVoice</a></span><span class="refpurpose"> — The Voice interface</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch03s12.html">SAR support</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MMModemSar.html">MMModemSar</a></span><span class="refpurpose"> — The SAR interface</span>
+</dt></dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.2.4.3"></a>Generic interfaces</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

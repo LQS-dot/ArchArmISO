@@ -1,0 +1,11 @@
+base
+linux
+mkinitcpio
+mkinitcpio-archiso
+openssh
+pv
+util-linux
+lvm2
+mdadm
+efibootmgr
+qemu-guest-agent

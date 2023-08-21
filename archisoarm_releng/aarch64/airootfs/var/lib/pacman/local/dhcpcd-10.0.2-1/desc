@@ -1,0 +1,47 @@
+%NAME%
+dhcpcd
+
+%VERSION%
+10.0.2-1
+
+%BASE%
+dhcpcd
+
+%DESC%
+DHCP/ IPv4LL/ IPv6RA/ DHCPv6 client
+
+%URL%
+https://roy.marples.name/projects/dhcpcd/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1690289574
+
+%INSTALLDATE%
+1691208529
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+478425
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+sh
+systemd-libs
+
+%OPTDEPENDS%
+openresolv: resolvconf support
+
+%PROVIDES%
+dhcp-client
+

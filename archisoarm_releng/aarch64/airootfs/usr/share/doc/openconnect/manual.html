@@ -1,0 +1,1246 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>OpenConnect VPN client.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="VPN client compatible with Cisco AnyConnect SSL VPN" />
+    <meta name="keywords" content="OpenConnect, AnyConnect, Cisco, VPN, SSLVPN, SSL VPN" />
+    <link href="./styles/main.css" rel="styleSheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+ </head>
+
+<body>
+   <div id="logo" align="right">
+     <img src="./images/openconnect.png" height="96px" alt="OpenConnect" />
+   </div>
+   <div id="main">
+
+
+	
+	
+	
+	<div id="menu1">
+
+	<span class="nonsel">
+<a href="index.html"><span>Home</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="features.html"><span>Features</span></a>
+</span>
+
+	<span class="sel">
+<a href="connecting.html"><span>Getting Started</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="mail.html"><span>Mailing List / Help</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="contribute.html"><span>Contribute</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="protocols.html"><span>Protocols</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="https://www.infradead.org/ocserv/"><span>VPN Server</span></a>
+</span>
+
+	<p>OpenConnect VPN client</p>
+
+	</div>
+
+	
+	<div id="menu2">
+
+        <span class="nonsel">
+<a href="building.html"><span>Building</span></a>
+</span>
+
+        <span class="nonsel">
+<a href="vpnc-script.html"><span>vpnc-script</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="connecting.html"><span>Connecting</span></a>
+</span>
+
+	<span class="sel">
+<a href="manual.html"><span>Manual</span></a>
+</span>
+
+	</div>
+
+
+	     <div id="textbox">
+       <div id="text">
+	</div>
+
+
+	
+<h1>OPENCONNECT</h1>
+
+<p><a href="#heading1">NAME</a><br/>
+<a href="#heading2">SYNOPSIS</a><br/>
+<a href="#heading3">DESCRIPTION</a><br/>
+<a href="#heading4">OPTIONS</a><br/>
+<a href="#heading5">SIGNALS</a><br/>
+<a href="#heading6">LIMITATIONS</a><br/>
+<a href="#heading7">SEE ALSO</a><br/>
+<a href="#heading8">AUTHORS</a><br/>
+
+</p>
+<hr/>
+
+
+<h2 id="heading1">NAME
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">openconnect
+- Multi-protocol VPN client, for Cisco AnyConnect VPNs
+and others</p>
+
+<h2 id="heading2">SYNOPSIS
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<colgroup><col width="11%"></col>
+<col width="17%"></col>
+<col width="1%" class="center"></col>
+<col width="71%"></col>
+</colgroup>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p style="margin-top: 1em"><b>openconnect</b></p></td>
+<td></td>
+<td>
+
+
+
+<p style="margin-top: 1em">[<b>--config&nbsp;</b><i>configfile</i>]
+[<b>-b,--background</b>]
+[<b>--pid-file&nbsp;</b><i>pidfile</i>]
+[<b>-c,--certificate&nbsp;</b><i>cert</i>]
+[<b>-e,--cert-expire-warning&nbsp;</b><i>days</i>]
+[<b>-k,--sslkey&nbsp;</b><i>key</i>]
+[<b>-C,--cookie&nbsp;</b><i>cookie</i>]
+[<b>--cookie-on-stdin</b>]
+[<b>--compression&nbsp;</b><i>MODE</i>]
+[<b>-d,--deflate</b>]
+[<b>-D,--no-deflate</b>]
+[<b>--force-dpd&nbsp;</b><i>interval</i>]
+[<b>--force-trojan&nbsp;</b><i>interval</i>]
+[<b>-F,--form-entry&nbsp;</b><i>form:opt=value</i>]
+[<b>-g,--usergroup&nbsp;</b><i>group</i>]
+[<b>-h,--help</b>]
+[<b>--http-auth&nbsp;</b><i>methods</i>]
+[<b>--external-browser&nbsp;</b><i>browser</i>]
+[<b>-i,--interface&nbsp;</b><i>ifname</i>]
+[<b>-l,--syslog</b>]
+[<b>--timestamp</b>]
+[<b>--passtos</b>]
+[<b>-U,--setuid&nbsp;</b><i>user</i>]
+[<b>--csd-user&nbsp;</b><i>user</i>]
+[<b>-m,--mtu&nbsp;</b><i>mtu</i>]
+[<b>--base-mtu&nbsp;</b><i>mtu</i>]
+[<b>-p,--key-password&nbsp;</b><i>pass</i>]
+[<b>-P,--proxy&nbsp;</b><i>proxyurl</i>]
+[<b>--proxy-auth&nbsp;</b><i>methods</i>]
+[<b>--no-proxy</b>]
+[<b>--libproxy</b>]
+[<b>--key-password-from-fsid</b>]
+[<b>-q,--quiet</b>]
+[<b>-Q,--queue-len&nbsp;</b><i>len</i>]
+[<b>-s,--script&nbsp;</b><i>vpnc-script</i>]
+[<b>-S,--script-tun</b>]
+[<b>-u,--user&nbsp;</b><i>name</i>]
+[<b>-V,--version</b>]
+[<b>-v,--verbose</b>]
+[<b>-x,--xmlconfig&nbsp;</b><i>config</i>]
+[<b>--authgroup&nbsp;</b><i>group</i>]
+[<b>--authenticate</b>]
+[<b>--cookieonly</b>]
+[<b>--printcookie</b>]
+[<b>--cafile&nbsp;</b><i>file</i>]
+[<b>--disable-ipv6</b>]
+[<b>--dtls-ciphers&nbsp;</b><i>list</i>]
+[<b>--dtls12-ciphers&nbsp;</b><i>list</i>]
+[<b>--dtls-local-port&nbsp;</b><i>port</i>]
+[<b>--dump-http-traffic</b>]
+[<b>--no-system-trust</b>]
+[<b>--pfs</b>]
+[<b>--no-dtls</b>]
+[<b>--no-http-keepalive</b>]
+[<b>--no-passwd</b>]
+[<b>--no-xmlpost</b>]
+[<b>--non-inter</b>]
+[<b>--passwd-on-stdin</b>]
+[<b>--protocol&nbsp;</b><i>proto</i>]
+[<b>--token-mode&nbsp;</b><i>mode</i>]
+[<b>--token-secret&nbsp;</b><i>{secret</i>[<i>,counter</i>]|@<i>file</i>}]
+[<b>--reconnect-timeout&nbsp;</b><i>seconds</i>]
+[<b>--resolve&nbsp;</b><i>host:ip</i>]
+[<b>--sni&nbsp;</b><i>host</i>]
+[<b>--servercert&nbsp;</b><i>sha1</i>]
+[<b>--useragent&nbsp;</b><i>string</i>]
+[<b>--version-string&nbsp;</b><i>string</i>]
+[<b>--local-hostname&nbsp;</b><i>string</i>]
+[<b>--os&nbsp;</b><i>string</i>]
+<b>[--server]
+[https://]</b><i>host</i><b>[:</b><i>port</i><b>][/</b><i>group</i><b>]</b></p> </td></tr>
+</table>
+
+<h2 id="heading3">DESCRIPTION
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The program
+<b>openconnect</b> connects to VPN servers which use
+standard TLS/SSL, DTLS, and ESP protocols for data
+transport.</p>
+
+<p style="margin-left:11%; margin-top: 1em">It was
+originally written to support Cisco &quot;AnyConnect&quot;
+VPN servers, and has since been extended with experimental
+support for Juniper Network Connect
+(<b>--protocol=nc</b>), Junos/Ivanti Pulse VPN
+servers (<b>--protocol=pulse</b>), PAN
+GlobalProtect VPN servers
+(<b>--protocol=gp</b>), F5 Big-IP VPN servers
+(<b>--protocol=f5</b>), Fortinet Fortigate VPN
+servers (<b>--protocol=fortinet</b>), and Array
+Networks SSL VPN servers
+(<b>--protocol=array</b>).</p>
+
+<p style="margin-left:11%; margin-top: 1em">The connection
+happens in two phases. First there is a simple HTTPS
+connection over which the user authenticates somehow -
+by using a certificate, or password or SecurID, etc. Having
+authenticated, the user is rewarded with an authentication
+cookie which can be used to make the real VPN
+connection.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The second
+phase uses that cookie to connect to a tunnel via HTTPS, and
+data packets can be passed over the resulting connection.
+When possible, a UDP tunnel is also configured: AnyConnect
+uses DTLS, while Juniper and GlobalProtect use
+UDP-encapsulated ESP. The UDP tunnel may be disabled with
+<b>--no-dtls</b>, but is preferred when
+correctly supported by the server and network for
+performance reasons. (TCP performs poorly and unreliably
+over TCP-based tunnels; see
+<i>http://sites.inka.de/~W1011/devel/tcp-tcp.html</i>.)</p>
+
+<h2 id="heading4">OPTIONS
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><a name="opt-config"></a>
+<b><br/>
+--config=CONFIGFILE</b></p>
+
+<p style="margin-left:22%;">Read further options from
+<i>CONFIGFILE</i> before continuing to process options from
+the command line. The file should contain long-format
+options as would be accepted on the command line, but
+without the two leading -- dashes. Empty lines,
+or lines where the first non-space character is a #
+character, are ignored.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Any option
+except the <b>config</b> option may be specified in the
+file. <a name="opt-background"></a></p>
+
+
+<p style="margin-left:11%;"><b>-b,--background</b></p>
+
+<p style="margin-left:22%;">Continue in background after
+startup <a name="opt-pid-file"></a></p>
+
+
+<p style="margin-left:11%;"><b>--pid-file=PIDFILE</b></p>
+
+<p style="margin-left:22%;">Save the pid to <i>PIDFILE</i>
+when backgrounding <a name="opt-certificate"></a>
+<a name="opt-mca-certificate"></a></p>
+
+
+<p style="margin-left:11%;"><b>-c,--certificate=CERT
+[,--mca-certificate=CERT]</b></p>
+
+<p style="margin-left:22%;">Use SSL client certificate
+<i>CERT</i> which may be either a file name or, if
+OpenConnect has been built with an appropriate version of
+GnuTLS, a PKCS#11 URL.</p>
+
+<p style="margin-left:22%; margin-top: 1em">The
+<b>--mca-certificate</b> option sets the
+secondary certificate for multi-certificate authentication
+(according to Cisco&rsquo;s terminology, the SSL client
+certificate is called the &quot;machine&quot; certificate,
+and the second certificate is called the &quot;user&quot;
+certificate). <a name="opt-cert-expire-warning"></a></p>
+
+
+<p style="margin-left:11%;"><b>-e,--cert-expire-warning=DAYS</b></p>
+
+<p style="margin-left:22%;">Give a warning when SSL client
+certificate has <i>DAYS</i> left before expiry
+<a name="opt-sslkey"></a> <a name="opt-mca-key"></a></p>
+
+
+<p style="margin-left:11%;"><b>-k,--sslkey=KEY
+[,--mca-key=KEY]</b></p>
+
+<p style="margin-left:22%;">Use SSL private key <i>KEY</i>
+which may be either a file name or, if OpenConnect has been
+built with an appropriate version of GnuTLS, a PKCS#11
+URL.</p>
+
+<p style="margin-left:22%; margin-top: 1em">The
+<b>--mca-key</b> option sets the private
+key for the secondary certificate (see
+<b>--mca-certificate</b>).
+<a name="opt-cookie"></a></p>
+
+
+<p style="margin-left:11%;"><b>-C,--cookie=COOKIE</b></p>
+
+<p style="margin-left:22%;">Use authentication cookie
+<i>COOKIE</i>. <a name="opt-cookie-on-stdin"></a></p>
+
+
+<p style="margin-left:11%;"><b>--cookie-on-stdin</b></p>
+
+<p style="margin-left:22%;">Read cookie from standard
+input. <a name="opt-deflate"></a></p>
+
+
+<p style="margin-left:11%;"><b>-d,--deflate</b></p>
+
+<p style="margin-left:22%;">Enable all compression,
+including stateful modes. By default, only stateless
+compression algorithms are enabled.
+<a name="opt-no-deflate"></a></p>
+
+
+<p style="margin-left:11%;"><b>-D,--no-deflate</b></p>
+
+<p style="margin-left:22%;">Disable all compression.
+<a name="opt-compression"></a></p>
+
+
+<p style="margin-left:11%;"><b>--compression=MODE</b></p>
+
+<p style="margin-left:22%;">Set compression mode, where
+<i>MODE</i> is one of <i>stateless</i>, <i>none</i>, or
+<i>all</i>.</p>
+
+<p style="margin-left:22%; margin-top: 1em">By default,
+only stateless compression algorithms which do not maintain
+state from one packet to the next (and which can be used on
+UDP transports) are enabled. By setting the mode to
+<i>all</i> stateful algorithms (currently only zlib deflate)
+can be enabled. Or all compression can be disabled by
+setting the mode to <i>none</i>.
+<a name="opt-force-dpd"></a></p>
+
+
+<p style="margin-left:11%;"><b>--force-dpd=INTERVAL</b></p>
+
+<p style="margin-left:22%;">Use <i>INTERVAL</i> as Dead
+Peer Detection interval (in seconds). This will cause the
+client to use DPD at the specified interval even if the
+server hasn&rsquo;t requested it, or at a different interval
+from the one requested by the server.</p>
+
+<p style="margin-left:22%; margin-top: 1em">DPD mechanisms
+vary by protocol and by transport (TLS or DTLS/ESP), but are
+all functionally similar: they enable either the VPN client
+or the VPN server to transmit a signal to the peer,
+requesting an immediate reply which can be used to confirm
+that the link between the two peers is still working.
+<a name="opt-usergroup"></a></p>
+
+
+<p style="margin-left:11%;"><b>-g,--usergroup=GROUP</b></p>
+
+<p style="margin-left:22%;">Set the URL path of the initial
+HTTPS connection to the server.</p>
+
+<p style="margin-left:22%; margin-top: 1em">With some
+protocols, this path may function as a login group or realm,
+hence the naming of this option. For example, the following
+invocations of OpenConnect are equivalent: <b><br/>
+openconnect --usergroup=loginPath vpn.server.com
+<br/>
+openconnect https://vpn.server.com/loginPath</b></p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><a name="opt-form-entry"></a></p>
+
+
+<p style="margin-left:11%;"><b>-F,--form-entry=FORM:OPTION[=VALUE]</b></p>
+
+<p style="margin-left:22%;">Provide authentication form
+input, where <i>FORM</i> and <i>OPTION</i> are the
+identifiers from the form and the specific input field, and
+<i>VALUE</i> is the string to be filled in automatically.
+For example, the standard username field (also handled by
+the <b>--user</b> option) could also be provided
+with this option thus: <b>--form-entry</b>
+<i>main:username=joebloggs</i>.</p>
+
+<p style="margin-left:22%; margin-top: 1em">If <i>VALUE</i>
+is not specified, this option will cause a hidden form field
+to be treated as a standard text-input field.</p>
+
+<p style="margin-left:22%; margin-top: 1em">This option
+should <i>not</i> be used to enter passwords.
+<b>--passwd-on-stdin</b> should be
+used for that purpose. Not only will this option expose the
+password value via the OpenConnect process&rsquo;s command
+line, but unlike
+<b>--passwd-on-stdin</b> this option
+will not recognize the case of an incorrect password, and
+stop trying to re-enter it repeatedly.
+<a name="opt-help"></a></p>
+
+
+<p style="margin-left:11%;"><b>-h,--help</b></p>
+
+<p style="margin-left:22%;">Display help text
+<a name="opt-http-auth"></a></p>
+
+
+<p style="margin-left:11%;"><b>--http-auth=METHODS</b></p>
+
+<p style="margin-left:22%;">Use only the specified methods
+for HTTP authentication to a server. By default, only
+<i>Negotiate</i>, <i>NTLM</i> and <i>Digest</i>
+authentication are enabled. <i>Basic</i> authentication is
+also supported but because it is insecure it must be
+explicitly enabled. The argument is a comma-separated list
+of methods to be enabled. Note that the order does not
+matter: OpenConnect will use <i>Negotiate</i>, <i>NTLM</i>,
+<i>Digest</i> and <i>Basic</i> authentication in that order,
+if each is enabled, regardless of the order specified in the
+<i>METHODS</i> string.
+<a name="opt-external-browser"></a></p>
+
+
+<p style="margin-left:11%;"><b>--external-browser=BROWSER</b></p>
+
+<p style="margin-left:22%;">Set <i>BROWSER</i> as the
+executable used by OpenConnect to handle the authentication
+process with gateways that support the
+<b>single-sign-on-external-browser</b> authentication
+method. <a name="opt-interface"></a></p>
+
+
+<p style="margin-left:11%;"><b>-i,--interface=IFNAME</b></p>
+
+<p style="margin-left:22%;">Use <i>IFNAME</i> for tunnel
+interface <a name="opt-syslog"></a></p>
+
+
+<p style="margin-left:11%;"><b>-l,--syslog</b></p>
+
+<p style="margin-left:22%;">After tunnel is brought up, use
+syslog for further progress messages
+<a name="opt-timestamp"></a></p>
+
+
+<p style="margin-left:11%;"><b>--timestamp</b></p>
+
+<p style="margin-left:22%;">Prepend a timestamp to each
+progress message <a name="opt-passtos"></a></p>
+
+
+<p style="margin-left:11%;"><b>--passtos</b></p>
+
+<p style="margin-left:22%;">Copy TOS / TCLASS of payload
+packet into DTLS and ESP packets. This is not set by default
+because it may leak information about the payload (for
+example, by differentiating voice/video traffic).
+<a name="opt-setuid"></a></p>
+
+
+<p style="margin-left:11%;"><b>-U,--setuid=USER</b></p>
+
+<p style="margin-left:22%;">Drop privileges after
+connecting, to become user <i>USER</i>
+<a name="opt-csd-user"></a></p>
+
+
+<p style="margin-left:11%;"><b>--csd-user=USER</b></p>
+
+<p style="margin-left:22%;">Drop privileges during
+execution of trojan binary or script (CSD, TNCC, or HIP).
+<a name="opt-csd-wrapper"></a></p>
+
+
+<p style="margin-left:11%;"><b>--csd-wrapper=SCRIPT</b></p>
+
+<p style="margin-left:22%;">Run <i>SCRIPT</i> instead of
+the trojan binary or script.
+<a name="opt-force-trojan"></a></p>
+
+
+<p style="margin-left:11%;"><b>--force-trojan=INTERVAL</b></p>
+
+<p style="margin-left:22%;">Use <i>INTERVAL</i> as interval
+(in seconds) for repeat execution of Trojan binary or
+script, overriding default and/or server-set interval.
+<a name="opt-mtu"></a></p>
+
+
+<p style="margin-left:11%;"><b>-m,--mtu=MTU</b></p>
+
+<p style="margin-left:22%;">Request <i>MTU</i> from server
+as the MTU of the tunnel. <a name="opt-base-mtu"></a></p>
+
+
+<p style="margin-left:11%;"><b>--base-mtu=MTU</b></p>
+
+<p style="margin-left:22%;">Indicate <i>MTU</i> as the path
+MTU between client and server on the unencrypted network.
+Newer servers will automatically calculate the MTU to be
+used on the tunnel from this value.
+<a name="opt-key-password"></a>
+<a name="opt-mca-key-password"></a></p>
+
+
+<p style="margin-left:11%;"><b>-p,--key-password=PASS
+[,--mca-key-password=PASS]</b></p>
+
+<p style="margin-left:22%;">Provide passphrase for
+certificate file, or SRK (System Root Key) PIN for TPM</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><b>--mca-key-password</b>
+provides the passphrase for the secondary certificate (see
+<b>--mca-certificate</b>).
+<a name="opt-proxy"></a></p>
+
+
+<p style="margin-left:11%;"><b>-P,--proxy=PROXYURL</b></p>
+
+<p style="margin-left:22%;">Use HTTP or SOCKS proxy for
+connection. A username and password can be provided in the
+given URL, and will be used for authentication. If
+authentication is required but no credentials are given,
+GSSAPI and automatic NTLM authentication using Samba&rsquo;s
+ntlm_auth helper tool may be attempted.
+<a name="opt-proxy-auth"></a></p>
+
+
+<p style="margin-left:11%;"><b>--proxy-auth=METHODS</b></p>
+
+<p style="margin-left:22%;">Use only the specified methods
+for HTTP authentication to a proxy. By default, only
+Negotiate, NTLM and Digest authentication are enabled. Basic
+authentication is also supported but because it is insecure
+it must be explicitly enabled. The argument is a
+comma-separated list of methods to be enabled. Note that the
+order does not matter: OpenConnect will use Negotiate, NTLM,
+Digest and Basic authentication in that order, if each is
+enabled, regardless of the order specified in the METHODS
+string. <a name="opt-no-proxy"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-proxy</b></p>
+
+<p style="margin-left:22%;">Disable use of proxy
+<a name="opt-libproxy"></a></p>
+
+
+<p style="margin-left:11%;"><b>--libproxy</b></p>
+
+<p style="margin-left:22%;">Use libproxy to configure proxy
+automatically (when built with libproxy support)
+<a name="opt-key-password-from-fsid"></a></p>
+
+
+<p style="margin-left:11%;"><b>--key-password-from-fsid</b></p>
+
+<p style="margin-left:22%;">Passphrase for certificate file
+is automatically generated from the <i>fsid</i> of the file
+system on which it is stored. The <i>fsid</i> is obtained
+from the <b>statvfs</b>(2) or <b>statfs</b>(2) system call,
+depending on the operating system. On a Linux or similar
+system with GNU coreutils, the <i>fsid</i> used by this
+option should be equal to the output of the command: <br/>
+stat --file-system
+--printf=%i\\n $CERTIFICATE <br/>
+It is not the same as the 128-bit UUID of the file
+system. <a name="opt-quiet"></a></p>
+
+
+<p style="margin-left:11%;"><b>-q,--quiet</b></p>
+
+<p style="margin-left:22%;">Less output
+<a name="opt-queue-len"></a></p>
+
+
+<p style="margin-left:11%;"><b>-Q,--queue-len=LEN</b></p>
+
+<p style="margin-left:22%;">Set packet queue limit to
+<i>LEN</i> packets. The default is 32. A high value may
+allow better overall bandwidth but at a cost of latency. If
+you run Voice over IP or other interactive traffic over the
+VPN, you don&rsquo;t want those packets to be queued behind
+thousands of other large packets which are part of a bulk
+transfer.</p>
+
+<p style="margin-left:22%; margin-top: 1em">This option
+sets the maximum inbound and outbound packet queue sizes in
+OpenConnect itself, which control how many packets will be
+sent and received in a single batch, as well as affecting
+other buffering such as the socket send buffer (SO_SNDBUF)
+for network connections and the OS tunnel device.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Ultimately, the
+right size for a queue is &quot;just enough packets that it
+never quite gets empty before more are pushed to it&quot;.
+Any higher than that is simply introducing bufferbloat and
+additional latency with no benefit. With the default of 32,
+we are able to saturate a single Gigabit Ethernet from
+modest hardware, which is more than enough for most VPN
+users.</p>
+
+<p style="margin-left:22%; margin-top: 1em">If OpenConnect
+is built with vhost-net support, it will only be used if the
+queue length is set to 16 or more. This is because vhost-net
+introduces a small amount of additional latency, but
+improves total bandwidth quite considerably for those
+operating at high traffic rates. Thus it makes sense to use
+it when the user has indicated a preference for bandwidth
+over latency, by increasing the queue size.</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><a name="opt-script"></a></p>
+
+
+<p style="margin-left:11%;"><b>-s,--script=SCRIPT</b></p>
+
+<p style="margin-left:22%;">Invoke <i>SCRIPT</i> to
+configure the network after connection. Without this,
+routing and name service are unlikely to work correctly. The
+script is expected to be compatible with the
+<b>vpnc-script</b> which is shipped with the
+&quot;vpnc&quot; VPN client. See
+<i>https://www.infradead.org/openconnect/vpnc-script.html</i>
+for more information. This version of OpenConnect is
+configured to use <b>/etc/vpnc/vpnc-script</b> by
+default.</p>
+
+<p style="margin-left:22%; margin-top: 1em">On Windows, a
+relative directory for the default script will be handled as
+starting from the directory that the openconnect executable
+is running from, rather than the current directory. The
+script will be invoked with the command-based script host
+<b>cscript.exe</b>. <a name="opt-script-tun"></a></p>
+
+
+<p style="margin-left:11%;"><b>-S,--script-tun</b></p>
+
+<p style="margin-left:22%;">Pass traffic to
+&rsquo;script&rsquo; program over a UNIX socket, instead of
+to a kernel tun/tap device. This allows the VPN IP traffic
+to be handled entirely in userspace, for example by a
+program which uses lwIP to provide SOCKS access into the
+VPN. <a name="opt-server"></a></p>
+
+
+<p style="margin-left:11%;"><b>--server=[https://]</b><i>HOST</i><b>[:</b><i>PORT</i><b>][/</b><i>PATH</i><b>]</b></p>
+
+<p style="margin-left:22%;">Define the VPN server as a
+simple <i>HOST</i> or as an URL containing the <i>HOST</i>
+and optionally the <i>PORT</i> number and the <i>PATH</i>;
+with some protocols, the path may function as a login group
+or realm, and it may equivalently be specified with
+<b>--usergroup</b>.</p>
+
+<p style="margin-left:22%; margin-top: 1em">As an
+alternative, define the VPN server as non-option command
+line argument. <a name="opt-user"></a></p>
+
+
+<p style="margin-left:11%;"><b>-u,--user=NAME</b></p>
+
+<p style="margin-left:22%;">Set login username to
+<i>NAME</i> <a name="opt-version"></a></p>
+
+
+<p style="margin-left:11%;"><b>-V,--version</b></p>
+
+<p style="margin-left:22%;">Report version number
+<a name="opt-verbose"></a></p>
+
+
+<p style="margin-left:11%;"><b>-v,--verbose</b></p>
+
+<p style="margin-left:22%;">More output (may be specified
+multiple times for additional output)
+<a name="opt-xmlconfig"></a></p>
+
+
+<p style="margin-left:11%;"><b>-x,--xmlconfig=CONFIG</b></p>
+
+<p style="margin-left:22%;">XML config file
+<a name="opt-authgroup"></a></p>
+
+
+<p style="margin-left:11%;"><b>--authgroup=GROUP</b></p>
+
+<p style="margin-left:22%;">Select GROUP from
+authentication dropdown or list entry.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Many VPNs
+require a selection from a dropdown or list during the
+authentication process. This selection may be known as
+<b>authgroup</b> (on Cisco VPNs), <b>realm</b> (Juniper,
+Pulse, Fortinet), <b>domain</b> (F5), and <b>gateway</b>
+(GlobalProtect). This option attempts to automatically fill
+the appropriate protocol-specific field with the desired
+value. <a name="opt-authenticate"></a></p>
+
+
+<p style="margin-left:11%;"><b>--authenticate</b></p>
+
+<p style="margin-left:22%;">Authenticate to the VPN, output
+the information needed to make the connection in a form
+which can be used to set shell environment variables, and
+then exit.</p>
+
+<p style="margin-left:22%; margin-top: 1em">When invoked
+with this option, OpenConnect will not actually create the
+VPN connection or configure a tunnel interface, but if
+successful will print something like the following to
+stdout: <b><br/>
+
+COOKIE=&rsquo;3311180634@13561856@1339425499@B315A0E29D16C6FD92EE...&rsquo;
+<br/>
+HOST=&rsquo;10.0.0.1&rsquo; <br/>
+CONNECT_URL=&rsquo;https://vpnserver.example.com&rsquo;
+<br/>
+
+FINGERPRINT=&rsquo;469bb424ec8835944d30bc77c77e8fc1d8e23a42&rsquo;
+<br/>
+RESOLVE=&rsquo;vpnserver.example.com:10.0.0.1&rsquo;</b>
+<br/>
+Thus, you can invoke openconnect as a non-privileged user
+<i>(with access to the user&rsquo;s PKCS#11 tokens,
+etc.)</i> for authentication, and then invoke openconnect
+separately to make the actual connection as root: <b><br/>
+eval &lsquo;openconnect --authenticate
+https://vpnserver.example.com&lsquo;; <br/>
+[ -n</b> [&quot;$COOKIE&quot;] ] &amp;&amp; echo
+[&quot;$COOKIE&quot;] | &nbsp;&nbsp; <b><br/>
+sudo openconnect --cookie-on-stdin $CONNECT_URL --servercert
+$FINGERPRINT --resolve $RESOLVE</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">Earlier
+versions of OpenConnect produced only the <b>HOST</b>
+variable (containing the numeric server address), and not
+the <b>CONNECT_URL</b> or <b>RESOLVE</b> variables.
+Subsequently, we discovered that servers behind proxies may
+not respond correctly unless the correct DNS name is present
+in the connection phase, and we added support for VPN
+protocols where the server URL&rsquo;s <i>path</i> component
+may be significant in the connection phase, prompting the
+addition of <b>CONNECT_URL</b> and <b>RESOLVE</b>, and the
+recommendation to use them as described above. If you are
+not certain that you are invoking a newer version of
+OpenConnect which outputs these variables, use the following
+command-line (compatible with most Bourne shell derivatives)
+which will work with either a newer or older version:
+<b><br/>
+sudo openconnect --cookie-on-stdin ${CONNECT_URL:-$HOST}
+--servercert $FINGERPRINT ${RESOLVE:+--resolve=$RESOLVE}</b>
+<br/>
+<a name="opt-cookieonly"></a></p>
+
+
+<p style="margin-left:11%;"><b>--cookieonly</b></p>
+
+<p style="margin-left:22%;">Fetch and print cookie only;
+don&rsquo;t connect (this is essentially a subset of
+<b>--authenticate</b>).
+<a name="opt-printcookie"></a></p>
+
+
+<p style="margin-left:11%;"><b>--printcookie</b></p>
+
+<p style="margin-left:22%;">Print cookie to stdout before
+connecting (see <b>--authenticate</b> for the
+meaning of this cookie) <a name="opt-cafile"></a></p>
+
+
+<p style="margin-left:11%;"><b>--cafile=FILE</b></p>
+
+<p style="margin-left:22%;">Additional CA file for server
+verification. By default, this simply causes OpenConnect to
+trust additional root CA certificate(s) in addition to those
+trusted by the system. Use
+<b>--no-system-trust</b> to prevent
+OpenConnect from trusting the system default certificate
+authorities. <a name="opt-no-system-trust"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-system-trust</b></p>
+
+<p style="margin-left:22%;">Do not trust the system default
+certificate authorities. If this option is given, only
+certificate authorities given with the
+<b>--cafile</b> option, if any, will be trusted
+automatically. <a name="opt-disable-ipv"></a></p>
+
+
+<p style="margin-left:11%;"><b>--disable-ipv6</b></p>
+
+<p style="margin-left:22%;">Do not advertise IPv6
+capability to server <a name="opt-dtls-ciphers"></a></p>
+
+
+<p style="margin-left:11%;"><b>--dtls-ciphers=LIST</b></p>
+
+<p style="margin-left:22%;">Set OpenSSL ciphers to support
+for DTLS <a name="opt-dtls"></a></p>
+
+
+<p style="margin-left:11%;"><b>--dtls12-ciphers=LIST</b></p>
+
+<p style="margin-left:22%;">Set OpenSSL ciphers for
+Cisco&rsquo;s DTLS v1.2
+<a name="opt-dtls-local-port"></a></p>
+
+
+<p style="margin-left:11%;"><b>--dtls-local-port=PORT</b></p>
+
+<p style="margin-left:22%;">Use <i>PORT</i> as the local
+port for DTLS and UDP datagrams
+<a name="opt-dump-http-traffic"></a></p>
+
+
+<p style="margin-left:11%;"><b>--dump-http-traffic</b></p>
+
+<p style="margin-left:22%;">Enable verbose output of all
+HTTP requests and the bodies of all responses received from
+the server.</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><a name="opt-pfs"></a></p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<colgroup><col width="11%"></col>
+<col width="7%"></col>
+<col width="4%" class="center"></col>
+<col width="78%"></col>
+</colgroup>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>--pfs</b></p></td>
+<td></td>
+<td>
+
+
+<p>Enforces Perfect Forward Secrecy (PFS). That ensures
+that if the server&rsquo;s long-term key is compromised, any
+session keys established before the compromise will be
+unaffected. If this option is provided and the server does
+not support PFS in the TLS channel the connection will
+fail.</p> </td></tr>
+</table>
+
+<p style="margin-left:22%; margin-top: 1em">PFS is
+available in Cisco ASA releases 9.1(2) and higher; a
+suitable cipher suite may need to be manually enabled by the
+administrator using the <b>ssl encryption</b> setting.</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><a name="opt-no-dtls"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-dtls</b></p>
+
+<p style="margin-left:22%;">Disable DTLS and ESP
+<a name="opt-no-http-keepalive"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-http-keepalive</b></p>
+
+<p style="margin-left:22%;">Version 8.2.2.5 of the Cisco
+ASA software has a bug where it will forget the
+client&rsquo;s SSL certificate when HTTP connections are
+being re-used for multiple requests. So far, this has
+only been seen on the initial connection, where the server
+gives an HTTP/1.0 redirect response with an explicit
+<b>Connection: Keep-Alive</b> directive. OpenConnect
+as of v2.22 has an unconditional workaround for this, which
+is never to obey that directive after an HTTP/1.0
+response.</p>
+
+<p style="margin-left:22%; margin-top: 1em">However,
+Cisco&rsquo;s support team has failed to give any competent
+response to the bug report and we don&rsquo;t know under
+what other circumstances their bug might manifest itself. So
+this option exists to disable ALL re-use of HTTP
+sessions and cause a new connection to be made for each
+request. If your server seems not to be recognizing your
+certificate, try this option. If it makes a difference,
+please report this information to the
+<b>openconnect-devel@lists.infradead.org</b> mailing
+list. <a name="opt-no-passwd"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-passwd</b></p>
+
+<p style="margin-left:22%;">Never attempt password (or
+SecurID) authentication.
+<a name="opt-no-external-auth"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-external-auth</b></p>
+
+<p style="margin-left:22%;">Prevent OpenConnect from
+advertising to the server that it supports any kind of
+authentication mode that requires an external browser.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Some servers
+will force the client to use such an authentication mode if
+the client advertises it, but fallback to a more
+&quot;scriptable&quot; authentication mode if the client
+doesn&rsquo;t appear to support it.
+<a name="opt-no-xmlpost"></a></p>
+
+
+<p style="margin-left:11%;"><b>--no-xmlpost</b></p>
+
+<p style="margin-left:22%;">Do not attempt to post an XML
+authentication/configuration request to the server; use the
+old style GET method which was used by older clients and
+servers instead.</p>
+
+<p style="margin-left:22%; margin-top: 1em">This option is
+a temporary safety net, to work around potential
+compatibility issues with the code which falls back to the
+old method automatically. It causes OpenConnect to behave
+more like older versions (4.08 and below) did. If you find
+that you need to use this option, then you have found a bug
+in OpenConnect. Please see
+https://www.infradead.org/openconnect/mail.html and report
+this to the developers.
+<a name="opt-allow-insecure-crypto"></a></p>
+
+
+<p style="margin-left:11%;"><b>--allow-insecure-crypto</b></p>
+
+<p style="margin-left:22%;">The ancient, broken 3DES and
+RC4 ciphers are insecure; we explicitly disable them by
+default. However, some still-in-use VPN servers can&rsquo;t
+do any better.</p>
+
+<p style="margin-left:22%; margin-top: 1em">This option
+enables use of these insecure ciphers, as well as the use of
+SHA1 for server certificate validation.
+<a name="opt-non-inter"></a></p>
+
+
+<p style="margin-left:11%;"><b>--non-inter</b></p>
+
+<p style="margin-left:22%;">Do not expect user input; exit
+if it is required. <a name="opt-passwd-on-stdin"></a></p>
+
+
+<p style="margin-left:11%;"><b>--passwd-on-stdin</b></p>
+
+<p style="margin-left:22%;">Read password from standard
+input <a name="opt-protocol"></a></p>
+
+
+<p style="margin-left:11%;"><b>--protocol=PROTO</b></p>
+
+<p style="margin-left:22%;">Select VPN protocol
+<i>PROTO</i> to be used for the connection. Supported
+protocols are <i>anyconnect</i> for Cisco AnyConnect (the
+default), <i>nc</i> for experimental support for Juniper
+Network Connect (also supported by most Junos/Ivanti Pulse
+servers), <i>pulse</i> for experimental support for
+Junos/Ivanti Pulse, <i>gp</i> for experimental support for
+PAN GlobalProtect, <i>f5</i> for experimental support for F5
+Big-IP, <i>fortinet</i> for experimental support for
+Fortinet Fortigate, and <i>array</i> for experimental
+support for Array Networks SSL VPN.</p>
+
+<p style="margin-left:22%; margin-top: 1em">See
+<i>https://www.infradead.org/openconnect/protocols.html</i>
+for details on features and deficiencies of the individual
+protocols.</p>
+
+<p style="margin-left:22%; margin-top: 1em">OpenConnect
+does not yet support all of the authentication options used
+by Pulse, nor does it support Host Checker/TNCC with Pulse.
+If your Junos/Ivanti Pulse VPN is not yet supported with
+<b>--protocol=pulse</b>, then
+<b>--protocol=nc</b> may be a useful fallback
+option. <a name="opt-token-mode"></a></p>
+
+
+<p style="margin-left:11%;"><b>--token-mode=MODE</b></p>
+
+<p style="margin-left:22%;">Enable one-time password
+generation using the <i>MODE</i> algorithm.
+<b>--token-mode=rsa</b> will call
+libstoken to generate an RSA SecurID tokencode,
+<b>--token-mode=totp</b> will generate an
+RFC 6238 time-based password, and
+<b>--token-mode=hotp</b> will generate an
+RFC 4226 HMAC-based password. Yubikey tokens which generate
+OATH codes in hardware are supported with
+<b>--token-mode=yubioath</b>.
+<b>--token-mode=oidc</b> will use the
+provided OpenIDConnect token as an RFC 6750 bearer token.
+<a name="opt-token-secret"></a></p>
+
+
+<p style="margin-left:11%;"><b>--token-secret={
+SECRET[,COUNTER] | @FILENAME }</b></p>
+
+<p style="margin-left:22%;">The secret to use when
+generating one-time passwords/verification codes. Base
+32-encoded TOTP/HOTP secrets can be used by specifying
+&quot;base32:&quot; at the beginning of the secret, and for
+HOTP secrets the token counter can be specified following a
+comma.</p>
+
+<p style="margin-left:22%; margin-top: 1em">RSA SecurID
+secrets can be specified as an Android/iPhone URI or a raw
+numeric CTF string (with or without dashes).</p>
+
+<p style="margin-left:22%; margin-top: 1em">For Yubikey
+OATH the token secret specifies the name of the credential
+to be used. If not provided, the first OATH credential found
+on the device will be used.</p>
+
+<p style="margin-left:22%; margin-top: 1em">For OIDC the
+secret is the bearer token to be used.</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><i>FILENAME</i>,
+if specified, can contain any of the above strings. Or, it
+can contain a SecurID XML (SDTID) seed.</p>
+
+<p style="margin-left:22%; margin-top: 1em">If this option
+is omitted, and --token-mode is
+&quot;rsa&quot;, libstoken will try to use the software
+token seed saved in <b>~/.stokenrc</b> by the &quot;stoken
+import&quot; command.
+<a name="opt-reconnect-timeout"></a></p>
+
+
+<p style="margin-left:11%;"><b>--reconnect-timeout=SECONDS</b></p>
+
+<p style="margin-left:22%;">After disconnection or Dead
+Peer Detection, keep trying to reconnect for <i>SECONDS</i>.
+The default is 300 seconds, which means that openconnect can
+recover a VPN connection after a temporary network outage
+lasting up to 300 seconds. <a name="opt-resolve"></a></p>
+
+
+<p style="margin-left:11%;"><b>--resolve=HOST:IP</b></p>
+
+<p style="margin-left:22%;">Automatically resolve the
+hostname <i>HOST</i> to <i>IP</i> instead of using the
+normal resolver to look it up.
+<a name="opt-servercert"></a></p>
+
+
+<p style="margin-left:11%;"><b>--sni=HOST</b></p>
+
+<p style="margin-left:22%;">When creating new TLS
+connections, always present the hostname <i>HOST</i> as the
+SNI (Server Name Indication) in place of the correct
+hostname, which will still be sent in the HTTP
+&rsquo;Host:&rsquo; header, and expect the peer&rsquo;s
+certificate to match the SNI rather than the correct
+hostname. This may be useful for Domain Fronting, by which
+some filtered or censored Internet connections can be
+bypassed.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Note that
+sending different values for the SNI and &rsquo;Host:&rsquo;
+header violates HTTP standards and is prevented by many
+cloud hosting providers.</p>
+
+
+<p style="margin-left:11%;"><b>--servercert=HASH</b></p>
+
+<p style="margin-left:22%;">Accept server&rsquo;s SSL
+certificate only if it matches the provided fingerprint.
+This option implies
+<b>--no-system-trust</b>, and may be
+specified multiple times in order to accept multiple
+possible fingerprints.</p>
+
+<p style="margin-left:22%; margin-top: 1em">The allowed
+fingerprint types are <i>SHA1</i>, <i>SHA256</i>, and
+<i>PIN-SHA256</i>. They are distinguished by the
+&rsquo;sha1:&rsquo;, &rsquo;sha256:&rsquo; and
+&rsquo;pin-sha256:&rsquo; prefixes to the encoded hash. The
+first two are custom identifiers providing hex encoding of
+the peer&rsquo;s public key, while &rsquo;pin-sha256:&rsquo;
+is the RFC7469 key PIN, which utilizes base64 encoding. To
+ease certain testing use-cases, a partial match of the hash
+will also be accepted, if it is at least 4 characters past
+the prefix. <a name="opt-useragent"></a></p>
+
+
+<p style="margin-left:11%;"><b>--useragent=STRING</b></p>
+
+<p style="margin-left:22%;">Use <i>STRING</i> as
+&rsquo;User-Agent:&rsquo; field value in HTTP
+header.</p>
+
+<p style="margin-left:22%; margin-top: 1em">Some VPN
+servers may require specific values matching those sent by
+proprietary VPN clients in order to successfully
+authenticate or connect. For example, when connecting to a
+Cisco VPN server, --useragent &rsquo;AnyConnect
+Windows 4.10.06079&rsquo; or --useragent
+&rsquo;Cisco AnyConnect VPN Agent for Windows
+2.2.0133&rsquo;, or when connecting to a Pulse server,
+--useragent
+&rsquo;Pulse-Secure/9.1.11.6725&rsquo;.
+<a name="opt-version-string"></a></p>
+
+
+<p style="margin-left:11%;"><b>--version-string=STRING</b></p>
+
+<p style="margin-left:22%;">Use <i>STRING</i> as the
+software version reported to the head end. (e.g.
+--version-string &rsquo;2.2.0133&rsquo;)
+<a name="opt-local-hostname"></a></p>
+
+
+<p style="margin-left:11%;"><b>--local-hostname=STRING</b></p>
+
+<p style="margin-left:22%;">Use <i>STRING</i> as
+&rsquo;X-CSTP-Hostname:&rsquo; field value in
+HTTP header. For example --local-hostname
+&rsquo;mypc&rsquo;, will advertise the value
+&rsquo;mypc&rsquo; as the suggested hostname to point to the
+provided IP address. <a name="opt-os"></a></p>
+
+
+<p style="margin-left:11%;"><b>--os=STRING</b></p>
+
+<p style="margin-left:22%;">OS type to report to gateway.
+Recognized values are: <b>linux</b>, <b>linux-64</b>,
+<b>win</b>, <b>mac-intel</b>, <b>android</b>,
+<b>apple-ios</b>. Reporting a different OS type may
+affect the dynamic access policy (DAP) applied to the VPN
+session. If the gateway requires CSD, it will also cause the
+corresponding CSD trojan binary to be downloaded, so you may
+need to use <b>--csd-wrapper</b> if this
+code is not executable on the local machine.</p>
+
+<h2 id="heading5">SIGNALS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">In the data
+phase of the connection, the following signals are handled:
+<a name="sig-SIGINT"></a> <a name="sig-SIGTERM"></a>
+<b><br/>
+SIGINT / SIGTERM</b></p>
+
+<p style="margin-left:22%;">performs a clean shutdown by
+logging the session off, disconnecting from the gateway, and
+running the vpnc-script to restore the network
+configuration. <a name="sig-SIGHUP"></a></p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<colgroup><col width="11%"></col>
+<col width="9%"></col>
+<col width="2%" class="center"></col>
+<col width="78%"></col>
+</colgroup>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>SIGHUP</b></p></td>
+<td></td>
+<td>
+
+
+<p>disconnects from the gateway and runs the
+vpnc-script, but does not log the session off; this
+allows for reconnection later using
+<b>--cookie</b>. <a name="sig-SIGUSR1"></a></p></td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>SIGUSR1</b></p>
+
+<p style="margin-left:22%;">writes progress message with
+detailed connection information and statistics.
+<a name="sig-SIGUSR2"></a></p>
+
+<p style="margin-left:11%;"><b>SIGUSR2</b></p>
+
+<p style="margin-left:22%;">forces an immediate
+disconnection and reconnection; this can be used to quickly
+recover from LAN IP address changes.</p>
+
+<h2 id="heading6">LIMITATIONS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">See
+<b>https://www.infradead.org/openconnect/contribute.html</b>
+for various features that we wish OpenConnect had, and
+<b>https://www.infradead.org/openconnect/protocols.html</b>
+for information on the quirks and limitations of the
+individual VPN protocols.</p>
+
+<h2 id="heading7">SEE ALSO
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>ocserv</b>(8)</p>
+
+<h2 id="heading8">AUTHORS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">David Woodhouse
+&lt;dwmw2@infradead.org&gt;</p>
+<hr/>
+
+
+	      </div>
+   </div>
+  </body>
+</html>

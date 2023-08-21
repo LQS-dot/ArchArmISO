@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libparted-fs-resize
+Description: The GNU Parted filesystem resize shared library
+Version: 3.6
+Libs: -L${libdir} -lparted-fs-resize
+Cflags: -I${includedir}

@@ -1,0 +1,63 @@
+%NAME%
+mc
+
+%VERSION%
+4.8.29-2
+
+%BASE%
+mc
+
+%DESC%
+A file manager that emulates Norton Commander
+
+%URL%
+https://midnight-commander.org/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1674514699
+
+%INSTALLDATE%
+1691208571
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+7437078
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+e2fsprogs
+glib2
+gpm
+libssh2
+slang
+which
+
+%OPTDEPENDS%
+aspell: spelling corrections
+cabextract: ucab extfs
+cdparanoia: audio extfs
+cdrkit: iso9660 extfs
+cvs: CVS support
+gawk: hp48+ extfs
+mtools: a+ extfs
+p7zip: support for 7zip archives
+perl: needed by several extfs scripts
+python: to access uc1541 or s3 storage
+python-boto: s3+ extfs
+python-pytz: s3+ extfs
+unace: uace extfs
+unarj: uarj extfs
+unrar: urar extfs
+unzip: open zip archives
+zip: uzip extfs
+

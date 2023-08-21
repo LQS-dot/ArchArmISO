@@ -1,0 +1,10 @@
+%FILES%
+usr/
+usr/share/
+usr/share/licenses/
+usr/share/licenses/livecd-sounds/
+usr/share/licenses/livecd-sounds/LICENSE
+usr/share/livecd-sounds/
+usr/share/livecd-sounds/beep.wav
+usr/share/livecd-sounds/pick-a-card.wav
+

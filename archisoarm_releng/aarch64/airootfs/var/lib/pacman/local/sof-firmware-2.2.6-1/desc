@@ -1,0 +1,37 @@
+%NAME%
+sof-firmware
+
+%VERSION%
+2.2.6-1
+
+%BASE%
+sof-bin
+
+%DESC%
+Sound Open Firmware
+
+%URL%
+https://www.sofproject.org/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1688674072
+
+%INSTALLDATE%
+1691208579
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+18271712
+
+%LICENSE%
+custom:BSD
+custom:ISC
+
+%VALIDATION%
+pgp
+

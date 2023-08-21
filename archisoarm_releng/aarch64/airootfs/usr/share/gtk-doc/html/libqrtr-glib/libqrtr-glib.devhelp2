@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="libqrtr-glib Reference Manual" link="index.html" author="" name="libqrtr-glib" version="2" language="c" online="https://www.freedesktop.org/software/libqmi/libqrtr-glib/latest/">
+  <chapters>
+    <sub name="Core" link="ch01.html">
+      <sub name="qrtr-version" link="libqrtr-glib-qrtr-version.html"/>
+      <sub name="QrtrBus" link="QrtrBus.html"/>
+      <sub name="QrtrNode" link="QrtrNode.html"/>
+      <sub name="QrtrClient" link="QrtrClient.html"/>
+      <sub name="QRTR utilities" link="libqrtr-glib-QRTR-utilities.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
+    <sub name="Index of new symbols in 1.0" link="api-index-1-0.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="macro" name="QRTR_CHECK_VERSION()" link="libqrtr-glib-qrtr-version.html#QRTR-CHECK-VERSION:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_MAJOR_VERSION" link="libqrtr-glib-qrtr-version.html#QRTR-MAJOR-VERSION:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_MINOR_VERSION" link="libqrtr-glib-qrtr-version.html#QRTR-MINOR-VERSION:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_MICRO_VERSION" link="libqrtr-glib-qrtr-version.html#QRTR-MICRO-VERSION:CAPS" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_new ()" link="QrtrBus.html#qrtr-bus-new" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_new_finish ()" link="QrtrBus.html#qrtr-bus-new-finish" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_peek_node ()" link="QrtrBus.html#qrtr-bus-peek-node" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_get_node ()" link="QrtrBus.html#qrtr-bus-get-node" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_get_nodes ()" link="QrtrBus.html#qrtr-bus-get-nodes" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_peek_nodes ()" link="QrtrBus.html#qrtr-bus-peek-nodes" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_wait_for_node ()" link="QrtrBus.html#qrtr-bus-wait-for-node" since="1.0"/>
+    <keyword type="function" name="qrtr_bus_wait_for_node_finish ()" link="QrtrBus.html#qrtr-bus-wait-for-node-finish" since="1.0"/>
+    <keyword type="macro" name="QRTR_BUS_LOOKUP_TIMEOUT" link="QrtrBus.html#QRTR-BUS-LOOKUP-TIMEOUT:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_BUS_SIGNAL_NODE_ADDED" link="QrtrBus.html#QRTR-BUS-SIGNAL-NODE-ADDED:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_BUS_SIGNAL_NODE_REMOVED" link="QrtrBus.html#QRTR-BUS-SIGNAL-NODE-REMOVED:CAPS" since="1.0"/>
+    <keyword type="struct" name="QrtrBus" link="QrtrBus.html#QrtrBus-struct"/>
+    <keyword type="property" name="The “lookup-timeout” property" link="QrtrBus.html#QrtrBus--lookup-timeout"/>
+    <keyword type="signal" name="The “node-added” signal" link="QrtrBus.html#QrtrBus-node-added"/>
+    <keyword type="signal" name="The “node-removed” signal" link="QrtrBus.html#QrtrBus-node-removed"/>
+    <keyword type="function" name="qrtr_node_service_info_get_service ()" link="QrtrNode.html#qrtr-node-service-info-get-service" since="1.0"/>
+    <keyword type="function" name="qrtr_node_service_info_get_port ()" link="QrtrNode.html#qrtr-node-service-info-get-port" since="1.0"/>
+    <keyword type="function" name="qrtr_node_service_info_get_version ()" link="QrtrNode.html#qrtr-node-service-info-get-version" since="1.0"/>
+    <keyword type="function" name="qrtr_node_service_info_get_instance ()" link="QrtrNode.html#qrtr-node-service-info-get-instance" since="1.0"/>
+    <keyword type="function" name="qrtr_node_service_info_free ()" link="QrtrNode.html#qrtr-node-service-info-free" since="1.0"/>
+    <keyword type="function" name="qrtr_node_get_id ()" link="QrtrNode.html#qrtr-node-get-id" since="1.0"/>
+    <keyword type="function" name="qrtr_node_peek_bus ()" link="QrtrNode.html#qrtr-node-peek-bus" since="1.0"/>
+    <keyword type="function" name="qrtr_node_get_bus ()" link="QrtrNode.html#qrtr-node-get-bus" since="1.0"/>
+    <keyword type="function" name="qrtr_node_peek_service_info_list ()" link="QrtrNode.html#qrtr-node-peek-service-info-list" since="1.0"/>
+    <keyword type="function" name="qrtr_node_get_service_info_list ()" link="QrtrNode.html#qrtr-node-get-service-info-list" since="1.0"/>
+    <keyword type="function" name="qrtr_node_lookup_port ()" link="QrtrNode.html#qrtr-node-lookup-port" since="1.0"/>
+    <keyword type="function" name="qrtr_node_lookup_service ()" link="QrtrNode.html#qrtr-node-lookup-service" since="1.0"/>
+    <keyword type="function" name="qrtr_node_wait_for_services ()" link="QrtrNode.html#qrtr-node-wait-for-services" since="1.0"/>
+    <keyword type="function" name="qrtr_node_wait_for_services_finish ()" link="QrtrNode.html#qrtr-node-wait-for-services-finish" since="1.0"/>
+    <keyword type="struct" name="QrtrNodeServiceInfo" link="QrtrNode.html#QrtrNodeServiceInfo-struct"/>
+    <keyword type="macro" name="QRTR_NODE_BUS" link="QrtrNode.html#QRTR-NODE-BUS:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_NODE_ID" link="QrtrNode.html#QRTR-NODE-ID:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_NODE_SIGNAL_SERVICE_ADDED" link="QrtrNode.html#QRTR-NODE-SIGNAL-SERVICE-ADDED:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_NODE_SIGNAL_SERVICE_REMOVED" link="QrtrNode.html#QRTR-NODE-SIGNAL-SERVICE-REMOVED:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_NODE_SIGNAL_REMOVED" link="QrtrNode.html#QRTR-NODE-SIGNAL-REMOVED:CAPS" since="1.0"/>
+    <keyword type="struct" name="QrtrNode" link="QrtrNode.html#QrtrNode-struct"/>
+    <keyword type="property" name="The “bus” property" link="QrtrNode.html#QrtrNode--bus"/>
+    <keyword type="property" name="The “node-id” property" link="QrtrNode.html#QrtrNode--node-id"/>
+    <keyword type="signal" name="The “node-removed” signal" link="QrtrNode.html#QrtrNode-node-removed"/>
+    <keyword type="signal" name="The “service-added” signal" link="QrtrNode.html#QrtrNode-service-added"/>
+    <keyword type="signal" name="The “service-removed” signal" link="QrtrNode.html#QrtrNode-service-removed"/>
+    <keyword type="function" name="qrtr_client_new ()" link="QrtrClient.html#qrtr-client-new" since="1.0"/>
+    <keyword type="function" name="qrtr_client_peek_node ()" link="QrtrClient.html#qrtr-client-peek-node" since="1.0"/>
+    <keyword type="function" name="qrtr_client_get_node ()" link="QrtrClient.html#qrtr-client-get-node" since="1.0"/>
+    <keyword type="function" name="qrtr_client_get_port ()" link="QrtrClient.html#qrtr-client-get-port" since="1.0"/>
+    <keyword type="function" name="qrtr_client_send ()" link="QrtrClient.html#qrtr-client-send" since="1.0"/>
+    <keyword type="macro" name="QRTR_CLIENT_NODE" link="QrtrClient.html#QRTR-CLIENT-NODE:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_CLIENT_PORT" link="QrtrClient.html#QRTR-CLIENT-PORT:CAPS" since="1.0"/>
+    <keyword type="macro" name="QRTR_CLIENT_SIGNAL_MESSAGE" link="QrtrClient.html#QRTR-CLIENT-SIGNAL-MESSAGE:CAPS" since="1.0"/>
+    <keyword type="struct" name="QrtrClient" link="QrtrClient.html#QrtrClient-struct"/>
+    <keyword type="property" name="The “client-node” property" link="QrtrClient.html#QrtrClient--client-node"/>
+    <keyword type="property" name="The “client-port” property" link="QrtrClient.html#QrtrClient--client-port"/>
+    <keyword type="signal" name="The “client-message” signal" link="QrtrClient.html#QrtrClient-client-message"/>
+    <keyword type="function" name="qrtr_get_uri_for_node ()" link="libqrtr-glib-QRTR-utilities.html#qrtr-get-uri-for-node" since="1.0"/>
+    <keyword type="function" name="qrtr_get_node_for_uri ()" link="libqrtr-glib-QRTR-utilities.html#qrtr-get-node-for-uri" since="1.0"/>
+  </functions>
+</book>

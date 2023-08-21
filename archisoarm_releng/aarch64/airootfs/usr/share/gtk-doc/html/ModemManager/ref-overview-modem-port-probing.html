@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Port probing: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-overview.html" title="Part I. ModemManager Overview">
+<link rel="prev" href="ch03s02.html" title="Filter policies">
+<link rel="next" href="ch04s02.html" title="Probing sequence">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-overview.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch03s02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch04s02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="ref-overview-modem-port-probing"></a>Port probing</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ref-overview-modem-port-probing.html#id-1.2.5.4">Pre-probing filters</a></span></dt>
+<dt><span class="section"><a href="ch04s02.html">Probing sequence</a></span></dt>
+<dt><span class="section"><a href="ch04s03.html">Post-probing filters</a></span></dt>
+<dt><span class="section"><a href="ch04s04.html">Probing setup examples</a></span></dt>
+</dl></div>
+<p>
+      Whenever a new device is detected by ModemManager, port probing process will
+      get started, so that we can determine which kind of ports we have, and also
+      which plugin we need to use for the specific device. Devices may expose one or
+      more ports, and all of them will follow the same probing logic.
+    </p>
+<p>
+      The whole probing process, including pre-probing and post-probing filters, is
+      implemented in the core ModemManager daemon. Plugins will just configure their
+      own special needs in the probing process, so that only the steps required by the
+      given plugin are executed. For example, plugins which do not support RS232
+      devices will not need AT-based vendor or product filters.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.2.5.4"></a>Pre-probing filters</h2></div></div></div>
+<p>
+        Pre-probing filters are those which control whether the probing, as
+        requested by the specific plugin, takes place.
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="emphasis"><em>Allowed vendor IDs</em></span></p>
+<p>
+            Plugins can provide a list of udev-reported vendor IDs to be used as
+            pre-probing filters. If the vendor ID reported by the device via udev
+            is found in the list provided by the plugin, port probing will be
+            launched as requested by the given plugin.
+          </p>
+<p>
+            This filter is specified by the <span class="type">MM_PLUGIN_ALLOWED_VENDOR_IDS</span>
+            property in the <span class="structname">MMPlugin</span> object provided
+            by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Product IDs</em></span></p>
+<p>
+            Plugins can provide a list of udev-reported pairs of vendor and product
+            IDs to be used as pre-probing filters.
+          </p>
+<p>
+            If the vendor ID and product ID pair reported by the device via udev is
+            found in the list of 'allowed' pairs provided by the plugin, port probing
+            will be launched as requested by the given plugin. This additional filter
+            should be used when the plugin is expected to work only with a given
+            specific product of a given vendor.
+          </p>
+<p>
+            If the vendor ID and product ID pair reported by the device via udev is
+            found in the list of 'forbidden' pairs provided by the plugin, port probing
+            will not be launched by this plugin. This additional filter
+            should be used when the plugin supports all devices of a given vendor
+            except for some specific ones.
+          </p>
+<p>
+            These filters are specified by the <span class="type">MM_PLUGIN_ALLOWED_PRODUCT_IDS</span>
+            and <span class="type">MM_PLUGIN_FORBIDDEN_PRODUCT_IDS</span> properties in the
+            <span class="structname">MMPlugin</span> object provided by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Subsystems</em></span></p>
+<p>
+            Plugins can specify which subsystems they expect, so that we filter out
+            any port detected with a subsystem not listed by the plugin.
+          </p>
+<p>
+            This filter is specified by the <span class="type">MM_PLUGIN_ALLOWED_SUBSYSTEMS</span>
+            property in the <span class="structname">MMPlugin</span> object provided
+            by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Drivers</em></span></p>
+<p>
+            Plugins can specify which drivers they expect, so that we filter out
+            any port detected being managed by a driver not listed by the plugin.
+          </p>
+<p>
+            Plugins can also specify which drivers they do not expect, so that we
+            filter out any port detected being managed by a driver listed by the plugin.
+          </p>
+<p>
+            These filters are specified by the <span class="type">MM_PLUGIN_ALLOWED_DRIVERS</span>
+            and <span class="type">MM_PLUGIN_FORBIDDEN_DRIVERS</span> properties in the
+            <span class="structname">MMPlugin</span> object provided by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>udev tags</em></span></p>
+<p>
+            Plugins can provide a list of udev tags, so that we filter out
+            any port detected which doesn't expose any of the given tags.
+          </p>
+<p>
+            This filter is specified by the <span class="type">MM_PLUGIN_ALLOWED_UDEV_TAGS</span>
+            property in the <span class="structname">MMPlugin</span> object provided
+            by the plugin.
+          </p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

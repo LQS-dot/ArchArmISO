@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMCdmaManualActivationProperties: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03.html#id-1.2.4.3" title="Generic interfaces">
+<link rel="prev" href="MMModemCdma.html" title="MMModemCdma">
+<link rel="next" href="MMUnlockRetries.html" title="MMUnlockRetries">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMCdmaManualActivationProperties.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMCdmaManualActivationProperties.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03.html#id-1.2.4.3"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMModemCdma.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMUnlockRetries.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMCdmaManualActivationProperties"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMCdmaManualActivationProperties.top_of_page"></a>MMCdmaManualActivationProperties</span></h2>
+<p>MMCdmaManualActivationProperties — Helper object to handle manual CDMA activation properties.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="returnvalue">MMCdmaManualActivationProperties</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-new" title="mm_cdma_manual_activation_properties_new ()">mm_cdma_manual_activation_properties_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-spc" title="mm_cdma_manual_activation_properties_get_spc ()">mm_cdma_manual_activation_properties_get_spc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-spc" title="mm_cdma_manual_activation_properties_set_spc ()">mm_cdma_manual_activation_properties_set_spc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-sid" title="mm_cdma_manual_activation_properties_get_sid ()">mm_cdma_manual_activation_properties_get_sid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-sid" title="mm_cdma_manual_activation_properties_set_sid ()">mm_cdma_manual_activation_properties_set_sid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-mdn" title="mm_cdma_manual_activation_properties_get_mdn ()">mm_cdma_manual_activation_properties_get_mdn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-mdn" title="mm_cdma_manual_activation_properties_set_mdn ()">mm_cdma_manual_activation_properties_set_mdn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-min" title="mm_cdma_manual_activation_properties_get_min ()">mm_cdma_manual_activation_properties_get_min</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-min" title="mm_cdma_manual_activation_properties_set_min ()">mm_cdma_manual_activation_properties_set_min</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-mn-ha-key" title="mm_cdma_manual_activation_properties_get_mn_ha_key ()">mm_cdma_manual_activation_properties_get_mn_ha_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-mn-ha-key" title="mm_cdma_manual_activation_properties_set_mn_ha_key ()">mm_cdma_manual_activation_properties_set_mn_ha_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-mn-aaa-key" title="mm_cdma_manual_activation_properties_get_mn_aaa_key ()">mm_cdma_manual_activation_properties_get_mn_aaa_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-mn-aaa-key" title="mm_cdma_manual_activation_properties_set_mn_aaa_key ()">mm_cdma_manual_activation_properties_set_mn_aaa_key</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-prl" title="mm_cdma_manual_activation_properties_get_prl ()">mm_cdma_manual_activation_properties_get_prl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-peek-prl-bytearray" title="mm_cdma_manual_activation_properties_peek_prl_bytearray ()">mm_cdma_manual_activation_properties_peek_prl_bytearray</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-get-prl-bytearray" title="mm_cdma_manual_activation_properties_get_prl_bytearray ()">mm_cdma_manual_activation_properties_get_prl_bytearray</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-prl" title="mm_cdma_manual_activation_properties_set_prl ()">mm_cdma_manual_activation_properties_set_prl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCdmaManualActivationProperties.html#mm-cdma-manual-activation-properties-set-prl-bytearray" title="mm_cdma_manual_activation_properties_set_prl_bytearray ()">mm_cdma_manual_activation_properties_set_prl_bytearray</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMCdmaManualActivationProperties.html#MMCdmaManualActivationProperties-struct" title="struct MMCdmaManualActivationProperties">MMCdmaManualActivationProperties</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> MMCdmaManualActivationProperties
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> is an object handling the properties
+required during a manual CDMA activation request.</p>
+</div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-new"></a><h3>mm_cdma_manual_activation_properties_new ()</h3>
+<pre class="programlisting"><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="returnvalue">MMCdmaManualActivationProperties</span></a> *
+mm_cdma_manual_activation_properties_new
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-new.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>. The returned
+value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-spc"></a><h3>mm_cdma_manual_activation_properties_get_spc ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cdma_manual_activation_properties_get_spc
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the Service Programming Code.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-spc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-spc.returns"></a><h4>Returns</h4>
+<p>The SPC. Do not free the returned value, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-spc"></a><h3>mm_cdma_manual_activation_properties_set_spc ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_spc
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *spc</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Service Programming Code.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-spc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spc</p></td>
+<td class="parameter_description"><p>The SPC string, exactly 6 digits.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-spc.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the SPC was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-sid"></a><h3>mm_cdma_manual_activation_properties_get_sid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+mm_cdma_manual_activation_properties_get_sid
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the System Identification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-sid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-sid.returns"></a><h4>Returns</h4>
+<p> The SID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-sid"></a><h3>mm_cdma_manual_activation_properties_set_sid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_cdma_manual_activation_properties_set_sid
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> sid</code></em>);</pre>
+<p>Sets the Service Identification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-sid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sid</p></td>
+<td class="parameter_description"><p>The SID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-mdn"></a><h3>mm_cdma_manual_activation_properties_get_mdn ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cdma_manual_activation_properties_get_mdn
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the Mobile Directory Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mdn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mdn.returns"></a><h4>Returns</h4>
+<p>The MDN. Do not free the returned value, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-mdn"></a><h3>mm_cdma_manual_activation_properties_set_mdn ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_mdn
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mdn</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Mobile Directory Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mdn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mdn</p></td>
+<td class="parameter_description"><p>The MDN string, maximum 15 characters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mdn.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the MDN was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-min"></a><h3>mm_cdma_manual_activation_properties_get_min ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cdma_manual_activation_properties_get_min
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the Mobile Indentification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-min.returns"></a><h4>Returns</h4>
+<p>The MIN. Do not free the returned value, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-min"></a><h3>mm_cdma_manual_activation_properties_set_min ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_min
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *min</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Mobile Identification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>min</p></td>
+<td class="parameter_description"><p>The MIN string, maximum 15 characters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-min.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the MIN was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-mn-ha-key"></a><h3>mm_cdma_manual_activation_properties_get_mn_ha_key ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cdma_manual_activation_properties_get_mn_ha_key
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the MN-HA key.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mn-ha-key.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mn-ha-key.returns"></a><h4>Returns</h4>
+<p>The MN-HA key. Do not free the returned value, it
+is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-mn-ha-key"></a><h3>mm_cdma_manual_activation_properties_set_mn_ha_key ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_mn_ha_key
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mn_ha_key</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Mobile Identification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mn-ha-key.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mn_ha_key</p></td>
+<td class="parameter_description"><p>The MN-HA key string, maximum 16 characters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mn-ha-key.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the MN-HA key was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-mn-aaa-key"></a><h3>mm_cdma_manual_activation_properties_get_mn_aaa_key ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cdma_manual_activation_properties_get_mn_aaa_key
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the MN-AAA key.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mn-aaa-key.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-mn-aaa-key.returns"></a><h4>Returns</h4>
+<p>The MN-AAA key. Do not free the returned value, it
+is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-mn-aaa-key"></a><h3>mm_cdma_manual_activation_properties_set_mn_aaa_key ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_mn_aaa_key
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mn_aaa_key</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Mobile Identification Number.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mn-aaa-key.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mn_aaa_key</p></td>
+<td class="parameter_description"><p>The MN-AAA key string, maximum 16 characters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-mn-aaa-key.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the MN-AAA key was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is
+set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-prl"></a><h3>mm_cdma_manual_activation_properties_get_prl ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mm_cdma_manual_activation_properties_get_prl
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *prl_len</code></em>);</pre>
+<p>Gets the Preferred Roaming List.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-prl.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prl_len</p></td>
+<td class="parameter_description"><p>Size of the returned PRL. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-prl.returns"></a><h4>Returns</h4>
+<p>The PRL. Do not free the returned value, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-peek-prl-bytearray"></a><h3>mm_cdma_manual_activation_properties_peek_prl_bytearray ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+mm_cdma_manual_activation_properties_peek_prl_bytearray
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the Preferred Roaming List.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-peek-prl-bytearray.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-peek-prl-bytearray.returns"></a><h4>Returns</h4>
+<p>A <a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> with the PRL, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it doesn't
+contain any. Do not free the returned value, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-get-prl-bytearray"></a><h3>mm_cdma_manual_activation_properties_get_prl_bytearray ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="returnvalue">GByteArray</span></a> *
+mm_cdma_manual_activation_properties_get_prl_bytearray
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>);</pre>
+<p>Gets the Preferred Roaming List.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-prl-bytearray.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-get-prl-bytearray.returns"></a><h4>Returns</h4>
+<p>A <a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> with the PRL, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it doesn't
+contain any. The returned value should be freed with <a href="../glib/glib-Byte-Arrays.html#g-byte-array-unref"><code class="function">g_byte_array_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-prl"></a><h3>mm_cdma_manual_activation_properties_set_prl ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_prl
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *prl</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> prl_length</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Preferred Roaming List.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-prl.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prl</p></td>
+<td class="parameter_description"><p>The PRL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prl_length</p></td>
+<td class="parameter_description"><p>Length of <em class="parameter"><code>prl</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-prl.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the PRL was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cdma-manual-activation-properties-set-prl-bytearray"></a><h3>mm_cdma_manual_activation_properties_set_prl_bytearray ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_cdma_manual_activation_properties_set_prl_bytearray
+                               (<em class="parameter"><code><a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *prl</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the Preferred Roaming List.</p>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-prl-bytearray.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prl</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> with the PRL to set. This method takes a new reference
+of <em class="parameter"><code>prl</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cdma-manual-activation-properties-set-prl-bytearray.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the PRL was successfully set, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMCdmaManualActivationProperties.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMCdmaManualActivationProperties-struct"></a><h3>struct MMCdmaManualActivationProperties</h3>
+<pre class="programlisting">struct MMCdmaManualActivationProperties;</pre>
+<p>The <a class="link" href="MMCdmaManualActivationProperties.html" title="MMCdmaManualActivationProperties"><span class="type">MMCdmaManualActivationProperties</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

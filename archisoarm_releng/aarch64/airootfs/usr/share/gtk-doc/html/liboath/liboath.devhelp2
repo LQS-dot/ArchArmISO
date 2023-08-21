@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="OATH Library (liboath) Manual" link="index.html" author="Simon Josefsson" name="liboath" version="2" language="c" online="https://www.nongnu.org/oath-toolkit/liboath/">
+  <chapters>
+    <sub name="Liboath API Reference Manual" link="intro.html">
+      <sub name="oath.h" link="liboath-oath.h.html"/>
+    </sub>
+    <sub name="API Index" link="api-index-full.html"/>
+    <sub name="Index of new API in 1.4.0" link="api-index-1-4-0.html"/>
+    <sub name="Index of new API in 1.6.0" link="api-index-1-6-0.html"/>
+    <sub name="Index of new API in 1.8.0" link="api-index-1-8-0.html"/>
+    <sub name="Index of new API in 1.10.0" link="api-index-1-10-0.html"/>
+    <sub name="Index of new API in 1.12.0" link="api-index-1-12-0.html"/>
+    <sub name="Index of new API in 2.4.0" link="api-index-2-4-0.html"/>
+    <sub name="Index of new API in 2.6.0" link="api-index-2-6-0.html"/>
+    <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="oath_init ()" link="liboath-oath.h.html#oath-init"/>
+    <keyword type="function" name="oath_done ()" link="liboath-oath.h.html#oath-done"/>
+    <keyword type="function" name="oath_check_version ()" link="liboath-oath.h.html#oath-check-version"/>
+    <keyword type="function" name="oath_strerror ()" link="liboath-oath.h.html#oath-strerror" since="1.8.0"/>
+    <keyword type="function" name="oath_strerror_name ()" link="liboath-oath.h.html#oath-strerror-name" since="1.8.0"/>
+    <keyword type="function" name="oath_hex2bin ()" link="liboath-oath.h.html#oath-hex2bin"/>
+    <keyword type="function" name="oath_bin2hex ()" link="liboath-oath.h.html#oath-bin2hex" since="1.12.0"/>
+    <keyword type="function" name="oath_base32_decode ()" link="liboath-oath.h.html#oath-base32-decode" since="1.12.0"/>
+    <keyword type="function" name="oath_base32_encode ()" link="liboath-oath.h.html#oath-base32-encode" since="1.12.0"/>
+    <keyword type="macro" name="OATH_HOTP_LENGTH()" link="liboath-oath.h.html#OATH-HOTP-LENGTH:CAPS"/>
+    <keyword type="function" name="oath_hotp_generate ()" link="liboath-oath.h.html#oath-hotp-generate"/>
+    <keyword type="function" name="oath_hotp_validate ()" link="liboath-oath.h.html#oath-hotp-validate"/>
+    <keyword type="function" name="oath_validate_strcmp_function ()" link="liboath-oath.h.html#oath-validate-strcmp-function" since="1.6.0"/>
+    <keyword type="function" name="oath_hotp_validate_callback ()" link="liboath-oath.h.html#oath-hotp-validate-callback" since="1.4.0"/>
+    <keyword type="function" name="oath_totp_generate ()" link="liboath-oath.h.html#oath-totp-generate" since="1.4.0"/>
+    <keyword type="function" name="oath_totp_generate2 ()" link="liboath-oath.h.html#oath-totp-generate2" since="2.6.0"/>
+    <keyword type="function" name="oath_totp_validate ()" link="liboath-oath.h.html#oath-totp-validate" since="1.6.0"/>
+    <keyword type="function" name="oath_totp_validate_callback ()" link="liboath-oath.h.html#oath-totp-validate-callback" since="1.6.0"/>
+    <keyword type="function" name="oath_totp_validate2 ()" link="liboath-oath.h.html#oath-totp-validate2" since="1.10.0"/>
+    <keyword type="function" name="oath_totp_validate2_callback ()" link="liboath-oath.h.html#oath-totp-validate2-callback" since="1.10.0"/>
+    <keyword type="function" name="oath_totp_validate3 ()" link="liboath-oath.h.html#oath-totp-validate3" since="2.4.0"/>
+    <keyword type="function" name="oath_totp_validate3_callback ()" link="liboath-oath.h.html#oath-totp-validate3-callback" since="2.4.0"/>
+    <keyword type="function" name="oath_totp_validate4 ()" link="liboath-oath.h.html#oath-totp-validate4" since="2.6.0"/>
+    <keyword type="function" name="oath_totp_validate4_callback ()" link="liboath-oath.h.html#oath-totp-validate4-callback" since="2.6.0"/>
+    <keyword type="function" name="oath_authenticate_usersfile ()" link="liboath-oath.h.html#oath-authenticate-usersfile"/>
+    <keyword type="macro" name="OATHAPI" link="liboath-oath.h.html#OATHAPI:CAPS"/>
+    <keyword type="macro" name="OATH_VERSION" link="liboath-oath.h.html#OATH-VERSION:CAPS"/>
+    <keyword type="macro" name="OATH_VERSION_NUMBER" link="liboath-oath.h.html#OATH-VERSION-NUMBER:CAPS"/>
+    <keyword type="enum" name="enum oath_rc" link="liboath-oath.h.html#oath-rc"/>
+    <keyword type="macro" name="OATH_HOTP_DYNAMIC_TRUNCATION" link="liboath-oath.h.html#OATH-HOTP-DYNAMIC-TRUNCATION:CAPS"/>
+    <keyword type="macro" name="oath_hotp_validate_strcmp_function" link="liboath-oath.h.html#oath-hotp-validate-strcmp-function" since="1.4.0"/>
+    <keyword type="macro" name="OATH_TOTP_DEFAULT_TIME_STEP_SIZE" link="liboath-oath.h.html#OATH-TOTP-DEFAULT-TIME-STEP-SIZE:CAPS"/>
+    <keyword type="macro" name="OATH_TOTP_DEFAULT_START_TIME" link="liboath-oath.h.html#OATH-TOTP-DEFAULT-START-TIME:CAPS"/>
+    <keyword type="enum" name="enum oath_totp_flags" link="liboath-oath.h.html#oath-totp-flags" since="2.6.0"/>
+    <keyword type="constant" name="OATH_OK" link="liboath-oath.h.html#OATH-OK:CAPS"/>
+    <keyword type="constant" name="OATH_CRYPTO_ERROR" link="liboath-oath.h.html#OATH-CRYPTO-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_DIGITS" link="liboath-oath.h.html#OATH-INVALID-DIGITS:CAPS"/>
+    <keyword type="constant" name="OATH_PRINTF_ERROR" link="liboath-oath.h.html#OATH-PRINTF-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_HEX" link="liboath-oath.h.html#OATH-INVALID-HEX:CAPS"/>
+    <keyword type="constant" name="OATH_TOO_SMALL_BUFFER" link="liboath-oath.h.html#OATH-TOO-SMALL-BUFFER:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_OTP" link="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"/>
+    <keyword type="constant" name="OATH_REPLAYED_OTP" link="liboath-oath.h.html#OATH-REPLAYED-OTP:CAPS"/>
+    <keyword type="constant" name="OATH_BAD_PASSWORD" link="liboath-oath.h.html#OATH-BAD-PASSWORD:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_COUNTER" link="liboath-oath.h.html#OATH-INVALID-COUNTER:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_TIMESTAMP" link="liboath-oath.h.html#OATH-INVALID-TIMESTAMP:CAPS"/>
+    <keyword type="constant" name="OATH_NO_SUCH_FILE" link="liboath-oath.h.html#OATH-NO-SUCH-FILE:CAPS"/>
+    <keyword type="constant" name="OATH_UNKNOWN_USER" link="liboath-oath.h.html#OATH-UNKNOWN-USER:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_SEEK_ERROR" link="liboath-oath.h.html#OATH-FILE-SEEK-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_CREATE_ERROR" link="liboath-oath.h.html#OATH-FILE-CREATE-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_LOCK_ERROR" link="liboath-oath.h.html#OATH-FILE-LOCK-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_RENAME_ERROR" link="liboath-oath.h.html#OATH-FILE-RENAME-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_UNLINK_ERROR" link="liboath-oath.h.html#OATH-FILE-UNLINK-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_TIME_ERROR" link="liboath-oath.h.html#OATH-TIME-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_STRCMP_ERROR" link="liboath-oath.h.html#OATH-STRCMP-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_INVALID_BASE32" link="liboath-oath.h.html#OATH-INVALID-BASE32:CAPS"/>
+    <keyword type="constant" name="OATH_BASE32_OVERFLOW" link="liboath-oath.h.html#OATH-BASE32-OVERFLOW:CAPS"/>
+    <keyword type="constant" name="OATH_MALLOC_ERROR" link="liboath-oath.h.html#OATH-MALLOC-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_FLUSH_ERROR" link="liboath-oath.h.html#OATH-FILE-FLUSH-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_SYNC_ERROR" link="liboath-oath.h.html#OATH-FILE-SYNC-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_CLOSE_ERROR" link="liboath-oath.h.html#OATH-FILE-CLOSE-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_CHOWN_ERROR" link="liboath-oath.h.html#OATH-FILE-CHOWN-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_FILE_STAT_ERROR" link="liboath-oath.h.html#OATH-FILE-STAT-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_LAST_ERROR" link="liboath-oath.h.html#OATH-LAST-ERROR:CAPS"/>
+    <keyword type="constant" name="OATH_TOTP_HMAC_SHA256" link="liboath-oath.h.html#OATH-TOTP-HMAC-SHA256:CAPS"/>
+    <keyword type="constant" name="OATH_TOTP_HMAC_SHA512" link="liboath-oath.h.html#OATH-TOTP-HMAC-SHA512:CAPS"/>
+  </functions>
+</book>

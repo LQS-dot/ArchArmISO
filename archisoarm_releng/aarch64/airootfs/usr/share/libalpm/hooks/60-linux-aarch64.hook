@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = usr/lib/modules/6.2.10-1-aarch64-ARCH/*
+
+[Action]
+Description = Updating linux-aarch64 module dependencies...
+When = PostTransaction
+Exec = /usr/bin/depmod 6.2.10-1-aarch64-ARCH

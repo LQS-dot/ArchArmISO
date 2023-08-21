@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ELL
+Description: Embedded Linux library
+Version: 0.57
+Libs: -L${libdir} -lell
+Cflags: -I${includedir}

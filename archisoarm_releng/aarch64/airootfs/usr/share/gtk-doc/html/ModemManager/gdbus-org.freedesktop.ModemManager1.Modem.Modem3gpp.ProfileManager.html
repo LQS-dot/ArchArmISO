@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-modem.html" title="The /org/freedesktop/ModemManager/Modems objects">
+<link rel="prev" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html" title="org.freedesktop.ModemManager1.Modem.Modem3gpp">
+<link rel="next" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd.html" title="org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-modem.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.top_of_page"></a>org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager</span></h2>
+<p>org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager — The ModemManager 3GPP profile management interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.List" title="The List() method">List</a>   (OUT aa{sv} profiles);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Set" title="The Set() method">Set</a>    (IN  a{sv}  requested_properties,
+        OUT a{sv}  stored_properties);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Delete" title="The Delete() method">Delete</a> (IN  a{sv}  properties);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.5.9.4"></a><h2>Signals</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-signal-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Updated" title='The "Updated" signal'>Updated</a> ();
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.5.9.5"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.IndexField" title='The "IndexField" property'>IndexField</a>  readable   s
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager"></a><h2>Description</h2>
+<p>
+This interface provides access to actions with connection profiles.
+</p>
+<p>
+This interface will only be available once the modem is ready to be
+registered in the cellular network. 3GPP devices will require a valid
+unlocked SIM card before any of the features in the interface can be
+used.
+</p>
+<p>
+The user of the interface can optionally choose to use the new profile
+management methods to manage the connection setup, e.g by using the new
+<code class="literal">"profile-id"</code> setting in either the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.html#gdbus-method-org-freedesktop-ModemManager1-Modem.CreateBearer" title="The CreateBearer() method">CreateBearer</a>
+or the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Connect" title="The Connect() method">Connect</a>
+methods. If that's the case, it is suggested that the legacy approach of
+not using the profiles is completely avoided. If both approaches are
+used at the same time, it may happen that a connection attempt not using
+the <code class="literal">"profile-id"</code> implicitly updates a given profile
+(without emitting
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-signal-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Updated" title='The "Updated" signal'>Updated</a>),
+as the amount of profiles implemented in modems may be fixed.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.List"></a><h3>The List() method</h3>
+<pre class="programlisting">
+List (OUT aa{sv} profiles);
+</pre>
+<p>
+Lists the available profiles or contexts provisioned on the modem.
+</p>
+<p>
+Profiles are represented as dictionaries of properties, and any of the
+3GPP-specific properties defined in the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Properties" title='The "Properties" property'>bearer properties</a>
+are allowed.
+</p>
+<p>
+Depending on the implementation, the settings applicable to the initial
+EPS bearer given in
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Modem3gpp.InitialEpsBearerSettings" title='The "InitialEpsBearerSettings" property'>bearer properties</a>
+may also be reported as an item in the returned list, identified by the
+<code class="constant">MM_BEARER_APN_TYPE_INITIAL</code> <code class="literal">"apn-type"</code> flag.
+</p>
+<p>
+Since: 1.18
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">OUT aa{sv} <em class="parameter"><code>profiles</code></em></code>:</span></p></td>
+<td><p>
+An array of dictionaries containing the properties of the provisioned profiles.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Set"></a><h3>The Set() method</h3>
+<pre class="programlisting">
+Set (IN  a{sv} requested_properties,
+     OUT a{sv} stored_properties);
+</pre>
+<p>
+Creates or updates a connection profile on this modem, depending on
+whether the expected
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.IndexField" title='The "IndexField" property'>index field</a>
+is given or not. If not given, a new profile will be created; otherwise,
+the profile with the given index will be updated.
+</p>
+<p>
+Profiles are represented as dictionaries of properties, and any of the
+3GPP-specific properties defined in the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Properties" title='The "Properties" property'>bearer properties</a>
+are allowed. The real list of supported properties really depends on the
+underlying protocol and implementation, though; e.g. in AT-based modems
+setting <code class="literal">"apn-type"</code> won't be supported, and instead the
+user should give that setting explicitly when creating the bearer object.
+</p>
+<p>
+The operation may fail if it is attempting to update an existing
+profile for which connected bearer objects already exist. In this case,
+the user should make sure these bearer objects are already disconnected
+before attempting to change the profile settings.
+</p>
+<p>
+The operation may also fail if it is attempting to update the profile
+associated to the settings of the initial EPS bearer, identified by the
+<code class="constant">MM_BEARER_APN_TYPE_INITIAL</code> <code class="literal">"apn-type"</code> flag. In this
+case, <a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp.SetInitialEpsBearerSettings" title="The SetInitialEpsBearerSettings() method">SetInitialEpsBearerSettings()</a>
+should be used instead.
+</p>
+<p>
+The output <em class="parameter"><code>stored_properties</code></em> will contain the settings that were
+successfully stored, including the new <code class="literal">"profile-id"</code>
+if the operation was creating a new profile.
+</p>
+<p>
+Since: 1.18
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>requested_properties</code></em></code>:</span></p></td>
+<td><p>
+the requested profile properties.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT a{sv} <em class="parameter"><code>stored_properties</code></em></code>:</span></p></td>
+<td><p>
+the stored profile properties.
+</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Delete"></a><h3>The Delete() method</h3>
+<pre class="programlisting">
+Delete (IN  a{sv} properties);
+</pre>
+<p>
+Deletes the profile with the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.IndexField" title='The "IndexField" property'>index field</a>
+given in <em class="parameter"><code>properties</code></em>.
+</p>
+<p>
+If additional settings are given in <em class="parameter"><code>properties</code></em> they are ignored. This
+allows the user to easily request the deletion of a profile that has been
+provided in the List() operation.
+</p>
+<p>
+This method may just clear the existing profiles (i.e. reseting all the
+properties to defaults) instead of fully removing them if the profiles
+cannot be fully removed. In this case, the method will succeed, but the
+size of the list of profiles will not change.
+</p>
+<p>
+This method will fail if the expected index field is not given.
+</p>
+<p>
+The operation may fail if it is attempting to delete a profile
+for which connected bearer objects already exist. In this case,
+the user should make sure these bearer objects are already disconnected
+before attempting to delete the profile.
+</p>
+<p>
+The operation may also fail if it is attempting to delete the profile
+associated to the settings of the initial EPS bearer, identified by the
+<code class="constant">MM_BEARER_APN_TYPE_INITIAL</code> <code class="literal">"apn-type"</code> flag. In this
+case, <a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Modem3gpp.SetInitialEpsBearerSettings" title="The SetInitialEpsBearerSettings() method">SetInitialEpsBearerSettings()</a>
+may be used instead to clear these settings.
+</p>
+<p>
+Since: 1.18
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>properties</code></em></code>:</span></p></td>
+<td><p>
+the profile properties.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-signals-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="gdbus-signal-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.Updated"></a><h3>The "Updated" signal</h3>
+<pre class="programlisting">
+Updated ();
+</pre>
+<p>
+Emitted when the profiles are updated by the network through OTA
+procedures.
+</p>
+<p>
+Since: 1.18
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Modem-Modem3gpp-ProfileManager.IndexField"></a><h3>The "IndexField" property</h3>
+<pre class="programlisting">
+IndexField  readable   s
+</pre>
+<p>
+Indicates which field should be considered as unique index, depending
+on the underlying protocol.
+</p>
+<p>
+This will be 'profile-id' by default for all implementations, and only
+set to 'apn-type' for MBIM devices implementing the Microsoft profile
+management interface extensions.
+</p>
+<p>
+Since: 1.20
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

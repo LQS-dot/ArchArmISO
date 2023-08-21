@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PolkitDetails: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="ref-api.html" title="Part III. Library API Reference">
+<link rel="prev" href="PolkitAuthorizationResult.html" title="PolkitAuthorizationResult">
+<link rel="next" href="polkit-1-PolkitError.html" title="PolkitError">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitDetails.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#PolkitDetails.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="PolkitAuthorizationResult.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="polkit-1-PolkitError.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="PolkitDetails"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="PolkitDetails.top_of_page"></a>PolkitDetails</span></h2>
+<p>PolkitDetails — Object used for passing details</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="PolkitDetails.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="returnvalue">PolkitDetails</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitDetails.html#polkit-details-new" title="polkit_details_new ()">polkit_details_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitDetails.html#polkit-details-lookup" title="polkit_details_lookup ()">polkit_details_lookup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitDetails.html#polkit-details-insert" title="polkit_details_insert ()">polkit_details_insert</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="PolkitDetails.html#polkit-details-get-keys" title="polkit_details_get_keys ()">polkit_details_get_keys</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="PolkitDetails.html#PolkitDetails-struct" title="PolkitDetails">PolkitDetails</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> PolkitDetails
+</pre>
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.description"></a><h2>Description</h2>
+<p>An object used for passing details around.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="polkit-details-new"></a><h3>polkit_details_new ()</h3>
+<pre class="programlisting"><a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="returnvalue">PolkitDetails</span></a> *
+polkit_details_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> object.</p>
+<div class="refsect3">
+<a name="polkit-details-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> object. Free with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-details-lookup"></a><h3>polkit_details_lookup ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+polkit_details_lookup (<em class="parameter"><code><a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> *details</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>);</pre>
+<p>Gets the value for <em class="parameter"><code>key</code></em>
+ on <em class="parameter"><code>details</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-details-lookup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>details</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>A key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-details-lookup.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is no value for <em class="parameter"><code>key</code></em>
+, otherwise a string owned by <em class="parameter"><code>details</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-details-insert"></a><h3>polkit_details_insert ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+polkit_details_insert (<em class="parameter"><code><a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> *details</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Inserts a copy of <em class="parameter"><code>key</code></em>
+ and <em class="parameter"><code>value</code></em>
+ on <em class="parameter"><code>details</code></em>
+.</p>
+<p>If <em class="parameter"><code>value</code></em>
+ is <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the key will be removed.</p>
+<div class="refsect3">
+<a name="polkit-details-insert.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>details</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>A key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>A value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-details-get-keys"></a><h3>polkit_details_get_keys ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+polkit_details_get_keys (<em class="parameter"><code><a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> *details</code></em>);</pre>
+<p>Gets a list of all keys on <em class="parameter"><code>details</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-details-get-keys.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>details</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-details-get-keys.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there are no keys
+otherwise an array of strings that should be freed with
+<a href="../glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="PolkitDetails.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PolkitDetails-struct"></a><h3>PolkitDetails</h3>
+<pre class="programlisting">typedef struct _PolkitDetails PolkitDetails;</pre>
+<p>The <a class="link" href="PolkitDetails.html" title="PolkitDetails"><span class="type">PolkitDetails</span></a> struct should not be accessed directly.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

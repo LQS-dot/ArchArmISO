@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: stoken
+Description: Software token
+Version: 0.92
+Requires.private: libxml-2.0, nettle, hogweed
+Libs: -L${libdir} -lstoken 
+Cflags: -I${includedir}

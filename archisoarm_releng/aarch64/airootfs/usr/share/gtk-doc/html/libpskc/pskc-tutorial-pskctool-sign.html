@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Digitally sign PSKC data: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-tutorial-pskctool.html" title="Command line pskctool">
+<link rel="prev" href="pskc-tutorial-pskctool-validate.html" title="Validate PSKC against XML Schema">
+<link rel="next" href="pskc-tutorial-pskctool-verify.html" title="Verify digitally signed PSKC data">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-tutorial-pskctool.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pskc-tutorial-pskctool-validate.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pskc-tutorial-pskctool-verify.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="pskc-tutorial-pskctool-sign"></a>Digitally sign PSKC data</h2></div></div></div>
+<p>
+	  PSKC files can be integrity protected and authenticated
+	  using XML Digital Signatures.  We support using a X.509
+	  end-entity certificate together with a private key.  To
+	  verify the signature, you will need to supply the issuer of
+	  the end-entity certificate as a trusted root.  To illustrate
+	  this, we first show how to generate example root and
+	  end-entity private keys and certificates using GnuTLS.
+	  First generate the root private key and certificate:
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre></td>
+        <td class="listing_code"><pre class="programlisting">jas&#64;latte<span class="gtkdoc opt">:~</span>$ certtool <span class="gtkdoc opt">--</span>generate<span class="gtkdoc opt">-</span>privkey <span class="gtkdoc opt">--</span>outfile pskc<span class="gtkdoc opt">-</span>root<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem
+Generating a <span class="number">2432</span> bit RSA <span class="gtkdoc kwc">private</span> key<span class="gtkdoc opt">...</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$ certtool <span class="gtkdoc opt">--</span>generate<span class="gtkdoc opt">-</span>self<span class="gtkdoc opt">-</span><span class="gtkdoc kwb">signed</span> <span class="gtkdoc opt">--</span>load<span class="gtkdoc opt">-</span>privkey pskc<span class="gtkdoc opt">-</span>root<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem <span class="gtkdoc opt">--</span>outfile pskc<span class="gtkdoc opt">-</span>root<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">.</span>pem
+Generating a self <span class="gtkdoc kwb">signed</span> certificate<span class="gtkdoc opt">...</span>
+Please enter the details of the certificate<span class="string">&apos;s distinguished name. Just press enter to ignore a field.</span>
+<span class="string">Country name (2 chars):</span>
+<span class="string">Organization name:</span>
+<span class="string">Organizational unit name:</span>
+<span class="string">Locality name:</span>
+<span class="string">State or province name:</span>
+<span class="string">Common name: My PSKC root</span>
+<span class="string">UID:</span>
+<span class="string">This field should not be used in new certificates.</span>
+<span class="string">E-mail:</span>
+<span class="string">Enter the certificate&apos;</span>s serial number in <span class="function">decimal</span> <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">:</span> <span class="number">1350939670</span><span class="gtkdoc opt">):</span>
+
+
+Activation<span class="gtkdoc opt">/</span>Expiration time<span class="gtkdoc opt">.</span>
+The certificate will expire <span class="function">in</span> <span class="gtkdoc opt">(</span>days<span class="gtkdoc opt">):</span> <span class="number">100</span>
+
+
+Extensions<span class="gtkdoc opt">.</span>
+Does the certificate belong to an authority<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span> y
+Path length <span class="function">constraint</span> <span class="gtkdoc opt">(</span>decimal<span class="gtkdoc opt">, -</span><span class="number">1</span> <span class="keyword">for</span> no constraint<span class="gtkdoc opt">):</span>
+Is <span class="keyword">this</span> a TLS web client certificate<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Will the certificate be used <span class="keyword">for</span> IPsec IKE operations<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Is <span class="keyword">this</span> also a TLS web server certificate<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Enter the e<span class="gtkdoc opt">-</span>mail of the subject of the certificate<span class="gtkdoc opt">:</span>
+Will the certificate be used to sign other certificates<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span> y
+Will the certificate be used to sign CRLs<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Will the certificate be used to sign code<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Will the certificate be used to sign OCSP requests<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Will the certificate be used <span class="keyword">for</span> time stamping<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Enter the URI of the CRL distribution point<span class="gtkdoc opt">:</span>
+X<span class="number">.509</span> Certificate Information<span class="gtkdoc opt">:</span>
+	Version<span class="gtkdoc opt">:</span> <span class="number">3</span>
+	Serial <span class="function">Number</span> <span class="gtkdoc opt">(</span>hex<span class="gtkdoc opt">):</span> <span class="number">5085</span>b416
+	Validity<span class="gtkdoc opt">:</span>
+		Not Before<span class="gtkdoc opt">:</span> Mon Oct <span class="number">22 21</span><span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">11</span> UTC <span class="number">2012</span>
+		Not After<span class="gtkdoc opt">:</span> Wed Jan <span class="number">30 21</span><span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">13</span> UTC <span class="number">2013</span>
+	Subject<span class="gtkdoc opt">:</span> CN<span class="gtkdoc opt">=</span>My PSKC root
+	Subject Public Key Algorithm<span class="gtkdoc opt">:</span> RSA
+	Certificate Security Level<span class="gtkdoc opt">:</span> Normal
+		<span class="function">Modulus</span> <span class="gtkdoc opt">(</span>bits <span class="number">2432</span><span class="gtkdoc opt">):</span>
+			<span class="number">00</span><span class="gtkdoc opt">:</span>d3<span class="gtkdoc opt">:</span>cf<span class="gtkdoc opt">:</span><span class="number">07</span><span class="gtkdoc opt">:</span>f9<span class="gtkdoc opt">:</span><span class="number">75</span><span class="gtkdoc opt">:</span>df<span class="gtkdoc opt">:</span><span class="number">61</span><span class="gtkdoc opt">:</span><span class="number">91</span><span class="gtkdoc opt">:</span>a4<span class="gtkdoc opt">:</span>a9<span class="gtkdoc opt">:</span>e2<span class="gtkdoc opt">:</span>a6<span class="gtkdoc opt">:</span><span class="number">54</span><span class="gtkdoc opt">:</span>fa<span class="gtkdoc opt">:</span><span class="number">48</span>
+			b1<span class="gtkdoc opt">:</span><span class="number">70</span><span class="gtkdoc opt">:</span><span class="number">8</span>c<span class="gtkdoc opt">:</span>a1<span class="gtkdoc opt">:</span><span class="number">83</span><span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span>fa<span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span>d7<span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">96</span><span class="gtkdoc opt">:</span><span class="number">7</span>a<span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span><span class="number">57</span><span class="gtkdoc opt">:</span><span class="number">27</span>
+			<span class="number">1</span>a<span class="gtkdoc opt">:</span><span class="number">5</span>a<span class="gtkdoc opt">:</span>fb<span class="gtkdoc opt">:</span><span class="number">02</span><span class="gtkdoc opt">:</span>f4<span class="gtkdoc opt">:</span><span class="number">50</span><span class="gtkdoc opt">:</span>b5<span class="gtkdoc opt">:</span><span class="number">40</span><span class="gtkdoc opt">:</span>b6<span class="gtkdoc opt">:</span><span class="number">67</span><span class="gtkdoc opt">:</span><span class="number">8</span>a<span class="gtkdoc opt">:</span><span class="number">63</span><span class="gtkdoc opt">:</span>e3<span class="gtkdoc opt">:</span><span class="number">60</span><span class="gtkdoc opt">:</span><span class="number">8</span>f<span class="gtkdoc opt">:</span>ed
+			<span class="number">6</span>e<span class="gtkdoc opt">:</span><span class="number">9</span>d<span class="gtkdoc opt">:</span><span class="number">40</span><span class="gtkdoc opt">:</span>df<span class="gtkdoc opt">:</span><span class="number">46</span><span class="gtkdoc opt">:</span><span class="number">0</span>d<span class="gtkdoc opt">:</span><span class="number">8</span>c<span class="gtkdoc opt">:</span><span class="number">42</span><span class="gtkdoc opt">:</span><span class="number">31</span><span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span><span class="number">74</span><span class="gtkdoc opt">:</span><span class="number">08</span><span class="gtkdoc opt">:</span>f9<span class="gtkdoc opt">:</span><span class="number">7</span>d<span class="gtkdoc opt">:</span><span class="number">48</span><span class="gtkdoc opt">:</span>fc
+			e2<span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span><span class="number">2</span>e<span class="gtkdoc opt">:</span>fe<span class="gtkdoc opt">:</span>fd<span class="gtkdoc opt">:</span>e1<span class="gtkdoc opt">:</span><span class="number">02</span><span class="gtkdoc opt">:</span><span class="number">55</span><span class="gtkdoc opt">:</span><span class="number">54</span><span class="gtkdoc opt">:</span>b5<span class="gtkdoc opt">:</span><span class="number">6</span>e<span class="gtkdoc opt">:</span><span class="number">57</span><span class="gtkdoc opt">:</span>f8<span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span>a0<span class="gtkdoc opt">:</span><span class="number">8</span>c
+			<span class="number">81</span><span class="gtkdoc opt">:</span><span class="number">5</span>e<span class="gtkdoc opt">:</span>ca<span class="gtkdoc opt">:</span><span class="number">5</span>c<span class="gtkdoc opt">:</span>bd<span class="gtkdoc opt">:</span><span class="number">64</span><span class="gtkdoc opt">:</span><span class="number">41</span><span class="gtkdoc opt">:</span><span class="number">5</span>d<span class="gtkdoc opt">:</span><span class="number">71</span><span class="gtkdoc opt">:</span>b5<span class="gtkdoc opt">:</span><span class="number">81</span><span class="gtkdoc opt">:</span><span class="number">84</span><span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span>dc<span class="gtkdoc opt">:</span><span class="number">36</span><span class="gtkdoc opt">:</span><span class="number">75</span>
+			cc<span class="gtkdoc opt">:</span><span class="number">19</span><span class="gtkdoc opt">:</span><span class="number">62</span><span class="gtkdoc opt">:</span><span class="number">19</span><span class="gtkdoc opt">:</span>f1<span class="gtkdoc opt">:</span><span class="number">36</span><span class="gtkdoc opt">:</span>ed<span class="gtkdoc opt">:</span><span class="number">00</span><span class="gtkdoc opt">:</span><span class="number">98</span><span class="gtkdoc opt">:</span><span class="number">13</span><span class="gtkdoc opt">:</span><span class="number">5</span>c<span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span><span class="number">3</span>b<span class="gtkdoc opt">:</span><span class="number">8</span>c<span class="gtkdoc opt">:</span>ba<span class="gtkdoc opt">:</span>f9
+			<span class="number">7</span>f<span class="gtkdoc opt">:</span><span class="number">9</span>f<span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span><span class="number">20</span><span class="gtkdoc opt">:</span>c2<span class="gtkdoc opt">:</span><span class="number">0</span>d<span class="gtkdoc opt">:</span><span class="number">08</span><span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>e5<span class="gtkdoc opt">:</span><span class="number">08</span><span class="gtkdoc opt">:</span>ad<span class="gtkdoc opt">:</span><span class="number">5</span>c<span class="gtkdoc opt">:</span><span class="number">83</span><span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>c3<span class="gtkdoc opt">:</span><span class="number">7</span>c
+			<span class="number">2</span>a<span class="gtkdoc opt">:</span><span class="number">4</span>d<span class="gtkdoc opt">:</span>e0<span class="gtkdoc opt">:</span><span class="number">7</span>c<span class="gtkdoc opt">:</span><span class="number">45</span><span class="gtkdoc opt">:</span>d2<span class="gtkdoc opt">:</span>b6<span class="gtkdoc opt">:</span>b9<span class="gtkdoc opt">:</span><span class="number">42</span><span class="gtkdoc opt">:</span><span class="number">8</span>b<span class="gtkdoc opt">:</span>de<span class="gtkdoc opt">:</span><span class="number">48</span><span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span><span class="number">60</span><span class="gtkdoc opt">:</span><span class="number">2</span>d<span class="gtkdoc opt">:</span><span class="number">2</span>e
+			<span class="number">18</span><span class="gtkdoc opt">:</span>a7<span class="gtkdoc opt">:</span>f5<span class="gtkdoc opt">:</span>da<span class="gtkdoc opt">:</span><span class="number">81</span><span class="gtkdoc opt">:</span>cf<span class="gtkdoc opt">:</span><span class="number">24</span><span class="gtkdoc opt">:</span>d6<span class="gtkdoc opt">:</span>de<span class="gtkdoc opt">:</span><span class="number">6</span>d<span class="gtkdoc opt">:</span><span class="number">31</span><span class="gtkdoc opt">:</span><span class="number">07</span><span class="gtkdoc opt">:</span><span class="number">63</span><span class="gtkdoc opt">:</span><span class="number">20</span><span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span><span class="number">5</span>e
+			<span class="number">7</span>c<span class="gtkdoc opt">:</span>ba<span class="gtkdoc opt">:</span><span class="number">88</span><span class="gtkdoc opt">:</span>fa<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span>d8<span class="gtkdoc opt">:</span><span class="number">98</span><span class="gtkdoc opt">:</span><span class="number">3</span>c<span class="gtkdoc opt">:</span>ab<span class="gtkdoc opt">:</span><span class="number">05</span><span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>ca<span class="gtkdoc opt">:</span>a8<span class="gtkdoc opt">:</span><span class="number">60</span><span class="gtkdoc opt">:</span><span class="number">8</span>d<span class="gtkdoc opt">:</span><span class="number">6</span>e
+			<span class="number">9</span>c<span class="gtkdoc opt">:</span><span class="number">13</span><span class="gtkdoc opt">:</span><span class="number">35</span><span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">23</span><span class="gtkdoc opt">:</span><span class="number">82</span><span class="gtkdoc opt">:</span><span class="number">53</span><span class="gtkdoc opt">:</span><span class="number">36</span><span class="gtkdoc opt">:</span><span class="number">5</span>b<span class="gtkdoc opt">:</span>e1<span class="gtkdoc opt">:</span><span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">62</span><span class="gtkdoc opt">:</span><span class="number">7</span>f<span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span><span class="number">41</span><span class="gtkdoc opt">:</span>d1
+			<span class="number">74</span><span class="gtkdoc opt">:</span><span class="number">67</span><span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span>f8<span class="gtkdoc opt">:</span><span class="number">60</span><span class="gtkdoc opt">:</span><span class="number">4</span>b<span class="gtkdoc opt">:</span><span class="number">87</span><span class="gtkdoc opt">:</span>e4<span class="gtkdoc opt">:</span><span class="number">2</span>c<span class="gtkdoc opt">:</span><span class="number">52</span><span class="gtkdoc opt">:</span><span class="number">6</span>a<span class="gtkdoc opt">:</span><span class="number">0</span>a<span class="gtkdoc opt">:</span><span class="number">67</span><span class="gtkdoc opt">:</span><span class="number">4</span>c<span class="gtkdoc opt">:</span><span class="number">0</span>d<span class="gtkdoc opt">:</span><span class="number">27</span>
+			<span class="number">80</span><span class="gtkdoc opt">:</span><span class="number">2</span>d<span class="gtkdoc opt">:</span><span class="number">6</span>d<span class="gtkdoc opt">:</span>f7<span class="gtkdoc opt">:</span><span class="number">2</span>e<span class="gtkdoc opt">:</span><span class="number">6</span>f<span class="gtkdoc opt">:</span><span class="number">2</span>e<span class="gtkdoc opt">:</span><span class="number">12</span><span class="gtkdoc opt">:</span>fb<span class="gtkdoc opt">:</span>d2<span class="gtkdoc opt">:</span><span class="number">09</span><span class="gtkdoc opt">:</span>dc<span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span><span class="number">11</span><span class="gtkdoc opt">:</span>b1<span class="gtkdoc opt">:</span>b8
+			c0<span class="gtkdoc opt">:</span>a4<span class="gtkdoc opt">:</span><span class="number">34</span><span class="gtkdoc opt">:</span><span class="number">00</span><span class="gtkdoc opt">:</span><span class="number">3</span>b<span class="gtkdoc opt">:</span>a0<span class="gtkdoc opt">:</span><span class="number">87</span><span class="gtkdoc opt">:</span>c7<span class="gtkdoc opt">:</span>f2<span class="gtkdoc opt">:</span><span class="number">2</span>f<span class="gtkdoc opt">:</span><span class="number">7</span>f<span class="gtkdoc opt">:</span><span class="number">30</span><span class="gtkdoc opt">:</span><span class="number">6</span>a<span class="gtkdoc opt">:</span>b6<span class="gtkdoc opt">:</span>c7<span class="gtkdoc opt">:</span>f1
+			<span class="number">96</span><span class="gtkdoc opt">:</span>fc<span class="gtkdoc opt">:</span><span class="number">6</span>f<span class="gtkdoc opt">:</span>de<span class="gtkdoc opt">:</span>df<span class="gtkdoc opt">:</span><span class="number">40</span><span class="gtkdoc opt">:</span>ac<span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span><span class="number">1</span>a<span class="gtkdoc opt">:</span>d7<span class="gtkdoc opt">:</span><span class="number">24</span><span class="gtkdoc opt">:</span><span class="number">18</span><span class="gtkdoc opt">:</span>ae<span class="gtkdoc opt">:</span><span class="number">1</span>a<span class="gtkdoc opt">:</span>d7<span class="gtkdoc opt">:</span><span class="number">8</span>a
+			<span class="number">4</span>b<span class="gtkdoc opt">:</span><span class="number">6</span>b<span class="gtkdoc opt">:</span>a8<span class="gtkdoc opt">:</span><span class="number">93</span><span class="gtkdoc opt">:</span><span class="number">36</span><span class="gtkdoc opt">:</span>af<span class="gtkdoc opt">:</span><span class="number">72</span><span class="gtkdoc opt">:</span><span class="number">0</span>e<span class="gtkdoc opt">:</span><span class="number">93</span><span class="gtkdoc opt">:</span><span class="number">15</span><span class="gtkdoc opt">:</span><span class="number">30</span><span class="gtkdoc opt">:</span><span class="number">47</span><span class="gtkdoc opt">:</span>fa<span class="gtkdoc opt">:</span><span class="number">58</span><span class="gtkdoc opt">:</span><span class="number">8</span>a<span class="gtkdoc opt">:</span><span class="number">4</span>e
+			<span class="number">97</span><span class="gtkdoc opt">:</span><span class="number">86</span><span class="gtkdoc opt">:</span><span class="number">14</span><span class="gtkdoc opt">:</span>a0<span class="gtkdoc opt">:</span>ef<span class="gtkdoc opt">:</span><span class="number">84</span><span class="gtkdoc opt">:</span><span class="number">46</span><span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span>b4<span class="gtkdoc opt">:</span>a1<span class="gtkdoc opt">:</span>cd<span class="gtkdoc opt">:</span><span class="number">98</span><span class="gtkdoc opt">:</span>d5<span class="gtkdoc opt">:</span>eb<span class="gtkdoc opt">:</span><span class="number">97</span><span class="gtkdoc opt">:</span>fb
+			<span class="number">4</span>e<span class="gtkdoc opt">:</span><span class="number">94</span><span class="gtkdoc opt">:</span><span class="number">10</span><span class="gtkdoc opt">:</span><span class="number">08</span><span class="gtkdoc opt">:</span>ba<span class="gtkdoc opt">:</span>c6<span class="gtkdoc opt">:</span><span class="number">3</span>f<span class="gtkdoc opt">:</span><span class="number">57</span><span class="gtkdoc opt">:</span><span class="number">0</span>d<span class="gtkdoc opt">:</span>ef<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span>af<span class="gtkdoc opt">:</span><span class="number">4</span>a<span class="gtkdoc opt">:</span>bd
+			e7
+		<span class="function">Exponent</span> <span class="gtkdoc opt">(</span>bits <span class="number">24</span><span class="gtkdoc opt">):</span>
+			<span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">00</span><span class="gtkdoc opt">:</span><span class="number">01</span>
+	Extensions<span class="gtkdoc opt">:</span>
+		Basic <span class="function">Constraints</span> <span class="gtkdoc opt">(</span>critical<span class="gtkdoc opt">):</span>
+			Certificate <span class="function">Authority</span> <span class="gtkdoc opt">(</span>CA<span class="gtkdoc opt">):</span> TRUE
+		Key <span class="function">Usage</span> <span class="gtkdoc opt">(</span>critical<span class="gtkdoc opt">):</span>
+			Certificate signing<span class="gtkdoc opt">.</span>
+		Subject Key <span class="function">Identifier</span> <span class="gtkdoc opt">(</span><span class="keyword">not</span> critical<span class="gtkdoc opt">):</span>
+			<span class="number">1</span>f2507c525358817404c90b7f36e3b97dbbec098
+Other Information<span class="gtkdoc opt">:</span>
+	Public Key Id<span class="gtkdoc opt">:</span>
+		<span class="number">1</span>f2507c525358817404c90b7f36e3b97dbbec098
+
+Is the above information ok<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span> y
+
+
+Signing certificate<span class="gtkdoc opt">...</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  Next we generate a private key and certificate for the
+	  end-entity that will sign the PSKC data.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre></td>
+        <td class="listing_code"><pre class="programlisting">jas&#64;latte<span class="gtkdoc opt">:~</span>$ certtool <span class="gtkdoc opt">--</span>generate<span class="gtkdoc opt">-</span>privkey <span class="gtkdoc opt">--</span>outfile pskc<span class="gtkdoc opt">-</span>ee<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem
+Generating a <span class="number">2432</span> bit RSA <span class="gtkdoc kwc">private</span> key<span class="gtkdoc opt">...</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$ certtool <span class="gtkdoc opt">--</span>generate<span class="gtkdoc opt">-</span>certificate <span class="gtkdoc opt">--</span>load<span class="gtkdoc opt">-</span>ca<span class="gtkdoc opt">-</span>privkey pskc<span class="gtkdoc opt">-</span>root<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem <span class="gtkdoc opt">--</span>load<span class="gtkdoc opt">-</span>ca<span class="gtkdoc opt">-</span>certificate pskc<span class="gtkdoc opt">-</span>root<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">.</span>pem <span class="gtkdoc opt">--</span>load<span class="gtkdoc opt">-</span>privkey pskc<span class="gtkdoc opt">-</span>ee<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem <span class="gtkdoc opt">--</span>outfile pskc<span class="gtkdoc opt">-</span>ee<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">.</span>pem
+Generating a <span class="gtkdoc kwb">signed</span> certificate<span class="gtkdoc opt">...</span>
+Please enter the details of the certificate<span class="string">&apos;s distinguished name. Just press enter to ignore a field.</span>
+<span class="string">Country name (2 chars):</span>
+<span class="string">Organization name:</span>
+<span class="string">Organizational unit name:</span>
+<span class="string">Locality name:</span>
+<span class="string">State or province name:</span>
+<span class="string">Common name: My PSKC end entity</span>
+<span class="string">UID:</span>
+<span class="string">This field should not be used in new certificates.</span>
+<span class="string">E-mail:</span>
+<span class="string">Enter the certificate&apos;</span>s serial number in <span class="function">decimal</span> <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">:</span> <span class="number">1350939833</span><span class="gtkdoc opt">):</span>
+
+
+Activation<span class="gtkdoc opt">/</span>Expiration time<span class="gtkdoc opt">.</span>
+The certificate will expire <span class="function">in</span> <span class="gtkdoc opt">(</span>days<span class="gtkdoc opt">):</span> <span class="number">50</span>
+
+
+Extensions<span class="gtkdoc opt">.</span>
+Does the certificate belong to an authority<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Is <span class="keyword">this</span> a TLS web client certificate<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Will the certificate be used <span class="keyword">for</span> IPsec IKE operations<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Is <span class="keyword">this</span> also a TLS web server certificate<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+Enter the e<span class="gtkdoc opt">-</span>mail of the subject of the certificate<span class="gtkdoc opt">:</span>
+Will the certificate be used <span class="keyword">for</span> <span class="function">signing</span> <span class="gtkdoc opt">(</span>required <span class="keyword">for</span> TLS<span class="gtkdoc opt">)? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span> y
+Will the certificate be used <span class="keyword">for</span> <span class="function">encryption</span> <span class="gtkdoc opt">(</span><span class="keyword">not</span> required <span class="keyword">for</span> TLS<span class="gtkdoc opt">)? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span>
+X<span class="number">.509</span> Certificate Information<span class="gtkdoc opt">:</span>
+	Version<span class="gtkdoc opt">:</span> <span class="number">3</span>
+	Serial <span class="function">Number</span> <span class="gtkdoc opt">(</span>hex<span class="gtkdoc opt">):</span> <span class="number">5085</span>b4b9
+	Validity<span class="gtkdoc opt">:</span>
+		Not Before<span class="gtkdoc opt">:</span> Mon Oct <span class="number">22 21</span><span class="gtkdoc opt">:</span><span class="number">03</span><span class="gtkdoc opt">:</span><span class="number">54</span> UTC <span class="number">2012</span>
+		Not After<span class="gtkdoc opt">:</span> Tue Dec <span class="number">11 21</span><span class="gtkdoc opt">:</span><span class="number">03</span><span class="gtkdoc opt">:</span><span class="number">57</span> UTC <span class="number">2012</span>
+	Subject<span class="gtkdoc opt">:</span> CN<span class="gtkdoc opt">=</span>My PSKC end entity
+	Subject Public Key Algorithm<span class="gtkdoc opt">:</span> RSA
+	Certificate Security Level<span class="gtkdoc opt">:</span> Normal
+		<span class="function">Modulus</span> <span class="gtkdoc opt">(</span>bits <span class="number">2432</span><span class="gtkdoc opt">):</span>
+			<span class="number">00</span><span class="gtkdoc opt">:</span>c4<span class="gtkdoc opt">:</span><span class="number">4</span>c<span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span><span class="number">8</span>d<span class="gtkdoc opt">:</span><span class="number">33</span><span class="gtkdoc opt">:</span><span class="number">29</span><span class="gtkdoc opt">:</span><span class="number">14</span><span class="gtkdoc opt">:</span><span class="number">0</span>f<span class="gtkdoc opt">:</span><span class="number">4</span>b<span class="gtkdoc opt">:</span><span class="number">49</span><span class="gtkdoc opt">:</span>f5<span class="gtkdoc opt">:</span><span class="number">8</span>e<span class="gtkdoc opt">:</span><span class="number">0</span>c<span class="gtkdoc opt">:</span>f6<span class="gtkdoc opt">:</span><span class="number">5</span>b
+			<span class="number">9</span>f<span class="gtkdoc opt">:</span><span class="number">0</span>f<span class="gtkdoc opt">:</span>e3<span class="gtkdoc opt">:</span><span class="number">17</span><span class="gtkdoc opt">:</span>aa<span class="gtkdoc opt">:</span>c5<span class="gtkdoc opt">:</span><span class="number">77</span><span class="gtkdoc opt">:</span><span class="number">8</span>d<span class="gtkdoc opt">:</span>d4<span class="gtkdoc opt">:</span><span class="number">64</span><span class="gtkdoc opt">:</span><span class="number">16</span><span class="gtkdoc opt">:</span>c4<span class="gtkdoc opt">:</span>d4<span class="gtkdoc opt">:</span><span class="number">4</span>d<span class="gtkdoc opt">:</span><span class="number">7</span>d<span class="gtkdoc opt">:</span><span class="number">04</span>
+			<span class="number">2</span>d<span class="gtkdoc opt">:</span><span class="number">0</span>d<span class="gtkdoc opt">:</span><span class="number">14</span><span class="gtkdoc opt">:</span><span class="number">78</span><span class="gtkdoc opt">:</span><span class="number">77</span><span class="gtkdoc opt">:</span>ba<span class="gtkdoc opt">:</span><span class="number">4</span>c<span class="gtkdoc opt">:</span><span class="number">3</span>c<span class="gtkdoc opt">:</span>bd<span class="gtkdoc opt">:</span><span class="number">5</span>c<span class="gtkdoc opt">:</span><span class="number">46</span><span class="gtkdoc opt">:</span><span class="number">9</span>e<span class="gtkdoc opt">:</span>d0<span class="gtkdoc opt">:</span><span class="number">24</span><span class="gtkdoc opt">:</span>b9<span class="gtkdoc opt">:</span>bb
+			<span class="number">3</span>d<span class="gtkdoc opt">:</span><span class="number">92</span><span class="gtkdoc opt">:</span><span class="number">2</span>c<span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span><span class="number">29</span><span class="gtkdoc opt">:</span>c3<span class="gtkdoc opt">:</span>e6<span class="gtkdoc opt">:</span>ea<span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>e7<span class="gtkdoc opt">:</span><span class="number">2</span>e<span class="gtkdoc opt">:</span><span class="number">60</span><span class="gtkdoc opt">:</span>c6<span class="gtkdoc opt">:</span><span class="number">0</span>e<span class="gtkdoc opt">:</span><span class="number">0</span>e
+			fe<span class="gtkdoc opt">:</span>a3<span class="gtkdoc opt">:</span>ac<span class="gtkdoc opt">:</span><span class="number">94</span><span class="gtkdoc opt">:</span>e9<span class="gtkdoc opt">:</span><span class="number">0</span>e<span class="gtkdoc opt">:</span>bf<span class="gtkdoc opt">:</span><span class="number">84</span><span class="gtkdoc opt">:</span><span class="number">8</span>f<span class="gtkdoc opt">:</span><span class="number">3</span>b<span class="gtkdoc opt">:</span>db<span class="gtkdoc opt">:</span><span class="number">97</span><span class="gtkdoc opt">:</span><span class="number">45</span><span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span><span class="number">72</span><span class="gtkdoc opt">:</span><span class="number">58</span>
+			<span class="number">07</span><span class="gtkdoc opt">:</span><span class="number">0</span>b<span class="gtkdoc opt">:</span><span class="number">1</span>f<span class="gtkdoc opt">:</span><span class="number">5</span>a<span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>b3<span class="gtkdoc opt">:</span>c6<span class="gtkdoc opt">:</span>e4<span class="gtkdoc opt">:</span><span class="number">99</span><span class="gtkdoc opt">:</span><span class="number">32</span><span class="gtkdoc opt">:</span><span class="number">8</span>a<span class="gtkdoc opt">:</span><span class="number">56</span><span class="gtkdoc opt">:</span>a7<span class="gtkdoc opt">:</span><span class="number">40</span><span class="gtkdoc opt">:</span><span class="number">6</span>e<span class="gtkdoc opt">:</span>a5
+			<span class="number">93</span><span class="gtkdoc opt">:</span><span class="number">62</span><span class="gtkdoc opt">:</span><span class="number">99</span><span class="gtkdoc opt">:</span><span class="number">9</span>d<span class="gtkdoc opt">:</span>eb<span class="gtkdoc opt">:</span><span class="number">5</span>e<span class="gtkdoc opt">:</span><span class="number">64</span><span class="gtkdoc opt">:</span><span class="number">20</span><span class="gtkdoc opt">:</span><span class="number">8</span>a<span class="gtkdoc opt">:</span>bc<span class="gtkdoc opt">:</span>de<span class="gtkdoc opt">:</span><span class="number">4</span>d<span class="gtkdoc opt">:</span><span class="number">9</span>e<span class="gtkdoc opt">:</span>e3<span class="gtkdoc opt">:</span><span class="number">62</span><span class="gtkdoc opt">:</span><span class="number">22</span>
+			b4<span class="gtkdoc opt">:</span><span class="number">6</span>f<span class="gtkdoc opt">:</span>c8<span class="gtkdoc opt">:</span><span class="number">50</span><span class="gtkdoc opt">:</span>c1<span class="gtkdoc opt">:</span><span class="number">09</span><span class="gtkdoc opt">:</span><span class="number">42</span><span class="gtkdoc opt">:</span>a8<span class="gtkdoc opt">:</span><span class="number">90</span><span class="gtkdoc opt">:</span>c1<span class="gtkdoc opt">:</span><span class="number">76</span><span class="gtkdoc opt">:</span><span class="number">75</span><span class="gtkdoc opt">:</span><span class="number">57</span><span class="gtkdoc opt">:</span><span class="number">05</span><span class="gtkdoc opt">:</span>ab<span class="gtkdoc opt">:</span>b0
+			f9<span class="gtkdoc opt">:</span>f6<span class="gtkdoc opt">:</span>e8<span class="gtkdoc opt">:</span><span class="number">26</span><span class="gtkdoc opt">:</span><span class="number">73</span><span class="gtkdoc opt">:</span><span class="number">23</span><span class="gtkdoc opt">:</span><span class="number">45</span><span class="gtkdoc opt">:</span>c4<span class="gtkdoc opt">:</span><span class="number">3</span>e<span class="gtkdoc opt">:</span><span class="number">31</span><span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span><span class="number">3</span>a<span class="gtkdoc opt">:</span>d0<span class="gtkdoc opt">:</span><span class="number">23</span><span class="gtkdoc opt">:</span>db<span class="gtkdoc opt">:</span><span class="number">42</span>
+			d7<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span>d2<span class="gtkdoc opt">:</span><span class="number">57</span><span class="gtkdoc opt">:</span>be<span class="gtkdoc opt">:</span><span class="number">16</span><span class="gtkdoc opt">:</span>cc<span class="gtkdoc opt">:</span><span class="number">71</span><span class="gtkdoc opt">:</span><span class="number">4</span>d<span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span>b1<span class="gtkdoc opt">:</span><span class="number">4</span>f<span class="gtkdoc opt">:</span><span class="number">59</span><span class="gtkdoc opt">:</span><span class="number">88</span><span class="gtkdoc opt">:</span><span class="number">0</span>f<span class="gtkdoc opt">:</span><span class="number">29</span>
+			<span class="number">9</span>f<span class="gtkdoc opt">:</span>ff<span class="gtkdoc opt">:</span>b8<span class="gtkdoc opt">:</span><span class="number">05</span><span class="gtkdoc opt">:</span><span class="number">4</span>a<span class="gtkdoc opt">:</span>f7<span class="gtkdoc opt">:</span><span class="number">8</span>f<span class="gtkdoc opt">:</span>c6<span class="gtkdoc opt">:</span>c4<span class="gtkdoc opt">:</span>cb<span class="gtkdoc opt">:</span>a0<span class="gtkdoc opt">:</span><span class="number">77</span><span class="gtkdoc opt">:</span><span class="number">6</span>d<span class="gtkdoc opt">:</span><span class="number">0</span>b<span class="gtkdoc opt">:</span><span class="number">35</span><span class="gtkdoc opt">:</span><span class="number">5</span>b
+			<span class="number">35</span><span class="gtkdoc opt">:</span><span class="number">7</span>a<span class="gtkdoc opt">:</span>ad<span class="gtkdoc opt">:</span>d3<span class="gtkdoc opt">:</span>d7<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span>b4<span class="gtkdoc opt">:</span>dd<span class="gtkdoc opt">:</span>dc<span class="gtkdoc opt">:</span>d8<span class="gtkdoc opt">:</span>a0<span class="gtkdoc opt">:</span><span class="number">8</span>d<span class="gtkdoc opt">:</span>ab<span class="gtkdoc opt">:</span>fb<span class="gtkdoc opt">:</span>c0<span class="gtkdoc opt">:</span>ab
+			ec<span class="gtkdoc opt">:</span><span class="number">1</span>b<span class="gtkdoc opt">:</span><span class="number">37</span><span class="gtkdoc opt">:</span><span class="number">47</span><span class="gtkdoc opt">:</span><span class="number">0</span>b<span class="gtkdoc opt">:</span><span class="number">06</span><span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span><span class="number">14</span><span class="gtkdoc opt">:</span><span class="number">1</span>f<span class="gtkdoc opt">:</span>f2<span class="gtkdoc opt">:</span>fc<span class="gtkdoc opt">:</span>bb<span class="gtkdoc opt">:</span><span class="number">3</span>d<span class="gtkdoc opt">:</span>ed<span class="gtkdoc opt">:</span><span class="number">2</span>d<span class="gtkdoc opt">:</span><span class="number">5</span>e
+			b4<span class="gtkdoc opt">:</span>a5<span class="gtkdoc opt">:</span>cb<span class="gtkdoc opt">:</span>ec<span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span>ab<span class="gtkdoc opt">:</span>ba<span class="gtkdoc opt">:</span><span class="number">52</span><span class="gtkdoc opt">:</span><span class="number">02</span><span class="gtkdoc opt">:</span><span class="number">40</span><span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span>a6<span class="gtkdoc opt">:</span><span class="number">8</span>e<span class="gtkdoc opt">:</span><span class="number">3</span>e<span class="gtkdoc opt">:</span><span class="number">3</span>b<span class="gtkdoc opt">:</span><span class="number">78</span>
+			<span class="number">0</span>f<span class="gtkdoc opt">:</span>a7<span class="gtkdoc opt">:</span><span class="number">73</span><span class="gtkdoc opt">:</span><span class="number">62</span><span class="gtkdoc opt">:</span><span class="number">30</span><span class="gtkdoc opt">:</span><span class="number">4</span>b<span class="gtkdoc opt">:</span><span class="number">05</span><span class="gtkdoc opt">:</span><span class="number">72</span><span class="gtkdoc opt">:</span><span class="number">2</span>a<span class="gtkdoc opt">:</span><span class="number">71</span><span class="gtkdoc opt">:</span><span class="number">1</span>a<span class="gtkdoc opt">:</span><span class="number">81</span><span class="gtkdoc opt">:</span><span class="number">31</span><span class="gtkdoc opt">:</span>d5<span class="gtkdoc opt">:</span>e4<span class="gtkdoc opt">:</span>c4
+			<span class="number">12</span><span class="gtkdoc opt">:</span>e9<span class="gtkdoc opt">:</span><span class="number">7</span>e<span class="gtkdoc opt">:</span><span class="number">95</span><span class="gtkdoc opt">:</span>a2<span class="gtkdoc opt">:</span><span class="number">9</span>c<span class="gtkdoc opt">:</span><span class="number">1</span>f<span class="gtkdoc opt">:</span><span class="number">53</span><span class="gtkdoc opt">:</span><span class="number">2</span>f<span class="gtkdoc opt">:</span>bb<span class="gtkdoc opt">:</span>f0<span class="gtkdoc opt">:</span><span class="number">33</span><span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span><span class="number">37</span><span class="gtkdoc opt">:</span>c4<span class="gtkdoc opt">:</span><span class="number">58</span>
+			fc<span class="gtkdoc opt">:</span>da<span class="gtkdoc opt">:</span><span class="number">35</span><span class="gtkdoc opt">:</span><span class="number">2</span>b<span class="gtkdoc opt">:</span><span class="number">09</span><span class="gtkdoc opt">:</span><span class="number">18</span><span class="gtkdoc opt">:</span><span class="number">3</span>c<span class="gtkdoc opt">:</span><span class="number">94</span><span class="gtkdoc opt">:</span><span class="number">21</span><span class="gtkdoc opt">:</span>d3<span class="gtkdoc opt">:</span><span class="number">7</span>d<span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span>d9<span class="gtkdoc opt">:</span>b0<span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span>d0
+			b9<span class="gtkdoc opt">:</span>c8<span class="gtkdoc opt">:</span><span class="number">77</span><span class="gtkdoc opt">:</span>b5<span class="gtkdoc opt">:</span>e1<span class="gtkdoc opt">:</span>ce<span class="gtkdoc opt">:</span><span class="number">9</span>b<span class="gtkdoc opt">:</span><span class="number">83</span><span class="gtkdoc opt">:</span><span class="number">7</span>c<span class="gtkdoc opt">:</span>e5<span class="gtkdoc opt">:</span><span class="number">84</span><span class="gtkdoc opt">:</span><span class="number">7</span>d<span class="gtkdoc opt">:</span><span class="number">4</span>e<span class="gtkdoc opt">:</span><span class="number">64</span><span class="gtkdoc opt">:</span><span class="number">5</span>f<span class="gtkdoc opt">:</span>c0
+			<span class="number">2</span>b<span class="gtkdoc opt">:</span>db<span class="gtkdoc opt">:</span><span class="number">1</span>a<span class="gtkdoc opt">:</span><span class="number">0</span>e<span class="gtkdoc opt">:</span><span class="number">06</span><span class="gtkdoc opt">:</span><span class="number">47</span><span class="gtkdoc opt">:</span>e4<span class="gtkdoc opt">:</span><span class="number">24</span><span class="gtkdoc opt">:</span><span class="number">44</span><span class="gtkdoc opt">:</span>ed<span class="gtkdoc opt">:</span><span class="number">14</span><span class="gtkdoc opt">:</span><span class="number">05</span><span class="gtkdoc opt">:</span><span class="number">49</span><span class="gtkdoc opt">:</span><span class="number">6</span>f<span class="gtkdoc opt">:</span><span class="number">17</span><span class="gtkdoc opt">:</span><span class="number">78</span>
+			e3
+		<span class="function">Exponent</span> <span class="gtkdoc opt">(</span>bits <span class="number">24</span><span class="gtkdoc opt">):</span>
+			<span class="number">01</span><span class="gtkdoc opt">:</span><span class="number">00</span><span class="gtkdoc opt">:</span><span class="number">01</span>
+	Extensions<span class="gtkdoc opt">:</span>
+		Basic <span class="function">Constraints</span> <span class="gtkdoc opt">(</span>critical<span class="gtkdoc opt">):</span>
+			Certificate <span class="function">Authority</span> <span class="gtkdoc opt">(</span>CA<span class="gtkdoc opt">):</span> FALSE
+		Key <span class="function">Usage</span> <span class="gtkdoc opt">(</span>critical<span class="gtkdoc opt">):</span>
+			Digital signature<span class="gtkdoc opt">.</span>
+		Subject Key <span class="function">Identifier</span> <span class="gtkdoc opt">(</span><span class="keyword">not</span> critical<span class="gtkdoc opt">):</span>
+			<span class="number">0</span>d8aed9f4ed4e2c3e12f7ca45fc6e8c8f56bb9c2
+		Authority Key <span class="function">Identifier</span> <span class="gtkdoc opt">(</span><span class="keyword">not</span> critical<span class="gtkdoc opt">):</span>
+			<span class="number">1</span>f2507c525358817404c90b7f36e3b97dbbec098
+Other Information<span class="gtkdoc opt">:</span>
+	Public Key Id<span class="gtkdoc opt">:</span>
+		<span class="number">0</span>d8aed9f4ed4e2c3e12f7ca45fc6e8c8f56bb9c2
+
+Is the above information ok<span class="gtkdoc opt">? (</span>y<span class="gtkdoc opt">/</span>N<span class="gtkdoc opt">):</span> y
+
+
+Signing certificate<span class="gtkdoc opt">...</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  At this point, we have the following files:
+	  </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>"pskc-root-key.pem" root private key;
+	    </p></li>
+<li class="listitem"><p>"pskc-root-crt.pem" root certificate;
+	    </p></li>
+<li class="listitem"><p>"pskc-ee-key.pem" end entity private key;
+	    </p></li>
+<li class="listitem"><p>"pskc-ee-crt.pem" end entity certificate.
+	    </p></li>
+</ul></div>
+<p>
+	</p>
+<p>
+	  Let's use these files to digitally sign the following PSKC
+	  data, stored in a file "pskc-hotp.xml".
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span> encoding<span class="gtkdoc opt">=</span><span class="string">&quot;UTF-8&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span>
+	      xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span><span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Manufacturer<span class="gtkdoc opt">&gt;</span>Manufacturer<span class="gtkdoc opt">&lt;/</span>Manufacturer<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>SerialNo<span class="gtkdoc opt">&gt;</span><span class="number">987654321</span><span class="gtkdoc opt">&lt;/</span>SerialNo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>Key Id<span class="gtkdoc opt">=</span><span class="string">&quot;12345678&quot;</span>
+         Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>ResponseFormat Length<span class="gtkdoc opt">=</span><span class="string">&quot;8&quot;</span> Encoding<span class="gtkdoc opt">=</span><span class="string">&quot;DECIMAL&quot;</span><span class="gtkdoc opt">/&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Data<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Secret<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span>MTIzNDU2Nzg5MDEyMzQ1Njc4OTA<span class="gtkdoc opt">=</span>
+          <span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Secret<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Counter<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span><span class="number">0</span><span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Counter<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>Data<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>Key<span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;/</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  The --sign mode flag requires the --sign-key and --sign-crt
+	  which specify the private key and certificate to use for
+	  signing.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2</pre></td>
+        <td class="listing_code"><pre class="programlisting">$ pskctool <span class="gtkdoc opt">--</span>sign <span class="gtkdoc opt">--</span>sign<span class="gtkdoc opt">-</span>key pskc<span class="gtkdoc opt">-</span>ee<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">.</span>pem <span class="gtkdoc opt">--</span>sign<span class="gtkdoc opt">-</span>crt pskc<span class="gtkdoc opt">-</span>ee<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">.</span>pem pskc<span class="gtkdoc opt">-</span>hotp<span class="gtkdoc opt">.</span>xml <span class="gtkdoc opt">&gt;</span> pskc<span class="gtkdoc opt">-</span>hotp<span class="gtkdoc opt">-</span><span class="gtkdoc kwb">signed</span><span class="gtkdoc opt">.</span>xml
+$</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  Below is the signed XML output.  As you can see, due to the
+	  signature it becomes rather unreadable.  You may use
+	  "pskctool --info" to analyse it, or "pskctool --info
+	  --verbose --quiet" to print indented XML (however that will
+	  invalidate signature).
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span> Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">&gt;&lt;</span>KeyPackage<span class="gtkdoc opt">&gt;&lt;</span>DeviceInfo<span class="gtkdoc opt">&gt;&lt;</span>Manufacturer<span class="gtkdoc opt">&gt;</span>Manufacturer<span class="gtkdoc opt">&lt;/</span>Manufacturer<span class="gtkdoc opt">&gt;&lt;</span>SerialNo<span class="gtkdoc opt">&gt;</span><span class="number">987654321</span><span class="gtkdoc opt">&lt;/</span>SerialNo<span class="gtkdoc opt">&gt;&lt;/</span>DeviceInfo<span class="gtkdoc opt">&gt;&lt;</span>Key Id<span class="gtkdoc opt">=</span><span class="string">&quot;12345678&quot;</span> Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">&gt;&lt;</span>AlgorithmParameters<span class="gtkdoc opt">&gt;&lt;</span>ResponseFormat Encoding<span class="gtkdoc opt">=</span><span class="string">&quot;DECIMAL&quot;</span> Length<span class="gtkdoc opt">=</span><span class="string">&quot;8&quot;</span><span class="gtkdoc opt">/&gt;&lt;/</span>AlgorithmParameters<span class="gtkdoc opt">&gt;&lt;</span>Data<span class="gtkdoc opt">&gt;&lt;</span>Secret<span class="gtkdoc opt">&gt;&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span>MTIzNDU2Nzg5MDEyMzQ1Njc4OTA<span class="gtkdoc opt">=&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;&lt;/</span>Secret<span class="gtkdoc opt">&gt;&lt;</span>Counter<span class="gtkdoc opt">&gt;&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span><span class="number">0</span><span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;&lt;/</span>Counter<span class="gtkdoc opt">&gt;&lt;/</span>Data<span class="gtkdoc opt">&gt;&lt;/</span>Key<span class="gtkdoc opt">&gt;&lt;/</span>KeyPackage<span class="gtkdoc opt">&gt;&lt;</span>Signature xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span><span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>SignedInfo<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>CanonicalizationMethod Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;</span><span class="gtkdoc opt">/&gt;</span>
+<span class="gtkdoc opt">&lt;</span>SignatureMethod Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;</span><span class="gtkdoc opt">/&gt;</span>
+<span class="gtkdoc opt">&lt;</span>Reference<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>Transforms<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>Transform Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;</span><span class="gtkdoc opt">/&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>Transforms<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>DigestMethod Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;</span><span class="gtkdoc opt">/&gt;</span>
+<span class="gtkdoc opt">&lt;</span>DigestValue<span class="gtkdoc opt">&gt;</span>scw48LN8ec<span class="gtkdoc opt">/</span>vu7<span class="gtkdoc opt">/</span>f7F1AGcfjDpI<span class="gtkdoc opt">=&lt;/</span>DigestValue<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>Reference<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>SignedInfo<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>SignatureValue<span class="gtkdoc opt">&gt;</span>HYDZFC205862s<span class="gtkdoc opt">+</span>zoas<span class="gtkdoc opt">+</span>Ny6h0ckDJmqDGz81lEPjvjGcN1AYzT7PATsIUVure0QNl
+Kvt2TxdSDgnYlWwAJWjAtmp0UHRzF6hsmDl7WiHpeCkfxpwvdz8K469rbLPUwB6I
+Zyfx<span class="gtkdoc opt">/</span>msTwJGbycPek9SFoaEqn8G7oNU59UH1HjDO0ERyKXhkiIrRaIWfGdqy4v0z
+xYbPnAvzdHcEBdVOVQ3d<span class="gtkdoc opt">+</span>zeR<span class="gtkdoc opt">/</span><span class="number">3</span>nWGINjmxPnYGiCrY4YoktKm<span class="gtkdoc opt">/</span>VPNw3yuo3CNTIs
+N4Vs4rjNVr7NcplFKLOmBBsQwKRg3JXnVW7kQu9ZonJyJEeDoNXdrG8uCa7EYT<span class="gtkdoc opt">+</span>s
+eh6486o<span class="gtkdoc opt">/</span>Wvb7oUVbUN3JW5VRTnVK8YNOwAnxB1fTa92pJwffLB<span class="gtkdoc opt">+</span>knBlzVNteWCyA
+BciIcboYbMdxLVmNKcF5pA<span class="gtkdoc opt">==&lt;/</span>SignatureValue<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyInfo<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>X509Data<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;</span>X509Certificate<span class="gtkdoc opt">&gt;</span>MIIDdzCCAi<span class="gtkdoc opt">+</span>gAwIBAgIEUOYFHTANBgkqhkiG9w0BAQsFADAXMRUwEwYDVQQDEwxN
+eSBQU0tDIHJvb3QwIhgPMjAxMzAxMDMyMjI0MzBaGA8yMjg2MTAxOTIyMjQzMlow
+HTEbMBkGA1UEAxMSTXkgUFNLQyBlbmQgZW50aXR5MIIBUjANBgkqhkiG9w0BAQEF
+AAOCAT8AMIIBOgKCATEAxEwrjTMpFA9LSfWODPZbnw<span class="gtkdoc opt">/</span>jF6rFd43UZBbE1E19BC0N
+FHh3ukw8vVxGntAkubs9kiwhKcPm6l9O5y5gxg4O<span class="gtkdoc opt">/</span>qOslOkOv4SPO9uXRStyWAcL
+H1pOs8bkmTKKVqdAbqWTYpmd615kIIq83k2e42IitG<span class="gtkdoc opt">/</span>IUMEJQqiQwXZ1VwWrsPn2
+<span class="number">6</span>CZzI0XEPjErOtAj20LXG9JXvhbMcU0rsU9ZiA8pn<span class="gtkdoc opt">/+</span><span class="number">4</span>BUr3j8bEy6B3bQs1WzV6
+rdPXG7Td3Nigjav7wKvsGzdHCwbZFB<span class="gtkdoc opt">/</span>y<span class="gtkdoc opt">/</span>Ls97S1etKXL7E6rulICQCGmjj47eA<span class="gtkdoc opt">+</span>n
+c2IwSwVyKnEagTHV5MQS6X6VopwfUy<span class="gtkdoc opt">+</span><span class="number">78</span>DPON8RY<span class="gtkdoc opt">/</span>No1KwkYPJQh033Z2bDO0LnI
+d7XhzpuDfOWEfU5kX8Ar2xoOBkfkJETtFAVJbxd44wIDAQABo2EwXzAMBgNVHRMB
+Af8EAjAAMA8GA1UdDwEB<span class="gtkdoc opt">/</span>wQFAwMHgAAwHQYDVR0OBBYEFHYGbZIa17d44czfdCkT
+Mn<span class="gtkdoc opt">+</span>rWSBNMB8GA1UdIwQYMBaAFNLIhrjU<span class="gtkdoc opt">/</span>J0jWFX4rjsfsUkz1PQcMA0GCSqGSIb3
+DQEBCwUAA4IBMQCxI1JOMqwgi<span class="gtkdoc opt">/</span>mj9KNutqGbTHdgKptt9lBylilwjMaNaY2lZe8S
+<span class="number">5</span>XNg9SoupGr1xBbMsDwWLILSuwPiedbn50fBpAAUW31WKKio6xRCJVmWeo0iY0Cr
+rIXbwqKhnBP943U4Ch31oEbZtbo<span class="gtkdoc opt">+</span>XRbiq11wv6dLNsi76TNGDqsjTKgEcSIYI6Vd
+rMxnil6ChoIBvSSPGHhJuj1bW1EPW92JtIa6byrAj1m4RwSviQy2i65YoIdtrhRt
+CWekj2zuL<span class="gtkdoc opt">/</span><span class="number">0</span>szv5rZMCCvxioOCA8znqELEPMfs0Aa<span class="gtkdoc opt">/</span>cACD2MZcC4gGXehNCvzYJr
+TmB6lFpxP6f0g6eO7PVcqYN9NCwECxb5Cvx2j2uNlereY35<span class="gtkdoc opt">/</span><span class="number">9</span>oPR6YJx<span class="gtkdoc opt">+</span>V7sL<span class="gtkdoc opt">+</span>DB
+n6F0mN8OUAFxDamepKdGRApU8uZ35624o<span class="gtkdoc opt">/</span>I4<span class="gtkdoc opt">&lt;/</span>X509Certificate<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>X509Data<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>KeyInfo<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>Signature<span class="gtkdoc opt">&gt;&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

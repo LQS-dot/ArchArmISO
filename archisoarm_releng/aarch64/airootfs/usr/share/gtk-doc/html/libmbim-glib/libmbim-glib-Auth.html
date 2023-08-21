@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Auth service: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch02.html" title="Generic Services">
+<link rel="prev" href="libmbim-glib-USSD.html" title="Ussd service">
+<link rel="next" href="libmbim-glib-Phonebook.html" title="Phonebook service">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-Auth.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-USSD.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-Phonebook.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-Auth"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-Auth.top_of_page"></a>Auth service</span></h2>
+<p>Auth service — Support for the Auth service.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-Auth.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-aka-query-new" title="mbim_message_auth_aka_query_new ()">mbim_message_auth_aka_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-aka-response-parse" title="mbim_message_auth_aka_response_parse ()">mbim_message_auth_aka_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-akap-query-new" title="mbim_message_auth_akap_query_new ()">mbim_message_auth_akap_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-akap-response-parse" title="mbim_message_auth_akap_response_parse ()">mbim_message_auth_akap_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-sim-query-new" title="mbim_message_auth_sim_query_new ()">mbim_message_auth_sim_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Auth.html#mbim-message-auth-sim-response-parse" title="mbim_message_auth_sim_response_parse ()">mbim_message_auth_sim_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Auth.description"></a><h2>Description</h2>
+<p>This section implements support for requests, responses and notifications in the
+Auth service.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Auth.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-message-auth-aka-query-new"></a><h3>mbim_message_auth_aka_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_auth_aka_query_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *rand</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *autn</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Aka' query command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-aka-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rand</p></td>
+<td class="parameter_description"><p>the 'Rand' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>autn</p></td>
+<td class="parameter_description"><p>the 'Autn' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-aka-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-auth-aka-response-parse"></a><h3>mbim_message_auth_aka_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_auth_aka_response_parse (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_res</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_res_len</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_integrating_key</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_ciphering_key</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_auts</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Aka' response command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-aka-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_res</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_res_len</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ResLen' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_integrating_key</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_ciphering_key</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_auts</p></td>
+<td class="parameter_description"><p>return location for an array of 14 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=14]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-aka-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-auth-akap-query-new"></a><h3>mbim_message_auth_akap_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_auth_akap_query_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *rand</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *autn</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *network_name</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Akap' query command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-akap-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rand</p></td>
+<td class="parameter_description"><p>the 'Rand' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>autn</p></td>
+<td class="parameter_description"><p>the 'Autn' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>network_name</p></td>
+<td class="parameter_description"><p>the 'NetworkName' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-akap-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-auth-akap-response-parse"></a><h3>mbim_message_auth_akap_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_auth_akap_response_parse (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_res</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_res_len</code></em>,
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_integrating_key</code></em>,
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_ciphering_key</code></em>,
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_auts</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Akap' response command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-akap-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_res</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_res_len</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ResLen' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_integrating_key</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_ciphering_key</p></td>
+<td class="parameter_description"><p>return location for an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_auts</p></td>
+<td class="parameter_description"><p>return location for an array of 14 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=14]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-akap-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-auth-sim-query-new"></a><h3>mbim_message_auth_sim_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_auth_sim_query_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *rand1</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *rand2</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *rand3</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> n</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Sim' query command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-sim-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rand1</p></td>
+<td class="parameter_description"><p>the 'Rand1' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rand2</p></td>
+<td class="parameter_description"><p>the 'Rand2' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rand3</p></td>
+<td class="parameter_description"><p>the 'Rand3' field, given as an array of 16 <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>the 'N' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-sim-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-auth-sim-response-parse"></a><h3>mbim_message_auth_sim_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_auth_sim_response_parse (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_sres1</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *out_kc1</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_sres2</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *out_kc2</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_sres3</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *out_kc3</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_n</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Sim' response command in the 'Auth' service.</p>
+<div class="refsect3">
+<a name="mbim-message-auth-sim-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_sres1</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Sres1' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_kc1</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Kc1' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_sres2</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Sres2' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_kc2</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Kc2' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_sres3</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Sres3' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_kc3</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Kc3' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_n</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'N' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-auth-sim-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="PSKC Library (libpskc) Manual" link="index.html" author="Simon Josefsson" name="libpskc" version="2" language="c" online="https://www.nongnu.org/oath-toolkit/libpskc/">
+  <chapters>
+    <sub name="PSKC Tutorial" link="pskc-tutorial.html">
+      <sub name="PSKC Introduction" link="pskc-tutorial-quickstart.html"/>
+      <sub name="Library libpskc" link="pskc-tutorial-library.html">
+        <sub name="Converting PSKC data to CSV format" link="pskc-tutorial-library.html#pskc-tutorial-libpskc-pskc2csv"/>
+        <sub name="Digitally sign PSKC data" link="pskc-tutorial-libpskc-sign.html"/>
+        <sub name="Verify signed PSKC data" link="pskc-tutorial-libpskc-verify.html"/>
+        <sub name="Create PSKC data" link="pskc-tutorial-libpskc-create.html"/>
+      </sub>
+      <sub name="Command line pskctool" link="pskc-tutorial-pskctool.html">
+        <sub name="Parse and print summary of PSKC data" link="pskc-tutorial-pskctool.html#pskc-tutorial-pskctool-parse"/>
+        <sub name="Validate PSKC against XML Schema" link="pskc-tutorial-pskctool-validate.html"/>
+        <sub name="Digitally sign PSKC data" link="pskc-tutorial-pskctool-sign.html"/>
+        <sub name="Verify digitally signed PSKC data" link="pskc-tutorial-pskctool-verify.html"/>
+      </sub>
+    </sub>
+    <sub name="API Reference" link="pskc-reference.html">
+      <sub name="pskc" link="libpskc-pskc.html"/>
+      <sub name="version" link="libpskc-version.html"/>
+      <sub name="global" link="libpskc-global.html"/>
+      <sub name="errors" link="libpskc-errors.html"/>
+      <sub name="enums" link="libpskc-enums.html"/>
+      <sub name="container" link="libpskc-container.html"/>
+      <sub name="keypackage" link="libpskc-keypackage.html"/>
+      <sub name="API Index" link="api-index-full.html"/>
+      <sub name="Index of new API in 2.2.0" link="api-index-2-2-0.html"/>
+      <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="typedef" name="pskc_t" link="libpskc-pskc.html#pskc-t"/>
+    <keyword type="typedef" name="pskc_key_t" link="libpskc-pskc.html#pskc-key-t"/>
+    <keyword type="function" name="pskc_check_version ()" link="libpskc-version.html#pskc-check-version"/>
+    <keyword type="macro" name="PSKC_VERSION" link="libpskc-version.html#PSKC-VERSION:CAPS"/>
+    <keyword type="macro" name="PSKC_VERSION_NUMBER" link="libpskc-version.html#PSKC-VERSION-NUMBER:CAPS"/>
+    <keyword type="function" name="pskc_global_init ()" link="libpskc-global.html#pskc-global-init"/>
+    <keyword type="function" name="pskc_global_done ()" link="libpskc-global.html#pskc-global-done"/>
+    <keyword type="function" name="pskc_log_func ()" link="libpskc-global.html#pskc-log-func"/>
+    <keyword type="function" name="pskc_global_log ()" link="libpskc-global.html#pskc-global-log"/>
+    <keyword type="function" name="pskc_free ()" link="libpskc-global.html#pskc-free"/>
+    <keyword type="function" name="pskc_strerror ()" link="libpskc-errors.html#pskc-strerror"/>
+    <keyword type="function" name="pskc_strerror_name ()" link="libpskc-errors.html#pskc-strerror-name"/>
+    <keyword type="enum" name="enum pskc_rc" link="libpskc-errors.html#pskc-rc"/>
+    <keyword type="function" name="pskc_pinusagemode2str ()" link="libpskc-enums.html#pskc-pinusagemode2str"/>
+    <keyword type="function" name="pskc_str2pinusagemode ()" link="libpskc-enums.html#pskc-str2pinusagemode"/>
+    <keyword type="function" name="pskc_valueformat2str ()" link="libpskc-enums.html#pskc-valueformat2str"/>
+    <keyword type="function" name="pskc_str2valueformat ()" link="libpskc-enums.html#pskc-str2valueformat"/>
+    <keyword type="function" name="pskc_keyusage2str ()" link="libpskc-enums.html#pskc-keyusage2str"/>
+    <keyword type="function" name="pskc_str2keyusage ()" link="libpskc-enums.html#pskc-str2keyusage"/>
+    <keyword type="enum" name="enum pskc_pinusagemode" link="libpskc-enums.html#pskc-pinusagemode"/>
+    <keyword type="enum" name="enum pskc_valueformat" link="libpskc-enums.html#pskc-valueformat"/>
+    <keyword type="enum" name="enum pskc_keyusage" link="libpskc-enums.html#pskc-keyusage"/>
+    <keyword type="function" name="pskc_init ()" link="libpskc-container.html#pskc-init"/>
+    <keyword type="function" name="pskc_done ()" link="libpskc-container.html#pskc-done"/>
+    <keyword type="function" name="pskc_parse_from_memory ()" link="libpskc-container.html#pskc-parse-from-memory"/>
+    <keyword type="function" name="pskc_get_signed_p ()" link="libpskc-container.html#pskc-get-signed-p"/>
+    <keyword type="function" name="pskc_validate ()" link="libpskc-container.html#pskc-validate"/>
+    <keyword type="function" name="pskc_build_xml ()" link="libpskc-container.html#pskc-build-xml"/>
+    <keyword type="function" name="pskc_sign_x509 ()" link="libpskc-container.html#pskc-sign-x509"/>
+    <keyword type="function" name="pskc_verify_x509crt ()" link="libpskc-container.html#pskc-verify-x509crt"/>
+    <keyword type="function" name="pskc_get_version ()" link="libpskc-container.html#pskc-get-version"/>
+    <keyword type="function" name="pskc_set_version ()" link="libpskc-container.html#pskc-set-version" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_id ()" link="libpskc-container.html#pskc-get-id"/>
+    <keyword type="function" name="pskc_set_id ()" link="libpskc-container.html#pskc-set-id" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_keypackage ()" link="libpskc-container.html#pskc-get-keypackage"/>
+    <keyword type="function" name="pskc_add_keypackage ()" link="libpskc-container.html#pskc-add-keypackage" since="2.2.0"/>
+    <keyword type="function" name="pskc_output ()" link="libpskc-container.html#pskc-output"/>
+    <keyword type="enum" name="enum pskc_output_formats_t" link="libpskc-container.html#pskc-output-formats-t"/>
+    <keyword type="function" name="pskc_get_device_manufacturer ()" link="libpskc-keypackage.html#pskc-get-device-manufacturer"/>
+    <keyword type="function" name="pskc_set_device_manufacturer ()" link="libpskc-keypackage.html#pskc-set-device-manufacturer" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_serialno ()" link="libpskc-keypackage.html#pskc-get-device-serialno"/>
+    <keyword type="function" name="pskc_set_device_serialno ()" link="libpskc-keypackage.html#pskc-set-device-serialno" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_model ()" link="libpskc-keypackage.html#pskc-get-device-model"/>
+    <keyword type="function" name="pskc_set_device_model ()" link="libpskc-keypackage.html#pskc-set-device-model" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_issueno ()" link="libpskc-keypackage.html#pskc-get-device-issueno"/>
+    <keyword type="function" name="pskc_set_device_issueno ()" link="libpskc-keypackage.html#pskc-set-device-issueno" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_devicebinding ()" link="libpskc-keypackage.html#pskc-get-device-devicebinding"/>
+    <keyword type="function" name="pskc_set_device_devicebinding ()" link="libpskc-keypackage.html#pskc-set-device-devicebinding" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_startdate ()" link="libpskc-keypackage.html#pskc-get-device-startdate"/>
+    <keyword type="function" name="pskc_set_device_startdate ()" link="libpskc-keypackage.html#pskc-set-device-startdate" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_expirydate ()" link="libpskc-keypackage.html#pskc-get-device-expirydate"/>
+    <keyword type="function" name="pskc_set_device_expirydate ()" link="libpskc-keypackage.html#pskc-set-device-expirydate" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_device_userid ()" link="libpskc-keypackage.html#pskc-get-device-userid"/>
+    <keyword type="function" name="pskc_set_device_userid ()" link="libpskc-keypackage.html#pskc-set-device-userid" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_cryptomodule_id ()" link="libpskc-keypackage.html#pskc-get-cryptomodule-id"/>
+    <keyword type="function" name="pskc_set_cryptomodule_id ()" link="libpskc-keypackage.html#pskc-set-cryptomodule-id" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_id ()" link="libpskc-keypackage.html#pskc-get-key-id"/>
+    <keyword type="function" name="pskc_set_key_id ()" link="libpskc-keypackage.html#pskc-set-key-id" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algorithm ()" link="libpskc-keypackage.html#pskc-get-key-algorithm"/>
+    <keyword type="function" name="pskc_set_key_algorithm ()" link="libpskc-keypackage.html#pskc-set-key-algorithm" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_issuer ()" link="libpskc-keypackage.html#pskc-get-key-issuer"/>
+    <keyword type="function" name="pskc_set_key_issuer ()" link="libpskc-keypackage.html#pskc-set-key-issuer" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_suite ()" link="libpskc-keypackage.html#pskc-get-key-algparm-suite"/>
+    <keyword type="function" name="pskc_set_key_algparm_suite ()" link="libpskc-keypackage.html#pskc-set-key-algparm-suite" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_chall_encoding ()" link="libpskc-keypackage.html#pskc-get-key-algparm-chall-encoding"/>
+    <keyword type="function" name="pskc_set_key_algparm_chall_encoding ()" link="libpskc-keypackage.html#pskc-set-key-algparm-chall-encoding" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_chall_min ()" link="libpskc-keypackage.html#pskc-get-key-algparm-chall-min"/>
+    <keyword type="function" name="pskc_set_key_algparm_chall_min ()" link="libpskc-keypackage.html#pskc-set-key-algparm-chall-min" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_chall_max ()" link="libpskc-keypackage.html#pskc-get-key-algparm-chall-max"/>
+    <keyword type="function" name="pskc_set_key_algparm_chall_max ()" link="libpskc-keypackage.html#pskc-set-key-algparm-chall-max" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_chall_checkdigits ()" link="libpskc-keypackage.html#pskc-get-key-algparm-chall-checkdigits"/>
+    <keyword type="function" name="pskc_set_key_algparm_chall_checkdigits ()" link="libpskc-keypackage.html#pskc-set-key-algparm-chall-checkdigits" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_resp_encoding ()" link="libpskc-keypackage.html#pskc-get-key-algparm-resp-encoding"/>
+    <keyword type="function" name="pskc_set_key_algparm_resp_encoding ()" link="libpskc-keypackage.html#pskc-set-key-algparm-resp-encoding" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_resp_length ()" link="libpskc-keypackage.html#pskc-get-key-algparm-resp-length"/>
+    <keyword type="function" name="pskc_set_key_algparm_resp_length ()" link="libpskc-keypackage.html#pskc-set-key-algparm-resp-length" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_algparm_resp_checkdigits ()" link="libpskc-keypackage.html#pskc-get-key-algparm-resp-checkdigits"/>
+    <keyword type="function" name="pskc_set_key_algparm_resp_checkdigits ()" link="libpskc-keypackage.html#pskc-set-key-algparm-resp-checkdigits" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_profileid ()" link="libpskc-keypackage.html#pskc-get-key-profileid"/>
+    <keyword type="function" name="pskc_set_key_profileid ()" link="libpskc-keypackage.html#pskc-set-key-profileid" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_reference ()" link="libpskc-keypackage.html#pskc-get-key-reference"/>
+    <keyword type="function" name="pskc_set_key_reference ()" link="libpskc-keypackage.html#pskc-set-key-reference" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_friendlyname ()" link="libpskc-keypackage.html#pskc-get-key-friendlyname"/>
+    <keyword type="function" name="pskc_set_key_friendlyname ()" link="libpskc-keypackage.html#pskc-set-key-friendlyname" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_userid ()" link="libpskc-keypackage.html#pskc-get-key-userid"/>
+    <keyword type="function" name="pskc_set_key_userid ()" link="libpskc-keypackage.html#pskc-set-key-userid" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_secret ()" link="libpskc-keypackage.html#pskc-get-key-data-secret"/>
+    <keyword type="function" name="pskc_set_key_data_secret ()" link="libpskc-keypackage.html#pskc-set-key-data-secret" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_b64secret ()" link="libpskc-keypackage.html#pskc-get-key-data-b64secret"/>
+    <keyword type="function" name="pskc_set_key_data_b64secret ()" link="libpskc-keypackage.html#pskc-set-key-data-b64secret" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_counter ()" link="libpskc-keypackage.html#pskc-get-key-data-counter"/>
+    <keyword type="function" name="pskc_set_key_data_counter ()" link="libpskc-keypackage.html#pskc-set-key-data-counter" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_time ()" link="libpskc-keypackage.html#pskc-get-key-data-time"/>
+    <keyword type="function" name="pskc_set_key_data_time ()" link="libpskc-keypackage.html#pskc-set-key-data-time" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_timeinterval ()" link="libpskc-keypackage.html#pskc-get-key-data-timeinterval"/>
+    <keyword type="function" name="pskc_set_key_data_timeinterval ()" link="libpskc-keypackage.html#pskc-set-key-data-timeinterval" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_data_timedrift ()" link="libpskc-keypackage.html#pskc-get-key-data-timedrift"/>
+    <keyword type="function" name="pskc_set_key_data_timedrift ()" link="libpskc-keypackage.html#pskc-set-key-data-timedrift" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_startdate ()" link="libpskc-keypackage.html#pskc-get-key-policy-startdate"/>
+    <keyword type="function" name="pskc_set_key_policy_startdate ()" link="libpskc-keypackage.html#pskc-set-key-policy-startdate" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_expirydate ()" link="libpskc-keypackage.html#pskc-get-key-policy-expirydate"/>
+    <keyword type="function" name="pskc_set_key_policy_expirydate ()" link="libpskc-keypackage.html#pskc-set-key-policy-expirydate" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinkeyid ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinkeyid"/>
+    <keyword type="function" name="pskc_set_key_policy_pinkeyid ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinkeyid" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinusagemode ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinusagemode"/>
+    <keyword type="function" name="pskc_set_key_policy_pinusagemode ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinusagemode" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinmaxfailedattempts ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinmaxfailedattempts"/>
+    <keyword type="function" name="pskc_set_key_policy_pinmaxfailedattempts ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinmaxfailedattempts" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinminlength ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinminlength"/>
+    <keyword type="function" name="pskc_set_key_policy_pinminlength ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinminlength" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinmaxlength ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinmaxlength"/>
+    <keyword type="function" name="pskc_set_key_policy_pinmaxlength ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinmaxlength" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_pinencoding ()" link="libpskc-keypackage.html#pskc-get-key-policy-pinencoding"/>
+    <keyword type="function" name="pskc_set_key_policy_pinencoding ()" link="libpskc-keypackage.html#pskc-set-key-policy-pinencoding" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_keyusages ()" link="libpskc-keypackage.html#pskc-get-key-policy-keyusages"/>
+    <keyword type="function" name="pskc_set_key_policy_keyusages ()" link="libpskc-keypackage.html#pskc-set-key-policy-keyusages" since="2.2.0"/>
+    <keyword type="function" name="pskc_get_key_policy_numberoftransactions ()" link="libpskc-keypackage.html#pskc-get-key-policy-numberoftransactions"/>
+    <keyword type="function" name="pskc_set_key_policy_numberoftransactions ()" link="libpskc-keypackage.html#pskc-set-key-policy-numberoftransactions" since="2.2.0"/>
+    <keyword type="constant" name="PSKC_OK" link="libpskc-errors.html#PSKC-OK:CAPS"/>
+    <keyword type="constant" name="PSKC_MALLOC_ERROR" link="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_XML_ERROR" link="libpskc-errors.html#PSKC-XML-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_PARSE_ERROR" link="libpskc-errors.html#PSKC-PARSE-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_BASE64_ERROR" link="libpskc-errors.html#PSKC-BASE64-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_UNKNOWN_OUTPUT_FORMAT" link="libpskc-errors.html#PSKC-UNKNOWN-OUTPUT-FORMAT:CAPS"/>
+    <keyword type="constant" name="PSKC_XMLSEC_ERROR" link="libpskc-errors.html#PSKC-XMLSEC-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_LAST_ERROR" link="libpskc-errors.html#PSKC-LAST-ERROR:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_UNKNOWN" link="libpskc-enums.html#PSKC-PINUSAGEMODE-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_LOCAL" link="libpskc-enums.html#PSKC-PINUSAGEMODE-LOCAL:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_PREPEND" link="libpskc-enums.html#PSKC-PINUSAGEMODE-PREPEND:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_APPEND" link="libpskc-enums.html#PSKC-PINUSAGEMODE-APPEND:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_ALGORITHMIC" link="libpskc-enums.html#PSKC-PINUSAGEMODE-ALGORITHMIC:CAPS"/>
+    <keyword type="constant" name="PSKC_PINUSAGEMODE_LAST" link="libpskc-enums.html#PSKC-PINUSAGEMODE-LAST:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_UNKNOWN" link="libpskc-enums.html#PSKC-VALUEFORMAT-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_DECIMAL" link="libpskc-enums.html#PSKC-VALUEFORMAT-DECIMAL:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_HEXADECIMAL" link="libpskc-enums.html#PSKC-VALUEFORMAT-HEXADECIMAL:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_ALPHANUMERIC" link="libpskc-enums.html#PSKC-VALUEFORMAT-ALPHANUMERIC:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_BASE64" link="libpskc-enums.html#PSKC-VALUEFORMAT-BASE64:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_BINARY" link="libpskc-enums.html#PSKC-VALUEFORMAT-BINARY:CAPS"/>
+    <keyword type="constant" name="PSKC_VALUEFORMAT_LAST" link="libpskc-enums.html#PSKC-VALUEFORMAT-LAST:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_UNKNOWN" link="libpskc-enums.html#PSKC-KEYUSAGE-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_OTP" link="libpskc-enums.html#PSKC-KEYUSAGE-OTP:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_CR" link="libpskc-enums.html#PSKC-KEYUSAGE-CR:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_ENCRYPT" link="libpskc-enums.html#PSKC-KEYUSAGE-ENCRYPT:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_INTEGRITY" link="libpskc-enums.html#PSKC-KEYUSAGE-INTEGRITY:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_VERIFY" link="libpskc-enums.html#PSKC-KEYUSAGE-VERIFY:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_UNLOCK" link="libpskc-enums.html#PSKC-KEYUSAGE-UNLOCK:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_DECRYPT" link="libpskc-enums.html#PSKC-KEYUSAGE-DECRYPT:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_KEYWRAP" link="libpskc-enums.html#PSKC-KEYUSAGE-KEYWRAP:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_UNWRAP" link="libpskc-enums.html#PSKC-KEYUSAGE-UNWRAP:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_DERIVE" link="libpskc-enums.html#PSKC-KEYUSAGE-DERIVE:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_GENERATE" link="libpskc-enums.html#PSKC-KEYUSAGE-GENERATE:CAPS"/>
+    <keyword type="constant" name="PSKC_KEYUSAGE_LAST" link="libpskc-enums.html#PSKC-KEYUSAGE-LAST:CAPS"/>
+    <keyword type="constant" name="PSKC_OUTPUT_HUMAN_COMPLETE" link="libpskc-container.html#PSKC-OUTPUT-HUMAN-COMPLETE:CAPS"/>
+    <keyword type="constant" name="PSKC_OUTPUT_XML" link="libpskc-container.html#PSKC-OUTPUT-XML:CAPS"/>
+    <keyword type="constant" name="PSKC_OUTPUT_INDENTED_XML" link="libpskc-container.html#PSKC-OUTPUT-INDENTED-XML:CAPS"/>
+  </functions>
+</book>

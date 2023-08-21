@@ -1,0 +1,11 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libnvme-mi
+Description: Manage "libnvme" subsystem devices (Non-volatile Memory Express) over Management Interface
+URL: http://github.com/linux-nvme/libnvme/
+Version: 1.5
+Requires.private: dbus-1
+Libs: -L${libdir} -lnvme-mi
+Cflags: -I${includedir}

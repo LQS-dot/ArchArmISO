@@ -1,0 +1,104 @@
+%NAME%
+systemd
+
+%VERSION%
+254-1
+
+%BASE%
+systemd
+
+%DESC%
+system and service manager
+
+%URL%
+https://www.github.com/systemd/systemd
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1690934088
+
+%INSTALLDATE%
+1691208517
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+31476816
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+LGPL2.1
+
+%VALIDATION%
+pgp
+
+%REPLACES%
+nss-myhostname
+systemd-tools
+udev
+
+%DEPENDS%
+acl
+libacl.so=1-64
+bash
+cryptsetup
+libcryptsetup.so=12-64
+dbus
+iptables
+kbd
+kmod
+libkmod.so=2-64
+hwdata
+libcap
+libcap.so=2-64
+libgcrypt
+libxcrypt
+libcrypt.so=2-64
+systemd-libs
+libidn2
+lz4
+pam
+libelf
+libseccomp
+libseccomp.so=2-64
+util-linux
+libblkid.so=1-64
+libmount.so=1-64
+xz
+pcre2
+audit
+libaudit.so=1-64
+openssl
+libcrypto.so=3-64
+libssl.so=3-64
+
+%OPTDEPENDS%
+libmicrohttpd: systemd-journal-gatewayd and systemd-journal-remote
+quota-tools: kernel-level quota management
+systemd-sysvcompat: symlink package to provide sysvinit binaries
+systemd-ukify: combine kernel and initrd into a signed Unified Kernel Image
+polkit: allow administration as unprivileged user
+python: Unified Kernel Image with ukify
+curl: systemd-journal-upload, machinectl pull-tar and pull-raw
+gnutls: systemd-journal-gatewayd and systemd-journal-remote
+libbpf: support BPF programs
+libfido2: unlocking LUKS2 volumes with FIDO2 token
+libp11-kit: support PKCS#11
+tpm2-tss: unlocking LUKS2 volumes with TPM2
+
+%CONFLICTS%
+nss-myhostname
+systemd-tools
+udev
+
+%PROVIDES%
+nss-myhostname
+systemd-tools=254
+udev=254
+

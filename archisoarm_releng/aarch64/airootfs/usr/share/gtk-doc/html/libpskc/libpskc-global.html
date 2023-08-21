@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>global: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="prev" href="libpskc-version.html" title="version">
+<link rel="next" href="libpskc-errors.html" title="errors">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libpskc-global.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libpskc-version.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libpskc-errors.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libpskc-global"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libpskc-global.top_of_page"></a>global</span></h2>
+<p>global — Global functions.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libpskc-global.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-global.html#pskc-global-init" title="pskc_global_init ()">pskc_global_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-global.html#pskc-global-done" title="pskc_global_done ()">pskc_global_done</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="libpskc-global.html#pskc-log-func" title="pskc_log_func ()">*pskc_log_func</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-global.html#pskc-global-log" title="pskc_global_log ()">pskc_global_log</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-global.html#pskc-free" title="pskc_free ()">pskc_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-global.description"></a><h2>Description</h2>
+<p>The library is initialized using <a class="link" href="libpskc-global.html#pskc-global-init" title="pskc_global_init ()"><code class="function">pskc_global_init()</code></a> which is a
+thread-unsafe function that should be called when the code that
+needs the PSKC library functionality is initialized.  When the
+application no longer needs to use the PSKC Library, it can call
+<a class="link" href="libpskc-global.html#pskc-global-done" title="pskc_global_done ()"><code class="function">pskc_global_done()</code></a> to release resources.</p>
+<p>The <a class="link" href="libpskc-global.html#pskc-free" title="pskc_free ()"><code class="function">pskc_free()</code></a> function is used to de-allocate memory that was
+allocated by the library earlier and returned to the caller.</p>
+<p>For debugging, you can implement a function of the <a class="link" href="libpskc-global.html#pskc-log-func" title="pskc_log_func ()"><span class="type">pskc_log_func</span></a>
+signature and call <a class="link" href="libpskc-global.html#pskc-global-log" title="pskc_global_log ()"><code class="function">pskc_global_log()</code></a> to make the library output
+some messages that may provide additional information.</p>
+</div>
+<div class="refsect1">
+<a name="libpskc-global.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pskc-global-init"></a><h3>pskc_global_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_global_init (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function initializes the PSKC library.  Every user of this
+library needs to call this function before using other functions.
+You should call <a class="link" href="libpskc-global.html#pskc-global-done" title="pskc_global_done ()"><code class="function">pskc_global_done()</code></a> when use of the PSKC library is
+no longer needed.</p>
+<div class="refsect3">
+<a name="pskc-global-init.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-global-done"></a><h3>pskc_global_done ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_global_done (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function deinitializes the PSKC library, which were
+initialized using <a class="link" href="libpskc-global.html#pskc-global-init" title="pskc_global_init ()"><code class="function">pskc_global_init()</code></a>.  After calling this function,
+no other PSKC library function may be called except for to
+re-initialize the library using <a class="link" href="libpskc-global.html#pskc-global-init" title="pskc_global_init ()"><code class="function">pskc_global_init()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-log-func"></a><h3>pskc_log_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*pskc_log_func<span class="c_punctuation">)</span> (<em class="parameter"><code>const <span class="type">char</span> *msg</code></em>);</pre>
+<p>Function prototype for the application to be able to log PSKC
+messages, see <a class="link" href="libpskc-global.html#pskc-global-log" title="pskc_global_log ()"><code class="function">pskc_global_log()</code></a>.</p>
+<div class="refsect3">
+<a name="pskc-log-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p>message to be logged.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-global-log"></a><h3>pskc_global_log ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_global_log (<em class="parameter"><code><a class="link" href="libpskc-global.html#pskc-log-func" title="pskc_log_func ()"><span class="type">pskc_log_func</span></a> log_func</code></em>);</pre>
+<p>Enable global debug logging function.  The function will be invoked
+by the library when it wishes to print various debug information.</p>
+<p><em class="parameter"><code>pskc_log_func</code></em>
+ is of the form,
+void (*pskc_log_func) (const char *msg);</p>
+<p>The application may use this to provide a debug mode with trace
+information for the user.</p>
+<div class="refsect3">
+<a name="pskc-global-log.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>log_func</p></td>
+<td class="parameter_description"><p>new global <a class="link" href="libpskc-global.html#pskc-log-func" title="pskc_log_func ()"><span class="type">pskc_log_func</span></a> log function to use.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-free"></a><h3>pskc_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_free (<em class="parameter"><code><span class="type">void</span> *ptr</code></em>);</pre>
+<p>Deallocates memory region by calling <code class="function">free()</code>.  If <em class="parameter"><code>ptr</code></em>
+ is NULL no
+operation is performed.</p>
+<p>This function is necessary on Windows, where different parts of the
+same application may use different memory heaps.</p>
+<div class="refsect3">
+<a name="pskc-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ptr</p></td>
+<td class="parameter_description"><p>memory region to deallocate, or NULL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libpskc-global.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

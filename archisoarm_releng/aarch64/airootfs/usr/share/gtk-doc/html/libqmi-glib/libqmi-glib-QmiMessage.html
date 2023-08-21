@@ -1,0 +1,2900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QmiMessage: libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libqmi-glib-Version-and-feature-checks.html" title="Version and feature checks">
+<link rel="next" href="QmiMessageContext.html" title="QmiMessageContext">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libqmi-glib-QmiMessage.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libqmi-glib-Version-and-feature-checks.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiMessageContext.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libqmi-glib-QmiMessage"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libqmi-glib-QmiMessage.top_of_page"></a>QmiMessage</span></h2>
+<p>QmiMessage — Generic QMI message handling routines</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libqmi-glib-QmiMessage.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-new" title="qmi_message_new ()">qmi_message_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-new-from-raw" title="qmi_message_new_from_raw ()">qmi_message_new_from_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-new-from-data" title="qmi_message_new_from_data ()">qmi_message_new_from_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-response-new" title="qmi_message_response_new ()">qmi_message_response_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-ref" title="qmi_message_ref ()">qmi_message_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-unref" title="qmi_message_unref ()">qmi_message_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-is-request" title="qmi_message_is_request ()">qmi_message_is_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-is-response" title="qmi_message_is_response ()">qmi_message_is_response</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-is-indication" title="qmi_message_is_indication ()">qmi_message_is_indication</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="returnvalue">QmiService</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-service" title="qmi_message_get_service ()">qmi_message_get_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-client-id" title="qmi_message_get_client_id ()">qmi_message_get_client_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-transaction-id" title="qmi_message_get_transaction_id ()">qmi_message_get_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-message-id" title="qmi_message_get_message_id ()">qmi_message_get_message_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-length" title="qmi_message_get_length ()">qmi_message_get_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-raw" title="qmi_message_get_raw ()">qmi_message_get_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-data" title="qmi_message_get_data ()">qmi_message_get_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-init" title="qmi_message_tlv_write_init ()">qmi_message_tlv_write_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-reset" title="qmi_message_tlv_write_reset ()">qmi_message_tlv_write_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-complete" title="qmi_message_tlv_write_complete ()">qmi_message_tlv_write_complete</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-guint8" title="qmi_message_tlv_write_guint8 ()">qmi_message_tlv_write_guint8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-gint8" title="qmi_message_tlv_write_gint8 ()">qmi_message_tlv_write_gint8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-guint16" title="qmi_message_tlv_write_guint16 ()">qmi_message_tlv_write_guint16</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-gint16" title="qmi_message_tlv_write_gint16 ()">qmi_message_tlv_write_gint16</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-guint32" title="qmi_message_tlv_write_guint32 ()">qmi_message_tlv_write_guint32</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-gint32" title="qmi_message_tlv_write_gint32 ()">qmi_message_tlv_write_gint32</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-guint64" title="qmi_message_tlv_write_guint64 ()">qmi_message_tlv_write_guint64</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-gint64" title="qmi_message_tlv_write_gint64 ()">qmi_message_tlv_write_gint64</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-sized-guint" title="qmi_message_tlv_write_sized_guint ()">qmi_message_tlv_write_sized_guint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-string" title="qmi_message_tlv_write_string ()">qmi_message_tlv_write_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()">qmi_message_tlv_read_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-guint8" title="qmi_message_tlv_read_guint8 ()">qmi_message_tlv_read_guint8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gint8" title="qmi_message_tlv_read_gint8 ()">qmi_message_tlv_read_gint8</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-guint16" title="qmi_message_tlv_read_guint16 ()">qmi_message_tlv_read_guint16</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gint16" title="qmi_message_tlv_read_gint16 ()">qmi_message_tlv_read_gint16</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-guint32" title="qmi_message_tlv_read_guint32 ()">qmi_message_tlv_read_guint32</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gint32" title="qmi_message_tlv_read_gint32 ()">qmi_message_tlv_read_gint32</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-guint64" title="qmi_message_tlv_read_guint64 ()">qmi_message_tlv_read_guint64</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gint64" title="qmi_message_tlv_read_gint64 ()">qmi_message_tlv_read_gint64</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-sized-guint" title="qmi_message_tlv_read_sized_guint ()">qmi_message_tlv_read_sized_guint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gfloat-endian" title="qmi_message_tlv_read_gfloat_endian ()">qmi_message_tlv_read_gfloat_endian</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-gdouble" title="qmi_message_tlv_read_gdouble ()">qmi_message_tlv_read_gdouble</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-string" title="qmi_message_tlv_read_string ()">qmi_message_tlv_read_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-fixed-size-string" title="qmi_message_tlv_read_fixed_size_string ()">qmi_message_tlv_read_fixed_size_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessageForeachRawTlvFn" title="QmiMessageForeachRawTlvFn ()">*QmiMessageForeachRawTlvFn</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-foreach-raw-tlv" title="qmi_message_foreach_raw_tlv ()">qmi_message_foreach_raw_tlv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-raw-tlv" title="qmi_message_get_raw_tlv ()">qmi_message_get_raw_tlv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-add-raw-tlv" title="qmi_message_add_raw_tlv ()">qmi_message_add_raw_tlv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-set-transaction-id" title="qmi_message_set_transaction_id ()">qmi_message_set_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-printable-full" title="qmi_message_get_printable_full ()">qmi_message_get_printable_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-get-tlv-printable" title="qmi_message_get_tlv_printable ()">qmi_message_get_tlv_printable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-QmiMessage.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libqmi-glib-QmiMessage.html#QMI-MESSAGE-QMUX-MARKER:CAPS" title="QMI_MESSAGE_QMUX_MARKER">QMI_MESSAGE_QMUX_MARKER</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage">QmiMessage</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-QmiMessage.description"></a><h2>Description</h2>
+<p><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> is a generic type representing a QMI message of any kind
+(request, response, indication) or service (including <a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QMI-SERVICE-CTL:CAPS"><span class="type">QMI_SERVICE_CTL</span></a>).</p>
+<p>This set of generic routines help in handling these message types, and
+allow creating any kind of message with any kind of TLV.</p>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-QmiMessage.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="qmi-message-new"></a><h3>qmi_message_new ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+qmi_message_new (<em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="type">QmiService</span></a> service</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> client_id</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> transaction_id</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> message_id</code></em>);</pre>
+<p>Create a new <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> with the specified parameters.</p>
+<p>Note that <em class="parameter"><code>transaction_id</code></em>
+ must be less than <a href="../glib/glib-Basic-Types.html#G-MAXUINT8:CAPS"><span class="type">G_MAXUINT8</span></a> if <em class="parameter"><code>service</code></em>
+ is
+<a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QMI-SERVICE-CTL:CAPS"><span class="type">QMI_SERVICE_CTL</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="type">QmiService</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>client_id</p></td>
+<td class="parameter_description"><p>client ID of the originating control point.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message_id</p></td>
+<td class="parameter_description"><p>message ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>. The returned value should be freed with <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-unref" title="qmi_message_unref ()"><code class="function">qmi_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-new-from-raw"></a><h3>qmi_message_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+qmi_message_new_from_raw (<em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *raw</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> from the given raw data buffer.</p>
+<p>Whenever a complete QMI message is read, its raw data gets removed from the <em class="parameter"><code>raw</code></em>
+ buffer.</p>
+<div class="refsect3">
+<a name="qmi-message-new-from-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>raw</p></td>
+<td class="parameter_description"><p>raw data buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-new-from-raw.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>, which should be freed with <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-unref" title="qmi_message_unref ()"><code class="function">qmi_message_unref()</code></a>. If <em class="parameter"><code>raw</code></em>
+doesn't contain a complete QMI message <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned. If there is a complete QMI message but it appears not to be valid, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-new-from-data"></a><h3>qmi_message_new_from_data ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+qmi_message_new_from_data (<em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="type">QmiService</span></a> service</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> client_id</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *qmi_data</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> for the given <em class="parameter"><code>service</code></em>
+ and <em class="parameter"><code>client_id</code></em>
+ and including the given QMI data buffer.</p>
+<p>Whenever a complete QMI message is read, its data gets removed from the <em class="parameter"><code>qmi_data</code></em>
+ buffer.</p>
+<p>This method should be used instead of <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-new-from-raw" title="qmi_message_new_from_raw ()"><code class="function">qmi_message_new_from_raw()</code></a> if the input data doesn't have QMUX headers.</p>
+<div class="refsect3">
+<a name="qmi-message-new-from-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="type">QmiService</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>client_id</p></td>
+<td class="parameter_description"><p>client ID of the originating control point.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qmi_data</p></td>
+<td class="parameter_description"><p>data buffer containing only the QMI part of the message. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-new-from-data.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>, which should be freed with <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-unref" title="qmi_message_unref ()"><code class="function">qmi_message_unref()</code></a>. If <em class="parameter"><code>qmi_data</code></em>
+doesn't contain a complete QMI data payload <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned. If there is a complete QMI data payload but it appears not to be valid, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-24.html#api-index-1.24">1.24</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-response-new"></a><h3>qmi_message_response_new ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+qmi_message_response_new (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *request</code></em>,
+                          <em class="parameter"><code><a class="link" href="libqmi-glib-Errors.html#QmiProtocolError" title="enum QmiProtocolError"><span class="type">QmiProtocolError</span></a> error</code></em>);</pre>
+<p>Create a new response <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> for the specified <em class="parameter"><code>request</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-response-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>request</p></td>
+<td class="parameter_description"><p>a request <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-Errors.html#QmiProtocolError" title="enum QmiProtocolError"><span class="type">QmiProtocolError</span></a> to set in the result TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-response-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>. The returned value should be freed with <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-unref" title="qmi_message_unref ()"><code class="function">qmi_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-ref"></a><h3>qmi_message_ref ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="returnvalue">QmiMessage</span></a> *
+qmi_message_ref (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>self</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="qmi-message-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-ref.returns"></a><h4>Returns</h4>
+<p>the new reference to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-unref"></a><h3>qmi_message_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qmi_message_unref (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>self</code></em>
+ by one.
+If the reference count drops to 0, <em class="parameter"><code>self</code></em>
+ is completely disposed.</p>
+<div class="refsect3">
+<a name="qmi-message-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-is-request"></a><h3>qmi_message_is_request ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_is_request (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Checks whether the given <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> is a request.</p>
+<div class="refsect3">
+<a name="qmi-message-is-request.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-is-request.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em>
+is a request message, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-is-response"></a><h3>qmi_message_is_response ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_is_response (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Checks whether the given <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> is a response.</p>
+<div class="refsect3">
+<a name="qmi-message-is-response.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-is-response.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em>
+is a response message, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-is-indication"></a><h3>qmi_message_is_indication ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_is_indication (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Checks whether the given <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> is an indication.</p>
+<div class="refsect3">
+<a name="qmi-message-is-indication.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-is-indication.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em>
+is an indication message, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-service"></a><h3>qmi_message_get_service ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="returnvalue">QmiService</span></a>
+qmi_message_get_service (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Gets the service corresponding to the given <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-get-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-service.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiService" title="enum QmiService"><span class="type">QmiService</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-client-id"></a><h3>qmi_message_get_client_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+qmi_message_get_client_id (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Gets the client ID of the message.</p>
+<div class="refsect3">
+<a name="qmi-message-get-client-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-client-id.returns"></a><h4>Returns</h4>
+<p> the client ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-transaction-id"></a><h3>qmi_message_get_transaction_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+qmi_message_get_transaction_id (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Gets the transaction ID of the message.</p>
+<div class="refsect3">
+<a name="qmi-message-get-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-transaction-id.returns"></a><h4>Returns</h4>
+<p> the transaction ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-message-id"></a><h3>qmi_message_get_message_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint16"><span class="returnvalue">guint16</span></a>
+qmi_message_get_message_id (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Gets the ID of the message.</p>
+<div class="refsect3">
+<a name="qmi-message-get-message-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-message-id.returns"></a><h4>Returns</h4>
+<p> the ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-length"></a><h3>qmi_message_get_length ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+qmi_message_get_length (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>);</pre>
+<p>Gets the length of the raw data corresponding to the given <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-get-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-length.returns"></a><h4>Returns</h4>
+<p> the length of the raw data.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-raw"></a><h3>qmi_message_get_raw ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+qmi_message_get_raw (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the raw data buffer of the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-get-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-raw.returns"></a><h4>Returns</h4>
+<p>The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-data"></a><h3>qmi_message_get_data ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+qmi_message_get_data (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the data buffer of the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> without the QMUX header.</p>
+<div class="refsect3">
+<a name="qmi-message-get-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-data.returns"></a><h4>Returns</h4>
+<p>The raw QMI buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-24.html#api-index-1.24">1.24</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-init"></a><h3>qmi_message_tlv_write_init ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+qmi_message_tlv_write_init (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Starts building a new TLV in the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<p>In order to finish adding the TLV, <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-complete" title="qmi_message_tlv_write_complete ()"><code class="function">qmi_message_tlv_write_complete()</code></a> needs to be
+called.</p>
+<p>If any error happens adding fields on the TLV, the previous state can be
+recovered using <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-reset" title="qmi_message_tlv_write_reset ()"><code class="function">qmi_message_tlv_write_reset()</code></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>specific ID of the TLV to add.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-init.returns"></a><h4>Returns</h4>
+<p> the offset where the TLV was started to be added, or 0 if an error happens.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-reset"></a><h3>qmi_message_tlv_write_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qmi_message_tlv_write_reset (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>);</pre>
+<p>Removes the TLV being currently added.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-init" title="qmi_message_tlv_write_init ()"><code class="function">qmi_message_tlv_write_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-complete"></a><h3>qmi_message_tlv_write_complete ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_complete (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Completes building a TLV in the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<p>In case of error the TLV will be reseted; i.e. there is no need to explicitly
+call <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-reset" title="qmi_message_tlv_write_reset ()"><code class="function">qmi_message_tlv_write_reset()</code></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-complete.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-write-init" title="qmi_message_tlv_write_init ()"><code class="function">qmi_message_tlv_write_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-complete.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the TLV is successfully completed, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-guint8"></a><h3>qmi_message_tlv_write_guint8 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_guint8 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> in</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends an unsigned byte to the TLV being built.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint8.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint8.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-gint8"></a><h3>qmi_message_tlv_write_gint8 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_gint8 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint8"><span class="type">gint8</span></a> in</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a signed byte variable to the TLV being built.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint8.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#gint8"><span class="type">gint8</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint8.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-guint16"></a><h3>qmi_message_tlv_write_guint16 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_guint16 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                               <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> in</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends an unsigned 16-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint16.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint16.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-gint16"></a><h3>qmi_message_tlv_write_gint16 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_gint16 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint16"><span class="type">gint16</span></a> in</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a signed 16-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint16.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#gint16"><span class="type">gint16</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint16.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-guint32"></a><h3>qmi_message_tlv_write_guint32 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_guint32 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                               <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> in</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends an unsigned 32-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint32.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint32.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-gint32"></a><h3>qmi_message_tlv_write_gint32 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_gint32 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint32"><span class="type">gint32</span></a> in</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a signed 32-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint32.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#gint32"><span class="type">gint32</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint32.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-guint64"></a><h3>qmi_message_tlv_write_guint64 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_guint64 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                               <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> in</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends an unsigned 64-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint64.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-guint64.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-gint64"></a><h3>qmi_message_tlv_write_gint64 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_gint64 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> in</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a signed 32-bit integer to the TLV being built. The number to be
+written is expected to be given in host endianness, and this method takes
+care of converting the value written to the byte order specified by <em class="parameter"><code>endian</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint64.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-gint64.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-sized-guint"></a><h3>qmi_message_tlv_write_sized_guint ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_sized_guint (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n_bytes</code></em>,
+                                   <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> in</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a <em class="parameter"><code>n_bytes</code></em>
+-sized unsigned integer to the TLV being built. The number
+to be written is expected to be given in host endianness, and this method
+takes care of converting the value written to the byte order specified by
+<em class="parameter"><code>endian</code></em>
+.</p>
+<p>The value of <em class="parameter"><code>n_bytes</code></em>
+ can be any between 1 and 8.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-sized-guint.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_bytes</p></td>
+<td class="parameter_description"><p>number of bytes to write.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>target endianness, swapped from host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> in host byte order.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-sized-guint.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-write-string"></a><h3>qmi_message_tlv_write_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_write_string (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> n_size_prefix_bytes</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *in</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gssize"><span class="type">gssize</span></a> in_length</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Appends a string to the TLV being built.</p>
+<p>Fixed-sized strings should give <em class="parameter"><code>n_size_prefix_bytes</code></em>
+ equal to 0.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_size_prefix_bytes</p></td>
+<td class="parameter_description"><p>number of bytes to use in the size prefix.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>string to write.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>in</code></em>
+, or -1 if <em class="parameter"><code>in</code></em>
+is NUL-terminated.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-write-string.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the string is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-init"></a><h3>qmi_message_tlv_read_init ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+qmi_message_tlv_read_init (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *out_tlv_length</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Starts reading a given TLV from the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>specific ID of the TLV to read.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_tlv_length</p></td>
+<td class="parameter_description"><p>optional return location for the TLV size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-init.returns"></a><h4>Returns</h4>
+<p> the offset where the TLV starts, or 0 if an error happens.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-guint8"></a><h3>qmi_message_tlv_read_guint8 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_guint8 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *out</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads an unsigned byte from the TLV.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint8.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint8.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gint8"></a><h3>qmi_message_tlv_read_gint8 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gint8 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint8"><span class="type">gint8</span></a> *out</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a signed byte from the TLV.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint8.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gint8"><span class="type">gint8</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint8.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-guint16"></a><h3>qmi_message_tlv_read_guint16 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_guint16 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *out</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads an unsigned 16-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint16.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint16.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gint16"></a><h3>qmi_message_tlv_read_gint16 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gint16 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                             <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint16"><span class="type">gint16</span></a> *out</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a signed 16-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint16.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gint16"><span class="type">gint16</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint16.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-guint32"></a><h3>qmi_message_tlv_read_guint32 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_guint32 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads an unsigned 32-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint32.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint32.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gint32"></a><h3>qmi_message_tlv_read_gint32 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gint32 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                             <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint32"><span class="type">gint32</span></a> *out</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a signed 32-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint32.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gint32"><span class="type">gint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint32.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-guint64"></a><h3>qmi_message_tlv_read_guint64 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_guint64 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *out</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads an unsigned 64-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint64.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-guint64.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gint64"></a><h3>qmi_message_tlv_read_gint64 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gint64 (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                             <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> *out</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a signed 64-bit integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint64.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gint64.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-sized-guint"></a><h3>qmi_message_tlv_read_sized_guint ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_sized_guint (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n_bytes</code></em>,
+                                  <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *out</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a <em class="parameter"><code>b_bytes</code></em>
+-sized integer from the TLV, in host byte order.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-sized-guint.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_bytes</p></td>
+<td class="parameter_description"><p>number of bytes to read.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-sized-guint.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gfloat-endian"></a><h3>qmi_message_tlv_read_gfloat_endian ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gfloat_endian (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                                    <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *out</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a 32-bit floating-point number from the TLV.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gfloat-endian.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gfloat-endian.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-gdouble"></a><h3>qmi_message_tlv_read_gdouble ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_gdouble (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                              <em class="parameter"><code><a class="link" href="libqmi-glib-Common-enumerations-and-flags.html#QmiEndian" title="enum QmiEndian"><span class="type">QmiEndian</span></a> endian</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *out</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a 64-bit floating-point number from the TLV.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gdouble.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>endian</p></td>
+<td class="parameter_description"><p>source endianness, which will be swapped to host byte order if necessary.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-gdouble.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-string"></a><h3>qmi_message_tlv_read_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_string (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> n_size_prefix_bytes</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> max_size</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **out</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a string from the TLV.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<p>Since 1.24.6 the read string is guaranteed to be valid UTF-8. Also, in order to
+overcome known firmware errors on string fields, this method will also
+attempt to parse the string as GSM-7 or UCS-2 if the initial UTF-8 validation
+fails.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_size_prefix_bytes</p></td>
+<td class="parameter_description"><p>number of bytes used in the size prefix.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max_size</p></td>
+<td class="parameter_description"><p>maximum number of bytes to read, or 0 to read all available bytes.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>return location for the read string. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-string.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-tlv-read-fixed-size-string"></a><h3>qmi_message_tlv_read_fixed_size_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_tlv_read_fixed_size_string
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> tlv_offset</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *offset</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> string_length</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *out</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Reads a string from the TLV.</p>
+<p>The string written in <em class="parameter"><code>out</code></em>
+ will need to be NUL-terminated by the caller.</p>
+<p><em class="parameter"><code>offset</code></em>
+ needs to point to a valid <em class="parameter"><code>gsize</code></em>
+ specifying the index to start
+reading from within the TLV value (0 for the first item). If the variable
+is successfully read, <em class="parameter"><code>offset</code></em>
+ will be updated to point past the read item.</p>
+<p>Since 1.24.6 the read string is guaranteed to be valid UTF-8.</p>
+<p>The fixed sized field may be suffixed with e.g. 0xFF if the contents are
+shorter than <em class="parameter"><code>string_length</code></em>
+. Since 1.26, this method will return the valid
+UTF-8 characters in the start of the string, instead of returning an error
+when doing the full UTF-8 string validation.</p>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-fixed-size-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tlv_offset</p></td>
+<td class="parameter_description"><p>offset that was returned by <a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-tlv-read-init" title="qmi_message_tlv_read_init ()"><code class="function">qmi_message_tlv_read_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>address of a the offset within the TLV value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>string_length</p></td>
+<td class="parameter_description"><p>amount of bytes to read.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>buffer preallocated by the client, with at least <em class="parameter"><code>string_length</code></em>
+bytes. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-tlv-read-fixed-size-string.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the variable is successfully read, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QmiMessageForeachRawTlvFn"></a><h3>QmiMessageForeachRawTlvFn ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*QmiMessageForeachRawTlvFn<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *value</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Callback type to use when iterating raw TLVs with
+<a class="link" href="libqmi-glib-QmiMessage.html#qmi-message-foreach-raw-tlv" title="qmi_message_foreach_raw_tlv ()"><code class="function">qmi_message_foreach_raw_tlv()</code></a>.</p>
+<div class="refsect3">
+<a name="QmiMessageForeachRawTlvFn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>specific ID of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>value of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>length of the TLV, in bytes.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-foreach-raw-tlv"></a><h3>qmi_message_foreach_raw_tlv ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qmi_message_foreach_raw_tlv (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessageForeachRawTlvFn" title="QmiMessageForeachRawTlvFn ()"><span class="type">QmiMessageForeachRawTlvFn</span></a> func</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Calls the given function for each TLV found within the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-foreach-raw-tlv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>the function to call for each TLV. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data to pass to the function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> func]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-raw-tlv"></a><h3>qmi_message_get_raw_tlv ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+qmi_message_get_raw_tlv (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *length</code></em>);</pre>
+<p>Get the raw data buffer of a specific TLV within the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-get-raw-tlv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>specific ID of the TLV to get.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return location for the length of the TLV. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-raw-tlv.returns"></a><h4>Returns</h4>
+<p>The raw data buffer of the TLV, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-add-raw-tlv"></a><h3>qmi_message_add_raw_tlv ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_message_add_raw_tlv (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *raw</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a new <em class="parameter"><code>type</code></em>
+ TLV with the value given in <em class="parameter"><code>raw</code></em>
+, and adds it to the <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-add-raw-tlv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>specific ID of the TLV to add.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>raw</p></td>
+<td class="parameter_description"><p>raw data buffer with the value of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>length of the raw data buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-add-raw-tlv.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the TLV is successfully added, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> is returned and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-set-transaction-id"></a><h3>qmi_message_set_transaction_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qmi_message_set_transaction_id (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> transaction_id</code></em>);</pre>
+<p>Overwrites the transaction ID of the message.</p>
+<div class="refsect3">
+<a name="qmi-message-set-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-printable-full"></a><h3>qmi_message_get_printable_full ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+qmi_message_get_printable_full (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="QmiMessageContext.html" title="QmiMessageContext"><span class="type">QmiMessageContext</span></a> *context</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *line_prefix</code></em>);</pre>
+<p>Gets a printable string with the contents of the whole QMI message.</p>
+<p>If known, the printable string will contain translated TLV values as well as
+the raw data buffer contents.</p>
+<p>The translation of the contents may be specific to the <em class="parameter"><code>context</code></em>
+ provided,
+e.g. for vendor-specific messages.</p>
+<p>If no <em class="parameter"><code>context</code></em>
+ given, the behavior is the same as <a class="link" href="libqmi-glib-Deprecated-Interface.html#qmi-message-get-printable" title="qmi_message_get_printable ()"><code class="function">qmi_message_get_printable()</code></a>.</p>
+<div class="refsect3">
+<a name="qmi-message-get-printable-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>context</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QmiMessageContext.html" title="QmiMessageContext"><span class="type">QmiMessageContext</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>line_prefix</p></td>
+<td class="parameter_description"><p>prefix string to use in each new generated line.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-printable-full.returns"></a><h4>Returns</h4>
+<p>a newly allocated string, which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-message-get-tlv-printable"></a><h3>qmi_message_get_tlv_printable ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+qmi_message_get_tlv_printable (<em class="parameter"><code><a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a> *self</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *line_prefix</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> type</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *raw</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> raw_length</code></em>);</pre>
+<p>Gets a printable string with the contents of the TLV.</p>
+<p>This method is the most generic one and doesn't try to translate the TLV contents.</p>
+<div class="refsect3">
+<a name="qmi-message-get-tlv-printable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-QmiMessage.html#QmiMessage" title="QmiMessage"><span class="type">QmiMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>line_prefix</p></td>
+<td class="parameter_description"><p>prefix string to use in each new generated line.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>type of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>raw</p></td>
+<td class="parameter_description"><p>raw data buffer with the value of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>raw_length</p></td>
+<td class="parameter_description"><p>length of the raw data buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-message-get-tlv-printable.returns"></a><h4>Returns</h4>
+<p>a newly allocated string, which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-QmiMessage.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="QMI-MESSAGE-QMUX-MARKER:CAPS"></a><h3>QMI_MESSAGE_QMUX_MARKER</h3>
+<pre class="programlisting">#define QMI_MESSAGE_QMUX_MARKER (guint8) 0x01
+</pre>
+<p>First byte of every QMI message.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QmiMessage"></a><h3>QmiMessage</h3>
+<pre class="programlisting">typedef GByteArray QmiMessage;
+</pre>
+<p>An opaque type representing a QMI message.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

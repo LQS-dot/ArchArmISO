@@ -1,0 +1,296 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# lsinitcpio - dump the contents of an initramfs image
+#
+
+shopt -s extglob globstar
+
+_list='--list'
+_optcolor=1
+_f_functions=/usr/lib/initcpio/functions
+
+declare -A bsdcpio_options=(
+    [list]='--list'
+    [input]='-i'
+    [quiet]='--quiet'
+)
+
+usage() {
+    cat <<USAGE
+lsinitcpio 36
+usage: ${0##*/} [action] [options] <initramfs>
+
+  Actions:
+   -a, --analyze        analyze contents of image
+   -c, --config         show configuration file image was built with
+   -l, --list           list contents of the image (default)
+   -x, --extract        extract image to disk
+
+  Options:
+   -h, --help           display this help
+   -n, --nocolor        disable colorized output
+   -V, --version        display version information
+   -v, --verbose        more verbose output
+
+USAGE
+}
+
+version() {
+    cat <<EOF
+lsinitcpio 36
+EOF
+}
+
+decomp() {
+    ${_compress:-cat} ${_compress:+-cd} "$@"
+}
+
+# shellcheck source=functions
+. "$_f_functions"
+
+# override the die method from functions
+die() {
+    error "$@"
+    exit 1
+}
+
+size_to_human() {
+    awk -v size="$1" '
+    BEGIN {
+        suffix[1] = "B"
+        suffix[2] = "KiB"
+        suffix[3] = "MiB"
+        suffix[4] = "GiB"
+        suffix[5] = "TiB"
+        count = 1
+
+        while (size > 1024) {
+            size /= 1024
+            count++
+        }
+
+        sizestr = sprintf("%.2f", size)
+        sub(/\.?0+$/, "", sizestr)
+        printf("%s %s", sizestr, suffix[count])
+    }'
+}
+
+detect_filetype() {
+    local bytes
+
+    read -rd '' -n 6 bytes <"$1"
+    printf -v bytes '%02x' "'${bytes:0:1}" "'${bytes:1:1}" "'${bytes:2:1}" \
+                           "'${bytes:3:1}" "'${bytes:4:1}" "'${bytes:5:1}"
+    case $bytes in
+        '303730373031')
+            # no compression
+            echo
+            return
+            ;;
+    esac
+
+    compression="$(detect_compression "$1")"
+
+    if [[ -n "$compression" ]]; then
+        echo "$compression"
+        return
+    fi
+
+    # still nothing? hrmm, maybe the user goofed and it's a kernel
+    if kver "$1" >/dev/null; then
+        die "'%s' is a kernel image, not an initramfs image!" "$1"
+    fi
+
+    # out of ideas, we're done here.
+    die "Unexpected file type. Are you sure '%s' is an initramfs?" "$1"
+}
+
+analyze_image() {
+    local -a binaries explicitmod modules foundhooks hooks imagename
+    local kernver ratio columns image="$1"
+    columns="$(tput cols)"
+
+    workdir="$(mktemp -d --tmpdir lsinitcpio.XXXXXX)"
+    trap 'rm -rf "$workdir"' EXIT
+
+    # fallback in case tput failed us
+    columns="${columns:-80}"
+
+    # instead of reading the size from the inode, insist on reading the entire
+    # image to ensure that it's in the cache when we decompress. This avoids
+    # variance in timing and makes the time spent reading from storage roughly
+    # constant.
+    zsize="$(wc -c <"$image")"
+
+    # calculate compression ratio
+    if [[ -n "$_compress" ]]; then
+        decomptime="$(TIMEFORMAT=%R; { time decomp "$image" >/dev/null; } 2>&1)"
+        fullsize="$(decomp "$image" | wc -c)"
+        ratio=".$(( zsize * 1000 / fullsize % 1000 ))"
+    fi
+
+    # decompress the image since we need to read from it multiple times.
+    decomp "$image" | bsdtar -C "$workdir" -xf - || die 'Failed to decompress image'
+
+    modules=("$workdir/usr/lib/modules"/*/kernel/**/*.ko*)
+    if [[ -f "${modules[0]}" ]]; then
+        IFS=/ read -r _ _ _ kernver _ <<<"${modules[0]#$workdir/}"
+        modules=("${modules[@]##*/}")
+        modules=("${modules[@]%.ko*}")
+    else
+        unset modules
+    fi
+
+    foundhooks=("$workdir"/hooks/*)
+    if [[ -f "${foundhooks[0]}" ]]; then
+        foundhooks=("${foundhooks[@]##*/}")
+    else
+        unset foundhooks
+    fi
+
+    mapfile -t binaries < <(find "$workdir/usr/bin" -type f -printf %f\\n)
+
+    read -r version <"$workdir/VERSION"
+
+    # shellcheck disable=SC1090,SC1091
+    . "$workdir/config"
+
+    explicitmod=("${MODULES[@]}")
+
+    # print results
+    imagename=("$image")
+    [[ -L "$image" ]] && imagename+=(" -> $(readlink -e "$image")")
+    msg 'Image: %s%s' "${imagename[@]}"
+    [[ -n "$version" ]] && msg 'Created with mkinitcpio %s' "$version"
+    msg 'Kernel: %s' "${kernver:-unknown}"
+    msg 'Size: %s' "$(size_to_human "$zsize")"
+
+    if [[ -n "$_compress" ]]; then
+        msg 'Compressed with: %s' "$_compress"
+        msg2 'Uncompressed size: %s (%s ratio)' "$(size_to_human "$fullsize")" "$ratio"
+        msg2 'Estimated decompression time: %ss' "$decomptime"
+    fi
+    printf '\n'
+
+    if (( ${#modules[*]} )); then
+        msg 'Included modules:'
+        for mod in "${modules[@]}"; do
+            printf '  %s' "$mod"
+            in_array "${mod//_/-}" "${explicitmod[@]//_/-}" && printf ' [explicit]'
+            printf '\n'
+        done | sort | column -c"${columns}"
+        printf '\n'
+    fi
+
+    msg 'Included binaries:'
+    printf '  %s\n' "${binaries[@]}" | sort | column -c"${columns}"
+    printf '\n'
+
+    if [[ -n "$EARLYHOOKS" ]]; then
+        msg 'Early hook run order:'
+        printf '  %s\n' "$EARLYHOOKS"
+        printf '\n'
+    fi
+
+    # shellcheck disable=SC2128
+    if [[ -n "$HOOKS" ]]; then
+        msg 'Hook run order:'
+        printf '  %s\n' "$HOOKS"
+        printf '\n'
+    fi
+
+    if [[ -n "$LATEHOOKS" ]]; then
+        msg 'Late hook run order:'
+        printf '  %s\n' "$LATEHOOKS"
+        printf '\n'
+    fi
+
+    if [[ -n "$CLEANUPHOOKS" ]]; then
+        msg 'Cleanup hook run order:'
+        printf '  %s\n' "$CLEANUPHOOKS"
+        printf '\n'
+    fi
+
+    if [[ -n "$EMERGENCYHOOKS" ]]; then
+        msg 'Emergency hook run order:'
+        printf '  %s\n' "$EMERGENCYHOOKS"
+        printf '\n'
+    fi
+}
+
+_opt_short='achlnVvx'
+_opt_long=('analyze' 'config' 'help' 'list' 'nocolor' 'version' 'verbose' 'extract')
+
+parseopts "$_opt_short" "${_opt_long[@]}" -- "$@" || exit
+set -- "${OPTRET[@]}"
+unset _opt_short _opt_long OPTRET
+
+while :; do
+    case $1 in
+        -a | --analyze)
+            _optanalyze=1
+            ;;
+        -c | --config)
+            _optshowconfig=1
+            ;;
+        -h | --help)
+            usage
+            exit 0
+            ;;
+        -l | --list)
+            _optlistcontents=1
+            ;;
+        -n | --nocolor)
+            _optcolor=0
+            ;;
+        -V | --version)
+            version
+            exit 0
+            ;;
+        -v | --verbose)
+            bsdcpio_options['verbose']='--verbose'
+            ;;
+        -x | --extract)
+            unset 'bsdcpio_options[list]'
+            ;;
+        --)
+            shift
+            break 2
+            ;;
+    esac
+    shift
+done
+
+_image="$1"
+
+if [[ -t 1 ]] && (( _optcolor )); then
+    try_enable_color
+fi
+
+[[ -n "$_image" ]] || die 'No image specified (use -h for help)'
+[[ -f "$_image" ]] || die "No such file: '%s'" "$_image"
+
+case $(( _optanalyze + _optlistcontents + _optshowconfig )) in
+    0)
+        # default action when none specified
+        _optlistcontents=1
+        ;;
+    [!1])
+        die "Only one action may be specified at a time"
+        ;;
+esac
+
+# read compression type
+_compress="$(detect_filetype "$_image")" || exit
+
+if (( _optanalyze )); then
+    analyze_image "$_image"
+elif (( _optshowconfig )); then
+    decomp "$_image" | bsdtar xOf - buildconfig 2>/dev/null ||
+        die 'Failed to extract config from image (mkinitcpio too old?)'
+else
+    decomp "$_image" | bsdcpio "${bsdcpio_options[@]}"
+fi
+
+# vim: set ft=sh ts=4 sw=4 et:

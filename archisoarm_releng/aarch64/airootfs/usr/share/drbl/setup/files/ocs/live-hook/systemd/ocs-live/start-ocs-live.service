@@ -1,0 +1,18 @@
+## This is the systemd service for start-ocs-live.
+
+[Unit]
+Description=Clonezilla live startup service
+After=live-config.service systemd-user-sessions.service
+Before=getty@tty1.service getty@ttyUSB0.service
+Before=serial-getty@ttyS0.service serial-getty@ttyS1.service serial-getty@ttyS2.service serial-getty@ttyS3.service serial-getty@ttyO0.service serial-getty@ttyO2.service serial-getty@ttyAMA0.service serial-getty@ttyAMA1.service serial-getty@ttyAMA2.service serial-getty@ttyAMA3.service
+DefaultDependencies=no
+ConditionPathExists=/etc/ocs/start-ocs-live
+ConditionKernelCommandLine=boot=live
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/etc/ocs/start-ocs-live start
+
+[Install]
+WantedBy=getty.target

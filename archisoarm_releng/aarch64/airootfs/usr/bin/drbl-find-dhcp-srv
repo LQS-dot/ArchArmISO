@@ -1,0 +1,300 @@
+#!/bin/bash
+# License: GPL 
+# Author: Steven Shiau <steven _at_ clonezilla org>
+# Description: Program to detect DHCP service.
+
+# Load DRBL setting and functions
+# Setting
+# Source function library.
+[ -f /etc/rc.d/init.d/functions ] && . /etc/rc.d/init.d/functions
+
+# Load DRBL setting and functions
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+
+# Settings
+timeout_def="30"
+
+#
+USAGE() {
+    echo "$ocs - To detect DHCP service"
+    echo "Usage:"
+    echo "To run $ocs:"
+    echo "$ocs [OPTION] OUTPUT_FILE"
+    echo "Options:"
+    echo "-i, --interface DEV  Specify the ethernet dev for detecting DHCP service"
+    echo "-t, --timeout TIME   Specify the timeout (sec) for detecting DHCP service"
+    echo "OUTPUT_FILE is for saving the info, including: Ethernet card, DHCP server, available DHCP client. If no file is assigned, the results will be shown on stdout only."
+    echo "Ex:"
+    echo "To detect DHCP service on network card eth1, and output the results to file \"dhcp.txt\", run:"
+    echo "   $ocs -i eth1 dhcp.txt"
+    echo
+} # end of USAGE
+#
+get_dhcpsrv_info_from_nagios() {
+  local eth_ d_result
+  local dhcp_srv_ip dhcp_client_ip rc_=1
+  eth_="$1"
+  d_result="$2"
+  if [ -z "$eth_" ]; then
+    echo "Variable eth_ was not assigned in function get_dhcpsrv_info_from_nagios."
+    exit 1
+  fi
+  if [ -z "$d_result" ]; then
+    echo "Variable d_result was not assigned in function get_dhcpsrv_info_from_nagios."
+    exit 1
+  fi
+  if [ ! -x /usr/lib/nagios/plugins/check_dhcp ]; then
+    echo "File /usr/lib/nagios/plugins/check_dhcp was not found. Skip Nagios method."
+    return 1
+  fi
+  # TODO: check_dhcp might quit very quickly. How to run it until we find the results, but not keep it too long?
+  /usr/lib/nagios/plugins/check_dhcp -v -i $eth_ > $d_result &
+  time_left="$timeout"
+  while [ "$time_left" -ne 0 ]; do
+    echo -n "$time_left "
+    # Result is like:
+    # recv_result: 300
+    # receive_dhcp_packet() result: 300
+    # receive_dhcp_packet() source: 192.168.22.254
+    # Result=OK
+    # DHCPOFFER from IP address 192.168.22.254 via 192.168.22.254
+    # DHCPOFFER XID: 699683243 (0x29B451AB)
+    # DHCPOFFER chaddr: 000C2992D4D0
+    # DHCPOFFER ciaddr: 0.0.0.0
+    # DHCPOFFER yiaddr: 192.168.22.1
+    # DHCPOFFER siaddr: 192.168.22.254
+    # DHCPOFFER giaddr: 0.0.0.0
+    dhcp_srv_ip="$(LC_ALL=C grep -E "^DHCPOFFER siaddr:" $d_result 2>/dev/null | awk -F":" '{print $2}')"
+    dhcp_client_ip="$(LC_ALL=C grep -E "^DHCPOFFER yiaddr:" $d_result 2>/dev/null | awk -F":" '{print $2}')"
+    # Strip the leading white spaces
+    dhcp_srv_ip="$(echo $dhcp_srv_ip)"
+    dhcp_client_ip="$(echo $dhcp_client_ip)"
+    if [ -n "$dhcp_srv_ip" -a -n "$dhcp_client_ip" ]; then
+      dhcp_srv_ip="$(echo $dhcp_srv_ip)"  # Strip leading spaces.
+      dhcp_client_ip="$(echo $dhcp_client_ip)"  # Strip leading spaces.
+      echo
+      echo "Found DHCP service. Ethernet card, DHCP server, Available DHCP client: $eth_, $dhcp_srv_ip, $dhcp_client_ip"
+      if [ -n "$out_f" ]; then
+        cat <<-DHCP_END > $out_f
+DHCPOFFER_eth="$eth_"
+DHCPOFFER_siaddr="$dhcp_srv_ip"
+DHCPOFFER_yiaddr="$dhcp_client_ip"
+DHCPOFFER_netmask=""
+DHCPOFFER_prefix=""
+DHCP_END
+      fi
+      rc_=0
+      break
+    fi
+    sleep 1
+    time_left="$((time_left - 1))" 
+  done
+  return $rc_
+} # end of get_dhcpsrv_info_from_nagios
+#
+get_dhcpsrv_info_from_nmap() {
+  local eth_ d_result
+  local dhcp_srv_ip dhcp_client_ip dhcp_client_nm dhcp_client_prefix rc_=1
+  eth_="$1"
+  d_result="$2"
+  if [ -z "$eth_" ]; then
+    echo "Variable eth_ was not assigned in function get_dhcpsrv_info_from_nmap."
+    exit 1
+  fi
+  if [ -z "$d_result" ]; then
+    echo "Variable d_result was not assigned in function get_dhcpsrv_info_from_nmap."
+    exit 1
+  fi
+  if ! type nmap >/dev/null 2>&1; then
+    echo "Program nmap was not found. Skip nmap method."
+    return 1
+  fi
+  LC_ALL=C nmap --script broadcast-dhcp-discover -e $eth_ > $d_result 2>&1 &
+  time_left="$timeout"
+  while [ "$time_left" -ne 0 ]; do
+    echo -n "$time_left "
+    # Nmap result is like:
+    # nmap --script broadcast-dhcp-discover -e macvlan0
+    #
+    # Starting Nmap 7.12 ( https://nmap.org ) at 2017-01-29 18:09 CST
+    # Pre-scan script results:
+    # | broadcast-dhcp-discover:
+    # |   Response 1 of 1:
+    # |     IP Offered: 192.168.120.5
+    # |     DHCP Message Type: DHCPOFFER
+    # |     Server Identifier: 192.168.120.254
+    # |     IP Address Lease Time: 5m00s
+    # |     Subnet Mask: 255.255.255.0
+    # |     Router: 192.168.120.254
+    # |     Domain Name Server: 8.8.8.8, 8.8.4.4
+    # |     Domain Name: nchc.org.tw
+    dhcp_srv_ip="$(LC_ALL=C grep -E "^\|[[:space:]]*Server Identifier:" $d_result 2>/dev/null | awk -F":" '{print $2}')"
+    dhcp_client_ip="$(LC_ALL=C grep -E "^\|[[:space:]]*IP Offered:" $d_result 2>/dev/null | awk -F":" '{print $2}')"
+    dhcp_client_nm="$(LC_ALL=C grep -E "^\|[[:space:]]*Subnet Mask:" $d_result 2>/dev/null | awk -F":" '{print $2}')"
+    # Strip the leading white spaces
+    dhcp_srv_ip="$(echo $dhcp_srv_ip)"
+    dhcp_client_ip="$(echo $dhcp_client_ip)"
+    dhcp_client_nm="$(echo $dhcp_client_nm)"
+    # convert netmask to prefix length
+    if [ -n "$dhcp_client_nm" ]; then
+      dhcp_client_prefix="$(LC_ALL=C drbl-ipcalc 0.0.0.0 $dhcp_client_nm | awk -F" " '/^Netmask:/ {print $4}')"
+    fi
+    if [ -n "$dhcp_srv_ip" -a -n "$dhcp_client_ip" ]; then
+      dhcp_srv_ip="$(echo $dhcp_srv_ip)"  # Strip leading spaces.
+      dhcp_client_ip="$(echo $dhcp_client_ip)"  # Strip leading spaces.
+      echo
+      echo "Found DHCP service. Ethernet card, DHCP server, Available DHCP client: $eth_, $dhcp_srv_ip, $dhcp_client_ip"
+      if [ -n "$out_f" ]; then
+        cat <<-DHCP_END > $out_f
+DHCPOFFER_eth="$eth_"
+DHCPOFFER_siaddr="$dhcp_srv_ip"
+DHCPOFFER_yiaddr="$dhcp_client_ip"
+DHCPOFFER_netmask="$dhcp_client_nm"
+DHCPOFFER_prefix="$dhcp_client_prefix"
+DHCP_END
+      fi
+      rc_=0
+      break
+    fi
+    sleep 1
+    time_left="$((time_left - 1))" 
+  done
+  return $rc_
+} # end of get_dhcpsrv_info_from_nmap
+#
+get_dhcpsrv_info_from_udhcpc(){
+  local dhcp_srv_ip dhcp_client_ip rc_
+  local eth_
+  eth_="$1"
+  rc_="1"
+  # Check if busybox supports udhcpc
+  if [ -z "$(LC_ALL=C busybox 2>/dev/null | grep -Ewo "udhcpc")" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+    echo "Busybox does not porvide applet udhcpc!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    return 1
+  fi
+  # Generate the script for udhcpc to run
+  # Try 5 times
+  # The output file for udhcpc-find-dhcp-record: udhdpc_query_result is defined in drbl.conf
+  ocs_log_rotate $udhdpc_query_result
+  busybox udhcpc -t 5 -n -q -s $DRBL_SCRIPT_PATH/bin/udhcpc-find-dhcp-record -i $eth_ >/dev/null 2>&1 &
+  time_left="$timeout"
+  while [ "$time_left" -ne 0 ]; do
+    echo -n "$time_left "
+    dhcp_srv_ip=""
+    dhcp_client_ip=""
+    [ -e "$udhdpc_query_result" ] && . $udhdpc_query_result
+    dhcp_srv_ip="$DHCPOFFER_siaddr"
+    dhcp_client_ip="$DHCPOFFER_yiaddr"
+    if [ -n "$dhcp_srv_ip" -a -n "$dhcp_client_ip" ]; then
+      echo
+      echo "Found DHCP service. Ethernet card, DHCP server, Available DHCP client: $eth_, $dhcp_srv_ip, $dhcp_client_ip"
+      rc_=0
+      # Save the output file before exiting
+      cp -a $udhdpc_query_result $out_f
+      break
+    fi
+    sleep 1
+    time_left="$((time_left - 1))" 
+  done
+  return $rc_
+} # end of get_dhcpsrv_info_from_udhcpc
+
+####################
+### Main program ###
+####################
+
+ocs_file="$0"
+ocs=`basename $ocs_file`
+#
+while [ $# -gt 0 ]; do
+ case "$1" in
+   -i|--interface) 
+           shift; 
+           if [ -z "$(echo $1 |grep ^-.)" ]; then
+             # skip the -xx option, in case 
+             eth_port="$1"
+             shift;
+           fi
+           [ -z "$eth_port" ] && USAGE && exit 1
+           ;;
+   -t|--timeout) 
+           shift; 
+           if [ -z "$(echo $1 |grep ^-.)" ]; then
+             # skip the -xx option, in case 
+             timeout="$1"
+             shift;
+           fi
+           [ -z "$timeout" ] && USAGE && exit 1
+           ;;
+   -*)     echo "${0}: ${1}: invalid option" >&2
+           USAGE >& 2
+           exit 2 ;;
+   *)      break ;;
+ esac
+done
+out_f="$1"
+
+#
+[ -z "$timeout" ] && timeout="$timeout_def"
+#
+ask_and_load_lang_set
+
+#
+if [ ! -e /usr/lib/nagios/plugins/check_dhcp ] && ! `type nmap >/dev/null 2>&1` ; then
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  echo "File /usr/lib/nagios/plugins/check_dhcp or program nmap not found!"
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo "Please install Nagios plugins or nmap program. On Debian/Ubuntu system, the required package is monitoring-plugins-basic or nmap."
+  echo "$msg_program_stop!"
+  my_ocs_exit 1
+fi
+#
+if [ -z "$eth_port" ]; then
+  # Detect on all ethernet ports
+  eth_port="$(LC_ALL=C get-nic-devs)"
+else
+  # Check if device exists
+  for i in $eth_port; do
+    if [ ! -e /sys/class/net/$i ]; then
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+      echo "Interface $i not found!"
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+      echo "$msg_program_stop!"
+      my_ocs_exit 1
+    fi
+  done
+fi
+
+dhcp_req_result="$(mktemp /tmp/DHCP_REQ.XXXXXX)"
+rc=1
+for ieth in $eth_port; do
+  ip link set $ieth up
+  # Clean content first.
+  > $dhcp_req_result
+  echo -n "Detecting DHCP services... "
+  get_dhcpsrv_info_from_udhcpc $ieth $dhcp_req_result
+  rc=$?
+  if [ "$rc" -ne 0 ]; then
+    echo ""
+    echo "Trying another method, i.e., Nmap way..."
+    get_dhcpsrv_info_from_nmap $ieth $dhcp_req_result
+    rc=$?
+    if [ "$rc" -ne 0 ]; then
+      echo ""
+      echo "Trying another method, i.e., Nagios way..."
+      get_dhcpsrv_info_from_nagios $ieth $dhcp_req_result
+      rc=$?
+    fi
+  fi
+done
+
+# Clean temp file
+rm -f $dhcp_req_result
+#
+exit $rc

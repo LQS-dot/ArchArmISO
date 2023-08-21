@@ -1,0 +1,2345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>oath.h: OATH Library (liboath) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="OATH Library (liboath) Manual">
+<link rel="up" href="intro.html" title="Liboath API Reference Manual">
+<link rel="prev" href="intro.html" title="Liboath API Reference Manual">
+<link rel="next" href="api-index-full.html" title="API Index">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#liboath-oath.h.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="intro.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="intro.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="api-index-full.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="liboath-oath.h"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="liboath-oath.h.top_of_page"></a>oath.h</span></h2>
+<p>oath.h — liboath declarations</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="liboath-oath.h.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()">oath_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-done" title="oath_done ()">oath_done</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-check-version" title="oath_check_version ()">oath_check_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-strerror" title="oath_strerror ()">oath_strerror</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-strerror-name" title="oath_strerror_name ()">oath_strerror_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-hex2bin" title="oath_hex2bin ()">oath_hex2bin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-bin2hex" title="oath_bin2hex ()">oath_bin2hex</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-base32-decode" title="oath_base32_decode ()">oath_base32_decode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-base32-encode" title="oath_base32_encode ()">oath_base32_encode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#OATH-HOTP-LENGTH:CAPS" title="OATH_HOTP_LENGTH()">OATH_HOTP_LENGTH</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-hotp-generate" title="oath_hotp_generate ()">oath_hotp_generate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-hotp-validate" title="oath_hotp_validate ()">oath_hotp_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()">*oath_validate_strcmp_function</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-hotp-validate-callback" title="oath_hotp_validate_callback ()">oath_hotp_validate_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-generate" title="oath_totp_generate ()">oath_totp_generate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-generate2" title="oath_totp_generate2 ()">oath_totp_generate2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate" title="oath_totp_validate ()">oath_totp_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate-callback" title="oath_totp_validate_callback ()">oath_totp_validate_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate2" title="oath_totp_validate2 ()">oath_totp_validate2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate2-callback" title="oath_totp_validate2_callback ()">oath_totp_validate2_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate3" title="oath_totp_validate3 ()">oath_totp_validate3</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate3-callback" title="oath_totp_validate3_callback ()">oath_totp_validate3_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate4" title="oath_totp_validate4 ()">oath_totp_validate4</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-totp-validate4-callback" title="oath_totp_validate4_callback ()">oath_totp_validate4_callback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="liboath-oath.h.html#oath-authenticate-usersfile" title="oath_authenticate_usersfile ()">oath_authenticate_usersfile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="liboath-oath.h.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATHAPI:CAPS" title="OATHAPI">OATHAPI</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATH-VERSION:CAPS" title="OATH_VERSION">OATH_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATH-VERSION-NUMBER:CAPS" title="OATH_VERSION_NUMBER">OATH_VERSION_NUMBER</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#oath-rc" title="enum oath_rc">oath_rc</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATH-HOTP-DYNAMIC-TRUNCATION:CAPS" title="OATH_HOTP_DYNAMIC_TRUNCATION">OATH_HOTP_DYNAMIC_TRUNCATION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#oath-hotp-validate-strcmp-function" title="oath_hotp_validate_strcmp_function">oath_hotp_validate_strcmp_function</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-TIME-STEP-SIZE:CAPS" title="OATH_TOTP_DEFAULT_TIME_STEP_SIZE">OATH_TOTP_DEFAULT_TIME_STEP_SIZE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-START-TIME:CAPS" title="OATH_TOTP_DEFAULT_START_TIME">OATH_TOTP_DEFAULT_START_TIME</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="liboath-oath.h.html#oath-totp-flags" title="enum oath_totp_flags">oath_totp_flags</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="liboath-oath.h.description"></a><h2>Description</h2>
+<p>The oath.h file contains declarations for the liboath library.</p>
+</div>
+<div class="refsect1">
+<a name="liboath-oath.h.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="oath-init"></a><h3>oath_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_init (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function initializes the OATH library.  Every user of this
+library needs to call this function before using other functions.
+You should call <a class="link" href="liboath-oath.h.html#oath-done" title="oath_done ()"><code class="function">oath_done()</code></a> when use of the OATH library is no
+longer needed.</p>
+<p>Note that this function may also initialize Libgcrypt, if the OATH
+library is built with libgcrypt support and libgcrypt has not been
+initialized before.  Thus if you want to manually initialize
+libgcrypt you must do it before calling this function.  This is
+useful in cases you want to disable libgcrypt's internal lockings
+etc.</p>
+<div class="refsect3">
+<a name="oath-init.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-done"></a><h3>oath_done ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_done (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function deinitializes the OATH library, which were
+initialized using <a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()"><code class="function">oath_init()</code></a>.  After calling this function, no
+other OATH library function may be called except for to
+re-initialize the library using <a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()"><code class="function">oath_init()</code></a>.</p>
+<div class="refsect3">
+<a name="oath-done.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-check-version"></a><h3>oath_check_version ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+oath_check_version (<em class="parameter"><code>const <span class="type">char</span> *req_version</code></em>);</pre>
+<p>Check OATH library version.</p>
+<p>See <a class="link" href="liboath-oath.h.html#OATH-VERSION:CAPS" title="OATH_VERSION"><code class="literal">OATH_VERSION</code></a> for a suitable <em class="parameter"><code>req_version</code></em>
+ string.</p>
+<p>This function is one of few in the library that can be used without
+a successful call to <a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()"><code class="function">oath_init()</code></a>.</p>
+<div class="refsect3">
+<a name="oath-check-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>req_version</p></td>
+<td class="parameter_description"><p>version string to compare with, or NULL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-check-version.returns"></a><h4>Returns</h4>
+<p> Check that the version of the library is at
+minimum the one given as a string in <em class="parameter"><code>req_version</code></em>
+and return the
+actual version string of the library; return NULL if the
+condition is not met.  If NULL is passed to this function no
+check is done and only the version string is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-strerror"></a><h3>oath_strerror ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+oath_strerror (<em class="parameter"><code><span class="type">int</span> err</code></em>);</pre>
+<p>Convert return code to human readable string explanation of the
+reason for the particular error code.</p>
+<p>This string can be used to output a diagnostic message to the user.</p>
+<p>This function is one of few in the library that can be used without
+a successful call to <a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()"><code class="function">oath_init()</code></a>.</p>
+<div class="refsect3">
+<a name="oath-strerror.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>err</p></td>
+<td class="parameter_description"><p>liboath error code</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-strerror.returns"></a><h4>Returns</h4>
+<p> Returns a pointer to a statically allocated string
+containing an explanation of the error code <em class="parameter"><code>err</code></em>
+.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8-0.html#api-index-1.8.0">1.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-strerror-name"></a><h3>oath_strerror_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+oath_strerror_name (<em class="parameter"><code><span class="type">int</span> err</code></em>);</pre>
+<p>Convert return code to human readable string representing the error
+code symbol itself.  For example, oath_strerror_name(<a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a>)
+returns the string "OATH_OK".</p>
+<p>This string can be used to output a diagnostic message to the user.</p>
+<p>This function is one of few in the library that can be used without
+a successful call to <a class="link" href="liboath-oath.h.html#oath-init" title="oath_init ()"><code class="function">oath_init()</code></a>.</p>
+<div class="refsect3">
+<a name="oath-strerror-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>err</p></td>
+<td class="parameter_description"><p>liboath error code</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-strerror-name.returns"></a><h4>Returns</h4>
+<p> Returns a pointer to a statically allocated string
+containing a string version of the error code <em class="parameter"><code>err</code></em>
+, or NULL if
+the error code is not known.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8-0.html#api-index-1.8.0">1.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-hex2bin"></a><h3>oath_hex2bin ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_hex2bin (<em class="parameter"><code>const <span class="type">char</span> *hexstr</code></em>,
+              <em class="parameter"><code><span class="type">char</span> *binstr</code></em>,
+              <em class="parameter"><code><span class="type">size_t</span> *binlen</code></em>);</pre>
+<p>Convert string with hex data to binary data.</p>
+<p>Non-hexadecimal data are not ignored but instead will lead to an
+<a class="link" href="liboath-oath.h.html#OATH-INVALID-HEX:CAPS"><code class="literal">OATH_INVALID_HEX</code></a> error.</p>
+<p>If <em class="parameter"><code>binstr</code></em>
+ is NULL, then <em class="parameter"><code>binlen</code></em>
+ will be populated with the
+necessary length.  If the <em class="parameter"><code>binstr</code></em>
+ buffer is too small,
+<a class="link" href="liboath-oath.h.html#OATH-TOO-SMALL-BUFFER:CAPS"><code class="literal">OATH_TOO_SMALL_BUFFER</code></a> is returned and <em class="parameter"><code>binlen</code></em>
+ will contain the
+necessary length.</p>
+<div class="refsect3">
+<a name="oath-hex2bin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>hexstr</p></td>
+<td class="parameter_description"><p>input string with hex data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>binstr</p></td>
+<td class="parameter_description"><p>output string that holds binary data, or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>binlen</p></td>
+<td class="parameter_description"><p>output variable holding needed length of <em class="parameter"><code>binstr</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-hex2bin.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-bin2hex"></a><h3>oath_bin2hex ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+oath_bin2hex (<em class="parameter"><code>const <span class="type">char</span> *binstr</code></em>,
+              <em class="parameter"><code><span class="type">size_t</span> binlen</code></em>,
+              <em class="parameter"><code><span class="type">char</span> *hexstr</code></em>);</pre>
+<p>Convert binary data to NUL-terminated string with hex data.  The
+output <em class="parameter"><code>hexstr</code></em>
+ is allocated by the caller and must have room for at
+least 2*<em class="parameter"><code>binlen</code></em>
++1, to make room for the encoded data and the
+terminating NUL byte.</p>
+<div class="refsect3">
+<a name="oath-bin2hex.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>binstr</p></td>
+<td class="parameter_description"><p>input binary data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>binlen</p></td>
+<td class="parameter_description"><p>length of input binary data <em class="parameter"><code>binstr</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>hexstr</p></td>
+<td class="parameter_description"><p>output string with hex data, must have room for 2*<em class="parameter"><code>binlen</code></em>
++1.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12-0.html#api-index-1.12.0">1.12.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-base32-decode"></a><h3>oath_base32_decode ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_base32_decode (<em class="parameter"><code>const <span class="type">char</span> *in</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> inlen</code></em>,
+                    <em class="parameter"><code><span class="type">char</span> **out</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> *outlen</code></em>);</pre>
+<p>Decode a base32 encoded string into binary data.</p>
+<p>Space characters are ignored and pad characters are added if
+needed.  Non-base32 data are not ignored but instead will lead to
+an <a class="link" href="liboath-oath.h.html#OATH-INVALID-BASE32:CAPS"><code class="literal">OATH_INVALID_BASE32</code></a> error.</p>
+<p>The <em class="parameter"><code>in</code></em>
+ parameter should contain <em class="parameter"><code>inlen</code></em>
+ bytes of base32 encoded
+data.  The function allocates a new string in *<em class="parameter"><code>out</code></em>
+ to hold the
+decoded data, and sets *<em class="parameter"><code>outlen</code></em>
+ to the length of the data.</p>
+<p>If <em class="parameter"><code>out</code></em>
+ is NULL, then *<em class="parameter"><code>outlen</code></em>
+ will be set to what would have been
+the length of *<em class="parameter"><code>out</code></em>
+ on successful encoding.</p>
+<p>If the caller is not interested in knowing the length of the output
+data <em class="parameter"><code>out</code></em>
+, then <em class="parameter"><code>outlen</code></em>
+ may be set to NULL.</p>
+<p>It is permitted but useless to have both <em class="parameter"><code>out</code></em>
+ and <em class="parameter"><code>outlen</code></em>
+ NULL.</p>
+<div class="refsect3">
+<a name="oath-base32-decode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>input string with base32 encoded data of length <em class="parameter"><code>inlen</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>inlen</p></td>
+<td class="parameter_description"><p>length of input base32 string <em class="parameter"><code>in</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>pointer to output variable for binary data of length <em class="parameter"><code>outlen</code></em>
+, or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>outlen</p></td>
+<td class="parameter_description"><p>pointer to output variable holding length of <em class="parameter"><code>out</code></em>
+, or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-base32-decode.returns"></a><h4>Returns</h4>
+<p> On success <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned,
+<a class="link" href="liboath-oath.h.html#OATH-INVALID-BASE32:CAPS"><code class="literal">OATH_INVALID_BASE32</code></a> is returned if the input contains non-base32
+characters, and <a class="link" href="liboath-oath.h.html#OATH-MALLOC-ERROR:CAPS"><code class="literal">OATH_MALLOC_ERROR</code></a> is returned on memory allocation
+errors.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12-0.html#api-index-1.12.0">1.12.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-base32-encode"></a><h3>oath_base32_encode ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_base32_encode (<em class="parameter"><code>const <span class="type">char</span> *in</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> inlen</code></em>,
+                    <em class="parameter"><code><span class="type">char</span> **out</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> *outlen</code></em>);</pre>
+<p>Encode binary data into a string with base32 data.</p>
+<p>The <em class="parameter"><code>in</code></em>
+ parameter should contain <em class="parameter"><code>inlen</code></em>
+ bytes of data to encode.
+The function allocates a new string in *<em class="parameter"><code>out</code></em>
+ to hold the encoded
+data, and sets *<em class="parameter"><code>outlen</code></em>
+ to the length of the data.  The output
+string *<em class="parameter"><code>out</code></em>
+ is zero-terminated (ASCII NUL), but the NUL is not
+counted in *<em class="parameter"><code>outlen</code></em>
+.</p>
+<p>If <em class="parameter"><code>out</code></em>
+ is NULL, then *<em class="parameter"><code>outlen</code></em>
+ will be set to what would have been
+the length of *<em class="parameter"><code>out</code></em>
+ on successful encoding.</p>
+<p>If the caller is not interested in knowing the length of the output
+data <em class="parameter"><code>out</code></em>
+, then <em class="parameter"><code>outlen</code></em>
+ may be set to NULL.</p>
+<p>It is permitted but useless to have both <em class="parameter"><code>out</code></em>
+ and <em class="parameter"><code>outlen</code></em>
+ NULL.</p>
+<div class="refsect3">
+<a name="oath-base32-encode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>in</p></td>
+<td class="parameter_description"><p>input string with binary data of length <em class="parameter"><code>inlen</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>inlen</p></td>
+<td class="parameter_description"><p>length of input data <em class="parameter"><code>in</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>pointer to newly allocated output string of length <em class="parameter"><code>outlen</code></em>
+, or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>outlen</p></td>
+<td class="parameter_description"><p>pointer to output variable holding length of <em class="parameter"><code>out</code></em>
+, or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-base32-encode.returns"></a><h4>Returns</h4>
+<p> On success <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned,
+<a class="link" href="liboath-oath.h.html#OATH-BASE32-OVERFLOW:CAPS"><code class="literal">OATH_BASE32_OVERFLOW</code></a> is returned if the output would be too large
+to store, and <a class="link" href="liboath-oath.h.html#OATH-MALLOC-ERROR:CAPS"><code class="literal">OATH_MALLOC_ERROR</code></a> is returned on memory allocation
+errors.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12-0.html#api-index-1.12.0">1.12.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-HOTP-LENGTH:CAPS"></a><h3>OATH_HOTP_LENGTH()</h3>
+<pre class="programlisting">#define OATH_HOTP_LENGTH(digits, checksum) (digits + (checksum ? 1 : 0))
+</pre>
+<p>Pre-processor macro to get length of a OTP string.</p>
+<div class="refsect3">
+<a name="OATH-HOTP-LENGTH.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP, excluding checksum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>checksum</p></td>
+<td class="parameter_description"><p>whether to add a checksum digit or not</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="OATH-HOTP-LENGTH.returns"></a><h4>Returns</h4>
+<p> Length of generated one-time password.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-hotp-generate"></a><h3>oath_hotp_generate ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_hotp_generate (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                    <em class="parameter"><code><span class="type">uint64_t</span> moving_factor</code></em>,
+                    <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                    <em class="parameter"><code><span class="type">bool</span> add_checksum</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> truncation_offset</code></em>,
+                    <em class="parameter"><code><span class="type">char</span> *output_otp</code></em>);</pre>
+<p>Generate a one-time-password using the HOTP algorithm as described
+in RFC 4226.</p>
+<p>Use a value of <a class="link" href="liboath-oath.h.html#OATH-HOTP-DYNAMIC-TRUNCATION:CAPS" title="OATH_HOTP_DYNAMIC_TRUNCATION"><code class="literal">OATH_HOTP_DYNAMIC_TRUNCATION</code></a> for <em class="parameter"><code>truncation_offset</code></em>
+
+unless you really need a specific truncation offset.</p>
+<p>To find out the size of the OTP you may use the <a class="link" href="liboath-oath.h.html#OATH-HOTP-LENGTH:CAPS" title="OATH_HOTP_LENGTH()"><code class="function">OATH_HOTP_LENGTH()</code></a>
+macro.  The <em class="parameter"><code>output_otp</code></em>
+ buffer must be have room for that length
+plus one for the terminating NUL.</p>
+<p>Currently only values 6, 7 and 8 for <em class="parameter"><code>digits</code></em>
+ are supported, and the
+<em class="parameter"><code>add_checksum</code></em>
+ value is ignored.  These restrictions may be lifted
+in future versions, although some limitations are inherent in the
+protocol.</p>
+<div class="refsect3">
+<a name="oath-hotp-generate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>moving_factor</p></td>
+<td class="parameter_description"><p>a counter indicating the current OTP to generate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP, excluding checksum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>add_checksum</p></td>
+<td class="parameter_description"><p>whether to add a checksum digit or not</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>truncation_offset</p></td>
+<td class="parameter_description"><p>use a specific truncation offset</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>output_otp</p></td>
+<td class="parameter_description"><p>output buffer, must have room for the output OTP plus zero</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-hotp-generate.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-hotp-validate"></a><h3>oath_hotp_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_hotp_validate (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                    <em class="parameter"><code><span class="type">uint64_t</span> start_moving_factor</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>);</pre>
+<p>Validate an OTP according to OATH HOTP algorithm per RFC 4226.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-hotp-validate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_moving_factor</p></td>
+<td class="parameter_description"><p>start counter in OTP stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>the OTP to validate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-hotp-validate.returns"></a><h4>Returns</h4>
+<p> Returns position in OTP window (zero is first position),
+or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP window, or an
+error code.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-validate-strcmp-function"></a><h3>oath_validate_strcmp_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+<span class="c_punctuation">(</span>*oath_validate_strcmp_function<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span> *handle</code></em>,
+                                  <em class="parameter"><code>const <span class="type">char</span> *test_otp</code></em>);</pre>
+<p>Prototype of strcmp-like function that will be called by
+<a class="link" href="liboath-oath.h.html#oath-hotp-validate-callback" title="oath_hotp_validate_callback ()"><code class="function">oath_hotp_validate_callback()</code></a> or <a class="link" href="liboath-oath.h.html#oath-totp-validate-callback" title="oath_totp_validate_callback ()"><code class="function">oath_totp_validate_callback()</code></a> to
+validate OTPs.</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>oath_strcmp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<div class="refsect3">
+<a name="oath-validate-strcmp-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>handle</p></td>
+<td class="parameter_description"><p>caller handle as passed to <a class="link" href="liboath-oath.h.html#oath-hotp-validate-callback" title="oath_hotp_validate_callback ()"><code class="function">oath_hotp_validate_callback()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>test_otp</p></td>
+<td class="parameter_description"><p>OTP to match against.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-validate-strcmp-function.returns"></a><h4>Returns</h4>
+<p> 0 if and only if <em class="parameter"><code>test_otp</code></em>
+is identical to the OTP to
+be validated.  Negative value if an internal failure occurs.
+Positive value if the test_otp simply doesn't match.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6-0.html#api-index-1.6.0">1.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-hotp-validate-callback"></a><h3>oath_hotp_validate_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_hotp_validate_callback (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                             <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                             <em class="parameter"><code><span class="type">uint64_t</span> start_moving_factor</code></em>,
+                             <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                             <em class="parameter"><code><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><span class="type">oath_validate_strcmp_function</span></a> strcmp_otp</code></em>,
+                             <em class="parameter"><code><span class="type">void</span> *strcmp_handle</code></em>);</pre>
+<p>Validate an OTP according to OATH HOTP algorithm per RFC 4226.</p>
+<p>Validation is implemented by generating a number of potential OTPs
+and performing a call to the <em class="parameter"><code>strcmp_otp</code></em>
+ function, to compare the
+potential OTP against the given <em class="parameter"><code>otp</code></em>
+.  It has the following
+prototype:</p>
+<p>int (*oath_validate_strcmp_function) (void *handle, const char *test_otp);</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>strcmp_otp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-hotp-validate-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_moving_factor</p></td>
+<td class="parameter_description"><p>start counter in OTP stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_otp</p></td>
+<td class="parameter_description"><p>function pointer to a strcmp-like function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_handle</p></td>
+<td class="parameter_description"><p>caller handle to be passed on to <em class="parameter"><code>strcmp_otp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-hotp-validate-callback.returns"></a><h4>Returns</h4>
+<p> Returns position in OTP window (zero is first position),
+or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP window, or an
+error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4-0.html#api-index-1.4.0">1.4.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-generate"></a><h3>oath_totp_generate ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_generate (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                    <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                    <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                    <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                    <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                    <em class="parameter"><code><span class="type">char</span> *output_otp</code></em>);</pre>
+<p>Generate a one-time-password using the time-variant TOTP algorithm
+described in RFC 6238.  The input parameters are taken as time
+values.</p>
+<p>The system parameter <em class="parameter"><code>time_step_size</code></em>
+ describes how long the time
+window for each OTP is.  The recommended value is 30 seconds, and
+you can use the value 0 or the symbol
+<a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-TIME-STEP-SIZE:CAPS" title="OATH_TOTP_DEFAULT_TIME_STEP_SIZE"><code class="literal">OATH_TOTP_DEFAULT_TIME_STEP_SIZE</code></a> to indicate this.</p>
+<p>The system parameter <em class="parameter"><code>start_offset</code></em>
+ denote the Unix time when time
+steps are started to be counted.  The recommended value is 0, to
+fall back on the Unix epoch) and you can use the symbol
+<a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-START-TIME:CAPS" title="OATH_TOTP_DEFAULT_START_TIME"><code class="literal">OATH_TOTP_DEFAULT_START_TIME</code></a> to indicate this.</p>
+<p>The <em class="parameter"><code>output_otp</code></em>
+ buffer must have room for at least <em class="parameter"><code>digits</code></em>
+
+characters, plus one for the terminating NUL.</p>
+<p>Currently only values 6, 7 and 8 for <em class="parameter"><code>digits</code></em>
+ are supported.  This
+restriction may be lifted in future versions.</p>
+<div class="refsect3">
+<a name="oath-totp-generate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP, excluding checksum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>output_otp</p></td>
+<td class="parameter_description"><p>output buffer, must have room for the output OTP plus zero</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-generate.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4-0.html#api-index-1.4.0">1.4.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-generate2"></a><h3>oath_totp_generate2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_generate2 (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                     <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                     <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> flags</code></em>,
+                     <em class="parameter"><code><span class="type">char</span> *output_otp</code></em>);</pre>
+<p>Generate a one-time-password using the time-variant TOTP algorithm
+described in RFC 6238.  The input parameters are taken as time
+values.</p>
+<p>The system parameter <em class="parameter"><code>time_step_size</code></em>
+ describes how long the time
+window for each OTP is.  The recommended value is 30 seconds, and
+you can use the value 0 or the symbol
+<a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-TIME-STEP-SIZE:CAPS" title="OATH_TOTP_DEFAULT_TIME_STEP_SIZE"><code class="literal">OATH_TOTP_DEFAULT_TIME_STEP_SIZE</code></a> to indicate this.</p>
+<p>The system parameter <em class="parameter"><code>start_offset</code></em>
+ denote the Unix time when time
+steps are started to be counted.  The recommended value is 0, to
+fall back on the Unix epoch) and you can use the symbol
+<a class="link" href="liboath-oath.h.html#OATH-TOTP-DEFAULT-START-TIME:CAPS" title="OATH_TOTP_DEFAULT_START_TIME"><code class="literal">OATH_TOTP_DEFAULT_START_TIME</code></a> to indicate this.</p>
+<p>The <em class="parameter"><code>output_otp</code></em>
+ buffer must have room for at least <em class="parameter"><code>digits</code></em>
+
+characters, plus one for the terminating NUL.</p>
+<p>Currently only values 6, 7 and 8 for <em class="parameter"><code>digits</code></em>
+ are supported.  This
+restriction may be lifted in future versions.</p>
+<p>The <em class="parameter"><code>flags</code></em>
+ parameter may be used to change the MAC function, for
+example <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA256:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA256</code></a> or <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA512:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA512</code></a>.</p>
+<div class="refsect3">
+<a name="oath-totp-generate2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP, excluding checksum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags indicating mode, one of <a class="link" href="liboath-oath.h.html#oath-totp-flags" title="enum oath_totp_flags"><span class="type">oath_totp_flags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>output_otp</p></td>
+<td class="parameter_description"><p>output buffer, must have room for the output OTP plus zero</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-generate2.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> (zero) is returned, otherwise an
+error code is returned.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate"></a><h3>oath_totp_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                    <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                    <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                    <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to validate TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after/before start OTP to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>the OTP to validate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6-0.html#api-index-1.6.0">1.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate-callback"></a><h3>oath_totp_validate_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate_callback (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                             <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                             <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                             <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                             <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                             <em class="parameter"><code><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><span class="type">oath_validate_strcmp_function</span></a> strcmp_otp</code></em>,
+                             <em class="parameter"><code><span class="type">void</span> *strcmp_handle</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Validation is implemented by generating a number of potential OTPs
+and performing a call to the <em class="parameter"><code>strcmp_otp</code></em>
+ function, to compare the
+potential OTP against the given <em class="parameter"><code>otp</code></em>
+.  It has the following
+prototype:</p>
+<p>int (*oath_validate_strcmp_function) (void *handle, const char *test_otp);</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>strcmp_otp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_otp</p></td>
+<td class="parameter_description"><p>function pointer to a strcmp-like function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_handle</p></td>
+<td class="parameter_description"><p>caller handle to be passed on to <em class="parameter"><code>strcmp_otp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate-callback.returns"></a><h4>Returns</h4>
+<p> Returns position in OTP window (zero is first position),
+or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP window, or an
+error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6-0.html#api-index-1.6.0">1.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate2"></a><h3>oath_totp_validate2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate2 (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                     <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to validate TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after/before start OTP to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>the OTP to validate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate2.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10-0.html#api-index-1.10.0">1.10.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate2-callback"></a><h3>oath_totp_validate2_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate2_callback (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                              <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                              <em class="parameter"><code><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><span class="type">oath_validate_strcmp_function</span></a> strcmp_otp</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *strcmp_handle</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Validation is implemented by generating a number of potential OTPs
+and performing a call to the <em class="parameter"><code>strcmp_otp</code></em>
+ function, to compare the
+potential OTP against the given <em class="parameter"><code>otp</code></em>
+.  It has the following
+prototype:</p>
+<p>int (*oath_validate_strcmp_function) (void *handle, const char *test_otp);</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>strcmp_otp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate2-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_otp</p></td>
+<td class="parameter_description"><p>function pointer to a strcmp-like function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_handle</p></td>
+<td class="parameter_description"><p>caller handle to be passed on to <em class="parameter"><code>strcmp_otp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate2-callback.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10-0.html#api-index-1.10.0">1.10.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate3"></a><h3>oath_totp_validate3 ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate3 (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                     <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                     <em class="parameter"><code><span class="type">uint64_t</span> *otp_counter</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate3.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to validate TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after/before start OTP to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_counter</p></td>
+<td class="parameter_description"><p>counter value used to calculate OTP value (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>the OTP to validate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate3.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-4-0.html#api-index-2.4.0">2.4.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate3-callback"></a><h3>oath_totp_validate3_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate3_callback (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                              <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                              <em class="parameter"><code><span class="type">uint64_t</span> *otp_counter</code></em>,
+                              <em class="parameter"><code><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><span class="type">oath_validate_strcmp_function</span></a> strcmp_otp</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *strcmp_handle</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Validation is implemented by generating a number of potential OTPs
+and performing a call to the <em class="parameter"><code>strcmp_otp</code></em>
+ function, to compare the
+potential OTP against the given <em class="parameter"><code>otp</code></em>
+.  It has the following
+prototype:</p>
+<p>int (*oath_validate_strcmp_function) (void *handle, const char *test_otp);</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>strcmp_otp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<div class="refsect3">
+<a name="oath-totp-validate3-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_counter</p></td>
+<td class="parameter_description"><p>counter value used to calculate OTP value (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_otp</p></td>
+<td class="parameter_description"><p>function pointer to a strcmp-like function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_handle</p></td>
+<td class="parameter_description"><p>caller handle to be passed on to <em class="parameter"><code>strcmp_otp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate3-callback.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-4-0.html#api-index-2.4.0">2.4.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate4"></a><h3>oath_totp_validate4 ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate4 (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                     <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                     <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                     <em class="parameter"><code><span class="type">uint64_t</span> *otp_counter</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> flags</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<p>The <em class="parameter"><code>flags</code></em>
+ parameter may be used to change the MAC function, for
+example <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA256:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA256</code></a> or <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA512:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA512</code></a>.</p>
+<div class="refsect3">
+<a name="oath-totp-validate4.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to validate TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after/before start OTP to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_counter</p></td>
+<td class="parameter_description"><p>counter value used to calculate OTP value (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags indicating mode, one of <a class="link" href="liboath-oath.h.html#oath-totp-flags" title="enum oath_totp_flags"><span class="type">oath_totp_flags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>the OTP to validate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate4.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-validate4-callback"></a><h3>oath_totp_validate4_callback ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_totp_validate4_callback (<em class="parameter"><code>const <span class="type">char</span> *secret</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> secret_length</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> now</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> time_step_size</code></em>,
+                              <em class="parameter"><code><span class="type">time_t</span> start_offset</code></em>,
+                              <em class="parameter"><code><span class="type">unsigned </span> digits</code></em>,
+                              <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                              <em class="parameter"><code><span class="type">int</span> *otp_pos</code></em>,
+                              <em class="parameter"><code><span class="type">uint64_t</span> *otp_counter</code></em>,
+                              <em class="parameter"><code><span class="type">int</span> flags</code></em>,
+                              <em class="parameter"><code><a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><span class="type">oath_validate_strcmp_function</span></a> strcmp_otp</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *strcmp_handle</code></em>);</pre>
+<p>Validate an OTP according to OATH TOTP algorithm per RFC 6238.</p>
+<p>Validation is implemented by generating a number of potential OTPs
+and performing a call to the <em class="parameter"><code>strcmp_otp</code></em>
+ function, to compare the
+potential OTP against the given <em class="parameter"><code>otp</code></em>
+.  It has the following
+prototype:</p>
+<p>int (*oath_validate_strcmp_function) (void *handle, const char *test_otp);</p>
+<p>The function should be similar to strcmp in that it return 0 only
+on matches.  It differs by permitting use of negative return codes
+as indication of internal failures in the callback.  Positive
+values indicate OTP mismatch.</p>
+<p>This callback interface is useful when you cannot compare OTPs
+directly using normal strcmp, but instead for example only have a
+hashed OTP.  You would then typically pass in the hashed OTP in the
+<em class="parameter"><code>strcmp_handle</code></em>
+ and let your implementation of <em class="parameter"><code>strcmp_otp</code></em>
+ hash the
+test_otp OTP using the same hash, and then compare the results.</p>
+<p>Currently only OTP lengths of 6, 7 or 8 digits are supported.  This
+restrictions may be lifted in future versions, although some
+limitations are inherent in the protocol.</p>
+<p>The <em class="parameter"><code>flags</code></em>
+ parameter may be used to change the MAC function, for
+example <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA256:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA256</code></a> or <a class="link" href="liboath-oath.h.html#OATH-TOTP-HMAC-SHA512:CAPS"><code class="literal">OATH_TOTP_HMAC_SHA512</code></a>.</p>
+<div class="refsect3">
+<a name="oath-totp-validate4-callback.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>secret</p></td>
+<td class="parameter_description"><p>the shared secret string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secret_length</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>secret</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>now</p></td>
+<td class="parameter_description"><p>Unix time value to compute TOTP for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_step_size</p></td>
+<td class="parameter_description"><p>time step system parameter (typically 30)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>Unix time of when to start counting time steps (typically 0)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>digits</p></td>
+<td class="parameter_description"><p>number of requested digits in the OTP</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many OTPs after start counter to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_pos</p></td>
+<td class="parameter_description"><p>output search position in search window (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp_counter</p></td>
+<td class="parameter_description"><p>counter value used to calculate OTP value (may be NULL).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags indicating mode, one of <a class="link" href="liboath-oath.h.html#oath-totp-flags" title="enum oath_totp_flags"><span class="type">oath_totp_flags</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_otp</p></td>
+<td class="parameter_description"><p>function pointer to a strcmp-like function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>strcmp_handle</p></td>
+<td class="parameter_description"><p>caller handle to be passed on to <em class="parameter"><code>strcmp_otp</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-totp-validate4-callback.returns"></a><h4>Returns</h4>
+<p> Returns absolute value of position in OTP window (zero is
+first position), or <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> if no OTP was found in OTP
+window, or an error code.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-authenticate-usersfile"></a><h3>oath_authenticate_usersfile ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+oath_authenticate_usersfile (<em class="parameter"><code>const <span class="type">char</span> *usersfile</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *username</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *otp</code></em>,
+                             <em class="parameter"><code><span class="type">size_t</span> window</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *passwd</code></em>,
+                             <em class="parameter"><code><span class="type">time_t</span> *last_otp</code></em>);</pre>
+<p>Authenticate user named <em class="parameter"><code>username</code></em>
+ with the one-time password <em class="parameter"><code>otp</code></em>
+
+and (optional) password <em class="parameter"><code>passwd</code></em>
+.  Credentials are read (and
+updated) from a text file named <em class="parameter"><code>usersfile</code></em>
+.</p>
+<p>Note that for TOTP the usersfile will only record the last OTP and
+use that to make sure more recent OTPs have not been seen yet when
+validating a new OTP.  That logics relies on using the same search
+window for the same user.</p>
+<div class="refsect3">
+<a name="oath-authenticate-usersfile.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>usersfile</p></td>
+<td class="parameter_description"><p>string with user credential filename, in UsersFile format</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>username</p></td>
+<td class="parameter_description"><p>string with name of user</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>otp</p></td>
+<td class="parameter_description"><p>string with one-time password to authenticate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window</p></td>
+<td class="parameter_description"><p>how many past/future OTPs to search</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>passwd</p></td>
+<td class="parameter_description"><p>string with password, or NULL to disable password checking</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>last_otp</p></td>
+<td class="parameter_description"><p>output variable holding last successful authentication</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="oath-authenticate-usersfile.returns"></a><h4>Returns</h4>
+<p> On successful validation, <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> is returned.  If the
+supplied <em class="parameter"><code>otp</code></em>
+is the same as the last successfully authenticated
+one-time password, <a class="link" href="liboath-oath.h.html#OATH-REPLAYED-OTP:CAPS"><code class="literal">OATH_REPLAYED_OTP</code></a> is returned and the
+timestamp of the last authentication is returned in <em class="parameter"><code>last_otp</code></em>
+.
+If the one-time password is not found in the indicated search
+window, <a class="link" href="liboath-oath.h.html#OATH-INVALID-OTP:CAPS"><code class="literal">OATH_INVALID_OTP</code></a> is returned.  Otherwise, an error code
+is returned.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="liboath-oath.h.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="OATHAPI:CAPS"></a><h3>OATHAPI</h3>
+<pre class="programlisting">#  define OATHAPI __attribute__((__visibility__("default")))
+</pre>
+<p>Symbol holding shared library API visibility decorator.</p>
+<p>This is used internally by the library header file and should never
+be used or modified by the application.</p>
+<p>https://www.gnu.org/software/gnulib/manual/html_node/Exported-Symbols-of-Shared-Libraries.html</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-VERSION:CAPS"></a><h3>OATH_VERSION</h3>
+<pre class="programlisting">#define OATH_VERSION "2.6.7"
+</pre>
+<p>Pre-processor symbol with a string that describe the header file
+version number.  Used together with <a class="link" href="liboath-oath.h.html#oath-check-version" title="oath_check_version ()"><code class="function">oath_check_version()</code></a> to verify
+header file and run-time library consistency.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-VERSION-NUMBER:CAPS"></a><h3>OATH_VERSION_NUMBER</h3>
+<pre class="programlisting">#define OATH_VERSION_NUMBER 0x02060700
+</pre>
+<p>Pre-processor symbol with a hexadecimal value describing the header
+file version number.  For example, when the header version is 1.2.3
+this symbol will have the value 0x01020300.  The last two digits
+are only used between public releases, and will otherwise be 00.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-rc"></a><h3>enum oath_rc</h3>
+<p>Return codes for OATH functions.  All return codes are negative
+except for the successful code <a class="link" href="liboath-oath.h.html#OATH-OK:CAPS"><code class="literal">OATH_OK</code></a> which are guaranteed to be</p>
+<div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Positive values are reserved for non-error return codes.</p></li></ol></div>
+<p>Note that the <a class="link" href="liboath-oath.h.html#oath-rc" title="enum oath_rc"><span class="type">oath_rc</span></a> enumeration may be extended at a later date
+to include new return codes.</p>
+<div class="refsect3">
+<a name="oath-rc.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-OK:CAPS"></a>OATH_OK</p></td>
+<td class="enum_member_description">
+<p>Successful return</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-CRYPTO-ERROR:CAPS"></a>OATH_CRYPTO_ERROR</p></td>
+<td class="enum_member_description">
+<p>Internal error in crypto functions</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-DIGITS:CAPS"></a>OATH_INVALID_DIGITS</p></td>
+<td class="enum_member_description">
+<p>Unsupported number of OTP digits</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-PRINTF-ERROR:CAPS"></a>OATH_PRINTF_ERROR</p></td>
+<td class="enum_member_description">
+<p>Error from system printf call</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-HEX:CAPS"></a>OATH_INVALID_HEX</p></td>
+<td class="enum_member_description">
+<p>Hex string is invalid</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-TOO-SMALL-BUFFER:CAPS"></a>OATH_TOO_SMALL_BUFFER</p></td>
+<td class="enum_member_description">
+<p>The output buffer is too small</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-OTP:CAPS"></a>OATH_INVALID_OTP</p></td>
+<td class="enum_member_description">
+<p>The OTP is not valid</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-REPLAYED-OTP:CAPS"></a>OATH_REPLAYED_OTP</p></td>
+<td class="enum_member_description">
+<p>The OTP has been replayed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-BAD-PASSWORD:CAPS"></a>OATH_BAD_PASSWORD</p></td>
+<td class="enum_member_description">
+<p>The password does not match</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-COUNTER:CAPS"></a>OATH_INVALID_COUNTER</p></td>
+<td class="enum_member_description">
+<p>The counter value is corrupt</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-TIMESTAMP:CAPS"></a>OATH_INVALID_TIMESTAMP</p></td>
+<td class="enum_member_description">
+<p>The timestamp is corrupt</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-NO-SUCH-FILE:CAPS"></a>OATH_NO_SUCH_FILE</p></td>
+<td class="enum_member_description">
+<p>The supplied filename does not exist</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-UNKNOWN-USER:CAPS"></a>OATH_UNKNOWN_USER</p></td>
+<td class="enum_member_description">
+<p>Cannot find information about user</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-SEEK-ERROR:CAPS"></a>OATH_FILE_SEEK_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when seeking in file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-CREATE-ERROR:CAPS"></a>OATH_FILE_CREATE_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when creating file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-LOCK-ERROR:CAPS"></a>OATH_FILE_LOCK_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when locking file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-RENAME-ERROR:CAPS"></a>OATH_FILE_RENAME_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when renaming file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-UNLINK-ERROR:CAPS"></a>OATH_FILE_UNLINK_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when removing file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-TIME-ERROR:CAPS"></a>OATH_TIME_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error for time manipulation</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-STRCMP-ERROR:CAPS"></a>OATH_STRCMP_ERROR</p></td>
+<td class="enum_member_description">
+<p>A strcmp callback returned an error</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-INVALID-BASE32:CAPS"></a>OATH_INVALID_BASE32</p></td>
+<td class="enum_member_description">
+<p>Base32 string is invalid</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-BASE32-OVERFLOW:CAPS"></a>OATH_BASE32_OVERFLOW</p></td>
+<td class="enum_member_description">
+<p>Base32 encoding would overflow</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-MALLOC-ERROR:CAPS"></a>OATH_MALLOC_ERROR</p></td>
+<td class="enum_member_description">
+<p>Memory allocation failed</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-FLUSH-ERROR:CAPS"></a>OATH_FILE_FLUSH_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when flushing file buffer</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-SYNC-ERROR:CAPS"></a>OATH_FILE_SYNC_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when syncing file to disk</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-CLOSE-ERROR:CAPS"></a>OATH_FILE_CLOSE_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when closing file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-CHOWN-ERROR:CAPS"></a>OATH_FILE_CHOWN_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when changing file ownership</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-FILE-STAT-ERROR:CAPS"></a>OATH_FILE_STAT_ERROR</p></td>
+<td class="enum_member_description">
+<p>System error when getting file status</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-LAST-ERROR:CAPS"></a>OATH_LAST_ERROR</p></td>
+<td class="enum_member_description">
+<p>Meta-error indicating the last error code, for use
+  when iterating over all error codes or similar.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-HOTP-DYNAMIC-TRUNCATION:CAPS"></a><h3>OATH_HOTP_DYNAMIC_TRUNCATION</h3>
+<pre class="programlisting">#define OATH_HOTP_DYNAMIC_TRUNCATION SIZE_MAX
+</pre>
+<p>Pre-processor symbol to indicate that no HOTP truncation should
+occur, see <a class="link" href="liboath-oath.h.html#oath-hotp-generate" title="oath_hotp_generate ()"><code class="function">oath_hotp_generate()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-hotp-validate-strcmp-function"></a><h3>oath_hotp_validate_strcmp_function</h3>
+<pre class="programlisting">#define oath_hotp_validate_strcmp_function oath_validate_strcmp_function
+</pre>
+<p>Pre-processor compatibility definition for
+<a class="link" href="liboath-oath.h.html#oath-validate-strcmp-function" title="oath_validate_strcmp_function ()"><code class="function">oath_validate_strcmp_function()</code></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-1-4-0.html#api-index-1.4.0">1.4.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-TOTP-DEFAULT-TIME-STEP-SIZE:CAPS"></a><h3>OATH_TOTP_DEFAULT_TIME_STEP_SIZE</h3>
+<pre class="programlisting">#define OATH_TOTP_DEFAULT_TIME_STEP_SIZE 30
+</pre>
+<p>Pre-processor symbol to provide a default value for the TOTP
+time-step value, see <a class="link" href="liboath-oath.h.html#oath-totp-generate" title="oath_totp_generate ()"><code class="function">oath_totp_generate()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="OATH-TOTP-DEFAULT-START-TIME:CAPS"></a><h3>OATH_TOTP_DEFAULT_START_TIME</h3>
+<pre class="programlisting">#define OATH_TOTP_DEFAULT_START_TIME		((time_t) 0)
+</pre>
+<p>Pre-processor symbol to indicate that you want to use the Unix
+epoch as a starting pointer for TOTP, see <a class="link" href="liboath-oath.h.html#oath-totp-generate" title="oath_totp_generate ()"><code class="function">oath_totp_generate()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="oath-totp-flags"></a><h3>enum oath_totp_flags</h3>
+<p>Flags for <a class="link" href="liboath-oath.h.html#oath-totp-generate2" title="oath_totp_generate2 ()"><code class="function">oath_totp_generate2()</code></a>.</p>
+<div class="refsect3">
+<a name="oath-totp-flags.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-TOTP-HMAC-SHA256:CAPS"></a>OATH_TOTP_HMAC_SHA256</p></td>
+<td class="enum_member_description">
+<p>Use HMAC-SHA256 instead of HMAC-SHA1.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="OATH-TOTP-HMAC-SHA512:CAPS"></a>OATH_TOTP_HMAC_SHA512</p></td>
+<td class="enum_member_description">
+<p>Use HMAC-SHA512 instead of HMAC-SHA1.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

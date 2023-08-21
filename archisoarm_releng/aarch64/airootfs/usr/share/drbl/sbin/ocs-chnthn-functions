@@ -1,0 +1,521 @@
+#!/bin/bash
+# -*-Shell-script-*-
+# Author: Ceasar Sun <ceasar _at_ nchc org tw>
+# License: GPL
+# Version:	060728
+# Function:	Run DRBL chnthn needed functions
+# ChangeLog:	
+#			* Please check ~/drbl/sbin/ocs-chnthn
+##################################################
+
+#
+Perpare_Env(){
+	echo -n "Checking fuse support... "
+        # Since fuse is not always a module, we check /proc/filesystems
+        if ! (grep -Eqw fuse /proc/filesystems) && !( modprobe fuse &> /dev/null ) ; then
+	  echo -e "no\n** Can't find fuse support !"
+          exit 1
+        fi
+	echo "yes"
+
+	echo -n "Checking ntfs module... "
+	!( modprobe ntfs &> /dev/null ) && echo -e "no\n**Can't load ntfs module , but it still can work normally... ."
+	( modprobe ntfs &> /dev/null ) && echo "yes"
+}
+# Print usage
+Usage(){
+	echo "Usage:";
+	echo " -b, --batch	batch mode"
+	echo " -d, --device	assign the device, it can be partition or disk, e.g. /dev/sda, /dev/sdb, /dev/sda1 or /dev/sda3"
+	echo " -i, --interact	interactive mode"
+	echo " -o, --verbose	verbose mode"
+	echo " -s, --show-hostname   Show the hostname only. Do not really modify in the registry file."
+	echo " -p, --prefix		hostname prefix"
+	echo " -n, --ntfsmount	assign ntfs mount prog , like: ntfsmount or ntfs-3g"
+	echo " -R, --readme	Print readme information"
+	echo " -S, --no_sync_config		Do not sync with DRBL-winRoll configuration, default is to sync"
+	echo " -v, --variable		Hostname by what: [ IP | MAC | _fix]"
+	echo " -w, --winroot	Assign windows root directory, like: windows (for XP, win 2003) or winNT (for Win2000, Win NT)"
+	echo " -h, --help        print help page"
+	echo "	"
+	echo "Example:"
+	echo "$0 -i	: Use interactive mode "
+	echo "$0 -b -n ntfs-3g -v IP -p MyPC	: Assign hostname format like: MyPC-\$ip via using ntfs-3g tool in batch mode"
+	echo "$0 -b -v _fix -p HOST_101 -S	: Assign fixed hostname 'HOST_101' and dotn't sync drbl-winRoll config in batch mode "
+}
+
+README(){
+
+	cat << EOF
+
+*
+* Program:	ocs-chnthn
+* Version:	$__VERSION 
+* Author:	Ceasar Sun Chen-kai <ceasar@nchc.org.tw>
+* License:	GPL
+* Description: 	this script use Offline NT register editor tool: chntpw <http://home.eunet.no/pnordahl/ntpasswd/>
+*			 to change Windows Hostname under drbl environment
+* Usage:	ocs-chnthn.sh --help
+* ChangeLog:	
+*			* 060728	Synchronize with drbl-winRoll package configuration
+*						Add new assignment method for fixed hostname
+*						Select multi-partaion if available windows root as possible in batch mode
+*						Fix ntfs module loading failed
+*						Fix mount method for different file system
+*						Fix umount first checking
+*						Fix some bugs
+*
+*			* 060721	First version
+*						Support using vfat FS as windows root file system
+* Wish list:
+*
+
+EOF
+}
+
+# Print program header
+PrintHeader(){
+	echo "** ocs-chnthn: change the hostname of MS windows"
+}
+
+PrintFooter(){
+	echo "*********************************************************"
+	echo "*  NCHC Free Software Lab, NCHC, Taiwan "
+	echo "*  License:	GPL "
+	echo "*  Authors:	Ceasar Sun and Steven Shiau "
+	echo "*  https://clonezilla.org, https://drbl.org"
+	echo "*********************************************************"
+}
+
+Select_ntfsmount_prog(){
+	local ntfsmount_prog=""
+	for execprog
+	do
+		echo -n "Checking $execprog...    "
+		!( which $execprog &> /dev/null ) && echo "no" ;
+		( which $execprog &> /dev/null ) && echo "yes" && ntfsmount_prog=$execprog && break;
+	done
+	[ -z $ntfsmount_prog ] && echo "No ntfs mount prog, System aborted !!" && exit;
+	NTFSMOUNTPROG=$ntfsmount_prog	
+	echo "Use $NTFSMOUNTPROG."
+}
+
+Check_Package(){
+	for execprog
+	do
+		# system aborted if the executing program don't exist in $PATH
+		echo -n "Checking $execprog...    "
+		!( which $execprog &> /dev/null ) && echo "No \"$execprog\" in ($PATH), System aborted !!" && exit;
+		echo "yes"
+	done 
+}
+#
+# Print all hisk and partition info
+Print_Allpartition_Info(){
+  local dev_list=$@
+  local idev
+  local target_parts target_extended_parts part_fs partdev
+  
+  [ "$#" -eq 0 ] && [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo "No hard drive? Aborted!" \
+  && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL && exit;
+  
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING; echo '** Searching local file system in hard drive...'; [ "$BOOTUP" = "color" ] \
+  && $SETCOLOR_NORMAL;
+  
+  PARTIDCOUNT=0
+  i=0;j=0;k=0;
+
+  for idev in $dev_list; do
+    target_parts=""
+    partdev=""
+    if is_partition "$idev"; then 
+      target_parts="$idev"
+    else
+      # Hard drive
+      echo "Searching for data/extended partition(s) for modifying hostname..." | tee --append $OCS_LOGFILE
+      part_rec_f="$(mktemp /tmp/part_rec_f.XXXXXX)"
+      get_known_partition_proc_format $idev all $part_rec_f
+      target_parts="$target_parts $(awk -F":" '/^data_dev:/ || /^extended_dev:/ {print $2}' $part_rec_f | sed -r -e "s|^[[:space:]]*||g")"
+    fi
+    # Strip the single white space which should be nothing.
+    target_parts="$(echo $target_parts | sed -e "s/^  *$//")"
+    if [ -n "$target_parts" ]; then
+      echo "Available partitions to be modified for hostname: $target_parts" | tee --append $OCS_LOGFILE
+    fi
+
+    #partedhdinfo=`LC_ALL=C parted -s /dev/$idev print`
+    #Str="/^[[:space:]]*[0-9]+/ && /(fat12|fat16|fat32|vfat)|(ntfs)/"
+    #if is_partition "$idev"; then 
+    #  part_infos=$( echo "$partedhdinfo" | LC_ALL=C awk "$Str { print \"/dev/$idev\\t\"\$2\"\t\"\$3\"\t\"\$4; }"  )
+    #else
+    #  part_infos=$( echo "$partedhdinfo" | LC_ALL=C awk "$Str { print \"/dev/$idev\"\$0; }"  )
+    #fi 
+    
+    # partdev is the partition for fat or ntfs, its format is like: /dev/sda1 or /dev/nvme0n1p1
+    echo -n "Finding devices containing MS Windows hostname... "
+    for im in $target_parts; do
+      part_fs="$(ocs-get-part-info $im filesystem)"
+      case "$part_fs" in
+        fat12|fat16|fat32|vfat|ntfs) partdev="$partdev /dev/$im";;
+      esac
+    done
+
+    i=0
+    for part in $partdev; do
+        echo -n "Partition $part... "
+	i=$i+1;
+	partfs=$()
+	tmp_PARTDEVARR[$i]=$part
+	tmp_PARTFSARR[$i]=$(ocs-get-part-info $part filesystem)
+
+	df $part  | grep $part &> /dev/null
+	# Unmount the mounted file system first.
+	if [ $? -eq 0 ]; then
+		echo -n "umount $tmpdev if necessary... "
+		 umount $part  &> /dev/null
+		 [ $? -eq 1 ] && [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo "Umount device: $part failed...  " && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL && exit 1;
+		[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo -e " done\n" && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL  
+	fi 
+	
+    done
+    tmp_PARTIDCOUNT=$i;
+
+    # check if include windows root]
+    j=0		# Sum the number of total disks
+    for (( i=1; i<=$tmp_PARTIDCOUNT; i=i+1)); do
+    	dev_winroot='';
+    	#dev_winroot=$(check_if_winroot "${tmp_PARTDEVARR[$i]}" "${tmp_PARTFSARR[$i]}")
+    
+    	if [ "${tmp_PARTFSARR[$i]}"  = "ntfs" ] ; then
+    		$NTFSMOUNTPROG ${tmp_PARTDEVARR[$i]} $tmpmount
+    	elif [ -n "(echo "${tmp_PARTFSARR[$i]}" | grep -iE "fat")" ] ; then
+    		mount -t auto ${tmp_PARTDEVARR[$i]} $tmpmount
+    	else
+    		echo "No support filesystem '$tmpfs' on $tmpdev !! "
+    		return;
+    	fi
+    	#echo "mount $tmpdev $tmpmount... "
+
+    	for test_root in $DEFAULT_WIN_ROOT ; do
+    		_tmp_winroot=$(cd $tmpmount; ls -d */ | grep -i $test_root)
+    		[ -z "$_tmp_winroot" ] && break
+    		find_registry_realname "$tmpmount/$_tmp_winroot" "$WIN_SYSTEM_SAM" "$WIN_SOFTWARE_SAM"
+    		if [ -n "$REAL_WIN_SYSTEM_SAM" ] && [ -n "$REAL_WIN_SOFTWARE_SAM" ] ; then	
+    			j=$j+1;
+    			k=$k+1;
+    			PART_DEV_ARR[$k]=${tmp_PARTDEVARR[$i]};
+    			PART_FS_ARR[$k]=${tmp_PARTFSARR[$i]};
+    			PART_WINROOT_ARR[$k]=$_tmp_winroot
+    			PART_WIN_SYSTEM_SAM[$k]=$REAL_WIN_SYSTEM_SAM
+    			PART_WIN_SOFTWARE_SAM[$k]=$REAL_WIN_SOFTWARE_SAM
+
+    		fi
+    	done
+    	umount $tmpmount
+    done
+
+    #if [ $j -gt 0 ]; then 
+    #    echo "[/dev/$idev]"
+    #    echo "======================================================"
+    #    echo "$part_infos"
+    #    echo "======================================================"
+    #fi
+    echo
+    echo "======================================================"
+  done
+
+  PARTIDCOUNT=$k
+  
+  [ $PARTIDCOUNT -eq 0 ] && [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo "No available partition for modifying hostname. Aborted." \
+  && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL && exit 1
+  return 0;
+}
+
+gen_hn_stream() {
+	local hn_fix=$1;tmp_hn_fix="" ;hn_prefix=$1; hn_vari=$2; 
+	local hn_ip_fix_bits=$HN_VARI_BITS;
+
+	[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING  && echo "** Setup hostname prefix and variable:" && [ "$BOOTUP" = "color" ]  && $SETCOLOR_NORMAL;
+	if [ "$ACTIVE_MODE" = "interact" ]; then
+		echo "Select hostname  variable: [ip] ,[mac] or [fix] ? "
+		echo "[0]: IP , as:PC-001-014"
+		echo "[1]: MAC address , as:PC-DA2199"
+		echo "[2]: Manual"
+		read -p "[0]" tmp_hn_vari junk
+
+		[ -z "$tmp_hn_vari" ] ||  [ "$tmp_hn_vari" !=  '0' -a  "$tmp_hn_vari" !=  '1'  -a  "$tmp_hn_vari" !=  '2'   ] && tmp_hn_vari=0;
+
+		if [ "$tmp_hn_vari" =  '2' ]; then
+			hn_vari='_fix'
+			echo "Input your assigned hostname"
+			read -p "[$hn_fix]" tmp_hn_fix junk
+			[ -n "$(echo $tmp_hn_fix)" ] && hn_fix=$tmp_hn_fix
+			echo "Use fixed hostname format: $hn_fix"
+		else 
+			[ "$tmp_hn_vari" =  '0' ] && hn_vari='IP';
+			[ "$tmp_hn_vari" =  '1' ] && hn_vari='MAC';
+			read -p "Input hostname  prefix , no space: [$hn_prefix]" tmp_hn_prefix junk
+			[ -n "$(echo $tmp_hn_prefix)" ] && hn_prefix=$tmp_hn_prefix
+			echo "Use hostname format: $hn_prefix-\$$hn_vari"
+		fi
+	fi 
+
+	# Convert IP address to strings
+	tmp_ip=$(ip addr | awk '/inet / && !/ lo/ { print $2 };' | cut -d'/' -f 1 |awk -F. '{print $1+1000"-"$2+1000"-"$3+1000"-"$4+1000 }' | sed -e 's/^1//' -e 's/\-1/-/g' | head -n 1)
+	tmp_mac=$(ip link | awk '/ether/ { print $2 };' | sed -e 's/://g' | head -n 1)
+	
+	# Fix IP address digits
+	[ "$hn_vari" = "IP" ] && hn_ip_fix_bits=`expr $HN_VARI_BITS +  $HN_VARI_BITS / 3 - 1`
+
+	IP_stream=${tmp_ip:(-$hn_ip_fix_bits)}
+	MAC_stream=${tmp_mac:(-$hn_ip_fix_bits)}
+	HN_VARI_BITS=$hn_ip_fix_bits
+	HN_FORMAT_PREFIX=$hn_prefix
+	HN_FORMAT_VARI=$hn_vari
+
+	if [ "$HN_FORMAT_VARI" = "IP" ] ; then
+		WIN_HN="$HN_FORMAT_PREFIX"-"$IP_stream"
+	elif [ "$HN_FORMAT_VARI" = "MAC" ]; then
+		WIN_HN="$HN_FORMAT_PREFIX"-"$MAC_stream"
+	else
+		WIN_HN="$hn_fix"
+	fi
+	
+	return
+}
+
+find_registry_realname(){
+
+	local _search_path=$1 _win_system_sam=$2 _win_software_sam=$3 _dirname _filename;
+
+	_dirname=$(dirname $_win_system_sam )
+	_filename=$(basename $_win_system_sam )
+	REAL_WIN_SYSTEM_SAM="$(find $_search_path -iname $_filename -type f 2>/dev/null | grep -i $_win_system_sam)"
+
+	_dirname=$(dirname $_win_software_sam )
+	_filename=$(basename $_win_software_sam )
+	REAL_WIN_SOFTWARE_SAM="$(find $_search_path -iname $_filename -type f 2>/dev/null | grep -i $_win_software_sam)"
+
+}
+
+
+SYNC_DRBL_winroll_config(){
+
+	# Check drbl-winroll setting 
+	[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo -n "** Checking drbl-winroll configuration: " && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL;
+	if [ -w "$tmpmount/$DRBL_WINROLL_CONFIG" ] ; then
+		#_Match_str="^HN_WSNAME_PARAM\ =[\s\S]*$"
+		#_Replace_str="HN_WSNAME_PARAM\ =\ \/N:$HN_FORMAT_PREFIX-\\\$$HN_FORMAT_VARI\[$HN_VARI_BITS\+\]\t\t# generated by ocs-chnthn\n/g"
+		 #perl -pi -e "s/$_Match_str/$_Replace_str/g" "$tmpmount/$DRBL_WINROLL_CONFIG"
+
+		# Backup original data first.
+		echo -e "\tBackup winroll.conf ... "
+		cp -f "$tmpmount/$DRBL_WINROLL_CONFIG" "$tmpmount/$DRBL_WINROLL_CONFIG.ocs-chnthn.bak" &> /dev/null
+		if [ "$HN_FORMAT_VARI" = "_fix" ] ; then
+			 LC_ALL=C perl -pi -e "s/^HN_WSNAME_PARAM\ =[\s\S]*$/HN_WSNAME_PARAM\ =\ \/N:$WIN_HN\t\t# generated by ocs-chnthn\n/g" "$tmpmount/$DRBL_WINROLL_CONFIG";
+		elif [ "$HN_FORMAT_VARI" = "MAC" -o "$HN_FORMAT_VARI" = "IP" ]; then
+			 LC_ALL=C perl -pi -e "s/^HN_WSNAME_PARAM\ =[\s\S]*$/HN_WSNAME_PARAM\ =\ \/N:$HN_FORMAT_PREFIX-\\\$$HN_FORMAT_VARI\[$HN_VARI_BITS\+\]\t\t# generated by ocs-chnthn\n/g" "$tmpmount/$DRBL_WINROLL_CONFIG"
+		else
+			# impossible to reach this option
+			[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo "** Error: impossible to the value of HN_FORMAT_VARI " && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL;
+		fi
+		#cat "$tmpmount/$DRBL_WINROLL_CONFIG"
+		[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo -e "** Done !!" && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL;
+	elif [ ! -f "$tmpmount/$DRBL_WINROLL_CONFIG" ]; then
+		[ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING && echo "No drbl-winroll config file, skip..." && [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+	fi
+
+	return
+}
+#
+decide_regeditor() {
+  if type reged >/dev/null 2>&1; then
+    # Use the one from chntpw package. For those distributions come with chntpw package (debian, ubuntu, fedora...)
+    regeditor="reged"
+  elif type drbl-reged >/dev/null 2>&1; then
+    # Package created by DRBL project. For those distributions come with no chntpw package (centos, opensuse...)
+    regeditor="drbl-reged"
+  else
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "Registry editor \"reged\" or \"drbl-reged\" not found!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "Program terminated!" 
+    return 1
+  fi
+} # end of decide_regeditor() {
+#
+Get_hostname_related_key() {
+  local hive_file="$*"
+  # rhostname and rcomputername are global variables
+  related_key="HostName ComputerName"
+  rhostname=""
+  rcomputername=""
+  for ih in $hive_file; do
+    rhostname="$(LC_ALL=C grep -Ewio HostName $ih | uniq)"
+    [ -n "$rhostname" ] && break
+  done
+  for ih in $hive_file; do
+    rcomputername="$(LC_ALL=C grep -Ewio ComputerName $ih | uniq)"
+    [ -n "$rcomputername" ] && break
+  done
+} # end of Get_hostname_related_key() {
+#
+Modify_Win_Reg() {
+  # Hive path name was changed from Win10:
+  # ControlSet001\\services\\Tcpip\\Parameters -> ControlSet001\\Services\\Tcpip\\Parameters (services -> Services)
+  # Key name was changed from Win10:
+  # Hostname -> HostName
+  local hive_f="$1"
+  local new_winhn="$2"
+  local reg_tmp="$(mktemp /tmp/regtmp.XXXXXX)"
+  local var_serv="Services"  # Try the WIN10 hive path first.
+  if [ ! -w "$hive_f" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "File \"$hive_f\" does not exist or not writable in function Modify_Win_Reg!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "Program terminated!" 
+    return 1
+  fi
+  if [ -z "$new_winhn" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "No \"new_winhn\" was assigned in function Modify_Win_Reg!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "Program terminated!"
+    return 1
+  fi
+  # Part 1: for HostName, NV HostName
+  # 1. Dump
+  if [ "$verbose" = "on" ]; then
+    echo "Dumping registry data from $hive_f..."
+  fi
+  $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters $reg_tmp >/dev/null
+  if [ -z "$(grep -Ei "^\"HostName\"=" $reg_tmp)" ]; then
+    # Older Windows, try "services" instead of "Services"
+    var_serv="services"  # Switch to older windows hive path
+    $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters $reg_tmp >/dev/null
+    if [ -z "$(grep -Ei "^\"HostName\"=" $reg_tmp)" ]; then
+      echo "No key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters in hive file $hive_f."
+      echo "Skip processing $hive_f!"
+      return 1
+    fi
+  fi
+  # Check if the reg is dumped successfully. The return code for reged is useless.
+  if [ -n "$(grep -Ei "^\"HostName\"=" $reg_tmp)" ]; then
+    # 2. Create the key file to be imported: HostName, NV HostName then Import
+    # ====================
+    # Windows Registry Editor Version 5.00
+    #
+    #[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters]
+    #"HostName"="BIT"
+    #"NV HostName"="BIT"
+    # ====================
+    Get_hostname_related_key $reg_tmp # get rhostname, rcomputername
+    win_reg_ver_line="$(head -n 1 $reg_tmp)"
+    rm -f $reg_tmp
+    cat > $reg_tmp << EOF_REG
+$win_reg_ver_line
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\\$var_serv\Tcpip\Parameters]
+"$rhostname"="$new_winhn"
+"NV $rhostname"="$new_winhn"
+EOF_REG
+    $regeditor -C -I $hive_f HKEY_LOCAL_MACHINE\\SYSTEM $reg_tmp >/dev/null
+    # 3. dump to check
+    rm -f $reg_tmp
+    $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters $reg_tmp >/dev/null
+    if [ "$verbose" = "on" ]; then
+      echo "The result in registry file $hive_f for key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters:"
+      grep -Ewi "HostName" $reg_tmp
+    fi
+    if [ -n "$(grep -Ewi "HostName" $reg_tmp | grep -Ew "$new_winhn")" ]; then
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+      echo "Th new hostname \"$new_winhn\" has been set in MS Windows."
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    else
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+      echo "Failed to set new hostname \"$new_winhn\" in MS Windows."
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    fi
+    rm -f $reg_tmp
+  else
+    echo "No key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\$var_serv\\Tcpip\\Parameters in hive file $hive_f."
+    echo "Skip processing $hive_f!"
+    return 1
+  fi
+
+  # Part 2: for ComputerName
+  # 1. Dump
+  if [ "$verbose" = "on" ]; then
+    echo "Dumping registry data from $hive_f..."
+  fi
+  $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName $reg_tmp >/dev/null
+  # Check if the reg is dumped successfully. The return code for reged is useless.
+  if [ -n "$(grep -Ei "^\"ComputerName\"=" $reg_tmp)" ]; then
+    # 2. Modify key: ComputerName
+    # ====================
+    # Windows Registry Editor Version 5.00
+    #
+    # [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\ComputerName\ComputerName]
+    # "ComputerName"="BIT"
+    # ====================
+    Get_hostname_related_key $reg_tmp # get rhostname, rcomputername
+    win_reg_ver_line="$(head -n 1 $reg_tmp)"
+    rm -f $reg_tmp
+    cat > $reg_tmp << EOF_REG
+$win_reg_ver_line
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\ComputerName\ComputerName]
+"$rcomputername"="$new_winhn"
+EOF_REG
+    $regeditor -C -I $hive_f HKEY_LOCAL_MACHINE\\SYSTEM $reg_tmp >/dev/null
+    # 3. dump to check
+    rm -f $reg_tmp
+    $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName $reg_tmp >/dev/null
+    if [ "$verbose" = "on" ]; then
+      echo "The result in registry file $hive_f for key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName:"
+      grep -Ew "ComputerName" $reg_tmp
+    fi
+    if [ -z "$(grep -Ew "ComputerName" $reg_tmp | grep -Ew "$new_winhn")" ]; then
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+      echo "Failed to set new ComputerName $new_winhn in MS Windows."
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    fi
+    rm -f $reg_tmp
+  else
+    echo "No key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName in hive file $hive_f."
+    echo "Skip processing $hive_f!"
+    return 1
+  fi
+} # end of Modify_Win_Reg
+#
+Show_Win_Hostname_in_Reg() {
+  local hive_f="$1"
+  local reg_tmp="$(mktemp /tmp/regtmp.XXXXXX)"
+  if [ ! -w "$hive_f" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "File \"$hive_f\" does not exist or not writable in function Show_Win_Hostname_in_Reg!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "Program terminated!" 
+    return 1
+  fi
+  # Part 1: for HostName, NV HostName
+  if [ "$verbose" = "on" ]; then
+    echo "Dumping registry data from $hive_f..."
+  fi
+  $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Services\\Tcpip\\Parameters $reg_tmp >/dev/null
+  echo $msg_delimiter_star_line
+  echo "The hostname in registry file $hive_f for key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Services\\Tcpip\\Parameters:"
+  grep -Ewi "HostName" $reg_tmp
+  rm -f $reg_tmp
+
+  # Part 2: for ComputerName
+  if [ "$verbose" = "on" ]; then
+    echo "Dumping registry data from $hive_f..."
+  fi
+  $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName $reg_tmp >/dev/null
+  $regeditor -x $hive_f HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName $reg_tmp >/dev/null
+  echo "The ComputerName in registry file $hive_f for key HKEY_LOCAL_MACHINE\\SYSTEM ControlSet001\\Control\\ComputerName\\ComputerName:"
+  grep -Ew "ComputerName" $reg_tmp
+  echo $msg_delimiter_star_line
+  rm -f $reg_tmp
+} # end of Show_Win_Hostname_in_Reg

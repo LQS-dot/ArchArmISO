@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MbimProxy: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="MbimDevice.html" title="MbimDevice">
+<link rel="next" href="libmbim-glib-Enumerations-and-Flags.html" title="Enumerations and Flags">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MbimProxy.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MbimProxy.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#MbimProxy.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MbimDevice.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-Enumerations-and-Flags.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MbimProxy"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MbimProxy.top_of_page"></a>MbimProxy</span></h2>
+<p>MbimProxy — MBIM proxy handling routines</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MbimProxy.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimProxy.html" title="MbimProxy"><span class="returnvalue">MbimProxy</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimProxy.html#mbim-proxy-new" title="mbim_proxy_new ()">mbim_proxy_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimProxy.html#mbim-proxy-get-n-clients" title="mbim_proxy_get_n_clients ()">mbim_proxy_get_n_clients</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimProxy.html#mbim-proxy-get-n-devices" title="mbim_proxy_get_n_devices ()">mbim_proxy_get_n_devices</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="MbimProxy.html#MbimProxy--mbim-proxy-n-clients" title="The “mbim-proxy-n-clients” property">mbim-proxy-n-clients</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="MbimProxy.html#MbimProxy--mbim-proxy-n-devices" title="The “mbim-proxy-n-devices” property">mbim-proxy-n-devices</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimProxy.html#MBIM-PROXY-SOCKET-PATH:CAPS" title="MBIM_PROXY_SOCKET_PATH">MBIM_PROXY_SOCKET_PATH</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimProxy.html#MBIM-PROXY-N-CLIENTS:CAPS" title="MBIM_PROXY_N_CLIENTS">MBIM_PROXY_N_CLIENTS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimProxy.html#MBIM-PROXY-N-DEVICES:CAPS" title="MBIM_PROXY_N_DEVICES">MBIM_PROXY_N_DEVICES</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MbimProxy.html#MbimProxy-struct" title="struct MbimProxy">MbimProxy</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> MbimProxy
+</pre>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> will setup an abstract socket listening on a predefined
+address, and will take care of synchronizing the access to a set of shared
+MBIM ports.</p>
+<p>Multiple <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> objects may be connected to the <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> at any given
+time. The <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> acts as a stateful proxy (all remote <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> objects
+will need to share the same message sequence).</p>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-proxy-new"></a><h3>mbim_proxy_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimProxy.html" title="MbimProxy"><span class="returnvalue">MbimProxy</span></a> *
+mbim_proxy_new (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> object.</p>
+<div class="refsect3">
+<a name="mbim-proxy-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-proxy-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-proxy-get-n-clients"></a><h3>mbim_proxy_get_n_clients ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mbim_proxy_get_n_clients (<em class="parameter"><code><a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> *self</code></em>);</pre>
+<p>Get the number of clients currently connected to the proxy.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="mbim-proxy-get-n-clients.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-proxy-get-n-clients.returns"></a><h4>Returns</h4>
+<p> a <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-proxy-get-n-devices"></a><h3>mbim_proxy_get_n_devices ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mbim_proxy_get_n_devices (<em class="parameter"><code><a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> *self</code></em>);</pre>
+<p>Get the number of devices currently connected to the proxy.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="mbim-proxy-get-n-devices.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-proxy-get-n-devices.returns"></a><h4>Returns</h4>
+<p> a <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MBIM-PROXY-SOCKET-PATH:CAPS"></a><h3>MBIM_PROXY_SOCKET_PATH</h3>
+<pre class="programlisting">#define MBIM_PROXY_SOCKET_PATH "mbim-proxy"
+</pre>
+<p>Symbol defining the default abstract socket name where the <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> will listen.</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-PROXY-N-CLIENTS:CAPS"></a><h3>MBIM_PROXY_N_CLIENTS</h3>
+<pre class="programlisting">#define MBIM_PROXY_N_CLIENTS "mbim-proxy-n-clients"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimProxy.html#MbimProxy--mbim-proxy-n-clients" title="The “mbim-proxy-n-clients” property"><span class="type">“mbim-proxy-n-clients”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-PROXY-N-DEVICES:CAPS"></a><h3>MBIM_PROXY_N_DEVICES</h3>
+<pre class="programlisting">#define MBIM_PROXY_N_DEVICES "mbim-proxy-n-devices"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimProxy.html#MbimProxy--mbim-proxy-n-devices" title="The “mbim-proxy-n-devices” property"><span class="type">“mbim-proxy-n-devices”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimProxy-struct"></a><h3>struct MbimProxy</h3>
+<pre class="programlisting">struct MbimProxy;</pre>
+<p>The <a class="link" href="MbimProxy.html" title="MbimProxy"><span class="type">MbimProxy</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimProxy.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MbimProxy--mbim-proxy-n-clients"></a><h3>The <code class="literal">“mbim-proxy-n-clients”</code> property</h3>
+<pre class="programlisting">  “mbim-proxy-n-clients”     <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of clients currently connected to the proxy.</p>
+<p>Owner: MbimProxy</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimProxy--mbim-proxy-n-devices"></a><h3>The <code class="literal">“mbim-proxy-n-devices”</code> property</h3>
+<pre class="programlisting">  “mbim-proxy-n-devices”     <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of devices currently managed by the proxy.</p>
+<p>Owner: MbimProxy</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

@@ -1,0 +1,1258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UUIDs: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libmbim-glib-Version-checks.html" title="Version checks">
+<link rel="next" href="libmbim-glib-Command-IDs.html" title="Command IDs">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-UUIDs.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-UUIDs.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Version-checks.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-Command-IDs.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-UUIDs"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-UUIDs.top_of_page"></a>UUIDs</span></h2>
+<p>UUIDs — Generic UUID handling routines.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-service-get-string" title="mbim_service_get_string ()">mbim_service_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-service-lookup-name" title="mbim_service_lookup_name ()">mbim_service_lookup_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-register-custom-service" title="mbim_register_custom_service ()">mbim_register_custom_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-unregister-custom-service" title="mbim_unregister_custom_service ()">mbim_unregister_custom_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-service-id-is-custom" title="mbim_service_id_is_custom ()">mbim_service_id_is_custom</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-context-type-get-string" title="mbim_context_type_get_string ()">mbim_context_type_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-cmp" title="mbim_uuid_cmp ()">mbim_uuid_cmp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-from-printable" title="mbim_uuid_from_printable ()">mbim_uuid_from_printable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-get-printable" title="mbim_uuid_get_printable ()">mbim_uuid_get_printable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-from-service" title="mbim_uuid_from_service ()">mbim_uuid_from_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-to-service" title="mbim_uuid_to_service ()">mbim_uuid_to_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-from-context-type" title="mbim_uuid_from_context_type ()">mbim_uuid_from_context_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="returnvalue">MbimContextType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-UUIDs.html#mbim-uuid-to-context-type" title="mbim_uuid_to_context_type ()">mbim_uuid_to_context_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService">MbimService</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType">MbimContextType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid">MbimUuid</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-INVALID:CAPS" title="MBIM_UUID_INVALID">MBIM_UUID_INVALID</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-ATDS:CAPS" title="MBIM_UUID_ATDS">MBIM_UUID_ATDS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-BASIC-CONNECT:CAPS" title="MBIM_UUID_BASIC_CONNECT">MBIM_UUID_BASIC_CONNECT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-SMS:CAPS" title="MBIM_UUID_SMS">MBIM_UUID_SMS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-USSD:CAPS" title="MBIM_UUID_USSD">MBIM_UUID_USSD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-PHONEBOOK:CAPS" title="MBIM_UUID_PHONEBOOK">MBIM_UUID_PHONEBOOK</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-STK:CAPS" title="MBIM_UUID_STK">MBIM_UUID_STK</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-AUTH:CAPS" title="MBIM_UUID_AUTH">MBIM_UUID_AUTH</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-DSS:CAPS" title="MBIM_UUID_DSS">MBIM_UUID_DSS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-FIRMWARE-ID:CAPS" title="MBIM_UUID_MS_FIRMWARE_ID">MBIM_UUID_MS_FIRMWARE_ID</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-HOST-SHUTDOWN:CAPS" title="MBIM_UUID_MS_HOST_SHUTDOWN">MBIM_UUID_MS_HOST_SHUTDOWN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-PROXY-CONTROL:CAPS" title="MBIM_UUID_PROXY_CONTROL">MBIM_UUID_PROXY_CONTROL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-QMI:CAPS" title="MBIM_UUID_QMI">MBIM_UUID_QMI</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-QDU:CAPS" title="MBIM_UUID_QDU">MBIM_UUID_QDU</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-INTEL-FIRMWARE-UPDATE:CAPS" title="MBIM_UUID_INTEL_FIRMWARE_UPDATE">MBIM_UUID_INTEL_FIRMWARE_UPDATE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-BASIC-CONNECT-EXTENSIONS:CAPS" title="MBIM_UUID_MS_BASIC_CONNECT_EXTENSIONS">MBIM_UUID_MS_BASIC_CONNECT_EXTENSIONS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-SAR:CAPS" title="MBIM_UUID_MS_SAR">MBIM_UUID_MS_SAR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-UICC-LOW-LEVEL-ACCESS:CAPS" title="MBIM_UUID_MS_UICC_LOW_LEVEL_ACCESS">MBIM_UUID_MS_UICC_LOW_LEVEL_ACCESS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-QUECTEL:CAPS" title="MBIM_UUID_QUECTEL">MBIM_UUID_QUECTEL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-INTEL-THERMAL-RF:CAPS" title="MBIM_UUID_INTEL_THERMAL_RF">MBIM_UUID_INTEL_THERMAL_RF</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmbim-glib-UUIDs.html#MBIM-UUID-MS-VOICE-EXTENSIONS:CAPS" title="MBIM_UUID_MS_VOICE_EXTENSIONS">MBIM_UUID_MS_VOICE_EXTENSIONS</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> MbimContextType
+    <span class="lineart">╰──</span> MbimService
+</pre>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.description"></a><h2>Description</h2>
+<p>This section defines the data type for unique identifiers.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-service-get-string"></a><h3>mbim_service_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_service_get_string (<em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-service-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a MbimService.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-service-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-service-lookup-name"></a><h3>mbim_service_lookup_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_service_lookup_name (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> service</code></em>);</pre>
+<p>Gets the nickname string for the <em class="parameter"><code>service</code></em>
+.</p>
+<p>As opposed to <a class="link" href="libmbim-glib-UUIDs.html#mbim-service-get-string" title="mbim_service_get_string ()"><code class="function">mbim_service_get_string()</code></a>, this methods takes into account
+custom services that may have been registered by the user.</p>
+<div class="refsect3">
+<a name="mbim-service-lookup-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a MbimService or custom service.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-service-lookup-name.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-register-custom-service"></a><h3>mbim_register_custom_service ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mbim_register_custom_service (<em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *uuid</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *nickname</code></em>);</pre>
+<p>Register a custom service</p>
+<div class="refsect3">
+<a name="mbim-register-custom-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>uuid</p></td>
+<td class="parameter_description"><p>MbimUuid structure corresponding to service</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nickname</p></td>
+<td class="parameter_description"><p>a printable name for service</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-register-custom-service.returns"></a><h4>Returns</h4>
+<p> TRUE if service has been registered, FALSE otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-unregister-custom-service"></a><h3>mbim_unregister_custom_service ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_unregister_custom_service (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> id</code></em>);</pre>
+<p>Unregister a custom service.</p>
+<div class="refsect3">
+<a name="mbim-unregister-custom-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>ID of the service to unregister.MbimUuid structure corresponding to service</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-unregister-custom-service.returns"></a><h4>Returns</h4>
+<p> TRUE if service has been unregistered, FALSE otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-service-id-is-custom"></a><h3>mbim_service_id_is_custom ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_service_id_is_custom (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> id</code></em>);</pre>
+<p>Checks whether <em class="parameter"><code>id</code></em>
+ is a custom or standard service.</p>
+<div class="refsect3">
+<a name="mbim-service-id-is-custom.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>ID of the service</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-service-id-is-custom.returns"></a><h4>Returns</h4>
+<p> TRUE if service is custom, FALSE otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-context-type-get-string"></a><h3>mbim_context_type_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_context_type_get_string (<em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="type">MbimContextType</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="type">MbimContextType</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-context-type-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a MbimContextType.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-context-type-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-cmp"></a><h3>mbim_uuid_cmp ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_uuid_cmp (<em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *a</code></em>,
+               <em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *b</code></em>);</pre>
+<p>Compare two <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><code class="literal">MbimUuid</code></a> values.</p>
+<div class="refsect3">
+<a name="mbim-uuid-cmp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-cmp.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>a</code></em>
+and <em class="parameter"><code>b</code></em>
+are equal, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-from-printable"></a><h3>mbim_uuid_from_printable ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_uuid_from_printable (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *str</code></em>,
+                          <em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *uuid</code></em>);</pre>
+<p>Fills in <em class="parameter"><code>uuid</code></em>
+ from the printable representation give in <em class="parameter"><code>str</code></em>
+.</p>
+<p>Only ccepts <em class="parameter"><code>str</code></em>
+ written with dashes separating items, e.g.:
+ a289cc33-bcbb-8b4f-b6b0-133ec2aae6df</p>
+<div class="refsect3">
+<a name="mbim-uuid-from-printable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>str</p></td>
+<td class="parameter_description"><p>a MBIM UUID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uuid</p></td>
+<td class="parameter_description"><p>pointer to the target <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-from-printable.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>uuid</code></em>
+was correctly set, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-get-printable"></a><h3>mbim_uuid_get_printable ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_uuid_get_printable (<em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *uuid</code></em>);</pre>
+<p>Get a string with the UUID.</p>
+<div class="refsect3">
+<a name="mbim-uuid-get-printable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>uuid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-get-printable.returns"></a><h4>Returns</h4>
+<p>a newly allocated string, which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-from-service"></a><h3>mbim_uuid_from_service ()</h3>
+<pre class="programlisting">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+mbim_uuid_from_service (<em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a> service</code></em>);</pre>
+<p>Get the UUID corresponding to <em class="parameter"><code>service</code></em>
+.</p>
+<p>The <em class="parameter"><code>service</code></em>
+ needs to be either a generic one (including <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-INVALID:CAPS"><span class="type">MBIM_SERVICE_INVALID</span></a>)
+or a custom registered one.</p>
+<div class="refsect3">
+<a name="mbim-uuid-from-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-from-service.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-to-service"></a><h3>mbim_uuid_to_service ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+mbim_uuid_to_service (<em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *uuid</code></em>);</pre>
+<p>Get the service corresponding to <em class="parameter"><code>uuid</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-uuid-to-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>uuid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-to-service.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-from-context-type"></a><h3>mbim_uuid_from_context_type ()</h3>
+<pre class="programlisting">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+mbim_uuid_from_context_type (<em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="type">MbimContextType</span></a> context_type</code></em>);</pre>
+<p>Get the UUID corresponding to <em class="parameter"><code>context_type</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-uuid-from-context-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>context_type</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="type">MbimContextType</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-from-context-type.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uuid-to-context-type"></a><h3>mbim_uuid_to_context_type ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="returnvalue">MbimContextType</span></a>
+mbim_uuid_to_context_type (<em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> *uuid</code></em>);</pre>
+<p>Get the context type corresponding to <em class="parameter"><code>uuid</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-uuid-to-context-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>uuid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-uuid-to-context-type.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimContextType" title="enum MbimContextType"><span class="type">MbimContextType</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-UUIDs.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimService"></a><h3>enum MbimService</h3>
+<p>Enumeration of the generic MBIM services.</p>
+<div class="refsect3">
+<a name="MbimService.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-INVALID:CAPS"></a>MBIM_SERVICE_INVALID</p></td>
+<td class="enum_member_description">
+<p>Invalid service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-BASIC-CONNECT:CAPS"></a>MBIM_SERVICE_BASIC_CONNECT</p></td>
+<td class="enum_member_description">
+<p>Basic connectivity service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-SMS:CAPS"></a>MBIM_SERVICE_SMS</p></td>
+<td class="enum_member_description">
+<p>SMS messaging service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-USSD:CAPS"></a>MBIM_SERVICE_USSD</p></td>
+<td class="enum_member_description">
+<p>USSD service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-PHONEBOOK:CAPS"></a>MBIM_SERVICE_PHONEBOOK</p></td>
+<td class="enum_member_description">
+<p>Phonebook service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-STK:CAPS"></a>MBIM_SERVICE_STK</p></td>
+<td class="enum_member_description">
+<p>SIM toolkit service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-AUTH:CAPS"></a>MBIM_SERVICE_AUTH</p></td>
+<td class="enum_member_description">
+<p>Authentication service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-DSS:CAPS"></a>MBIM_SERVICE_DSS</p></td>
+<td class="enum_member_description">
+<p>Device Service Stream service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-FIRMWARE-ID:CAPS"></a>MBIM_SERVICE_MS_FIRMWARE_ID</p></td>
+<td class="enum_member_description">
+<p>Microsoft Firmware ID service. Since 1.8.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-HOST-SHUTDOWN:CAPS"></a>MBIM_SERVICE_MS_HOST_SHUTDOWN</p></td>
+<td class="enum_member_description">
+<p>Microsoft Host Shutdown service. Since 1.8.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-PROXY-CONTROL:CAPS"></a>MBIM_SERVICE_PROXY_CONTROL</p></td>
+<td class="enum_member_description">
+<p>Proxy Control service. Since 1.10.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-QMI:CAPS"></a>MBIM_SERVICE_QMI</p></td>
+<td class="enum_member_description">
+<p>QMI-over-MBIM service. Since 1.14.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-ATDS:CAPS"></a>MBIM_SERVICE_ATDS</p></td>
+<td class="enum_member_description">
+<p>ATT Device service. Since 1.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-INTEL-FIRMWARE-UPDATE:CAPS"></a>MBIM_SERVICE_INTEL_FIRMWARE_UPDATE</p></td>
+<td class="enum_member_description">
+<p>Intel firmware update service. Since 1.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-BASIC-CONNECT-EXTENSIONS:CAPS"></a>MBIM_SERVICE_MS_BASIC_CONNECT_EXTENSIONS</p></td>
+<td class="enum_member_description">
+<p>Microsoft basic connectivity extensions service. Since 1.18.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-SAR:CAPS"></a>MBIM_SERVICE_MS_SAR</p></td>
+<td class="enum_member_description">
+<p>Microsoft SAR service. Since 1.26.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-QDU:CAPS"></a>MBIM_SERVICE_QDU</p></td>
+<td class="enum_member_description">
+<p>QDU firmware update service. Since 1.26.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-UICC-LOW-LEVEL-ACCESS:CAPS"></a>MBIM_SERVICE_MS_UICC_LOW_LEVEL_ACCESS</p></td>
+<td class="enum_member_description">
+<p>Microsoft UICC Low Level Access service. Since 1.26.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-QUECTEL:CAPS"></a>MBIM_SERVICE_QUECTEL</p></td>
+<td class="enum_member_description">
+<p>Quectel specific operations. Since 1.26.2.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-INTEL-THERMAL-RF:CAPS"></a>MBIM_SERVICE_INTEL_THERMAL_RF</p></td>
+<td class="enum_member_description">
+<p>Intel thermal rf related commands. Since 1.28</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-MS-VOICE-EXTENSIONS:CAPS"></a>MBIM_SERVICE_MS_VOICE_EXTENSIONS</p></td>
+<td class="enum_member_description">
+<p>Microsoft Voice extensions service. Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-SERVICE-LAST:CAPS"></a>MBIM_SERVICE_LAST</p></td>
+<td class="enum_member_description">
+<p>Internal value.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimContextType"></a><h3>enum MbimContextType</h3>
+<p>Enumeration of the generic MBIM context types.</p>
+<div class="refsect3">
+<a name="MbimContextType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-INVALID:CAPS"></a>MBIM_CONTEXT_TYPE_INVALID</p></td>
+<td class="enum_member_description">
+<p>Invalid context type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-NONE:CAPS"></a>MBIM_CONTEXT_TYPE_NONE</p></td>
+<td class="enum_member_description">
+<p>Context not yet provisioned.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-INTERNET:CAPS"></a>MBIM_CONTEXT_TYPE_INTERNET</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to the
+Internet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-VPN:CAPS"></a>MBIM_CONTEXT_TYPE_VPN</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to a a private
+network (e.g. VPN to a corporate network).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-VOICE:CAPS"></a>MBIM_CONTEXT_TYPE_VOICE</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to a VoIP service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-VIDEO-SHARE:CAPS"></a>MBIM_CONTEXT_TYPE_VIDEO_SHARE</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to a video
+sharing service.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-PURCHASE:CAPS"></a>MBIM_CONTEXT_TYPE_PURCHASE</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to an
+OTA (over-the-air) activation site.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-IMS:CAPS"></a>MBIM_CONTEXT_TYPE_IMS</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to IMS.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-MMS:CAPS"></a>MBIM_CONTEXT_TYPE_MMS</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection to MMS.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-LOCAL:CAPS"></a>MBIM_CONTEXT_TYPE_LOCAL</p></td>
+<td class="enum_member_description">
+<p>Context representing a connection which is
+terminated at the device. No IP traffic sent over the air.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-ADMIN:CAPS"></a>MBIM_CONTEXT_TYPE_ADMIN</p></td>
+<td class="enum_member_description">
+<p>Context used for administrative purposes, such as
+device management (MS MBIMEx). Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-APP:CAPS"></a>MBIM_CONTEXT_TYPE_APP</p></td>
+<td class="enum_member_description">
+<p>Context used for certain applications allowed by
+mobile operators (MS MBIMEx). Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-XCAP:CAPS"></a>MBIM_CONTEXT_TYPE_XCAP</p></td>
+<td class="enum_member_description">
+<p>Context used for XCAP provisioning on IMS services
+(MS MBIMEx). Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-TETHERING:CAPS"></a>MBIM_CONTEXT_TYPE_TETHERING</p></td>
+<td class="enum_member_description">
+<p>Context used for mobile hotspot tethering
+(MS MBIMEx). Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-CONTEXT-TYPE-EMERGENCY-CALLING:CAPS"></a>MBIM_CONTEXT_TYPE_EMERGENCY_CALLING</p></td>
+<td class="enum_member_description">
+<p>Context used for IMS emergency calling
+(MS MBIMEx). Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimUuid"></a><h3>MbimUuid</h3>
+<pre class="programlisting">typedef struct _MbimUuid MbimUuid;</pre>
+<p>A UUID as defined in MBIM.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-INVALID:CAPS"></a><h3>MBIM_UUID_INVALID</h3>
+<pre class="programlisting">#define MBIM_UUID_INVALID mbim_uuid_from_service (MBIM_SERVICE_INVALID)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-INVALID:CAPS"><code class="literal">MBIM_SERVICE_INVALID</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-INVALID.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-ATDS:CAPS"></a><h3>MBIM_UUID_ATDS</h3>
+<pre class="programlisting">#define MBIM_UUID_ATDS mbim_uuid_from_service (MBIM_SERVICE_ATDS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-ATDS:CAPS"><code class="literal">MBIM_SERVICE_ATDS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-ATDS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-BASIC-CONNECT:CAPS"></a><h3>MBIM_UUID_BASIC_CONNECT</h3>
+<pre class="programlisting">#define MBIM_UUID_BASIC_CONNECT mbim_uuid_from_service (MBIM_SERVICE_BASIC_CONNECT)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-BASIC-CONNECT:CAPS"><code class="literal">MBIM_SERVICE_BASIC_CONNECT</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-BASIC-CONNECT.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-SMS:CAPS"></a><h3>MBIM_UUID_SMS</h3>
+<pre class="programlisting">#define MBIM_UUID_SMS mbim_uuid_from_service (MBIM_SERVICE_SMS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-SMS:CAPS"><code class="literal">MBIM_SERVICE_SMS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-SMS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-USSD:CAPS"></a><h3>MBIM_UUID_USSD</h3>
+<pre class="programlisting">#define MBIM_UUID_USSD mbim_uuid_from_service (MBIM_SERVICE_USSD)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-USSD:CAPS"><code class="literal">MBIM_SERVICE_USSD</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-USSD.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-PHONEBOOK:CAPS"></a><h3>MBIM_UUID_PHONEBOOK</h3>
+<pre class="programlisting">#define MBIM_UUID_PHONEBOOK mbim_uuid_from_service (MBIM_SERVICE_PHONEBOOK)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-PHONEBOOK:CAPS"><code class="literal">MBIM_SERVICE_PHONEBOOK</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-PHONEBOOK.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-STK:CAPS"></a><h3>MBIM_UUID_STK</h3>
+<pre class="programlisting">#define MBIM_UUID_STK mbim_uuid_from_service (MBIM_SERVICE_STK)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-STK:CAPS"><code class="literal">MBIM_SERVICE_STK</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-STK.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-AUTH:CAPS"></a><h3>MBIM_UUID_AUTH</h3>
+<pre class="programlisting">#define MBIM_UUID_AUTH mbim_uuid_from_service (MBIM_SERVICE_AUTH)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-AUTH:CAPS"><code class="literal">MBIM_SERVICE_AUTH</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-AUTH.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-DSS:CAPS"></a><h3>MBIM_UUID_DSS</h3>
+<pre class="programlisting">#define MBIM_UUID_DSS mbim_uuid_from_service (MBIM_SERVICE_DSS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-DSS:CAPS"><code class="literal">MBIM_SERVICE_DSS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-DSS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-FIRMWARE-ID:CAPS"></a><h3>MBIM_UUID_MS_FIRMWARE_ID</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_FIRMWARE_ID mbim_uuid_from_service (MBIM_SERVICE_MS_FIRMWARE_ID)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-FIRMWARE-ID:CAPS"><code class="literal">MBIM_SERVICE_MS_FIRMWARE_ID</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-FIRMWARE-ID.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-HOST-SHUTDOWN:CAPS"></a><h3>MBIM_UUID_MS_HOST_SHUTDOWN</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_HOST_SHUTDOWN mbim_uuid_from_service (MBIM_SERVICE_MS_HOST_SHUTDOWN)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-HOST-SHUTDOWN:CAPS"><code class="literal">MBIM_SERVICE_MS_HOST_SHUTDOWN</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-HOST-SHUTDOWN.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-PROXY-CONTROL:CAPS"></a><h3>MBIM_UUID_PROXY_CONTROL</h3>
+<pre class="programlisting">#define MBIM_UUID_PROXY_CONTROL mbim_uuid_from_service (MBIM_SERVICE_PROXY_CONTROL)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-PROXY-CONTROL:CAPS"><code class="literal">MBIM_SERVICE_PROXY_CONTROL</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-PROXY-CONTROL.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-QMI:CAPS"></a><h3>MBIM_UUID_QMI</h3>
+<pre class="programlisting">#define MBIM_UUID_QMI mbim_uuid_from_service (MBIM_SERVICE_QMI)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-QMI:CAPS"><code class="literal">MBIM_SERVICE_QMI</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-QMI.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-14.html#api-index-1.14">1.14</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-QDU:CAPS"></a><h3>MBIM_UUID_QDU</h3>
+<pre class="programlisting">#define MBIM_UUID_QDU mbim_uuid_from_service (MBIM_SERVICE_QDU)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-QDU:CAPS"><code class="literal">MBIM_SERVICE_QDU</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-QDU.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-INTEL-FIRMWARE-UPDATE:CAPS"></a><h3>MBIM_UUID_INTEL_FIRMWARE_UPDATE</h3>
+<pre class="programlisting">#define MBIM_UUID_INTEL_FIRMWARE_UPDATE mbim_uuid_from_service (MBIM_SERVICE_INTEL_FIRMWARE_UPDATE)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-INTEL-FIRMWARE-UPDATE:CAPS"><code class="literal">MBIM_SERVICE_INTEL_FIRMWARE_UPDATE</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-INTEL-FIRMWARE-UPDATE.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-BASIC-CONNECT-EXTENSIONS:CAPS"></a><h3>MBIM_UUID_MS_BASIC_CONNECT_EXTENSIONS</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_BASIC_CONNECT_EXTENSIONS mbim_uuid_from_service (MBIM_SERVICE_MS_BASIC_CONNECT_EXTENSIONS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-BASIC-CONNECT-EXTENSIONS:CAPS"><code class="literal">MBIM_SERVICE_MS_BASIC_CONNECT_EXTENSIONS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-BASIC-CONNECT-EXTENSIONS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-SAR:CAPS"></a><h3>MBIM_UUID_MS_SAR</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_SAR mbim_uuid_from_service (MBIM_SERVICE_MS_SAR)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-SAR:CAPS"><code class="literal">MBIM_SERVICE_MS_SAR</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-SAR.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-UICC-LOW-LEVEL-ACCESS:CAPS"></a><h3>MBIM_UUID_MS_UICC_LOW_LEVEL_ACCESS</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_UICC_LOW_LEVEL_ACCESS mbim_uuid_from_service (MBIM_SERVICE_MS_UICC_LOW_LEVEL_ACCESS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-UICC-LOW-LEVEL-ACCESS:CAPS"><code class="literal">MBIM_SERVICE_MS_UICC_LOW_LEVEL_ACCESS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-UICC-LOW-LEVEL-ACCESS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-QUECTEL:CAPS"></a><h3>MBIM_UUID_QUECTEL</h3>
+<pre class="programlisting">#define MBIM_UUID_QUECTEL mbim_uuid_from_service (MBIM_SERVICE_QUECTEL)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-QUECTEL:CAPS"><code class="literal">MBIM_SERVICE_QUECTEL</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-QUECTEL.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26-2.html#api-index-1.26.2">1.26.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-INTEL-THERMAL-RF:CAPS"></a><h3>MBIM_UUID_INTEL_THERMAL_RF</h3>
+<pre class="programlisting">#define MBIM_UUID_INTEL_THERMAL_RF mbim_uuid_from_service (MBIM_SERVICE_INTEL_THERMAL_RF)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-INTEL-THERMAL-RF:CAPS"><code class="literal">MBIM_SERVICE_INTEL_THERMAL_RF</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-INTEL-THERMAL-RF.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-UUID-MS-VOICE-EXTENSIONS:CAPS"></a><h3>MBIM_UUID_MS_VOICE_EXTENSIONS</h3>
+<pre class="programlisting">#define MBIM_UUID_MS_VOICE_EXTENSIONS mbim_uuid_from_service (MBIM_SERVICE_MS_VOICE_EXTENSIONS)
+</pre>
+<p>Get the UUID of the <a class="link" href="libmbim-glib-UUIDs.html#MBIM-SERVICE-MS-VOICE-EXTENSIONS:CAPS"><code class="literal">MBIM_SERVICE_MS_VOICE_EXTENSIONS</code></a> service.</p>
+<div class="refsect3">
+<a name="MBIM-UUID-MS-VOICE-EXTENSIONS.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

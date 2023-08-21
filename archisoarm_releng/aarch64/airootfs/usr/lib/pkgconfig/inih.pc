@@ -1,0 +1,9 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: inih
+Description: simple .INI file parser
+Version: 56
+Libs: -L${libdir} -linih
+Cflags: -I${includedir}

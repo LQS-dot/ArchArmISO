@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libproxy
+Description: libproxy
+Version: 0.5.3
+Requires.private: gobject-2.0
+Libs: -L${libdir} -lproxy
+Cflags: -I${includedir}/libproxy

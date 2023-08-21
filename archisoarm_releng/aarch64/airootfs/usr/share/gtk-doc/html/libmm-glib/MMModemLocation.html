@@ -1,0 +1,2561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMModemLocation: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03s05.html" title="Location support">
+<link rel="prev" href="ch03s05.html" title="Location support">
+<link rel="next" href="MMLocation3gpp.html" title="MMLocation3gpp">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMModemLocation.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMModemLocation.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#MMModemLocation.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch03s05.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMLocation3gpp.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMModemLocation"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMModemLocation.top_of_page"></a>MMModemLocation</span></h2>
+<p>MMModemLocation — The Location interface</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMModemLocation.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-path" title="mm_modem_location_get_path ()">mm_modem_location_get_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-dup-path" title="mm_modem_location_dup_path ()">mm_modem_location_dup_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModemLocationSource</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-capabilities" title="mm_modem_location_get_capabilities ()">mm_modem_location_get_capabilities</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModemLocationSource</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-enabled" title="mm_modem_location_get_enabled ()">mm_modem_location_get_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-refresh-rate" title="mm_modem_location_get_gps_refresh_rate ()">mm_modem_location_get_gps_refresh_rate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-signals-location" title="mm_modem_location_signals_location ()">mm_modem_location_signals_location</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-dup-supl-server" title="mm_modem_location_dup_supl_server ()">mm_modem_location_dup_supl_server</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-supl-server" title="mm_modem_location_get_supl_server ()">mm_modem_location_get_supl_server</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModemLocationAssistanceDataType</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-supported-assistance-data" title="mm_modem_location_get_supported_assistance_data ()">mm_modem_location_get_supported_assistance_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-dup-assistance-data-servers" title="mm_modem_location_dup_assistance_data_servers ()">mm_modem_location_dup_assistance_data_servers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-assistance-data-servers" title="mm_modem_location_get_assistance_data_servers ()">mm_modem_location_get_assistance_data_servers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()">mm_modem_location_setup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-setup-finish" title="mm_modem_location_setup_finish ()">mm_modem_location_setup_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-setup-sync" title="mm_modem_location_setup_sync ()">mm_modem_location_setup_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server" title="mm_modem_location_set_supl_server ()">mm_modem_location_set_supl_server</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server-finish" title="mm_modem_location_set_supl_server_finish ()">mm_modem_location_set_supl_server_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server-sync" title="mm_modem_location_set_supl_server_sync ()">mm_modem_location_set_supl_server_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data" title="mm_modem_location_inject_assistance_data ()">mm_modem_location_inject_assistance_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data-finish" title="mm_modem_location_inject_assistance_data_finish ()">mm_modem_location_inject_assistance_data_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data-sync" title="mm_modem_location_inject_assistance_data_sync ()">mm_modem_location_inject_assistance_data_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate" title="mm_modem_location_set_gps_refresh_rate ()">mm_modem_location_set_gps_refresh_rate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate-finish" title="mm_modem_location_set_gps_refresh_rate_finish ()">mm_modem_location_set_gps_refresh_rate_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate-sync" title="mm_modem_location_set_gps_refresh_rate_sync ()">mm_modem_location_set_gps_refresh_rate_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()">mm_modem_location_get_3gpp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-finish" title="mm_modem_location_get_3gpp_finish ()">mm_modem_location_get_3gpp_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-sync" title="mm_modem_location_get_3gpp_sync ()">mm_modem_location_get_3gpp_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-peek-signaled-3gpp" title="mm_modem_location_peek_signaled_3gpp ()">mm_modem_location_peek_signaled_3gpp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-3gpp" title="mm_modem_location_get_signaled_3gpp ()">mm_modem_location_get_signaled_3gpp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()">mm_modem_location_get_gps_nmea</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-finish" title="mm_modem_location_get_gps_nmea_finish ()">mm_modem_location_get_gps_nmea_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-sync" title="mm_modem_location_get_gps_nmea_sync ()">mm_modem_location_get_gps_nmea_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-peek-signaled-gps-nmea" title="mm_modem_location_peek_signaled_gps_nmea ()">mm_modem_location_peek_signaled_gps_nmea</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-nmea" title="mm_modem_location_get_signaled_gps_nmea ()">mm_modem_location_get_signaled_gps_nmea</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()">mm_modem_location_get_gps_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-finish" title="mm_modem_location_get_gps_raw_finish ()">mm_modem_location_get_gps_raw_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-sync" title="mm_modem_location_get_gps_raw_sync ()">mm_modem_location_get_gps_raw_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-peek-signaled-gps-raw" title="mm_modem_location_peek_signaled_gps_raw ()">mm_modem_location_peek_signaled_gps_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-raw" title="mm_modem_location_get_signaled_gps_raw ()">mm_modem_location_get_signaled_gps_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()">mm_modem_location_get_cdma_bs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-finish" title="mm_modem_location_get_cdma_bs_finish ()">mm_modem_location_get_cdma_bs_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-sync" title="mm_modem_location_get_cdma_bs_sync ()">mm_modem_location_get_cdma_bs_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-peek-signaled-cdma-bs" title="mm_modem_location_peek_signaled_cdma_bs ()">mm_modem_location_peek_signaled_cdma_bs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-cdma-bs" title="mm_modem_location_get_signaled_cdma_bs ()">mm_modem_location_get_signaled_cdma_bs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full" title="mm_modem_location_get_full ()">mm_modem_location_get_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full-finish" title="mm_modem_location_get_full_finish ()">mm_modem_location_get_full_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full-sync" title="mm_modem_location_get_full_sync ()">mm_modem_location_get_full_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMModemLocation.html#MMModemLocation-struct" title="struct MMModemLocation">MMModemLocation</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MMModemLocation.html#MM-LOCATION-LONGITUDE-UNKNOWN:CAPS" title="MM_LOCATION_LONGITUDE_UNKNOWN">MM_LOCATION_LONGITUDE_UNKNOWN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MMModemLocation.html#MM-LOCATION-LATITUDE-UNKNOWN:CAPS" title="MM_LOCATION_LATITUDE_UNKNOWN">MM_LOCATION_LATITUDE_UNKNOWN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MMModemLocation.html#MM-LOCATION-ALTITUDE-UNKNOWN:CAPS" title="MM_LOCATION_ALTITUDE_UNKNOWN">MM_LOCATION_ALTITUDE_UNKNOWN</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="../gio/GDBusProxy.html#GDBusProxy-struct">GDBusProxy</a>
+        <span class="lineart">╰──</span> <a class="link" href="MmGdbusModemLocationProxy.html" title="MmGdbusModemLocationProxy">MmGdbusModemLocationProxy</a>
+            <span class="lineart">╰──</span> MMModemLocation
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MMModemLocation implements
+ <a href="../gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a>,  <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>,  <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a> and  <a class="link" href="MmGdbusModemLocation.html" title="MmGdbusModemLocation">MmGdbusModemLocation</a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> is an object providing access to the methods, signals and
+properties of the Location interface.</p>
+<p>The Location interface is exposed whenever a modem has location capabilities.</p>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-modem-location-get-path"></a><h3>mm_modem_location_get_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_location_get_path (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> which implements this interface.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-dup-path"></a><h3>mm_modem_location_dup_path ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_location_dup_path (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> object which implements this
+interface.</p>
+<div class="refsect3">
+<a name="mm-modem-location-dup-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-dup-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a>. The returned value
+should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-capabilities"></a><h3>mm_modem_location_get_capabilities ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModemLocationSource</span>
+mm_modem_location_get_capabilities (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a bitmask of the location capabilities supported by this
+<a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-capabilities.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-capabilities.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModemLocationSource</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-enabled"></a><h3>mm_modem_location_get_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModemLocationSource</span>
+mm_modem_location_get_enabled (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a bitmask of the location capabilities which are enabled in this <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-enabled.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModemLocationSource</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-refresh-rate"></a><h3>mm_modem_location_get_gps_refresh_rate ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_modem_location_get_gps_refresh_rate
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the GPS refresh rate, in seconds.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-refresh-rate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-refresh-rate.returns"></a><h4>Returns</h4>
+<p> The GPS refresh rate, or 0 if no fixed rate is used.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-signals-location"></a><h3>mm_modem_location_signals_location ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_signals_location (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the status of the location signaling in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-signals-location.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-signals-location.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if location changes are signaled, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-dup-supl-server"></a><h3>mm_modem_location_dup_supl_server ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_location_dup_supl_server (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the address of the SUPL server.</p>
+<div class="refsect3">
+<a name="mm-modem-location-dup-supl-server.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-dup-supl-server.returns"></a><h4>Returns</h4>
+<p>The SUPL server address, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none
+available. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6.html#api-index-1.6">1.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-supl-server"></a><h3>mm_modem_location_get_supl_server ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_location_get_supl_server (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the address of the SUPL server.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMModemLocation.html#mm-modem-location-dup-supl-server" title="mm_modem_location_dup_supl_server ()"><code class="function">mm_modem_location_dup_supl_server()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-supl-server.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-supl-server.returns"></a><h4>Returns</h4>
+<p>The SUPL server address, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none
+available. Do not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6.html#api-index-1.6">1.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-supported-assistance-data"></a><h3>mm_modem_location_get_supported_assistance_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModemLocationAssistanceDataType</span>
+mm_modem_location_get_supported_assistance_data
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a bitmask of the supported assistance data types.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-supported-assistance-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-supported-assistance-data.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModemLocationAssistanceDataType</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-dup-assistance-data-servers"></a><h3>mm_modem_location_dup_assistance_data_servers ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+mm_modem_location_dup_assistance_data_servers
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the list of assistance data servers.</p>
+<div class="refsect3">
+<a name="mm-modem-location-dup-assistance-data-servers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-dup-assistance-data-servers.returns"></a><h4>Returns</h4>
+<p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of server addresses, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. The returned value should be freed with
+<a href="../glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-assistance-data-servers"></a><h3>mm_modem_location_get_assistance_data_servers ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+mm_modem_location_get_assistance_data_servers
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets the list of assistance data servers.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMModemLocation.html#mm-modem-location-dup-assistance-data-servers" title="mm_modem_location_dup_assistance_data_servers ()"><code class="function">mm_modem_location_dup_assistance_data_servers()</code></a> if on another thread.
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-assistance-data-servers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-assistance-data-servers.returns"></a><h4>Returns</h4>
+<p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of server addresses, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. Do not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-setup"></a><h3>mm_modem_location_setup ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_setup (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                         <em class="parameter"><code><span class="type">MMModemLocationSource</span> sources</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> signal_location</code></em>,
+                         <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously configures the location sources to use when gathering location
+information. Also enable or disable location information gathering.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-setup-finish" title="mm_modem_location_setup_finish ()"><code class="function">mm_modem_location_setup_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-setup-sync" title="mm_modem_location_setup_sync ()"><code class="function">mm_modem_location_setup_sync()</code></a> for the synchronous, blocking version of
+this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-setup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sources</p></td>
+<td class="parameter_description"><p>Bitmask of <span class="type">MMModemLocationSource</span> values specifying which locations
+should get enabled.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>signal_location</p></td>
+<td class="parameter_description"><p>Flag to enable or disable location signaling.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-setup-finish"></a><h3>mm_modem_location_setup_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_setup_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-setup-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-setup-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the setup was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-setup-sync"></a><h3>mm_modem_location_setup_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_setup_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                              <em class="parameter"><code><span class="type">MMModemLocationSource</span> sources</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> signal_location</code></em>,
+                              <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously configures the location sources to use when gathering location
+information. Also enable or disable location information gathering.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-setup-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sources</p></td>
+<td class="parameter_description"><p>Bitmask of <span class="type">MMModemLocationSource</span> values specifying which locations
+should get enabled.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>signal_location</p></td>
+<td class="parameter_description"><p>Flag to enable or disable location signaling.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-setup-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the setup was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-supl-server"></a><h3>mm_modem_location_set_supl_server ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_set_supl_server (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *supl</code></em>,
+                                   <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously configures the address of the SUPL server for A-GPS operation.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server-finish" title="mm_modem_location_set_supl_server_finish ()"><code class="function">mm_modem_location_set_supl_server_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server-sync" title="mm_modem_location_set_supl_server_sync ()"><code class="function">mm_modem_location_set_supl_server_sync()</code></a> for the synchronous, blocking
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-supl-server.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>supl</p></td>
+<td class="parameter_description"><p>The SUPL server address, given as IP:PORT or with a full URL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6.html#api-index-1.6">1.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-supl-server-finish"></a><h3>mm_modem_location_set_supl_server_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_set_supl_server_finish
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server" title="mm_modem_location_set_supl_server ()"><code class="function">mm_modem_location_set_supl_server()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-supl-server-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server" title="mm_modem_location_set_supl_server ()"><code class="function">mm_modem_location_set_supl_server()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-set-supl-server-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if setting the SUPL server was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is
+set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6.html#api-index-1.6">1.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-supl-server-sync"></a><h3>mm_modem_location_set_supl_server_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_set_supl_server_sync
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *supl</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously configures the address of the SUPL server for A-GPS operation.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-supl-server" title="mm_modem_location_set_supl_server ()"><code class="function">mm_modem_location_set_supl_server()</code></a> for the asynchronous version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-supl-server-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>supl</p></td>
+<td class="parameter_description"><p>The SUPL server address, given as IP:PORT or with a full URL.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-set-supl-server-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if setting the SUPL server was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is
+set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-6.html#api-index-1.6">1.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-inject-assistance-data"></a><h3>mm_modem_location_inject_assistance_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_inject_assistance_data
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> data_size</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Aynchronously injects assistance data to the GNSS module.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data-finish" title="mm_modem_location_inject_assistance_data_finish ()"><code class="function">mm_modem_location_inject_assistance_data_finish()</code></a> to get the result of the
+operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data-sync" title="mm_modem_location_inject_assistance_data_sync ()"><code class="function">mm_modem_location_inject_assistance_data_sync()</code></a> for the synchronous,
+blocking version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-inject-assistance-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>Data to inject. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_size</p></td>
+<td class="parameter_description"><p>size of <em class="parameter"><code>data</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-inject-assistance-data-finish"></a><h3>mm_modem_location_inject_assistance_data_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_inject_assistance_data_finish
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data" title="mm_modem_location_inject_assistance_data ()"><code class="function">mm_modem_location_inject_assistance_data()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-inject-assistance-data-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data" title="mm_modem_location_inject_assistance_data ()"><code class="function">mm_modem_location_inject_assistance_data()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-inject-assistance-data-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the injection was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-inject-assistance-data-sync"></a><h3>mm_modem_location_inject_assistance_data_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_inject_assistance_data_sync
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> data_size</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously injects assistance data to the GNSS module.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-inject-assistance-data" title="mm_modem_location_inject_assistance_data ()"><code class="function">mm_modem_location_inject_assistance_data()</code></a> for the asynchronous version of
+this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-inject-assistance-data-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>Data to inject. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_size</p></td>
+<td class="parameter_description"><p>size of <em class="parameter"><code>data</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-inject-assistance-data-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the injection was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-gps-refresh-rate"></a><h3>mm_modem_location_set_gps_refresh_rate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_set_gps_refresh_rate
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> rate</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously configures the GPS refresh rate.</p>
+<p>If a 0 rate is used, the GPS location updates will be immediately propagated
+to the interface.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate-finish" title="mm_modem_location_set_gps_refresh_rate_finish ()"><code class="function">mm_modem_location_set_gps_refresh_rate_finish()</code></a> to get the result of the
+operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate-sync" title="mm_modem_location_set_gps_refresh_rate_sync ()"><code class="function">mm_modem_location_set_gps_refresh_rate_sync()</code></a> for the synchronous,
+blocking version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-gps-refresh-rate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rate</p></td>
+<td class="parameter_description"><p>The GPS refresh rate, in seconds.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-gps-refresh-rate-finish"></a><h3>mm_modem_location_set_gps_refresh_rate_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_set_gps_refresh_rate_finish
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate" title="mm_modem_location_set_gps_refresh_rate ()"><code class="function">mm_modem_location_set_gps_refresh_rate()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-gps-refresh-rate-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate" title="mm_modem_location_set_gps_refresh_rate ()"><code class="function">mm_modem_location_set_gps_refresh_rate()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-set-gps-refresh-rate-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if setting the GPS refresh rate was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if
+<em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-set-gps-refresh-rate-sync"></a><h3>mm_modem_location_set_gps_refresh_rate_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_set_gps_refresh_rate_sync
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> rate</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously configures the GPS refresh rate.</p>
+<p>If a 0 rate is used, the GPS location updates will be immediately propagated
+to the interface.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-set-gps-refresh-rate" title="mm_modem_location_set_gps_refresh_rate ()"><code class="function">mm_modem_location_set_gps_refresh_rate()</code></a> for the asynchronous version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-set-gps-refresh-rate-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rate</p></td>
+<td class="parameter_description"><p>The GPS refresh rate, in seconds.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-set-gps-refresh-rate-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if setting the refresh rate was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-3gpp"></a><h3>mm_modem_location_get_3gpp ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_get_3gpp (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                            <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the current 3GPP location information.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-finish" title="mm_modem_location_get_3gpp_finish ()"><code class="function">mm_modem_location_get_3gpp_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-sync" title="mm_modem_location_get_3gpp_sync ()"><code class="function">mm_modem_location_get_3gpp_sync()</code></a> for the synchronous, blocking version
+of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-3gpp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-3gpp-finish"></a><h3>mm_modem_location_get_3gpp_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+mm_modem_location_get_3gpp_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()"><code class="function">mm_modem_location_get_3gpp()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-3gpp-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()"><code class="function">mm_modem_location_get_3gpp()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-3gpp-finish.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available. The
+returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-3gpp-sync"></a><h3>mm_modem_location_get_3gpp_sync ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+mm_modem_location_get_3gpp_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the current 3GPP location information.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()"><code class="function">mm_modem_location_get_3gpp()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-3gpp-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-3gpp-sync.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available. The
+returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-peek-signaled-3gpp"></a><h3>mm_modem_location_peek_signaled_3gpp ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+mm_modem_location_peek_signaled_3gpp (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> object with the current 3GPP location information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()"><code class="function">mm_modem_location_get_3gpp()</code></a> or <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-sync" title="mm_modem_location_get_3gpp_sync ()"><code class="function">mm_modem_location_get_3gpp_sync()</code></a>,
+this method does not perform an explicit query. Instead, this method will
+return the location information that may have been signaled by the modem.
+Therefore, this method will only succeed if location signaling is enabled
+(e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a> in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-3gpp" title="mm_modem_location_get_signaled_3gpp ()"><code class="function">mm_modem_location_get_signaled_3gpp()</code></a> if on
+another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-3gpp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-3gpp.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. Do
+not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-signaled-3gpp"></a><h3>mm_modem_location_get_signaled_3gpp ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="returnvalue">MMLocation3gpp</span></a> *
+mm_modem_location_get_signaled_3gpp (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> object with the current 3GPP location information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp" title="mm_modem_location_get_3gpp ()"><code class="function">mm_modem_location_get_3gpp()</code></a> or <a class="link" href="MMModemLocation.html#mm-modem-location-get-3gpp-sync" title="mm_modem_location_get_3gpp_sync ()"><code class="function">mm_modem_location_get_3gpp_sync()</code></a>,
+this method does not perform an explicit query. Instead, this method will
+return the location information that may have been signaled by the modem.
+Therefore, this method will only succeed if location signaling is enabled
+(e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a> in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-3gpp" title="mm_modem_location_get_signaled_3gpp ()"><code class="function">mm_modem_location_get_signaled_3gpp()</code></a> again to get a new <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a>
+with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-3gpp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-3gpp.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-nmea"></a><h3>mm_modem_location_get_gps_nmea ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_get_gps_nmea (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the current GPS NMEA location information.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-finish" title="mm_modem_location_get_gps_nmea_finish ()"><code class="function">mm_modem_location_get_gps_nmea_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-sync" title="mm_modem_location_get_gps_nmea_sync ()"><code class="function">mm_modem_location_get_gps_nmea_sync()</code></a> for the synchronous, blocking
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-nmea.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-nmea-finish"></a><h3>mm_modem_location_get_gps_nmea_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+mm_modem_location_get_gps_nmea_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                       <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()"><code class="function">mm_modem_location_get_gps_nmea()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-nmea-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()"><code class="function">mm_modem_location_get_gps_nmea()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-nmea-finish.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-nmea-sync"></a><h3>mm_modem_location_get_gps_nmea_sync ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+mm_modem_location_get_gps_nmea_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                     <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the current GPS NMEA location information.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()"><code class="function">mm_modem_location_get_gps_nmea()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-nmea-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-nmea-sync.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-peek-signaled-gps-nmea"></a><h3>mm_modem_location_peek_signaled_gps_nmea ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+mm_modem_location_peek_signaled_gps_nmea
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> object with the current GPS NMEA location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()"><code class="function">mm_modem_location_get_gps_nmea()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-sync" title="mm_modem_location_get_gps_nmea_sync ()"><code class="function">mm_modem_location_get_gps_nmea_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-nmea" title="mm_modem_location_get_signaled_gps_nmea ()"><code class="function">mm_modem_location_get_signaled_gps_nmea()</code></a> if on
+another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-gps-nmea.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-gps-nmea.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. Do
+not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-signaled-gps-nmea"></a><h3>mm_modem_location_get_signaled_gps_nmea ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="returnvalue">MMLocationGpsNmea</span></a> *
+mm_modem_location_get_signaled_gps_nmea
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> object with the current GPS NMEA location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea" title="mm_modem_location_get_gps_nmea ()"><code class="function">mm_modem_location_get_gps_nmea()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-nmea-sync" title="mm_modem_location_get_gps_nmea_sync ()"><code class="function">mm_modem_location_get_gps_nmea_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-nmea" title="mm_modem_location_get_signaled_gps_nmea ()"><code class="function">mm_modem_location_get_signaled_gps_nmea()</code></a> again to get a new <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a>
+with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-gps-nmea.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-gps-nmea.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-raw"></a><h3>mm_modem_location_get_gps_raw ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_get_gps_raw (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                               <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                               <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the current GPS raw location information.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-finish" title="mm_modem_location_get_gps_raw_finish ()"><code class="function">mm_modem_location_get_gps_raw_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-sync" title="mm_modem_location_get_gps_raw_sync ()"><code class="function">mm_modem_location_get_gps_raw_sync()</code></a> for the synchronous, blocking
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-raw-finish"></a><h3>mm_modem_location_get_gps_raw_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+mm_modem_location_get_gps_raw_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()"><code class="function">mm_modem_location_get_gps_raw()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-raw-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()"><code class="function">mm_modem_location_get_gps_raw()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-raw-finish.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-gps-raw-sync"></a><h3>mm_modem_location_get_gps_raw_sync ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+mm_modem_location_get_gps_raw_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the current GPS raw location information.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()"><code class="function">mm_modem_location_get_gps_raw()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-raw-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-gps-raw-sync.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-peek-signaled-gps-raw"></a><h3>mm_modem_location_peek_signaled_gps_raw ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+mm_modem_location_peek_signaled_gps_raw
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> object with the current GPS raw location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()"><code class="function">mm_modem_location_get_gps_raw()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-sync" title="mm_modem_location_get_gps_raw_sync ()"><code class="function">mm_modem_location_get_gps_raw_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-raw" title="mm_modem_location_get_signaled_gps_raw ()"><code class="function">mm_modem_location_get_signaled_gps_raw()</code></a> if on
+another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-gps-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-gps-raw.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. Do
+not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-signaled-gps-raw"></a><h3>mm_modem_location_get_signaled_gps_raw ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="returnvalue">MMLocationGpsRaw</span></a> *
+mm_modem_location_get_signaled_gps_raw
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> object with the current GPS raw location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw" title="mm_modem_location_get_gps_raw ()"><code class="function">mm_modem_location_get_gps_raw()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-gps-raw-sync" title="mm_modem_location_get_gps_raw_sync ()"><code class="function">mm_modem_location_get_gps_raw_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-gps-raw" title="mm_modem_location_get_signaled_gps_raw ()"><code class="function">mm_modem_location_get_signaled_gps_raw()</code></a> again to get a new <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a>
+with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-gps-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-gps-raw.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-cdma-bs"></a><h3>mm_modem_location_get_cdma_bs ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_get_cdma_bs (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                               <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                               <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the current CDMA base station location information.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-finish" title="mm_modem_location_get_cdma_bs_finish ()"><code class="function">mm_modem_location_get_cdma_bs_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-sync" title="mm_modem_location_get_cdma_bs_sync ()"><code class="function">mm_modem_location_get_cdma_bs_sync()</code></a> for the synchronous, blocking
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-cdma-bs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-cdma-bs-finish"></a><h3>mm_modem_location_get_cdma_bs_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+mm_modem_location_get_cdma_bs_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()"><code class="function">mm_modem_location_get_cdma_bs()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-cdma-bs-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()"><code class="function">mm_modem_location_get_cdma_bs()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-cdma-bs-finish.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-cdma-bs-sync"></a><h3>mm_modem_location_get_cdma_bs_sync ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+mm_modem_location_get_cdma_bs_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the current CDMA base station location information.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()"><code class="function">mm_modem_location_get_cdma_bs()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-cdma-bs-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-cdma-bs-sync.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not available.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-peek-signaled-cdma-bs"></a><h3>mm_modem_location_peek_signaled_cdma_bs ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+mm_modem_location_peek_signaled_cdma_bs
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> object with the current CDMA base station location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()"><code class="function">mm_modem_location_get_cdma_bs()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-sync" title="mm_modem_location_get_cdma_bs_sync ()"><code class="function">mm_modem_location_get_cdma_bs_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-cdma-bs" title="mm_modem_location_get_signaled_cdma_bs ()"><code class="function">mm_modem_location_get_signaled_cdma_bs()</code></a> if on
+another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-cdma-bs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-peek-signaled-cdma-bs.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. Do
+not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-signaled-cdma-bs"></a><h3>mm_modem_location_get_signaled_cdma_bs ()</h3>
+<pre class="programlisting"><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="returnvalue">MMLocationCdmaBs</span></a> *
+mm_modem_location_get_signaled_cdma_bs
+                               (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> object with the current CDMA base station location
+information.</p>
+<p>Unlike <a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs" title="mm_modem_location_get_cdma_bs ()"><code class="function">mm_modem_location_get_cdma_bs()</code></a> or
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-cdma-bs-sync" title="mm_modem_location_get_cdma_bs_sync ()"><code class="function">mm_modem_location_get_cdma_bs_sync()</code></a>, this method does not perform an
+explicit query. Instead, this method will return the location information
+that may have been signaled by the modem. Therefore, this method will only
+succeed if location signaling is enabled (e.g. with <a class="link" href="MMModemLocation.html#mm-modem-location-setup" title="mm_modem_location_setup ()"><code class="function">mm_modem_location_setup()</code></a>
+in the <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>).</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-signaled-cdma-bs" title="mm_modem_location_get_signaled_cdma_bs ()"><code class="function">mm_modem_location_get_signaled_cdma_bs()</code></a> again to get a new <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a>
+with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-cdma-bs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-signaled-cdma-bs.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-full"></a><h3>mm_modem_location_get_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_location_get_full (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                            <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the current location information.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full-finish" title="mm_modem_location_get_full_finish ()"><code class="function">mm_modem_location_get_full_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModemLocation.html#mm-modem-location-get-full-sync" title="mm_modem_location_get_full_sync ()"><code class="function">mm_modem_location_get_full_sync()</code></a> for the synchronous, blocking version
+of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-full-finish"></a><h3>mm_modem_location_get_full_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_get_full_finish (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                   <em class="parameter"><code><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> **location_3gpp</code></em>,
+                                   <em class="parameter"><code><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> **location_gps_nmea</code></em>,
+                                   <em class="parameter"><code><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> **location_gps_raw</code></em>,
+                                   <em class="parameter"><code><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> **location_cdma_bs</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModemLocation.html#mm-modem-location-get-full" title="mm_modem_location_get_full ()"><code class="function">mm_modem_location_get_full()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-full-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_3gpp</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> if 3GPP location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not required. The
+returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_gps_nmea</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> if GPS NMEA location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not
+required. The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_gps_raw</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> if GPS raw location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not required.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_cdma_bs</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> if CDMA Base Station location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if
+not required. The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full" title="mm_modem_location_get_full ()"><code class="function">mm_modem_location_get_full()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-full-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the retrieval was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-location-get-full-sync"></a><h3>mm_modem_location_get_full_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_location_get_full_sync (<em class="parameter"><code><a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> **location_3gpp</code></em>,
+                                 <em class="parameter"><code><a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> **location_gps_nmea</code></em>,
+                                 <em class="parameter"><code><a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> **location_gps_raw</code></em>,
+                                 <em class="parameter"><code><a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> **location_cdma_bs</code></em>,
+                                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the current location information.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModemLocation.html#mm-modem-location-get-full" title="mm_modem_location_get_full ()"><code class="function">mm_modem_location_get_full()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-location-get-full-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_3gpp</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocation3gpp.html" title="MMLocation3gpp"><span class="type">MMLocation3gpp</span></a> if 3GPP location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not required. The
+returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_gps_nmea</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationGpsNmea.html" title="MMLocationGpsNmea"><span class="type">MMLocationGpsNmea</span></a> if GPS NMEA location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not
+required. The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_gps_raw</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationGpsRaw.html" title="MMLocationGpsRaw"><span class="type">MMLocationGpsRaw</span></a> if GPS raw location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not required.
+The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location_cdma_bs</p></td>
+<td class="parameter_description"><p>Return location for a
+<a class="link" href="MMLocationCdmaBs.html" title="MMLocationCdmaBs"><span class="type">MMLocationCdmaBs</span></a> if CDMA Base Station location is requested, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if
+not required. The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-location-get-full-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the setup was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMModemLocation.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMModemLocation-struct"></a><h3>struct MMModemLocation</h3>
+<pre class="programlisting">struct MMModemLocation;</pre>
+<p>The <a class="link" href="MMModemLocation.html" title="MMModemLocation"><span class="type">MMModemLocation</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MM-LOCATION-LONGITUDE-UNKNOWN:CAPS"></a><h3>MM_LOCATION_LONGITUDE_UNKNOWN</h3>
+<pre class="programlisting">#define MM_LOCATION_LONGITUDE_UNKNOWN -G_MAXDOUBLE
+</pre>
+<p>Identifier for an unknown longitude value.</p>
+<p>Proper longitude values fall in the [-180,180] range.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MM-LOCATION-LATITUDE-UNKNOWN:CAPS"></a><h3>MM_LOCATION_LATITUDE_UNKNOWN</h3>
+<pre class="programlisting">#define MM_LOCATION_LATITUDE_UNKNOWN  -G_MAXDOUBLE
+</pre>
+<p>Identifier for an unknown latitude value.</p>
+<p>Proper latitude values fall in the [-90,90] range.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MM-LOCATION-ALTITUDE-UNKNOWN:CAPS"></a><h3>MM_LOCATION_ALTITUDE_UNKNOWN</h3>
+<pre class="programlisting">#define MM_LOCATION_ALTITUDE_UNKNOWN  -G_MAXDOUBLE
+</pre>
+<p>Identifier for an unknown altitude value.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

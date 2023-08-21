@@ -1,0 +1,45 @@
+%NAME%
+libmaxminddb
+
+%VERSION%
+1.7.1-1
+
+%BASE%
+libmaxminddb
+
+%DESC%
+MaxMindDB GeoIP2 database library
+
+%URL%
+https://dev.maxmind.com/geoip/geoip2/downloadable/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1664652352
+
+%INSTALLDATE%
+1691208518
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+41276
+
+%REASON%
+1
+
+%LICENSE%
+Apache
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+
+%OPTDEPENDS%
+geoip2-database: IP geolocation databases
+

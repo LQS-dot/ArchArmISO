@@ -1,0 +1,5 @@
+#!/bin/bash
+# Create a tag dir for clonezilla
+mkdir -p /var/lib/clonezilla/
+
+echo "Starting to prepare Clonezilla live env..."

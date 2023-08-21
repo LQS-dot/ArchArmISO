@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: INIReader
+Description: simple .INI file parser for C++
+Version: 56
+Requires.private: inih
+Libs: -L${libdir} -lINIReader
+Cflags: -I${includedir}

@@ -1,0 +1,9 @@
+#!/usr/bin/ash
+# SPDX-License-Identifier: GPL-2.0-only
+
+run_cleanuphook() {
+    rm -rf /usr/lib/modules
+    cp -ax /. /run/initramfs
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

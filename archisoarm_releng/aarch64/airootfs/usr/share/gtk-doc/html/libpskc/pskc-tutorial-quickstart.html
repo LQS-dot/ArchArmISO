@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PSKC Introduction: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-tutorial.html" title="Part I. PSKC Tutorial">
+<link rel="prev" href="pskc-tutorial.html" title="Part I. PSKC Tutorial">
+<link rel="next" href="pskc-tutorial-library.html" title="Library libpskc">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-tutorial.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pskc-tutorial.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pskc-tutorial-library.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="pskc-tutorial-quickstart"></a>PSKC Introduction</h2></div></div></div>
+<p>
+	The Portable Symmetric Key Container (PSKC) format is used to
+	transport and provision symmetric keys to cryptographic
+	devices or software.  The PSKC Library allows you to parse,
+	validate and generate PSKC data.  The PSKC Library is written
+	in C, uses LibXML, and is licensed under LGPLv2+.  A companion
+	to the library is a command line tool (pskctool) to
+	interactively manipulate PSKC data.
+      </p>
+<p>
+	To get a feeling of the PSKC data format we show the shortest
+	possible valid PSKC content.
+      </p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span> Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;</span>KeyPackage<span class="gtkdoc opt">/&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	Of course, since the intent with PSKC is to transport
+	cryptographic keys, the example above is of little use since
+	it does not carry any keys.  The next example is more
+	realistic, and show PSKC data used to transport a key used for
+	a OATH HOTP implementation.  The interesting values are the
+	DeviceInfo values to identify the intended hardware, the Key
+	Id "12345678", and the base64-encoded shared secret
+	"MTIzNA==".
+      </p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span> encoding<span class="gtkdoc opt">=</span><span class="string">&quot;UTF-8&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span>
+	      xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span><span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Manufacturer<span class="gtkdoc opt">&gt;</span>Manufacturer<span class="gtkdoc opt">&lt;/</span>Manufacturer<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>SerialNo<span class="gtkdoc opt">&gt;</span><span class="number">987654321</span><span class="gtkdoc opt">&lt;/</span>SerialNo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>Key Id<span class="gtkdoc opt">=</span><span class="string">&quot;12345678&quot;</span>
+         Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>ResponseFormat Length<span class="gtkdoc opt">=</span><span class="string">&quot;8&quot;</span> Encoding<span class="gtkdoc opt">=</span><span class="string">&quot;DECIMAL&quot;</span><span class="gtkdoc opt">/&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Data<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Secret<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span>MTIzNDU2Nzg5MDEyMzQ1Njc4OTA<span class="gtkdoc opt">=</span>
+          <span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Secret<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Counter<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span><span class="number">0</span><span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Counter<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>Data<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>Key<span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;/</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

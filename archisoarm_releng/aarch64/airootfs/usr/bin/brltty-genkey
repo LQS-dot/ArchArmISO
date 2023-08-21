@@ -1,0 +1,57 @@
+#!/bin/sh
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2022 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU Lesser General Public License, as published by the Free Software
+# Foundation; either version 2.1 of the License, or (at your option) any
+# later version. Please see the file LICENSE-LGPL for details.
+#
+# Web Page: http://brltty.app/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+set -e
+umask 077
+
+. "`dirname "${0}"`/brltty-prologue.sh"
+. "${programDirectory}/brltty-config.sh"
+
+defaultKeyFile="${BRLTTY_EXECUTE_ROOT}${BRLAPI_KEY_FILE}"
+
+addProgramOption f string.path keyFile "the BrlAPI key file" "${defaultKeyFile}"
+parseProgramArguments "${@}"
+
+try() {
+   ("${@}"; exit "${?}") 2>/dev/null && {
+      logMessage task "key generated"
+      exit 0
+   }
+}
+
+[ -n "${keyFile}" ] || keyFile="${defaultKeyFile}"
+
+logNote "trying mcookie"
+try mcookie >"${keyFile}"
+
+for device in "/dev/urandom" "/dev/random"
+do
+   [ -c "${device}" -a -r "${device}" ] && {
+      logNote "trying ${device}"
+      try dd if="${device}" of="${keyFile}" bs=32 count=1
+   }
+done
+
+logNote "trying \$RANDOM"
+key="${RANDOM}"
+[ -n "${key}" ] && try echo >"${keyFile}" "${key}"
+
+rm -f -- "${keyFile}"
+semanticError "no supported mechanism is available"
+exit 3

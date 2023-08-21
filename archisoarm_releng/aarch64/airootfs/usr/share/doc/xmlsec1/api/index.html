@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>XML Security Library Reference Manual: XML Security Library Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<meta name="description" content="This manual documents the interfaces of the xmlsec library and has some short notes to help get you up to speed with using the library.">
+<link rel="home" href="index.html" title="XML Security Library Reference Manual">
+<link rel="next" href="xmlsec-notes.html" title="Part I. XML Security Library Tutorial">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">XML Security Library Reference Manual</p></th></tr></table></div>
+<div><div class="authorgroup"><div class="author">
+<h3 class="author">
+<span class="firstname">Aleksey</span> <span class="surname">Sanin</span>
+</h3>
+<div class="affiliation"><div class="address"><p><br>
+	    <code class="email">&lt;<a class="email" href="mailto:aleksey@aleksey.com">aleksey@aleksey.com</a>&gt;</code><br>
+	  </p></div></div>
+</div></div></div>
+<div><p class="copyright">Copyright © 2002-2022 Aleksey Sanin</p></div>
+<div><div class="legalnotice">
+<a name="id-1.1.4"></a><p>Permission is granted to make and distribute verbatim
+      copies of this manual provided the copyright notice and this
+      permission notice are preserved on all copies.</p>
+<p>Permission is granted to copy and distribute modified
+      versions of this manual under the conditions for verbatim
+      copying, provided also that the entire resulting derived work is
+      distributed under the terms of a permission notice identical to
+      this one.</p>
+<p>Permission is granted to copy and distribute translations
+      of this manual into another language, under the above conditions
+      for modified versions.</p>
+</div></div>
+<div><div class="abstract"><p>This manual documents the interfaces of the xmlsec
+      library and has some short notes to help get you up to speed
+      with using the library.</p></div></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="part"><a href="xmlsec-notes.html">I. XML Security Library Tutorial</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="xmlsec-notes-overview.html">Overview.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-structure.html">XML Security Library Structure.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-compiling.html">Building the application with XML Security Library.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-compiling.html#xmlsec-notes-compiling-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-include-files.html">Include files.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-compiling-unix.html">Compiling and linking on Unix.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-compiling-windows.html">Compiling and linking on Windows.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-compiling-others.html">Compiling and linking on other systems.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-init-shutdown.html">Initialization and shutdown.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-sign-encrypt.html">Signing and encrypting documents.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-sign-encrypt.html#xmlsec-notes-sign-encrypt-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-sign.html">Signing a document.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-encrypt.html">Encrypting data.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-templates.html">Creating dynamic templates.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-templates.html#xmlsec-notes-templates-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-dynamic-signature-templates.html">Creating dynamic signature templates.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-dynamic-encryption-templates.html">Creating dynamic encryption templates.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-verify-decrypt.html">Verifing and decrypting documents.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-verify-decrypt.html#xmlsec-notes-verify-decrypt-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-verify.html">Verifying a signed document</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-decrypt.html">Decrypting an encrypted document</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-keys.html">Keys.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-keysmngr.html">Keys manager.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-keysmngr.html#xmlsec-notes-keysmngr-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-simple-keys-store.html">Simple keys store.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-keys-manager-sign-enc.html">Using keys manager for signatures/encryption.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-keys-mngr-verify-decrypt.html">Using keys manager for verification/decryption.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-custom-keys-store.html">Implementing a custom keys store.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-x509.html">Using X509 Certificates.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-x509.html#xmlsec-notes-x509-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-sign-x509.html">Signing data with X509 certificate.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-verify-x509.html">Verifing document signed with X509 certificates.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-notes-transforms.html">Transforms and transforms chain.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-contexts.html">Using context objects.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-notes-new-crypto.html">Adding support for new cryptographic library.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto.html#xmlsec-notes-new-crypto-overview">Overview.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-skeleton.html">Creating a framework from the skeleton.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-functions.html">xmlSecCryptoApp* functions.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-klasses.html">Klasses and objects.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-transforms.html">Cryptographic transforms.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-keys.html">Keys data and keys data stores.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-simple-keys-mngr.html">Default keys manager.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-notes-new-crypto-sharing-results.html">Sharing the results.</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-examples.html">Examples.</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="xmlsec-examples.html#xmlsec-examples-overview">XML Security Library Examples.</a></span></dt>
+<dt><span class="sect1"><a href="xmlsec-examples-sign-template-file.html">Signing a template file.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-template-file.html#xmlsec-example-sign1">sign1.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-template-file.html#xmlsec-example-sign1-tmpl">sign1-tmpl.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-template-file.html#xmlsec-example-sign1-res">sign1-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-examples-sign-dynamimc-template.html">Signing a dynamicaly created template.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-dynamimc-template.html#xmlsec-example-sign2">sign2.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-dynamimc-template.html#xmlsec-example-sign2-doc">sign2-doc.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-dynamimc-template.html#xmlsec-example-sign2-res">sign2-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-examples-sign-x509.html">Signing with X509 certificate.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-x509.html#xmlsec-example-sign3">sign3.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-x509.html#xmlsec-example-sign3-doc">sign3-doc.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-examples-sign-x509.html#xmlsec-example-sign3-res">sign3-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-verify-with-key.html">Verifying a signature with a single key.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-verify-with-key.html#xmlsec-example-verify1">verify1.c</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="xmlsec-verify-with-keys-mngr.html">Verifying a signature with keys manager.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-verify-with-keys-mngr.html#xmlsec-example-verify2">verify2.c</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="xmlsec-verify-with-x509.html">Verifying a signature with X509 certificates.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-verify-with-x509.html#xmlsec-example-verify3">verify3.c</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="xmlsec-verify-with-restrictions.html">Verifying a signature with additional restrictions.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-verify-with-restrictions.html#xmlsec-example-verify4">verify4.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-verify-with-restrictions.html#xmlsec-example-verify4-tmpl">verify4-tmpl.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-verify-with-restrictions.html#xmlsec-example-verify4-res">verify4-res.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-verify-with-restrictions.html#xmlsec-example-verify4-bad-tmpl">verify4-bad-tmpl.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-verify-with-restrictions.html#xmlsec-example-verify4-bad-res">verify4-bad-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-encrypt-template-file.html">Encrypting data with a template file.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-encrypt-template-file.html#xmlsec-example-encrypt1">encrypt1.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-template-file.html#xmlsec-example-encrypt1-tmpl">encrypt1-tmpl.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-template-file.html#xmlsec-example-encrypt1-res">encrypt1-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-encrypt-dynamic-template.html">Encrypting data with a dynamicaly created template.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-encrypt-dynamic-template.html#xmlsec-example-encrypt2">encrypt2.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-dynamic-template.html#xmlsec-example-encrypt2-doc">encrypt2-doc.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-dynamic-template.html#xmlsec-example-encrypt2-res">encrypt2-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-encrypt-with-session-key.html">Encrypting data with a session key.</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="xmlsec-encrypt-with-session-key.html#xmlsec-example-encrypt3">encrypt3.c</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-with-session-key.html#xmlsec-example-encrypt3-doc">encrypt3-doc.xml</a></span></dt>
+<dt><span class="sect2"><a href="xmlsec-encrypt-with-session-key.html#xmlsec-example-encrypt3-res">encrypt3-res.xml</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="xmlsec-decrypt-with-signle-key.html">Decrypting data with a single key.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-decrypt-with-signle-key.html#xmlsec-example-decrypt1">decrypt1.c</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="xmlsec-decrypt-with-keys-mngr.html">Decrypting data with keys manager.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-decrypt-with-keys-mngr.html#xmlsec-example-decrypt2">decrypt2.c</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="xmlsec-custom-keys-manager.html">Writing a custom keys manager.</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="xmlsec-custom-keys-manager.html#xmlsec-example-decrypt3">decrypt3.c</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-signature-klasses.html">APPENDIX A. XML Security Library Signature Klasses.</a></span></dt>
+<dt><span class="chapter"><a href="xmlsec-encryption-klasses.html">APPENDIX B. XML Security Library Encryption Klasses.</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="xmlsec-reference.html">II. XML Security Library API Reference.</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="xmlsec-ref.html">XML Security Core Library API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-app.html">app</a></span><span class="refpurpose"> — Crypto-engine independent application support functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-base64.html">base64</a></span><span class="refpurpose"> — Base64 encoding/decoding functions and base64 transform implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-bn.html">bn</a></span><span class="refpurpose"> — Big numbers support functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-buffer.html">buffer</a></span><span class="refpurpose"> — Binary memory buffer functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-dl.html">dl</a></span><span class="refpurpose"> — Dynamic crypto-engine library loading functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-errors.html">errors</a></span><span class="refpurpose"> — Error reporting and logging functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-io.html">io</a></span><span class="refpurpose"> — Input/output functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-keyinfo.html">keyinfo</a></span><span class="refpurpose"> — &lt;dsig:KeyInfo/&gt; node parser functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-keysdata.html">keysdata</a></span><span class="refpurpose"> — Crypto key data object functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-keys.html">keys</a></span><span class="refpurpose"> — Crypto key object functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-keysmngr.html">keysmngr</a></span><span class="refpurpose"> — Keys manager object functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-list.html">list</a></span><span class="refpurpose"> — Generic list structure functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-membuf.html">membuf</a></span><span class="refpurpose"> — Memory buffer transform functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nodeset.html">nodeset</a></span><span class="refpurpose"> — XML nodes set functions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-parser.html">parser</a></span><span class="refpurpose"> — XML parser functions and the XML parser transform implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-templates.html">templates</a></span><span class="refpurpose"> — XML signature and encryption template functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-transforms.html">transforms</a></span><span class="refpurpose"> — Transform object functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-version.html">version</a></span><span class="refpurpose"> — Version macros.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-xmldsig.html">xmldsig</a></span><span class="refpurpose"> — XML Digital Signature functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-xmlenc.html">xmlenc</a></span><span class="refpurpose"> — XML Encryption support.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-xmlsec.html">xmlsec</a></span><span class="refpurpose"> — Utility functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-xmltree.html">xmltree</a></span><span class="refpurpose"> — XML tree functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-x509.html">x509</a></span><span class="refpurpose"> — &lt;dsig:X509Certificate/&gt; node parser functions.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-openssl-ref.html">XML Security Library for OpenSLL API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-openssl-app.html">app</a></span><span class="refpurpose"> — Application support functions for OpenSSL.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-openssl-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for OpenSSL.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-openssl-evp.html">evp</a></span><span class="refpurpose"> — Private/public (EVP) keys implementation for OpenSSL.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-openssl-x509.html">x509</a></span><span class="refpurpose"> — X509 certificates implementation for OpenSSL.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-gnutls-ref.html">XML Security Library for GnuTLS API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-gnutls-app.html">app</a></span><span class="refpurpose"> — Application support functions for GnuTLS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-gnutls-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for GnuTLS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-gnutls-x509.html">x509</a></span><span class="refpurpose"> — X509 certificates implementation for GnuTLS.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-gcrypt-ref.html">XML Security Library for GCrypt API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-gcrypt-app.html">app</a></span><span class="refpurpose"> — Application support functions for GCrypt.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-gcrypt-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for GCrypt.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-nss-ref.html">XML Security Library for NSS API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nss-app.html">app</a></span><span class="refpurpose"> — Application support functions for NSS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nss-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for NSS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nss-keysstore.html">keysstore</a></span><span class="refpurpose"> — Keys store implementation for NSS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nss-pkikeys.html">pkikeys</a></span><span class="refpurpose"> — Private/public keys implementation for NSS.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-nss-x509.html">x509</a></span><span class="refpurpose"> — X509 certificates implementation for NSS.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-mscrypto-ref.html">XML Security Library for Microsoft Crypto API Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscrypto-app.html">app</a></span><span class="refpurpose"> — Application support functions for Microsoft Crypto API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscrypto-certkeys.html">certkeys</a></span><span class="refpurpose"> — Certificate keys support functions for Microsoft Crypto API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscrypto-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for Microsoft Crypto API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscrypto-keysstore.html">keysstore</a></span><span class="refpurpose"> — Keys store implementation for Microsoft Crypto API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscrypto-x509.html">x509</a></span><span class="refpurpose"> — X509 certificates implementation for Microsoft Crypto API.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-msccng-ref.html">XML Security Library for Microsoft Cryptography API: Next Generation (CNG) Reference.</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscng-app.html">app</a></span><span class="refpurpose"> — Application support functions for Microsoft Cryptography API: Next Generation (CNG).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscng-certkeys.html">certkeys</a></span><span class="refpurpose"> — Certificate keys support functions for Microsoft Cryptography API: Next Generation (CNG).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscng-crypto.html">crypto</a></span><span class="refpurpose"> — Crypto transforms implementation for Microsoft Cryptography API: Next Generation (CNG).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscng-keysstore.html">keysstore</a></span><span class="refpurpose"> — Keys store implementation for Microsoft Cryptography API: Next Generation (CNG).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="xmlsec-mscng-x509.html">x509</a></span><span class="refpurpose"> — X509 certificates implementation for Microsoft Cryptography API: Next Generation (CNG).</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="xmlsec-index.html">XML Security Library Reference Index</a></span></dt>
+</dl></dd>
+</dl></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

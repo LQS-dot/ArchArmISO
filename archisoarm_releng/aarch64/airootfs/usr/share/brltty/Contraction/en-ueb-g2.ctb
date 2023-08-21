@@ -1,0 +1,466 @@
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2022 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU Lesser General Public License, as published by the Free Software
+# Foundation; either version 2.1 of the License, or (at your option) any
+# later version. Please see the file LICENSE-LGPL for details.
+#
+# Web Page: http://brltty.app/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+# BRLTTY Contraction Table - English (UEB, grade 2)
+# Created by Michael Curran <mick@kulgan.net>
+
+#This is by no means complete, but at least all the important ascii symbols and general grade 2 contractions are here.
+#I am trying to compress space as much as possible so a lot of syllable boundary rules havn't been included.
+
+#Special signs
+capsign 6
+begcaps 6-6
+endcaps 6-3
+letsign 56
+
+#Numbers
+numsign 3456
+always 1 1
+always 2 12
+always 3 14
+always 4 145
+always 5 15
+always 6 124
+always 7 1245
+always 8 125
+always 9 24
+always 0 245
+midnum . 256
+midnum , 2
+midnum \s 5
+
+#Largest contractions
+word a =
+word about 1-12
+contraction ab
+word above 1-12-1236
+contraction abv
+sufword according 1-14
+contraction ac
+word across 1-14-1235
+contraction acr
+word after 1-124
+contraction af
+sufword afterward 1-124-2456
+contraction afw
+sufword afternoon 1-124-1345
+contraction afn
+word again 1-1245
+contraction ag
+word against 1-1245-34
+contraction agst
+word almost 1-123-134
+contraction alm
+word already 1-123-1235
+contraction alr
+word also 1-123
+contraction al
+word although 1-123-1456
+word alth =
+word altogether 1-123-2345
+contraction alt
+word always 1-123-2456
+contraction alw
+word as 1356
+contraction as
+word be 23
+contraction be
+word because 23-14
+word bec =
+word before 23-124
+word bef =
+word behind 23-125
+word beh =
+word below 23-123
+word bel =
+word beneath 23-1345
+sufword beside 23-234
+sufword bes =
+sufword between 23-2345
+sufword bet =
+word beyond 23-13456
+word bey =
+sufword blind 12-123
+contraction bl
+sufword braille 12-1235-123
+contraction brl
+word but 12
+contraction b
+word can 14
+contraction c
+sufword conceive 25-14-1236
+contraction concv
+sufword conceiving 25-14-1236-1245
+contraction concvg
+word could 14-145
+contraction cd
+word cannot 456-14
+sufword character 5-16
+word children 16-1345
+word chn =
+always day 5-145
+always deceive 145-14-1236
+contraction dcv
+always deceiving 145-14-1236-1245
+contraction dcvg
+word declare 145-14-123
+contraction dcl
+word do 145
+contraction d
+word either 15-24
+contraction ei
+lowword enough 26
+contraction en
+word every 15
+contraction e
+always father 5-124
+always first 124-34
+always fst =
+word from 124
+contraction f
+always friend 124-1235
+contraction fr
+word go 1245
+contraction g
+always good 1245-145
+contraction gd
+word great 1245-1235-2345
+contraction grt
+word had 456-125
+word have 125
+contraction h
+always here 5-125
+word herself 125-12456-124
+contraction herf
+word him 125-134
+contraction hm
+word himself 125-134-124
+contraction hmf
+lowword his 236
+word i =
+sufword immediate 24-134-134
+contraction imm
+word it 1346
+contraction x
+word its 1346-234
+contraction xs
+word itself 1346-124
+contraction xf
+word just 245
+contraction j
+word knowledge 13
+contraction k
+always know 5-13
+sufword letter 123-1235
+contraction lr
+word like 123
+contraction l
+word little 123-123
+contraction ll
+sufword lord 5-123
+word more 134
+contraction m
+sufword mother 5-134
+sufword much 134-16
+contraction mch
+word must 134-34
+contraction mst
+word myself 134-13456-124
+contraction myf
+sufword name 5-1345
+sufword necessary 1345-15-14
+contraction nec
+word neither 1345-15-24
+contraction nei
+word not 1345
+contraction n
+word ourselves 1256-1235-1236-234
+contraction ourvs
+word paid 1234-145
+contraction pd
+word people 1234
+contraction p
+always perceive 1234-12456-14-1236
+contraction percv
+always perceiving 1234-12456-14-1236-1245
+contraction percvg
+word perhaps 1234-12456-125
+contraction perh
+sufword quick 12345-13
+contraction qk
+word quite 12345
+contraction q
+always question 5-12345
+word rather 1235
+contraction r
+always receive 1235-14-1236
+contraction rcv
+always receiving 1235-14-1236-1245
+contraction rcvg
+always rejoice 1235-245-14
+contraction rjc
+word said 234-145
+contraction sd
+word shall 146
+contraction sh
+always should 146-145
+contraction shd
+word so 234
+contraction s
+always some 5-234
+always spirit 456-234
+word still 34
+contraction st
+word such 234-16
+contraction sch
+word that 2345
+contraction t
+word this 1456
+contraction th
+word thyself 1456-13456-124
+contraction thyf
+word today 2345-145
+contraction td
+word tomorrow 2345-134
+contraction tm
+word tonight 2345-1345
+contraction tn
+word themselves 2346-134-1236-234
+contraction themvs
+always their 456-2346
+always there 5-2346
+word these 45-2346
+always through 5-1456
+always together 2345-1245-1235
+contraction tgr
+word those 45-1456
+word upon 45-136
+word us 136
+contraction u
+always under 5-136
+word very 1236
+contraction v
+lowword was 356
+word which 156
+contraction wh
+word will 2456
+contraction w
+lowword were 2356
+always where 5-156
+always with 23456
+always word 45-2456
+word whose 45-156
+always work 5-2456
+always would 2456-145
+contraction wd
+always world 456-2456
+word you 13456
+contraction y
+always young 5-13456
+word your 13456-1235
+contraction yr
+word yours 13456-1235-234
+contraction yrs
+word yourself 13456-1235-124
+contraction yrf
+word yourselves 13456-1235-1236-234
+contraction yrvs
+
+#Smaller contractions
+midendword ance 46-15
+midendword ence 56-15
+always ever 5-15
+always for 123456
+midendword ful 56-123
+midendword ing 346
+midendword ity 56-13456
+midendword less 46-234
+always many 456-134
+midendword ment 56-2345
+midendword eness 15-56-234
+midendword iness 24-56-234
+midendword ness 56-234
+midendword ong 56-1245
+midendword  ound 46-145
+midendword ount 46-2345
+always ought 5-1256
+always part 5-1234
+always right 5-1235
+midendword sion 46-1345
+always the 2346
+always time 5-2345
+midendword tion 56-1345
+
+#Smallist contractions
+always and 12346
+always ar 345
+midword bb 23
+midword cc 25
+always ch 16
+midword ea 2
+always ed 1246
+always en 26
+always er 12456
+midword ff 235
+midword gg 2356
+always gh 126
+always in 35
+word o =
+always of 12356
+always one 5-135
+always ou 1256
+always ow 246
+always sh 146
+always st 34
+always th 1456
+always wh 156
+
+#Disambiguation
+always ear 15-345
+
+include letters-latin.cti
+always \s 0  
+repeatable \s\s 0-0
+always \t 456-2345
+
+always " 6-2356
+always ' 3
+endword 'd 3-145
+endword 'll 3-123-123
+endword 'm 3-134
+endword 're 3-1235-15
+endword 's 3-234
+endword 't 3-2345
+endword 've 3-1236-15
+
+always , 2
+always ; 23
+always : 25
+always . 256
+always ! 235
+always ? 236
+
+always ( 5-126
+always ) 5-345
+always [ 46-126
+always ] 46-345
+always { 456-126
+always } 456-345
+always < 4-126
+always > 4-345
+
+always | 456-1256
+always / 456-34
+always \\ 456-16
+
+always ` 46-16
+always ~ 4-35
+always @ 4-1
+always # 456-1456
+always $ 4-234
+always % 46-356
+always ^ 4-26
+always & 4-12346
+always * 5-35
+always - 36
+always _ 46-36
+always = 5-2356
+always + 5-235
+
+# http://www.brailleauthority.org/ueb/symbols_list.pdf
+always	\xA1	45-56-235	# ¡ ⠘⠰⠖	inverted exclamation mark - 13.5
+always	\xA2	4-14	# ¢ ⠈⠉	cent - 3.10
+always	\xA3	4-123	# £ ⠈⠇	pound (sterling) - 3.10
+always	\xA5	4-13456	# ¥ ⠈⠽	yen (Japan) - 3.10
+always	\xA7	45-234	# § ⠘⠎	section - 3.19
+always	\xA9	45-14	# © ⠘⠉	copyright - 3.8
+always	\xAE	45-1235	# ® ⠘⠗	registered - 3.8
+always	\xB0	45-245	# ° ⠘⠚	degree - 3.11
+always	\xB6	45-1234	# ¶ ⠘⠏	paragraph - 3.19
+always	\xBF	45-56-236	# ¿ ⠘⠰⠦	inverted question mark - 13.5
+always	\u0300	45-16	# ` ⠘⠡	grave accent (combining) - 4.2
+always	\u0301	45-34	# ´ ⠘⠌	acute accent (combining) - 4.2
+always	\u0302	45-146	# ^ ⠘⠩	circumflex accent (combining) - 4.2
+always	\u0303	45-12456	# ~ ⠘⠽	tilde (combining) - 4.2
+always	\u0308	45-25	# ¨ ⠘⠒	diaeresis (combining) - 4.2
+always	\u030A	45-1246	# ˚ ⠘⠫	ring above (combining) - 4.2
+always	\u0327	45-12346	# ¸ ⠘⠯	cedilla (combining) - 4.2
+always	\u2014	6-36	# — ⠠⠤	dash - 7.2
+always	\u2020	4-6-1456	# † ⠈⠠⠹	dagger - 3.3
+always	\u2021	4-6-12456	# ‡ ⠈⠠⠻	double dagger - 3.3
+always	\u2022	456-256	# • ⠸⠲	bullet - 3.5
+always	\u20A3	4-124	# ₣ ⠈⠋	franc (France) - 3.10
+always	\u20A6	4-1345	# ₦ ⠈⠝	naira (Nigeria) - 3.10
+always	\u20AC	4-15	# € ⠈⠑	euro - 3.10
+always	\u2122	45-2345	# ™ ⠘⠞	trade mark - 3.8
+always	\u2640	45-1346	# ♀ ⠘⠭	female (Venus) - 3.16
+always	\u2642	45-13456	# ♂ ⠘⠽	male (Mars) - 3.16
+always	\u3003	5-2	# 〃 ⠐⠂	ditto mark - 3.12
+
+# http://www.brailleauthority.org/ueb/Guidelines_for_Technical_Material_2008-10.pdf
+always	\x2B	5-235	# + ⠐⠖	plus
+always	\xB1	456-235	# ± ⠸⠖	plus or minus (plus over minus)
+always	\xB7	5-256	# · ⠐⠲	multiplication (middle dot)
+always	\xD7	5-236	# × ⠐⠦	multiplication (cross)
+always	\xF7	5-34	# ÷ ⠐⠌	division (horizontal line between dots)
+always	\u2032	2356	# ′ ⠶	prime (feet, minutes)
+always	\u2033	2356-2356	# ″ ⠶⠶	double prime (inches, seconds)
+always	\u2212	5-36	# − ⠐⠤	minus
+always	\u2213	456-36	# ∓ ⠸⠤	minus or plus (minus over plus)
+always	\u221D	456-5-2356	# ∝ ⠸⠐⠶	proportional to
+always	\u2243	456-35	# ≃ ⠸⠔	asymptomatically equal to (tilde over horizontal line)
+always	\u2245	5-456-35	# ≅ ⠐⠸⠔	approximately equal to (tilde over equals sign)
+always	\u2248	45-35	# ≈ ⠘⠔	almost equal to (tilde over tilde)
+always	\u224F	45-5-2356	# ≏ ⠘⠐⠶	difference between (equals sign with bump in top bar)
+always	\u2251	46-5-2356	# ≑ ⠨⠐⠶	geometrically equal to (equals sign dotted above and below)
+always	\u2260	5-2356-4-156	# ≠ ⠐⠶⠈⠱	not equal to (line through equals sign)
+always	\u2261	456-123456	# ≡ ⠸⠿	identical to (three horizontal lines)
+always	\u2264	456-4-126	# ≤ ⠸⠈⠣	less than or equal to
+always	\u2265	456-4-345	# ≥ ⠸⠈⠜	greater than or equal to
+always	\u226A	46-4-126	# ≪ ⠨⠈⠣	much less than
+always	\u226B	46-4-345	# ≫ ⠨⠈⠜	much greater than
+
+# The Greek letters
+always	\u03B1	46-1	# α ⠨⠁	alpha
+always	\u03B2	46-12	# β ⠨⠃	beta
+always	\u03B3	46-1245	# γ ⠨⠛	gamma
+always	\u03B4	46-145	# δ ⠨⠙	delta
+always	\u03B5	46-15	# ε ⠨⠑	epsilon
+always	\u03B6	46-1356	# ζ ⠨⠵	zeta
+always	\u03B7	46-156	# η ⠨⠱	eta
+always	\u03B8	46-1456	# θ ⠨⠹	theta
+always	\u03B9	46-24	# ι ⠨⠊	iota
+always	\u03BA	46-13	# κ ⠨⠅	kappa
+always	\u03BB	46-123	# λ ⠨⠇	lamda
+always	\u03BC	46-134	# μ ⠨⠍	mu
+always	\u03BD	46-1345	# ν ⠨⠝	nu
+always	\u03BE	46-1346	# ξ ⠨⠭	xi
+always	\u03BF	46-135	# ο ⠨⠕	omicron
+always	\u03C0	46-1234	# π ⠨⠏	pi
+always	\u03C1	46-1235	# ρ ⠨⠗	rho
+always	\u03C2	46-234	# ς ⠨⠎	final sigma
+always	\u03C3	46-234	# σ ⠨⠎	sigma
+always	\u03C4	46-2345	# τ ⠨⠞	tau
+always	\u03C5	46-136	# υ ⠨⠥	upsilon
+always	\u03C6	46-124	# φ ⠨⠋	phi
+always	\u03C7	46-12346	# χ ⠨⠯	chi
+always	\u03C8	46-13456	# ψ ⠨⠽	psi
+always	\u03C9	46-2456	# ω ⠨⠺	omega
+
+# inline contraction of emoji descriptions
+emoji en

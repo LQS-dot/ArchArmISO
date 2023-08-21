@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsysfs
+Description: interface to Linux sysfs
+Version: 2.1.1
+URL: https://github.com/linux-ras/sysfsutils
+Libs: -L${libdir} -lsysfs
+Cflags: -I${includedir}

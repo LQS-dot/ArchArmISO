@@ -1,0 +1,42 @@
+%NAME%
+linux-atm
+
+%VERSION%
+2.5.2-8
+
+%BASE%
+linux-atm
+
+%DESC%
+Drivers and tools to support ATM networking under Linux.
+
+%URL%
+http://linux-atm.sourceforge.net/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1672153150
+
+%INSTALLDATE%
+1691208567
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+1308607
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+
+%OPTDEPENDS%
+flex: for atmsigd
+

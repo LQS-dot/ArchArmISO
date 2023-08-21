@@ -1,0 +1,2501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMModem3gpp: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03.html#id-1.2.4.3" title="Generic interfaces">
+<link rel="prev" href="MMModem.html" title="MMModem">
+<link rel="next" href="MMModemCdma.html" title="MMModemCdma">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMModem3gpp.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMModem3gpp.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#MMModem3gpp.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03.html#id-1.2.4.3"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMModem.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMModemCdma.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMModem3gpp"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMModem3gpp.top_of_page"></a>MMModem3gpp</span></h2>
+<p>MMModem3gpp — The 3GPP interface</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMModem3gpp.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-get-operator-code" title="mm_modem_3gpp_network_get_operator_code ()">mm_modem_3gpp_network_get_operator_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-get-operator-short" title="mm_modem_3gpp_network_get_operator_short ()">mm_modem_3gpp_network_get_operator_short</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-get-operator-long" title="mm_modem_3gpp_network_get_operator_long ()">mm_modem_3gpp_network_get_operator_long</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModemAccessTechnology</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-get-access-technology" title="mm_modem_3gpp_network_get_access_technology ()">mm_modem_3gpp_network_get_access_technology</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModem3gppNetworkAvailability</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-get-availability" title="mm_modem_3gpp_network_get_availability ()">mm_modem_3gpp_network_get_availability</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-free" title="mm_modem_3gpp_network_free ()">mm_modem_3gpp_network_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-path" title="mm_modem_3gpp_get_path ()">mm_modem_3gpp_get_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-path" title="mm_modem_3gpp_dup_path ()">mm_modem_3gpp_dup_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-imei" title="mm_modem_3gpp_get_imei ()">mm_modem_3gpp_get_imei</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-imei" title="mm_modem_3gpp_dup_imei ()">mm_modem_3gpp_dup_imei</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-operator-code" title="mm_modem_3gpp_get_operator_code ()">mm_modem_3gpp_get_operator_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-operator-code" title="mm_modem_3gpp_dup_operator_code ()">mm_modem_3gpp_dup_operator_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-operator-name" title="mm_modem_3gpp_get_operator_name ()">mm_modem_3gpp_get_operator_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-operator-name" title="mm_modem_3gpp_dup_operator_name ()">mm_modem_3gpp_dup_operator_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModem3gppFacility</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-enabled-facility-locks" title="mm_modem_3gpp_get_enabled_facility_locks ()">mm_modem_3gpp_get_enabled_facility_locks</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModem3gppRegistrationState</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-registration-state" title="mm_modem_3gpp_get_registration_state ()">mm_modem_3gpp_get_registration_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-pco" title="mm_modem_3gpp_get_pco ()">mm_modem_3gpp_get_pco</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModem3gppEpsUeModeOperation</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-eps-ue-mode-operation" title="mm_modem_3gpp_get_eps_ue_mode_operation ()">mm_modem_3gpp_get_eps_ue_mode_operation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-path" title="mm_modem_3gpp_get_initial_eps_bearer_path ()">mm_modem_3gpp_get_initial_eps_bearer_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-initial-eps-bearer-path" title="mm_modem_3gpp_dup_initial_eps_bearer_path ()">mm_modem_3gpp_dup_initial_eps_bearer_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer" title="mm_modem_3gpp_get_initial_eps_bearer ()">mm_modem_3gpp_get_initial_eps_bearer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMBearer.html" title="MMBearer"><span class="returnvalue">MMBearer</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-finish" title="mm_modem_3gpp_get_initial_eps_bearer_finish ()">mm_modem_3gpp_get_initial_eps_bearer_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMBearer.html" title="MMBearer"><span class="returnvalue">MMBearer</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-sync" title="mm_modem_3gpp_get_initial_eps_bearer_sync ()">mm_modem_3gpp_get_initial_eps_bearer_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="returnvalue">MMBearerProperties</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-settings" title="mm_modem_3gpp_get_initial_eps_bearer_settings ()">mm_modem_3gpp_get_initial_eps_bearer_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="returnvalue">MMBearerProperties</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-peek-initial-eps-bearer-settings" title="mm_modem_3gpp_peek_initial_eps_bearer_settings ()">mm_modem_3gpp_peek_initial_eps_bearer_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMModem3gppPacketServiceState</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-packet-service-state" title="mm_modem_3gpp_get_packet_service_state ()">mm_modem_3gpp_get_packet_service_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="returnvalue">MMNr5gRegistrationSettings</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-nr5g-registration-settings" title="mm_modem_3gpp_get_nr5g_registration_settings ()">mm_modem_3gpp_get_nr5g_registration_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="returnvalue">MMNr5gRegistrationSettings</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-peek-nr5g-registration-settings" title="mm_modem_3gpp_peek_nr5g_registration_settings ()">mm_modem_3gpp_peek_nr5g_registration_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register" title="mm_modem_3gpp_register ()">mm_modem_3gpp_register</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register-finish" title="mm_modem_3gpp_register_finish ()">mm_modem_3gpp_register_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register-sync" title="mm_modem_3gpp_register_sync ()">mm_modem_3gpp_register_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan" title="mm_modem_3gpp_scan ()">mm_modem_3gpp_scan</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan-finish" title="mm_modem_3gpp_scan_finish ()">mm_modem_3gpp_scan_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan-sync" title="mm_modem_3gpp_scan_sync ()">mm_modem_3gpp_scan_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation" title="mm_modem_3gpp_set_eps_ue_mode_operation ()">mm_modem_3gpp_set_eps_ue_mode_operation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation-finish" title="mm_modem_3gpp_set_eps_ue_mode_operation_finish ()">mm_modem_3gpp_set_eps_ue_mode_operation_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation-sync" title="mm_modem_3gpp_set_eps_ue_mode_operation_sync ()">mm_modem_3gpp_set_eps_ue_mode_operation_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings" title="mm_modem_3gpp_set_initial_eps_bearer_settings ()">mm_modem_3gpp_set_initial_eps_bearer_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings-finish" title="mm_modem_3gpp_set_initial_eps_bearer_settings_finish ()">mm_modem_3gpp_set_initial_eps_bearer_settings_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings-sync" title="mm_modem_3gpp_set_initial_eps_bearer_settings_sync ()">mm_modem_3gpp_set_initial_eps_bearer_settings_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock" title="mm_modem_3gpp_disable_facility_lock ()">mm_modem_3gpp_disable_facility_lock</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock-finish" title="mm_modem_3gpp_disable_facility_lock_finish ()">mm_modem_3gpp_disable_facility_lock_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock-sync" title="mm_modem_3gpp_disable_facility_lock_sync ()">mm_modem_3gpp_disable_facility_lock_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state" title="mm_modem_3gpp_set_packet_service_state ()">mm_modem_3gpp_set_packet_service_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state-finish" title="mm_modem_3gpp_set_packet_service_state_finish ()">mm_modem_3gpp_set_packet_service_state_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state-sync" title="mm_modem_3gpp_set_packet_service_state_sync ()">mm_modem_3gpp_set_packet_service_state_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings" title="mm_modem_3gpp_set_nr5g_registration_settings ()">mm_modem_3gpp_set_nr5g_registration_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings-finish" title="mm_modem_3gpp_set_nr5g_registration_settings_finish ()">mm_modem_3gpp_set_nr5g_registration_settings_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings-sync" title="mm_modem_3gpp_set_nr5g_registration_settings_sync ()">mm_modem_3gpp_set_nr5g_registration_settings_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="MMModem3gppNetwork"></a><div class="refsect1">
+<a name="MMModem3gpp.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMModem3gpp.html#MMModem3gpp-struct" title="struct MMModem3gpp">MMModem3gpp</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="MMModem3gpp.html#MMModem3gppNetwork-struct" title="MMModem3gppNetwork">MMModem3gppNetwork</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMModem3gpp.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> MMModem3gppNetwork
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="../gio/GDBusProxy.html#GDBusProxy-struct">GDBusProxy</a>
+        <span class="lineart">╰──</span> <a class="link" href="MmGdbusModem3gppProxy.html" title="MmGdbusModem3gppProxy">MmGdbusModem3gppProxy</a>
+            <span class="lineart">╰──</span> MMModem3gpp
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMModem3gpp.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MMModem3gpp implements
+ <a href="../gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a>,  <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>,  <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a> and  <a class="link" href="MmGdbusModem3gpp.html" title="MmGdbusModem3gpp">MmGdbusModem3gpp</a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMModem3gpp.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> is an object providing access to the methods, signals and
+properties of the 3GPP interface.</p>
+<p>The 3GPP interface is exposed whenever a modem has any of the 3GPP
+capabilities (<code class="literal">MM_MODEM_CAPABILITY_GSM_UMTS</code>, <code class="literal">MM_MODEM_CAPABILITY_LTE</code>
+or <code class="literal">MM_MODEM_CAPABILITY_5GNR</code>).</p>
+</div>
+<div class="refsect1">
+<a name="MMModem3gpp.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-get-operator-code"></a><h3>mm_modem_3gpp_network_get_operator_code ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_network_get_operator_code
+                               (<em class="parameter"><code>const <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Get the operator code (MCCMNC) of the 3GPP network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-code.returns"></a><h4>Returns</h4>
+<p>The operator code, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-get-operator-short"></a><h3>mm_modem_3gpp_network_get_operator_short ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_network_get_operator_short
+                               (<em class="parameter"><code>const <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Get the short operator name of the 3GPP network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-short.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-short.returns"></a><h4>Returns</h4>
+<p>The long operator name, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-get-operator-long"></a><h3>mm_modem_3gpp_network_get_operator_long ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_network_get_operator_long
+                               (<em class="parameter"><code>const <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Get the long operator name of the 3GPP network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-long.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-operator-long.returns"></a><h4>Returns</h4>
+<p>The long operator name, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-get-access-technology"></a><h3>mm_modem_3gpp_network_get_access_technology ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModemAccessTechnology</span>
+mm_modem_3gpp_network_get_access_technology
+                               (<em class="parameter"><code>const <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Get the technology used to access the 3GPP network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-access-technology.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-access-technology.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModemAccessTechnology</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-get-availability"></a><h3>mm_modem_3gpp_network_get_availability ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModem3gppNetworkAvailability</span>
+mm_modem_3gpp_network_get_availability
+                               (<em class="parameter"><code>const <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Get availability of the 3GPP network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-availability.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-get-availability.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModem3gppNetworkAvailability</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-network-free"></a><h3>mm_modem_3gpp_network_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_network_free (<em class="parameter"><code><a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> *network</code></em>);</pre>
+<p>Frees a <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-network-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>network</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-path"></a><h3>mm_modem_3gpp_get_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_get_path (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets the DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> which implements this interface.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-dup-path"></a><h3>mm_modem_3gpp_dup_path ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_dup_path (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a> object which implements this
+interface.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMObject.html" title="MMObject"><span class="type">MMObject</span></a>. The returned value
+should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-imei"></a><h3>mm_modem_3gpp_get_imei ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_get_imei (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets the <a class="ulink" href="http://en.wikipedia.org/wiki/Imei" target="_top">IMEI</a>,
+as reported by this <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-imei" title="mm_modem_3gpp_dup_imei ()"><code class="function">mm_modem_3gpp_dup_imei()</code></a> if on another
+thread.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-imei.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-imei.returns"></a><h4>Returns</h4>
+<p>The IMEI, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-dup-imei"></a><h3>mm_modem_3gpp_dup_imei ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_dup_imei (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the <a class="ulink" href="http://en.wikipedia.org/wiki/Imei" target="_top">IMEI</a>,
+as reported by this <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-imei.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-imei.returns"></a><h4>Returns</h4>
+<p>The IMEI, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. The returned
+value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-operator-code"></a><h3>mm_modem_3gpp_get_operator_code ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_get_operator_code (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets the code of the operator to which the mobile is currently registered.</p>
+<p>Returned in the format <code class="literal">"MCCMNC"</code>, where
+<code class="literal">MCC</code> is the three-digit ITU E.212 Mobile Country Code
+and <code class="literal">MNC</code> is the two- or three-digit GSM Mobile Network
+Code. e.g. e<code class="literal">"31026"</code> or <code class="literal">"310260"</code>.</p>
+<p>If the <code class="literal">MCC</code> and <code class="literal">MNC</code> are not known
+or the mobile is not registered to a mobile network, this property will
+be a zero-length (blank) string.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-operator-code" title="mm_modem_3gpp_dup_operator_code ()"><code class="function">mm_modem_3gpp_dup_operator_code()</code></a> if on another
+thread.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-operator-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-operator-code.returns"></a><h4>Returns</h4>
+<p>The operator code, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-dup-operator-code"></a><h3>mm_modem_3gpp_dup_operator_code ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_dup_operator_code (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the code of the operator to which the mobile is currently
+registered.</p>
+<p>Returned in the format <code class="literal">"MCCMNC"</code>, where
+<code class="literal">MCC</code> is the three-digit ITU E.212 Mobile Country Code
+and <code class="literal">MNC</code> is the two- or three-digit GSM Mobile Network
+Code. e.g. e<code class="literal">"31026"</code> or <code class="literal">"310260"</code>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-operator-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-operator-code.returns"></a><h4>Returns</h4>
+<p>The operator code, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available.
+The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-operator-name"></a><h3>mm_modem_3gpp_get_operator_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_get_operator_name (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets the name of the operator to which the mobile is
+currently registered.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-operator-name" title="mm_modem_3gpp_dup_operator_name ()"><code class="function">mm_modem_3gpp_dup_operator_name()</code></a> if on another
+thread.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-operator-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-operator-name.returns"></a><h4>Returns</h4>
+<p>The operator name, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-dup-operator-name"></a><h3>mm_modem_3gpp_dup_operator_name ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_dup_operator_name (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the name of the operator to which the mobile is
+currently registered.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-operator-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-operator-name.returns"></a><h4>Returns</h4>
+<p>The operator name, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available.
+The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-enabled-facility-locks"></a><h3>mm_modem_3gpp_get_enabled_facility_locks ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModem3gppFacility</span>
+mm_modem_3gpp_get_enabled_facility_locks
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Get the list of facilities for which PIN locking is enabled.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-enabled-facility-locks.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-enabled-facility-locks.returns"></a><h4>Returns</h4>
+<p> A bitmask of <span class="type">MMModem3gppFacility</span> flags, specifying which facilities
+have locks enabled.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-registration-state"></a><h3>mm_modem_3gpp_get_registration_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModem3gppRegistrationState</span>
+mm_modem_3gpp_get_registration_state (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Get the the mobile registration status as defined in 3GPP TS 27.007
+section 10.1.19.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-registration-state.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem.html" title="MMModem"><span class="type">MMModem</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-registration-state.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModem3gppRegistrationState</span> value, specifying the current
+registration state.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-pco"></a><h3>mm_modem_3gpp_get_pco ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+mm_modem_3gpp_get_pco (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Get the list of <a class="link" href="MMPco.html" title="MMPco"><span class="type">MMPco</span></a> received from the network.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-pco.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-pco.returns"></a><h4>Returns</h4>
+<p>a list of <a class="link" href="MMPco.html" title="MMPco"><span class="type">MMPco</span></a>
+objects, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned value should be freed with
+<a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> using <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> as <a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> function. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.Pco]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-eps-ue-mode-operation"></a><h3>mm_modem_3gpp_get_eps_ue_mode_operation ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModem3gppEpsUeModeOperation</span>
+mm_modem_3gpp_get_eps_ue_mode_operation
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Get the UE mode of operation for EPS.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-eps-ue-mode-operation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-eps-ue-mode-operation.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModem3gppEpsUeModeOperation</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-path"></a><h3>mm_modem_3gpp_get_initial_eps_bearer_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_get_initial_eps_bearer_path
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets the DBus path of the initial EPS <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a> exposed in this <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-dup-initial-eps-bearer-path" title="mm_modem_3gpp_dup_initial_eps_bearer_path ()"><code class="function">mm_modem_3gpp_dup_initial_eps_bearer_path()</code></a> if on
+another thread.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none
+available. Do not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-dup-initial-eps-bearer-path"></a><h3>mm_modem_3gpp_dup_initial_eps_bearer_path ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_modem_3gpp_dup_initial_eps_bearer_path
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the DBus path of the initial EPS <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a> exposed in this
+<a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-initial-eps-bearer-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-dup-initial-eps-bearer-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none
+available. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-initial-eps-bearer"></a><h3>mm_modem_3gpp_get_initial_eps_bearer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_get_initial_eps_bearer (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                      <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously gets the initial EPS <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a> object exposed by this
+<a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-finish" title="mm_modem_3gpp_get_initial_eps_bearer_finish ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer_finish()</code></a> to get the result of the
+operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-sync" title="mm_modem_3gpp_get_initial_eps_bearer_sync ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer_sync()</code></a> for the synchronous, blocking
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-finish"></a><h3>mm_modem_3gpp_get_initial_eps_bearer_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MMBearer.html" title="MMBearer"><span class="returnvalue">MMBearer</span></a> *
+mm_modem_3gpp_get_initial_eps_bearer_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer" title="mm_modem_3gpp_get_initial_eps_bearer ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer" title="mm_modem_3gpp_get_initial_eps_bearer ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-finish.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned
+value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-sync"></a><h3>mm_modem_3gpp_get_initial_eps_bearer_sync ()</h3>
+<pre class="programlisting"><a class="link" href="MMBearer.html" title="MMBearer"><span class="returnvalue">MMBearer</span></a> *
+mm_modem_3gpp_get_initial_eps_bearer_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously gets the initial EPS <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a> object exposed by this
+<a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer" title="mm_modem_3gpp_get_initial_eps_bearer ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer()</code></a> for the asynchronous version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-sync.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="MMBearer.html" title="MMBearer"><span class="type">MMBearer</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned
+value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-settings"></a><h3>mm_modem_3gpp_get_initial_eps_bearer_settings ()</h3>
+<pre class="programlisting"><a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="returnvalue">MMBearerProperties</span></a> *
+mm_modem_3gpp_get_initial_eps_bearer_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> object specifying the settings configured in
+the device to use when attaching to the LTE network.</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-settings" title="mm_modem_3gpp_get_initial_eps_bearer_settings ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer_settings()</code></a> again to get a new
+<a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-initial-eps-bearer-settings.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-peek-initial-eps-bearer-settings"></a><h3>mm_modem_3gpp_peek_initial_eps_bearer_settings ()</h3>
+<pre class="programlisting"><a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="returnvalue">MMBearerProperties</span></a> *
+mm_modem_3gpp_peek_initial_eps_bearer_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> object specifying the settings configured in
+the device to use when attaching to the LTE network.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-initial-eps-bearer-settings" title="mm_modem_3gpp_get_initial_eps_bearer_settings ()"><code class="function">mm_modem_3gpp_get_initial_eps_bearer_settings()</code></a>
+if on another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-peek-initial-eps-bearer-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-peek-initial-eps-bearer-settings.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a>. Do not free the returned
+value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-packet-service-state"></a><h3>mm_modem_3gpp_get_packet_service_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMModem3gppPacketServiceState</span>
+mm_modem_3gpp_get_packet_service_state
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Get the packet domain service state.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-packet-service-state.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem.html" title="MMModem"><span class="type">MMModem</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-packet-service-state.returns"></a><h4>Returns</h4>
+<p> A <span class="type">MMModem3gppPacketServiceState</span> value, specifying the current PS attach
+state.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-get-nr5g-registration-settings"></a><h3>mm_modem_3gpp_get_nr5g_registration_settings ()</h3>
+<pre class="programlisting"><a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="returnvalue">MMNr5gRegistrationSettings</span></a> *
+mm_modem_3gpp_get_nr5g_registration_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> object including the configured 5GNR
+registration settings.</p>
+<div class="warning">The values reported by <em class="parameter"><code>self</code></em> are not updated when the values in the
+interface change. Instead, the client is expected to call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-nr5g-registration-settings" title="mm_modem_3gpp_get_nr5g_registration_settings ()"><code class="function">mm_modem_3gpp_get_nr5g_registration_settings()</code></a> again to get a new
+<a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> with the new values.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-nr5g-registration-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-get-nr5g-registration-settings.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> that must be freed with
+<a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-peek-nr5g-registration-settings"></a><h3>mm_modem_3gpp_peek_nr5g_registration_settings ()</h3>
+<pre class="programlisting"><a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="returnvalue">MMNr5gRegistrationSettings</span></a> *
+mm_modem_3gpp_peek_nr5g_registration_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>);</pre>
+<p>Gets a <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> object including the configured 5GNR
+registration settings.</p>
+<div class="warning">The returned value is only valid until the property changes so
+it is only safe to use this function on the thread where
+<em class="parameter"><code>self</code></em> was constructed. Use <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-get-nr5g-registration-settings" title="mm_modem_3gpp_get_nr5g_registration_settings ()"><code class="function">mm_modem_3gpp_get_nr5g_registration_settings()</code></a>
+if on another thread.</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-peek-nr5g-registration-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-peek-nr5g-registration-settings.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> Do not free the returned
+value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-register"></a><h3>mm_modem_3gpp_register ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_register (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *network_id</code></em>,
+                        <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                        <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously requests registration with a given mobile network.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register-finish" title="mm_modem_3gpp_register_finish ()"><code class="function">mm_modem_3gpp_register_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register-sync" title="mm_modem_3gpp_register_sync ()"><code class="function">mm_modem_3gpp_register_sync()</code></a> for the synchronous, blocking version of
+this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-register.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>network_id</p></td>
+<td class="parameter_description"><p>The operator ID to register. An empty string can be used to
+register to the home network.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-register-finish"></a><h3>mm_modem_3gpp_register_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_register_finish (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                               <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register" title="mm_modem_3gpp_register ()"><code class="function">mm_modem_3gpp_register()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-register-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register" title="mm_modem_3gpp_register ()"><code class="function">mm_modem_3gpp_register()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-register-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the modem was registered, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-register-sync"></a><h3>mm_modem_3gpp_register_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_register_sync (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *network_id</code></em>,
+                             <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously requests registration with a given mobile network.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-register" title="mm_modem_3gpp_register ()"><code class="function">mm_modem_3gpp_register()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-register-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>network_id</p></td>
+<td class="parameter_description"><p>The operator ID to register. An empty string can be used to
+register to the home network.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-register-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the modem was registered, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-scan"></a><h3>mm_modem_3gpp_scan ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_scan (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously requests to scan available 3GPP networks.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan-finish" title="mm_modem_3gpp_scan_finish ()"><code class="function">mm_modem_3gpp_scan_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan-sync" title="mm_modem_3gpp_scan_sync ()"><code class="function">mm_modem_3gpp_scan_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-scan.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-scan-finish"></a><h3>mm_modem_3gpp_scan_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+mm_modem_3gpp_scan_finish (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                           <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan" title="mm_modem_3gpp_scan ()"><code class="function">mm_modem_3gpp_scan()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-scan-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan" title="mm_modem_3gpp_scan ()"><code class="function">mm_modem_3gpp_scan()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-scan-finish.returns"></a><h4>Returns</h4>
+<p>a list
+of <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> structs, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned value
+should be freed with <a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> using <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-free" title="mm_modem_3gpp_network_free ()"><code class="function">mm_modem_3gpp_network_free()</code></a> as
+<a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> function. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.Modem3gppNetwork]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-scan-sync"></a><h3>mm_modem_3gpp_scan_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+mm_modem_3gpp_scan_sync (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                         <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously requests to scan available 3GPP networks.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-scan" title="mm_modem_3gpp_scan ()"><code class="function">mm_modem_3gpp_scan()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-scan-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-scan-sync.returns"></a><h4>Returns</h4>
+<p>a list
+of <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> structs, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned value
+should be freed with <a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> using <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-network-free" title="mm_modem_3gpp_network_free ()"><code class="function">mm_modem_3gpp_network_free()</code></a> as
+<a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> function. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.Modem3gppNetwork]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation"></a><h3>mm_modem_3gpp_set_eps_ue_mode_operation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_set_eps_ue_mode_operation
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMModem3gppEpsUeModeOperation</span> mode</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously requests to update the EPS UE mode of operation.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation-finish" title="mm_modem_3gpp_set_eps_ue_mode_operation_finish ()"><code class="function">mm_modem_3gpp_set_eps_ue_mode_operation_finish()</code></a> to get the result of the
+operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation-sync" title="mm_modem_3gpp_set_eps_ue_mode_operation_sync ()"><code class="function">mm_modem_3gpp_set_eps_ue_mode_operation_sync()</code></a> for the synchronous,
+blocking version of this method. The calling thread is blocked until a reply
+is received.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mode</p></td>
+<td class="parameter_description"><p>A <span class="type">MMModem3gppEpsUeModeOperation</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-finish"></a><h3>mm_modem_3gpp_set_eps_ue_mode_operation_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_eps_ue_mode_operation_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation" title="mm_modem_3gpp_set_eps_ue_mode_operation ()"><code class="function">mm_modem_3gpp_set_eps_ue_mode_operation()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation" title="mm_modem_3gpp_set_eps_ue_mode_operation ()"><code class="function">mm_modem_3gpp_set_eps_ue_mode_operation()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-sync"></a><h3>mm_modem_3gpp_set_eps_ue_mode_operation_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_eps_ue_mode_operation_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMModem3gppEpsUeModeOperation</span> mode</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously requests to update the EPS UE mode of operation.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-eps-ue-mode-operation" title="mm_modem_3gpp_set_eps_ue_mode_operation ()"><code class="function">mm_modem_3gpp_set_eps_ue_mode_operation()</code></a> for the asynchronous version
+of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mode</p></td>
+<td class="parameter_description"><p>A <span class="type">MMModem3gppEpsUeModeOperation</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-eps-ue-mode-operation-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-8.html#api-index-1.8">1.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings"></a><h3>mm_modem_3gpp_set_initial_eps_bearer_settings ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_set_initial_eps_bearer_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> *config</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously configures the settings for the initial LTE default bearer.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings-finish" title="mm_modem_3gpp_set_initial_eps_bearer_settings_finish ()"><code class="function">mm_modem_3gpp_set_initial_eps_bearer_settings_finish()</code></a> to get the result of
+the operation.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> object with the properties to use.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-finish"></a><h3>mm_modem_3gpp_set_initial_eps_bearer_settings_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_initial_eps_bearer_settings_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings" title="mm_modem_3gpp_set_initial_eps_bearer_settings ()"><code class="function">mm_modem_3gpp_set_initial_eps_bearer_settings()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings" title="mm_modem_3gpp_set_initial_eps_bearer_settings ()"><code class="function">mm_modem_3gpp_set_initial_eps_bearer_settings()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-sync"></a><h3>mm_modem_3gpp_set_initial_eps_bearer_settings_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_initial_eps_bearer_settings_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> *config</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously configures the settings for the initial LTE default bearer.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-initial-eps-bearer-settings" title="mm_modem_3gpp_set_initial_eps_bearer_settings ()"><code class="function">mm_modem_3gpp_set_initial_eps_bearer_settings()</code></a> for the asynchronous
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>config</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMBearerProperties.html" title="MMBearerProperties"><span class="type">MMBearerProperties</span></a> object with the properties to use.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-initial-eps-bearer-settings-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-disable-facility-lock"></a><h3>mm_modem_3gpp_disable_facility_lock ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_disable_facility_lock (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                     <em class="parameter"><code><span class="type">MMModem3gppFacility</span> facility</code></em>,
+                                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *control_key</code></em>,
+                                     <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                     <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously disables the modem personalization lock.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock-finish" title="mm_modem_3gpp_disable_facility_lock_finish ()"><code class="function">mm_modem_3gpp_disable_facility_lock_finish()</code></a> to get the result of
+the operation.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-disable-facility-lock.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>facility</p></td>
+<td class="parameter_description"><p>Single bit value describing the modem personalization lock to disable.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>control_key</p></td>
+<td class="parameter_description"><p>String with control key required to unlock the personalization.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-disable-facility-lock-finish"></a><h3>mm_modem_3gpp_disable_facility_lock_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_disable_facility_lock_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock" title="mm_modem_3gpp_disable_facility_lock ()"><code class="function">mm_modem_3gpp_disable_facility_lock()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-disable-facility-lock-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock" title="mm_modem_3gpp_disable_facility_lock ()"><code class="function">mm_modem_3gpp_disable_facility_lock()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-disable-facility-lock-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-disable-facility-lock-sync"></a><h3>mm_modem_3gpp_disable_facility_lock_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_disable_facility_lock_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMModem3gppFacility</span> facility</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *control_key</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously disables facility lock.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-disable-facility-lock" title="mm_modem_3gpp_disable_facility_lock ()"><code class="function">mm_modem_3gpp_disable_facility_lock()</code></a> for the asynchronous
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-disable-facility-lock-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>facility</p></td>
+<td class="parameter_description"><p>Single bit value describing the modem personalization lock to disable.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>control_key</p></td>
+<td class="parameter_description"><p>String with control key required to unlock the personalization.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-disable-facility-lock-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-packet-service-state"></a><h3>mm_modem_3gpp_set_packet_service_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_set_packet_service_state
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMModem3gppPacketServiceState</span> state</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously tries to attach or detach from the packet domain service.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state-finish" title="mm_modem_3gpp_set_packet_service_state_finish ()"><code class="function">mm_modem_3gpp_set_packet_service_state_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state-sync" title="mm_modem_3gpp_set_packet_service_state_sync ()"><code class="function">mm_modem_3gpp_set_packet_service_state_sync()</code></a> for the synchronous,
+blocking version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-packet-service-state.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>A <span class="type">MMModem3gppPacketServiceState</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-packet-service-state-finish"></a><h3>mm_modem_3gpp_set_packet_service_state_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_packet_service_state_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state" title="mm_modem_3gpp_set_packet_service_state ()"><code class="function">mm_modem_3gpp_set_packet_service_state()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-packet-service-state-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state" title="mm_modem_3gpp_set_packet_service_state ()"><code class="function">mm_modem_3gpp_set_packet_service_state()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-packet-service-state-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-packet-service-state-sync"></a><h3>mm_modem_3gpp_set_packet_service_state_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_packet_service_state_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMModem3gppPacketServiceState</span> state</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously tries to attach or detach from the packet domain service.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-packet-service-state" title="mm_modem_3gpp_set_packet_service_state ()"><code class="function">mm_modem_3gpp_set_packet_service_state()</code></a> for the asynchronous version of
+this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-packet-service-state-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>A <span class="type">MMModem3gppPacketServiceState</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-packet-service-state-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings"></a><h3>mm_modem_3gpp_set_nr5g_registration_settings ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_modem_3gpp_set_nr5g_registration_settings
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> *settings</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously configures the 5GNR registration settings.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings-finish" title="mm_modem_3gpp_set_nr5g_registration_settings_finish ()"><code class="function">mm_modem_3gpp_set_nr5g_registration_settings_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings-sync" title="mm_modem_3gpp_set_nr5g_registration_settings_sync ()"><code class="function">mm_modem_3gpp_set_nr5g_registration_settings_sync()</code></a> for the synchronous,
+blocking version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>settings</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-finish"></a><h3>mm_modem_3gpp_set_nr5g_registration_settings_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_nr5g_registration_settings_finish
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings" title="mm_modem_3gpp_set_nr5g_registration_settings ()"><code class="function">mm_modem_3gpp_set_nr5g_registration_settings()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings" title="mm_modem_3gpp_set_nr5g_registration_settings ()"><code class="function">mm_modem_3gpp_set_nr5g_registration_settings()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-sync"></a><h3>mm_modem_3gpp_set_nr5g_registration_settings_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_modem_3gpp_set_nr5g_registration_settings_sync
+                               (<em class="parameter"><code><a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a> *settings</code></em>,
+                                <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously configures the 5GNR registration settings.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMModem3gpp.html#mm-modem-3gpp-set-nr5g-registration-settings" title="mm_modem_3gpp_set_nr5g_registration_settings ()"><code class="function">mm_modem_3gpp_set_nr5g_registration_settings()</code></a> for the asynchronous
+version of this method.</p>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>settings</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMNr5gRegistrationSettings.html" title="MMNr5gRegistrationSettings"><span class="type">MMNr5gRegistrationSettings</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-modem-3gpp-set-nr5g-registration-settings-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMModem3gpp.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMModem3gpp-struct"></a><h3>struct MMModem3gpp</h3>
+<pre class="programlisting">struct MMModem3gpp;</pre>
+<p>The <a class="link" href="MMModem3gpp.html" title="MMModem3gpp"><span class="type">MMModem3gpp</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MMModem3gppNetwork-struct"></a><h3>MMModem3gppNetwork</h3>
+<pre class="programlisting">typedef struct _MMModem3gppNetwork MMModem3gppNetwork;</pre>
+<p>The <a class="link" href="MMModem3gpp.html#MMModem3gppNetwork"><span class="type">MMModem3gppNetwork</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

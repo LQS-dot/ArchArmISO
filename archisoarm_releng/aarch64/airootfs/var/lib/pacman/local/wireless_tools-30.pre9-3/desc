@@ -1,0 +1,36 @@
+%NAME%
+wireless_tools
+
+%VERSION%
+30.pre9-3
+
+%BASE%
+wireless_tools
+
+%DESC%
+Tools allowing to manipulate the Wireless Extensions
+
+%URL%
+https://hewlettpackard.github.io/wireless-tools/Tools.html
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1574132256
+
+%INSTALLDATE%
+1691208583
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+345738
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+

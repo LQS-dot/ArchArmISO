@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1.Modem.Sar: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-modem.html" title="The /org/freedesktop/ModemManager/Modems objects">
+<link rel="prev" href="gdbus-org.freedesktop.ModemManager1.Modem.Firmware.html" title="org.freedesktop.ModemManager1.Modem.Firmware">
+<link rel="next" href="gdbus-org.freedesktop.ModemManager1.Modem.Signal.html" title="org.freedesktop.ModemManager1.Modem.Signal">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Sar.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Sar.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-modem.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.ModemManager1.Modem.Firmware.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.ModemManager1.Modem.Signal.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1.Modem.Sar"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Sar.top_of_page"></a>org.freedesktop.ModemManager1.Modem.Sar</span></h2>
+<p>org.freedesktop.ModemManager1.Modem.Sar — The ModemManager dynamic SAR interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Sar.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Sar.Enable" title="The Enable() method">Enable</a>        (IN  b enable);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Sar.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Sar.SetPowerLevel" title="The SetPowerLevel() method">SetPowerLevel</a> (IN  u level);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.5.17.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Sar.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Sar.State" title='The "State" property'>State</a>       readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Sar.html#gdbus-property-org-freedesktop-ModemManager1-Modem-Sar.PowerLevel" title='The "PowerLevel" property'>PowerLevel</a>  readable   u
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Sar"></a><h2>Description</h2>
+<p>
+The SAR interface defines operations and properties for dynamic SAR, so
+that user applications can control the output power level dynamically.
+</p>
+<p>
+Using the SAR interface is not trivial, and it requires prior knowledge of
+the internal SAR mapping table configured in each device.
+</p>
+<p>
+The SAR mapping table is defined by the manufacturer of the device, and is
+usually setup to match a specific hardware setup (e.g. a specific laptop or
+hardware configuration). This table may provide different power levels for
+different frequency bands and/or antennas.
+</p>
+<p>
+An example SAR mapping table, where all bands and antennas share the same
+level, could look like this:
+</p>
+<div class="table"><table>
+<tr>
+<td>Power Level</td>
+<td>LTE B3</td>   <td>LTE B7</td>   <td>LTE B20</td>
+</tr>
+<tr>
+<td>0</td>          <td>26.0 dBm</td> <td>26.5 dBm</td> <td>27.0 dBm</td>
+</tr>
+<tr>
+<td>1</td>          <td>26.5 dBm</td> <td>27.0 dBm</td> <td>27.5 dBm</td>
+</tr>
+<tr>
+<td>2</td>          <td>27.0 dBm</td> <td>27.5 dBm</td> <td>28.0 dBm</td>
+</tr>
+<tr>
+<td>3</td>          <td>27.5 dBm</td> <td>28.0 dBm</td> <td>28.5 dBm</td>
+</tr>
+<tr>
+<td>4</td>          <td>28.0 dBm</td> <td>28.5 dBm</td> <td>28.5 dBm</td>
+</tr>
+<tr>
+<td>5</td>          <td>28.5 dBm</td> <td>28.5 dBm</td> <td>28.5 dBm</td>
+</tr>
+</table></div>
+<p>
+</p>
+<p>
+In this example, the SAR mapping table has 6 different levels (0 to 5),
+and it's applied exclusively for LTE bands B3, B7 and B20 in all available
+antennas. None of this information is exposed to the user in the SAR
+interface, not even the amount of levels available.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1.Modem.Sar"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Sar.Enable"></a><h3>The Enable() method</h3>
+<pre class="programlisting">
+Enable (IN  b enable);
+</pre>
+<p>
+Enable or disable dynamic SAR.
+</p>
+<p>
+When enabled, the modem's output power level can be dynamically updated
+by the host.
+</p>
+<p>
+When disabled, the modem's output power level is dynamically updated
+exclusively by the device.
+</p>
+<p>
+Since: 1.20
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>enable</code></em></code>:</span></p></td>
+<td><p>
+<code class="constant">TRUE</code> to enable dynamic SAR and <code class="constant">FALSE</code> to disable it.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Sar.SetPowerLevel"></a><h3>The SetPowerLevel() method</h3>
+<pre class="programlisting">
+SetPowerLevel (IN  u level);
+</pre>
+<p>
+Set current dynamic SAR power level for all antennas on the device.
+</p>
+<p>
+Please check with your modem vendor for detailed description on the
+number of levels and corresponding power output for each level.
+</p>
+<p>
+The index set here will apply to all antennas on the system.
+</p>
+<p>
+Since: 1.20
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN u <em class="parameter"><code>level</code></em></code>:</span></p></td>
+<td><p>
+Index of the SAR power level mapping table.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.ModemManager1.Modem.Sar"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Modem-Sar.State"></a><h3>The "State" property</h3>
+<pre class="programlisting">
+State  readable   b
+</pre>
+<p>
+Boolean indicating whether dynamic SAR is currently enabled.
+</p>
+<p>
+Since: 1.20
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Modem-Sar.PowerLevel"></a><h3>The "PowerLevel" property</h3>
+<pre class="programlisting">
+PowerLevel  readable   u
+</pre>
+<p>
+Current index of the SAR power level mapping table that is being used
+for setting the output power of all antennas on the system.
+</p>
+<p>
+This value is only applicable when dynamic SAR is enabled.
+</p>
+<p>
+Since: 1.20
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

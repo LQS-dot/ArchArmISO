@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>pkexec: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="manpages.html" title="Part V. Manual Pages">
+<link rel="prev" href="pkaction.1.html" title="pkaction">
+<link rel="next" href="pkttyagent.1.html" title="pkttyagent">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="manpages.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pkaction.1.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pkttyagent.1.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="pkexec.1"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle">pkexec</span></h2>
+<p>pkexec — Execute a command as another user</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="cmdsynopsis"><p><code class="command">pkexec</code>  [<code class="option">--version</code>] [<code class="option">--disable-internal-agent</code>] [<code class="option">--help</code>]</p></div>
+<div class="cmdsynopsis"><p><code class="command">pkexec</code>  [
+		<code class="option">--keep-cwd</code>
+      ] [ 
+          <code class="option">--user</code>
+          <em class="replaceable"><code>username</code></em>
+         ]  <em class="replaceable"><code>PROGRAM</code></em>  [ <em class="replaceable"><code>ARGUMENTS</code></em> ...]</p></div>
+</div>
+<div class="refsect1">
+<a name="pkexec-description"></a><h2>DESCRIPTION</h2>
+<p>
+      <span class="command"><strong>pkexec</strong></span> allows an authorized user to execute
+      <em class="replaceable"><code>PROGRAM</code></em> as another user. If
+      <em class="replaceable"><code>PROGRAM</code></em> is not specified, the default
+      shell will be run.  If <em class="replaceable"><code>username</code></em> is
+      not specified, then the program will be executed as the
+      administrative super user, <span class="emphasis"><em>root</em></span>.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-return-value"></a><h2>RETURN VALUE</h2>
+<p>
+      Upon successful completion, the return value is the return value
+      of <em class="replaceable"><code>PROGRAM</code></em>. If the calling process is
+      not authorized or an authorization could not be obtained through
+      authentication or an error occured, <span class="command"><strong>pkexec</strong></span>
+      exits with a return value of 127. If the authorization could not
+      be obtained because the user dismissed the authentication
+      dialog, <span class="command"><strong>pkexec</strong></span> exits with a return value of
+      126.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-auth-agent"></a><h2>AUTHENTICATION AGENT</h2>
+<p>
+      <span class="command"><strong>pkexec</strong></span>, like any other polkit application,
+      will use the authentication agent registered for the calling
+      process or session. However, if no authentication agent is
+      available, then <span class="command"><strong>pkexec</strong></span> will register its own
+      textual authentication agent. This behavior can be turned off by
+      passing the <code class="option">--disable-internal-agent</code> option.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-security-notes"></a><h2>SECURITY NOTES</h2>
+<p>
+      Executing a program as another user is a privileged
+      operation. By default the action to check for (see
+      <a class="xref" href="pkexec.1.html#pkexec-action" title="ACTION AND AUTHORIZATIONS">the section called “ACTION AND AUTHORIZATIONS”</a>) requires administrator
+      authentication. In addition, the authentication dialog presented
+      to the user will display the full path to the program to be
+      executed so the user is aware of what will happen.
+    </p>
+<p>
+      The environment that <em class="replaceable"><code>PROGRAM</code></em> will run
+      it, will be set to a minimal known and safe environment in order
+      to avoid injecting code
+      through <code class="literal">LD_LIBRARY_PATH</code> or similar
+      mechanisms. In addition the <code class="literal">PKEXEC_UID</code>
+      environment variable is set to the user id of the process
+      invoking <span class="command"><strong>pkexec</strong></span>. As a
+      result, <span class="command"><strong>pkexec</strong></span> will not by default allow you to run
+      X11 applications as another user since
+      the <code class="literal">$DISPLAY</code> and <code class="literal">$XAUTHORITY</code>
+      environment variables are not set. These two variables will be retained
+      if the <span class="emphasis"><em>org.freedesktop.policykit.exec.allow_gui</em></span> annotation
+      on an action is set to a nonempty value; this is discouraged, though, and
+      should only be used for legacy programs.
+    </p>
+<p>
+      <span class="command"><strong>pkexec</strong></span> will run <em class="replaceable"><code>PROGRAM</code></em>
+      in <em class="replaceable"><code>username</code></em>'s home directory, unless
+      <code class="option">--keep-cwd</code> is used to override this behavior
+    </p>
+<p>
+      Note that <span class="command"><strong>pkexec</strong></span> does no validation of
+      the <em class="replaceable"><code>ARGUMENTS</code></em> passed
+      to <em class="replaceable"><code>PROGRAM</code></em>. In the normal case (where
+      administrator authentication is required every
+      time <span class="command"><strong>pkexec</strong></span> is used), this is not a problem
+      since if the user is an administrator he might as well just
+      run <span class="command"><strong>pkexec bash</strong></span> to get root.
+    </p>
+<p>
+      However, if an action is used for which the user can retain
+      authorization (or if the user is implicitly authorized) this
+      could be a security hole. Therefore, as a rule of thumb,
+      programs for which the default required authorization is
+      changed, should <span class="strong"><strong>never</strong></span> implicitly trust user input (e.g. like any
+      other well-written <span class="emphasis"><em>suid</em></span> program).
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-action"></a><h2>ACTION AND AUTHORIZATIONS</h2>
+<p>
+      By default, the
+      <span class="emphasis"><em>org.freedesktop.policykit.exec</em></span> action is
+      used. To use another action, use the
+      <span class="emphasis"><em>org.freedesktop.policykit.exec.path</em></span>
+      annotation on an action with the value set to the full path of
+      the program. In addition to specifying the program, the
+      authentication message, description, icon and defaults can be
+      specified. If the <span class="emphasis"><em>org.freedesktop.policykit.exec.argv1</em></span>
+      annotation is present, the action will only be picked if the
+      first argument to the program matches the value of the annotation.
+    </p>
+<p>
+      Note that authentication messages may reference variables (see
+      <a class="xref" href="pkexec.1.html#pkexec-variables" title="VARIABLES">the section called “VARIABLES”</a>), for example
+      <code class="literal">$(user)</code> will be expanded to the value of the
+      <code class="literal">user</code> variable.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-wrapper"></a><h2>WRAPPER USAGE</h2>
+<p>
+      To avoid modifying existing software to prefix their
+      command-line invocations with <span class="command"><strong>pkexec</strong></span>,
+      it's possible to use <span class="command"><strong>pkexec</strong></span> in a
+      <a class="ulink" href="http://en.wikipedia.org/wiki/Shebang_(Unix)" target="_top">she-bang wrapper</a>
+      like this:
+    </p>
+<pre class="programlisting">
+#!/usr/bin/pkexec /usr/bin/python
+
+import os
+import sys
+
+print "Hello, I'm running as uid %d"%(os.getuid())
+
+for n in range(len(sys.argv)):
+    print "arg[%d]=`%s'"%(n, sys.argv[n])
+</pre>
+<p>
+      If this script is installed into <code class="filename">/usr/bin/my-pk-test</code>,
+      then the following annotations
+    </p>
+<pre class="programlisting">
+  [...]
+  &lt;annotate key="org.freedesktop.policykit.exec.path"&gt;/usr/bin/python&lt;/annotate&gt;
+  &lt;annotate key="org.freedesktop.policykit.exec.argv1"&gt;/usr/bin/my-pk-test&lt;/annotate&gt;
+  [...]
+</pre>
+<p>
+      can be used to select the appropriate polkit action. Be careful
+      to get the latter annotation right, otherwise it will match any
+      <span class="command"><strong>pkexec</strong></span> invocation of
+      <code class="filename">/usr/bin/python</code> scripts.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-variables"></a><h2>VARIABLES</h2>
+<p>
+      The following variables are set by
+      <span class="command"><strong>pkexec</strong></span>. They can be used in authorization
+      rules and messages shown in authentication dialogs:
+    </p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>program</em></span></span></p></td>
+<td><p>
+            Fully qualified path to the program to be executed.
+            Example: <span class="quote">“<span class="quote">/bin/cat</span>”</span>
+          </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>command_line</em></span></span></p></td>
+<td><p>
+            The requested command-line (do not use this for any
+            security checks, it is not secure).
+            Example: <span class="quote">“<span class="quote">cat /srv/xyz/foobar</span>”</span>
+          </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>user</em></span></span></p></td>
+<td><p>
+            The user name of the user to execute the program as.
+            Example: <span class="quote">“<span class="quote">davidz</span>”</span>
+          </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>user.gecos</em></span></span></p></td>
+<td><p>
+            The full name of the user to execute the program as.
+            Example: <span class="quote">“<span class="quote">David Zeuthen</span>”</span>
+          </p></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>user.display</em></span></span></p></td>
+<td><p>
+            A representation of the user to execute the program as
+            that is suitable for display in an authentication dialog.
+            Is typically set to a combination of the user name and the
+            full name.
+            Example: <span class="quote">“<span class="quote">David Zeuthen (davidz)</span>”</span>
+          </p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="pkexec-author"></a><h2>AUTHOR</h2>
+<p>
+      Written by David Zeuthen <code class="email">&lt;<a class="email" href="mailto:davidz@redhat.com">davidz@redhat.com</a>&gt;</code> with
+      a lot of help from many others.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-bugs"></a><h2>BUGS</h2>
+<p>
+      Please send bug reports to either the distribution or the
+      polkit-devel mailing list,
+      see the link <a class="ulink" href="https://gitlab.freedesktop.org/polkit/polkit/-/issues/" target="_top">https://gitlab.freedesktop.org/polkit/polkit/-/issues/</a>
+      on how to subscribe.
+    </p>
+</div>
+<div class="refsect1">
+<a name="pkexec-see-also"></a><h2>SEE ALSO</h2>
+<p>
+      <a class="link" href="polkit.8.html" title="polkit"><span class="citerefentry"><span class="refentrytitle">polkit</span>(8)</span></a>,
+      <a class="link" href="polkitd.8.html" title="polkitd"><span class="citerefentry"><span class="refentrytitle">polkitd</span>(8)</span></a>,
+      <a class="link" href="pkaction.1.html" title="pkaction"><span class="citerefentry"><span class="refentrytitle">pkaction</span>(1)</span></a>,
+      <a class="link" href="pkcheck.1.html" title="pkcheck"><span class="citerefentry"><span class="refentrytitle">pkcheck</span>(1)</span></a>,
+      <a class="link" href="pkttyagent.1.html" title="pkttyagent"><span class="citerefentry"><span class="refentrytitle">pkttyagent</span>(1)</span></a>
+    </p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

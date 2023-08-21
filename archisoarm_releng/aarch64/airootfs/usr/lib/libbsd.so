@@ -1,0 +1,4 @@
+/* GNU ld script
+ * The MD5 functions are provided by the libmd library. */
+OUTPUT_FORMAT(elf64-littleaarch64)
+GROUP(/usr/lib/libbsd.so.0.11.7 AS_NEEDED(-lmd))

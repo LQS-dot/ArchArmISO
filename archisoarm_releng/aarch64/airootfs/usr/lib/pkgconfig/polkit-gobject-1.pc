@@ -1,0 +1,16 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+exec_prefix=${prefix}
+datadir=${prefix}/share
+policydir=${datadir}/polkit-1/actions
+actiondir=${datadir}/polkit-1/actions
+pkcheck_supports_uid=true
+
+Name: polkit-gobject-1
+Description: PolicyKit Authorization API
+Version: 123
+Requires: gio-2.0 >=  2.30.0, glib-2.0 >=  2.30.0
+Libs: -L${libdir} -lpolkit-gobject-1
+Cflags: -I${includedir}/polkit-1

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Network Access Service (NAS): libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="prev" href="libqmi-glib-DMS-Get-Supported-Messages-response.html" title="DMS Get Supported Messages response">
+<link rel="next" href="QmiClientNas.html" title="QmiClientNas">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="libqmi-glib-DMS-Get-Supported-Messages-response.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiClientNas.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.4"></a>Network Access Service (NAS)</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="QmiClientNas.html">QmiClientNas</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the NAS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-enumerations-and-flags.html">NAS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the NAS service.</span>
+</dt>
+<dt><span class="section"><a href="ch03.html#id-1.4.4">NAS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Event-Report-indication.html">NAS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the NAS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Time-indication.html">NAS Network Time indication</a></span><span class="refpurpose"> — Methods to manage the NAS Network Time indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Serving-System-indication.html">NAS Serving System indication</a></span><span class="refpurpose"> — Methods to manage the NAS Serving System indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-System-Info-indication.html">NAS System Info indication</a></span><span class="refpurpose"> — Methods to manage the NAS System Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Signal-Info-indication.html">NAS Signal Info indication</a></span><span class="refpurpose"> — Methods to manage the NAS Signal Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Operator-Name-indication.html">NAS Operator Name indication</a></span><span class="refpurpose"> — Methods to manage the NAS Operator Name indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Reject-indication.html">NAS Network Reject indication</a></span><span class="refpurpose"> — Methods to manage the NAS Network Reject indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s02.html">NAS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Reset-response.html">NAS Reset response</a></span><span class="refpurpose"> — Methods to manage the NAS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Event-Report-response.html">NAS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Register-Indications-response.html">NAS Register Indications response</a></span><span class="refpurpose"> — Methods to manage the NAS Register Indications response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Signal-Strength-response.html">NAS Get Signal Strength response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Signal Strength response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Scan-response.html">NAS Network Scan response</a></span><span class="refpurpose"> — Methods to manage the NAS Network Scan response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Initiate-Network-Register-response.html">NAS Initiate Network Register response</a></span><span class="refpurpose"> — Methods to manage the NAS Initiate Network Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Attach-Detach-response.html">NAS Attach Detach response</a></span><span class="refpurpose"> — Methods to manage the NAS Attach Detach response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Serving-System-response.html">NAS Get Serving System response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Serving System response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Home-Network-response.html">NAS Get Home Network response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Home Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Preferred-Networks-response.html">NAS Get Preferred Networks response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Preferred Networks response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Preferred-Networks-response.html">NAS Set Preferred Networks response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Preferred Networks response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Technology-Preference-response.html">NAS Set Technology Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Technology Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Technology-Preference-response.html">NAS Get Technology Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Technology Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-RF-Band-Information-response.html">NAS Get RF Band Information response</a></span><span class="refpurpose"> — Methods to manage the NAS Get RF Band Information response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-System-Selection-Preference-response.html">NAS Set System Selection Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Set System Selection Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-System-Selection-Preference-response.html">NAS Get System Selection Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Get System Selection Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-System-Info-response.html">NAS Get System Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get System Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Signal-Info-response.html">NAS Get Signal Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Signal Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Config-Signal-Info-response.html">NAS Config Signal Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Config Signal Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Config-Signal-Info-v2-response.html">NAS Config Signal Info v2 response</a></span><span class="refpurpose"> — Methods to manage the NAS Config Signal Info v2 response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Force-Network-Search-response.html">NAS Force Network Search response</a></span><span class="refpurpose"> — Methods to manage the NAS Force Network Search response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-CDMA-Position-Info-response.html">NAS Get CDMA Position Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get CDMA Position Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Tx-Rx-Info-response.html">NAS Get Tx Rx Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Tx Rx Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Cell-Location-Info-response.html">NAS Get Cell Location Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Cell Location Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Supported-Messages-response.html">NAS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-LTE-Cphy-CA-Info-response.html">NAS Get LTE Cphy CA Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get LTE Cphy CA Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Operator-Name-response.html">NAS Get Operator Name response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Operator Name response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-PLMN-Name-response.html">NAS Get PLMN Name response</a></span><span class="refpurpose"> — Methods to manage the NAS Get PLMN Name response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Swi-Get-Status-response.html">NAS Swi Get Status response</a></span><span class="refpurpose"> — Methods to manage the NAS Swi Get Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-DRX-response.html">NAS Get DRX response</a></span><span class="refpurpose"> — Methods to manage the NAS Get DRX response.</span>
+</dt>
+</dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.4.4"></a>NAS Indications</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/espeakup
+usr/lib/
+usr/lib/systemd/
+usr/lib/systemd/system/
+usr/lib/systemd/system/espeakup.service
+usr/share/
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/espeakup.8.gz
+

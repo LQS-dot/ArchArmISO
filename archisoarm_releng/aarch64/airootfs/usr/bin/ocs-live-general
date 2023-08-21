@@ -1,0 +1,76 @@
+#!/bin/bash
+# Author: Steven Shiau <steven _at_ nchc org tw>
+# License: GPL
+# Description: Program to start saving or restoring image in Clonezilla live.
+
+# Load DRBL setting and functions
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+
+# load the setting for clonezilla live.
+[ -e /etc/ocs/ocs-live.conf ] && . /etc/ocs/ocs-live.conf
+
+# Functions
+USAGE() {
+    echo "$ocs - Program to start saving or restoring image in Clonezilla live"
+    echo "Usage:"
+    echo "To run $ocs:"
+    echo "$ocs"
+    echo "Ex:"
+    echo "To start saving or restoring image in Clonezilla live, run"
+    echo "   $ocs"
+    echo "If what you want is just saving, use \"ocs-live-save\" instead of this program."
+    echo "If what you want is just restoring, use \"ocs-live-restore\" instead of this program."
+} # end of USAGE
+
+####################
+### Main program ###
+####################
+
+ocs=`basename $0`
+#
+check_if_root
+#
+while [ $# -gt 0 ]; do
+ case "$1" in
+   -*)     echo "${0}: ${1}: invalid option" >&2
+           USAGE >& 2
+           exit 2 ;;
+   *)      break ;;
+ esac
+done
+
+# Get the live media mount point.
+get_live_media_mnt_point
+
+# prepare the clonezilla live environment.
+ocs-live-env-prepare
+
+# "-n" was added since we will run show-general-ocs-live-prompt after command clonezilla
+LC_ALL=$ocs_lang clonezilla -n
+rc=$?
+
+# Show prompt when in interactive mode
+if [ -e /var/lib/clonezilla/ocs-vars ]; then
+  . /var/lib/clonezilla/ocs-vars
+  # Only in interactive mode, and if it's not reboot or poweroff, the prompt is shown.
+  if [ "$ocs_sr_mode" = "interactive" ]; then
+    # 1. Show removing one of disks after cloning.
+    if [ "$ocs_cmd" = "ocs-onthefly" ]; then
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+      echo "$msg_remove_source_or_destination_disk_after_cloning"
+      echo "$msg_2_identical_systems_will_confuse_restored_os"
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+    fi
+    # 2. show prompt about re-run and poweroff
+    case "$postaction" in
+      reboot|poweroff) true;;
+      *) show-general-ocs-live-prompt;;
+    esac
+  fi
+fi
+
+exit $rc

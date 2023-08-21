@@ -1,0 +1,48 @@
+%NAME%
+libnewt
+
+%VERSION%
+0.52.23-2
+
+%BASE%
+libnewt
+
+%DESC%
+Not Erik's Windowing Toolkit - text mode windowing with slang
+
+%URL%
+https://pagure.io/newt
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1683170009
+
+%INSTALLDATE%
+1691208527
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+293186
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+gpm
+popt
+slang
+
+%OPTDEPENDS%
+python: libnewt support with the _snack module
+tcl: whiptcl support
+

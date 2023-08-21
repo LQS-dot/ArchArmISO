@@ -1,0 +1,1023 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MM3gppProfile: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03s04.html" title="Profile management support">
+<link rel="prev" href="MMModem3gppProfileManager.html" title="MMModem3gppProfileManager">
+<link rel="next" href="ch03s05.html" title="Location support">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmm-glib-3GPP-profile.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#libmm-glib-3GPP-profile.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03s04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMModem3gppProfileManager.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch03s05.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmm-glib-3GPP-profile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmm-glib-3GPP-profile.top_of_page"></a>MM3gppProfile</span></h2>
+<p>MM3gppProfile — Helper object to handle 3GPP profile settings.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmm-glib-3GPP-profile.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="returnvalue">MM3gppProfile</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-new" title="mm_3gpp_profile_new ()">mm_3gpp_profile_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-apn" title="mm_3gpp_profile_get_apn ()">mm_3gpp_profile_get_apn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-apn" title="mm_3gpp_profile_set_apn ()">mm_3gpp_profile_set_apn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerApnType</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-apn-type" title="mm_3gpp_profile_get_apn_type ()">mm_3gpp_profile_get_apn_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-apn-type" title="mm_3gpp_profile_set_apn_type ()">mm_3gpp_profile_set_apn_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerAllowedAuth</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-allowed-auth" title="mm_3gpp_profile_get_allowed_auth ()">mm_3gpp_profile_get_allowed_auth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-allowed-auth" title="mm_3gpp_profile_set_allowed_auth ()">mm_3gpp_profile_set_allowed_auth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-user" title="mm_3gpp_profile_get_user ()">mm_3gpp_profile_get_user</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-user" title="mm_3gpp_profile_set_user ()">mm_3gpp_profile_set_user</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-password" title="mm_3gpp_profile_get_password ()">mm_3gpp_profile_get_password</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-password" title="mm_3gpp_profile_set_password ()">mm_3gpp_profile_set_password</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerIpFamily</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-ip-type" title="mm_3gpp_profile_get_ip_type ()">mm_3gpp_profile_get_ip_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-ip-type" title="mm_3gpp_profile_set_ip_type ()">mm_3gpp_profile_set_ip_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-profile-id" title="mm_3gpp_profile_get_profile_id ()">mm_3gpp_profile_get_profile_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-profile-id" title="mm_3gpp_profile_set_profile_id ()">mm_3gpp_profile_set_profile_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-profile-name" title="mm_3gpp_profile_get_profile_name ()">mm_3gpp_profile_get_profile_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-profile-name" title="mm_3gpp_profile_set_profile_name ()">mm_3gpp_profile_set_profile_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerAccessTypePreference</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-access-type-preference" title="mm_3gpp_profile_get_access_type_preference ()">mm_3gpp_profile_get_access_type_preference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-access-type-preference" title="mm_3gpp_profile_set_access_type_preference ()">mm_3gpp_profile_set_access_type_preference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-enabled" title="mm_3gpp_profile_get_enabled ()">mm_3gpp_profile_get_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-enabled" title="mm_3gpp_profile_set_enabled ()">mm_3gpp_profile_set_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerRoamingAllowance</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-roaming-allowance" title="mm_3gpp_profile_get_roaming_allowance ()">mm_3gpp_profile_get_roaming_allowance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-roaming-allowance" title="mm_3gpp_profile_set_roaming_allowance ()">mm_3gpp_profile_set_roaming_allowance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMBearerProfileSource</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-get-profile-source" title="mm_3gpp_profile_get_profile_source ()">mm_3gpp_profile_get_profile_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmm-glib-3GPP-profile.html#mm-3gpp-profile-set-profile-source" title="mm_3gpp_profile_set_profile_source ()">mm_3gpp_profile_set_profile_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="MM3gppProfile"></a><div class="refsect1">
+<a name="libmm-glib-3GPP-profile.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libmm-glib-3GPP-profile.html#MM-3GPP-PROFILE-ID-UNKNOWN:CAPS" title="MM_3GPP_PROFILE_ID_UNKNOWN">MM_3GPP_PROFILE_ID_UNKNOWN</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile-struct" title="struct MM3gppProfile">MM3gppProfile</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmm-glib-3GPP-profile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> MM3gppProfile
+</pre>
+</div>
+<div class="refsect1">
+<a name="libmm-glib-3GPP-profile.description"></a><h2>Description</h2>
+<p>The <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> is an object handling the settings associated
+to a connection profile stored in the device.</p>
+</div>
+<div class="refsect1">
+<a name="libmm-glib-3GPP-profile.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-3gpp-profile-new"></a><h3>mm_3gpp_profile_new ()</h3>
+<pre class="programlisting"><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="returnvalue">MM3gppProfile</span></a> *
+mm_3gpp_profile_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new empty <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-new.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>. The returned value should be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-apn"></a><h3>mm_3gpp_profile_get_apn ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_3gpp_profile_get_apn (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the name of the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-apn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-apn.returns"></a><h4>Returns</h4>
+<p>the access point, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not set. Do not free
+the returned value, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-apn"></a><h3>mm_3gpp_profile_set_apn ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_apn (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *apn</code></em>);</pre>
+<p>Sets the name of the access point to use.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-apn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>apn</p></td>
+<td class="parameter_description"><p>Name of the access point.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-apn-type"></a><h3>mm_3gpp_profile_get_apn_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerApnType</span>
+mm_3gpp_profile_get_apn_type (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the APN types to use.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-apn-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-apn-type.returns"></a><h4>Returns</h4>
+<p> a mask of <span class="type">MMBearerApnType</span> values.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-apn-type"></a><h3>mm_3gpp_profile_set_apn_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_apn_type (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                              <em class="parameter"><code><span class="type">MMBearerApnType</span> apn_type</code></em>);</pre>
+<p>Sets the APN types to use.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-apn-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>apn_type</p></td>
+<td class="parameter_description"><p>a mask of <span class="type">MMBearerApnType</span> values.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-allowed-auth"></a><h3>mm_3gpp_profile_get_allowed_auth ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerAllowedAuth</span>
+mm_3gpp_profile_get_allowed_auth (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the methods allowed to use when authenticating with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-allowed-auth.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-allowed-auth.returns"></a><h4>Returns</h4>
+<p> a bitmask of <span class="type">MMBearerAllowedAuth</span> values, or
+<code class="literal">MM_BEARER_ALLOWED_AUTH_UNKNOWN</code> to request the modem-default method.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-allowed-auth"></a><h3>mm_3gpp_profile_set_allowed_auth ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_allowed_auth (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                  <em class="parameter"><code><span class="type">MMBearerAllowedAuth</span> allowed_auth</code></em>);</pre>
+<p>Sets the method to use when authenticating with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-allowed-auth.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>allowed_auth</p></td>
+<td class="parameter_description"><p>a bitmask of <span class="type">MMBearerAllowedAuth</span> values.
+<code class="literal">MM_BEARER_ALLOWED_AUTH_UNKNOWN</code> may be given to request the modem-default
+method.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-user"></a><h3>mm_3gpp_profile_get_user ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_3gpp_profile_get_user (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the username used to authenticate with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-user.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-user.returns"></a><h4>Returns</h4>
+<p>the username, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not set. Do not free the
+returned value, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-user"></a><h3>mm_3gpp_profile_set_user ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_user (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *user</code></em>);</pre>
+<p>Sets the username used to authenticate with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-user.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user</p></td>
+<td class="parameter_description"><p>the username</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-password"></a><h3>mm_3gpp_profile_get_password ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_3gpp_profile_get_password (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the password used to authenticate with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-password.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-password.returns"></a><h4>Returns</h4>
+<p>the password, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not set. Do not free
+the returned value, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-password"></a><h3>mm_3gpp_profile_set_password ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_password (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *password</code></em>);</pre>
+<p>Sets the password used to authenticate with the access point.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-password.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>password</p></td>
+<td class="parameter_description"><p>the password</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-ip-type"></a><h3>mm_3gpp_profile_get_ip_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerIpFamily</span>
+mm_3gpp_profile_get_ip_type (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the IP type to use.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-ip-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-ip-type.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMBearerIpFamily</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-ip-type"></a><h3>mm_3gpp_profile_set_ip_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_ip_type (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                             <em class="parameter"><code><span class="type">MMBearerIpFamily</span> ip_type</code></em>);</pre>
+<p>Sets the IP type to use.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-ip-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ip_type</p></td>
+<td class="parameter_description"><p>a <span class="type">MMBearerIpFamily</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-profile-id"></a><h3>mm_3gpp_profile_get_profile_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+mm_3gpp_profile_get_profile_id (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the profile id.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-id.returns"></a><h4>Returns</h4>
+<p> the profile id..</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-profile-id"></a><h3>mm_3gpp_profile_set_profile_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_profile_id (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> profile_id</code></em>);</pre>
+<p>Sets the profile id to use.</p>
+<p>If none specified explicitly, <a class="link" href="libmm-glib-3GPP-profile.html#MM-3GPP-PROFILE-ID-UNKNOWN:CAPS" title="MM_3GPP_PROFILE_ID_UNKNOWN"><span class="type">MM_3GPP_PROFILE_ID_UNKNOWN</span></a> is assumed.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-profile-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>profile_id</p></td>
+<td class="parameter_description"><p>Numeric profile id to use, or <a class="link" href="libmm-glib-3GPP-profile.html#MM-3GPP-PROFILE-ID-UNKNOWN:CAPS" title="MM_3GPP_PROFILE_ID_UNKNOWN"><span class="type">MM_3GPP_PROFILE_ID_UNKNOWN</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-profile-name"></a><h3>mm_3gpp_profile_get_profile_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_3gpp_profile_get_profile_name (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the name of the profile.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-name.returns"></a><h4>Returns</h4>
+<p>the profile name, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if not set. Do not free
+the returned value, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-profile-name"></a><h3>mm_3gpp_profile_set_profile_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_profile_name (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *profile_name</code></em>);</pre>
+<p>Sets the name of the profile.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-profile-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>profile_name</p></td>
+<td class="parameter_description"><p>Name of the profile.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-access-type-preference"></a><h3>mm_3gpp_profile_get_access_type_preference ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerAccessTypePreference</span>
+mm_3gpp_profile_get_access_type_preference
+                               (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets 5G network access type preference.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-access-type-preference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-access-type-preference.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMBearerAccessTypePreference</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-access-type-preference"></a><h3>mm_3gpp_profile_set_access_type_preference ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_access_type_preference
+                               (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                <em class="parameter"><code><span class="type">MMBearerAccessTypePreference</span> access_type_preference</code></em>);</pre>
+<p>Sets the 5G network access type preference.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-access-type-preference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>access_type_preference</p></td>
+<td class="parameter_description"><p>a <span class="type">MMBearerAccessTypePreference</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-enabled"></a><h3>mm_3gpp_profile_get_enabled ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_3gpp_profile_get_enabled (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Checks whether the profile is enabled or disabled.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-enabled.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the profile is enabled, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-enabled"></a><h3>mm_3gpp_profile_set_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_enabled (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enabled</code></em>);</pre>
+<p>Sets the flag to indicate whether the profile is enabled or disabled.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enabled</p></td>
+<td class="parameter_description"><p>boolean value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-roaming-allowance"></a><h3>mm_3gpp_profile_get_roaming_allowance ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerRoamingAllowance</span>
+mm_3gpp_profile_get_roaming_allowance (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the roaming allowance rules.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-roaming-allowance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-roaming-allowance.returns"></a><h4>Returns</h4>
+<p> a mask of <span class="type">MMBearerRoamingAllowance</span> values.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-roaming-allowance"></a><h3>mm_3gpp_profile_set_roaming_allowance ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_roaming_allowance (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                       <em class="parameter"><code><span class="type">MMBearerRoamingAllowance</span> roaming_allowance</code></em>);</pre>
+<p>Sets the roaming allowance rules.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-roaming-allowance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>roaming_allowance</p></td>
+<td class="parameter_description"><p>a mask of <span class="type">MMBearerRoamingAllowance</span> values.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-get-profile-source"></a><h3>mm_3gpp_profile_get_profile_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMBearerProfileSource</span>
+mm_3gpp_profile_get_profile_source (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>);</pre>
+<p>Gets the profile source.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-3gpp-profile-get-profile-source.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMBearerProfileSource</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-3gpp-profile-set-profile-source"></a><h3>mm_3gpp_profile_set_profile_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_3gpp_profile_set_profile_source (<em class="parameter"><code><a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> *self</code></em>,
+                                    <em class="parameter"><code><span class="type">MMBearerProfileSource</span> profile_source</code></em>);</pre>
+<p>Sets profile source.</p>
+<div class="refsect3">
+<a name="mm-3gpp-profile-set-profile-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>profile_source</p></td>
+<td class="parameter_description"><p>a <span class="type">MMBearerProfileSource</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmm-glib-3GPP-profile.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MM-3GPP-PROFILE-ID-UNKNOWN:CAPS"></a><h3>MM_3GPP_PROFILE_ID_UNKNOWN</h3>
+<pre class="programlisting">#define MM_3GPP_PROFILE_ID_UNKNOWN -1
+</pre>
+<p>This value may be specified in the 'profile-id' property When the user
+creates a new <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a>, to indicate that the real profile id should
+be assigned by the device.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MM3gppProfile-struct"></a><h3>struct MM3gppProfile</h3>
+<pre class="programlisting">struct MM3gppProfile;</pre>
+<p>The <a class="link" href="libmm-glib-3GPP-profile.html#MM3gppProfile"><span class="type">MM3gppProfile</span></a> structure contains private data and should
+only be accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

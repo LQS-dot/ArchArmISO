@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN" "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="urn:ietf:params:xml:ns:keyprov:pskc" uri="/usr/share/xml/pskc/pskc-schema.xsd"/>
+  <system systemId="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd" uri="/usr/share/xml/pskc/xmldsig-core-schema.xsd"/>
+  <system systemId="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd" uri="/usr/share/xml/pskc/xenc-schema.xsd"/>
+</catalog>

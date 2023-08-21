@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-manager.html" title="The /org/freedesktop/ModemManager1 object">
+<link rel="prev" href="ref-dbus-object-manager.html" title="The /org/freedesktop/ModemManager1 object">
+<link rel="next" href="ref-dbus-object-modem.html" title="The /org/freedesktop/ModemManager/Modems objects">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-manager.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ref-dbus-object-manager.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-dbus-object-modem.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1.top_of_page"></a>org.freedesktop.ModemManager1</span></h2>
+<p>org.freedesktop.ModemManager1 — The ModemManager Manager interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-method-org-freedesktop-ModemManager1.ScanDevices" title="The ScanDevices() method">ScanDevices</a>       ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-method-org-freedesktop-ModemManager1.SetLogging" title="The SetLogging() method">SetLogging</a>        (IN  s     level);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-method-org-freedesktop-ModemManager1.ReportKernelEvent" title="The ReportKernelEvent() method">ReportKernelEvent</a> (IN  a{sv} properties);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-method-org-freedesktop-ModemManager1.InhibitDevice" title="The InhibitDevice() method">InhibitDevice</a>     (IN  s     uid,
+                   IN  b     inhibit);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.4.5.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-property-org-freedesktop-ModemManager1.Version" title='The "Version" property'>Version</a>  readable   s
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1"></a><h2>Description</h2>
+<p>
+The Manager interface allows controlling and querying the status of the
+ModemManager daemon.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1.ScanDevices"></a><h3>The ScanDevices() method</h3>
+<pre class="programlisting">
+ScanDevices ();
+</pre>
+<p>
+Start a new scan for connected modem devices.
+</p>
+<p>
+Since: 1.0
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1.SetLogging"></a><h3>The SetLogging() method</h3>
+<pre class="programlisting">
+SetLogging (IN  s level);
+</pre>
+<p>
+Set logging verbosity.
+</p>
+<p>
+Since: 1.0
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>level</code></em></code>:</span></p></td>
+<td><p>
+One of <code class="literal">"ERR"</code>, <code class="literal">"WARN"</code>, <code class="literal">"INFO"</code>, <code class="literal">"DEBUG"</code>.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1.ReportKernelEvent"></a><h3>The ReportKernelEvent() method</h3>
+<pre class="programlisting">
+ReportKernelEvent (IN  a{sv} properties);
+</pre>
+<p>
+Reports a kernel event to ModemManager.
+</p>
+<p>
+This method is only available if udev is not being used to report kernel
+events.
+</p>
+<p>
+The <em class="parameter"><code>properties</code></em> dictionary is composed of key/value string pairs. The
+possible keys are:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">action</code></span></p></td>
+<td>
+<p>
+The type of action, given as a string value (signature
+<code class="literal">"s"</code>).
+This parameter is MANDATORY.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">add</code></span></p></td>
+<td>
+A new kernel device has been added.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">remove</code></span></p></td>
+<td>
+An existing kernel device has been removed.
+</td>
+</tr>
+</tbody>
+</table></div>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">name</code></span></p></td>
+<td><p>
+The device name, given as a string value (signature
+<code class="literal">"s"</code>).
+This parameter is MANDATORY.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">subsystem</code></span></p></td>
+<td><p>
+The device subsystem, given as a string value (signature
+<code class="literal">"s"</code>).
+This parameter is MANDATORY.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">uid</code></span></p></td>
+<td><p>
+The unique ID of the physical device, given as a string value
+(signature <code class="literal">"s"</code>).
+This parameter is OPTIONAL, if not given the sysfs path of the
+physical device will be used. This parameter must be the same
+for all devices exposed by the same physical device.
+</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.8
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>properties</code></em></code>:</span></p></td>
+<td><p>
+event properties.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1.InhibitDevice"></a><h3>The InhibitDevice() method</h3>
+<pre class="programlisting">
+InhibitDevice (IN  s uid,
+               IN  b inhibit);
+</pre>
+<p>
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.html#gdbus-interface-org-freedesktop-ModemManager1.top_of_page">org.freedesktop.ModemManager1</a>.Modem:Device property.
+<em class="parameter"><code>inhibit</code></em>: <code class="constant">TRUE</code> to inhibit the modem and <code class="constant">FALSE</code> to uninhibit it.
+</p>
+<p>
+Inhibit or uninhibit the device.
+</p>
+<p>
+When the modem is inhibited ModemManager will close all its ports and
+unexport it from the bus, so that users of the interface are no longer
+able to operate with it.
+</p>
+<p>
+This operation binds the inhibition request to the existence of the
+caller in the DBus bus. If the caller disappears from the bus, the
+inhibition will automatically removed.
+</p>
+<p>
+Since: 1.10
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>uid</code></em></code>:</span></p></td>
+<td><p>
+the unique ID of the physical device, given in the
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>inhibit</code></em></code>:</span></p></td>
+<td>
+<p>
+</p>
+<p>
+</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.ModemManager1"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1.Version"></a><h3>The "Version" property</h3>
+<pre class="programlisting">
+Version  readable   s
+</pre>
+<p>
+The runtime version of the ModemManager daemon.
+</p>
+<p>
+Since: 1.10
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

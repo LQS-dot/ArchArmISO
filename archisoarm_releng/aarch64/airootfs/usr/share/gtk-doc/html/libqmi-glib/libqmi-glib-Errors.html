@@ -1,0 +1,1144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Errors: libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libqmi-glib-Common-enumerations-and-flags.html" title="Common enumerations and flags">
+<link rel="next" href="libqmi-glib-Common-utilities.html" title="Common utilities">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libqmi-glib-Errors.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#libqmi-glib-Errors.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libqmi-glib-Common-enumerations-and-flags.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libqmi-glib-Common-utilities.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libqmi-glib-Errors"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libqmi-glib-Errors.top_of_page"></a>Errors</span></h2>
+<p>Errors — Common errors in the library.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-Errors.html#qmi-core-error-get-string" title="qmi_core_error_get_string ()">qmi_core_error_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-Errors.html#qmi-protocol-error-get-string" title="qmi_protocol_error_get_string ()">qmi_protocol_error_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libqmi-glib-Errors.html#QmiCoreError" title="enum QmiCoreError">QmiCoreError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libqmi-glib-Errors.html#QmiProtocolError" title="enum QmiProtocolError">QmiProtocolError</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> QmiCoreError
+    <span class="lineart">╰──</span> QmiProtocolError
+</pre>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.description"></a><h2>Description</h2>
+<p>This section defines common error types used in the interface.</p>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="qmi-core-error-get-string"></a><h3>qmi_core_error_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+qmi_core_error_get_string (<em class="parameter"><code><a class="link" href="libqmi-glib-Errors.html#QmiCoreError" title="enum QmiCoreError"><span class="type">QmiCoreError</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="libqmi-glib-Errors.html#QmiCoreError" title="enum QmiCoreError"><span class="type">QmiCoreError</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-core-error-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a QmiCoreError.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-core-error-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-protocol-error-get-string"></a><h3>qmi_protocol_error_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+qmi_protocol_error_get_string (<em class="parameter"><code><a class="link" href="libqmi-glib-Errors.html#QmiProtocolError" title="enum QmiProtocolError"><span class="type">QmiProtocolError</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="libqmi-glib-Errors.html#QmiProtocolError" title="enum QmiProtocolError"><span class="type">QmiProtocolError</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-protocol-error-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a QmiProtocolError.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-protocol-error-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-Errors.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="QmiCoreError"></a><h3>enum QmiCoreError</h3>
+<p>Common errors that may be reported by libqmi-glib.</p>
+<div class="refsect3">
+<a name="QmiCoreError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-FAILED:CAPS"></a>QMI_CORE_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>Operation failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-WRONG-STATE:CAPS"></a>QMI_CORE_ERROR_WRONG_STATE</p></td>
+<td class="enum_member_description">
+<p>Operation cannot be executed in the current state.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-TIMEOUT:CAPS"></a>QMI_CORE_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>Operation timed out.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-INVALID-ARGS:CAPS"></a>QMI_CORE_ERROR_INVALID_ARGS</p></td>
+<td class="enum_member_description">
+<p>Invalid arguments given.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-INVALID-MESSAGE:CAPS"></a>QMI_CORE_ERROR_INVALID_MESSAGE</p></td>
+<td class="enum_member_description">
+<p>QMI message is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-TLV-NOT-FOUND:CAPS"></a>QMI_CORE_ERROR_TLV_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>TLV not found.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-TLV-TOO-LONG:CAPS"></a>QMI_CORE_ERROR_TLV_TOO_LONG</p></td>
+<td class="enum_member_description">
+<p>TLV is too long.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-UNSUPPORTED:CAPS"></a>QMI_CORE_ERROR_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Not supported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-TLV-EMPTY:CAPS"></a>QMI_CORE_ERROR_TLV_EMPTY</p></td>
+<td class="enum_member_description">
+<p>TLV has no value. Empty TLVs are not a real error, so this error type is never generated. Since: 1.12. Deprecated: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-UNEXPECTED-MESSAGE:CAPS"></a>QMI_CORE_ERROR_UNEXPECTED_MESSAGE</p></td>
+<td class="enum_member_description">
+<p>QMI message is unexpected. Since: 1.16.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-CORE-ERROR-INVALID-DATA:CAPS"></a>QMI_CORE_ERROR_INVALID_DATA</p></td>
+<td class="enum_member_description">
+<p>Invalid data found in the message. Since: 1.24.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QmiProtocolError"></a><h3>enum QmiProtocolError</h3>
+<p>QMI protocol errors.</p>
+<div class="refsect3">
+<a name="QmiProtocolError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NONE:CAPS"></a>QMI_PROTOCOL_ERROR_NONE</p></td>
+<td class="enum_member_description">
+<p>No error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-MALFORMED-MESSAGE:CAPS"></a>QMI_PROTOCOL_ERROR_MALFORMED_MESSAGE</p></td>
+<td class="enum_member_description">
+<p>Malformed message.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-MEMORY:CAPS"></a>QMI_PROTOCOL_ERROR_NO_MEMORY</p></td>
+<td class="enum_member_description">
+<p>No memory.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INTERNAL:CAPS"></a>QMI_PROTOCOL_ERROR_INTERNAL</p></td>
+<td class="enum_member_description">
+<p>Internal.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-ABORTED:CAPS"></a>QMI_PROTOCOL_ERROR_ABORTED</p></td>
+<td class="enum_member_description">
+<p>Aborted.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CLIENT-IDS-EXHAUSTED:CAPS"></a>QMI_PROTOCOL_ERROR_CLIENT_IDS_EXHAUSTED</p></td>
+<td class="enum_member_description">
+<p>Client IDs exhausted.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-UNABORTABLE-TRANSACTION:CAPS"></a>QMI_PROTOCOL_ERROR_UNABORTABLE_TRANSACTION</p></td>
+<td class="enum_member_description">
+<p>Unabortable transaction.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-CLIENT-ID:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_CLIENT_ID</p></td>
+<td class="enum_member_description">
+<p>Invalid client ID.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-THRESHOLDS-PROVIDED:CAPS"></a>QMI_PROTOCOL_ERROR_NO_THRESHOLDS_PROVIDED</p></td>
+<td class="enum_member_description">
+<p>No thresholds provided.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-HANDLE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_HANDLE</p></td>
+<td class="enum_member_description">
+<p>Invalid handle.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PROFILE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PROFILE</p></td>
+<td class="enum_member_description">
+<p>Invalid profile.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PIN-ID:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PIN_ID</p></td>
+<td class="enum_member_description">
+<p>Invalid PIN ID.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INCORRECT-PIN:CAPS"></a>QMI_PROTOCOL_ERROR_INCORRECT_PIN</p></td>
+<td class="enum_member_description">
+<p>Incorrect PIN.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-NETWORK-FOUND:CAPS"></a>QMI_PROTOCOL_ERROR_NO_NETWORK_FOUND</p></td>
+<td class="enum_member_description">
+<p>No network found.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CALL-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_CALL_FAILED</p></td>
+<td class="enum_member_description">
+<p>Call failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-OUT-OF-CALL:CAPS"></a>QMI_PROTOCOL_ERROR_OUT_OF_CALL</p></td>
+<td class="enum_member_description">
+<p>Out of call.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NOT-PROVISIONED:CAPS"></a>QMI_PROTOCOL_ERROR_NOT_PROVISIONED</p></td>
+<td class="enum_member_description">
+<p>Not provisioned.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-MISSING-ARGUMENT:CAPS"></a>QMI_PROTOCOL_ERROR_MISSING_ARGUMENT</p></td>
+<td class="enum_member_description">
+<p>Missing argument.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-ARGUMENT-TOO-LONG:CAPS"></a>QMI_PROTOCOL_ERROR_ARGUMENT_TOO_LONG</p></td>
+<td class="enum_member_description">
+<p>Argument too long.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-TRANSACTION-ID:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_TRANSACTION_ID</p></td>
+<td class="enum_member_description">
+<p>Invalid transaction ID.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DEVICE-IN-USE:CAPS"></a>QMI_PROTOCOL_ERROR_DEVICE_IN_USE</p></td>
+<td class="enum_member_description">
+<p>Device in use.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NETWORK-UNSUPPORTED:CAPS"></a>QMI_PROTOCOL_ERROR_NETWORK_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Network unsupported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DEVICE-UNSUPPORTED:CAPS"></a>QMI_PROTOCOL_ERROR_DEVICE_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Device unsupported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-EFFECT:CAPS"></a>QMI_PROTOCOL_ERROR_NO_EFFECT</p></td>
+<td class="enum_member_description">
+<p>No effect.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-FREE-PROFILE:CAPS"></a>QMI_PROTOCOL_ERROR_NO_FREE_PROFILE</p></td>
+<td class="enum_member_description">
+<p>No free profile.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PDP-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PDP_TYPE</p></td>
+<td class="enum_member_description">
+<p>Invalid PDP type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-TECHNOLOGY-PREFERENCE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_TECHNOLOGY_PREFERENCE</p></td>
+<td class="enum_member_description">
+<p>Invalid technology preference.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PROFILE-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PROFILE_TYPE</p></td>
+<td class="enum_member_description">
+<p>Invalid profile type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-SERVICE-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_SERVICE_TYPE</p></td>
+<td class="enum_member_description">
+<p>Invalid service type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-REGISTER-ACTION:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_REGISTER_ACTION</p></td>
+<td class="enum_member_description">
+<p>Invalid register action.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PS-ATTACH-ACTION:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PS_ATTACH_ACTION</p></td>
+<td class="enum_member_description">
+<p>Invalid PS attach action.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-AUTHENTICATION-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_AUTHENTICATION_FAILED</p></td>
+<td class="enum_member_description">
+<p>Authentication failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PIN-BLOCKED:CAPS"></a>QMI_PROTOCOL_ERROR_PIN_BLOCKED</p></td>
+<td class="enum_member_description">
+<p>PIN blocked.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PIN-ALWAYS-BLOCKED:CAPS"></a>QMI_PROTOCOL_ERROR_PIN_ALWAYS_BLOCKED</p></td>
+<td class="enum_member_description">
+<p>PIN always blocked.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-UIM-UNINITIALIZED:CAPS"></a>QMI_PROTOCOL_ERROR_UIM_UNINITIALIZED</p></td>
+<td class="enum_member_description">
+<p>UIM uninitialized.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-MAXIMUM-QOS-REQUESTS-IN-USE:CAPS"></a>QMI_PROTOCOL_ERROR_MAXIMUM_QOS_REQUESTS_IN_USE</p></td>
+<td class="enum_member_description">
+<p>Maximum QoS requests in use.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INCORRECT-FLOW-FILTER:CAPS"></a>QMI_PROTOCOL_ERROR_INCORRECT_FLOW_FILTER</p></td>
+<td class="enum_member_description">
+<p>Incorrect flow filter.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NETWORK-QOS-UNAWARE:CAPS"></a>QMI_PROTOCOL_ERROR_NETWORK_QOS_UNAWARE</p></td>
+<td class="enum_member_description">
+<p>Network QoS unaware.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-QOS-ID:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_QOS_ID</p></td>
+<td class="enum_member_description">
+<p>Invalid QoS ID.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-REQUESTED-NUMBER-UNSUPPORTED:CAPS"></a>QMI_PROTOCOL_ERROR_REQUESTED_NUMBER_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Requested number unsupported. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INTERFACE-NOT-FOUND:CAPS"></a>QMI_PROTOCOL_ERROR_INTERFACE_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Interface not found. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FLOW-SUSPENDED:CAPS"></a>QMI_PROTOCOL_ERROR_FLOW_SUSPENDED</p></td>
+<td class="enum_member_description">
+<p>Flow suspended.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-DATA-FORMAT:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_DATA_FORMAT</p></td>
+<td class="enum_member_description">
+<p>Invalid data format. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-GENERAL-ERROR:CAPS"></a>QMI_PROTOCOL_ERROR_GENERAL_ERROR</p></td>
+<td class="enum_member_description">
+<p>General error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-UNKNOWN-ERROR:CAPS"></a>QMI_PROTOCOL_ERROR_UNKNOWN_ERROR</p></td>
+<td class="enum_member_description">
+<p>Unknown error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-ARGUMENT:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_ARGUMENT</p></td>
+<td class="enum_member_description">
+<p>Invalid argument.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-INDEX:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_INDEX</p></td>
+<td class="enum_member_description">
+<p>Invalid index.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-ENTRY:CAPS"></a>QMI_PROTOCOL_ERROR_NO_ENTRY</p></td>
+<td class="enum_member_description">
+<p>No entry.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DEVICE-STORAGE-FULL:CAPS"></a>QMI_PROTOCOL_ERROR_DEVICE_STORAGE_FULL</p></td>
+<td class="enum_member_description">
+<p>Device storage full.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DEVICE-NOT-READY:CAPS"></a>QMI_PROTOCOL_ERROR_DEVICE_NOT_READY</p></td>
+<td class="enum_member_description">
+<p>Device not ready.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NETWORK-NOT-READY:CAPS"></a>QMI_PROTOCOL_ERROR_NETWORK_NOT_READY</p></td>
+<td class="enum_member_description">
+<p>Network not ready.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-CAUSE-CODE:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_CAUSE_CODE</p></td>
+<td class="enum_member_description">
+<p>WMS cause code.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-MESSAGE-NOT-SENT:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_MESSAGE_NOT_SENT</p></td>
+<td class="enum_member_description">
+<p>WMS message not sent.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-MESSAGE-DELIVERY-FAILURE:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_MESSAGE_DELIVERY_FAILURE</p></td>
+<td class="enum_member_description">
+<p>WMS message delivery failure.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-INVALID-MESSAGE-ID:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_INVALID_MESSAGE_ID</p></td>
+<td class="enum_member_description">
+<p>WMS invalid message ID.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-ENCODING:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_ENCODING</p></td>
+<td class="enum_member_description">
+<p>WMS encoding.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-AUTHENTICATION-LOCK:CAPS"></a>QMI_PROTOCOL_ERROR_AUTHENTICATION_LOCK</p></td>
+<td class="enum_member_description">
+<p>Authentication lock.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-TRANSITION:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_TRANSITION</p></td>
+<td class="enum_member_description">
+<p>Invalid transition.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NOT-MCAST-INTERFACE:CAPS"></a>QMI_PROTOCOL_ERROR_NOT_MCAST_INTERFACE</p></td>
+<td class="enum_member_description">
+<p>Not a multicast interface. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-MAXIMUM-MCAST-REQUESTS-IN-USE:CAPS"></a>QMI_PROTOCOL_ERROR_MAXIMUM_MCAST_REQUESTS_IN_USE</p></td>
+<td class="enum_member_description">
+<p>Maximum multicast requests in use. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-MCAST-HANDLE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_MCAST_HANDLE</p></td>
+<td class="enum_member_description">
+<p>Invalid mulitcast handle. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-IP-FAMILY-PREFERENCE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_IP_FAMILY_PREFERENCE</p></td>
+<td class="enum_member_description">
+<p>Invalid IP family preference. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SESSION-INACTIVE:CAPS"></a>QMI_PROTOCOL_ERROR_SESSION_INACTIVE</p></td>
+<td class="enum_member_description">
+<p>Session inactive.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SESSION-INVALID:CAPS"></a>QMI_PROTOCOL_ERROR_SESSION_INVALID</p></td>
+<td class="enum_member_description">
+<p>Session invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SESSION-OWNERSHIP:CAPS"></a>QMI_PROTOCOL_ERROR_SESSION_OWNERSHIP</p></td>
+<td class="enum_member_description">
+<p>Session ownership.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INSUFFICIENT-RESOURCES:CAPS"></a>QMI_PROTOCOL_ERROR_INSUFFICIENT_RESOURCES</p></td>
+<td class="enum_member_description">
+<p>Insufficient resources.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DISABLED:CAPS"></a>QMI_PROTOCOL_ERROR_DISABLED</p></td>
+<td class="enum_member_description">
+<p>Disabled.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-OPERATION:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_OPERATION</p></td>
+<td class="enum_member_description">
+<p>Invalid operation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-QMI-COMMAND:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_QMI_COMMAND</p></td>
+<td class="enum_member_description">
+<p>Invalid QMI command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-T-PDU-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_T_PDU_TYPE</p></td>
+<td class="enum_member_description">
+<p>WMS T-PDU type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-WMS-SMSC-ADDRESS:CAPS"></a>QMI_PROTOCOL_ERROR_WMS_SMSC_ADDRESS</p></td>
+<td class="enum_member_description">
+<p>WMS SMSC address.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INFORMATION-UNAVAILABLE:CAPS"></a>QMI_PROTOCOL_ERROR_INFORMATION_UNAVAILABLE</p></td>
+<td class="enum_member_description">
+<p>Information unavailable.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SEGMENT-TOO-LONG:CAPS"></a>QMI_PROTOCOL_ERROR_SEGMENT_TOO_LONG</p></td>
+<td class="enum_member_description">
+<p>Segment too long.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SEGMENT-ORDER:CAPS"></a>QMI_PROTOCOL_ERROR_SEGMENT_ORDER</p></td>
+<td class="enum_member_description">
+<p>Segment order.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-BUNDLING-NOT-SUPPORTED:CAPS"></a>QMI_PROTOCOL_ERROR_BUNDLING_NOT_SUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Bundling not supported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-OPERATION-PARTIAL-FAILURE:CAPS"></a>QMI_PROTOCOL_ERROR_OPERATION_PARTIAL_FAILURE</p></td>
+<td class="enum_member_description">
+<p>Operation partial failure. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-POLICY-MISMATCH:CAPS"></a>QMI_PROTOCOL_ERROR_POLICY_MISMATCH</p></td>
+<td class="enum_member_description">
+<p>Policy mismatch. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SIM-FILE-NOT-FOUND:CAPS"></a>QMI_PROTOCOL_ERROR_SIM_FILE_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>SIM file not found.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-EXTENDED-INTERNAL:CAPS"></a>QMI_PROTOCOL_ERROR_EXTENDED_INTERNAL</p></td>
+<td class="enum_member_description">
+<p>Extended internal error. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-ACCESS-DENIED:CAPS"></a>QMI_PROTOCOL_ERROR_ACCESS_DENIED</p></td>
+<td class="enum_member_description">
+<p>Access denied.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-HARDWARE-RESTRICTED:CAPS"></a>QMI_PROTOCOL_ERROR_HARDWARE_RESTRICTED</p></td>
+<td class="enum_member_description">
+<p>Hardware restricted.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-ACK-NOT-SENT:CAPS"></a>QMI_PROTOCOL_ERROR_ACK_NOT_SENT</p></td>
+<td class="enum_member_description">
+<p>ACK not sent. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INJECT-TIMEOUT:CAPS"></a>QMI_PROTOCOL_ERROR_INJECT_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>Inject timeout. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INCOMPATIBLE-STATE:CAPS"></a>QMI_PROTOCOL_ERROR_INCOMPATIBLE_STATE</p></td>
+<td class="enum_member_description">
+<p>Incompatible state. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FDN-RESTRICT:CAPS"></a>QMI_PROTOCOL_ERROR_FDN_RESTRICT</p></td>
+<td class="enum_member_description">
+<p>FDN restrict. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-SUPS-FAILURE-CASE:CAPS"></a>QMI_PROTOCOL_ERROR_SUPS_FAILURE_CASE</p></td>
+<td class="enum_member_description">
+<p>SUPS failure case. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-RADIO:CAPS"></a>QMI_PROTOCOL_ERROR_NO_RADIO</p></td>
+<td class="enum_member_description">
+<p>No radio. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NOT-SUPPORTED:CAPS"></a>QMI_PROTOCOL_ERROR_NOT_SUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Not supported. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-SUBSCRIPTION:CAPS"></a>QMI_PROTOCOL_ERROR_NO_SUBSCRIPTION</p></td>
+<td class="enum_member_description">
+<p>No subscription. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CARD-CALL-CONTROL-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_CARD_CALL_CONTROL_FAILED</p></td>
+<td class="enum_member_description">
+<p>Card call control failed. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NETWORK-ABORTED:CAPS"></a>QMI_PROTOCOL_ERROR_NETWORK_ABORTED</p></td>
+<td class="enum_member_description">
+<p>Network aborted. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-MSG-BLOCKED:CAPS"></a>QMI_PROTOCOL_ERROR_MSG_BLOCKED</p></td>
+<td class="enum_member_description">
+<p>Message blocked. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-SESSION-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_SESSION_TYPE</p></td>
+<td class="enum_member_description">
+<p>Invalid session type. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-INVALID-PB-TYPE:CAPS"></a>QMI_PROTOCOL_ERROR_INVALID_PB_TYPE</p></td>
+<td class="enum_member_description">
+<p>Invalid PB type. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-SIM:CAPS"></a>QMI_PROTOCOL_ERROR_NO_SIM</p></td>
+<td class="enum_member_description">
+<p>No SIM. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-NOT-READY:CAPS"></a>QMI_PROTOCOL_ERROR_PB_NOT_READY</p></td>
+<td class="enum_member_description">
+<p>PB not ready. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PIN-RESTRICTION:CAPS"></a>QMI_PROTOCOL_ERROR_PIN_RESTRICTION</p></td>
+<td class="enum_member_description">
+<p>PIN restriction. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PIN2-RESTRICTION:CAPS"></a>QMI_PROTOCOL_ERROR_PIN2_RESTRICTION</p></td>
+<td class="enum_member_description">
+<p>PIN2 restriction. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PUK-RESTRICTION:CAPS"></a>QMI_PROTOCOL_ERROR_PUK_RESTRICTION</p></td>
+<td class="enum_member_description">
+<p>PUK restriction. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PUK2-RESTRICTION:CAPS"></a>QMI_PROTOCOL_ERROR_PUK2_RESTRICTION</p></td>
+<td class="enum_member_description">
+<p>PUK2 restriction. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-ACCESS-RESTRICTED:CAPS"></a>QMI_PROTOCOL_ERROR_PB_ACCESS_RESTRICTED</p></td>
+<td class="enum_member_description">
+<p>PB access restricted. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-DELETE-IN-PROGRESS:CAPS"></a>QMI_PROTOCOL_ERROR_PB_DELETE_IN_PROGRESS</p></td>
+<td class="enum_member_description">
+<p>PB delete in progress. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-TEXT-TOO-LONG:CAPS"></a>QMI_PROTOCOL_ERROR_PB_TEXT_TOO_LONG</p></td>
+<td class="enum_member_description">
+<p>PB text too long. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-NUMBER-TOO-LONG:CAPS"></a>QMI_PROTOCOL_ERROR_PB_NUMBER_TOO_LONG</p></td>
+<td class="enum_member_description">
+<p>PB number too long. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-HIDDEN-KEY-RESTRICTION:CAPS"></a>QMI_PROTOCOL_ERROR_PB_HIDDEN_KEY_RESTRICTION</p></td>
+<td class="enum_member_description">
+<p>PB hidden key restriction. Since: 1.6.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-PB-NOT-AVAILABLE:CAPS"></a>QMI_PROTOCOL_ERROR_PB_NOT_AVAILABLE</p></td>
+<td class="enum_member_description">
+<p>PB not available. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-DEVICE-MEMORY-ERROR:CAPS"></a>QMI_PROTOCOL_ERROR_DEVICE_MEMORY_ERROR</p></td>
+<td class="enum_member_description">
+<p>Device memory error. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-NO-PERMISSION:CAPS"></a>QMI_PROTOCOL_ERROR_NO_PERMISSION</p></td>
+<td class="enum_member_description">
+<p>No permission. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-TOO-SOON:CAPS"></a>QMI_PROTOCOL_ERROR_TOO_SOON</p></td>
+<td class="enum_member_description">
+<p>Too soon. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-TIME-NOT-ACQUIRED:CAPS"></a>QMI_PROTOCOL_ERROR_TIME_NOT_ACQUIRED</p></td>
+<td class="enum_member_description">
+<p>Time not acquired. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-OPERATION-IN-PROGRESS:CAPS"></a>QMI_PROTOCOL_ERROR_OPERATION_IN_PROGRESS</p></td>
+<td class="enum_member_description">
+<p>Operation in progress. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-WRITE-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_FW_WRITE_FAILED</p></td>
+<td class="enum_member_description">
+<p>Firmware write failed. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-INFO-READ-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_FW_INFO_READ_FAILED</p></td>
+<td class="enum_member_description">
+<p>Firmware info read failed. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-FILE-NOT-FOUND:CAPS"></a>QMI_PROTOCOL_ERROR_FW_FILE_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Firmware file not found. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-DIR-NOT-FOUND:CAPS"></a>QMI_PROTOCOL_ERROR_FW_DIR_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Firmware dir not found. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-ALREADY-ACTIVATED:CAPS"></a>QMI_PROTOCOL_ERROR_FW_ALREADY_ACTIVATED</p></td>
+<td class="enum_member_description">
+<p>Firmware already activated. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-CANNOT-GENERIC-IMAGE:CAPS"></a>QMI_PROTOCOL_ERROR_FW_CANNOT_GENERIC_IMAGE</p></td>
+<td class="enum_member_description">
+<p>Firmware cannot generic image. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-FILE-OPEN-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_FW_FILE_OPEN_FAILED</p></td>
+<td class="enum_member_description">
+<p>Firmware file open failed. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-UPDATE-DISCONTINUOUS-FRAME:CAPS"></a>QMI_PROTOCOL_ERROR_FW_UPDATE_DISCONTINUOUS_FRAME</p></td>
+<td class="enum_member_description">
+<p>Firmware update discontinuous frame. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-FW-UPDATE-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_FW_UPDATE_FAILED</p></td>
+<td class="enum_member_description">
+<p>Firmware update failed. Since: 1.22.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CAT-EVENT-REGISTRATION-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_CAT_EVENT_REGISTRATION_FAILED</p></td>
+<td class="enum_member_description">
+<p>Event registration failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CAT-INVALID-TERMINAL-RESPONSE:CAPS"></a>QMI_PROTOCOL_ERROR_CAT_INVALID_TERMINAL_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>Invalid terminal response.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CAT-INVALID-ENVELOPE-COMMAND:CAPS"></a>QMI_PROTOCOL_ERROR_CAT_INVALID_ENVELOPE_COMMAND</p></td>
+<td class="enum_member_description">
+<p>Invalid envelope command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CAT-ENVELOPE-COMMAND-BUSY:CAPS"></a>QMI_PROTOCOL_ERROR_CAT_ENVELOPE_COMMAND_BUSY</p></td>
+<td class="enum_member_description">
+<p>Envelope command busy.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="QMI-PROTOCOL-ERROR-CAT-ENVELOPE-COMMAND-FAILED:CAPS"></a>QMI_PROTOCOL_ERROR_CAT_ENVELOPE_COMMAND_FAILED</p></td>
+<td class="enum_member_description">
+<p>Envelope command failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

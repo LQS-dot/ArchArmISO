@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>pskc: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="prev" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="next" href="libpskc-version.html" title="version">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libpskc-pskc.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pskc-reference.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libpskc-version.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libpskc-pskc"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libpskc-pskc.top_of_page"></a>pskc</span></h2>
+<p>pskc — Top-level include file.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libpskc-pskc.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t">pskc_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t">pskc_key_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-pskc.description"></a><h2>Description</h2>
+<p>The top-level &lt;pskc/pskc.h&gt; include file is responsible for
+declaring top-level types and including all other header files.
+The <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> type is used for the high-level PSKC container type and
+the <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> type represent each key package within the
+container.</p>
+</div>
+<div class="refsect1">
+<a name="libpskc-pskc.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="libpskc-pskc.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="pskc-t"></a><h3>pskc_t</h3>
+<pre class="programlisting">  typedef struct pskc pskc_t;
+</pre>
+<p>All PSKC data is represented through the <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> container type,
+which is a high-level structure that only carries a version
+indicator (see <a class="link" href="libpskc-container.html#pskc-get-version" title="pskc_get_version ()"><code class="function">pskc_get_version()</code></a>), an optional identity field (see
+<a class="link" href="libpskc-container.html#pskc-get-id" title="pskc_get_id ()"><code class="function">pskc_get_id()</code></a>) and any number of <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> types, each containing
+one key (see <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-key-t"></a><h3>pskc_key_t</h3>
+<pre class="programlisting">  typedef struct pskc_key pskc_key_t;
+</pre>
+<p>PSKC keys are represented through the <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> type.  Each key
+is part of a higher level <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> container type.  The
+<a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a> function is used to retrieve the <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a>
+values from the <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> structure.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+[console_scripts]
+archinstall = archinstall:run_as_a_module

@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MbimTlv: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libmbim-glib-Common-utilities.html" title="Common utilities">
+<link rel="next" href="ch02.html" title="Generic Services">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MbimTlv.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MbimTlv.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Common-utilities.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MbimTlv"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MbimTlv.top_of_page"></a>MbimTlv</span></h2>
+<p>MbimTlv — A variable-sized data structure specified in Microsoft
+MBIM extension v3.0.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MbimTlv.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-new" title="mbim_tlv_new ()">mbim_tlv_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-dup" title="mbim_tlv_dup ()">mbim_tlv_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-ref" title="mbim_tlv_ref ()">mbim_tlv_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-unref" title="mbim_tlv_unref ()">mbim_tlv_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-get-raw" title="mbim_tlv_get_raw ()">mbim_tlv_get_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="returnvalue">MbimTlvType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-get-tlv-type" title="mbim_tlv_get_tlv_type ()">mbim_tlv_get_tlv_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-get-tlv-data" title="mbim_tlv_get_tlv_data ()">mbim_tlv_get_tlv_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-type-get-string" title="mbim_tlv_type_get_string ()">mbim_tlv_type_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-string-new" title="mbim_tlv_string_new ()">mbim_tlv_string_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-string-get" title="mbim_tlv_string_get ()">mbim_tlv_string_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-guint16-array-get" title="mbim_tlv_guint16_array_get ()">mbim_tlv_guint16_array_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-wake-command-get" title="mbim_tlv_wake_command_get ()">mbim_tlv_wake_command_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimTlv.html#mbim-tlv-wake-packet-get" title="mbim_tlv_wake_packet_get ()">mbim_tlv_wake_packet_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimTlv.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="MbimTlv.html#MbimTlv-struct" title="MbimTlv">MbimTlv</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType">MbimTlvType</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimTlv.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> MbimTlv
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> MbimTlvType
+</pre>
+</div>
+<div class="refsect1">
+<a name="MbimTlv.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> structure is capable of exchanging a wide range of information
+between an MBIM host and an MBIM device.</p>
+<p>CID payloads for requests, responses, and/or notifications may contain zero
+or more unnamed and optional Information Elements (IE) encoded as <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>
+fields.</p>
+</div>
+<div class="refsect1">
+<a name="MbimTlv.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-tlv-new"></a><h3>mbim_tlv_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+mbim_tlv_new (<em class="parameter"><code><a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="type">MbimTlvType</span></a> type</code></em>,
+              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> data_length</code></em>);</pre>
+<p>Create a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> with the given contents.</p>
+<div class="refsect3">
+<a name="mbim-tlv-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="type">MbimTlvType</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>contents of the TLV.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_length</p></td>
+<td class="parameter_description"><p>length of the message.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>, which should be freed with <a class="link" href="MbimTlv.html#mbim-tlv-unref" title="mbim_tlv_unref ()"><code class="function">mbim_tlv_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-dup"></a><h3>mbim_tlv_dup ()</h3>
+<pre class="programlisting"><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+mbim_tlv_dup (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>);</pre>
+<p>Create a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> with the same contents as <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-tlv-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> to duplicate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-dup.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>, which should be freed with <a class="link" href="MbimTlv.html#mbim-tlv-unref" title="mbim_tlv_unref ()"><code class="function">mbim_tlv_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-ref"></a><h3>mbim_tlv_ref ()</h3>
+<pre class="programlisting"><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+mbim_tlv_ref (<em class="parameter"><code><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>self</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="mbim-tlv-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-ref.returns"></a><h4>Returns</h4>
+<p>the new reference to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-unref"></a><h3>mbim_tlv_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_tlv_unref (<em class="parameter"><code><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>self</code></em>
+ by one.
+If the reference count drops to 0, <em class="parameter"><code>self</code></em>
+ is completely disposed.</p>
+<div class="refsect3">
+<a name="mbim-tlv-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-get-raw"></a><h3>mbim_tlv_get_raw ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_tlv_get_raw (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *length</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the whole raw data buffer of the <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p>
+<div class="refsect3">
+<a name="mbim-tlv-get-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-get-raw.returns"></a><h4>Returns</h4>
+<p> The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-get-tlv-type"></a><h3>mbim_tlv_get_tlv_type ()</h3>
+<pre class="programlisting"><a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="returnvalue">MbimTlvType</span></a>
+mbim_tlv_get_tlv_type (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>);</pre>
+<p>Gets the message type.</p>
+<div class="refsect3">
+<a name="mbim-tlv-get-tlv-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-get-tlv-type.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="type">MbimTlvType</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-get-tlv-data"></a><h3>mbim_tlv_get_tlv_data ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_tlv_get_tlv_data (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_length</code></em>);</pre>
+<p>Gets the TLV raw data.</p>
+<div class="refsect3">
+<a name="mbim-tlv-get-tlv-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-get-tlv-data.returns"></a><h4>Returns</h4>
+<p>The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if empty. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-type-get-string"></a><h3>mbim_tlv_type_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_tlv_type_get_string (<em class="parameter"><code><a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="type">MbimTlvType</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="MbimTlv.html#MbimTlvType" title="enum MbimTlvType"><span class="type">MbimTlvType</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-tlv-type-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a MbimTlvType.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-type-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-string-new"></a><h3>mbim_tlv_string_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimTlv.html" title="MbimTlv"><span class="returnvalue">MbimTlv</span></a> *
+mbim_tlv_string_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *str</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> of type <a class="link" href="MbimTlv.html#MBIM-TLV-TYPE-WCHAR-STR:CAPS"><code class="literal">MBIM_TLV_TYPE_WCHAR_STR</code></a> with the given contents.</p>
+<div class="refsect3">
+<a name="mbim-tlv-string-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>str</p></td>
+<td class="parameter_description"><p>a string.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-string-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> which should be freed with <a class="link" href="MbimTlv.html#mbim-tlv-unref" title="mbim_tlv_unref ()"><code class="function">mbim_tlv_unref()</code></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-string-get"></a><h3>mbim_tlv_string_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_tlv_string_get (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get a string with the contents in the <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p>
+<div class="refsect3">
+<a name="mbim-tlv-string-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> of type <a class="link" href="MbimTlv.html#MBIM-TLV-TYPE-WCHAR-STR:CAPS"><code class="literal">MBIM_TLV_TYPE_WCHAR_STR</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-string-get.returns"></a><h4>Returns</h4>
+<p>a newly created string, which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-guint16-array-get"></a><h3>mbim_tlv_guint16_array_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_tlv_guint16_array_get (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *array_size</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> **array</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get an array of <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> values with the contents in the <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a>.</p>
+<p>The method may return a successful return even with on empty arrays (i.e.
+with <em class="parameter"><code>array_size</code></em>
+ set to 0 and <em class="parameter"><code>array</code></em>
+ set to <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>).</p>
+<div class="refsect3">
+<a name="mbim-tlv-guint16-array-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> of type <a class="link" href="MbimTlv.html#MBIM-TLV-TYPE-UINT16-TBL:CAPS"><code class="literal">MBIM_TLV_TYPE_UINT16_TBL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>array_size</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>,
+or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>return location for a
+newly allocated array of <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> values, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not
+needed. Free the returned value with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> guint16]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-guint16-array-get.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if on success, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-wake-command-get"></a><h3>mbim_tlv_wake_command_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_tlv_wake_command_get (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                           <em class="parameter"><code>const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a> **service</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *cid</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *payload_size</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **payload</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the contents of a wake command TLV.</p>
+<p>The method may return a successful return even with on empty payload (i.e.
+with <em class="parameter"><code>payload_size</code></em>
+ set to 0 and <em class="parameter"><code>payload</code></em>
+ set to <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>).</p>
+<div class="refsect3">
+<a name="mbim-tlv-wake-command-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> of type <a class="link" href="MbimTlv.html#MBIM-TLV-TYPE-WAKE-COMMAND:CAPS"><code class="literal">MBIM_TLV_TYPE_WAKE_COMMAND</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>
+specifying the service that triggered the wake. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cid</p></td>
+<td class="parameter_description"><p>return location for the command id that
+triggered the wake. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>payload_size</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>,
+or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>payload</p></td>
+<td class="parameter_description"><p>return location for a
+newly allocated array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not
+needed. Free the returned value with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> guint8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-wake-command-get.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if on success, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-tlv-wake-packet-get"></a><h3>mbim_tlv_wake_packet_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_tlv_wake_packet_get (<em class="parameter"><code>const <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *filter_id</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *original_packet_size</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *packet_size</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **packet</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the contents of a wake packet TLV.</p>
+<div class="refsect3">
+<a name="mbim-tlv-wake-packet-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimTlv.html" title="MbimTlv"><span class="type">MbimTlv</span></a> of type <a class="link" href="MbimTlv.html#MBIM-TLV-TYPE-WAKE-PACKET:CAPS"><code class="literal">MBIM_TLV_TYPE_WAKE_PACKET</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_id</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>
+specifying the filter id. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>original_packet_size</p></td>
+<td class="parameter_description"><p>return location for a
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>packet_size</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>,
+or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>packet</p></td>
+<td class="parameter_description"><p>return location for a
+newly allocated array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the field is not
+needed. Free the returned value with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> guint8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-tlv-wake-packet-get.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if on success, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimTlv.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimTlv-struct"></a><h3>MbimTlv</h3>
+<pre class="programlisting">typedef struct {
+} MbimTlv;
+</pre>
+<p>An opaque type representing a MBIM TLV.</p>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimTlvType"></a><h3>enum MbimTlvType</h3>
+<p>Type of the MBIM TLV.</p>
+<div class="refsect3">
+<a name="MbimTlvType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-INVALID:CAPS"></a>MBIM_TLV_TYPE_INVALID</p></td>
+<td class="enum_member_description">
+<p>Invalid TLV type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-UE-POLICITES:CAPS"></a>MBIM_TLV_TYPE_UE_POLICITES</p></td>
+<td class="enum_member_description">
+<p>UE policies.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-SINGLE-NSSAI:CAPS"></a>MBIM_TLV_TYPE_SINGLE_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Single NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-ALLOWED-NSSAI:CAPS"></a>MBIM_TLV_TYPE_ALLOWED_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Allowed NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-CFG-NSSAI:CAPS"></a>MBIM_TLV_TYPE_CFG_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Configured NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-DFLT-CFG-NSSAI:CAPS"></a>MBIM_TLV_TYPE_DFLT_CFG_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Default configured NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-PRECFG-DFLT-CFG-NSSAI:CAPS"></a>MBIM_TLV_TYPE_PRECFG_DFLT_CFG_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Preconfigured default configured NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-REJ-NSSAI:CAPS"></a>MBIM_TLV_TYPE_REJ_NSSAI</p></td>
+<td class="enum_member_description">
+<p>Rejected NSSAI.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-LADN:CAPS"></a>MBIM_TLV_TYPE_LADN</p></td>
+<td class="enum_member_description">
+<p>Local Area Data Network (LADN).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-TAI:CAPS"></a>MBIM_TLV_TYPE_TAI</p></td>
+<td class="enum_member_description">
+<p>Tracking Area Identity (TAI).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-WCHAR-STR:CAPS"></a>MBIM_TLV_TYPE_WCHAR_STR</p></td>
+<td class="enum_member_description">
+<p>WCHAR string.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-UINT16-TBL:CAPS"></a>MBIM_TLV_TYPE_UINT16_TBL</p></td>
+<td class="enum_member_description">
+<p>Array of 1 or more <em class="parameter"><code>guint16</code></em>
+ entries.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-EAP-PACKET:CAPS"></a>MBIM_TLV_TYPE_EAP_PACKET</p></td>
+<td class="enum_member_description">
+<p>Extensible Authentication Protocol packet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-PCO:CAPS"></a>MBIM_TLV_TYPE_PCO</p></td>
+<td class="enum_member_description">
+<p>Protocol Configuration Option (PCO).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-ROUTE-SELECTION-DESCRIPTORS:CAPS"></a>MBIM_TLV_TYPE_ROUTE_SELECTION_DESCRIPTORS</p></td>
+<td class="enum_member_description">
+<p>One or more route selection descriptors.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-TRAFFIC-PARAMETERS:CAPS"></a>MBIM_TLV_TYPE_TRAFFIC_PARAMETERS</p></td>
+<td class="enum_member_description">
+<p>A traffic parameters record.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-WAKE-COMMAND:CAPS"></a>MBIM_TLV_TYPE_WAKE_COMMAND</p></td>
+<td class="enum_member_description">
+<p>Wake command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-TLV-TYPE-WAKE-PACKET:CAPS"></a>MBIM_TLV_TYPE_WAKE_PACKET</p></td>
+<td class="enum_member_description">
+<p>Wake packet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

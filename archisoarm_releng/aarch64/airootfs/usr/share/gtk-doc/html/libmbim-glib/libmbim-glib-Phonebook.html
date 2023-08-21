@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Phonebook service: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch02.html" title="Generic Services">
+<link rel="prev" href="libmbim-glib-Auth.html" title="Auth service">
+<link rel="next" href="libmbim-glib-STK.html" title="Stk service">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-Phonebook.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Auth.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-STK.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-Phonebook"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-Phonebook.top_of_page"></a>Phonebook service</span></h2>
+<p>Phonebook service — Support for the Phonebook service.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-Phonebook.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-phonebook-entry-array-free" title="mbim_phonebook_entry_array_free ()">mbim_phonebook_entry_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-configuration-query-new" title="mbim_message_phonebook_configuration_query_new ()">mbim_message_phonebook_configuration_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-configuration-response-parse" title="mbim_message_phonebook_configuration_response_parse ()">mbim_message_phonebook_configuration_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-configuration-notification-parse" title="mbim_message_phonebook_configuration_notification_parse ()">mbim_message_phonebook_configuration_notification_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-read-query-new" title="mbim_message_phonebook_read_query_new ()">mbim_message_phonebook_read_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-read-response-parse" title="mbim_message_phonebook_read_response_parse ()">mbim_message_phonebook_read_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-delete-set-new" title="mbim_message_phonebook_delete_set_new ()">mbim_message_phonebook_delete_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-delete-response-parse" title="mbim_message_phonebook_delete_response_parse ()">mbim_message_phonebook_delete_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-write-set-new" title="mbim_message_phonebook_write_set_new ()">mbim_message_phonebook_write_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Phonebook.html#mbim-message-phonebook-write-response-parse" title="mbim_message_phonebook_write_response_parse ()">mbim_message_phonebook_write_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Phonebook.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntry" title="MbimPhonebookEntry">MbimPhonebookEntry</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntryArray" title="MbimPhonebookEntryArray">MbimPhonebookEntryArray</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Phonebook.description"></a><h2>Description</h2>
+<p>This section implements support for requests, responses and notifications in the
+Phonebook service.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Phonebook.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-phonebook-entry-array-free"></a><h3>mbim_phonebook_entry_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_phonebook_entry_array_free (<em class="parameter"><code><a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntryArray" title="MbimPhonebookEntryArray"><span class="type">MbimPhonebookEntryArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntry" title="MbimPhonebookEntry"><span class="type">MbimPhonebookEntry</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-phonebook-entry-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntry" title="MbimPhonebookEntry"><span class="type">MbimPhonebookEntry</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-configuration-query-new"></a><h3>mbim_message_phonebook_configuration_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_phonebook_configuration_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Configuration' query command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-configuration-response-parse"></a><h3>mbim_message_phonebook_configuration_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_phonebook_configuration_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookState" title="enum MbimPhonebookState"><span class="type">MbimPhonebookState</span></a> *out_state</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_number_of_entries</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_used_entries</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_max_number_length</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_max_name</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Configuration' response command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_state</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookState" title="enum MbimPhonebookState"><span class="type">MbimPhonebookState</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'State' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_number_of_entries</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'NumberOfEntries' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_used_entries</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'UsedEntries' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_max_number_length</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MaxNumberLength' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_max_name</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MaxName' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-configuration-notification-parse"></a><h3>mbim_message_phonebook_configuration_notification_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_phonebook_configuration_notification_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookState" title="enum MbimPhonebookState"><span class="type">MbimPhonebookState</span></a> *out_state</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_number_of_entries</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_used_entries</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_max_number_length</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_max_name</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Configuration' notification command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-notification-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_state</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookState" title="enum MbimPhonebookState"><span class="type">MbimPhonebookState</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'State' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_number_of_entries</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'NumberOfEntries' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_used_entries</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'UsedEntries' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_max_number_length</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MaxNumberLength' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_max_name</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MaxName' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-configuration-notification-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-read-query-new"></a><h3>mbim_message_phonebook_read_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_phonebook_read_query_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookFlag" title="enum MbimPhonebookFlag"><span class="type">MbimPhonebookFlag</span></a> filter_flag</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> filter_message_index</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Read' query command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-read-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filter_flag</p></td>
+<td class="parameter_description"><p>the 'FilterFlag' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookFlag" title="enum MbimPhonebookFlag"><span class="type">MbimPhonebookFlag</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_message_index</p></td>
+<td class="parameter_description"><p>the 'FilterMessageIndex' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-read-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-read-response-parse"></a><h3>mbim_message_phonebook_read_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_phonebook_read_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_entry_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntryArray" title="MbimPhonebookEntryArray"><span class="type">MbimPhonebookEntryArray</span></a> **out_entries</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Read' response command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-read-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_entry_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'EntryCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_entries</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-Phonebook.html#MbimPhonebookEntry" title="MbimPhonebookEntry"><span class="type">MbimPhonebookEntry</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Entries' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-Phonebook.html#mbim-phonebook-entry-array-free" title="mbim_phonebook_entry_array_free ()"><code class="function">mbim_phonebook_entry_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimPhonebookEntry]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-read-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-delete-set-new"></a><h3>mbim_message_phonebook_delete_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_phonebook_delete_set_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookFlag" title="enum MbimPhonebookFlag"><span class="type">MbimPhonebookFlag</span></a> filter_flag</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> filter_message_index</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Delete' set command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-delete-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filter_flag</p></td>
+<td class="parameter_description"><p>the 'FilterFlag' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookFlag" title="enum MbimPhonebookFlag"><span class="type">MbimPhonebookFlag</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_message_index</p></td>
+<td class="parameter_description"><p>the 'FilterMessageIndex' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-delete-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-delete-response-parse"></a><h3>mbim_message_phonebook_delete_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_phonebook_delete_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Delete' response command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-delete-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-delete-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-write-set-new"></a><h3>mbim_message_phonebook_write_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_phonebook_write_set_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookWriteFlag" title="enum MbimPhonebookWriteFlag"><span class="type">MbimPhonebookWriteFlag</span></a> save_flag</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> save_index</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *number</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Write' set command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-write-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>save_flag</p></td>
+<td class="parameter_description"><p>the 'SaveFlag' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPhonebookWriteFlag" title="enum MbimPhonebookWriteFlag"><span class="type">MbimPhonebookWriteFlag</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>save_index</p></td>
+<td class="parameter_description"><p>the 'SaveIndex' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>number</p></td>
+<td class="parameter_description"><p>the 'Number' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the 'Name' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-write-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-phonebook-write-response-parse"></a><h3>mbim_message_phonebook_write_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_phonebook_write_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Write' response command in the 'Phonebook' service.</p>
+<div class="refsect3">
+<a name="mbim-message-phonebook-write-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-phonebook-write-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Phonebook.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimPhonebookEntry"></a><h3>MbimPhonebookEntry</h3>
+<pre class="programlisting">typedef struct {
+    guint32 entry_index;
+    gchar *number;
+    gchar *name;
+} MbimPhonebookEntry;
+</pre>
+<p>A MbimPhonebookEntry element.</p>
+<div class="refsect3">
+<a name="MbimPhonebookEntry.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimPhonebookEntry.entry-index"></a>entry_index</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimPhonebookEntry.number"></a>number</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimPhonebookEntry.name"></a>name</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimPhonebookEntryArray"></a><h3>MbimPhonebookEntryArray</h3>
+<pre class="programlisting">typedef MbimPhonebookEntry *MbimPhonebookEntryArray;
+</pre>
+<p>A NULL-terminated array of MbimPhonebookEntry elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-24.html#api-index-1.24">1.24</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

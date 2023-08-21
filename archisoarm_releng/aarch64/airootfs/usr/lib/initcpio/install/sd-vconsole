@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-only
+
+build() {
+    # prevent conflicting variables from affecting vconsole.conf values
+    # shellcheck disable=SC2034
+    local KEYMAP KEYMAP_TOGGLE FONT FONT_MAP FONT_UNIMAP XKBLAYOUT XKBMODEL XKBVARIANT XKBOPTIONS
+
+    add_binary /usr/lib/systemd/systemd-vconsole-setup
+    add_binary loadkeys
+    add_binary setfont
+    add_file /etc/vconsole.conf
+    add_udev_rule 90-vconsole.rules
+
+    # subshell to avoid namespace pollution
+    (
+        shopt -s extglob nullglob
+
+        get_decompressor() {
+            case "$1" in
+                *.gz)
+                    cat='zcat'
+                    of="${1%.gz}"
+                    ;;
+                *.bz2)
+                    cat='bzcat'
+                    of="${1%.bz2}"
+                    ;;
+                *.zst)
+                    cat='zstdcat'
+                    of="${1%.zst}"
+                    ;;
+                *)
+                    cat='cat'
+                    of="$1"
+                    ;;
+            esac
+        }
+
+        add_keymap_file() {
+            local cat cmd rest f of
+
+            while read -r f; do
+                get_decompressor "$f"
+                while read -r cmd rest; do
+                    if [[ "$cmd" == 'include' ]]; then
+                        eval set "$rest"
+                        add_keymap_file "$1"
+                    fi
+                done < <("$cat" "$f")
+                add_dir "${of%/*}"
+                "$cat" "$f" >"$BUILDROOT/$of"
+            done < <(find /usr/share/kbd/keymaps/ -type f -regex ".*/$1\(\.inc\)?\(\.gz\|\.bz2|\.zst\)?")
+        }
+
+        add_font_file() {
+            local cat file filename fontfile="$1"
+            get_decompressor "$fontfile"
+            add_dir "${of%/*}"
+            "$cat" "$fontfile" >"$BUILDROOT/$of"
+            if [[ "$(head -c 23 "$BUILDROOT/$of" | tr -d '\0')" == '# combine partial fonts' ]]; then
+                while read -r filename; do
+                    for file in "/usr/share/kbd/consolefonts/partialfonts/$filename"?('.gz'|'.bz2'|'.zst'); do
+                        add_font_file "$file"
+                    done
+                done < <(sed '/^#/d' "$BUILDROOT/$of")
+            fi
+        }
+
+        # shellcheck disable=SC1091
+        [[ -s /etc/vconsole.conf ]] && . /etc/vconsole.conf
+
+        [[ -n "$KEYMAP" ]] && add_keymap_file "${KEYMAP}.map"
+        [[ -n "$KEYMAP_TOGGLE" ]] && add_keymap_file "${KEYMAP_TOGGLE}.map"
+
+        if [[ -n "$FONT_MAP" ]]; then
+            FONT_MAP="${FONT_MAP%.trans}"
+            if [[ -f "/usr/share/kbd/consoletrans/$FONT_MAP" ]]; then
+                add_file "/usr/share/kbd/consoletrans/$FONT_MAP"
+            elif [[ -f "/usr/share/kbd/consoletrans/$FONT_MAP.trans" ]]; then
+                add_file "/usr/share/kbd/consoletrans/$FONT_MAP.trans"
+            elif [[ -f "/usr/share/kbd/consoletrans/${FONT_MAP}_to_uni.trans" ]]; then
+                add_file "/usr/share/kbd/consoletrans/${FONT_MAP}_to_uni.trans"
+            else
+                error "sd-vconsole: requested font map not found: '%s'" "$FONT_MAP"
+                return 1
+            fi
+        fi
+
+        if [[ -n "$FONT_UNIMAP" ]]; then
+            FONT_UNIMAP="${FONT_UNIMAP%.uni}"
+            if [[ -f "/usr/share/kbd/unimaps/$FONT_UNIMAP.uni" ]]; then
+                add_file "/usr/share/kbd/unimaps/$FONT_UNIMAP.uni"
+            else
+                error "sd-vconsole: requested font unimap not found: '%s'" "$FONT_UNIMAP"
+                return 1
+            fi
+        fi
+
+        if [[ -n "$FONT" ]]; then
+            for file in "/usr/share/kbd/consolefonts/$FONT"?('.psfu'|'.psf'|'.cp'|'.fnt')?('.gz'|'.bz2'|'.zst'); do
+                add_font_file "$file"
+                return
+            done
+            error "sd-vconsole: requested font not found: '%s'" "$FONT"
+            return 1
+        fi
+    )
+}
+
+help() {
+    cat <<HELPEOF
+This hook adds the keymap(s) and font specified in vconsole.conf to the image and
+loads them during early userspace.
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

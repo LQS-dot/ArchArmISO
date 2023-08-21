@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMCellInfoUmts: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03.html#id-1.2.4.3" title="Generic interfaces">
+<link rel="prev" href="MMCellInfoGsm.html" title="MMCellInfoGsm">
+<link rel="next" href="MMCellInfoTdscdma.html" title="MMCellInfoTdscdma">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMCellInfoUmts.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMCellInfoUmts.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03.html#id-1.2.4.3"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMCellInfoGsm.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMCellInfoTdscdma.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMCellInfoUmts"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMCellInfoUmts.top_of_page"></a>MMCellInfoUmts</span></h2>
+<p>MMCellInfoUmts — Helper object to report UMTS cell info</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-operator-id" title="mm_cell_info_umts_get_operator_id ()">mm_cell_info_umts_get_operator_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-lac" title="mm_cell_info_umts_get_lac ()">mm_cell_info_umts_get_lac</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-ci" title="mm_cell_info_umts_get_ci ()">mm_cell_info_umts_get_ci</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-frequency-fdd-ul" title="mm_cell_info_umts_get_frequency_fdd_ul ()">mm_cell_info_umts_get_frequency_fdd_ul</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-frequency-fdd-dl" title="mm_cell_info_umts_get_frequency_fdd_dl ()">mm_cell_info_umts_get_frequency_fdd_dl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-frequency-tdd" title="mm_cell_info_umts_get_frequency_tdd ()">mm_cell_info_umts_get_frequency_tdd</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-uarfcn" title="mm_cell_info_umts_get_uarfcn ()">mm_cell_info_umts_get_uarfcn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-psc" title="mm_cell_info_umts_get_psc ()">mm_cell_info_umts_get_psc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-rscp" title="mm_cell_info_umts_get_rscp ()">mm_cell_info_umts_get_rscp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-ecio" title="mm_cell_info_umts_get_ecio ()">mm_cell_info_umts_get_ecio</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoUmts.html#mm-cell-info-umts-get-path-loss" title="mm_cell_info_umts_get_path_loss ()">mm_cell_info_umts_get_path_loss</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMCellInfoUmts.html#MMCellInfoUmts-struct" title="struct MMCellInfoUmts">MMCellInfoUmts</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="MMCellInfo.html" title="MMCellInfo">MMCellInfo</a>
+        <span class="lineart">╰──</span> MMCellInfoUmts
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> is an object used to report UMTS cell
+information.</p>
+<p>The object inherits from the generic <a class="link" href="MMCellInfo.html" title="MMCellInfo"><span class="type">MMCellInfo</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-operator-id"></a><h3>mm_cell_info_umts_get_operator_id ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_umts_get_operator_id (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the PLMN MCC/MNC.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-operator-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-operator-id.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-lac"></a><h3>mm_cell_info_umts_get_lac ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_umts_get_lac (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the two-byte Location Area Code of the base station.</p>
+<p>Encoded in upper-case hexadecimal format without leading zeros,
+as specified in 3GPP TS 27.007.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-lac.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-lac.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-ci"></a><h3>mm_cell_info_umts_get_ci ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_umts_get_ci (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the two- or four-byte Cell Identifier.</p>
+<p>Encoded in upper-case hexadecimal format without leading zeros,
+as specified in 3GPP TS 27.007.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-ci.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-ci.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-frequency-fdd-ul"></a><h3>mm_cell_info_umts_get_frequency_fdd_ul ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_frequency_fdd_ul
+                               (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the frequency of the uplink in kHz while in FDD.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-fdd-ul.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-fdd-ul.returns"></a><h4>Returns</h4>
+<p> the frequency, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-frequency-fdd-dl"></a><h3>mm_cell_info_umts_get_frequency_fdd_dl ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_frequency_fdd_dl
+                               (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the frequency of the downlink in kHz while in FDD.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-fdd-dl.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-fdd-dl.returns"></a><h4>Returns</h4>
+<p> the frequency, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-frequency-tdd"></a><h3>mm_cell_info_umts_get_frequency_tdd ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_frequency_tdd (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the frequency in kHz while in TDD.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-tdd.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-frequency-tdd.returns"></a><h4>Returns</h4>
+<p> the frequency, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-uarfcn"></a><h3>mm_cell_info_umts_get_uarfcn ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_uarfcn (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the UTRA absolute RF channel number.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-uarfcn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-uarfcn.returns"></a><h4>Returns</h4>
+<p> the UARFCN, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-psc"></a><h3>mm_cell_info_umts_get_psc ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_psc (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the primary scrambling code.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-psc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-psc.returns"></a><h4>Returns</h4>
+<p> the PSC, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-rscp"></a><h3>mm_cell_info_umts_get_rscp ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+mm_cell_info_umts_get_rscp (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the received signal code power.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-rscp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-rscp.returns"></a><h4>Returns</h4>
+<p> the RSCP, or -<a href="../glib/glib-Basic-Types.html#G-MAXDOUBLE:CAPS"><code class="literal">G_MAXDOUBLE</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-ecio"></a><h3>mm_cell_info_umts_get_ecio ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+mm_cell_info_umts_get_ecio (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the ECIO, the received energy per chip divided by the power density
+in the band measured in dBm on the primary CPICH channel of the cell.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-ecio.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-ecio.returns"></a><h4>Returns</h4>
+<p> the ECIO, or -<a href="../glib/glib-Basic-Types.html#G-MAXDOUBLE:CAPS"><code class="literal">G_MAXDOUBLE</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-umts-get-path-loss"></a><h3>mm_cell_info_umts_get_path_loss ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_umts_get_path_loss (<em class="parameter"><code><a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> *self</code></em>);</pre>
+<p>Get the path loss of the cell.</p>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-path-loss.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-umts-get-path-loss.returns"></a><h4>Returns</h4>
+<p> the path loss, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoUmts.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMCellInfoUmts-struct"></a><h3>struct MMCellInfoUmts</h3>
+<pre class="programlisting">struct MMCellInfoUmts;</pre>
+<p>The <a class="link" href="MMCellInfoUmts.html" title="MMCellInfoUmts"><span class="type">MMCellInfoUmts</span></a> structure contains private data and should only be
+accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

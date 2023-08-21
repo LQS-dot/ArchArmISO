@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modem filter: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-overview.html" title="Part I. ModemManager Overview">
+<link rel="prev" href="ch02s02.html" title="Builds without udev support">
+<link rel="next" href="ch03s02.html" title="Filter policies">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-overview.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch02s02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch03s02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="ref-overview-modem-filter"></a>Modem filter</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ref-overview-modem-filter.html#id-1.2.4.4">Filter rules</a></span></dt>
+<dt><span class="section"><a href="ch03s02.html">Filter policies</a></span></dt>
+</dl></div>
+<p>
+      ModemManager will not probe all TTYs, NET and cdc-wdm ports found in the system,
+      as this may end up interfering e.g. with TTYs that have nothing to do with modem
+      devices.
+    </p>
+<p>
+      The daemon comes with several predefined <span class="emphasis"><em>filter policies</em></span>, each
+      of them composed of one or more <span class="emphasis"><em>filter rules</em></span>.
+    </p>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.2.4.4"></a>Filter rules</h2></div></div></div>
+<p>
+        The device filter in ModemManager defines the following independent filter rules. The
+        predefined filter policies are based on one or more of these predefined filter rules.
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_EXPLICIT_ALLOWLIST</em></span></p>
+<p>
+              This filter allows users to manually tag devices and/or device ports with the
+              <span class="emphasis"><em>ID_MM_DEVICE_PROCESS</em></span> udev tag. If the filter finds this tag,
+              the device and/or device ports will be automatically accepted and port probing
+              will be allowed.
+            </p>
+<pre class="programlisting">
+$ sudo vim /lib/udev/rules.d/78-mm-allowlist-internal-modem.rules
+    ACTION!="add|change|move", GOTO="mm_allowlist_internal_modem_end"
+    ATTRS{idVendor}=="1199", ATTRS{idProduct}=="a001", ENV{ID_MM_DEVICE_PROCESS}="1"
+    LABEL="mm_allowlist_internal_modem_end"
+// Apply new rules without reboot
+$ sudo udevadm control --reload
+$ sudo udevadm trigger
+            </pre>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_EXPLICIT_BLACKLIST</em></span></p>
+<p>
+              This filter allows users to manually tag devices and/or device ports with the
+              <span class="emphasis"><em>ID_MM_DEVICE_IGNORE</em></span> udev tag. If the filter finds this tag,
+              the device and/or device ports will be automatically ignored and port probing
+              will be never run on them.
+            </p>
+<pre class="programlisting">
+$ sudo vim /lib/udev/rules.d/78-mm-blacklist-internal-modem.rules
+    ACTION!="add|change|move", GOTO="mm_blacklist_internal_modem_end"
+    ATTRS{idVendor}=="1199", ATTRS{idProduct}=="a001", ENV{ID_MM_DEVICE_IGNORE}="1"
+    LABEL="mm_blacklist_internal_modem_end"
+// Apply new rules without reboot
+$ sudo udevadm control --reload
+$ sudo udevadm trigger
+            </pre>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_PLUGIN_ALLOWLIST</em></span></p>
+<p>
+              This filter will automatically allowlist devices that are explicitly referenced
+              by plugins, either with plugin-specific allowlist tags, with exact
+              <span class="emphasis"><em>vid:pid</em></span> matches, or just with <span class="emphasis"><em>vid</em></span> matches.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_QRTR</em></span></p>
+<p>
+              This filter will automatically flag as allowed all QRTR nodes that have been
+              notified as being modem management capable.
+            </p>
+<p>
+              This filter rule is available since 1.18.0.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_VIRTUAL</em></span></p>
+<p>
+              This filter will automatically flag as forbidden all ports exposed by virtual
+              devices, like the 'lo' network interface or the tty0, tty1... virtual terminals.
+              There is no reason to disable this filter, except for testing purposes.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_NET</em></span></p>
+<p>
+              This filter will automatically flag as allowed all network ports exposed by
+              devices. Unless there is a will to explicitly forbid network ports, this filter
+              should always be enabled.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_USBMISC</em></span></p>
+<p>
+              This filter will automatically flag as allowed all cdc-wdm ports exposed in the
+              usbmisc subsystem. Unless there is a will to explicitly forbid the cdc-wdm ports exposed
+              by qmi_wwan, cdc_mbim or huawei-cdc-ncm kernel drivers, this filter should always
+              be enabled.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_RPMSG</em></span></p>
+<p>
+              This filter will automatically flag as allowed all rpmsg ports exposed in the
+              rpmsg subsystem. Unless there is a will to explicitly forbid the rpmsg ports,
+              this filter should always be enabled.
+            </p>
+<p>
+              This filter rule is available since 1.16.0.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_WWAN</em></span></p>
+<p>
+              This filter will automatically flag as allowed all wwan control ports exposed
+              in the wwan subsystem. Unless there is a will to explicitly forbid the wwan control
+              ports, this filter should always be enabled.
+            </p>
+<p>
+              This filter rule is available since 1.18.0.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY</em></span></p>
+<p>
+              If the MM_FILTER_RULE_TTY filter is disabled, no TTY port will be allowed. If this
+              filter is enabled, TTY ports will only be allowed if the TTY-specific filters (defined
+              next) allow it.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_PLATFORM_DRIVER</em></span></p>
+<p>
+              If this filter is enabled, all platform TTY ports will be forbidden automatically.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_DRIVER</em></span></p>
+<p>
+              If this filter is enabled, all TTY ports managed by modem-specific kernel drivers will be
+              allowed automatically.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>FILTER_RULE_TTY_ACM_INTERFACE</em></span></p>
+<p>
+              If this filter is enabled, all TTY ports managed by the cdc-acm kernel driver with
+              class=2/subclass=2/protocol=1 (AT command capable ttyACM port) will be allowed
+              automatically.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_WITH_NET</em></span></p>
+<p>
+              If this filter is enabled, all TTY ports for devices that also expose a network
+              interface port will be allowed automatically.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_DEFAULT_FORBIDDEN</em></span></p>
+<p>
+              This rule is the implicit one defining what happens when a TTY port isn't explicitly
+              accepted by any of the TTY-specific filters; i.e. the TTY port will be forbidden.
+            </p>
+</li>
+</ul></div>
+<p>
+      </p>
+<p>
+        The following filter rules have been deprecated and are no longer used.
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_BLACKLIST</em></span></p>
+<p>
+              Deprecated in 1.18.0.
+            </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>MM_FILTER_RULE_TTY_MANUAL_SCAN_ONLY</em></span></p>
+<p>
+              Deprecated in 1.18.0.
+            </p>
+</li>
+</ul></div>
+<p>
+      </p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

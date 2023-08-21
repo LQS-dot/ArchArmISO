@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>container: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="prev" href="libpskc-enums.html" title="enums">
+<link rel="next" href="libpskc-keypackage.html" title="keypackage">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libpskc-container.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libpskc-enums.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libpskc-keypackage.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libpskc-container"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libpskc-container.top_of_page"></a>container</span></h2>
+<p>container — High-level PSKC container handling.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libpskc-container.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()">pskc_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-done" title="pskc_done ()">pskc_done</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-parse-from-memory" title="pskc_parse_from_memory ()">pskc_parse_from_memory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-get-signed-p" title="pskc_get_signed_p ()">pskc_get_signed_p</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-validate" title="pskc_validate ()">pskc_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-build-xml" title="pskc_build_xml ()">pskc_build_xml</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-sign-x509" title="pskc_sign_x509 ()">pskc_sign_x509</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-verify-x509crt" title="pskc_verify_x509crt ()">pskc_verify_x509crt</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-get-version" title="pskc_get_version ()">pskc_get_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-set-version" title="pskc_set_version ()">pskc_set_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-get-id" title="pskc_get_id ()">pskc_get_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-set-id" title="pskc_set_id ()">pskc_set_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="returnvalue">pskc_key_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()">pskc_get_keypackage</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()">pskc_add_keypackage</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-container.html#pskc-output" title="pskc_output ()">pskc_output</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-container.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libpskc-container.html#pskc-output-formats-t" title="enum pskc_output_formats_t">pskc_output_formats_t</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-container.description"></a><h2>Description</h2>
+<p>PSKC data is represented through the <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> type which is created
+by calling <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a> and destroyed by calling <a class="link" href="libpskc-container.html#pskc-done" title="pskc_done ()"><code class="function">pskc_done()</code></a>.  You
+may parse PSKC data in XML form from a buffer by calling
+<a class="link" href="libpskc-container.html#pskc-parse-from-memory" title="pskc_parse_from_memory ()"><code class="function">pskc_parse_from_memory()</code></a>.  To convert PSKC data to human readable
+form you may use <a class="link" href="libpskc-container.html#pskc-output" title="pskc_output ()"><code class="function">pskc_output()</code></a>.  To validate PSKC data against the
+XML Schema, you may use <a class="link" href="libpskc-container.html#pskc-validate" title="pskc_validate ()"><code class="function">pskc_validate()</code></a>.  To generate PSKC based on
+the internal parsed representation you may use <a class="link" href="libpskc-container.html#pskc-build-xml" title="pskc_build_xml ()"><code class="function">pskc_build_xml()</code></a>
+which takes a <span class="type">pskc_output_format</span> enumeration to indicate output
+form.</p>
+<p>The PSKC data structure is a high-level structure that only carries
+a version indicator (see <a class="link" href="libpskc-container.html#pskc-get-version" title="pskc_get_version ()"><code class="function">pskc_get_version()</code></a>), an optional identity
+field (see <a class="link" href="libpskc-container.html#pskc-get-id" title="pskc_get_id ()"><code class="function">pskc_get_id()</code></a>) and any number of <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> types, each
+containing one key (see <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>).</p>
+</div>
+<div class="refsect1">
+<a name="libpskc-container.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pskc-init"></a><h3>pskc_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_init (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> **container</code></em>);</pre>
+<p>This function initializes the PSKC <em class="parameter"><code>container</code></em>
+ handle.  The memory
+allocate can be released by calling <a class="link" href="libpskc-container.html#pskc-done" title="pskc_done ()"><code class="function">pskc_done()</code></a>.</p>
+<div class="refsect3">
+<a name="pskc-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>pointer to a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle to initialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-init.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, on memory
+allocation errors <a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-done"></a><h3>pskc_done ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_done (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>);</pre>
+<p>This function releases the resources associated with the PSKC
+<em class="parameter"><code>container</code></em>
+ handle.</p>
+<div class="refsect3">
+<a name="pskc-done.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-parse-from-memory"></a><h3>pskc_parse_from_memory ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_parse_from_memory (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                        <em class="parameter"><code><span class="type">size_t</span> len</code></em>,
+                        <em class="parameter"><code>const <span class="type">char</span> *buffer</code></em>);</pre>
+<p>This function will parse the XML data in <em class="parameter"><code>buffer</code></em>
+ of <em class="parameter"><code>len</code></em>
+ size into
+<em class="parameter"><code>container</code></em>
+.  If <a class="link" href="libpskc-errors.html#PSKC-PARSE-ERROR:CAPS"><code class="literal">PSKC_PARSE_ERROR</code></a> is returned, parsing of some
+elements have failed but the <em class="parameter"><code>container</code></em>
+ is still valid and contain
+partially parsed information.  In this situation, you may continue
+but raise a warning.</p>
+<div class="refsect3">
+<a name="pskc-parse-from-memory.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>buffer</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>XML data to parse.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-parse-from-memory.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, on memory
+allocation errors <a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> is returned, on XML library
+errors <a class="link" href="libpskc-errors.html#PSKC-XML-ERROR:CAPS"><code class="literal">PSKC_XML_ERROR</code></a> is returned, on PSKC parse errors
+<a class="link" href="libpskc-errors.html#PSKC-PARSE-ERROR:CAPS"><code class="literal">PSKC_PARSE_ERROR</code></a> is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-signed-p"></a><h3>pskc_get_signed_p ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_get_signed_p (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>);</pre>
+<p>Check whether the container is signed or not (note that it does not
+validate the signature, merely checks whether there is one).</p>
+<div class="refsect3">
+<a name="pskc-get-signed-p.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-signed-p.returns"></a><h4>Returns</h4>
+<p> a non-0 value if the container contains a Signature
+element, 0 if there is no Signature element.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-validate"></a><h3>pskc_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_validate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+               <em class="parameter"><code><span class="type">int</span> *isvalid</code></em>);</pre>
+<p>This function validate the PSKC <em class="parameter"><code>container</code></em>
+ handle the PSKC XML
+Schema.</p>
+<div class="refsect3">
+<a name="pskc-validate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>isvalid</p></td>
+<td class="parameter_description"><p>output variable holding validation result, non-0 for valid.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-validate.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, or an error code.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-build-xml"></a><h3>pskc_build_xml ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_build_xml (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                <em class="parameter"><code><span class="type">char</span> **out</code></em>,
+                <em class="parameter"><code><span class="type">size_t</span> *len</code></em>);</pre>
+<p>This function builds a XML file from the data in <em class="parameter"><code>container</code></em>
+.  As a
+convenience, it also converts the XML into a string placed in the
+newly allocated *<em class="parameter"><code>out</code></em>
+ of length <em class="parameter"><code>len</code></em>
+ using <a class="link" href="libpskc-container.html#pskc-output" title="pskc_output ()"><code class="function">pskc_output()</code></a> with
+<a class="link" href="libpskc-container.html#PSKC-OUTPUT-XML:CAPS"><code class="literal">PSKC_OUTPUT_XML</code></a>.</p>
+<div class="refsect3">
+<a name="pskc-build-xml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>pointer to output variable to hold newly allocated string.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>output variable holding length of *<em class="parameter"><code>out</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-build-xml.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, on memory
+allocation errors <a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> is returned.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-sign-x509"></a><h3>pskc_sign_x509 ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_sign_x509 (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                <em class="parameter"><code>const <span class="type">char</span> *key_file</code></em>,
+                <em class="parameter"><code>const <span class="type">char</span> *cert_file</code></em>);</pre>
+<p>Sign PSKC data using X.509 certificate and private key.</p>
+<div class="refsect3">
+<a name="pskc-sign-x509.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_file</p></td>
+<td class="parameter_description"><p>filename of file containing private key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cert_file</p></td>
+<td class="parameter_description"><p>filename of file containing corresponding X.509 certificate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-sign-x509.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, or an error code.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-verify-x509crt"></a><h3>pskc_verify_x509crt ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_verify_x509crt (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *cert_file</code></em>,
+                     <em class="parameter"><code><span class="type">int</span> *valid_signature</code></em>);</pre>
+<p>Verify signature in PSKC data against trusted X.509 certificate.</p>
+<div class="refsect3">
+<a name="pskc-verify-x509crt.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cert_file</p></td>
+<td class="parameter_description"><p>filename of file containing trusted X.509 certificate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>valid_signature</p></td>
+<td class="parameter_description"><p>output variable with result of verification.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-verify-x509crt.returns"></a><h4>Returns</h4>
+<p> On success, <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> (zero) is returned, or an error code.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-version"></a><h3>pskc_get_version ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_version (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>);</pre>
+<p>Get the PSKC KeyContainer Version attribute.  Normally this string
+is always "1.0" and a missing field is a syntax error according to
+the PSKC schema.</p>
+<div class="refsect3">
+<a name="pskc-get-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-version.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-version"></a><h3>pskc_set_version ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_version (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                  <em class="parameter"><code>const <span class="type">char</span> *version</code></em>);</pre>
+<p>Set the PSKC KeyContainer Version attribute.  Normally this string
+is always "1.0" and a missing field is a syntax error according to
+the PSKC schema.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>version</p></td>
+<td class="parameter_description"><p>pointer to version string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-id"></a><h3>pskc_get_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>);</pre>
+<p>Get the PSKC KeyContainer Id attribute.</p>
+<div class="refsect3">
+<a name="pskc-get-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-id.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-id"></a><h3>pskc_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+             <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+<p>Set the PSKC KeyContainer Id attribute.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>pointer to id string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-keypackage"></a><h3>pskc_get_keypackage ()</h3>
+<pre class="programlisting"><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="returnvalue">pskc_key_t</span></a> *
+pskc_get_keypackage (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                     <em class="parameter"><code><span class="type">size_t</span> i</code></em>);</pre>
+<p>Get a PSKC keypackage <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle for the <em class="parameter"><code>i</code></em>
+'th key package
+in <em class="parameter"><code>container</code></em>
+.  <em class="parameter"><code>i</code></em>
+ is zero-based, i.e., 0 refer to the first key
+package, 1 refer to the second key package, and so on.</p>
+<div class="refsect3">
+<a name="pskc-get-keypackage.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>number of keypackage to get.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-keypackage.returns"></a><h4>Returns</h4>
+<p> NULL if there is no <em class="parameter"><code>i</code></em>
+'th key package, or a valid
+<a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> pointer.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-add-keypackage"></a><h3>pskc_add_keypackage ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_add_keypackage (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+                     <em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> **key</code></em>);</pre>
+<p>Add a new a PSKC keypackage to the <em class="parameter"><code>container</code></em>
+ and give back a
+<a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle.</p>
+<div class="refsect3">
+<a name="pskc-add-keypackage.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>pointer to <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> key package handle.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-add-keypackage.returns"></a><h4>Returns</h4>
+<p> <a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> on memory allocation errors, or
+<a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> on success.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-output"></a><h3>pskc_output ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_output (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> *container</code></em>,
+             <em class="parameter"><code><a class="link" href="libpskc-container.html#pskc-output-formats-t" title="enum pskc_output_formats_t"><span class="type">pskc_output_formats_t</span></a> format</code></em>,
+             <em class="parameter"><code><span class="type">char</span> **out</code></em>,
+             <em class="parameter"><code><span class="type">size_t</span> *len</code></em>);</pre>
+<p>Convert PSKC data to a serialized string of the indicated type.
+This is usually used to convert the PSKC data to some human
+readable form.</p>
+<div class="refsect3">
+<a name="pskc-output.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>container</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>an <a class="link" href="libpskc-container.html#pskc-output-formats-t" title="enum pskc_output_formats_t"><span class="type">pskc_output_formats_t</span></a> enumeration type indicating format.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>pointer to output variable holding newly allocated string.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>pointer to output variable hold length of *<em class="parameter"><code>out</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-output.returns"></a><h4>Returns</h4>
+<p> <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> on success, or an error code.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libpskc-container.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="pskc-output-formats-t"></a><h3>enum pskc_output_formats_t</h3>
+<p>Enumeration of different PSKC output formats.</p>
+<div class="refsect3">
+<a name="pskc-output-formats-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-OUTPUT-HUMAN-COMPLETE:CAPS"></a>PSKC_OUTPUT_HUMAN_COMPLETE</p></td>
+<td class="enum_member_description">
+<p>All information in human-readable format.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-OUTPUT-XML:CAPS"></a>PSKC_OUTPUT_XML</p></td>
+<td class="enum_member_description">
+<p>Output container in XML format.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-OUTPUT-INDENTED-XML:CAPS"></a>PSKC_OUTPUT_INDENTED_XML</p></td>
+<td class="enum_member_description">
+<p>Output container in intended XML format (will
+  invalidate any XML Digital Signatures).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

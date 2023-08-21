@@ -1,0 +1,46 @@
+%NAME%
+iwd
+
+%VERSION%
+2.7-1
+
+%BASE%
+iwd
+
+%DESC%
+Internet Wireless Daemon
+
+%URL%
+https://git.kernel.org/cgit/network/wireless/iwd.git/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1688717018
+
+%INSTALLDATE%
+1691208533
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+2384139
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+readline
+libreadline.so=8-64
+ell
+gcc-libs
+
+%OPTDEPENDS%
+qrencode: for displaying QR code after DPP is started
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PolkitUnixUser: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="Identities.html" title="Identities">
+<link rel="prev" href="PolkitIdentity.html" title="PolkitIdentity">
+<link rel="next" href="PolkitUnixGroup.html" title="PolkitUnixGroup">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitUnixUser.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#PolkitUnixUser.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#PolkitUnixUser.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#PolkitUnixUser.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="Identities.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="PolkitIdentity.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PolkitUnixGroup.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="PolkitUnixUser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="PolkitUnixUser.top_of_page"></a>PolkitUnixUser</span></h2>
+<p>PolkitUnixUser — Unix users</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="PolkitUnixUser.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="PolkitIdentity.html" title="PolkitIdentity"><span class="returnvalue">PolkitIdentity</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitUnixUser.html#polkit-unix-user-new" title="polkit_unix_user_new ()">polkit_unix_user_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="PolkitIdentity.html" title="PolkitIdentity"><span class="returnvalue">PolkitIdentity</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitUnixUser.html#polkit-unix-user-new-for-name" title="polkit_unix_user_new_for_name ()">polkit_unix_user_new_for_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitUnixUser.html#polkit-unix-user-get-uid" title="polkit_unix_user_get_uid ()">polkit_unix_user_get_uid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitUnixUser.html#polkit-unix-user-set-uid" title="polkit_unix_user_set_uid ()">polkit_unix_user_set_uid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitUnixUser.html#polkit-unix-user-get-name" title="polkit_unix_user_get_name ()">polkit_unix_user_get_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type"><span class="type">int</span></td>
+<td class="property_name"><a class="link" href="PolkitUnixUser.html#PolkitUnixUser--uid" title="The “uid” property">uid</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="PolkitUnixUser.html#PolkitUnixUser-struct" title="PolkitUnixUser">PolkitUnixUser</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> PolkitUnixUser
+</pre>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+PolkitUnixUser implements
+ <a class="link" href="PolkitIdentity.html" title="PolkitIdentity">PolkitIdentity</a>.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.description"></a><h2>Description</h2>
+<p>An object representing a user identity on a UNIX system.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="polkit-unix-user-new"></a><h3>polkit_unix_user_new ()</h3>
+<pre class="programlisting"><a class="link" href="PolkitIdentity.html" title="PolkitIdentity"><span class="returnvalue">PolkitIdentity</span></a> *
+polkit_unix_user_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> uid</code></em>);</pre>
+<p>Creates a new <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> object for <em class="parameter"><code>uid</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-unix-user-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>uid</p></td>
+<td class="parameter_description"><p>A UNIX user id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-unix-user-new.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> object. Free with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-unix-user-new-for-name"></a><h3>polkit_unix_user_new_for_name ()</h3>
+<pre class="programlisting"><a class="link" href="PolkitIdentity.html" title="PolkitIdentity"><span class="returnvalue">PolkitIdentity</span></a> *
+polkit_unix_user_new_for_name (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a new <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> object for a user with the user name
+<em class="parameter"><code>name</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-unix-user-new-for-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>A UNIX user name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-unix-user-new-for-name.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> object or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-unix-user-get-uid"></a><h3>polkit_unix_user_get_uid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+polkit_unix_user_get_uid (<em class="parameter"><code><a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> *user</code></em>);</pre>
+<p>Gets the UNIX user id for <em class="parameter"><code>user</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-unix-user-get-uid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-unix-user-get-uid.returns"></a><h4>Returns</h4>
+<p> A UNIX user id.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-unix-user-set-uid"></a><h3>polkit_unix_user_set_uid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+polkit_unix_user_set_uid (<em class="parameter"><code><a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> *user</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> uid</code></em>);</pre>
+<p>Sets <em class="parameter"><code>uid</code></em>
+ for <em class="parameter"><code>user</code></em>
+.</p>
+<div class="refsect3">
+<a name="polkit-unix-user-set-uid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>user</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uid</p></td>
+<td class="parameter_description"><p>A UNIX user id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-unix-user-get-name"></a><h3>polkit_unix_user_get_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+polkit_unix_user_get_name (<em class="parameter"><code><a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> *user</code></em>);</pre>
+<p>Get the user's name.</p>
+<div class="refsect3">
+<a name="polkit-unix-user-get-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-unix-user-get-name.returns"></a><h4>Returns</h4>
+<p>User name string or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if user uid not found. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PolkitUnixUser-struct"></a><h3>PolkitUnixUser</h3>
+<pre class="programlisting">typedef struct _PolkitUnixUser PolkitUnixUser;</pre>
+<p>The <a class="link" href="PolkitUnixUser.html" title="PolkitUnixUser"><span class="type">PolkitUnixUser</span></a> struct should not be accessed directly.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="PolkitUnixUser.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="PolkitUnixUser--uid"></a><h3>The <code class="literal">“uid”</code> property</h3>
+<pre class="programlisting">  “uid”                      <span class="type">int</span></pre>
+<p>The UNIX user id.</p>
+<p>Owner: PolkitUnixUser</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

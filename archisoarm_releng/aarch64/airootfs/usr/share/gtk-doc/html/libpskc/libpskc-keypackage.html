@@ -1,0 +1,3543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>keypackage: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="prev" href="libpskc-container.html" title="container">
+<link rel="next" href="api-index-full.html" title="API Index">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libpskc-keypackage.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libpskc-container.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="api-index-full.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libpskc-keypackage"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libpskc-keypackage.top_of_page"></a>keypackage</span></h2>
+<p>keypackage — PSKC keypackage handling.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libpskc-keypackage.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-manufacturer" title="pskc_get_device_manufacturer ()">pskc_get_device_manufacturer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-manufacturer" title="pskc_set_device_manufacturer ()">pskc_set_device_manufacturer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-serialno" title="pskc_get_device_serialno ()">pskc_get_device_serialno</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-serialno" title="pskc_set_device_serialno ()">pskc_set_device_serialno</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-model" title="pskc_get_device_model ()">pskc_get_device_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-model" title="pskc_set_device_model ()">pskc_set_device_model</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-issueno" title="pskc_get_device_issueno ()">pskc_get_device_issueno</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-issueno" title="pskc_set_device_issueno ()">pskc_set_device_issueno</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-devicebinding" title="pskc_get_device_devicebinding ()">pskc_get_device_devicebinding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-devicebinding" title="pskc_set_device_devicebinding ()">pskc_set_device_devicebinding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const struct <span class="returnvalue">tm</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-startdate" title="pskc_get_device_startdate ()">pskc_get_device_startdate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-startdate" title="pskc_set_device_startdate ()">pskc_set_device_startdate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const struct <span class="returnvalue">tm</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-expirydate" title="pskc_get_device_expirydate ()">pskc_get_device_expirydate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-expirydate" title="pskc_set_device_expirydate ()">pskc_set_device_expirydate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-device-userid" title="pskc_get_device_userid ()">pskc_get_device_userid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-device-userid" title="pskc_set_device_userid ()">pskc_set_device_userid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-cryptomodule-id" title="pskc_get_cryptomodule_id ()">pskc_get_cryptomodule_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-cryptomodule-id" title="pskc_set_cryptomodule_id ()">pskc_set_cryptomodule_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-id" title="pskc_get_key_id ()">pskc_get_key_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-id" title="pskc_set_key_id ()">pskc_set_key_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algorithm" title="pskc_get_key_algorithm ()">pskc_get_key_algorithm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algorithm" title="pskc_set_key_algorithm ()">pskc_set_key_algorithm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-issuer" title="pskc_get_key_issuer ()">pskc_get_key_issuer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-issuer" title="pskc_set_key_issuer ()">pskc_set_key_issuer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-suite" title="pskc_get_key_algparm_suite ()">pskc_get_key_algparm_suite</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-suite" title="pskc_set_key_algparm_suite ()">pskc_set_key_algparm_suite</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-chall-encoding" title="pskc_get_key_algparm_chall_encoding ()">pskc_get_key_algparm_chall_encoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-chall-encoding" title="pskc_set_key_algparm_chall_encoding ()">pskc_set_key_algparm_chall_encoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-chall-min" title="pskc_get_key_algparm_chall_min ()">pskc_get_key_algparm_chall_min</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-chall-min" title="pskc_set_key_algparm_chall_min ()">pskc_set_key_algparm_chall_min</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-chall-max" title="pskc_get_key_algparm_chall_max ()">pskc_get_key_algparm_chall_max</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-chall-max" title="pskc_set_key_algparm_chall_max ()">pskc_set_key_algparm_chall_max</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-chall-checkdigits" title="pskc_get_key_algparm_chall_checkdigits ()">pskc_get_key_algparm_chall_checkdigits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-chall-checkdigits" title="pskc_set_key_algparm_chall_checkdigits ()">pskc_set_key_algparm_chall_checkdigits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-resp-encoding" title="pskc_get_key_algparm_resp_encoding ()">pskc_get_key_algparm_resp_encoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-resp-encoding" title="pskc_set_key_algparm_resp_encoding ()">pskc_set_key_algparm_resp_encoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-resp-length" title="pskc_get_key_algparm_resp_length ()">pskc_get_key_algparm_resp_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-resp-length" title="pskc_set_key_algparm_resp_length ()">pskc_set_key_algparm_resp_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-algparm-resp-checkdigits" title="pskc_get_key_algparm_resp_checkdigits ()">pskc_get_key_algparm_resp_checkdigits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-algparm-resp-checkdigits" title="pskc_set_key_algparm_resp_checkdigits ()">pskc_set_key_algparm_resp_checkdigits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-profileid" title="pskc_get_key_profileid ()">pskc_get_key_profileid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-profileid" title="pskc_set_key_profileid ()">pskc_set_key_profileid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-reference" title="pskc_get_key_reference ()">pskc_get_key_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-reference" title="pskc_set_key_reference ()">pskc_set_key_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-friendlyname" title="pskc_get_key_friendlyname ()">pskc_get_key_friendlyname</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-friendlyname" title="pskc_set_key_friendlyname ()">pskc_set_key_friendlyname</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-userid" title="pskc_get_key_userid ()">pskc_get_key_userid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-userid" title="pskc_set_key_userid ()">pskc_set_key_userid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-secret" title="pskc_get_key_data_secret ()">pskc_get_key_data_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-secret" title="pskc_set_key_data_secret ()">pskc_set_key_data_secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-b64secret" title="pskc_get_key_data_b64secret ()">pskc_get_key_data_b64secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-b64secret" title="pskc_set_key_data_b64secret ()">pskc_set_key_data_b64secret</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint64_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-counter" title="pskc_get_key_data_counter ()">pskc_get_key_data_counter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-counter" title="pskc_set_key_data_counter ()">pskc_set_key_data_counter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-time" title="pskc_get_key_data_time ()">pskc_get_key_data_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-time" title="pskc_set_key_data_time ()">pskc_set_key_data_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-timeinterval" title="pskc_get_key_data_timeinterval ()">pskc_get_key_data_timeinterval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-timeinterval" title="pskc_set_key_data_timeinterval ()">pskc_set_key_data_timeinterval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-data-timedrift" title="pskc_get_key_data_timedrift ()">pskc_get_key_data_timedrift</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-data-timedrift" title="pskc_set_key_data_timedrift ()">pskc_set_key_data_timedrift</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const struct <span class="returnvalue">tm</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-startdate" title="pskc_get_key_policy_startdate ()">pskc_get_key_policy_startdate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-startdate" title="pskc_set_key_policy_startdate ()">pskc_set_key_policy_startdate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const struct <span class="returnvalue">tm</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-expirydate" title="pskc_get_key_policy_expirydate ()">pskc_get_key_policy_expirydate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-expirydate" title="pskc_set_key_policy_expirydate ()">pskc_set_key_policy_expirydate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinkeyid" title="pskc_get_key_policy_pinkeyid ()">pskc_get_key_policy_pinkeyid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinkeyid" title="pskc_set_key_policy_pinkeyid ()">pskc_set_key_policy_pinkeyid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libpskc-enums.html#pskc-pinusagemode" title="enum pskc_pinusagemode"><span class="returnvalue">pskc_pinusagemode</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinusagemode" title="pskc_get_key_policy_pinusagemode ()">pskc_get_key_policy_pinusagemode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinusagemode" title="pskc_set_key_policy_pinusagemode ()">pskc_set_key_policy_pinusagemode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinmaxfailedattempts" title="pskc_get_key_policy_pinmaxfailedattempts ()">pskc_get_key_policy_pinmaxfailedattempts</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinmaxfailedattempts" title="pskc_set_key_policy_pinmaxfailedattempts ()">pskc_set_key_policy_pinmaxfailedattempts</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinminlength" title="pskc_get_key_policy_pinminlength ()">pskc_get_key_policy_pinminlength</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinminlength" title="pskc_set_key_policy_pinminlength ()">pskc_set_key_policy_pinminlength</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinmaxlength" title="pskc_get_key_policy_pinmaxlength ()">pskc_get_key_policy_pinmaxlength</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinmaxlength" title="pskc_set_key_policy_pinmaxlength ()">pskc_set_key_policy_pinmaxlength</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-pinencoding" title="pskc_get_key_policy_pinencoding ()">pskc_get_key_policy_pinencoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-pinencoding" title="pskc_set_key_policy_pinencoding ()">pskc_set_key_policy_pinencoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-keyusages" title="pskc_get_key_policy_keyusages ()">pskc_get_key_policy_keyusages</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-keyusages" title="pskc_set_key_policy_keyusages ()">pskc_set_key_policy_keyusages</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint64_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-get-key-policy-numberoftransactions" title="pskc_get_key_policy_numberoftransactions ()">pskc_get_key_policy_numberoftransactions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-keypackage.html#pskc-set-key-policy-numberoftransactions" title="pskc_set_key_policy_numberoftransactions ()">pskc_set_key_policy_numberoftransactions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-keypackage.description"></a><h2>Description</h2>
+<p>The <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> structure hold data for one key package in a
+high-level PSKC <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> structure.  The <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a> and
+<a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()"><code class="function">pskc_add_keypackage()</code></a> functions can be used to get a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a>
+handle, which is always related to one <a class="link" href="libpskc-pskc.html#pskc-t" title="pskc_t"><span class="type">pskc_t</span></a> structure.  This
+section describes all the functions that are used to access and
+modify information stored in <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> PSKC key packages.</p>
+</div>
+<div class="refsect1">
+<a name="libpskc-keypackage.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pskc-get-device-manufacturer"></a><h3>pskc_get_device_manufacturer ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_manufacturer (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo Manufacturer value.  This
+element indicates the manufacturer of the device.</p>
+<div class="refsect3">
+<a name="pskc-get-device-manufacturer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-manufacturer.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-manufacturer"></a><h3>pskc_set_device_manufacturer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_manufacturer (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *devmfr</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo Manufacturer value.  This
+element indicates the manufacturer of the device.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-manufacturer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle from, e.g., <a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()"><code class="function">pskc_add_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>devmfr</p></td>
+<td class="parameter_description"><p>string with device manufacturer name to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-serialno"></a><h3>pskc_get_device_serialno ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_serialno (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo SerialNo value.  This element
+contains the serial number of the device.</p>
+<div class="refsect3">
+<a name="pskc-get-device-serialno.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-serialno.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-serialno"></a><h3>pskc_set_device_serialno ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_serialno (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                          <em class="parameter"><code>const <span class="type">char</span> *serialno</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo SerialNo value.  This element
+indicates the serial number of the device.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-serialno.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle from, e.g., <a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()"><code class="function">pskc_add_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>serialno</p></td>
+<td class="parameter_description"><p>string with serial number to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-model"></a><h3>pskc_get_device_model ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_model (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo Model value.  This element
+describes the model of the device (e.g.,
+"one-button-HOTP-token-V1").</p>
+<div class="refsect3">
+<a name="pskc-get-device-model.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-model.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-model"></a><h3>pskc_set_device_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_model (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                       <em class="parameter"><code>const <span class="type">char</span> *model</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo Model value.  This element
+describes the model of the device (e.g.,
+"one-button-HOTP-token-V1").</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-model.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle from, e.g., <a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()"><code class="function">pskc_add_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a string with model name to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-issueno"></a><h3>pskc_get_device_issueno ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_issueno (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo IssueNo value.  This element
+contains the issue number in case there are devices with the same
+serial number so that they can be distinguished by different issue
+numbers.</p>
+<div class="refsect3">
+<a name="pskc-get-device-issueno.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-issueno.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-issueno"></a><h3>pskc_set_device_issueno ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_issueno (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                         <em class="parameter"><code>const <span class="type">char</span> *issueno</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo IssueNo value.  This element
+contains the issue number in case there are devices with the same
+serial number so that they can be distinguished by different issue
+numbers.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-issueno.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle from, e.g., <a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()"><code class="function">pskc_add_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>issueno</p></td>
+<td class="parameter_description"><p>a string with issue number to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-devicebinding"></a><h3>pskc_get_device_devicebinding ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_devicebinding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo DeviceBinding value.  This
+element allows a provisioning server to ensure that the key is
+going to be loaded into the device for which the key provisioning
+request was approved.  The device is bound to the request using a
+device identifier, e.g., an International Mobile Equipment Identity
+(IMEI) for the phone, or an identifier for a class of identifiers,
+e.g., those for which the keys are protected by a Trusted Platform
+Module (TPM).</p>
+<div class="refsect3">
+<a name="pskc-get-device-devicebinding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-devicebinding.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-devicebinding"></a><h3>pskc_set_device_devicebinding ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_devicebinding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code>const <span class="type">char</span> *devbind</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo DeviceBinding value.  This
+element allows a provisioning server to ensure that the key is
+going to be loaded into the device for which the key provisioning
+request was approved.  The device is bound to the request using a
+device identifier, e.g., an International Mobile Equipment Identity
+(IMEI) for the phone, or an identifier for a class of identifiers,
+e.g., those for which the keys are protected by a Trusted Platform
+Module (TPM).</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-devicebinding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>devbind</p></td>
+<td class="parameter_description"><p>a string with device binding to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-startdate"></a><h3>pskc_get_device_startdate ()</h3>
+<pre class="programlisting">const struct <span class="returnvalue">tm</span> *
+pskc_get_device_startdate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo StartDate.  This element denote
+the start date of a device (such as the one on a payment card, used
+when issue numbers are not printed on cards).</p>
+<div class="refsect3">
+<a name="pskc-get-device-startdate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-startdate.returns"></a><h4>Returns</h4>
+<p> a constant struct (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-startdate"></a><h3>pskc_set_device_startdate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_startdate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                           <em class="parameter"><code>const <span class="type">struct tm</span> *startdate</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo StartDate.  This element denote
+the start date of a device (such as the one on a payment card, used
+when issue numbers are not printed on cards).</p>
+<div class="refsect3">
+<a name="pskc-set-device-startdate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>startdate</p></td>
+<td class="parameter_description"><p>pointer to a tm struct with device starting date to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-expirydate"></a><h3>pskc_get_device_expirydate ()</h3>
+<pre class="programlisting">const struct <span class="returnvalue">tm</span> *
+pskc_get_device_expirydate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo ExpiryDate.  This element denote
+the end date of a device (such as the one on a payment card, used
+when issue numbers are not printed on cards).</p>
+<div class="refsect3">
+<a name="pskc-get-device-expirydate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-expirydate.returns"></a><h4>Returns</h4>
+<p> a constant struct (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-expirydate"></a><h3>pskc_set_device_expirydate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_expirydate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                            <em class="parameter"><code>const <span class="type">struct tm</span> *expirydate</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo ExpiryDate.  This element denote
+the end date of a device (such as the one on a payment card, used
+when issue numbers are not printed on cards).</p>
+<div class="refsect3">
+<a name="pskc-set-device-expirydate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expirydate</p></td>
+<td class="parameter_description"><p>pointer to a tm struct with device expiry date to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-device-userid"></a><h3>pskc_get_device_userid ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_device_userid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage DeviceInfo Userid value.  This indicates
+the user with whom the device is associated.</p>
+<div class="refsect3">
+<a name="pskc-get-device-userid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-device-userid.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-device-userid"></a><h3>pskc_set_device_userid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_device_userid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code>const <span class="type">char</span> *userid</code></em>);</pre>
+<p>Set the PSKC KeyPackage DeviceInfo Userid value.  This indicates
+the user with whom the device is associated.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-device-userid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>userid</p></td>
+<td class="parameter_description"><p>a string with user identity to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-cryptomodule-id"></a><h3>pskc_get_cryptomodule_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_cryptomodule_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage CryptoModule Id value.  This element
+carries a unique identifier for the CryptoModule and is
+implementation specific.  As such, it helps to identify a specific
+CryptoModule to which the key is being or was provisioned.</p>
+<div class="refsect3">
+<a name="pskc-get-cryptomodule-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-cryptomodule-id.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-cryptomodule-id"></a><h3>pskc_set_cryptomodule_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_cryptomodule_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                          <em class="parameter"><code>const <span class="type">char</span> *cid</code></em>);</pre>
+<p>Set the PSKC KeyPackage CryptoModule Id value.  This element
+carries a unique identifier for the CryptoModule and is
+implementation specific.  As such, it helps to identify a specific
+CryptoModule to which the key is being or was provisioned.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-cryptomodule-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cid</p></td>
+<td class="parameter_description"><p>the cryptomodule id to set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-id"></a><h3>pskc_get_key_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Id attribute value.  It is a syntax
+error for this attribute to not be available.</p>
+<div class="refsect3">
+<a name="pskc-get-key-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-id.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-id"></a><h3>pskc_set_key_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_id (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                 <em class="parameter"><code>const <span class="type">char</span> *keyid</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Id attribute value.  It is a syntax
+error for this attribute to not be available.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyid</p></td>
+<td class="parameter_description"><p>the key identity string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algorithm"></a><h3>pskc_get_key_algorithm ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_algorithm (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Algorithm attribute value.  This may be
+an URN, for example "urn:ietf:params:xml:ns:keyprov:pskc:hotp".</p>
+<div class="refsect3">
+<a name="pskc-get-key-algorithm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algorithm.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algorithm"></a><h3>pskc_set_key_algorithm ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algorithm (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code>const <span class="type">char</span> *keyalg</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Algorithm attribute value.  This may be
+an URN, for example "urn:ietf:params:xml:ns:keyprov:pskc:hotp".</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algorithm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyalg</p></td>
+<td class="parameter_description"><p>the key algorithm string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-issuer"></a><h3>pskc_get_key_issuer ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_issuer (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Issuer value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-issuer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-issuer.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-issuer"></a><h3>pskc_set_key_issuer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_issuer (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *keyissuer</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Issuer value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-issuer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyissuer</p></td>
+<td class="parameter_description"><p>a key issuer string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-suite"></a><h3>pskc_get_key_algparm_suite ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_algparm_suite (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters Suite value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-suite.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-suite.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-suite"></a><h3>pskc_set_key_algparm_suite ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_suite (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                            <em class="parameter"><code>const <span class="type">char</span> *keyalgparmsuite</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters Suite value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-suite.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyalgparmsuite</p></td>
+<td class="parameter_description"><p>the key algorithm parameter suite string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-chall-encoding"></a><h3>pskc_get_key_algparm_chall_encoding ()</h3>
+<pre class="programlisting"><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+pskc_get_key_algparm_chall_encoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                     <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat
+Encoding value.  This attribute defines the encoding of the
+challenge accepted by the device.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-encoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-encoding.returns"></a><h4>Returns</h4>
+<p> an <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> value</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-chall-encoding"></a><h3>pskc_set_key_algparm_chall_encoding ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_chall_encoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                     <em class="parameter"><code><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> vf</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat
+Encoding value.  This attribute defines the encoding of the
+challenge accepted by the device.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-chall-encoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vf</p></td>
+<td class="parameter_description"><p>the <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> encoding type to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-chall-min"></a><h3>pskc_get_key_algparm_chall_min ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_algparm_chall_min (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat Min
+value.  This attribute defines the minimum size of the challenge
+accepted by the device for CR mode and MUST be included.  If the
+'Encoding' attribute is set to 'DECIMAL', 'HEXADECIMAL', or
+'ALPHANUMERIC', this value indicates the minimum number of
+digits/characters.  If the 'Encoding' attribute is set to 'BASE64'
+or 'BINARY', this value indicates the minimum number of bytes of
+the unencoded value.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-min.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-chall-min"></a><h3>pskc_set_key_algparm_chall_min ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_chall_min (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">uint32_t</span> challmin</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat Min
+value.  This attribute defines the minimum size of the challenge
+accepted by the device for CR mode and MUST be included.  If the
+'Encoding' attribute is set to 'DECIMAL', 'HEXADECIMAL', or
+'ALPHANUMERIC', this value indicates the minimum number of
+digits/characters.  If the 'Encoding' attribute is set to 'BASE64'
+or 'BINARY', this value indicates the minimum number of bytes of
+the unencoded value.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-chall-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>challmin</p></td>
+<td class="parameter_description"><p>the minimum challenge length to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-chall-max"></a><h3>pskc_get_key_algparm_chall_max ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_algparm_chall_max (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat Max
+value.  This attribute defines the maximum size of the challenge
+accepted by the device for CR mode and MUST be included.  If the
+'Encoding' attribute is set to 'DECIMAL', 'HEXADECIMAL', or
+'ALPHANUMERIC', this value indicates the maximum number of
+digits/characters.  If the 'Encoding' attribute is set to 'BASE64'
+or 'BINARY', this value indicates the maximum number of bytes of
+the unencoded value.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-max.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-max.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-chall-max"></a><h3>pskc_set_key_algparm_chall_max ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_chall_max (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">uint32_t</span> challmax</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat Max
+value.  This attribute defines the maximum size of the challenge
+accepted by the device for CR mode and MUST be included.  If the
+'Encoding' attribute is set to 'DECIMAL', 'HEXADECIMAL', or
+'ALPHANUMERIC', this value indicates the maximum number of
+digits/characters.  If the 'Encoding' attribute is set to 'BASE64'
+or 'BINARY', this value indicates the maximum number of bytes of
+the unencoded value.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-chall-max.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>challmax</p></td>
+<td class="parameter_description"><p>the maximum challenge length to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-chall-checkdigits"></a><h3>pskc_get_key_algparm_chall_checkdigits ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_get_key_algparm_chall_checkdigits
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat
+CheckDigits value.  This attribute indicates whether a device needs
+to check the appended Luhn check digit, as defined in [ISOIEC7812],
+contained in a challenge.  This is only valid if the 'Encoding'
+attribute is set to 'DECIMAL'.  A value of TRUE indicates that the
+device will check the appended Luhn check digit in a provided
+challenge.  A value of FALSE indicates that the device will not
+check the appended Luhn check digit in the challenge.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-checkdigits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-chall-checkdigits.returns"></a><h4>Returns</h4>
+<p> 1 to indicate a CheckDigits value of true, or 0 to
+indicate false.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-chall-checkdigits"></a><h3>pskc_set_key_algparm_chall_checkdigits ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_chall_checkdigits
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> checkdigit</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat
+CheckDigits value.  This attribute indicates whether a device needs
+to check the appended Luhn check digit, as defined in [ISOIEC7812],
+contained in a challenge.  This is only valid if the 'Encoding'
+attribute is set to 'DECIMAL'.  A value of TRUE indicates that the
+device will check the appended Luhn check digit in a provided
+challenge.  A value of FALSE indicates that the device will not
+check the appended Luhn check digit in the challenge.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-chall-checkdigits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>checkdigit</p></td>
+<td class="parameter_description"><p>non-zero to indicate setting true CheckDigit, 0 otherwise.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-resp-encoding"></a><h3>pskc_get_key_algparm_resp_encoding ()</h3>
+<pre class="programlisting"><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+pskc_get_key_algparm_resp_encoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                    <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+Encoding value.  This attribute defines the encoding of the
+response generated by the device, it MUST be included.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-encoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-encoding.returns"></a><h4>Returns</h4>
+<p> an <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> value</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-resp-encoding"></a><h3>pskc_set_key_algparm_resp_encoding ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_resp_encoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                    <em class="parameter"><code><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> vf</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+Encoding value.  This attribute defines the encoding of the
+response generated by the device, it MUST be included.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-resp-encoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vf</p></td>
+<td class="parameter_description"><p>the <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> encoding type to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-resp-length"></a><h3>pskc_get_key_algparm_resp_length ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_algparm_resp_length (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+Length value.  This attribute defines the length of the response
+generated by the device and MUST be included.  If the 'Encoding'
+attribute is set to 'DECIMAL', 'HEXADECIMAL', or ALPHANUMERIC, this
+value indicates the number of digits/characters.  If the 'Encoding'
+attribute is set to 'BASE64' or 'BINARY', this value indicates the
+number of bytes of the unencoded value.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-length.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-resp-length"></a><h3>pskc_set_key_algparm_resp_length ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_resp_length (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">uint32_t</span> length</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+Length value.  This attribute defines the length of the response
+generated by the device and MUST be included.  If the 'Encoding'
+attribute is set to 'DECIMAL', 'HEXADECIMAL', or ALPHANUMERIC, this
+value indicates the number of digits/characters.  If the 'Encoding'
+attribute is set to 'BASE64' or 'BINARY', this value indicates the
+number of bytes of the unencoded value.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-resp-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>length of response to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-algparm-resp-checkdigits"></a><h3>pskc_get_key_algparm_resp_checkdigits ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_get_key_algparm_resp_checkdigits (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                       <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+CheckDigits value.  This attribute indicates whether the device
+needs to append a Luhn check digit, as defined in [ISOIEC7812], to
+the response.  This is only valid if the 'Encoding' attribute is
+set to 'DECIMAL'.  If the value is TRUE, then the device will
+append a Luhn check digit to the response.  If the value is FALSE,
+then the device will not append a Luhn check digit to the response.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-checkdigits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-algparm-resp-checkdigits.returns"></a><h4>Returns</h4>
+<p> 1 to indicate a CheckDigits value of true, or 0 to
+indicate false.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-algparm-resp-checkdigits"></a><h3>pskc_set_key_algparm_resp_checkdigits ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_algparm_resp_checkdigits (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                       <em class="parameter"><code><span class="type">int</span> checkdigit</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key AlgorithmParameters ResponseFormat
+CheckDigits value.  This attribute indicates whether the device
+needs to append a Luhn check digit, as defined in [ISOIEC7812], to
+the response.  This is only valid if the 'Encoding' attribute is
+set to 'DECIMAL'.  If the value is TRUE, then the device will
+append a Luhn check digit to the response.  If the value is FALSE,
+then the device will not append a Luhn check digit to the response.</p>
+<div class="refsect3">
+<a name="pskc-set-key-algparm-resp-checkdigits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>checkdigit</p></td>
+<td class="parameter_description"><p>non-zero to indicate setting true CheckDigit, 0 otherwise.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-profileid"></a><h3>pskc_get_key_profileid ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_profileid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key KeyProfileId value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-profileid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-profileid.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-profileid"></a><h3>pskc_set_key_profileid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_profileid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code>const <span class="type">char</span> *profileid</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key KeyProfileId value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-profileid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>profileid</p></td>
+<td class="parameter_description"><p>pointer to profileid string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-reference"></a><h3>pskc_get_key_reference ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_reference (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key KeyReference value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-reference.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-reference"></a><h3>pskc_set_key_reference ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_reference (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code>const <span class="type">char</span> *keyref</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key KeyReference value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyref</p></td>
+<td class="parameter_description"><p>pointer to key reference string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-friendlyname"></a><h3>pskc_get_key_friendlyname ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_friendlyname (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Friendlyname value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-friendlyname.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-friendlyname.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-friendlyname"></a><h3>pskc_set_key_friendlyname ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_friendlyname (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                           <em class="parameter"><code>const <span class="type">char</span> *fname</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Friendlyname value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-friendlyname.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fname</p></td>
+<td class="parameter_description"><p>pointer to friendly name string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-userid"></a><h3>pskc_get_key_userid ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_userid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Userid value.</p>
+<div class="refsect3">
+<a name="pskc-get-key-userid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-userid.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-userid"></a><h3>pskc_set_key_userid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_userid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *keyuserid</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Userid value.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-userid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyuserid</p></td>
+<td class="parameter_description"><p>pointer to key userid string to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-secret"></a><h3>pskc_get_key_data_secret ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_data_secret (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                          <em class="parameter"><code><span class="type">size_t</span> *len</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data Secret value.  If <em class="parameter"><code>len</code></em>
+ is not set,
+the caller can only use the returned value for comparison against
+NULL to check whether the field is present or not.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-secret.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>pointer to output variable with length of returned data.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-secret.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content of length *<em class="parameter"><code>len</code></em>
+, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-secret"></a><h3>pskc_set_key_data_secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_set_key_data_secret (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                          <em class="parameter"><code>const <span class="type">char</span> *data</code></em>,
+                          <em class="parameter"><code><span class="type">size_t</span> len</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data Secret value.  The <em class="parameter"><code>data</code></em>
+ data is
+copied into the <em class="parameter"><code>key</code></em>
+ handle, so you may modify or deallocate the
+<em class="parameter"><code>data</code></em>
+ pointer after calling this function.  The data is base64
+encoded by this function.  On errors, the old secret is not
+modified.</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-secret.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>the byte array with the key to set, of <em class="parameter"><code>len</code></em>
+length.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>data</code></em>
+byte array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-set-key-data-secret.returns"></a><h4>Returns</h4>
+<p> <a class="link" href="libpskc-errors.html#PSKC-BASE64-ERROR:CAPS"><code class="literal">PSKC_BASE64_ERROR</code></a> on base64 encoding errors,
+<a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> on memory allocation errors, or <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> on
+success.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-b64secret"></a><h3>pskc_get_key_data_b64secret ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_data_b64secret (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data Secret value in base64 as a
+zero-terminated string.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-b64secret.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-b64secret.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content of length *<em class="parameter"><code>len</code></em>
+, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-b64secret"></a><h3>pskc_set_key_data_b64secret ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_set_key_data_b64secret (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *b64secret</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data Secret value in base64 as a
+zero-terminated string.  The <em class="parameter"><code>b64secret</code></em>
+ data is copied into the
+<em class="parameter"><code>key</code></em>
+ handle, so you may modify or deallocate the <em class="parameter"><code>b64secret</code></em>
+ pointer
+after calling this function.  The data is base64 decoded by this
+function to verify data validity.  On errors, the old secret is not
+modified.</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-b64secret.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b64secret</p></td>
+<td class="parameter_description"><p>the base64 encoded secret to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-set-key-data-b64secret.returns"></a><h4>Returns</h4>
+<p> <a class="link" href="libpskc-errors.html#PSKC-BASE64-ERROR:CAPS"><code class="literal">PSKC_BASE64_ERROR</code></a> on base64 decoding errors,
+<a class="link" href="libpskc-errors.html#PSKC-MALLOC-ERROR:CAPS"><code class="literal">PSKC_MALLOC_ERROR</code></a> on memory allocation errors, or <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> on
+success.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-counter"></a><h3>pskc_get_key_data_counter ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint64_t</span>
+pskc_get_key_data_counter (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                           <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data Counter value.  This element
+contains the event counter for event-based OTP algorithms.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the Counter field is not
+present or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-counter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-counter.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-counter"></a><h3>pskc_set_key_data_counter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_data_counter (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                           <em class="parameter"><code><span class="type">uint64_t</span> counter</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data Counter value.  This element
+contains the event counter for event-based OTP algorithms.</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-counter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>counter</p></td>
+<td class="parameter_description"><p>counter value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-time"></a><h3>pskc_get_key_data_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_data_time (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data Time value.  This element contains
+the time for time-based OTP algorithms.  (If time intervals are
+used, this element carries the number of time intervals passed from
+a specific start point, normally it is algorithm dependent).</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-time.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-time.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-time"></a><h3>pskc_set_key_data_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_data_time (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                        <em class="parameter"><code><span class="type">uint32_t</span> datatime</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data Time value.  This element contains
+the time for time-based OTP algorithms.  (If time intervals are
+used, this element carries the number of time intervals passed from
+a specific start point, normally it is algorithm dependent).</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-time.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>datatime</p></td>
+<td class="parameter_description"><p>the data time value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-timeinterval"></a><h3>pskc_get_key_data_timeinterval ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_data_timeinterval (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data TimeInterval value.  This element
+carries the time interval value for time-based OTP algorithms in
+seconds (a typical value for this would be 30, indicating a time
+interval of 30 seconds).</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-timeinterval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-timeinterval.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-timeinterval"></a><h3>pskc_set_key_data_timeinterval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_data_timeinterval (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">uint32_t</span> timeinterval</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data TimeInterval value.  This element
+carries the time interval value for time-based OTP algorithms in
+seconds (a typical value for this would be 30, indicating a time
+interval of 30 seconds).</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-timeinterval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeinterval</p></td>
+<td class="parameter_description"><p>time interval value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-data-timedrift"></a><h3>pskc_get_key_data_timedrift ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_data_timedrift (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                             <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Data TimeDrift value.  This element
+contains the device clock drift value for time-based OTP
+algorithms.  The integer value (positive or negative drift) that
+indicates the number of time intervals that a validation server has
+established the device clock drifted after the last successful
+authentication.  So, for example, if the last successful
+authentication established a device time value of 8 intervals from
+a specific start date but the validation server determines the time
+value at 9 intervals, the server SHOULD record the drift as -1.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-data-timedrift.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-data-timedrift.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-data-timedrift"></a><h3>pskc_set_key_data_timedrift ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_data_timedrift (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                             <em class="parameter"><code><span class="type">uint32_t</span> timedrift</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Data TimeDrift value.  This element
+contains the device clock drift value for time-based OTP
+algorithms.  The integer value (positive or negative drift) that
+indicates the number of time intervals that a validation server has
+established the device clock drifted after the last successful
+authentication.  So, for example, if the last successful
+authentication established a device time value of 8 intervals from
+a specific start date but the validation server determines the time
+value at 9 intervals, the server SHOULD record the drift as -1.</p>
+<div class="refsect3">
+<a name="pskc-set-key-data-timedrift.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timedrift</p></td>
+<td class="parameter_description"><p>the time drift value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-startdate"></a><h3>pskc_get_key_policy_startdate ()</h3>
+<pre class="programlisting">const struct <span class="returnvalue">tm</span> *
+pskc_get_key_policy_startdate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy StartDate.  This element denote
+the start of the validity period of a key.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-startdate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-startdate.returns"></a><h4>Returns</h4>
+<p> a constant struct (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-startdate"></a><h3>pskc_set_key_policy_startdate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_startdate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code>const <span class="type">struct tm</span> *startdate</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy StartDate.  This element denote
+the start of the validity period of a key.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-startdate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>startdate</p></td>
+<td class="parameter_description"><p>pointer to a tm struct with key policy starting date to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-expirydate"></a><h3>pskc_get_key_policy_expirydate ()</h3>
+<pre class="programlisting">const struct <span class="returnvalue">tm</span> *
+pskc_get_key_policy_expirydate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy ExpiryDate.  This element denote
+the expiry of the validity period of a key.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-expirydate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-expirydate.returns"></a><h4>Returns</h4>
+<p> a constant struct (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-expirydate"></a><h3>pskc_set_key_policy_expirydate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_expirydate (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code>const <span class="type">struct tm</span> *expirydate</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy ExpiryDate.  This element denote
+the expiry of the validity period of a key.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-expirydate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expirydate</p></td>
+<td class="parameter_description"><p>pointer to a tm struct with key policy expiry date to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinkeyid"></a><h3>pskc_get_key_policy_pinkeyid ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_get_key_policy_pinkeyid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy PINKeyId value.  This
+attribute carries the unique 'Id' attribute vale of the "Key"
+element held within this "KeyContainer" that contains the value of
+the PIN that protects the key.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinkeyid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinkeyid.returns"></a><h4>Returns</h4>
+<p> a constant string (must not be deallocated) holding the
+content, or NULL if not set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinkeyid"></a><h3>pskc_set_key_policy_pinkeyid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinkeyid (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *pinkeyid</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy PINKeyId value.  This
+attribute carries the unique 'Id' attribute vale of the "Key"
+element held within this "KeyContainer" that contains the value of
+the PIN that protects the key.</p>
+<p>The pointer is stored in <em class="parameter"><code>container</code></em>
+, not a copy of the data, so you
+must not deallocate the data before another call to this function
+or the last call to any function using <em class="parameter"><code>container</code></em>
+.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinkeyid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinkeyid</p></td>
+<td class="parameter_description"><p>pin key id value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinusagemode"></a><h3>pskc_get_key_policy_pinusagemode ()</h3>
+<pre class="programlisting"><a class="link" href="libpskc-enums.html#pskc-pinusagemode" title="enum pskc_pinusagemode"><span class="returnvalue">pskc_pinusagemode</span></a>
+pskc_get_key_policy_pinusagemode (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy PINUsageMode value.
+This mandatory attribute indicates the way the PIN is used during
+the usage of the key.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinusagemode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinusagemode.returns"></a><h4>Returns</h4>
+<p> an <a class="link" href="libpskc-enums.html#pskc-pinusagemode" title="enum pskc_pinusagemode"><span class="type">pskc_pinusagemode</span></a> value</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinusagemode"></a><h3>pskc_set_key_policy_pinusagemode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinusagemode (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><a class="link" href="libpskc-enums.html#pskc-pinusagemode" title="enum pskc_pinusagemode"><span class="type">pskc_pinusagemode</span></a> pinusagemode</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy PINUsageMode value.
+This mandatory attribute indicates the way the PIN is used during
+the usage of the key.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinusagemode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinusagemode</p></td>
+<td class="parameter_description"><p>the <a class="link" href="libpskc-enums.html#pskc-pinusagemode" title="enum pskc_pinusagemode"><span class="type">pskc_pinusagemode</span></a> value to set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinmaxfailedattempts"></a><h3>pskc_get_key_policy_pinmaxfailedattempts ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_policy_pinmaxfailedattempts
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy MaxFailedAttempts
+value.  This attribute indicates the maximum number of times the
+PIN may be entered wrongly before it MUST NOT be possible to use
+the key anymore (typical reasonable values are in the positive
+integer range of at least 2 and no more than 10).</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinmaxfailedattempts.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinmaxfailedattempts.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinmaxfailedattempts"></a><h3>pskc_set_key_policy_pinmaxfailedattempts ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinmaxfailedattempts
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">uint32_t</span> attempts</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy MaxFailedAttempts
+value.  This attribute indicates the maximum number of times the
+PIN may be entered wrongly before it MUST NOT be possible to use
+the key anymore (typical reasonable values are in the positive
+integer range of at least 2 and no more than 10).</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinmaxfailedattempts.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attempts</p></td>
+<td class="parameter_description"><p>number of attempts to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinminlength"></a><h3>pskc_get_key_policy_pinminlength ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_policy_pinminlength (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy MinLength value.  This
+attribute indicates the minimum length of a PIN that can be set to
+protect the associated key.  It MUST NOT be possible to set a PIN
+shorter than this value.  If the 'PINFormat' attribute is set to
+'DECIMAL', 'HEXADECIMAL', or 'ALPHANUMERIC', this value indicates
+the number of digits/ characters.  If the 'PINFormat' attribute is
+set to 'BASE64' or 'BINARY', this value indicates the number of
+bytes of the unencoded value.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinminlength.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinminlength.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinminlength"></a><h3>pskc_set_key_policy_pinminlength ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinminlength (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">uint32_t</span> minlength</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy MinLength value.  This
+attribute indicates the minimum length of a PIN that can be set to
+protect the associated key.  It MUST NOT be possible to set a PIN
+shorter than this value.  If the 'PINFormat' attribute is set to
+'DECIMAL', 'HEXADECIMAL', or 'ALPHANUMERIC', this value indicates
+the number of digits/ characters.  If the 'PINFormat' attribute is
+set to 'BASE64' or 'BINARY', this value indicates the number of
+bytes of the unencoded value.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinminlength.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minlength</p></td>
+<td class="parameter_description"><p>the length to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinmaxlength"></a><h3>pskc_get_key_policy_pinmaxlength ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+pskc_get_key_policy_pinmaxlength (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy MaxLength value.  This
+attribute indicates the maximum length of a PIN that can be set to
+protect this key.  It MUST NOT be possible to set a PIN longer than
+this value.  If the 'PINFormat' attribute is set to 'DECIMAL',
+'HEXADECIMAL', or 'ALPHANUMERIC', this value indicates the number
+of digits/ characters.  If the 'PINFormat' attribute is set to
+'BASE64' or 'BINARY', this value indicates the number of bytes of
+the unencoded value.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinmaxlength.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinmaxlength.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinmaxlength"></a><h3>pskc_set_key_policy_pinmaxlength ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinmaxlength (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                  <em class="parameter"><code><span class="type">uint32_t</span> maxlength</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy MaxLength value.  This
+attribute indicates the maximum length of a PIN that can be set to
+protect this key.  It MUST NOT be possible to set a PIN longer than
+this value.  If the 'PINFormat' attribute is set to 'DECIMAL',
+'HEXADECIMAL', or 'ALPHANUMERIC', this value indicates the number
+of digits/ characters.  If the 'PINFormat' attribute is set to
+'BASE64' or 'BINARY', this value indicates the number of bytes of
+the unencoded value.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinmaxlength.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>maxlength</p></td>
+<td class="parameter_description"><p>the length to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-pinencoding"></a><h3>pskc_get_key_policy_pinencoding ()</h3>
+<pre class="programlisting"><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="returnvalue">pskc_valueformat</span></a>
+pskc_get_key_policy_pinencoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                 <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy PINPolicy PINEncoding value.
+This attribute indicates the encoding of the PIN and MUST be one of
+the <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> values.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinencoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-pinencoding.returns"></a><h4>Returns</h4>
+<p> an <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> value</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-pinencoding"></a><h3>pskc_set_key_policy_pinencoding ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_pinencoding (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                 <em class="parameter"><code><a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> pinencoding</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy PINPolicy PINEncoding value.
+This attribute indicates the encoding of the PIN and MUST be one of
+the <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> values.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-pinencoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinencoding</p></td>
+<td class="parameter_description"><p>the <a class="link" href="libpskc-enums.html#pskc-valueformat" title="enum pskc_valueformat"><span class="type">pskc_valueformat</span></a> encoding to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-keyusages"></a><h3>pskc_get_key_policy_keyusages ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+pskc_get_key_policy_keyusages (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy KeyUsage values.  The element
+puts constraints on the intended usage of the key.  The recipient
+of the PSKC document MUST enforce the key usage.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the field is not present
+or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-keyusages.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-keyusages.returns"></a><h4>Returns</h4>
+<p> an integer holding a set of <a class="link" href="libpskc-enums.html#pskc-keyusage" title="enum pskc_keyusage"><span class="type">pskc_keyusage</span></a> values ORed
+together.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-keyusages"></a><h3>pskc_set_key_policy_keyusages ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_keyusages (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code><span class="type">int</span> keyusages</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy KeyUsage values.  The element
+puts constraints on the intended usage of the key.  The recipient
+of the PSKC document MUST enforce the key usage.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-keyusages.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyusages</p></td>
+<td class="parameter_description"><p>integer with <a class="link" href="libpskc-enums.html#pskc-keyusage" title="enum pskc_keyusage"><span class="type">pskc_keyusage</span></a> values ORed together.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-get-key-policy-numberoftransactions"></a><h3>pskc_get_key_policy_numberoftransactions ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint64_t</span>
+pskc_get_key_policy_numberoftransactions
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *present</code></em>);</pre>
+<p>Get the PSKC KeyPackage Key Policy NumberOfTransactions value.  The
+value in this element indicates the maximum number of times a key
+carried within the PSKC document can be used by an application
+after having received it.  When this element is omitted, there is
+no restriction regarding the number of times a key can be used.</p>
+<p>Note that while the PSKC specification uses the XML data type
+"nonNegativeInteger" for this variable, this implementation
+restricts the size of the value to 64-bit integers.</p>
+<p>If <em class="parameter"><code>present</code></em>
+ is non-NULL, it will be 0 if the Counter field is not
+present or 1 if it was present.</p>
+<div class="refsect3">
+<a name="pskc-get-key-policy-numberoftransactions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>present</p></td>
+<td class="parameter_description"><p>output variable indicating whether data was provided or not.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-get-key-policy-numberoftransactions.returns"></a><h4>Returns</h4>
+<p> an integer holding the content.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-set-key-policy-numberoftransactions"></a><h3>pskc_set_key_policy_numberoftransactions ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+pskc_set_key_policy_numberoftransactions
+                               (<em class="parameter"><code><a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> *key</code></em>,
+                                <em class="parameter"><code><span class="type">uint64_t</span> uses</code></em>);</pre>
+<p>Set the PSKC KeyPackage Key Policy NumberOfTransactions value.  The
+value in this element indicates the maximum number of times a key
+carried within the PSKC document can be used by an application
+after having received it.  When this element is omitted, there is
+no restriction regarding the number of times a key can be used.</p>
+<p>Note that while the PSKC specification uses the XML data type
+"nonNegativeInteger" for this variable, this implementation
+restricts the size of the value to 64-bit integers.</p>
+<div class="refsect3">
+<a name="pskc-set-key-policy-numberoftransactions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libpskc-pskc.html#pskc-key-t" title="pskc_key_t"><span class="type">pskc_key_t</span></a> handle, from <a class="link" href="libpskc-container.html#pskc-get-keypackage" title="pskc_get_keypackage ()"><code class="function">pskc_get_keypackage()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uses</p></td>
+<td class="parameter_description"><p>the number of transactions to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libpskc-keypackage.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

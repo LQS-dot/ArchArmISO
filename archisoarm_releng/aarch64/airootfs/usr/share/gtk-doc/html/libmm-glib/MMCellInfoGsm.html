@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMCellInfoGsm: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch03.html#id-1.2.4.3" title="Generic interfaces">
+<link rel="prev" href="MMCellInfoCdma.html" title="MMCellInfoCdma">
+<link rel="next" href="MMCellInfoUmts.html" title="MMCellInfoUmts">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMCellInfoGsm.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMCellInfoGsm.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03.html#id-1.2.4.3"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMCellInfoCdma.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMCellInfoUmts.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMCellInfoGsm"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMCellInfoGsm.top_of_page"></a>MMCellInfoGsm</span></h2>
+<p>MMCellInfoGsm — Helper object to report GSM cell info</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-operator-id" title="mm_cell_info_gsm_get_operator_id ()">mm_cell_info_gsm_get_operator_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-lac" title="mm_cell_info_gsm_get_lac ()">mm_cell_info_gsm_get_lac</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-ci" title="mm_cell_info_gsm_get_ci ()">mm_cell_info_gsm_get_ci</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-timing-advance" title="mm_cell_info_gsm_get_timing_advance ()">mm_cell_info_gsm_get_timing_advance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-arfcn" title="mm_cell_info_gsm_get_arfcn ()">mm_cell_info_gsm_get_arfcn</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-base-station-id" title="mm_cell_info_gsm_get_base_station_id ()">mm_cell_info_gsm_get_base_station_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCellInfoGsm.html#mm-cell-info-gsm-get-rx-level" title="mm_cell_info_gsm_get_rx_level ()">mm_cell_info_gsm_get_rx_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMCellInfoGsm.html#MMCellInfoGsm-struct" title="struct MMCellInfoGsm">MMCellInfoGsm</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="MMCellInfo.html" title="MMCellInfo">MMCellInfo</a>
+        <span class="lineart">╰──</span> MMCellInfoGsm
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> is an object used to report GSM cell
+information.</p>
+<p>The object inherits from the generic <a class="link" href="MMCellInfo.html" title="MMCellInfo"><span class="type">MMCellInfo</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-operator-id"></a><h3>mm_cell_info_gsm_get_operator_id ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_gsm_get_operator_id (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the PLMN MCC/MNC.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-operator-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-operator-id.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-lac"></a><h3>mm_cell_info_gsm_get_lac ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_gsm_get_lac (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the two-byte Location Area Code of the base station.</p>
+<p>Encoded in upper-case hexadecimal format without leading zeros,
+as specified in 3GPP TS 27.007.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-lac.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-lac.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-ci"></a><h3>mm_cell_info_gsm_get_ci ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_gsm_get_ci (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the two- or four-byte Cell Identifier.</p>
+<p>Encoded in upper-case hexadecimal format without leading zeros,
+as specified in 3GPP TS 27.007.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-ci.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-ci.returns"></a><h4>Returns</h4>
+<p>the MCCMNC, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-timing-advance"></a><h3>mm_cell_info_gsm_get_timing_advance ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_gsm_get_timing_advance (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the measured delay (in bit periods) of an access burst transmission
+on the RACH or PRACH to the expected signal from a mobile station at zero
+distance under static channel conditions.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-timing-advance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-timing-advance.returns"></a><h4>Returns</h4>
+<p> the timing advance, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-arfcn"></a><h3>mm_cell_info_gsm_get_arfcn ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_gsm_get_arfcn (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the absolute RF channel number.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-arfcn.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-arfcn.returns"></a><h4>Returns</h4>
+<p> the ARFCN, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-base-station-id"></a><h3>mm_cell_info_gsm_get_base_station_id ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_cell_info_gsm_get_base_station_id (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the GSM base station id, in upper-case hexadecimal format without leading
+zeros. E.g. "3F".</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-base-station-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-base-station-id.returns"></a><h4>Returns</h4>
+<p>the GSM base station id, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not available. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-cell-info-gsm-get-rx-level"></a><h3>mm_cell_info_gsm_get_rx_level ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_cell_info_gsm_get_rx_level (<em class="parameter"><code><a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> *self</code></em>);</pre>
+<p>Get the serving cell RX measurement.</p>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-rx-level.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-cell-info-gsm-get-rx-level.returns"></a><h4>Returns</h4>
+<p> the rx level, or <a href="../glib/glib-Basic-Types.html#G-MAXUINT:CAPS"><code class="literal">G_MAXUINT</code></a> if not available.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMCellInfoGsm.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMCellInfoGsm-struct"></a><h3>struct MMCellInfoGsm</h3>
+<pre class="programlisting">struct MMCellInfoGsm;</pre>
+<p>The <a class="link" href="MMCellInfoGsm.html" title="MMCellInfoGsm"><span class="type">MMCellInfoGsm</span></a> structure contains private data and should only be
+accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

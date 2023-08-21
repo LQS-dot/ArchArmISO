@@ -1,0 +1,215 @@
+Braille Support for Dracut
+==========================
+
+This module implements braille accessibility within the initramfs (initial
+ramdisk file system). If BRLTTY is installed (``/usr/bin/brltty`` exists) then
+it is added to the image. The braille drivers, text tables, contraction tables,
+attributes tables, keyboard tables, speech drivers, and preferences file
+configured via ``/etc/brltty.conf`` are included. Local customizations within
+``/etc/xdg/brltty/`` are also included.
+
+BRLTTY is started as early as possible by the initramfs so that braille
+accessibility will be active when (should the need arise) control is
+transferred to the emergency shell due to a problem preparing the root file
+system. Additionally, braille accessibility is active at any of the specifiable
+initramfs breakpoints (see the ``rd.break`` kernel parameter) except for the
+one named ``cmdline`` because it occurs earlier than the point at which BRLTTY
+is started.
+
+The braille driver can start immediately if either serial or USB communication
+is being used. If Bluetooth communication is being used then the braille driver
+won't start until the ``initqueue`` phase because the Systemd service manager
+isn't available until then.
+
+Bluetooth support within the initramfs is disabled by default because it's
+insecure. The reason for this is that the link keys for those devices that have
+already been paired on the full system are copied into the initramfs image so
+that repairing won't be necessary. If you absolutely must use Bluetooth
+communication, or if you just want to and this issue is of no concern to you,
+then enable the ``BRLTTY_DRACUT_BLUETOOTH_SUPPORT`` option within the file
+``dracut.conf`` (which is in ``/etc/brltty/Initramfs/``).
+
+Environment Variables
+---------------------
+
+A number of environment variables may be used to influence how BRLTTY is
+installed into the initramfs image. Their names all begin with the
+``BRLTTY_DRACUT_`` prefix. In addition to exporting them from the current
+environment, they may be defined within the optional file ``dracut.conf``
+(which is in ``/etc/brltty/Initramfs/``). Within this file:
+
+* Blank lines are ignored.
+* Lines that start with a hash [``#``] are comments.
+* All other lines should be simple shell-style assignments. For example::
+
+    NAME="string"
+
+The following environment variables are supported:
+
+BRLTTY_DRACUT_LOCALE
+  The preferred locale (used to determine the default text and contraction
+  tables). For example::
+
+    BRLTTY_DRACUT_LOCALE=cs_CZ.UTF-8
+
+  If needed, i.e. if the text and contraction tables haven't both been
+  configured via ``/etc/brltty.conf``, this information must be explicitly set
+  because it can't be determined from the system configuration when building
+  the image (see `<https://bugzilla.redhat.com/show_bug.cgi?id=1584036>`_).
+
+BRLTTY_DRACUT_BRAILLE_DRIVERS
+  A space-separated list of additional braille drivers to include. For
+  example::
+
+    BRLTTY_DRACUT_BRAILLE_DRIVERS="pm eu"
+
+BRLTTY_DRACUT_BLUETOOTH_SUPPORT
+  Whether or not Bluetooth support should be included within the initramfs. For
+  example::
+
+    BRLTTY_DRACUT_BLUETOOTH_SUPPORT=no
+
+  Set this variable to ``yes`` if communication with your braille device is via
+  Bluetooth. Note that this option is insecure because the link keys for all of
+  your paired Bluetooth devices will be stored within the initramfs image.
+
+BRLTTY_DRACUT_TEXT_TABLES
+  A space-separated list of additional text tables to include. For example::
+
+    BRLTTY_DRACUT_TEXT_TABLES="de fr"
+
+BRLTTY_DRACUT_CONTRACTION_TABLES
+  A space-separated list of additional contraction tables to include. For
+  example::
+
+    BRLTTY_DRACUT_CONTRACTION_TABLES="de-g2 fr-g2"
+
+BRLTTY_DRACUT_ATTRIBUTES_TABLES
+  A space-separated list of additional attributes tables to include. For
+  example::
+
+    BRLTTY_DRACUT_ATTRIBUTES_TABLES="upper_lower left_right"
+
+BRLTTY_DRACUT_KEYBOARD_TABLES
+  A space-separated list of additional keyboard tables to include. For
+  example::
+
+    BRLTTY_DRACUT_KEYBOARD_TABLES="keypad desktop"
+
+BRLTTY_DRACUT_SPEECH_DRIVERS
+  A space-separated list of additional speech drivers to include. For example::
+
+    BRLTTY_DRACUT_SPEECH_DRIVERS="es fl"
+
+Kernel Command Line Parameters
+------------------------------
+
+This module interprets kernel command line parameters that begin with the
+``rd.brltty.`` prefix. Explicit values for these parameters can, of course, be
+specified on the kernel command line (e.g. within ``grub.cfg`` or within
+``/etc/default/grub``). In addition, default values for them can be defined
+within the optional file ``cmdline`` (which is in ``/etc/brltty/Initramfs/``).
+
+The order of precedence, from lowest to highest, for a value is:
+
+* BRLTTY built-in default
+* ``/etc/brltty.conf``
+* initramfs override
+* ``/etc/brltty/Initramfs/cmdline``
+* kernel command line
+
+Blank lines are ignored. A hash [``#``] anywhere on a line begins a comment
+which continues till the end of that line - only those characters before it are
+significant. Any number of space-separated options may be specified on a line.
+The syntax for an option is ``name=value`` (without the ``rd.brltty.`` prefix).
+The ``=value`` part is optional - if there's no ``=`` then the value is
+``yes``.
+
+Disabling BRLTTY
+````````````````
+
+Given that BRLTTY is a rather complex application, there are a number of kernel
+parameters that can be used to selectively disable a number of its components.
+In all cases, if any of these parameters isn't specified then it defaults to
+``1`` (enabled). They are:
+
+  =========================  =========================================
+  Kernel Parameter           Effect
+  -------------------------  -----------------------------------------
+  ``rd.brltty=0``            Completely disable BRLTTY.
+  ``rd.brltty.bluetooth=0``  Disable Bluetooth support.
+  ``rd.brltty.sound=0``      Disable speech drivers and sound support.
+  ``rd.brltty.pulse=0``      Disable the Pulse Audio server.
+  ``rd.brltty.speechd=0``    Disable the Speech Dispatcher server.
+  =========================  =========================================
+
+Specifying BRLTTY options
+`````````````````````````
+
+All of BRLTTY's options that can be specified via environment variables (see
+``man brltty`` for the full list) can be specified via kernel parameters. For
+example, the kernel parameter ``rd.brltty.braille_driver=vo`` is mapped to the
+environment variable assignment ``BRLTTY_BRAILLE_DRIVER=vo``. Some of the more
+interesting ones are:
+
+  ================================  ===============================
+  Kernel Parameter                  Default Value
+  --------------------------------  -------------------------------
+  ``rd.brltty.braille_driver``      setting in ``/etc/brltty.conf``
+  ``rd.brltty.braille_parameters``  setting in ``/etc/brltty.conf``
+  ``rd.brltty.braille_device``      setting in ``/etc/brltty.conf``
+  ``rd.brltty.text_table``          setting in ``/etc/brltty.conf``
+  ``rd.brltty.attributes_table``    setting in ``/etc/brltty.conf``
+  ``rd.brltty.contraction_table``   setting in ``/etc/brltty.conf``
+  ``rd.brltty.keyboard_table``      setting in ``/etc/brltty.conf``
+  ``rd.brltty.speech_driver``       setting in ``/etc/brltty.conf``
+  ``rd.brltty.speech_parameters``   setting in ``/etc/brltty.conf``
+  ``rd.brltty.log_file``            ``/run/initramfs/brltty.log``
+  ``rd.brltty.log_level``           setting in ``/etc/brltty.conf``
+  ================================  ===============================
+
+Speech Drivers
+--------------
+
+Since speech drivers, by their very nature, require sound:
+
+* None of them can start until the ``initqueue`` hook has been executed.
+
+* None of them can start if sound has been disabled (via the rd.brltty.sound=0
+  kernel parameter).
+
+Speech defaults to being off even if a speech driver has been configured via
+``/etc/brltty.conf``. This is because your preferred speech driver may not work
+all that well, or may even cause problems, when used within the more primitive
+initramfs environment. If you'd like to use speech then you need to explicitly
+set the driver. While you can do so via the ``rd.brltty.speech_driver`` kernel
+command line parameter, the easiest way to configure a persistent setting is
+via the ``speech_driver`` option in ``/etc/brltty/Initramfs/cmdline``.
+
+Here's how well each of the speech drivers works:
+
+en
+  The ``en`` [eSpeak-NG] speech driver works.
+
+es
+  The ``es`` [eSpeak] speech driver works. It requires Pulse Audio, so:
+
+  * It doesn't start until the ``initqueue`` hook has been executed.
+
+  * It can't start if Pulse Audio fails to start or has been disabled (via
+    the rd.brltty.pulse=0 kernel parameter).
+
+fl
+  The ``fl`` [Festival Lite] speech driver doesn't work - it runs but doesn't
+  speak. This appears to be due to a bug within Festival Lite itself because
+  it also remains silent when tested on the full system.
+
+fv
+  The ``fv`` [Festival] speech driver doesn't work - it crashes. This appears
+  to be due to a bug within Festival itself because it also crashes when tested
+  on the full system.
+
+sd
+  The ``sd`` [Speech Dispatcher] speech driver hasn't been tested and probably
+  won't work.
+

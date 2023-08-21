@@ -1,0 +1,59 @@
+%NAME%
+btrfs-progs
+
+%VERSION%
+6.3.3-1
+
+%BASE%
+btrfs-progs
+
+%DESC%
+Btrfs filesystem utilities
+
+%URL%
+https://btrfs.wiki.kernel.org
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1690794217
+
+%INSTALLDATE%
+1691208509
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+6154364
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+pgp
+
+%REPLACES%
+btrfs-progs-unstable
+
+%DEPENDS%
+glibc
+util-linux-libs
+lzo
+zlib
+zstd
+libgcrypt
+systemd-libs
+
+%OPTDEPENDS%
+python: libbtrfsutil python bindings
+e2fsprogs: btrfs-convert
+reiserfsprogs: btrfs-convert
+
+%CONFLICTS%
+btrfs-progs-unstable
+
+%PROVIDES%
+btrfs-progs-unstable
+

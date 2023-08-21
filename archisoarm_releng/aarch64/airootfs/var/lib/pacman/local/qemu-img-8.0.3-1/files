@@ -1,0 +1,17 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/qemu-img
+usr/bin/qemu-io
+usr/bin/qemu-nbd
+usr/bin/qemu-storage-daemon
+usr/share/
+usr/share/man/
+usr/share/man/man1/
+usr/share/man/man1/qemu-img.1.gz
+usr/share/man/man1/qemu-storage-daemon.1.gz
+usr/share/man/man7/
+usr/share/man/man7/qemu-storage-daemon-qmp-ref.7.gz
+usr/share/man/man8/
+usr/share/man/man8/qemu-nbd.8.gz
+

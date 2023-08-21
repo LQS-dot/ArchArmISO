@@ -1,0 +1,37 @@
+%NAME%
+man-pages
+
+%VERSION%
+6.04-1
+
+%BASE%
+man-pages
+
+%DESC%
+Linux man pages
+
+%URL%
+https://www.kernel.org/doc/man-pages/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1680639912
+
+%INSTALLDATE%
+1691208571
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+5574119
+
+%LICENSE%
+GPL
+custom
+
+%VALIDATION%
+pgp
+

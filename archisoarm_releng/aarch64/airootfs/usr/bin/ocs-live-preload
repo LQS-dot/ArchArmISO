@@ -1,0 +1,571 @@
+#!/bin/bash
+# License: GPL 
+# Author: Aaron Burling <aaron_burling _at_ lkstevens wednet edu; burlingaaron _at_ gmail com> and Steven Shiau <steven _at_ clonezilla org>
+# Description: Program to preload a tarball/zip file or copy files from cifs/nfs for live system from boot parameter "ocs_preload":
+# Type 1, i.e. tarball/zip file:
+# ocs_preload=[http|https|ftp|tftp|file]://[HOST_NAME_or_IP_ADD]/path/to/your_tarball_or_script
+# Type 2, i.e. files on a cifs/nfs directory using mount command:
+# ocs_preload="mount -t cifs //YOUR_CIFS_SERVER/path/to/ /path/to/mounting_point"
+# ocs_preload="mount -t nfs YOUR_CIFS_SERVER:/path/to/ /path/to/mounting_point"
+# Support file format: tar.gz, tgz, tar.bz2, tbz2, tar.xz, txz, zip, .sh
+# Support network file system: cifs (samba) and nfs2/3/4
+# E.g. You can put the following in the boot parameter:
+#      ocs_preload=tftp://192.168.100.254/my-custom.tgz
+#      ocs_preload=http://192.168.200.254/my-custom.tar.xz
+#      ocs_preload=ftp://192.168.250.254/my-custom.zip
+#      ocs_preload=file:///lib/live/mount/medium/my-custom.tar.bz2
+#      ocs_preload=tftp://192.168.100.254/my-custom.sh
+#      ocs_preload="mount -t cifs //192.168.120.2/script/ /tmp/cifs -o user=administrator,password=yourpasswd" 
+#      ocs_preload4="mount -t nfs 192.168.120.254:/home/partimag/script/ /tmp/nfs -o ro" 
+# Multiple ocs_preload* are avaiable, just append a number after that. E.g.
+# ocs_prealod=... ocs_preload1=... ocs_preload2=...
+# Then in Clonezilla live ocs-live-preload will be run automatically and the file assigned by ocs_preload will be downloaded and extracted to /opt. Its mode will be set automatically, too. i.e. set as mode 755 and Unix format script.
+
+#
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+# Load the config in ocs-live.conf. This is specially for Clonezilla live. It will overwrite some settings of /etc/drbl/drbl-ocs.conf, such as $DIA...
+[ -e "/etc/ocs/ocs-live.conf" ] && . /etc/ocs/ocs-live.conf
+
+# Settings
+cmdl_file_def="/proc/cmdline"
+dest="/opt"
+rm_tarball_flag=""
+force_to_run="no"
+# The file to overwrite /proc/cmdline
+newcmdline="/var/lib/clonezilla/new-cmdline"
+
+# Functions
+USAGE() {
+    echo "$ocs - preload a tarball/zip file or copy files from cifs/nfs for live system from boot parameter \"ocs_preload\""
+    echo "Usage:"
+    echo "To run $ocs:"
+    echo "$ocs [OPTION]"
+    echo "Options:"
+    echo "-c, --cmdline-file   Assign the kernel boot parameter file. If not assigned, \"$cmdl_file_def\" will be used."
+    echo "-f, --force          Force to run $ocs, no matter it has been run successfully or not."
+    echo "Type 1, i.e. for tarball/zip file:"
+    echo "ocs_preload=[http|https|ftp|tftp|file]://[HOST_NAME_or_IP_ADD]/path/to/your_tarball_or_script"
+    echo "Type 2, i.e. for files on a cifs/nfs directory using mount command:"
+    echo "ocs_preload="mount -t cifs //YOUR_CIFS_SERVER/path/to/ /path/to/mounting_point""
+    echo "ocs_preload="mount -t nfs YOUR_CIFS_SERVER:/path/to/ /path/to/mounting_point""
+    echo "Support file format: tar.gz, tgz, tar.bz2, tbz2, tar.xz, txz, zip, .sh"
+    echo "Support network file system: cifs (samba) and nfs2/3/4"
+    echo "E.g. You can put the following in the boot parameter:"
+    echo "     ocs_preload=tftp://192.168.100.254/my-custom.tgz"
+    echo "     ocs_preload=http://192.168.200.254/my-custom.tar.xz"
+    echo "     ocs_preload=ftp://192.168.250.254/my-custom.zip"
+    echo "     ocs_preload=file:///lib/live/mount/medium/my-custom.tar.bz2"
+    echo "     ocs_preload=tftp://192.168.100.254/my-custom.sh"
+    echo "     ocs_preload="mount -t cifs //192.168.120.2/script/ /tmp/cifs -o user=administrator,password=yourpasswd" "
+    echo "     ocs_preload4="mount -t nfs 192.168.120.254:/home/partimag/script/ /tmp/nfs -o ro" "
+    echo "Multiple ocs_preload* are available, just append a number after that. E.g."
+    echo "ocs_prealod=... ocs_preload1=... ocs_preload2=..."
+    echo "Then in Clonezilla live $ocs will be run automatically and the file assigned by ocs_preload will be downloaded and extracted to ${dest}. Its mode will be set automatically, too. i.e. set as mode 755 and Unix format script."
+} # end of USAGE
+#
+parse_cifs_mount_command() {
+  # Function to parse cifs mount command to get the remote source and mount point, like:
+  # ocs_preload="mount -t cifs //tech.drbl.org/clonezilla-samba-preload /ocs_preload_tmp -o username=jack,password=abcdefg"
+  # or
+  # ocs_preload="mount -o username=jack,password=abcdefg -t cifs //tech.drbl.org/clonezilla-samba-preload /ocs_preload_tmp"
+  # We want to extract //tech.drbl.org/clonezilla-samba-preload and /ocs_preload_tmp
+  # The return global variables are: $cifs_rmt_src and $cifs_mnt_pnt
+  while [ $# -gt 0 ]; do
+   case "$1" in
+      mount|mount.cifs) shift;;
+      -t) shift; shift;;  # -t cifs
+      -o) shift; shift;;  # -o username=...,password=...
+      -*) echo "${0}: ${1}: invalid option for parse_cifs_mount_command"
+          echo "$msg_program_stop"
+          [ "$save_restore_error_log" = "yes" ] && copy_error_log
+          exit 2 ;;
+      *)  break ;;
+    esac
+  done
+  cifs_rmt_src="$1"
+  cifs_mnt_pnt="$2"
+} # end of parse_cifs_mount_command
+#
+parse_nfs_mount_command() {
+  # Function to parse nfs mount command to get the remote source and mount point, like:
+  # ocs_preload="mount -t nfs 192.168.120.254:/clonezilla-samba-preload /ocs_preload_tmp -o ro,nolock,nocto,actimeo=3600"
+  # or
+  # ocs_preload="mount -t nfs -o ro,nolock,nocto,actimeo=3600 192.168.120.254:/clonezilla-samba-preload /ocs_preload_tmp"
+  # We want to extract 192.168.120.254/clonezilla-samba-preload and /ocs_preload_tmp
+  # The return global variables are: $nfs_rmt_src and $nfs_mnt_pnt
+
+  # mount.nfs or mount.nfs4:
+  # mount.nfs/mount.nfs4 remotetarget dir [-rvVwfnsih] [-o nfsoptions]
+  # options:
+  # -r              Mount file system readonly
+  # -v              Verbose
+  # -V              Print version
+  # -w              Mount file system read-write
+  # -f              Fake mount, do not actually mount
+  # -n              Do not update /etc/mtab
+  # -s              Tolerate sloppy mount options rather than fail
+  # -h              Print this help
+  # nfsoptions      Refer to mount.nfs(8) or nfs(5)
+
+  while [ $# -gt 0 ]; do
+   case "$1" in
+      mount|mount.nfs|mount.nfs4) shift;;
+      -t) shift; shift;;
+      -o) shift; shift;;
+      -r|-v|-w|-n|-s) shift;;
+      -*) echo "${0}: ${1}: invalid option for parse_nfs_mount_command"
+          echo "$msg_program_stop"
+          [ "$save_restore_error_log" = "yes" ] && copy_error_log
+          exit 2 ;;
+      *)  break ;;
+    esac
+  done
+  nfs_rmt_src="$1"
+  nfs_mnt_pnt="$2"
+} # end of parse_nfs_mount_command
+#
+extract_tarball() {
+  # rm_tarball_flag is global variable
+  local url download_file local_f download_file_absp
+  local ip rfile lfile rc=1
+  url="$1"
+
+  if [ -z "$url" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "No \"url\" assigned in function extract_tarball!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "$msg_program_stop!"
+    return 1
+  fi
+  
+  # Fetch the file
+  # Part of the codes in the following are borrowed from live-boot package.
+  download_file="$(basename ${url})"	
+  case "$url" in
+  	file://*)
+      		local_f="$(echo $url | sed -e "s|file://||g")"
+  		download_file_absp="${local_f}"
+  		rm_tarball_flag="no" # keep it since it's local file
+  		;;
+  	tftp*)
+  		ip="$(dirname $url | sed -e 's|tftp://||g' -e 's|/.*$||g')"
+  		rfile="$(echo $url | sed -e "s|tftp://$ip||g")"
+  		lfile="$(basename $url)"
+  		echo "Trying busybox tftp -g -b 65464 -r $rfile -l ${dest}/$lfile $ip"
+  		busybox tftp -g -b 65464 -r $rfile -l ${dest}/$lfile $ip
+  		download_file_absp="${dest}/${lfile}"
+  		rm_tarball_flag="yes" # remove it since it's a downloaded file
+  		;;
+  	*)
+  		echo "Trying wget ${url} -O ${dest}/$(basename ${url})"
+  		wget "${url}" -O "${dest}/${download_file}"
+  		download_file_absp="${dest}/${download_file}"
+  		rm_tarball_flag="yes" # remove it since it's a downloaded file
+  		;;
+  esac
+  
+  echo $msg_delimiter_star_line
+  if [ -e "$download_file_absp" ]; then
+  	echo "Putting $download_file_absp... to ${dest}/"
+  	case "$download_file" in
+  		*tar)           tar -xvf $download_file_absp -C ${dest}/
+			        rc=$? ;;
+  		*tar.gz|*tgz)   tar -xvzf $download_file_absp -C ${dest}/
+			        rc=$? ;;
+  		*tar.bz2|*tbz2) tar -xvjf $download_file_absp -C ${dest}/
+			        rc=$? ;;
+  		*tar.xz|*txz)   tar -xvJf $download_file_absp -C ${dest}/
+			        rc=$? ;;
+  		*.zip)          unzip -o $download_file_absp -d ${dest}/ 
+			        rc=$?
+				convert_dos_format_script_from_zip_file $download_file_absp;;
+  		*.sh)           set_mode_755_and_unix_format $download_file_absp
+			        rc=$?
+				# keep it since it's will be used directly.
+  				rm_tarball_flag="no" ;;
+  		*)
+  			[ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  			echo "Unknown format for download file \"$download_file_absp\"".
+  			[ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  			echo "$msg_program_stop!"
+  			return 1
+  	esac
+  	# Clean the tarball
+  	if [ "$rm_tarball_flag" = "yes" ]; then
+  		echo "Remove the downloaded file..."
+  		rm -vf $download_file_absp
+  	fi
+  else
+  	[ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  	echo "Preload file not found! Perhaps ocs_preload failed?"
+  	[ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  	echo "$msg_program_stop!"
+  	return 1
+  fi
+  
+  echo "File(s) put in directory: ${dest}."
+  echo ""
+  return $rc
+} # end of extract_tarball
+#
+replicate_files_from_netfs() {
+  local netfs_mnt_cmd cifs_cp_flist_tmp rc=1 rc_mnt ask_ run_again_ans
+  netfs_mnt_cmd="$*"
+  case "$netfs_mnt_cmd" in
+  	mount*-t*cifs*|mount.cifs*)
+                cifs_cp_flist_tmp="$(mktemp /tmp/cifs_cp_flist.XXXXXX)"
+		cifs_rmt_src=""
+		cifs_mnt_pnt=""
+		parse_cifs_mount_command $netfs_mnt_cmd # Obtain cifs_rmt_src and cifs_mnt_pnt
+		if [ -z "$cifs_rmt_src" -o -z "$cifs_mnt_pnt" ]; then
+    		  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+                  echo "Failed to parse $url to obtain Samba server or mounting point!"
+    		  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+                  echo "$msg_program_stop!"
+                  return 1
+		fi
+		echo "Creating Samba (CIFS) mounting point $cifs_mnt_pnt..."
+		mkdir -p $cifs_mnt_pnt
+                ask_="true"
+                while [ "$ask_" = "true" ]; do
+		  echo "Mounting Samba (CIFS) preload share $cifs_rmt_src: $netfs_mnt_cmd"
+                  eval $netfs_mnt_cmd
+                  rc_mnt=$?
+                  if [ "$rc_mnt" -ne 0 ]; then
+                    echo $msg_delimiter_star_line
+                    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+                    echo "Failed to mount Samba server."
+                    echo "$msg_do_u_want_to_do_it_again"
+                    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+                    echo -n "[Y/n] "
+                    read run_again_ans
+                    case "$run_again_ans" in
+                      n|N|[nN][oO]) ask_="false" ;;
+                                 *) ask_="true" ;;
+                    esac
+                  else
+                    ask_="false"
+                  fi
+                done
+		if [ "$rc_mnt" -eq 0 ]; then
+                  echo "Copy Contents of Samba preload share to ${dest} ..."
+                  cp -rv $cifs_mnt_pnt/* ${dest} | tee $cifs_cp_flist_tmp
+                  rc="${PIPESTATUS[0]}"
+                  echo "Unmount Samba preload share..."
+                  umount $cifs_mnt_pnt
+                  convert_dos_format_script_from_cp_rv_list $cifs_cp_flist_tmp
+		  rm -f $cifs_cp_flist_tmp
+                  return $rc
+                else
+		  rm -f $cifs_cp_flist_tmp
+		  return 1
+                fi
+  		;;
+  	mount*-t*nfs*|mount.nfs|mount.nfs4)
+                nfs_cp_flist_tmp="$(mktemp /tmp/nfs_cp_flist.XXXXXX)"
+		nfs_rmt_src=""
+		nfs_mnt_pnt=""
+		parse_nfs_mount_command $netfs_mnt_cmd # Obtain nfs_rmt_src and nfs_mnt_pnt
+		if [ -z "$nfs_rmt_src" -o -z "$nfs_mnt_pnt" ]; then
+    		  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+                  echo "Failed to parse $url to obtain NFS server or mounting point!"
+    		  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+                  echo "$msg_program_stop!"
+                  return 1
+		fi
+		echo "Creating NFS mounting point $nfs_mnt_pnt..."
+		mkdir -p $nfs_mnt_pnt
+		echo "Mounting NFS preload share $nfs_rmt_src: $netfs_mnt_cmd"
+                eval $netfs_mnt_cmd
+                rc_mnt=$?
+		if [ "$rc_mnt" -eq 0 ]; then
+                  echo "Copy Contents of NFS preload share to ${dest} ..."
+                  cp -rv $nfs_mnt_pnt/* ${dest} | tee $nfs_cp_flist_tmp
+                  rc="${PIPESTATUS[0]}"
+                  echo "Unmount NFS preload share..."
+                  umount $nfs_mnt_pnt
+                  convert_dos_format_script_from_cp_rv_list $nfs_cp_flist_tmp
+                  rm -f $nfs_cp_flist_tmp
+                  return $rc
+	        else
+		  rm -f $cifs_cp_flist_tmp
+		  return 1
+	        fi
+  		;;
+  esac
+} # end of replicate_files_from_netfs
+#
+convert_dos_format_script_from_zip_file() {
+  local zip_file="$1"
+  local zip_flist i_exist
+  zip_flist_tmp="$(mktemp /tmp/zflist.XXXXXX)"
+  extract_flist_tmp="$(mktemp /tmp/extract_flist.XXXXXX)"
+  if [ -z "$zip_file" ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+    echo "No \"zip_file\" assigned in function convert_dos_format_script_from_zip_file!"
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    echo "$msg_program_stop!"
+    return 1
+  fi
+  # Sometimes zip will convert file name to lowercase, so we have to find it without case sensitive
+  echo "Searching the shell script in ${dest} extracted from $zip_file for setting mode..."
+  # File names in zip file might contain whitespace, like:
+  # $ unzip -l Example.zip
+  # Archive:  Example.zip
+  #   Length      Date    Time    Name
+  # ---------  ---------- -----   ----
+  #        84  2016-05-17 08:57   a b c.sh
+  #        97  2016-05-17 08:58   a-b-c.sh
+  #        84  2016-05-17 08:47   Subfolder/a b c.sh
+  #        97  2016-05-17 08:48   Subfolder/a-b-c.sh
+  # ---------                     -------
+  #       362                     4 files
+  unzip -l $zip_file | tail -n +4 | head -n -2 | awk -F" " '{$1=$2=$3=""; print $0}' > $zip_flist_tmp
+  find ${dest} -print > $extract_flist_tmp
+  while read i; do
+    i_exist="$(grep -Ei "^${dest}/${i}" $extract_flist_tmp)"
+    if [ -n "$i_exist" ]; then
+      if [ -n "$(LC_ALL=C file "$i_exist" | grep -i "shell script")" ]; then
+         echo "Setting mode for \"$i_exist\" to 755..."
+         set_mode_755_and_unix_format "$i_exist"
+      fi
+    fi
+  done < $zip_flist_tmp
+  rm -f $zip_flist_tmp $extract_flist_tmp
+} # end of convert_dos_format_script_from_zip_file
+#
+convert_dos_format_script_from_cp_rv_list() {
+  # chmod and conver to unix format for the copied files list
+  # i.e. the files list got from: cp -rv source dest
+  # The list is like (it might contain whitespace in file name):
+  # '/tmp/cifs/my-script.sh.txt' -> '${dest}/my-script.sh.txt'
+  # '/tmp/cifs/your script.sh.txt' -> '${dest}/your script.sh.txt'
+  local cp_rv_flist="$1"
+  local cp_flist_tmp kfl
+  cp_flist_tmp="$(mktemp /tmp/cp_flist.XXXXXX)"
+  LC_ALL=C awk -F"->" '{print $2}' $cp_rv_flist > $cp_flist_tmp
+  while read kfl; do
+    kfl="$(eval echo "$kfl")"
+    if [ -n "$kfl" ]; then
+      if [ -n "$(LC_ALL=C file "$kfl" | grep -i "shell script")" ]; then
+         echo "Setting mode for \"$kfl\" to 755..."
+         set_mode_755_and_unix_format "$kfl"
+      fi
+    fi
+  done < $cp_flist_tmp
+  rm -f $cp_flist_tmp
+} # end of convert_dos_format_script_from_cp_rv_list
+#
+overwrite_proc_boot_param() {
+  # Script by Aaron Burling (burlingaaron _at_ gmail com, aaron_burling _at_ lkstevens wednet edu)
+  # This script checks if ${dest}/{overwrite-all-boot-param,overwrite-part-boot-param} exists (Downloaded from root of ocs_preload)
+  # File overwrite-all-boot-param is to overwrite the whole /proc/cmdline, while
+  # overwrite-part-boot-param only overwrites part of the parameters in /proc/cmdline. Especially those "ocs_*" parameters.
+  # If ${dest}/{overwrite-all-boot-param,overwrite-part-boot-param} exists, create $newcmdline which is combination of /proc/cmdline and ${dest}/{overwrite-all-boot-param,overwrite-part-boot-param}
+  # Finally, /proc/cmdline is redirected to point to $newcmdline
+  # This enables insertion of Clonezilla Options via Options File in root of ocs_preload
+  # A normal Clonezilla live boot parameters in /proc/cmdline:
+  # BOOT_IMAGE=/live/vmlinuz initrd=/live/initrd.img boot=live union=overlay username=user config components quiet noswap edd=on nomodeset locales= keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no vga=788 ip= net.ifnames=0  nosplash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+  # "BOOT_IMAGE=/live/vmlinuz initrd=/live/initrd.img" has to be kept, the rest user can overwrite.
+  local param_m im_s
+  # Do 2 checks before going on:
+  if [ -e /var/lib/clonezilla/overwrite_proc_boot_param ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+    echo "File /proc/cmdline has been successfully overwritten before, so skip doing it again."
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    return 2
+  fi
+  if mountpoint -q /proc/cmdline; then
+    # If here we do it again, the result $newcmdline will be empty
+    # because we copy or cat its contents to itself.
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+    echo "File /proc/cmdline is now in overwritten state, so skip doing it again."
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    return 2
+  fi
+
+  if [ -e "${dest}/overwrite-all-boot-param" ]; then
+    # To overwrite the whole /proc/cmdline
+    # Get the existing "BOOT_IMAGE" & "initrd"
+    echo "Found ${dest}/overwrite-all-boot-param."
+    parse_cmdline_option -c $cmdl_file "BOOT_IMAGE"
+    parse_cmdline_option -c $cmdl_file "initrd"
+    cp -a ${dest}/overwrite-all-boot-param $newcmdline
+    # (1) Update "BOOT_IMAGE"
+    if grep -Eq "BOOT_IMAGE=[^[:space:]]+[[:space:]]+" $newcmdline; then
+      # Found it. Modify it.
+      perl -pi -e "s|BOOT_IMAGE=[^[:space:]]+[[:space:]]+|BOOT_IMAGE=$BOOT_IMAGE |g" $newcmdline
+    else
+      # Not found. Precede it.
+      perl -pi -e "s|^(.*)|BOOT_IMAGE=$BOOT_IMAGE \$1|g" $newcmdline
+    fi
+    # (2) Update "initrd"
+    if grep -Eq "initrd=[^[:space:]]+[[:space:]]+" $newcmdline; then
+      # Found it. Modify it.
+      perl -pi -e "s|initrd=[^[:space:]]+[[:space:]]+|initrd=$initrd |g" $newcmdline
+    else
+      # Not found. Precede it.
+      perl -pi -e "s|^(BOOT_IMAGE=[^[:space:]]+)[[:space:]]+(.*)|\$1 initrd=$initrd \$2|g" $newcmdline
+    fi
+  elif [ -e "${dest}/overwrite-part-boot-param" ]; then
+    # Only overwrite part of the boot params, e.g. replace these two:
+    # ocs_live_run="ocs-sr -x" ocs_live_batch="yes"
+    echo "Found ${dest}/overwrite-part-boot-param."
+    cat /proc/cmdline > $newcmdline
+    param_m="$(LC_ALL=C grep -Eo "[^[:space:]]+=" ${dest}/overwrite-part-boot-param | sed -r -e "s/=$//g")"
+    (
+      # Run in sub shell to avoid affecting the system variables.
+      # To avoid variable like keyboard-layouts=en fails then makes all variable fail to obtain in bash, we do not run it directly to get the variable content (i.e., ". ${dest}/overwrite-part-boot-param"), instead we use parse_cmdline_option to get that.
+      iv=""
+      im_s=""
+      for im in $param_m; do
+	if [ -n "$(echo $im | grep -- "-")" ]; then
+          # Special case, like keyboard-layouts=en, the variable "keyboard-layouts" not working for function parse_cmdline_option because it is not a valid Bash variable with "-" in the variable name.
+	  im_s="$(grep -Eo "${im}=[^[:space:]]+[[:space:]]+" ${dest}/overwrite-part-boot-param | sed -r -e "s/^.*=//g")"
+          eval iv=${im_s}
+	else
+          # Normal case, valid variable for bash.
+          parse_cmdline_option -c ${dest}/overwrite-part-boot-param "$im"
+          eval iv=\$${im}
+        fi
+	# Three types of variables, ="", ='', =, e.g.
+        # xxx="xyz -a", xxx='xyz -a', or xxx=xyz
+        if grep -Pq "${im}=\".*?\"[[:space:]]+" $newcmdline; then
+	  # Found case 1 (xxx="xyz -a"). Modify it.
+          perl -pi -e "s|${im}=\".*?\"[[:space:]]+|${im}=\"${iv}\" |g" $newcmdline
+        elif grep -Pq "${im}=\'.*?\'[[:space:]]+" $newcmdline; then
+	  # Found case 2 (x='xyz -a'). Modify it.
+          perl -pi -e "s|${im}=\'.*?\'[[:space:]]+|${im}=\'${iv}\' |g" $newcmdline
+        elif grep -Eq "${im}=[^[:space:]]+[[:space:]]+" $newcmdline; then
+	  # Found case 3 (xxx=xyz). Modify it.
+          perl -pi -e "s|${im}=[^[:space:]]+[[:space:]]+|${im}=${iv} |g" $newcmdline
+        else
+          # Not found. Appened it.
+          perl -pi -e "s|^(.*)$|\$1 ${im}=\"${iv}\" |g" $newcmdline
+        fi
+      done
+    )
+  else
+    # No any overwriting files. Exit this fucntion
+    return 2
+  fi
+  if [ -e "$newcmdline" ]; then
+    # Overwrite the existing /proc/cmdline by $newcmdline
+    echo "Overwrite the existing /proc/cmdline by $newcmdline..."
+    mount -n --bind -o ro $newcmdline /proc/cmdline
+    echo "The new /proc/cmdline:"
+    cat /proc/cmdline
+    # Re-generate ocs-live.conf since /proc/cmdline is different
+    /etc/ocs/ocs-live.d/S03prep-drbl-clonezilla
+    # Creating state file
+    touch /var/lib/clonezilla/overwrite_proc_boot_param
+  fi
+} # end of overwrite_proc_boot_param
+
+#################
+##### MAIN ######
+#################
+
+ocs_file="$0"
+ocs=`basename $ocs_file`
+#
+while [ $# -gt 0 ]; do
+ case "$1" in
+   -c|--cmdline-file)
+      shift
+      if [ -z "$(echo $1 |grep ^-.)" ]; then
+        # skip the -xx option, in case 
+        cmdl_file="$1"
+        shift
+      fi
+      [ -z "$cmdl_file" ] && echo "-c is used, but no cmdl_file assigned." && exit 1
+      ;;
+   -f|--force) force_to_run="yes"; shift;;
+   -*)     echo "${0}: ${1}: invalid option" >&2
+           USAGE >& 2
+           exit 2 ;;
+   *)      break ;;
+ esac
+done
+
+check_if_root
+ask_and_load_lang_set
+
+[ -z "$cmdl_file" ] && cmdl_file="$cmdl_file_def"
+if [ ! -e "$cmdl_file" ]; then
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  echo "Kernel cmdline file ($cmdl_file) does _NOT_ exist!"
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo "$msg_program_stop!"
+  exit 1
+fi
+
+#
+ocs_preload_list="$(grep -Ewo "ocs_preload[[:digit:]]*" $cmdl_file | uniq | sort -V)"
+ocs_preload_list="$(echo $ocs_preload_list)"  # in one line
+
+if [ -z "$ocs_preload_list" ]; then
+  exit 0
+else
+  echo "Found ocs_preload* parameter in boot parameters..."
+  echo "The order to run: $ocs_preload_list"
+fi
+
+if [ -z "$ocs_preload_list" ]; then
+	[ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+	echo "Boot parameter \"ocs_preload\" not found!"
+	[ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+	echo "$msg_program_stop!"
+	my_ocs_exit 1
+fi
+
+# Prepare $dest in case it does not exist
+mkdir -p ${dest}
+
+# First we get the parameter "echo_ocs_preload" to see if
+# the ocs_preload has to be echoed or not.
+parse_cmdline_option -c $cmdl_file "echo_ocs_preload"
+
+# Now start parsing the paramaters listed in $ocs_preload_list
+RETVAL=0
+for i in $ocs_preload_list; do
+  parse_cmdline_option -c $cmdl_file "$i"
+  eval iload=\$$i
+  if [ -n "$iload" ]; then
+    # Only when not force to run, we will check the tag file
+    if [ "$force_to_run" = "no" ]; then
+      # Checking if this program is already run
+      if [ -e /var/lib/clonezilla/$i ]; then
+        [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+	echo "This boot parameter has been successfully run before, so skip it: $i ($iload)"
+        [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+        continue
+      fi
+    fi
+    echo "**************************"
+    # Process it
+    if [ "$echo_ocs_preload" != "no" ]; then
+      echo "Now process \"$i\": $iload"
+    fi
+    case "$iload" in
+      mount*)  replicate_files_from_netfs $iload
+	       rc=$?
+	       RETVAL="$((RETVAL + $rc))" ;;
+           *)  extract_tarball $iload
+	       rc=$?
+	       RETVAL="$((RETVAL + $rc))" ;;
+    esac
+    # Creating state file
+    if [ "$rc" -eq 0 ]; then
+      touch /var/lib/clonezilla/$i
+    fi
+  fi
+done
+
+# When ${dest}/overwrite-all-boot-param or ${dest}/overwrite-part-boot-param exists, overwrite /proc/cmdline
+overwrite_proc_boot_param
+
+exit $RETVAL

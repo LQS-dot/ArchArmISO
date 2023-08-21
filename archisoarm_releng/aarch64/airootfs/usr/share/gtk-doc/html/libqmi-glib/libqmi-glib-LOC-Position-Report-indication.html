@@ -1,0 +1,1841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LOC Position Report indication: libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="ch13.html#id-1.14.4" title="LOC Indications">
+<link rel="prev" href="libqmi-glib-LOC-enumerations-and-flags.html" title="LOC enumerations and flags">
+<link rel="next" href="libqmi-glib-LOC-NMEA-indication.html" title="LOC NMEA indication">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libqmi-glib-LOC-Position-Report-indication.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#libqmi-glib-LOC-Position-Report-indication.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch13.html#id-1.14.4"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libqmi-glib-LOC-enumerations-and-flags.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libqmi-glib-LOC-NMEA-indication.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libqmi-glib-LOC-Position-Report-indication"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libqmi-glib-LOC-Position-Report-indication.top_of_page"></a>LOC Position Report indication</span></h2>
+<p>LOC Position Report indication — Methods to manage the LOC Position Report indication.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="returnvalue">QmiIndicationLocPositionReportOutput</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-ref" title="qmi_indication_loc_position_report_output_ref ()">qmi_indication_loc_position_report_output_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-unref" title="qmi_indication_loc_position_report_output_unref ()">qmi_indication_loc_position_report_output_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-altitude-assumed" title="qmi_indication_loc_position_report_output_get_altitude_assumed ()">qmi_indication_loc_position_report_output_get_altitude_assumed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-satellites-used" title="qmi_indication_loc_position_report_output_get_satellites_used ()">qmi_indication_loc_position_report_output_get_satellites_used</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-session-fix-count" title="qmi_indication_loc_position_report_output_get_session_fix_count ()">qmi_indication_loc_position_report_output_get_session_fix_count</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-sensor-data-usage" title="qmi_indication_loc_position_report_output_get_sensor_data_usage ()">qmi_indication_loc_position_report_output_get_sensor_data_usage</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-time-source" title="qmi_indication_loc_position_report_output_get_time_source ()">qmi_indication_loc_position_report_output_get_time_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-time-uncertainty" title="qmi_indication_loc_position_report_output_get_time_uncertainty ()">qmi_indication_loc_position_report_output_get_time_uncertainty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-gps-date-time" title="qmi_indication_loc_position_report_output_get_gps_date_time ()">qmi_indication_loc_position_report_output_get_gps_date_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-leap-seconds" title="qmi_indication_loc_position_report_output_get_leap_seconds ()">qmi_indication_loc_position_report_output_get_leap_seconds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-utc-timestamp" title="qmi_indication_loc_position_report_output_get_utc_timestamp ()">qmi_indication_loc_position_report_output_get_utc_timestamp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-dop" title="qmi_indication_loc_position_report_output_get_dop ()">qmi_indication_loc_position_report_output_get_dop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-technology-used" title="qmi_indication_loc_position_report_output_get_technology_used ()">qmi_indication_loc_position_report_output_get_technology_used</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-magnetic-deviation" title="qmi_indication_loc_position_report_output_get_magnetic_deviation ()">qmi_indication_loc_position_report_output_get_magnetic_deviation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-heading-uncertainty" title="qmi_indication_loc_position_report_output_get_heading_uncertainty ()">qmi_indication_loc_position_report_output_get_heading_uncertainty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-heading" title="qmi_indication_loc_position_report_output_get_heading ()">qmi_indication_loc_position_report_output_get_heading</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-vertical-speed" title="qmi_indication_loc_position_report_output_get_vertical_speed ()">qmi_indication_loc_position_report_output_get_vertical_speed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-vertical-reliability" title="qmi_indication_loc_position_report_output_get_vertical_reliability ()">qmi_indication_loc_position_report_output_get_vertical_reliability</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-vertical-confidence" title="qmi_indication_loc_position_report_output_get_vertical_confidence ()">qmi_indication_loc_position_report_output_get_vertical_confidence</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-vertical-uncertainty" title="qmi_indication_loc_position_report_output_get_vertical_uncertainty ()">qmi_indication_loc_position_report_output_get_vertical_uncertainty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-altitude-from-sealevel" title="qmi_indication_loc_position_report_output_get_altitude_from_sealevel ()">qmi_indication_loc_position_report_output_get_altitude_from_sealevel</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-altitude-from-ellipsoid" title="qmi_indication_loc_position_report_output_get_altitude_from_ellipsoid ()">qmi_indication_loc_position_report_output_get_altitude_from_ellipsoid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-speed-uncertainty" title="qmi_indication_loc_position_report_output_get_speed_uncertainty ()">qmi_indication_loc_position_report_output_get_speed_uncertainty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-speed" title="qmi_indication_loc_position_report_output_get_horizontal_speed ()">qmi_indication_loc_position_report_output_get_horizontal_speed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-reliability" title="qmi_indication_loc_position_report_output_get_horizontal_reliability ()">qmi_indication_loc_position_report_output_get_horizontal_reliability</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-confidence" title="qmi_indication_loc_position_report_output_get_horizontal_confidence ()">qmi_indication_loc_position_report_output_get_horizontal_confidence</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-azimuth" title="qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_azimuth ()">qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_azimuth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-major" title="qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_major ()">qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_major</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-minor" title="qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_minor ()">qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_minor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-horizontal-uncertainty-circular" title="qmi_indication_loc_position_report_output_get_horizontal_uncertainty_circular ()">qmi_indication_loc_position_report_output_get_horizontal_uncertainty_circular</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-longitude" title="qmi_indication_loc_position_report_output_get_longitude ()">qmi_indication_loc_position_report_output_get_longitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-latitude" title="qmi_indication_loc_position_report_output_get_latitude ()">qmi_indication_loc_position_report_output_get_latitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-session-id" title="qmi_indication_loc_position_report_output_get_session_id ()">qmi_indication_loc_position_report_output_get_session_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#qmi-indication-loc-position-report-output-get-session-status" title="qmi_indication_loc_position_report_output_get_session_status ()">qmi_indication_loc_position_report_output_get_session_status</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="QmiIndicationLocPositionReportOutput"></a><div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput-struct" title="QmiIndicationLocPositionReportOutput">QmiIndicationLocPositionReportOutput</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> QmiIndicationLocPositionReportOutput
+</pre>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.description"></a><h2>Description</h2>
+<p>Collection of methods to parse indications of the LOC Position Report message.</p>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-ref"></a><h3>qmi_indication_loc_position_report_output_ref ()</h3>
+<pre class="programlisting"><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="returnvalue">QmiIndicationLocPositionReportOutput</span></a> *
+qmi_indication_loc_position_report_output_ref
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>self</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-ref.returns"></a><h4>Returns</h4>
+<p> the new reference to <em class="parameter"><code>self</code></em>
+.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-unref"></a><h3>qmi_indication_loc_position_report_output_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qmi_indication_loc_position_report_output_unref
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>self</code></em>
+ by one.
+If the reference count drops to 0, <em class="parameter"><code>self</code></em>
+ is completely disposed.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-altitude-assumed"></a><h3>qmi_indication_loc_position_report_output_get_altitude_assumed ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_altitude_assumed
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> *value_altitude_assumed</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Altitude Assumed' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-assumed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_altitude_assumed</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-assumed.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-satellites-used"></a><h3>qmi_indication_loc_position_report_output_get_satellites_used ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_satellites_used
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> **value_satellites_used</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Satellites Used' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-satellites-used.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_satellites_used</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> of <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> elements, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. Do not free it, it is owned by <em class="parameter"><code>self</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint16][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-satellites-used.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-session-fix-count"></a><h3>qmi_indication_loc_position_report_output_get_session_fix_count ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_session_fix_count
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *value_session_fix_count</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Session Fix Count' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-fix-count.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_session_fix_count</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-fix-count.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-sensor-data-usage"></a><h3>qmi_indication_loc_position_report_output_get_sensor_data_usage ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_sensor_data_usage
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocSensorDataUsage" title="enum QmiLocSensorDataUsage"><span class="type">QmiLocSensorDataUsage</span></a> *value_sensor_data_usage</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Sensor Data Usage' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-sensor-data-usage.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_sensor_data_usage</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocSensorDataUsage" title="enum QmiLocSensorDataUsage"><span class="type">QmiLocSensorDataUsage</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-sensor-data-usage.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-time-source"></a><h3>qmi_indication_loc_position_report_output_get_time_source ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_time_source
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocTimeSource" title="enum QmiLocTimeSource"><span class="type">QmiLocTimeSource</span></a> *value_time_source</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Time Source' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-time-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_time_source</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocTimeSource" title="enum QmiLocTimeSource"><span class="type">QmiLocTimeSource</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-time-source.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-time-uncertainty"></a><h3>qmi_indication_loc_position_report_output_get_time_uncertainty ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_time_uncertainty
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_time_uncertainty</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Time Uncertainty' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-time-uncertainty.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_time_uncertainty</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-time-uncertainty.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-gps-date-time"></a><h3>qmi_indication_loc_position_report_output_get_gps_date_time ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_gps_date_time
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a> *value_gps_date_time_gps_weeks</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *value_gps_date_time_gps_time_of_week_milliseconds</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'GPS Date Time' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-gps-date-time.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_gps_date_time_gps_weeks</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint16"><span class="type">guint16</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_gps_date_time_gps_time_of_week_milliseconds</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-gps-date-time.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-32.html#api-index-1.32">1.32</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-leap-seconds"></a><h3>qmi_indication_loc_position_report_output_get_leap_seconds ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_leap_seconds
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *value_leap_seconds</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Leap Seconds' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-leap-seconds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_leap_seconds</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-leap-seconds.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-utc-timestamp"></a><h3>qmi_indication_loc_position_report_output_get_utc_timestamp ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_utc_timestamp
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *value_utc_timestamp</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'UTC Timestamp' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-utc-timestamp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_utc_timestamp</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-utc-timestamp.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-dop"></a><h3>qmi_indication_loc_position_report_output_get_dop ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_dop
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_dop_pdop</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_dop_hdop</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_dop_vdop</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'DOP' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-dop.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_dop_pdop</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_dop_hdop</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_dop_vdop</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-dop.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-32.html#api-index-1.32">1.32</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-technology-used"></a><h3>qmi_indication_loc_position_report_output_get_technology_used ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_technology_used
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocTechnologyUsed" title="enum QmiLocTechnologyUsed"><span class="type">QmiLocTechnologyUsed</span></a> *value_technology_used</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Technology Used' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-technology-used.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_technology_used</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocTechnologyUsed" title="enum QmiLocTechnologyUsed"><span class="type">QmiLocTechnologyUsed</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-technology-used.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-magnetic-deviation"></a><h3>qmi_indication_loc_position_report_output_get_magnetic_deviation ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_magnetic_deviation
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_magnetic_deviation</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Magnetic Deviation' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-magnetic-deviation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_magnetic_deviation</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-magnetic-deviation.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-heading-uncertainty"></a><h3>qmi_indication_loc_position_report_output_get_heading_uncertainty ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_heading_uncertainty
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_heading_uncertainty</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Heading Uncertainty' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-heading-uncertainty.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_heading_uncertainty</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-heading-uncertainty.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-heading"></a><h3>qmi_indication_loc_position_report_output_get_heading ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_heading
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_heading</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Heading' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-heading.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_heading</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-heading.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-vertical-speed"></a><h3>qmi_indication_loc_position_report_output_get_vertical_speed ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_vertical_speed
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_vertical_speed</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Vertical Speed' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-speed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_vertical_speed</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-speed.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-vertical-reliability"></a><h3>qmi_indication_loc_position_report_output_get_vertical_reliability ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_vertical_reliability
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *value_vertical_reliability</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Vertical Reliability' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-reliability.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_vertical_reliability</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-reliability.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-vertical-confidence"></a><h3>qmi_indication_loc_position_report_output_get_vertical_confidence ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_vertical_confidence
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *value_vertical_confidence</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Vertical Confidence' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-confidence.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_vertical_confidence</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-confidence.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-vertical-uncertainty"></a><h3>qmi_indication_loc_position_report_output_get_vertical_uncertainty ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_vertical_uncertainty
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_vertical_uncertainty</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Vertical Uncertainty' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-uncertainty.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_vertical_uncertainty</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-vertical-uncertainty.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-sealevel"></a><h3>qmi_indication_loc_position_report_output_get_altitude_from_sealevel ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_altitude_from_sealevel
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_altitude_from_sealevel</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Altitude from Sealevel' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-sealevel.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_altitude_from_sealevel</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-sealevel.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-ellipsoid"></a><h3>qmi_indication_loc_position_report_output_get_altitude_from_ellipsoid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_altitude_from_ellipsoid
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_altitude_from_ellipsoid</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Altitude from Ellipsoid' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-ellipsoid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_altitude_from_ellipsoid</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-altitude-from-ellipsoid.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-speed-uncertainty"></a><h3>qmi_indication_loc_position_report_output_get_speed_uncertainty ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_speed_uncertainty
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_speed_uncertainty</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Speed Uncertainty' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-speed-uncertainty.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_speed_uncertainty</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-speed-uncertainty.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-speed"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_speed ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_speed
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_horizontal_speed</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Speed' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-speed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_speed</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-speed.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-reliability"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_reliability ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_reliability
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocReliability" title="enum QmiLocReliability"><span class="type">QmiLocReliability</span></a> *value_horizontal_reliability</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Reliability' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-reliability.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_reliability</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocReliability" title="enum QmiLocReliability"><span class="type">QmiLocReliability</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-reliability.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-confidence"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_confidence ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_confidence
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *value_horizontal_confidence</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Confidence' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-confidence.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_confidence</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-confidence.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-azimuth"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_azimuth ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_azimuth
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_horizontal_uncertainty_elliptical_azimuth</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Uncertainty Elliptical Azimuth' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-azimuth.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_uncertainty_elliptical_azimuth</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-azimuth.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-major"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_major ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_major
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_horizontal_uncertainty_elliptical_major</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Uncertainty Elliptical Major' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-major.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_uncertainty_elliptical_major</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-major.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-minor"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_minor ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_uncertainty_elliptical_minor
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_horizontal_uncertainty_elliptical_minor</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Uncertainty Elliptical Minor' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-minor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_uncertainty_elliptical_minor</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-elliptical-minor.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-circular"></a><h3>qmi_indication_loc_position_report_output_get_horizontal_uncertainty_circular ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_horizontal_uncertainty_circular
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *value_horizontal_uncertainty_circular</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Horizontal Uncertainty Circular' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-circular.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_horizontal_uncertainty_circular</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-horizontal-uncertainty-circular.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-longitude"></a><h3>qmi_indication_loc_position_report_output_get_longitude ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_longitude
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *value_longitude</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Longitude' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-longitude.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_longitude</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-longitude.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-latitude"></a><h3>qmi_indication_loc_position_report_output_get_latitude ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_latitude
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *value_latitude</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Latitude' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-latitude.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_latitude</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-latitude.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-session-id"></a><h3>qmi_indication_loc_position_report_output_get_session_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_session_id
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *value_session_id</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Session ID' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_session_id</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-id.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qmi-indication-loc-position-report-output-get-session-status"></a><h3>qmi_indication_loc_position_report_output_get_session_status ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qmi_indication_loc_position_report_output_get_session_status
+                               (<em class="parameter"><code><a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocSessionStatus" title="enum QmiLocSessionStatus"><span class="type">QmiLocSessionStatus</span></a> *value_session_status</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Get the 'Session Status' field from <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-status.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value_session_status</p></td>
+<td class="parameter_description"><p>a placeholder for the output <a class="link" href="libqmi-glib-LOC-enumerations-and-flags.html#QmiLocSessionStatus" title="enum QmiLocSessionStatus"><span class="type">QmiLocSessionStatus</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not required. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qmi-indication-loc-position-report-output-get-session-status.returns"></a><h4>Returns</h4>
+<p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the field is found, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. </p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libqmi-glib-LOC-Position-Report-indication.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="QmiIndicationLocPositionReportOutput-struct"></a><h3>QmiIndicationLocPositionReportOutput</h3>
+<pre class="programlisting">typedef struct _QmiIndicationLocPositionReportOutput QmiIndicationLocPositionReportOutput;</pre>
+<p>The <a class="link" href="libqmi-glib-LOC-Position-Report-indication.html#QmiIndicationLocPositionReportOutput"><span class="type">QmiIndicationLocPositionReportOutput</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+<p class="since">Since: <a class="link" href="api-index-1-22.html#api-index-1.22">1.22</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

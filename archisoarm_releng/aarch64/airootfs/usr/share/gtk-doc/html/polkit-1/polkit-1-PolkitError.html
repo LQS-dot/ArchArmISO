@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PolkitError: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="ref-api.html" title="Part III. Library API Reference">
+<link rel="prev" href="PolkitDetails.html" title="PolkitDetails">
+<link rel="next" href="PolkitActionDescription.html" title="PolkitActionDescription">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#polkit-1-PolkitError.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#polkit-1-PolkitError.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="PolkitDetails.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PolkitActionDescription.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="polkit-1-PolkitError"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="polkit-1-PolkitError.top_of_page"></a>PolkitError</span></h2>
+<p>PolkitError — Error codes</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="polkit-1-PolkitError.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="polkit-1-PolkitError.html#POLKIT-ERROR:CAPS" title="POLKIT_ERROR">POLKIT_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="polkit-1-PolkitError.html#PolkitError" title="enum PolkitError">PolkitError</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="polkit-1-PolkitError.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> PolkitError
+</pre>
+</div>
+<div class="refsect1">
+<a name="polkit-1-PolkitError.description"></a><h2>Description</h2>
+<p>Error codes.</p>
+</div>
+<div class="refsect1">
+<a name="polkit-1-PolkitError.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="polkit-1-PolkitError.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="POLKIT-ERROR:CAPS"></a><h3>POLKIT_ERROR</h3>
+<pre class="programlisting">#define POLKIT_ERROR (polkit_error_quark())
+</pre>
+<p>Error domain for errors when using PolicyKit. Errors in this domain will be from the <a class="link" href="polkit-1-PolkitError.html#PolkitError" title="enum PolkitError"><span class="type">PolkitError</span></a>
+enumeration. See <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> for information on error domains</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PolkitError"></a><h3>enum PolkitError</h3>
+<p>Possible error when using PolicyKit.</p>
+<div class="refsect3">
+<a name="PolkitError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="POLKIT-ERROR-FAILED:CAPS"></a>POLKIT_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The operation failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="POLKIT-ERROR-CANCELLED:CAPS"></a>POLKIT_ERROR_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>The operation was cancelled.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="POLKIT-ERROR-NOT-SUPPORTED:CAPS"></a>POLKIT_ERROR_NOT_SUPPORTED</p></td>
+<td class="enum_member_description">
+<p>Operation is not supported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="POLKIT-ERROR-NOT-AUTHORIZED:CAPS"></a>POLKIT_ERROR_NOT_AUTHORIZED</p></td>
+<td class="enum_member_description">
+<p>Not authorized to perform operation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

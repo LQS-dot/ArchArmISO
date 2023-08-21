@@ -1,0 +1,1631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ms Uicc Low Level Access service: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch03.html" title="Microsoft-defined services">
+<link rel="prev" href="libmbim-glib-Ms-Basic-Connect-Extensions-V3.html" title="Ms Basic Connect Extensions V3 service">
+<link rel="next" href="libmbim-glib-MS-Firmware-ID.html" title="Ms Firmware Id service">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-MS-UICC-Low-Level-Access.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch03.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Ms-Basic-Connect-Extensions-V3.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-MS-Firmware-ID.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-MS-UICC-Low-Level-Access.top_of_page"></a>Ms Uicc Low Level Access service</span></h2>
+<p>Ms Uicc Low Level Access service — Support for the Ms Uicc Low Level Access service.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-terminal-capability-info-array-free" title="mbim_terminal_capability_info_array_free ()">mbim_terminal_capability_info_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-uicc-application-array-free" title="mbim_uicc_application_array_free ()">mbim_uicc_application_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-atr-query-new" title="mbim_message_ms_uicc_low_level_access_atr_query_new ()">mbim_message_ms_uicc_low_level_access_atr_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-atr-response-parse" title="mbim_message_ms_uicc_low_level_access_atr_response_parse ()">mbim_message_ms_uicc_low_level_access_atr_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-open-channel-set-new" title="mbim_message_ms_uicc_low_level_access_open_channel_set_new ()">mbim_message_ms_uicc_low_level_access_open_channel_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-open-channel-response-parse" title="mbim_message_ms_uicc_low_level_access_open_channel_response_parse ()">mbim_message_ms_uicc_low_level_access_open_channel_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-close-channel-set-new" title="mbim_message_ms_uicc_low_level_access_close_channel_set_new ()">mbim_message_ms_uicc_low_level_access_close_channel_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-close-channel-response-parse" title="mbim_message_ms_uicc_low_level_access_close_channel_response_parse ()">mbim_message_ms_uicc_low_level_access_close_channel_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-apdu-set-new" title="mbim_message_ms_uicc_low_level_access_apdu_set_new ()">mbim_message_ms_uicc_low_level_access_apdu_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-apdu-response-parse" title="mbim_message_ms_uicc_low_level_access_apdu_response_parse ()">mbim_message_ms_uicc_low_level_access_apdu_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-terminal-capability-query-new" title="mbim_message_ms_uicc_low_level_access_terminal_capability_query_new ()">mbim_message_ms_uicc_low_level_access_terminal_capability_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-terminal-capability-set-new" title="mbim_message_ms_uicc_low_level_access_terminal_capability_set_new ()">mbim_message_ms_uicc_low_level_access_terminal_capability_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-terminal-capability-response-parse" title="mbim_message_ms_uicc_low_level_access_terminal_capability_response_parse ()">mbim_message_ms_uicc_low_level_access_terminal_capability_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-reset-query-new" title="mbim_message_ms_uicc_low_level_access_reset_query_new ()">mbim_message_ms_uicc_low_level_access_reset_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-reset-set-new" title="mbim_message_ms_uicc_low_level_access_reset_set_new ()">mbim_message_ms_uicc_low_level_access_reset_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-reset-response-parse" title="mbim_message_ms_uicc_low_level_access_reset_response_parse ()">mbim_message_ms_uicc_low_level_access_reset_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-application-list-query-new" title="mbim_message_ms_uicc_low_level_access_application_list_query_new ()">mbim_message_ms_uicc_low_level_access_application_list_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-application-list-response-parse" title="mbim_message_ms_uicc_low_level_access_application_list_response_parse ()">mbim_message_ms_uicc_low_level_access_application_list_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-file-status-query-new" title="mbim_message_ms_uicc_low_level_access_file_status_query_new ()">mbim_message_ms_uicc_low_level_access_file_status_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-file-status-response-parse" title="mbim_message_ms_uicc_low_level_access_file_status_response_parse ()">mbim_message_ms_uicc_low_level_access_file_status_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-read-binary-query-new" title="mbim_message_ms_uicc_low_level_access_read_binary_query_new ()">mbim_message_ms_uicc_low_level_access_read_binary_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-read-binary-response-parse" title="mbim_message_ms_uicc_low_level_access_read_binary_response_parse ()">mbim_message_ms_uicc_low_level_access_read_binary_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-read-record-query-new" title="mbim_message_ms_uicc_low_level_access_read_record_query_new ()">mbim_message_ms_uicc_low_level_access_read_record_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-message-ms-uicc-low-level-access-read-record-response-parse" title="mbim_message_ms_uicc_low_level_access_read_record_response_parse ()">mbim_message_ms_uicc_low_level_access_read_record_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo">MbimTerminalCapabilityInfo</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfoArray" title="MbimTerminalCapabilityInfoArray">MbimTerminalCapabilityInfoArray</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplication" title="MbimUiccApplication">MbimUiccApplication</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplicationArray" title="MbimUiccApplicationArray">MbimUiccApplicationArray</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access.description"></a><h2>Description</h2>
+<p>This section implements support for requests, responses and notifications in the
+Ms Uicc Low Level Access service.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-terminal-capability-info-array-free"></a><h3>mbim_terminal_capability_info_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_terminal_capability_info_array_free
+                               (<em class="parameter"><code><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfoArray" title="MbimTerminalCapabilityInfoArray"><span class="type">MbimTerminalCapabilityInfoArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo"><span class="type">MbimTerminalCapabilityInfo</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-terminal-capability-info-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo"><span class="type">MbimTerminalCapabilityInfo</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-uicc-application-array-free"></a><h3>mbim_uicc_application_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_uicc_application_array_free (<em class="parameter"><code><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplicationArray" title="MbimUiccApplicationArray"><span class="type">MbimUiccApplicationArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplication" title="MbimUiccApplication"><span class="type">MbimUiccApplication</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-uicc-application-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplication" title="MbimUiccApplication"><span class="type">MbimUiccApplication</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-atr-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_atr_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_atr_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'ATR' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-atr-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-atr-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-atr-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_atr_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_atr_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_atr_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_atr</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'ATR' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-atr-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_atr_size</p></td>
+<td class="parameter_description"><p>return location for the size of the atr array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_atr</p></td>
+<td class="parameter_description"><p>return location for an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=out_atr_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-atr-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-set-new"></a><h3>mbim_message_ms_uicc_low_level_access_open_channel_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_open_channel_set_new
+                               (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> app_id_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *app_id</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> select_p2_arg</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> channel_group</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Open Channel' set command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>app_id_size</p></td>
+<td class="parameter_description"><p>size of the app_id array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>app_id</p></td>
+<td class="parameter_description"><p>the 'AppId' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=app_id_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>select_p2_arg</p></td>
+<td class="parameter_description"><p>the 'SelectP2Arg' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>channel_group</p></td>
+<td class="parameter_description"><p>the 'ChannelGroup' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_open_channel_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_open_channel_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_channel</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_response_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_response</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Open Channel' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Status' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_channel</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Channel' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_response_size</p></td>
+<td class="parameter_description"><p>return location for the size of the response array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_response</p></td>
+<td class="parameter_description"><p>return location for an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=out_response_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-open-channel-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-set-new"></a><h3>mbim_message_ms_uicc_low_level_access_close_channel_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_close_channel_set_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> channel</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> channel_group</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Close Channel' set command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>channel</p></td>
+<td class="parameter_description"><p>the 'Channel' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>channel_group</p></td>
+<td class="parameter_description"><p>the 'ChannelGroup' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_close_channel_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_close_channel_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Close Channel' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Status' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-close-channel-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-set-new"></a><h3>mbim_message_ms_uicc_low_level_access_apdu_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_apdu_set_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> channel</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccSecureMessaging" title="enum MbimUiccSecureMessaging"><span class="type">MbimUiccSecureMessaging</span></a> secure_messaging</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccClassByteType" title="enum MbimUiccClassByteType"><span class="type">MbimUiccClassByteType</span></a> class_byte_type</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> command_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *command</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'APDU' set command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>channel</p></td>
+<td class="parameter_description"><p>the 'Channel' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secure_messaging</p></td>
+<td class="parameter_description"><p>the 'SecureMessaging' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccSecureMessaging" title="enum MbimUiccSecureMessaging"><span class="type">MbimUiccSecureMessaging</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>class_byte_type</p></td>
+<td class="parameter_description"><p>the 'ClassByteType' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccClassByteType" title="enum MbimUiccClassByteType"><span class="type">MbimUiccClassByteType</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command_size</p></td>
+<td class="parameter_description"><p>size of the command array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command</p></td>
+<td class="parameter_description"><p>the 'Command' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=command_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_apdu_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_apdu_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_response_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_response</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'APDU' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Status' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_response_size</p></td>
+<td class="parameter_description"><p>return location for the size of the response array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_response</p></td>
+<td class="parameter_description"><p>return location for an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=out_response_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-apdu-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_terminal_capability_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_terminal_capability_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Terminal Capability' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-set-new"></a><h3>mbim_message_ms_uicc_low_level_access_terminal_capability_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_terminal_capability_set_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> terminal_capability_count</code></em>,
+                                <em class="parameter"><code>const <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo"><span class="type">MbimTerminalCapabilityInfo</span></a> *const *terminal_capability</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Terminal Capability' set command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>terminal_capability_count</p></td>
+<td class="parameter_description"><p>the 'TerminalCapabilityCount' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>terminal_capability</p></td>
+<td class="parameter_description"><p>the 'TerminalCapability' field, given as an array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo"><span class="type">MbimTerminalCapabilityInfo</span></a> items. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimTerminalCapabilityInfo]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_terminal_capability_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_terminal_capability_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_terminal_capability_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfoArray" title="MbimTerminalCapabilityInfoArray"><span class="type">MbimTerminalCapabilityInfoArray</span></a> **out_terminal_capability</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Terminal Capability' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_terminal_capability_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'TerminalCapabilityCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_terminal_capability</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimTerminalCapabilityInfo" title="MbimTerminalCapabilityInfo"><span class="type">MbimTerminalCapabilityInfo</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'TerminalCapability' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-terminal-capability-info-array-free" title="mbim_terminal_capability_info_array_free ()"><code class="function">mbim_terminal_capability_info_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimTerminalCapabilityInfo]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-terminal-capability-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-reset-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_reset_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_reset_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Reset' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-reset-set-new"></a><h3>mbim_message_ms_uicc_low_level_access_reset_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_reset_set_new
+                               (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccPassThroughAction" title="enum MbimUiccPassThroughAction"><span class="type">MbimUiccPassThroughAction</span></a> pass_through_action</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Reset' set command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pass_through_action</p></td>
+<td class="parameter_description"><p>the 'PassThroughAction' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccPassThroughAction" title="enum MbimUiccPassThroughAction"><span class="type">MbimUiccPassThroughAction</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-reset-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_reset_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_reset_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccPassThroughStatus" title="enum MbimUiccPassThroughStatus"><span class="type">MbimUiccPassThroughStatus</span></a> *out_pass_through_status</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Reset' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_pass_through_status</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccPassThroughStatus" title="enum MbimUiccPassThroughStatus"><span class="type">MbimUiccPassThroughStatus</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'PassThroughStatus' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-reset-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_application_list_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_application_list_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Application List' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_application_list_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_application_list_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_version</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_application_count</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_active_application_index</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_application_list_size_bytes</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplicationArray" title="MbimUiccApplicationArray"><span class="type">MbimUiccApplicationArray</span></a> **out_applications</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Application List' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_version</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Version' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_application_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ApplicationCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_active_application_index</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ActiveApplicationIndex' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_application_list_size_bytes</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ApplicationListSizeBytes' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_applications</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#MbimUiccApplication" title="MbimUiccApplication"><span class="type">MbimUiccApplication</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Applications' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-MS-UICC-Low-Level-Access.html#mbim-uicc-application-array-free" title="mbim_uicc_application_array_free ()"><code class="function">mbim_uicc_application_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimUiccApplication]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-application-list-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_file_status_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_file_status_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> version</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> application_id_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *application_id</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> file_path_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *file_path</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'File Status' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>version</p></td>
+<td class="parameter_description"><p>the 'Version' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id_size</p></td>
+<td class="parameter_description"><p>size of the application_id array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id</p></td>
+<td class="parameter_description"><p>the 'ApplicationId' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=application_id_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path_size</p></td>
+<td class="parameter_description"><p>size of the file_path array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path</p></td>
+<td class="parameter_description"><p>the 'FilePath' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=file_path_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_file_status_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_file_status_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_version</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word1</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word2</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileAccessibility" title="enum MbimUiccFileAccessibility"><span class="type">MbimUiccFileAccessibility</span></a> *out_file_accessibility</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileType" title="enum MbimUiccFileType"><span class="type">MbimUiccFileType</span></a> *out_file_type</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileStructure" title="enum MbimUiccFileStructure"><span class="type">MbimUiccFileStructure</span></a> *out_file_structure</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_file_item_count</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_file_item_size</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a> *out_access_condition_read</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a> *out_access_condition_update</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a> *out_access_condition_activate</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a> *out_access_condition_deactivate</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'File Status' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_version</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Version' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word1</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord1' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word2</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord2' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_file_accessibility</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileAccessibility" title="enum MbimUiccFileAccessibility"><span class="type">MbimUiccFileAccessibility</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'FileAccessibility' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_file_type</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileType" title="enum MbimUiccFileType"><span class="type">MbimUiccFileType</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'FileType' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_file_structure</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccFileStructure" title="enum MbimUiccFileStructure"><span class="type">MbimUiccFileStructure</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'FileStructure' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_file_item_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'FileItemCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_file_item_size</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'FileItemSize' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_access_condition_read</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'AccessConditionRead' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_access_condition_update</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'AccessConditionUpdate' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_access_condition_activate</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'AccessConditionActivate' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_access_condition_deactivate</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimPinType" title="enum MbimPinType"><span class="type">MbimPinType</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'AccessConditionDeactivate' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-file-status-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_read_binary_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_read_binary_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> version</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> application_id_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *application_id</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> file_path_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *file_path</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> read_offset</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> read_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *local_pin</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> data_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Read Binary' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>version</p></td>
+<td class="parameter_description"><p>the 'Version' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id_size</p></td>
+<td class="parameter_description"><p>size of the application_id array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id</p></td>
+<td class="parameter_description"><p>the 'ApplicationId' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=application_id_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path_size</p></td>
+<td class="parameter_description"><p>size of the file_path array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path</p></td>
+<td class="parameter_description"><p>the 'FilePath' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=file_path_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>read_offset</p></td>
+<td class="parameter_description"><p>the 'ReadOffset' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>read_size</p></td>
+<td class="parameter_description"><p>the 'ReadSize' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>local_pin</p></td>
+<td class="parameter_description"><p>the 'LocalPin' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_size</p></td>
+<td class="parameter_description"><p>size of the data array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>the 'Data' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_read_binary_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_read_binary_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_version</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word1</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word2</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_data_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Read Binary' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_version</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Version' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word1</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord1' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word2</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord2' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_data_size</p></td>
+<td class="parameter_description"><p>return location for the size of the data array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_data</p></td>
+<td class="parameter_description"><p>return location for an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=out_data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-binary-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-query-new"></a><h3>mbim_message_ms_uicc_low_level_access_read_record_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ms_uicc_low_level_access_read_record_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> version</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> application_id_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *application_id</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> file_path_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *file_path</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> record_number</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *local_pin</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> data_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Read Record' query command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>version</p></td>
+<td class="parameter_description"><p>the 'Version' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id_size</p></td>
+<td class="parameter_description"><p>size of the application_id array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>application_id</p></td>
+<td class="parameter_description"><p>the 'ApplicationId' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=application_id_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path_size</p></td>
+<td class="parameter_description"><p>size of the file_path array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_path</p></td>
+<td class="parameter_description"><p>the 'FilePath' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=file_path_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>record_number</p></td>
+<td class="parameter_description"><p>the 'RecordNumber' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>local_pin</p></td>
+<td class="parameter_description"><p>the 'LocalPin' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_size</p></td>
+<td class="parameter_description"><p>size of the data array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>the 'Data' field, given as an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-response-parse"></a><h3>mbim_message_ms_uicc_low_level_access_read_record_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_ms_uicc_low_level_access_read_record_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_version</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word1</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_status_word2</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_data_size</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **out_data</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Read Record' response command in the 'MS UICC Low Level Access' service.</p>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_version</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Version' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word1</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord1' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_status_word2</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'StatusWord2' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_data_size</p></td>
+<td class="parameter_description"><p>return location for the size of the data array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_data</p></td>
+<td class="parameter_description"><p>return location for an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values. Do not free the returned value, it is owned by <em class="parameter"><code>message</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=out_data_size]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ms-uicc-low-level-access-read-record-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-MS-UICC-Low-Level-Access.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimTerminalCapabilityInfo"></a><h3>MbimTerminalCapabilityInfo</h3>
+<pre class="programlisting">typedef struct {
+    guint32 terminal_capability_data_size;
+    guint8 *terminal_capability_data;
+} MbimTerminalCapabilityInfo;
+</pre>
+<p>A MbimTerminalCapabilityInfo element.</p>
+<div class="refsect3">
+<a name="MbimTerminalCapabilityInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimTerminalCapabilityInfo.terminal-capability-data-size"></a>terminal_capability_data_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the terminal_capability_data array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimTerminalCapabilityInfo.terminal-capability-data"></a>terminal_capability_data</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimTerminalCapabilityInfoArray"></a><h3>MbimTerminalCapabilityInfoArray</h3>
+<pre class="programlisting">typedef MbimTerminalCapabilityInfo *MbimTerminalCapabilityInfoArray;
+</pre>
+<p>A NULL-terminated array of MbimTerminalCapabilityInfo elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimUiccApplication"></a><h3>MbimUiccApplication</h3>
+<pre class="programlisting">typedef struct {
+    guint32 application_type;
+    guint32 application_id_size;
+    guint8 *application_id;
+    gchar *application_name;
+    guint32 pin_key_reference_count;
+    guint32 pin_key_references_size;
+    guint8 *pin_key_references;
+} MbimUiccApplication;
+</pre>
+<p>A MbimUiccApplication element.</p>
+<div class="refsect3">
+<a name="MbimUiccApplication.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimUiccApplication.application-type"></a>application_type</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimUiccApplicationType" title="enum MbimUiccApplicationType"><span class="type">MbimUiccApplicationType</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimUiccApplication.application-id-size"></a>application_id_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the application_id array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimUiccApplication.application-id"></a>application_id</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimUiccApplication.application-name"></a>application_name</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimUiccApplication.pin-key-reference-count"></a>pin_key_reference_count</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimUiccApplication.pin-key-references-size"></a>pin_key_references_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the pin_key_references array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimUiccApplication.pin-key-references"></a>pin_key_references</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimUiccApplicationArray"></a><h3>MbimUiccApplicationArray</h3>
+<pre class="programlisting">typedef MbimUiccApplication *MbimUiccApplicationArray;
+</pre>
+<p>A NULL-terminated array of MbimUiccApplication elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Intel Thermal Rf service: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch06.html" title="Intel-defined Services">
+<link rel="prev" href="libmbim-glib-Intel-Firmware-Update-V2.html" title="Intel Firmware Update V2 service">
+<link rel="next" href="ch07.html" title="Quectel-defined Services">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-Intel-Thermal-RF.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Intel-Firmware-Update-V2.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch07.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-Intel-Thermal-RF"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-Intel-Thermal-RF.top_of_page"></a>Intel Thermal Rf service</span></h2>
+<p>Intel Thermal Rf service — Support for the Intel Thermal Rf service.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-Intel-Thermal-RF.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-intel-rfim-frequency-value-array-free" title="mbim_intel_rfim_frequency_value_array_free ()">mbim_intel_rfim_frequency_value_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-message-intel-thermal-rf-rfim-query-new" title="mbim_message_intel_thermal_rf_rfim_query_new ()">mbim_message_intel_thermal_rf_rfim_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-message-intel-thermal-rf-rfim-set-new" title="mbim_message_intel_thermal_rf_rfim_set_new ()">mbim_message_intel_thermal_rf_rfim_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-message-intel-thermal-rf-rfim-response-parse" title="mbim_message_intel_thermal_rf_rfim_response_parse ()">mbim_message_intel_thermal_rf_rfim_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-message-intel-thermal-rf-rfim-notification-parse" title="mbim_message_intel_thermal_rf_rfim_notification_parse ()">mbim_message_intel_thermal_rf_rfim_notification_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Intel-Thermal-RF.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValue" title="MbimIntelRfimFrequencyValue">MbimIntelRfimFrequencyValue</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValueArray" title="MbimIntelRfimFrequencyValueArray">MbimIntelRfimFrequencyValueArray</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Intel-Thermal-RF.description"></a><h2>Description</h2>
+<p>This section implements support for requests, responses and notifications in the
+Intel Thermal Rf service.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Intel-Thermal-RF.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-intel-rfim-frequency-value-array-free"></a><h3>mbim_intel_rfim_frequency_value_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_intel_rfim_frequency_value_array_free
+                               (<em class="parameter"><code><a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValueArray" title="MbimIntelRfimFrequencyValueArray"><span class="type">MbimIntelRfimFrequencyValueArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValue" title="MbimIntelRfimFrequencyValue"><span class="type">MbimIntelRfimFrequencyValue</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-intel-rfim-frequency-value-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValue" title="MbimIntelRfimFrequencyValue"><span class="type">MbimIntelRfimFrequencyValue</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-intel-thermal-rf-rfim-query-new"></a><h3>mbim_message_intel_thermal_rf_rfim_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_intel_thermal_rf_rfim_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'RFIM' query command in the 'Intel Thermal RF' service.</p>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-intel-thermal-rf-rfim-set-new"></a><h3>mbim_message_intel_thermal_rf_rfim_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_intel_thermal_rf_rfim_set_new
+                               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> activation_state</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'RFIM' set command in the 'Intel Thermal RF' service.</p>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>activation_state</p></td>
+<td class="parameter_description"><p>the 'ActivationState' field, given as a <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-intel-thermal-rf-rfim-response-parse"></a><h3>mbim_message_intel_thermal_rf_rfim_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_intel_thermal_rf_rfim_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_rfim_frequency_values_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValueArray" title="MbimIntelRfimFrequencyValueArray"><span class="type">MbimIntelRfimFrequencyValueArray</span></a> **out_rfim_frequency_values</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'RFIM' response command in the 'Intel Thermal RF' service.</p>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_rfim_frequency_values_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'RfimFrequencyValuesCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_rfim_frequency_values</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValue" title="MbimIntelRfimFrequencyValue"><span class="type">MbimIntelRfimFrequencyValue</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'RfimFrequencyValues' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-intel-rfim-frequency-value-array-free" title="mbim_intel_rfim_frequency_value_array_free ()"><code class="function">mbim_intel_rfim_frequency_value_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimIntelRfimFrequencyValue]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-intel-thermal-rf-rfim-notification-parse"></a><h3>mbim_message_intel_thermal_rf_rfim_notification_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_intel_thermal_rf_rfim_notification_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_rfim_frequency_values_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValueArray" title="MbimIntelRfimFrequencyValueArray"><span class="type">MbimIntelRfimFrequencyValueArray</span></a> **out_rfim_frequency_values</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'RFIM' notification command in the 'Intel Thermal RF' service.</p>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-notification-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_rfim_frequency_values_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'RfimFrequencyValuesCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_rfim_frequency_values</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#MbimIntelRfimFrequencyValue" title="MbimIntelRfimFrequencyValue"><span class="type">MbimIntelRfimFrequencyValue</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'RfimFrequencyValues' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-Intel-Thermal-RF.html#mbim-intel-rfim-frequency-value-array-free" title="mbim_intel_rfim_frequency_value_array_free ()"><code class="function">mbim_intel_rfim_frequency_value_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimIntelRfimFrequencyValue]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-intel-thermal-rf-rfim-notification-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-Intel-Thermal-RF.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimIntelRfimFrequencyValue"></a><h3>MbimIntelRfimFrequencyValue</h3>
+<pre class="programlisting">typedef struct {
+    guint32 serving_cell_info;
+    guint64 center_frequency;
+    guint32 bandwidth;
+    guint32 rsrp;
+    guint32 rsrq;
+    guint32 sinr;
+    guint32 rssi;
+    guint32 connection_status;
+} MbimIntelRfimFrequencyValue;
+</pre>
+<p>A MbimIntelRfimFrequencyValue element.</p>
+<div class="refsect3">
+<a name="MbimIntelRfimFrequencyValue.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.serving-cell-info"></a>serving_cell_info</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimIntelServingCellInfo" title="enum MbimIntelServingCellInfo"><span class="type">MbimIntelServingCellInfo</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.center-frequency"></a>center_frequency</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.bandwidth"></a>bandwidth</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.rsrp"></a>rsrp</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.rsrq"></a>rsrq</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.sinr"></a>sinr</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.rssi"></a>rssi</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimIntelRfimFrequencyValue.connection-status"></a>connection_status</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimIntelRfimFrequencyValueArray"></a><h3>MbimIntelRfimFrequencyValueArray</h3>
+<pre class="programlisting">typedef MbimIntelRfimFrequencyValue *MbimIntelRfimFrequencyValueArray;
+</pre>
+<p>A NULL-terminated array of MbimIntelRfimFrequencyValue elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

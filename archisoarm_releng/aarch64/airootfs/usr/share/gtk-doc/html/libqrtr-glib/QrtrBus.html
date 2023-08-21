@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QrtrBus: libqrtr-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqrtr-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libqrtr-glib-qrtr-version.html" title="qrtr-version">
+<link rel="next" href="QrtrNode.html" title="QrtrNode">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#QrtrBus.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#QrtrBus.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#QrtrBus.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#QrtrBus.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#QrtrBus.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libqrtr-glib-qrtr-version.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QrtrNode.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="QrtrBus"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="QrtrBus.top_of_page"></a>QrtrBus</span></h2>
+<p>QrtrBus — QRTR bus observer and device event listener</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="QrtrBus.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-new" title="qrtr_bus_new ()">qrtr_bus_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-new-finish" title="qrtr_bus_new_finish ()">qrtr_bus_new_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-peek-node" title="qrtr_bus_peek_node ()">qrtr_bus_peek_node</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-get-node" title="qrtr_bus_get_node ()">qrtr_bus_get_node</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-get-nodes" title="qrtr_bus_get_nodes ()">qrtr_bus_get_nodes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-peek-nodes" title="qrtr_bus_peek_nodes ()">qrtr_bus_peek_nodes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-wait-for-node" title="qrtr_bus_wait_for_node ()">qrtr_bus_wait_for_node</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrBus.html#qrtr-bus-wait-for-node-finish" title="qrtr_bus_wait_for_node_finish ()">qrtr_bus_wait_for_node_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="QrtrBus.html#QrtrBus--lookup-timeout" title="The “lookup-timeout” property">lookup-timeout</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="QrtrBus.html#QrtrBus-node-added" title="The “node-added” signal">node-added</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="QrtrBus.html#QrtrBus-node-removed" title="The “node-removed” signal">node-removed</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrBus.html#QRTR-BUS-LOOKUP-TIMEOUT:CAPS" title="QRTR_BUS_LOOKUP_TIMEOUT">QRTR_BUS_LOOKUP_TIMEOUT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrBus.html#QRTR-BUS-SIGNAL-NODE-ADDED:CAPS" title="QRTR_BUS_SIGNAL_NODE_ADDED">QRTR_BUS_SIGNAL_NODE_ADDED</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrBus.html#QRTR-BUS-SIGNAL-NODE-REMOVED:CAPS" title="QRTR_BUS_SIGNAL_NODE_REMOVED">QRTR_BUS_SIGNAL_NODE_REMOVED</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="QrtrBus.html#QrtrBus-struct" title="QrtrBus">QrtrBus</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> QrtrBus
+</pre>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+QrtrBus implements
+ <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.description"></a><h2>Description</h2>
+<p><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> sets up a socket that uses the QRTR IPC protocol and
+can call back into a client to tell them when new devices have appeared on
+the QRTR bus. It holds QrtrNodes that can be used to look up service and
+port information.</p>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="qrtr-bus-new"></a><h3>qrtr_bus_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qrtr_bus_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> lookup_timeout_ms</code></em>,
+              <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+              <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously creates a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> object.</p>
+<p>This method will fail if the access to the QRTR bus is not possible, or if
+the initial lookup doesn't finish on time.</p>
+<p>When <em class="parameter"><code>lookup_timeout_ms</code></em>
+ is 0, this method does not guarantee that the
+initial bus lookup has already finished, the user should wait for the required
+<a class="link" href="QrtrBus.html#QrtrBus-node-added" title="The “node-added” signal"><span class="type">“node-added”</span></a> and <a class="link" href="QrtrNode.html#QrtrNode-service-added" title="The “service-added” signal"><span class="type">“service-added”</span></a> signals before assuming the
+nodes are accessible.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked. You can then call
+<a class="link" href="QrtrBus.html#qrtr-bus-new-finish" title="qrtr_bus_new_finish ()"><code class="function">qrtr_bus_new_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="qrtr-bus-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lookup_timeout_ms</p></td>
+<td class="parameter_description"><p>the timeout, in milliseconds, to wait for the initial bus
+lookup to complete. A zero timeout disables the lookup.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>optional <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> object, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the initialization is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-new-finish"></a><h3>qrtr_bus_new_finish ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+qrtr_bus_new_finish (<em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="QrtrBus.html#qrtr-bus-new" title="qrtr_bus_new ()"><code class="function">qrtr_bus_new()</code></a>.</p>
+<div class="refsect3">
+<a name="qrtr-bus-new-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-new-finish.returns"></a><h4>Returns</h4>
+<p>A newly created <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-peek-node"></a><h3>qrtr_bus_peek_node ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+qrtr_bus_peek_node (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> node_id</code></em>);</pre>
+<p>Get the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> with node ID <em class="parameter"><code>node_id</code></em>
+, without increasing the reference count
+on the returned object.</p>
+<p>This method will fail if there is no node with the given <em class="parameter"><code>node_id</code></em>
+ in the QRTR bus.</p>
+<div class="refsect3">
+<a name="qrtr-bus-peek-node.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node_id</p></td>
+<td class="parameter_description"><p>the QRTR bus node ID to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-peek-node.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available.
+Do not free the returned object, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-get-node"></a><h3>qrtr_bus_get_node ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+qrtr_bus_get_node (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> node_id</code></em>);</pre>
+<p>Get the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> with node ID <em class="parameter"><code>node_id</code></em>
+.</p>
+<p>This method will fail if there is no node with the given <em class="parameter"><code>node_id</code></em>
+ in the QRTR bus.</p>
+<div class="refsect3">
+<a name="qrtr-bus-get-node.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node_id</p></td>
+<td class="parameter_description"><p>the QRTR bus node ID to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-get-node.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> that must be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>,
+or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-get-nodes"></a><h3>qrtr_bus_get_nodes ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+qrtr_bus_get_nodes (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>);</pre>
+<p>Gets a list of all the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> objects in the bus.</p>
+<div class="refsect3">
+<a name="qrtr-bus-get-nodes.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-get-nodes.returns"></a><h4>Returns</h4>
+<p>a list of
+<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> elements. The caller should free the result by using
+<a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> as <a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> QrtrNode]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-peek-nodes"></a><h3>qrtr_bus_peek_nodes ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+qrtr_bus_peek_nodes (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>);</pre>
+<p>Gets a list of all the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> objects in the bus, without increasing
+the reference count on the returned object or the list.</p>
+<div class="refsect3">
+<a name="qrtr-bus-peek-nodes.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-peek-nodes.returns"></a><h4>Returns</h4>
+<p>a list of
+<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> elements. The caller should not free the result, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> QrtrNode]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-wait-for-node"></a><h3>qrtr_bus_wait_for_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qrtr_bus_wait_for_node (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> node_id</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout_ms</code></em>,
+                        <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                        <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously waits for the node with ID <em class="parameter"><code>node_id</code></em>
+.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="QrtrBus.html#qrtr-bus-wait-for-node-finish" title="qrtr_bus_wait_for_node_finish ()"><code class="function">qrtr_bus_wait_for_node_finish()</code></a> to get the result of the
+operation.</p>
+<div class="refsect3">
+<a name="qrtr-bus-wait-for-node.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node_id</p></td>
+<td class="parameter_description"><p>the QRTR bus node ID to lookup.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout_ms</p></td>
+<td class="parameter_description"><p>the timeout, in milliseconds, to wait for the node to appear in
+the bus.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-bus-wait-for-node-finish"></a><h3>qrtr_bus_wait_for_node_finish ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="returnvalue">QrtrNode</span></a> *
+qrtr_bus_wait_for_node_finish (<em class="parameter"><code><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self</code></em>,
+                               <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="QrtrBus.html#qrtr-bus-wait-for-node" title="qrtr_bus_wait_for_node ()"><code class="function">qrtr_bus_wait_for_node()</code></a>.</p>
+<div class="refsect3">
+<a name="qrtr-bus-wait-for-node-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-bus-wait-for-node-finish.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="QRTR-BUS-LOOKUP-TIMEOUT:CAPS"></a><h3>QRTR_BUS_LOOKUP_TIMEOUT</h3>
+<pre class="programlisting">#define QRTR_BUS_LOOKUP_TIMEOUT "lookup-timeout"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrBus.html#QrtrBus--lookup-timeout" title="The “lookup-timeout” property"><span class="type">“lookup-timeout”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-BUS-SIGNAL-NODE-ADDED:CAPS"></a><h3>QRTR_BUS_SIGNAL_NODE_ADDED</h3>
+<pre class="programlisting">#define QRTR_BUS_SIGNAL_NODE_ADDED "node-added"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrBus.html#QrtrBus-node-added" title="The “node-added” signal"><span class="type">“node-added”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-BUS-SIGNAL-NODE-REMOVED:CAPS"></a><h3>QRTR_BUS_SIGNAL_NODE_REMOVED</h3>
+<pre class="programlisting">#define QRTR_BUS_SIGNAL_NODE_REMOVED "node-removed"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrBus.html#QrtrBus-node-removed" title="The “node-removed” signal"><span class="type">“node-removed”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrBus-struct"></a><h3>QrtrBus</h3>
+<pre class="programlisting">typedef struct _QrtrBus QrtrBus;</pre>
+<p>The <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="QrtrBus--lookup-timeout"></a><h3>The <code class="literal">“lookup-timeout”</code> property</h3>
+<pre class="programlisting">  “lookup-timeout”           <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Timeout in ms to wait for the initial lookup to finish, or 0 to disable it.</p>
+<p>Owner: QrtrBus</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrBus.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="QrtrBus-node-added"></a><h3>The <code class="literal">“node-added”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>    node,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data)</pre>
+<p>The ::node-added signal is emitted when a new node registers a service on
+the QRTR bus.</p>
+<div class="refsect3">
+<a name="QrtrBus-node-added.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>the node ID of the node that has been added</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrBus-node-removed"></a><h3>The <code class="literal">“node-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>    node,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data)</pre>
+<p>The ::node-removed signal is emitted when a node deregisters all services
+from the QRTR bus.</p>
+<div class="refsect3">
+<a name="QrtrBus-node-removed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>the node ID of the node that was removed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

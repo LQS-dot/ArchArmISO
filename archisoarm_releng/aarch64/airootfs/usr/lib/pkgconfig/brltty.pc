@@ -1,0 +1,164 @@
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2022 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU Lesser General Public License, as published by the Free Software
+# Foundation; either version 2.1 of the License, or (at your option) any
+# later version. Please see the file LICENSE-LGPL for details.
+#
+# Web Page: http://brltty.app/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+Name: brltty
+Version: 6.5
+URL: https://brltty.app/
+Description: Braille Device Daemon
+
+package_name=brltty
+package_version=6.5
+package_url=https://brltty.app/
+
+display_name=BRLTTY
+mailing_list=BRLTTY@brltty.app
+
+prefix=/usr
+sysconfdir=/etc
+datarootdir=${prefix}/share
+
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+sbindir=${exec_prefix}/sbin
+libdir=${exec_prefix}/lib
+libexecdir=${exec_prefix}/libexec
+
+updatable_directory=/var/lib/brltty
+writable_directory=/run/brltty
+
+execute_root=
+program_directory=${execute_root}${exec_prefix}/bin
+drivers_directory=${execute_root}${exec_prefix}/lib/brltty
+scripts_directory=${execute_root}/usr/lib/brltty
+tables_directory=${execute_root}/usr/share/brltty
+include_directory=${execute_root}${prefix}/include/brltty
+manpage_directory=${execute_root}/usr/share/man
+
+configuration_file=brltty.conf
+preferences_file=brltty.prefs
+
+text_table=en-nabcc
+attributes_table=left_right
+
+have_liblouis=yes
+liblouis_tables_directory=/usr/share/liblouis/tables
+
+braille_parameters=
+braille_device=usb:,bluetooth:
+
+speech_parameters=
+have_speech=yes
+
+screen_parameters=
+screen_driver=lx
+
+all_braille_driver_codes=al at ba bc bd bl bm bn cb ce cn ec eu fa fs hd hm ht hw ir ic lt mb md mm mn mt np pg pm sk tn ts tt vd vo vr vs xw bg
+all_braille_driver_names=Alva Albatross BrlAPI BrailComm Braudi BrailleLite Baum BrailleNote CombiBraille Cebra Canute EcoBraille EuroBraille FrankAudiodata FreedomScientific Hedo HIMS HandyTech HumanWare Iris Inceptor LogText MultiBraille MDV BrailleMemo MiniBraille Metec NinePoint Pegasus Papenmeier Seika TechniBraille TSI TTY VideoBraille Voyager Virtual VisioBraille XWindow B2G
+internal_braille_driver_codes=
+internal_braille_driver_names=
+external_braille_driver_codes=al at ba bc bd bl bm bn cb ce cn ec eu fa fs hd hm ht hw ir ic lt mb md mm mn mt np pg pm sk tn ts tt vd vo vr vs xw bg
+external_braille_driver_names=Alva Albatross BrlAPI BrailComm Braudi BrailleLite Baum BrailleNote CombiBraille Cebra Canute EcoBraille EuroBraille FrankAudiodata FreedomScientific Hedo HIMS HandyTech HumanWare Iris Inceptor LogText MultiBraille MDV BrailleMemo MiniBraille Metec NinePoint Pegasus Papenmeier Seika TechniBraille TSI TTY VideoBraille Voyager Virtual VisioBraille XWindow B2G
+
+all_speech_driver_codes=al bl cb en fv gs sd xs
+all_speech_driver_names=Alva BrailleLite CombiBraille eSpeak-NG Festival GenericSay SpeechDispatcher ExternalSpeech
+internal_speech_driver_codes=
+internal_speech_driver_names=
+external_speech_driver_codes=al bl cb en fv gs sd xs
+external_speech_driver_names=Alva BrailleLite CombiBraille eSpeak-NG Festival GenericSay SpeechDispatcher ExternalSpeech
+
+all_screen_driver_codes=lx sc a2
+all_screen_driver_names=Linux Screen AtSpi2
+internal_screen_driver_codes=
+internal_screen_driver_names=
+external_screen_driver_codes=lx sc a2
+external_screen_driver_names=Linux Screen AtSpi2
+
+libbraille_root=
+espeak_root=
+espeak_ng_root=/usr
+flite_root=
+flite_language=
+flite_lexicon=
+flite_voice=
+mikropuhe_root=
+speechd_root=/usr
+swift_root=
+theta_root=
+
+privilege_parameters=
+relocatable_install=no
+static_executables=no
+stripped_executables=no
+
+have_expat=yes
+have_gpm=yes
+have_i18n=yes
+have_iconv=yes
+have_icu=yes
+have_polkit=yes
+
+have_x=yes
+toolkit_package=Xaw
+curses_package=ncurses
+
+system_package=linux
+pgmpath_package=linux
+pgmprivs_package=linux
+service_package=libsystemd
+params_package=linux
+dynld_package=dlfcn
+rgx_package=libpcre2-32
+charset_package=iconv
+hostcmd_package=unix
+mntpt_package=mntent
+mntfs_package=linux
+kbd_package=linux
+bell_package=linux
+leds_package=linux
+beep_package=linux
+pcm_package=alsa
+midi_package=alsa
+fm_package=adlib
+serial_package=termios
+usb_package=linux
+bluetooth_package=linux
+ports_package=none
+
+init_path=
+stderr_path=
+
+have_api=yes
+have_java_bindings=yes
+have_lisp_bindings=yes
+have_ocaml_bindings=yes
+have_python_bindings=yes
+have_tcl_bindings=yes
+
+api_name=BrlAPI
+api_version=0.8
+api_release=0.8.4
+
+api_major=0
+api_minor=8
+api_revision=4
+
+api_parameters=
+api_socket_path=/var/lib/BrlAPI
+api_authkey_file=/etc/brlapi.key
+
+revision_identifier=BRLTTY-6.5

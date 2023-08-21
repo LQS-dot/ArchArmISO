@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ModemManager Reference Manual: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="next" href="ref-overview.html" title="Part I. ModemManager Overview">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">ModemManager Reference Manual</p></th></tr></table></div>
+<div><h2 class="subtitle">
+      <span class="inlinemediaobject"><img src="ModemManager-logo-wide.png" align="middle"></span>
+    </h2></div>
+<div><div class="authorgroup">
+<div class="author">
+<h3 class="author">
+<span class="firstname">Dan</span> <span class="surname">Williams</span>
+</h3>
+<div class="affiliation"><div class="address"><p><br>
+            <code class="email">&lt;<a class="email" href="mailto:dcbw@redhat.com">dcbw@redhat.com</a>&gt;</code><br>
+          </p></div></div>
+</div>
+<div class="author">
+<h3 class="author">
+<span class="firstname">Aleksander</span> <span class="surname">Morgado</span>
+</h3>
+<div class="affiliation"><div class="address"><p><br>
+            <code class="email">&lt;<a class="email" href="mailto:aleksander@aleksander.es">aleksander@aleksander.es</a>&gt;</code><br>
+          </p></div></div>
+</div>
+</div></div>
+<div><p class="releaseinfo">
+      For ModemManager version 1.20.6
+
+      The latest version of this documentation can be found on-line at
+      <a class="ulink" href="https://www.freedesktop.org/software/ModemManager/doc/latest/ModemManager/" target="_top">https://www.freedesktop.org/software/ModemManager/doc/latest/ModemManager/</a>.
+    </p></div>
+<div><p class="copyright">Copyright © 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 The ModemManager Authors</p></div>
+<div><div class="legalnotice">
+<a name="id-1.1.6"></a><p>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the <em class="citetitle">GNU Free
+        Documentation License</em>, Version 1.3 or any later
+        version published by the Free Software Foundation with no
+        Invariant Sections, no Front-Cover Texts, and no Back-Cover
+        Texts. You may obtain a copy of the <em class="citetitle">GNU Free
+        Documentation License</em> from the Free Software
+        Foundation by visiting <a class="ulink" href="http://www.fsf.org" target="_top">their Web site</a> or by writing
+        to:
+        </p>
+<div class="address"><p><br>
+          The Free Software Foundation, Inc.<br>
+          <span class="street">51 Franklin Street</span>, Suite 500<br>
+          <span class="city">Boston</span>, <span class="state">MA</span> <span class="postcode">02110-1335</span><br>
+          <span class="country">USA</span><br>
+        </p></div>
+<p>
+      </p>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="part"><a href="ref-overview.html">I. ModemManager Overview</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ref-overview-introduction.html">Introduction</a></span></dt>
+<dt><span class="chapter"><a href="ref-overview-modem-detection.html">Modem detection</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ref-overview-modem-detection.html#id-1.2.3.2">Builds with udev support</a></span></dt>
+<dt><span class="section"><a href="ch02s02.html">Builds without udev support</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-overview-modem-filter.html">Modem filter</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ref-overview-modem-filter.html#id-1.2.4.4">Filter rules</a></span></dt>
+<dt><span class="section"><a href="ch03s02.html">Filter policies</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-overview-modem-port-probing.html">Port probing</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ref-overview-modem-port-probing.html#id-1.2.5.4">Pre-probing filters</a></span></dt>
+<dt><span class="section"><a href="ch04s02.html">Probing sequence</a></span></dt>
+<dt><span class="section"><a href="ch04s03.html">Post-probing filters</a></span></dt>
+<dt><span class="section"><a href="ch04s04.html">Probing setup examples</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-overview-modem-object-creation.html">Modem object creation</a></span></dt>
+<dt><span class="chapter"><a href="ref-overview-modem-state-machine.html">Modem state machine</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ref-overview-modem-state-machine.html#id-1.2.7.5">Initialization</a></span></dt>
+<dt><span class="section"><a href="ch06s02.html">Enabling</a></span></dt>
+<dt><span class="section"><a href="ch06s03.html">Connection &amp; disconnection</a></span></dt>
+<dt><span class="section"><a href="ch06s04.html">Disabling</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-overview-plugin-specific-modems.html">Plugin-specific Modems</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="ref-common-types.html">II. Common types and definitions</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ModemManager-Version-checks.html">Version checks</a></span><span class="refpurpose"> — Version information in the API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ModemManager-Flags-and-Enumerations.html">Flags and Enumerations</a></span><span class="refpurpose"> — Common enumerations and types in the API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ModemManager-Errors.html">Errors</a></span><span class="refpurpose"> — Common errors in the API.</span>
+</dt>
+</dl></dd>
+<dt><span class="part"><a href="ref-udev.html">III. Common udev tag definitions</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="ModemManager-Common-udev-tags.html">Common udev tags</a></span><span class="refpurpose"> — generic udev tags supported</span>
+</dt></dl></dd>
+<dt><span class="part"><a href="ref-dbus.html">IV. D-Bus Reference</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ref-dbus-bus-name.html">The <code class="literal">org.freedesktop.ModemManager1</code> bus name</a></span></dt>
+<dt><span class="chapter"><a href="ref-dbus-standard-interfaces.html">Standard interfaces</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ref-dbus-standard-interfaces.html#ref-dbus-standard-interfaces-properties">org.freedesktop.DBus.Properties</a></span></dt>
+<dt><span class="section"><a href="ref-dbus-standard-interfaces-introspectables.html">org.freedesktop.DBus.Introspectable</a></span></dt>
+<dt><span class="section"><a href="ref-dbus-standard-interfaces-objectmanager.html">org.freedesktop.DBus.ObjectManager</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-manager.html">The <code class="literal">/org/freedesktop/ModemManager1</code> object</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.html">org.freedesktop.ModemManager1</a></span><span class="refpurpose"> — The ModemManager Manager interface.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-modem.html">The <code class="literal">/org/freedesktop/ModemManager/Modems</code> objects</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.html">org.freedesktop.ModemManager1.Modem</a></span><span class="refpurpose"> — The ModemManager Modem interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html">org.freedesktop.ModemManager1.Modem.Simple</a></span><span class="refpurpose"> — The ModemManager Simple interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html">org.freedesktop.ModemManager1.Modem.Modem3gpp</a></span><span class="refpurpose"> — The ModemManager 3GPP interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager.html">org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager</a></span><span class="refpurpose"> — The ModemManager 3GPP profile management interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd.html">org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd</a></span><span class="refpurpose"> — The ModemManager 3GPP USSD interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.ModemCdma.html">org.freedesktop.ModemManager1.Modem.ModemCdma</a></span><span class="refpurpose"> — The ModemManager CDMA interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Messaging.html">org.freedesktop.ModemManager1.Modem.Messaging</a></span><span class="refpurpose"> — The ModemManager Messaging interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Location.html">org.freedesktop.ModemManager1.Modem.Location</a></span><span class="refpurpose"> — The ModemManager Location interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Time.html">org.freedesktop.ModemManager1.Modem.Time</a></span><span class="refpurpose"> — The ModemManager Time interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Voice.html">org.freedesktop.ModemManager1.Modem.Voice</a></span><span class="refpurpose"> — The ModemManager Voice interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Firmware.html">org.freedesktop.ModemManager1.Modem.Firmware</a></span><span class="refpurpose"> — The ModemManager Firmware interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Sar.html">org.freedesktop.ModemManager1.Modem.Sar</a></span><span class="refpurpose"> — The ModemManager dynamic SAR interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Signal.html">org.freedesktop.ModemManager1.Modem.Signal</a></span><span class="refpurpose"> — The ModemManager Signal interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Modem.Oma.html">org.freedesktop.ModemManager1.Modem.Oma</a></span><span class="refpurpose"> — The ModemManager Open Mobile Alliance interface.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-bearer.html">The <code class="literal">/org/freedesktop/ModemManager/Bearers</code> objects</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Bearer.html">org.freedesktop.ModemManager1.Bearer</a></span><span class="refpurpose"> — The ModemManager Bearer interface.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-sim.html">The <code class="literal">/org/freedesktop/ModemManager/SIMs</code> objects</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Sim.html">org.freedesktop.ModemManager1.Sim</a></span><span class="refpurpose"> — The ModemManager SIM interface.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-sms.html">The <code class="literal">/org/freedesktop/ModemManager/SMSs</code> objects</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Sms.html">org.freedesktop.ModemManager1.Sms</a></span><span class="refpurpose"> — The ModemManager SMS interface.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ref-dbus-object-call.html">The <code class="literal">/org/freedesktop/ModemManager/Calls</code> objects</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="gdbus-org.freedesktop.ModemManager1.Call.html">org.freedesktop.ModemManager1.Call</a></span><span class="refpurpose"> — The ModemManager Call interface.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="ref-migrating.html">V. Migrating from ModemManager 0.6 to ModemManager 1.0</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ch16.html"></a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch16.html#id-1.6.3.1">Listing available modems</a></span></dt>
+<dt><span class="section"><a href="ch16s02.html">PIN unlocking</a></span></dt>
+<dt><span class="section"><a href="ch16s03.html">Connection and disconnection</a></span></dt>
+<dt><span class="section"><a href="ch16s04.html">Simple connection</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="ref-compat.html">VI. Compatibility with older versions</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="ModemManager-API-break-replacements.html">API break replacements</a></span><span class="refpurpose"> — List of deprecated methods, types and symbols.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="api-index-full.html">Index</a></span></dt>
+<dt><span class="chapter"><a href="api-index-deprecated.html">Index of deprecated symbols</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-0.html">Index of new symbols in 1.0</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-2.html">Index of new symbols in 1.2</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-4.html">Index of new symbols in 1.4</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-6.html">Index of new symbols in 1.6</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-8.html">Index of new symbols in 1.8</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-10.html">Index of new symbols in 1.10</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-12.html">Index of new symbols in 1.12</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-14.html">Index of new symbols in 1.14</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-16.html">Index of new symbols in 1.16</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-18.html">Index of new symbols in 1.18</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-20.html">Index of new symbols in 1.20</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

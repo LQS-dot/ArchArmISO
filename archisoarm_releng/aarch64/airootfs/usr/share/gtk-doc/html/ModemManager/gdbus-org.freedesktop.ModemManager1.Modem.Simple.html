@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1.Modem.Simple: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-modem.html" title="The /org/freedesktop/ModemManager/Modems objects">
+<link rel="prev" href="gdbus-org.freedesktop.ModemManager1.Modem.html" title="org.freedesktop.ModemManager1.Modem">
+<link rel="next" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html" title="org.freedesktop.ModemManager1.Modem.Modem3gpp">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Modem.Simple.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-modem.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.ModemManager1.Modem.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.ModemManager1.Modem.Modem3gpp.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1.Modem.Simple"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Simple.top_of_page"></a>org.freedesktop.ModemManager1.Modem.Simple</span></h2>
+<p>org.freedesktop.ModemManager1.Modem.Simple — The ModemManager Simple interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Connect" title="The Connect() method">Connect</a>    (IN  a{sv} properties,
+            OUT o     bearer);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Disconnect" title="The Disconnect() method">Disconnect</a> (IN  o     bearer);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Modem.Simple.html#gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.GetStatus" title="The GetStatus() method">GetStatus</a>  (OUT a{sv} properties);
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1-Modem-Simple"></a><h2>Description</h2>
+<p>
+The Simple interface allows controlling and querying the status of Modems.
+</p>
+<p>
+This interface will only be available once the modem is ready to be
+registered in the cellular network. 3GPP devices will require a valid
+unlocked SIM card before any of the features in the interface can be
+used.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1.Modem.Simple"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Connect"></a><h3>The Connect() method</h3>
+<pre class="programlisting">
+Connect (IN  a{sv} properties,
+         OUT o     bearer);
+</pre>
+<p>
+Do everything needed to connect the modem using the given properties.
+</p>
+<p>
+This method will attempt to find a matching packet data bearer and
+activate it if necessary, returning the bearer's IP details.  If no
+matching bearer is found, a new bearer will be created and activated,
+but this operation may fail if no resources are available to complete
+this connection attempt (ie, if a conflicting bearer is already active).
+</p>
+<p>
+This call may make a large number of changes to modem configuration
+based on properties passed in. For example, given a PIN-locked, disabled
+GSM/UMTS modem, this call may unlock the SIM PIN, wait for network
+registration (or force registration to a specific provider), create a
+new packet data bearer using the given "apn", and connect that bearer.
+</p>
+<p>
+The list of allowed properties includes all the ones defined in the
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Bearer.html#gdbus-property-org-freedesktop-ModemManager1-Bearer.Properties" title='The "Properties" property'>bearer properties</a>
+plus these additional ones that are only applicable to this method,
+and only to 3GPP (GSM/UMTS/LTE/5GNR) devices:
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"pin"</code></span></p></td>
+<td>
+SIM-PIN unlock code, given as a string value (signature
+<code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"operator-id"</code></span></p></td>
+<td>
+ETSI MCC-MNC of a network to force registration with,
+given as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+There are no settings specific to this call that would apply to 3GPP2
+(CDMA/EVDO) devices.
+</p>
+<p>
+Since: 1.0
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>properties</code></em></code>:</span></p></td>
+<td><p>
+Dictionary of properties needed to get the modem connected.
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>bearer</code></em></code>:</span></p></td>
+<td><p>
+On successful connect, returns the object path of the connected packet data bearer used for the connection attempt.
+</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.Disconnect"></a><h3>The Disconnect() method</h3>
+<pre class="programlisting">
+Disconnect (IN  o bearer);
+</pre>
+<p>
+data bearer, while if "/" (ie, no object given) this method will
+disconnect all active packet data bearers.
+</p>
+<p>
+Disconnect an active packet data connection.
+</p>
+<p>
+Since: 1.0
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>bearer</code></em></code>:</span></p></td>
+<td><p>
+If given this method will disconnect the referenced packet
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Modem-Simple.GetStatus"></a><h3>The GetStatus() method</h3>
+<pre class="programlisting">
+GetStatus (OUT a{sv} properties);
+</pre>
+<p>
+Get the general modem status.
+</p>
+<p>
+The predefined common properties returned are:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"state"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemState" title="enum MMModemState">MMModemState</a> value
+specifying the overall state of the modem, given as an
+unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"signal-quality"</code></span></p></td>
+<td>
+Signal quality value, given only when registered,
+as unsigned integer value and an additional boolean value
+indicating if the value was recently taken.
+(signature <code class="literal">"(ub)"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"current-bands"</code></span></p></td>
+<td>
+List of <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemBand" title="enum MMModemBand">MMModemBand</a> values,
+given only when registered, as a list of
+unsigned integer values (signature <code class="literal">"au"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"access-technologies"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemAccessTechnology" title="enum MMModemAccessTechnology">MMModemAccessTechnology</a> value,
+given only when registered, as an unsigned integer value
+(signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"m3gpp-registration-state"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModem3gppRegistrationState" title="enum MMModem3gppRegistrationState">MMModem3gppRegistrationState</a> value
+specifying the state of the registration, given only when registered
+in a 3GPP network, as an unsigned integer value (signature
+<code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"m3gpp-operator-code"</code></span></p></td>
+<td>
+Operator <code class="literal">MCC-MNC</code>, given only when registered
+in a 3GPP network, as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"m3gpp-operator-name"</code></span></p></td>
+<td>
+Operator name, given only when registered in a 3GPP network,
+as a string value (signature <code class="literal">"s"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"cdma-cdma1x-registration-state"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemCdmaRegistrationState" title="enum MMModemCdmaRegistrationState">MMModemCdmaRegistrationState</a> value
+specifying the state of the registration, given only when registered
+in a CDMA1x network, as an unsigned integer value (signature
+<code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"cdma-evdo-registration-state"</code></span></p></td>
+<td>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMModemCdmaRegistrationState" title="enum MMModemCdmaRegistrationState">MMModemCdmaRegistrationState</a> value
+specifying the state of the registration, given only when registered
+in a EV-DO network, as an unsigned integer value (signature
+<code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"cdma-sid"</code></span></p></td>
+<td>
+The System Identifier of the serving network, if registered in a CDMA1x network and if known.
+Given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"cdma-nid"</code></span></p></td>
+<td>
+The Network Identifier of the serving network, if registered in a CDMA1x network and if known.
+Given as an unsigned integer value (signature <code class="literal">"u"</code>).
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.0
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">OUT a{sv} <em class="parameter"><code>properties</code></em></code>:</span></p></td>
+<td><p>
+Dictionary of properties.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

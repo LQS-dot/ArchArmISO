@@ -1,0 +1,2050 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MbimMessage: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="libmbim-glib-Command-IDs.html" title="Command IDs">
+<link rel="next" href="MbimDevice.html" title="MbimDevice">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MbimMessage.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MbimMessage.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Command-IDs.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MbimDevice.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MbimMessage"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MbimMessage.top_of_page"></a>MbimMessage</span></h2>
+<p>MbimMessage — Generic MBIM message handling routines</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MbimMessage.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-new" title="mbim_message_new ()">mbim_message_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-dup" title="mbim_message_dup ()">mbim_message_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-ref" title="mbim_message_ref ()">mbim_message_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()">mbim_message_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-validate" title="mbim_message_validate ()">mbim_message_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-printable" title="mbim_message_get_printable ()">mbim_message_get_printable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-printable-full" title="mbim_message_get_printable_full ()">mbim_message_get_printable_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-raw" title="mbim_message_get_raw ()">mbim_message_get_raw</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="returnvalue">MbimMessageType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-message-type" title="mbim_message_get_message_type ()">mbim_message_get_message_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-message-length" title="mbim_message_get_message_length ()">mbim_message_get_message_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-get-transaction-id" title="mbim_message_get_transaction_id ()">mbim_message_get_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-set-transaction-id" title="mbim_message_set_transaction_id ()">mbim_message_set_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-type-get-string" title="mbim_message_type_get_string ()">mbim_message_type_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-open-new" title="mbim_message_open_new ()">mbim_message_open_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-open-get-max-control-transfer" title="mbim_message_open_get_max_control_transfer ()">mbim_message_open_get_max_control_transfer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-open-done-get-status-code" title="mbim_message_open_done_get_status_code ()">mbim_message_open_done_get_status_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-open-done-get-result" title="mbim_message_open_done_get_result ()">mbim_message_open_done_get_result</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-close-new" title="mbim_message_close_new ()">mbim_message_close_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-close-done-get-status-code" title="mbim_message_close_done_get_status_code ()">mbim_message_close_done_get_status_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-close-done-get-result" title="mbim_message_close_done_get_result ()">mbim_message_close_done_get_result</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-error-new" title="mbim_message_error_new ()">mbim_message_error_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-function-error-new" title="mbim_message_function_error_new ()">mbim_message_function_error_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="returnvalue">MbimProtocolError</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-error-get-error-status-code" title="mbim_message_error_get_error_status_code ()">mbim_message_error_get_error_status_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Error-Reporting.html#GError"><span class="returnvalue">GError</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-error-get-error" title="mbim_message_error_get_error ()">mbim_message_error_get_error</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-new" title="mbim_message_command_new ()">mbim_message_command_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-append" title="mbim_message_command_append ()">mbim_message_command_append</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-get-service" title="mbim_message_command_get_service ()">mbim_message_command_get_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-get-service-id" title="mbim_message_command_get_service_id ()">mbim_message_command_get_service_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-get-cid" title="mbim_message_command_get_cid ()">mbim_message_command_get_cid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="returnvalue">MbimMessageCommandType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-get-command-type" title="mbim_message_command_get_command_type ()">mbim_message_command_get_command_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-get-raw-information-buffer" title="mbim_message_command_get_raw_information_buffer ()">mbim_message_command_get_raw_information_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-type-get-string" title="mbim_message_command_type_get_string ()">mbim_message_command_type_get_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-service" title="mbim_message_command_done_get_service ()">mbim_message_command_done_get_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-service-id" title="mbim_message_command_done_get_service_id ()">mbim_message_command_done_get_service_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-cid" title="mbim_message_command_done_get_cid ()">mbim_message_command_done_get_cid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-status-code" title="mbim_message_command_done_get_status_code ()">mbim_message_command_done_get_status_code</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-result" title="mbim_message_command_done_get_result ()">mbim_message_command_done_get_result</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-command-done-get-raw-information-buffer" title="mbim_message_command_done_get_raw_information_buffer ()">mbim_message_command_done_get_raw_information_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-indicate-status-get-service" title="mbim_message_indicate_status_get_service ()">mbim_message_indicate_status_get_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-indicate-status-get-service-id" title="mbim_message_indicate_status_get_service_id ()">mbim_message_indicate_status_get_service_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-indicate-status-get-cid" title="mbim_message_indicate_status_get_cid ()">mbim_message_indicate_status_get_cid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-indicate-status-get-raw-information-buffer" title="mbim_message_indicate_status_get_raw_information_buffer ()">mbim_message_indicate_status_get_raw_information_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimMessage.html#mbim-message-response-get-result" title="mbim_message_response_get_result ()">mbim_message_response_get_result</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimMessage.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="MbimMessage.html#MbimMessage-struct" title="MbimMessage">MbimMessage</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType">MbimMessageType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MbimMessage.html#MbimIPv4" title="struct MbimIPv4">MbimIPv4</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MbimMessage.html#MbimIPv6" title="struct MbimIPv6">MbimIPv6</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType">MbimMessageCommandType</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimMessage.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> MbimMessage
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> MbimMessageCommandType
+    <span class="lineart">╰──</span> MbimMessageType
+</pre>
+</div>
+<div class="refsect1">
+<a name="MbimMessage.description"></a><h2>Description</h2>
+<p><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> is a generic type representing a MBIM message of any kind
+(request, response, indication).</p>
+</div>
+<div class="refsect1">
+<a name="MbimMessage.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-message-new"></a><h3>mbim_message_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *data</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> data_length</code></em>);</pre>
+<p>Create a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> with the given contents.</p>
+<div class="refsect3">
+<a name="mbim-message-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>contents of the message.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_length</p></td>
+<td class="parameter_description"><p>length of the message.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-dup"></a><h3>mbim_message_dup ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_dup (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Create a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> with the same contents as <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-message-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> to duplicate.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-dup.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-ref"></a><h3>mbim_message_ref ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_ref (<em class="parameter"><code><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>self</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="mbim-message-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-ref.returns"></a><h4>Returns</h4>
+<p>the new reference to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-unref"></a><h3>mbim_message_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_message_unref (<em class="parameter"><code><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>self</code></em>
+ by one.
+If the reference count drops to 0, <em class="parameter"><code>self</code></em>
+ is completely disposed.</p>
+<div class="refsect3">
+<a name="mbim-message-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-validate"></a><h3>mbim_message_validate ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_validate (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Validates the contents of the headers in the MBIM message.</p>
+<p>This operation may be used to ensure that the message is full and of a valid
+type.</p>
+<p>This operation does not validate that the specific contents of a given
+message type are available, that is done by the methods retrieving those
+specific contents.</p>
+<div class="refsect3">
+<a name="mbim-message-validate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-validate.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message is valid, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-printable"></a><h3>mbim_message_get_printable ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_message_get_printable (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *line_prefix</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> headers_only</code></em>);</pre>
+<p>Gets a printable string with the contents of the whole MBIM message.</p>
+<p>This method will not fail if the parsing of the message contents fails,
+a fallback text with the error will be included in the generated printable
+information instead.</p>
+<div class="refsect3">
+<a name="mbim-message-get-printable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>line_prefix</p></td>
+<td class="parameter_description"><p>prefix string to use in each new generated line.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>headers_only</p></td>
+<td class="parameter_description"><p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if only basic headers should be printed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-printable.returns"></a><h4>Returns</h4>
+<p> a newly allocated string, which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-printable-full"></a><h3>mbim_message_get_printable_full ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_message_get_printable_full (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> mbimex_version_major</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> mbimex_version_minor</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *line_prefix</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> headers_only</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets a printable string with the contents of the whole MBIM message.</p>
+<p>Unlike <a class="link" href="MbimMessage.html#mbim-message-get-printable" title="mbim_message_get_printable ()"><code class="function">mbim_message_get_printable()</code></a>, this method allows specifying the
+MBIMEx version agreed between host and device, so that the correct
+processing and parsing is done on messages in the newer MBIMEx versions.</p>
+<p>If <em class="parameter"><code>mbimex_version_major</code></em>
+ &lt; 2, this method behaves exactly as
+<a class="link" href="MbimMessage.html#mbim-message-get-printable" title="mbim_message_get_printable ()"><code class="function">mbim_message_get_printable()</code></a>.</p>
+<p>If the specified <em class="parameter"><code>mbimex_version_major</code></em>
+ is unsupported, an error will be
+returned.</p>
+<p>This method will not fail if the parsing of the message contents fails,
+a fallback text with the error will be included in the generated printable
+information instead.</p>
+<div class="refsect3">
+<a name="mbim-message-get-printable-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mbimex_version_major</p></td>
+<td class="parameter_description"><p>major version of the agreed MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mbimex_version_minor</p></td>
+<td class="parameter_description"><p>minor version of the agreed MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>line_prefix</p></td>
+<td class="parameter_description"><p>prefix string to use in each new generated line.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>headers_only</p></td>
+<td class="parameter_description"><p><a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if only basic headers should be printed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-printable-full.returns"></a><h4>Returns</h4>
+<p> a newly allocated string which should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-raw"></a><h3>mbim_message_get_raw ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_message_get_raw (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *length</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the whole raw data buffer of the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p>
+<div class="refsect3">
+<a name="mbim-message-get-raw.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-raw.returns"></a><h4>Returns</h4>
+<p> The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-message-type"></a><h3>mbim_message_get_message_type ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="returnvalue">MbimMessageType</span></a>
+mbim_message_get_message_type (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Gets the message type.</p>
+<div class="refsect3">
+<a name="mbim-message-get-message-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-message-type.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="type">MbimMessageType</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-message-length"></a><h3>mbim_message_get_message_length ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_get_message_length (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Gets the whole message length.</p>
+<div class="refsect3">
+<a name="mbim-message-get-message-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-message-length.returns"></a><h4>Returns</h4>
+<p> the length of the message.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-get-transaction-id"></a><h3>mbim_message_get_transaction_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_get_transaction_id (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Gets the transaction ID of the message.</p>
+<div class="refsect3">
+<a name="mbim-message-get-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-get-transaction-id.returns"></a><h4>Returns</h4>
+<p> the transaction ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-set-transaction-id"></a><h3>mbim_message_set_transaction_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_message_set_transaction_id (<em class="parameter"><code><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>);</pre>
+<p>Sets the transaction ID of the message.</p>
+<div class="refsect3">
+<a name="mbim-message-set-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>the transaction id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-type-get-string"></a><h3>mbim_message_type_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_message_type_get_string (<em class="parameter"><code><a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="type">MbimMessageType</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="type">MbimMessageType</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-message-type-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a MbimMessageType.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-type-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-open-new"></a><h3>mbim_message_open_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_open_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> max_control_transfer</code></em>);</pre>
+<p>Create a new <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-OPEN:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_OPEN</code></a> with the specified
+parameters.</p>
+<div class="refsect3">
+<a name="mbim-message-open-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max_control_transfer</p></td>
+<td class="parameter_description"><p>maximum control transfer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-open-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>. The returned value
+should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-open-get-max-control-transfer"></a><h3>mbim_message_open_get_max_control_transfer ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_open_get_max_control_transfer
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the maximum control transfer set to be used in the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type
+<a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-OPEN:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_OPEN</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-message-open-get-max-control-transfer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-open-get-max-control-transfer.returns"></a><h4>Returns</h4>
+<p> the maximum control transfer.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-open-done-get-status-code"></a><h3>mbim_message_open_done_get_status_code ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+mbim_message_open_done_get_status_code
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get status code from the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-OPEN-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_OPEN_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-open-done-get-status-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-open-done-get-status-code.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="type">MbimStatusError</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-open-done-get-result"></a><h3>mbim_message_open_done_get_result ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_open_done_get_result (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result of the 'Open' operation in the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-OPEN-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_OPEN_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-open-done-get-result.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-open-done-get-result.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-close-new"></a><h3>mbim_message_close_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_close_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>);</pre>
+<p>Create a new <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-CLOSE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_CLOSE</code></a> with the specified
+parameters.</p>
+<div class="refsect3">
+<a name="mbim-message-close-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-close-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>. The returned value
+should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-close-done-get-status-code"></a><h3>mbim_message_close_done_get_status_code ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+mbim_message_close_done_get_status_code
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get status code from the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-CLOSE-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_CLOSE_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-close-done-get-status-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-close-done-get-status-code.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="type">MbimStatusError</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-close-done-get-result"></a><h3>mbim_message_close_done_get_result ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_close_done_get_result (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result of the 'Close' operation in the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-CLOSE-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_CLOSE_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-close-done-get-result.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-close-done-get-result.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-error-new"></a><h3>mbim_message_error_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_error_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>,
+                        <em class="parameter"><code><a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="type">MbimProtocolError</span></a> error_status_code</code></em>);</pre>
+<p>Create a new <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-HOST-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_HOST_ERROR</code></a> with the specified
+parameters.</p>
+<div class="refsect3">
+<a name="mbim-message-error-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error_status_code</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="type">MbimProtocolError</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-error-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>. The returned value
+should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-function-error-new"></a><h3>mbim_message_function_error_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_function_error_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>,
+                                 <em class="parameter"><code><a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="type">MbimProtocolError</span></a> error_status_code</code></em>);</pre>
+<p>Create a new <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-FUNCTION-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_FUNCTION_ERROR</code></a> with the specified
+parameters.</p>
+<div class="refsect3">
+<a name="mbim-message-function-error-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error_status_code</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="type">MbimProtocolError</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-function-error-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>. The returned value
+should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-error-get-error-status-code"></a><h3>mbim_message_error_get_error_status_code ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="returnvalue">MbimProtocolError</span></a>
+mbim_message_error_get_error_status_code
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the error code in a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-HOST-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_HOST_ERROR</code></a> or
+<a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-FUNCTION-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_FUNCTION_ERROR</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-error-get-error-status-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-error-get-error-status-code.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-Errors.html#MbimProtocolError" title="enum MbimProtocolError"><span class="type">MbimProtocolError</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-error-get-error"></a><h3>mbim_message_error_get_error ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Error-Reporting.html#GError"><span class="returnvalue">GError</span></a> *
+mbim_message_error_get_error (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the error in a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-HOST-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_HOST_ERROR</code></a> or
+<a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-FUNCTION-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_FUNCTION_ERROR</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-error-get-error.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-error-get-error.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, which should be freed with <a href="../glib/glib-Error-Reporting.html#g-error-free"><code class="function">g_error_free()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-new"></a><h3>mbim_message_command_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_command_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> transaction_id</code></em>,
+                          <em class="parameter"><code><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a> service</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> cid</code></em>,
+                          <em class="parameter"><code><a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="type">MbimMessageCommandType</span></a> command_type</code></em>);</pre>
+<p>Create a new <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> of type <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> with the
+specified parameters and an empty information buffer.</p>
+<div class="refsect3">
+<a name="mbim-message-command-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>transaction_id</p></td>
+<td class="parameter_description"><p>transaction ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cid</p></td>
+<td class="parameter_description"><p>the command ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command_type</p></td>
+<td class="parameter_description"><p>the command type.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>. The returned value
+should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-append"></a><h3>mbim_message_command_append ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_message_command_append (<em class="parameter"><code><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *buffer</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> buffer_size</code></em>);</pre>
+<p>Appends the contents of <em class="parameter"><code>buffer</code></em>
+ to <em class="parameter"><code>self</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-message-command-append.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>raw buffer to append to the message.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buffer_size</p></td>
+<td class="parameter_description"><p>length of the data in <em class="parameter"><code>buffer</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-get-service"></a><h3>mbim_message_command_get_service ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+mbim_message_command_get_service (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-get-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-get-service.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-get-service-id"></a><h3>mbim_message_command_get_service_id ()</h3>
+<pre class="programlisting">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+mbim_message_command_get_service_id (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service UUID of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-get-service-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-get-service-id.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-get-cid"></a><h3>mbim_message_command_get_cid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_command_get_cid (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the command id of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-get-cid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-get-cid.returns"></a><h4>Returns</h4>
+<p> a CID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-get-command-type"></a><h3>mbim_message_command_get_command_type ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="returnvalue">MbimMessageCommandType</span></a>
+mbim_message_command_get_command_type (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the command type of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-get-command-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-get-command-type.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="type">MbimMessageCommandType</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-get-raw-information-buffer"></a><h3>mbim_message_command_get_raw_information_buffer ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_message_command_get_raw_information_buffer
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_length</code></em>);</pre>
+<p>Gets the information buffer of the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-get-raw-information-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-get-raw-information-buffer.returns"></a><h4>Returns</h4>
+<p>The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if empty. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-type-get-string"></a><h3>mbim_message_command_type_get_string ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_message_command_type_get_string (<em class="parameter"><code><a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="type">MbimMessageCommandType</span></a> val</code></em>);</pre>
+<p>Gets the nickname string for the <a class="link" href="MbimMessage.html#MbimMessageCommandType" title="enum MbimMessageCommandType"><span class="type">MbimMessageCommandType</span></a> specified at <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-message-command-type-get-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a MbimMessageCommandType.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-type-get-string.returns"></a><h4>Returns</h4>
+<p>a string with the nickname, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found. Do not free the returned value. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-service"></a><h3>mbim_message_command_done_get_service ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+mbim_message_command_done_get_service (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-service.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-service-id"></a><h3>mbim_message_command_done_get_service_id ()</h3>
+<pre class="programlisting">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+mbim_message_command_done_get_service_id
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service UUID of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-service-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-service-id.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-cid"></a><h3>mbim_message_command_done_get_cid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_command_done_get_cid (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the command id of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-cid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-cid.returns"></a><h4>Returns</h4>
+<p> a CID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-status-code"></a><h3>mbim_message_command_done_get_status_code ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="returnvalue">MbimStatusError</span></a>
+mbim_message_command_done_get_status_code
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get status code from the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-status-code.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-status-code.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-Errors.html#MbimStatusError" title="enum MbimStatusError"><span class="type">MbimStatusError</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-result"></a><h3>mbim_message_command_done_get_result ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_command_done_get_result (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result of the 'Command' operation in the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-result.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-result.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-command-done-get-raw-information-buffer"></a><h3>mbim_message_command_done_get_raw_information_buffer ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_message_command_done_get_raw_information_buffer
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_length</code></em>);</pre>
+<p>Gets the information buffer of the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_COMMAND_DONE</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-raw-information-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-command-done-get-raw-information-buffer.returns"></a><h4>Returns</h4>
+<p>The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if empty. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-indicate-status-get-service"></a><h3>mbim_message_indicate_status_get_service ()</h3>
+<pre class="programlisting"><a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="returnvalue">MbimService</span></a>
+mbim_message_indicate_status_get_service
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-INDICATE-STATUS:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_INDICATE_STATUS</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-service.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimService" title="enum MbimService"><span class="type">MbimService</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-indicate-status-get-service-id"></a><h3>mbim_message_indicate_status_get_service_id ()</h3>
+<pre class="programlisting">const <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="returnvalue">MbimUuid</span></a> *
+mbim_message_indicate_status_get_service_id
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the service UUID of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-INDICATE-STATUS:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_INDICATE_STATUS</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-service-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-service-id.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="libmbim-glib-UUIDs.html#MbimUuid" title="MbimUuid"><span class="type">MbimUuid</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-indicate-status-get-cid"></a><h3>mbim_message_indicate_status_get_cid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_message_indicate_status_get_cid (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>);</pre>
+<p>Get the command id of a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-INDICATE-STATUS:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_INDICATE_STATUS</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-cid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-cid.returns"></a><h4>Returns</h4>
+<p> a CID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-indicate-status-get-raw-information-buffer"></a><h3>mbim_message_indicate_status_get_raw_information_buffer ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mbim_message_indicate_status_get_raw_information_buffer
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_length</code></em>);</pre>
+<p>Gets the information buffer of the <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-INDICATE-STATUS:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_INDICATE_STATUS</code></a> message.</p>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-raw-information-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_length</p></td>
+<td class="parameter_description"><p>return location for the size of the output buffer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-indicate-status-get-raw-information-buffer.returns"></a><h4>Returns</h4>
+<p>The raw data buffer, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if empty. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-response-get-result"></a><h3>mbim_message_response_get_result ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_response_get_result (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="type">MbimMessageType</span></a> expected</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the result of the operation from the response message, which
+can be either a <a class="link" href="MbimMessage.html#MBIM-MESSAGE-TYPE-FUNCTION-ERROR:CAPS"><code class="literal">MBIM_MESSAGE_TYPE_FUNCTION_ERROR</code></a> message or a message of the
+specified <em class="parameter"><code>expected</code></em>
+ type.</p>
+<div class="refsect3">
+<a name="mbim-message-response-get-result.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> response message.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expected</p></td>
+<td class="parameter_description"><p>expected <a class="link" href="MbimMessage.html#MbimMessageType" title="enum MbimMessageType"><span class="type">MbimMessageType</span></a> if there isn't any error in the operation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-response-get-result.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimMessage.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimMessage-struct"></a><h3>MbimMessage</h3>
+<pre class="programlisting">typedef struct _MbimMessage MbimMessage;</pre>
+<p>An opaque type representing a MBIM message.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimMessageType"></a><h3>enum MbimMessageType</h3>
+<p>Type of MBIM messages.</p>
+<div class="refsect3">
+<a name="MbimMessageType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-INVALID:CAPS"></a>MBIM_MESSAGE_TYPE_INVALID</p></td>
+<td class="enum_member_description">
+<p>Invalid MBIM message.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-OPEN:CAPS"></a>MBIM_MESSAGE_TYPE_OPEN</p></td>
+<td class="enum_member_description">
+<p>Initialization request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-CLOSE:CAPS"></a>MBIM_MESSAGE_TYPE_CLOSE</p></td>
+<td class="enum_member_description">
+<p>Close request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-COMMAND:CAPS"></a>MBIM_MESSAGE_TYPE_COMMAND</p></td>
+<td class="enum_member_description">
+<p>Command request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-HOST-ERROR:CAPS"></a>MBIM_MESSAGE_TYPE_HOST_ERROR</p></td>
+<td class="enum_member_description">
+<p>Host-reported error in the communication.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-OPEN-DONE:CAPS"></a>MBIM_MESSAGE_TYPE_OPEN_DONE</p></td>
+<td class="enum_member_description">
+<p>Response to initialization request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-CLOSE-DONE:CAPS"></a>MBIM_MESSAGE_TYPE_CLOSE_DONE</p></td>
+<td class="enum_member_description">
+<p>Response to close request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-COMMAND-DONE:CAPS"></a>MBIM_MESSAGE_TYPE_COMMAND_DONE</p></td>
+<td class="enum_member_description">
+<p>Response to command request.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-FUNCTION-ERROR:CAPS"></a>MBIM_MESSAGE_TYPE_FUNCTION_ERROR</p></td>
+<td class="enum_member_description">
+<p>Function-reported error in the communication.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-TYPE-INDICATE-STATUS:CAPS"></a>MBIM_MESSAGE_TYPE_INDICATE_STATUS</p></td>
+<td class="enum_member_description">
+<p>Unsolicited message from the function.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimIPv4"></a><h3>struct MbimIPv4</h3>
+<pre class="programlisting">struct MbimIPv4 {
+    guint8 addr[4];
+};
+</pre>
+<p>An IPv4 address.</p>
+<div class="refsect3">
+<a name="MbimIPv4.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> <em class="structfield"><code><a name="MbimIPv4.addr"></a>addr</code></em>[4];</p></td>
+<td class="struct_member_description"><p>4 bytes specifying the IPv4 address.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimIPv6"></a><h3>struct MbimIPv6</h3>
+<pre class="programlisting">struct MbimIPv6 {
+    guint8 addr[16];
+};
+</pre>
+<p>An IPv6 address.</p>
+<div class="refsect3">
+<a name="MbimIPv6.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> <em class="structfield"><code><a name="MbimIPv6.addr"></a>addr</code></em>[16];</p></td>
+<td class="struct_member_description"><p>16 bytes specifying the IPv6 address.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimMessageCommandType"></a><h3>enum MbimMessageCommandType</h3>
+<p>Type of command message.</p>
+<div class="refsect3">
+<a name="MbimMessageCommandType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-COMMAND-TYPE-UNKNOWN:CAPS"></a>MBIM_MESSAGE_COMMAND_TYPE_UNKNOWN</p></td>
+<td class="enum_member_description">
+<p>Unknown type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-COMMAND-TYPE-QUERY:CAPS"></a>MBIM_MESSAGE_COMMAND_TYPE_QUERY</p></td>
+<td class="enum_member_description">
+<p>Query command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-MESSAGE-COMMAND-TYPE-SET:CAPS"></a>MBIM_MESSAGE_COMMAND_TYPE_SET</p></td>
+<td class="enum_member_description">
+<p>Set command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

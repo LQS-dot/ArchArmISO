@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib64
+includedir=/usr/include
+
+Name: efisec
+Description: UEFI Security Features
+Version: 38
+Libs: -L${libdir} -lefivar -lefisec
+Libs.private: -ldl
+Cflags: -I${includedir}/efivar

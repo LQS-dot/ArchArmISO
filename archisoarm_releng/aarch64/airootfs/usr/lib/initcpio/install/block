@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-only
+
+build() {
+    local filter
+
+    map add_module sd_mod? sr_mod? usb_storage? mmc_block? firewire-sbp2? virtio_blk?
+
+    # pata, sata, scsi, nvme
+    for filter in 'scsi/.*ata' '/(block|scsi|fusion|nvme)/' 'ata/[ps]ata_' \
+        'ata/(ahci|pdc_adma|ata_piix|ata_generic)'; do
+        add_checked_modules "$filter"
+    done
+
+    # usb
+    add_checked_modules -f '(_cs|sl811_hcd|isp116x_hcd)' '/usb/host'
+    add_checked_modules '/drivers/usb/storage/'
+
+    # firewire
+    add_checked_modules '/drivers/firewire/'
+
+    # mmc
+    add_checked_modules '/(drivers/mmc|tifm_)'
+
+    # spi (mmc in spi mode)
+    add_checked_modules '/drivers/spi/'
+
+    # virtio
+    add_checked_modules 'virtio'
+
+    # nvdimm
+    add_checked_modules '/drivers/nvdimm/'
+
+    # Intel Volume Management Device
+    add_checked_modules 'vmd'
+}
+
+help() {
+    cat <<HELPEOF
+This hook loads the necessary modules for most block devices using pata, sata,
+scsi, firewire, usb, or mmc. Detection will take place at runtime. To minimize
+the modules in the image, add the autodetect hook too.
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

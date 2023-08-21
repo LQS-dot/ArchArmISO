@@ -1,0 +1,10 @@
+%FILES%
+usr/
+usr/include/
+usr/include/pcaudiolib/
+usr/include/pcaudiolib/audio.h
+usr/lib/
+usr/lib/libpcaudio.so
+usr/lib/libpcaudio.so.0
+usr/lib/libpcaudio.so.0.0.1
+

@@ -1,0 +1,12 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/tmux
+usr/share/
+usr/share/licenses/
+usr/share/licenses/tmux/
+usr/share/licenses/tmux/LICENSE
+usr/share/man/
+usr/share/man/man1/
+usr/share/man/man1/tmux.1.gz
+

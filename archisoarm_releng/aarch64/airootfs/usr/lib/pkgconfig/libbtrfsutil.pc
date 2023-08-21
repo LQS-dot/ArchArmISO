@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libbtrfsutil
+Description: libbtrfsutil library
+Version: 6.3.3
+URL: https://btrfs.readthedocs.io
+Cflags: -I${includedir}
+Libs: -L${libdir} -lbtrfsutil

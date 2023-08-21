@@ -1,0 +1,36 @@
+%NAME%
+darkhttpd
+
+%VERSION%
+1.14-1
+
+%BASE%
+darkhttpd
+
+%DESC%
+A small and secure static webserver
+
+%URL%
+https://unix4lyfe.org/darkhttpd/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1664894082
+
+%INSTALLDATE%
+1691208528
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+44581
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+pgp
+

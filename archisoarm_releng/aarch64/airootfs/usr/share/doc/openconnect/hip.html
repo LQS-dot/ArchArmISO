@@ -1,0 +1,188 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>OpenConnect VPN client.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="VPN client compatible with Cisco AnyConnect SSL VPN" />
+    <meta name="keywords" content="OpenConnect, AnyConnect, Cisco, VPN, SSLVPN, SSL VPN" />
+    <link href="./styles/main.css" rel="styleSheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+ </head>
+
+<body>
+   <div id="logo" align="right">
+     <img src="./images/openconnect.png" height="96px" alt="OpenConnect" />
+   </div>
+   <div id="main">
+
+
+	
+	
+	
+	<div id="menu1">
+
+	<span class="nonsel">
+<a href="index.html"><span>Home</span></a>
+</span>
+
+	<span class="sel">
+<a href="features.html"><span>Features</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="connecting.html"><span>Getting Started</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="mail.html"><span>Mailing List / Help</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="contribute.html"><span>Contribute</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="protocols.html"><span>Protocols</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="https://www.infradead.org/ocserv/"><span>VPN Server</span></a>
+</span>
+
+	<p>OpenConnect VPN client</p>
+
+	</div>
+
+	
+	<div id="menu2">
+
+        <span class="nonsel">
+<a href="features.html"><span>Feature list</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="nonroot.html"><span>Running as non-root user</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="gui.html"><span>GUI</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="charset.html"><span>Character sets</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="token.html"><span>One Time Passwords</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="pkcs11.html"><span>Smart Cards / PKCS#11</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="tpm.html"><span>Trusted Platform Module (TPM)</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="csd.html"><span>Cisco Secure Desktop (CSD)</span></a>
+</span>
+
+	<span class="nonsel">
+<a href="tncc.html"><span>Juniper Host Checker (TNCC)</span></a>
+</span>
+
+	<span class="sel">
+<a href="hip.html"><span>Host Integrity Protection (HIP)</span></a>
+</span>
+
+	</div>
+
+
+	     <div id="textbox">
+       <div id="text">
+	</div>
+
+
+<h1>PAN GlobalProtect HIP</h1>
+
+<p>The HIP ('Host Integrity Protection') mechanism is a security
+scanner for the <a href="globalprotect.html">PAN GlobalProtect</a>
+VPNs, in the same vein as <a href="csd.html">Cisco's CSD</a> and <a href="tncc.html">Juniper's Host Checker (tncc.jar)</a>.</p>
+
+<h2>How it works</h2>
+
+<p>It is somewhat <i>less</i> intrusive than CSD or TNCC, because it
+does not appear to work by downloading a trojan binary from the VPN
+server. Instead, it runs a HIP report generator (built-in as part of
+the official GlobalProtect VPN client software), which generates an
+"HIP report" XML file.</p>
+
+<p>HIP flow used in the official clients:</p>
+<ol>
+  <li>Client authenticates and fetches the tunnel configuration from the GlobalProtect gateway.</li>
+  <li>Client runs HIP report generator and computes MD5 digest of report.</li>
+  <li>Client checks whether a HIP report is required (<tt>/ssl-vpn/hipreportcheck.esp</tt>), including its MD5 digest and gateway-assigned IP address in the report.</li>
+  <li>Gateway responds whether or not a HIP report is required (normally, it doesn't require a new one if a report with the same MD5 digest and same IP address have been submitted recently).</li>
+  <li>Client uploads the complete HIP report to (<tt>/ssl-vpn/hipreport.esp</tt>).</li>
+  <li>Server confirms acceptance of HIP report with a success message.</li>
+</ol>
+
+<p>If all goes well, the client should have the expected level of
+access to resources on the network after these steps are
+complete. However, two things can go wrong:</p>
+
+<ul>
+  <li>Many GlobalProtect servers report that they require HIP reports
+  (#3 above), but don't actually enforce this requirement. (For this
+  reason, OpenConnect does not currently fail if a HIP report is
+  required but no HIP report script is provided.)</li>
+  <li>Many GlobalProtect servers will claim that the HIP report was
+  accepted successfully (#6 above) but silently fail to enable the
+  expected network access, presumably because some aspect of the
+  HIP report contents were not approved.</li>
+</ul>
+
+<h2>HIP support in OpenConnect</h2>
+
+<p>OpenConnect supports HIP report generation and submission by passing the <tt>--csd-wrapper=SCRIPT</tt> argument with a shell script to generate a HIP report in the format expected by the
+server. This shell script must output the HIP report to standard output and exit successfully (status code 0). The HIP script is called with the following command-line arguments:</p>
+
+<pre>
+   --cookie: a URL-encoded string, as output by openconnect
+             --authenticate --protocol=gp, which includes parameters
+             --from the /ssl-vpn/login.esp response
+
+   --client-ip{,v6}: IPv4/6 addresses allocated by the GlobalProtect
+                     VPN for this client (included in
+                     /ssl-vpn/getconfig.esp response)
+
+   --md5: The md5 digest to encode into this HIP report. All that
+          really matters is that the value in the HIP report
+          submission should match the value in the HIP report check.
+</pre>
+
+<h2>Generating/spoofing a HIP report</h2>
+
+<p>Two example scripts are included in the OpenConnect distribution,
+in the <tt>trojans/</tt> subdirectory: <tt>hipreport.sh</tt> (which
+reproduces the behavior of a GlobalProtect Windows client) and
+<tt>hipreport-android.sh</tt> (a report with minimal contents
+suitable for use on an Android device).</p>
+
+<p>Depending on how picky your GlobalProtect
+VPN is, it may be necessary to spoof or alter some of the parameters
+of the HIP report to match the output of one of the official
+clients. In order to capture the contents of the official Windows
+client's HIP reports, enable the highest logging level for the "PanGPS
+Service", and then sift through the giant <tt>PanGPS.log</tt> file
+(which should be in the same directory as the executables, normally
+<tt>c:\Program Files\PaloAlto Networks\GlobalProtect</tt>) to find
+the HIP report submission.</p>
+
+      </div>
+   </div>
+  </body>
+</html>

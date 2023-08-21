@@ -1,0 +1,2056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMSim: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch05.html" title="The SIM object">
+<link rel="prev" href="ch05.html" title="The SIM object">
+<link rel="next" href="MMSimPreferredNetwork.html" title="MMSimPreferredNetwork">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMSim.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMSim.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#MMSim.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch05.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MMSimPreferredNetwork.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMSim"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMSim.top_of_page"></a>MMSim</span></h2>
+<p>MMSim — The SIM interface</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMSim.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-path" title="mm_sim_get_path ()">mm_sim_get_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-path" title="mm_sim_dup_path ()">mm_sim_dup_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-active" title="mm_sim_get_active ()">mm_sim_get_active</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-identifier" title="mm_sim_get_identifier ()">mm_sim_get_identifier</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-identifier" title="mm_sim_dup_identifier ()">mm_sim_dup_identifier</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-imsi" title="mm_sim_get_imsi ()">mm_sim_get_imsi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-imsi" title="mm_sim_dup_imsi ()">mm_sim_dup_imsi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-eid" title="mm_sim_get_eid ()">mm_sim_get_eid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-eid" title="mm_sim_dup_eid ()">mm_sim_dup_eid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-operator-identifier" title="mm_sim_get_operator_identifier ()">mm_sim_get_operator_identifier</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-operator-identifier" title="mm_sim_dup_operator_identifier ()">mm_sim_dup_operator_identifier</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-operator-name" title="mm_sim_get_operator_name ()">mm_sim_get_operator_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-operator-name" title="mm_sim_dup_operator_name ()">mm_sim_dup_operator_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const  *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-emergency-numbers" title="mm_sim_get_emergency_numbers ()">mm_sim_get_emergency_numbers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-emergency-numbers" title="mm_sim_dup_emergency_numbers ()">mm_sim_dup_emergency_numbers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-preferred-networks" title="mm_sim_get_preferred_networks ()">mm_sim_get_preferred_networks</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-gid1" title="mm_sim_get_gid1 ()">mm_sim_get_gid1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-gid1" title="mm_sim_dup_gid1 ()">mm_sim_dup_gid1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-gid2" title="mm_sim_get_gid2 ()">mm_sim_get_gid2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-dup-gid2" title="mm_sim_dup_gid2 ()">mm_sim_dup_gid2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMSimType</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-sim-type" title="mm_sim_get_sim_type ()">mm_sim_get_sim_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMSimEsimStatus</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-esim-status" title="mm_sim_get_esim_status ()">mm_sim_get_esim_status</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">MMSimRemovability</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-get-removability" title="mm_sim_get_removability ()">mm_sim_get_removability</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-pin" title="mm_sim_send_pin ()">mm_sim_send_pin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-pin-finish" title="mm_sim_send_pin_finish ()">mm_sim_send_pin_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-pin-sync" title="mm_sim_send_pin_sync ()">mm_sim_send_pin_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-puk" title="mm_sim_send_puk ()">mm_sim_send_puk</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-puk-finish" title="mm_sim_send_puk_finish ()">mm_sim_send_puk_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-send-puk-sync" title="mm_sim_send_puk_sync ()">mm_sim_send_puk_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-enable-pin" title="mm_sim_enable_pin ()">mm_sim_enable_pin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-enable-pin-finish" title="mm_sim_enable_pin_finish ()">mm_sim_enable_pin_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-enable-pin-sync" title="mm_sim_enable_pin_sync ()">mm_sim_enable_pin_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-disable-pin" title="mm_sim_disable_pin ()">mm_sim_disable_pin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-disable-pin-finish" title="mm_sim_disable_pin_finish ()">mm_sim_disable_pin_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-disable-pin-sync" title="mm_sim_disable_pin_sync ()">mm_sim_disable_pin_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-change-pin" title="mm_sim_change_pin ()">mm_sim_change_pin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-change-pin-finish" title="mm_sim_change_pin_finish ()">mm_sim_change_pin_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-change-pin-sync" title="mm_sim_change_pin_sync ()">mm_sim_change_pin_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks" title="mm_sim_set_preferred_networks ()">mm_sim_set_preferred_networks</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks-finish" title="mm_sim_set_preferred_networks_finish ()">mm_sim_set_preferred_networks_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks-sync" title="mm_sim_set_preferred_networks_sync ()">mm_sim_set_preferred_networks_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMSim.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMSim.html#MMSim-struct" title="struct MMSim">MMSim</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMSim.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="../gio/GDBusProxy.html#GDBusProxy-struct">GDBusProxy</a>
+        <span class="lineart">╰──</span> <a class="link" href="MmGdbusSimProxy.html" title="MmGdbusSimProxy">MmGdbusSimProxy</a>
+            <span class="lineart">╰──</span> MMSim
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMSim.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MMSim implements
+ <a href="../gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a>,  <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>,  <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a> and  <a class="link" href="MmGdbusSim.html" title="MmGdbusSim">MmGdbusSim</a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMSim.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> is an object providing access to the methods, signals and
+properties of the SIM interface.</p>
+<p>When the SIM is exposed and available in the bus, it is ensured that at
+least this interface is also available.</p>
+</div>
+<div class="refsect1">
+<a name="MMSim.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-sim-get-path"></a><h3>mm_sim_get_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_path (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the DBus path of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-path"></a><h3>mm_sim_dup_path ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_path (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the DBus path of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-path.returns"></a><h4>Returns</h4>
+<p>The DBus path of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object. The returned
+value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-active"></a><h3>mm_sim_get_active ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_get_active (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Checks whether the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> is currently active.</p>
+<div class="refsect3">
+<a name="mm-sim-get-active.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-active.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the SIM is active, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-identifier"></a><h3>mm_sim_get_identifier ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_identifier (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the unique SIM identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-identifier" title="mm_sim_dup_identifier ()"><code class="function">mm_sim_dup_identifier()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-identifier.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-identifier.returns"></a><h4>Returns</h4>
+<p>The unique identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it couldn't be retrieved. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-identifier"></a><h3>mm_sim_dup_identifier ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_identifier (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the unique SIM identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-identifier.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-identifier.returns"></a><h4>Returns</h4>
+<p>The unique identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it couldn't be retrieved. The returned value should be freed with
+<a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-imsi"></a><h3>mm_sim_get_imsi ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_imsi (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the International Mobile Subscriber Identity (IMSI) of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>
+object.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-imsi" title="mm_sim_dup_imsi ()"><code class="function">mm_sim_dup_imsi()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-imsi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-imsi.returns"></a><h4>Returns</h4>
+<p>The IMSI of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it
+couldn't be retrieved. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-imsi"></a><h3>mm_sim_dup_imsi ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_imsi (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the International Mobile Subscriber Identity (IMSI) of the
+<a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-imsi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-imsi.returns"></a><h4>Returns</h4>
+<p>The IMSI of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it
+couldn't be retrieved. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-eid"></a><h3>mm_sim_get_eid ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_eid (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the Embedded UICC ID (or EID) of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-eid" title="mm_sim_dup_eid ()"><code class="function">mm_sim_dup_eid()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-eid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-eid.returns"></a><h4>Returns</h4>
+<p>The EID of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it
+couldn't be retrieved. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-eid"></a><h3>mm_sim_dup_eid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_eid (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the Embedded UICC ID (EID) of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-eid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-eid.returns"></a><h4>Returns</h4>
+<p>The EID of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it
+couldn't be retrieved. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-16.html#api-index-1.16">1.16</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-operator-identifier"></a><h3>mm_sim_get_operator_identifier ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_operator_identifier (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the Operator Identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-operator-identifier" title="mm_sim_dup_operator_identifier ()"><code class="function">mm_sim_dup_operator_identifier()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-operator-identifier.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-operator-identifier.returns"></a><h4>Returns</h4>
+<p>The Operator Identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it couldn't be retrieved. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-operator-identifier"></a><h3>mm_sim_dup_operator_identifier ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_operator_identifier (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the Operator Identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-operator-identifier.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-operator-identifier.returns"></a><h4>Returns</h4>
+<p>The Operator Identifier of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it couldn't be retrieved. The returned value should be freed with
+<a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-operator-name"></a><h3>mm_sim_get_operator_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_get_operator_name (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the Operator Name of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-operator-name" title="mm_sim_dup_operator_name ()"><code class="function">mm_sim_dup_operator_name()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-operator-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-operator-name.returns"></a><h4>Returns</h4>
+<p>The Operator Name of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+it couldn't be retrieved. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-operator-name"></a><h3>mm_sim_dup_operator_name ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_sim_dup_operator_name (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the Operator Name of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-operator-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-operator-name.returns"></a><h4>Returns</h4>
+<p>The Operator Name of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+it couldn't be retrieved. The returned value should be freed with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-emergency-numbers"></a><h3>mm_sim_get_emergency_numbers ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const  *
+mm_sim_get_emergency_numbers (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the list of emergency call numbers programmed in the SIM card.</p>
+<div class="warning">The returned value is only valid until the property changes so it is
+only safe to use this function on the thread where <em class="parameter"><code>self</code></em> was constructed. Use
+<a class="link" href="MMSim.html#mm-sim-dup-emergency-numbers" title="mm_sim_dup_emergency_numbers ()"><code class="function">mm_sim_dup_emergency_numbers()</code></a> if on another thread.</div>
+<div class="refsect3">
+<a name="mm-sim-get-emergency-numbers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-emergency-numbers.returns"></a><h4>Returns</h4>
+<p>The emergency numbers, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available.
+Do not free the returned value, it belongs to <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-emergency-numbers"></a><h3>mm_sim_dup_emergency_numbers ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+mm_sim_dup_emergency_numbers (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets a copy of the list of emergency call numbers programmed in the SIM card.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-emergency-numbers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-emergency-numbers.returns"></a><h4>Returns</h4>
+<p>The emergency numbers, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none available.
+The returned value should be freed with <a href="../glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-12.html#api-index-1.12">1.12</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-preferred-networks"></a><h3>mm_sim_get_preferred_networks ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+mm_sim_get_preferred_networks (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the list of <a class="link" href="MMSimPreferredNetwork.html" title="MMSimPreferredNetwork"><span class="type">MMSimPreferredNetwork</span></a> objects exposed by this
+<a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-get-preferred-networks.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-preferred-networks.returns"></a><h4>Returns</h4>
+<p>a list of
+<a class="link" href="MMSimPreferredNetwork.html" title="MMSimPreferredNetwork"><span class="type">MMSimPreferredNetwork</span></a> objects, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a>. The returned value should
+be freed with <a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> using <a class="link" href="MMSimPreferredNetwork.html#mm-sim-preferred-network-free" title="mm_sim_preferred_network_free ()"><code class="function">mm_sim_preferred_network_free()</code></a> as <a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a>
+function. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.SimPreferredNetwork]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-gid1"></a><h3>mm_sim_get_gid1 ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mm_sim_get_gid1 (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *data_len</code></em>);</pre>
+<p>Gets the Group Identifier Level 1 of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-get-gid1.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>Size of the output data, if any given. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-gid1.returns"></a><h4>Returns</h4>
+<p>The
+GID1 data, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_len][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-gid1"></a><h3>mm_sim_dup_gid1 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mm_sim_dup_gid1 (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *data_len</code></em>);</pre>
+<p>Gets the Group Identifier Level 1 of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-gid1.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>Size of the output data, if any given. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-gid1.returns"></a><h4>Returns</h4>
+<p>The
+GID1 data, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_len][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-gid2"></a><h3>mm_sim_get_gid2 ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mm_sim_get_gid2 (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *data_len</code></em>);</pre>
+<p>Gets the Group Identifier Level 2 of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-get-gid2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>Size of the output data, if any given. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-gid2.returns"></a><h4>Returns</h4>
+<p>The
+GID2 data, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_len][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-dup-gid2"></a><h3>mm_sim_dup_gid2 ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a> *
+mm_sim_dup_gid2 (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *data_len</code></em>);</pre>
+<p>Gets the Group Identifier Level 2 of the <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> object.</p>
+<div class="refsect3">
+<a name="mm-sim-dup-gid2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>Size of the output data, if any given. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-dup-gid2.returns"></a><h4>Returns</h4>
+<p>The
+GID2 data, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=data_len][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-sim-type"></a><h3>mm_sim_get_sim_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMSimType</span>
+mm_sim_get_sim_type (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the SIM type.</p>
+<div class="refsect3">
+<a name="mm-sim-get-sim-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-sim-type.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMSimType</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-esim-status"></a><h3>mm_sim_get_esim_status ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMSimEsimStatus</span>
+mm_sim_get_esim_status (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets the eSIM status.</p>
+<p>Only applicable if the SIM type is <code class="literal">MM_SIM_TYPE_ESIM</code>.</p>
+<div class="refsect3">
+<a name="mm-sim-get-esim-status.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-esim-status.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMSimEsimStatus</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-get-removability"></a><h3>mm_sim_get_removability ()</h3>
+<pre class="programlisting"><span class="returnvalue">MMSimRemovability</span>
+mm_sim_get_removability (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>);</pre>
+<p>Gets whether the SIM is removable or not.</p>
+<div class="refsect3">
+<a name="mm-sim-get-removability.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-get-removability.returns"></a><h4>Returns</h4>
+<p> a <span class="type">MMSimRemovability</span>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-20.html#api-index-1.20">1.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-pin"></a><h3>mm_sim_send_pin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_send_pin (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                 <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously sends the PIN code to the SIM card.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-send-pin-finish" title="mm_sim_send_pin_finish ()"><code class="function">mm_sim_send_pin_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMSim.html#mm-sim-send-pin-sync" title="mm_sim_send_pin_sync ()"><code class="function">mm_sim_send_pin_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-sim-send-pin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-pin-finish"></a><h3>mm_sim_send_pin_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_send_pin_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                        <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-send-pin" title="mm_sim_send_pin ()"><code class="function">mm_sim_send_pin()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-send-pin-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-send-pin" title="mm_sim_send_pin ()"><code class="function">mm_sim_send_pin()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-send-pin-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-pin-sync"></a><h3>mm_sim_send_pin_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_send_pin_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                      <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously sends the PIN to the SIM card.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMSim.html#mm-sim-send-pin" title="mm_sim_send_pin ()"><code class="function">mm_sim_send_pin()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-sim-send-pin-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-send-pin-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-puk"></a><h3>mm_sim_send_puk ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_send_puk (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *puk</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                 <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously sends the PUK code to the SIM card.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-send-puk-finish" title="mm_sim_send_puk_finish ()"><code class="function">mm_sim_send_puk_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMSim.html#mm-sim-send-puk-sync" title="mm_sim_send_puk_sync ()"><code class="function">mm_sim_send_puk_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-sim-send-puk.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>puk</p></td>
+<td class="parameter_description"><p>The PUK code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-puk-finish"></a><h3>mm_sim_send_puk_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_send_puk_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                        <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-send-puk" title="mm_sim_send_puk ()"><code class="function">mm_sim_send_puk()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-send-puk-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-send-puk" title="mm_sim_send_puk ()"><code class="function">mm_sim_send_puk()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-send-puk-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-send-puk-sync"></a><h3>mm_sim_send_puk_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_send_puk_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *puk</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                      <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously sends the PUK to the SIM card.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMSim.html#mm-sim-send-puk" title="mm_sim_send_puk ()"><code class="function">mm_sim_send_puk()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-sim-send-puk-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>puk</p></td>
+<td class="parameter_description"><p>The PUK code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-send-puk-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-enable-pin"></a><h3>mm_sim_enable_pin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_enable_pin (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                   <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously enables requesting the PIN code in the SIM card.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-enable-pin-finish" title="mm_sim_enable_pin_finish ()"><code class="function">mm_sim_enable_pin_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMSim.html#mm-sim-enable-pin-sync" title="mm_sim_enable_pin_sync ()"><code class="function">mm_sim_enable_pin_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-sim-enable-pin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-enable-pin-finish"></a><h3>mm_sim_enable_pin_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_enable_pin_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-enable-pin" title="mm_sim_enable_pin ()"><code class="function">mm_sim_enable_pin()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-enable-pin-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-enable-pin" title="mm_sim_enable_pin ()"><code class="function">mm_sim_enable_pin()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-enable-pin-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-enable-pin-sync"></a><h3>mm_sim_enable_pin_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_enable_pin_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                        <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously enables requesting the PIN code in the SIM card.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMSim.html#mm-sim-enable-pin" title="mm_sim_enable_pin ()"><code class="function">mm_sim_enable_pin()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-sim-enable-pin-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-enable-pin-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-disable-pin"></a><h3>mm_sim_disable_pin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_disable_pin (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously disables requesting the PIN code in the SIM card.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-disable-pin-finish" title="mm_sim_disable_pin_finish ()"><code class="function">mm_sim_disable_pin_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMSim.html#mm-sim-disable-pin-sync" title="mm_sim_disable_pin_sync ()"><code class="function">mm_sim_disable_pin_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-sim-disable-pin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-disable-pin-finish"></a><h3>mm_sim_disable_pin_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_disable_pin_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                           <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-disable-pin" title="mm_sim_disable_pin ()"><code class="function">mm_sim_disable_pin()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-disable-pin-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-disable-pin" title="mm_sim_disable_pin ()"><code class="function">mm_sim_disable_pin()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-disable-pin-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-disable-pin-sync"></a><h3>mm_sim_disable_pin_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_disable_pin_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pin</code></em>,
+                         <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously disables requesting the PIN code in the SIM card.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMSim.html#mm-sim-disable-pin" title="mm_sim_disable_pin ()"><code class="function">mm_sim_disable_pin()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-sim-disable-pin-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pin</p></td>
+<td class="parameter_description"><p>The PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-disable-pin-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-change-pin"></a><h3>mm_sim_change_pin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_change_pin (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *old_pin</code></em>,
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *new_pin</code></em>,
+                   <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously changes the PIN code in the SIM card.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-change-pin-finish" title="mm_sim_change_pin_finish ()"><code class="function">mm_sim_change_pin_finish()</code></a> to get the result of the operation.</p>
+<p>See <a class="link" href="MMSim.html#mm-sim-change-pin-sync" title="mm_sim_change_pin_sync ()"><code class="function">mm_sim_change_pin_sync()</code></a> for the synchronous, blocking version of this
+method.</p>
+<div class="refsect3">
+<a name="mm-sim-change-pin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>old_pin</p></td>
+<td class="parameter_description"><p>The current PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_pin</p></td>
+<td class="parameter_description"><p>The new PIN code to be set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-change-pin-finish"></a><h3>mm_sim_change_pin_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_change_pin_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-change-pin" title="mm_sim_change_pin ()"><code class="function">mm_sim_change_pin()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-change-pin-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-change-pin" title="mm_sim_change_pin ()"><code class="function">mm_sim_change_pin()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-change-pin-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-change-pin-sync"></a><h3>mm_sim_change_pin_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_change_pin_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *old_pin</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *new_pin</code></em>,
+                        <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously changes the PIN code in the SIM card.</p>
+<p>The calling thread is blocked until a reply is received.
+See <a class="link" href="MMSim.html#mm-sim-change-pin" title="mm_sim_change_pin ()"><code class="function">mm_sim_change_pin()</code></a> for the asynchronous version of this method.</p>
+<div class="refsect3">
+<a name="mm-sim-change-pin-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>old_pin</p></td>
+<td class="parameter_description"><p>The current PIN code.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_pin</p></td>
+<td class="parameter_description"><p>The new PIN code to be set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-change-pin-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-set-preferred-networks"></a><h3>mm_sim_set_preferred_networks ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mm_sim_set_preferred_networks (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *preferred_networks</code></em>,
+                               <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                               <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously sets the preferred network list of this <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks-finish" title="mm_sim_set_preferred_networks_finish ()"><code class="function">mm_sim_set_preferred_networks_finish()</code></a> to get the result of
+the operation.</p>
+<div class="refsect3">
+<a name="mm-sim-set-preferred-networks.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>preferred_networks</p></td>
+<td class="parameter_description"><p>A list of <a class="link" href="MMSimPreferredNetwork.html" title="MMSimPreferredNetwork"><span class="type">MMSimPreferredNetwork</span></a> objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.SimPreferredNetwork]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied or
+<a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-set-preferred-networks-finish"></a><h3>mm_sim_set_preferred_networks_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_set_preferred_networks_finish (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                                      <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MMSim.html#mm-sim-set-preferred-networks" title="mm_sim_set_preferred_networks ()"><code class="function">mm_sim_set_preferred_networks()</code></a>.</p>
+<div class="refsect3">
+<a name="mm-sim-set-preferred-networks-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>The <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks" title="mm_sim_set_preferred_networks ()"><code class="function">mm_sim_set_preferred_networks()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-sim-set-preferred-networks-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation was successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-sim-set-preferred-networks-sync"></a><h3>mm_sim_set_preferred_networks_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mm_sim_set_preferred_networks_sync (<em class="parameter"><code><a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> *self</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *preferred_networks</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously sets the preferred network list of this <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p>
+<p>The calling thread is blocked until a reply is received. See
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks" title="mm_sim_set_preferred_networks ()"><code class="function">mm_sim_set_preferred_networks()</code></a> for the asynchronous
+version of this method.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<a href="../glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>of the thread you are calling this method from. You can then call
+<a class="link" href="MMSim.html#mm-sim-set-preferred-networks-finish" title="mm_sim_set_preferred_networks_finish ()"><code class="function">mm_sim_set_preferred_networks_finish()</code></a> to get the result of
+the operation.</p>
+<div class="refsect3">
+<a name="mm-sim-set-preferred-networks-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>preferred_networks</p></td>
+<td class="parameter_description"><p>A list of <a class="link" href="MMSimPreferredNetwork.html" title="MMSimPreferredNetwork"><span class="type">MMSimPreferredNetwork</span></a> objects. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ModemManager.SimPreferredNetwork]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-18.html#api-index-1.18">1.18</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMSim.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMSim-struct"></a><h3>struct MMSim</h3>
+<pre class="programlisting">struct MMSim;</pre>
+<p>The <a class="link" href="MMSim.html" title="MMSim"><span class="type">MMSim</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

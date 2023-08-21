@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Create PSKC data: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-tutorial-library.html" title="Library libpskc">
+<link rel="prev" href="pskc-tutorial-libpskc-verify.html" title="Verify signed PSKC data">
+<link rel="next" href="pskc-tutorial-pskctool.html" title="Command line pskctool">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-tutorial-library.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pskc-tutorial-libpskc-verify.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pskc-tutorial-pskctool.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="pskc-tutorial-libpskc-create"></a>Create PSKC data</h2></div></div></div>
+<p>
+	  To create PSKC data you should first get a handle to a
+	  container using <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()">pskc_init</a>.
+	  Add one or more keypackages to the container
+	  using <a class="link" href="libpskc-container.html#pskc-add-keypackage" title="pskc_add_keypackage ()">
+	  pskc_add_keypackage</a>.  For each keypackage, set the
+	  relevant values you want using the "pskc_set_*" functions,
+	  for example <a class="link" href="libpskc-keypackage.html#pskc-set-device-serialno" title="pskc_set_device_serialno ()">
+	  pskc_set_device_serialno</a>.
+	</p>
+<p>
+	  The XML output is created as usual
+	  with <a class="link" href="libpskc-container.html#pskc-build-xml" title="pskc_build_xml ()">pskc_build_xml</a>.
+	</p>
+<p>
+	  Here follows an example that would generate PSKC data that
+	  could be used to personalize an imaginary HOTP token.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc ppc">#include &lt;stdio.h&gt;</span>
+<span class="gtkdoc ppc">#include &lt;pskc/pskc.h&gt;</span>
+
+<span class="comment">/*</span>
+<span class="comment"> * $ cc -o pskccreate pskccreate.c $(pkg-config --cflags --libs libpskc)</span>
+<span class="comment"> * $ ./pskccreate</span>
+<span class="comment"> */</span>
+
+<span class="gtkdoc ppc">#define PSKC_CHECK_RC					   \</span>
+<span class="gtkdoc ppc">  if (rc != PSKC_OK) {					   \</span>
+<span class="gtkdoc ppc">    printf (</span><span class="gtkdoc pps">&quot;%s (%d): %s</span><span class="gtkdoc esc">\n</span><span class="gtkdoc pps">&quot;</span><span class="gtkdoc ppc">, pskc_strerror_name (rc),	   \</span>
+<span class="gtkdoc ppc">	    rc, pskc_strerror (rc));			   \</span>
+<span class="gtkdoc ppc">    return 1;						   \</span>
+<span class="gtkdoc ppc">  }</span>
+
+<span class="gtkdoc kwb">int</span>
+<span class="function">main</span> <span class="gtkdoc opt">(</span><span class="gtkdoc kwb">int</span> argc<span class="gtkdoc opt">,</span> <span class="gtkdoc kwb">const char</span> <span class="gtkdoc opt">*</span>argv<span class="gtkdoc opt">[])</span>
+<span class="gtkdoc opt">{</span>
+  <span class="gtkdoc kwb">size_t</span> len<span class="gtkdoc opt">;</span>
+  pskc_t <span class="gtkdoc opt">*</span>container<span class="gtkdoc opt">;</span>
+  pskc_key_t <span class="gtkdoc opt">*</span>keypackage<span class="gtkdoc opt">;</span>
+  <span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>out<span class="gtkdoc opt">;</span>
+  <span class="gtkdoc kwb">int</span> rc<span class="gtkdoc opt">;</span>
+
+  rc <span class="gtkdoc opt">=</span> <span class="function"><a href="libpskc-global.html#pskc-global-init">pskc_global_init</a></span> <span class="gtkdoc opt">();</span>
+  PSKC_CHECK_RC<span class="gtkdoc opt">;</span>
+  rc <span class="gtkdoc opt">=</span> <span class="function"><a href="libpskc-container.html#pskc-init">pskc_init</a></span> <span class="gtkdoc opt">(&amp;</span>container<span class="gtkdoc opt">);</span>
+  PSKC_CHECK_RC<span class="gtkdoc opt">;</span>
+
+  rc <span class="gtkdoc opt">=</span> <span class="function"><a href="libpskc-container.html#pskc-add-keypackage">pskc_add_keypackage</a></span> <span class="gtkdoc opt">(</span>container<span class="gtkdoc opt">, &amp;</span>keypackage<span class="gtkdoc opt">);</span>
+  PSKC_CHECK_RC<span class="gtkdoc opt">;</span>
+
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-device-manufacturer">pskc_set_device_manufacturer</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="string">&quot;Acme&quot;</span><span class="gtkdoc opt">);</span>
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-device-serialno">pskc_set_device_serialno</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="string">&quot;42&quot;</span><span class="gtkdoc opt">);</span>
+
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-id">pskc_set_key_id</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="string">&quot;4711&quot;</span><span class="gtkdoc opt">);</span>
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-algorithm">pskc_set_key_algorithm</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span>
+			  <span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">);</span>
+
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-algparm-resp-encoding">pskc_set_key_algparm_resp_encoding</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> PSKC_VALUEFORMAT_DECIMAL<span class="gtkdoc opt">);</span>
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-algparm-resp-length">pskc_set_key_algparm_resp_length</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="number">8</span><span class="gtkdoc opt">);</span>
+
+  <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-data-counter">pskc_set_key_data_counter</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="number">42</span><span class="gtkdoc opt">);</span>
+
+  rc <span class="gtkdoc opt">=</span> <span class="function"><a href="libpskc-keypackage.html#pskc-set-key-data-b64secret">pskc_set_key_data_b64secret</a></span> <span class="gtkdoc opt">(</span>keypackage<span class="gtkdoc opt">,</span> <span class="string">&quot;Zm9v&quot;</span><span class="gtkdoc opt">);</span>
+  PSKC_CHECK_RC<span class="gtkdoc opt">;</span>
+
+  rc <span class="gtkdoc opt">=</span> <span class="function"><a href="libpskc-container.html#pskc-build-xml">pskc_build_xml</a></span> <span class="gtkdoc opt">(</span>container<span class="gtkdoc opt">, &amp;</span>out<span class="gtkdoc opt">, &amp;</span>len<span class="gtkdoc opt">);</span>
+  PSKC_CHECK_RC<span class="gtkdoc opt">;</span>
+  <span class="function">fwrite</span> <span class="gtkdoc opt">(</span>out<span class="gtkdoc opt">,</span> <span class="number">1</span><span class="gtkdoc opt">,</span> len<span class="gtkdoc opt">,</span> stdout<span class="gtkdoc opt">);</span>
+  <span class="function"><a href="libpskc-global.html#pskc-free">pskc_free</a></span> <span class="gtkdoc opt">(</span>out<span class="gtkdoc opt">);</span>
+
+  <span class="function"><a href="libpskc-container.html#pskc-done">pskc_done</a></span> <span class="gtkdoc opt">(</span>container<span class="gtkdoc opt">);</span>
+  <span class="function"><a href="libpskc-global.html#pskc-global-done">pskc_global_done</a></span> <span class="gtkdoc opt">();</span>
+
+  <span class="keyword">return</span> <span class="number">0</span><span class="gtkdoc opt">;</span>
+<span class="gtkdoc opt">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  You would compile and use the example like this.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5</pre></td>
+        <td class="listing_code"><pre class="programlisting">jas&#64;latte<span class="gtkdoc opt">:~</span>$ cc <span class="gtkdoc opt">-</span>o pskccreate pskccreate<span class="gtkdoc opt">.</span>c $<span class="gtkdoc opt">(</span>pkg<span class="gtkdoc opt">-</span>config <span class="gtkdoc opt">--</span>cflags <span class="gtkdoc opt">--</span>libs libpskc<span class="gtkdoc opt">)</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$ <span class="gtkdoc opt">./</span>pskccreate
+<span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span> Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span><span class="gtkdoc opt">&gt;&lt;</span>KeyPackage<span class="gtkdoc opt">&gt;&lt;</span>DeviceInfo<span class="gtkdoc opt">&gt;&lt;</span>Manufacturer<span class="gtkdoc opt">&gt;</span>Acme<span class="gtkdoc opt">&lt;/</span>Manufacturer<span class="gtkdoc opt">&gt;&lt;</span>SerialNo<span class="gtkdoc opt">&gt;</span><span class="number">42</span><span class="gtkdoc opt">&lt;/</span>SerialNo<span class="gtkdoc opt">&gt;&lt;/</span>DeviceInfo<span class="gtkdoc opt">&gt;&lt;</span>Key Id<span class="gtkdoc opt">=</span><span class="string">&quot;4711&quot;</span> Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">&gt;&lt;</span>AlgorithmParameters<span class="gtkdoc opt">&gt;&lt;</span>ResponseFormat Encoding<span class="gtkdoc opt">=</span><span class="string">&quot;DECIMAL&quot;</span> Length<span class="gtkdoc opt">=</span><span class="string">&quot;8&quot;</span><span class="gtkdoc opt">/&gt;&lt;/</span>AlgorithmParameters<span class="gtkdoc opt">&gt;&lt;</span>Data<span class="gtkdoc opt">&gt;&lt;</span>Secret<span class="gtkdoc opt">&gt;&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span>Zm9v<span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;&lt;/</span>Secret<span class="gtkdoc opt">&gt;&lt;</span>Counter<span class="gtkdoc opt">&gt;&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span><span class="number">42</span><span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;&lt;/</span>Counter<span class="gtkdoc opt">&gt;&lt;/</span>Data<span class="gtkdoc opt">&gt;&lt;/</span>Key<span class="gtkdoc opt">&gt;&lt;/</span>KeyPackage<span class="gtkdoc opt">&gt;&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span>
+jas&#64;latte<span class="gtkdoc opt">:~</span>$</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  For more background and information what each field mean and
+	  which ones are required, you should read the PSKC
+	  specification (RFC 6030).  You may pretty print the XML
+	  generate using "xmllint --pretty 1" which may simplify
+	  reading it.  You may use "pskctool --info" to print a human
+	  summary of some PSKC data and validate the XML syntax using
+	  "pskctool --validate".
+	</p>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

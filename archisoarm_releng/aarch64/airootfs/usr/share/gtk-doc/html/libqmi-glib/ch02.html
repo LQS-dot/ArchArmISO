@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Device Management Service (DMS): libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="prev" href="libqmi-glib-Common-utilities.html" title="Common utilities">
+<link rel="next" href="QmiClientDms.html" title="QmiClientDms">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="libqmi-glib-Common-utilities.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiClientDms.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.3"></a>Device Management Service (DMS)</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="QmiClientDms.html">QmiClientDms</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the DMS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-enumerations-and-flags.html">DMS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the DMS service.</span>
+</dt>
+<dt><span class="section"><a href="ch02.html#id-1.3.4">DMS Indications</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Event-Report-indication.html">DMS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the DMS Event Report indication.</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch02s02.html">DMS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Reset-response.html">DMS Reset response</a></span><span class="refpurpose"> — Methods to manage the DMS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Event-Report-response.html">DMS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Capabilities-response.html">DMS Get Capabilities response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Capabilities response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Manufacturer-response.html">DMS Get Manufacturer response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Manufacturer response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Model-response.html">DMS Get Model response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Model response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Revision-response.html">DMS Get Revision response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Revision response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-MSISDN-response.html">DMS Get MSISDN response</a></span><span class="refpurpose"> — Methods to manage the DMS Get MSISDN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-IDs-response.html">DMS Get IDs response</a></span><span class="refpurpose"> — Methods to manage the DMS Get IDs response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Power-State-response.html">DMS Get Power State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Power State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Set-PIN-Protection-response.html">DMS UIM Set PIN Protection response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Set PIN Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Verify-PIN-response.html">DMS UIM Verify PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Verify PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Unblock-PIN-response.html">DMS UIM Unblock PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Unblock PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Change-PIN-response.html">DMS UIM Change PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Change PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-PIN-Status-response.html">DMS UIM Get PIN Status response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get PIN Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Hardware-Revision-response.html">DMS Get Hardware Revision response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Hardware Revision response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Operating-Mode-response.html">DMS Get Operating Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Operating Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Operating-Mode-response.html">DMS Set Operating Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Operating Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Time-response.html">DMS Get Time response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Time response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-PRL-Version-response.html">DMS Get PRL Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Get PRL Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Activation-State-response.html">DMS Get Activation State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Activation State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Activate-Automatic-response.html">DMS Activate Automatic response</a></span><span class="refpurpose"> — Methods to manage the DMS Activate Automatic response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Activate-Manual-response.html">DMS Activate Manual response</a></span><span class="refpurpose"> — Methods to manage the DMS Activate Manual response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-User-Lock-State-response.html">DMS Get User Lock State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get User Lock State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-User-Lock-State-response.html">DMS Set User Lock State response</a></span><span class="refpurpose"> — Methods to manage the DMS Set User Lock State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-User-Lock-Code-response.html">DMS Set User Lock Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Set User Lock Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Read-User-Data-response.html">DMS Read User Data response</a></span><span class="refpurpose"> — Methods to manage the DMS Read User Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Write-User-Data-response.html">DMS Write User Data response</a></span><span class="refpurpose"> — Methods to manage the DMS Write User Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Read-ERI-File-response.html">DMS Read ERI File response</a></span><span class="refpurpose"> — Methods to manage the DMS Read ERI File response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Restore-Factory-Defaults-response.html">DMS Restore Factory Defaults response</a></span><span class="refpurpose"> — Methods to manage the DMS Restore Factory Defaults response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Validate-Service-Programming-Code-response.html">DMS Validate Service Programming Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Validate Service Programming Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-ICCID-response.html">DMS UIM Get ICCID response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get ICCID response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Firmware-ID-response.html">DMS Set Firmware ID response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Firmware ID response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-CK-Status-response.html">DMS UIM Get CK Status response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get CK Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Set-CK-Protection-response.html">DMS UIM Set CK Protection response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Set CK Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Unblock-CK-response.html">DMS UIM Unblock CK response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Unblock CK response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-IMSI-response.html">DMS UIM Get IMSI response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get IMSI response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-State-response.html">DMS UIM Get State response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Band-Capabilities-response.html">DMS Get Band Capabilities response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Band Capabilities response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Factory-SKU-response.html">DMS Get Factory SKU response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Factory SKU response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Firmware-Preference-response.html">DMS Get Firmware Preference response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Firmware Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Firmware-Preference-response.html">DMS Set Firmware Preference response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Firmware Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-List-Stored-Images-response.html">DMS List Stored Images response</a></span><span class="refpurpose"> — Methods to manage the DMS List Stored Images response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Delete-Stored-Image-response.html">DMS Delete Stored Image response</a></span><span class="refpurpose"> — Methods to manage the DMS Delete Stored Image response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Time-response.html">DMS Set Time response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Time response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Stored-Image-Info-response.html">DMS Get Stored Image Info response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Stored Image Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Alt-Net-Config-response.html">DMS Get Alt Net Config response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Alt Net Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Alt-Net-Config-response.html">DMS Set Alt Net Config response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Alt Net Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Boot-Image-Download-Mode-response.html">DMS Get Boot Image Download Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Boot Image Download Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Boot-Image-Download-Mode-response.html">DMS Set Boot Image Download Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Boot Image Download Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Software-Version-response.html">DMS Get Software Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Software Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Service-Programming-Code-response.html">DMS Set Service Programming Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Service Programming Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-MAC-Address-response.html">DMS Get MAC Address response</a></span><span class="refpurpose"> — Methods to manage the DMS Get MAC Address response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-HP-Change-Device-Mode-response.html">DMS HP Change Device Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS HP Change Device Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Get-Current-Firmware-response.html">DMS Swi Get Current Firmware response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Get Current Firmware response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Get-USB-Composition-response.html">DMS Swi Get USB Composition response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Get USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Set-USB-Composition-response.html">DMS Swi Set USB Composition response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Set USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Get-Firmware-Version-response.html">DMS Foxconn Get Firmware Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Get Firmware Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-FCC-Authentication-response.html">DMS Set FCC Authentication response</a></span><span class="refpurpose"> — Methods to manage the DMS Set FCC Authentication response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Change-Device-Mode-response.html">DMS Foxconn Change Device Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Change Device Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Set-FCC-Authentication-response.html">DMS Foxconn Set FCC Authentication response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Set FCC Authentication response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Set-FCC-Authentication-v2-response.html">DMS Foxconn Set FCC Authentication v2 response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Set FCC Authentication v2 response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Supported-Messages-response.html">DMS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Supported Messages response.</span>
+</dt>
+</dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.3.4"></a>DMS Indications</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

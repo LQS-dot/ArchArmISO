@@ -1,0 +1,15 @@
+# libnftables pkg-config file
+
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libnftables
+Description: Netfilter nf_tables user library
+URL: http://netfilter.org/projects/nftables/
+Version: 1.0.7
+Requires:
+Conflicts:
+Libs: -L${libdir} -lnftables
+Cflags: -I${includedir}

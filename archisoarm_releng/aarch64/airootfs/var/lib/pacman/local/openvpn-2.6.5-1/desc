@@ -1,0 +1,49 @@
+%NAME%
+openvpn
+
+%VERSION%
+2.6.5-1
+
+%BASE%
+openvpn
+
+%DESC%
+An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+
+%URL%
+https://openvpn.net/index.php/open-source.html
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1686750331
+
+%INSTALLDATE%
+1691208577
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+1866872
+
+%LICENSE%
+custom
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+openssl
+lzo
+lz4
+systemd-libs
+libsystemd.so=0-64
+pkcs11-helper
+libpkcs11-helper.so=1-64
+
+%OPTDEPENDS%
+easy-rsa: easy CA and certificate handling
+pam: authenticate via PAM
+

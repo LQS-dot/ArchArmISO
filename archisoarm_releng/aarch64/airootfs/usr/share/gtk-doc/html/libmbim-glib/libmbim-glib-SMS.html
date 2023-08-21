@@ -1,0 +1,1145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sms service: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch02.html" title="Generic Services">
+<link rel="prev" href="libmbim-glib-Basic-Connect.html" title="Basic Connect service">
+<link rel="next" href="libmbim-glib-USSD.html" title="Ussd service">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libmbim-glib-SMS.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libmbim-glib-Basic-Connect.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libmbim-glib-USSD.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libmbim-glib-SMS"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libmbim-glib-SMS.top_of_page"></a>Sms service</span></h2>
+<p>Sms service — Support for the Sms service.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libmbim-glib-SMS.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-sms-pdu-read-record-array-free" title="mbim_sms_pdu_read_record_array_free ()">mbim_sms_pdu_read_record_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-sms-cdma-read-record-array-free" title="mbim_sms_cdma_read_record_array_free ()">mbim_sms_cdma_read_record_array_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-sms-pdu-send-record-free" title="mbim_sms_pdu_send_record_free ()">mbim_sms_pdu_send_record_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-sms-cdma-send-record-free" title="mbim_sms_cdma_send_record_free ()">mbim_sms_cdma_send_record_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-configuration-query-new" title="mbim_message_sms_configuration_query_new ()">mbim_message_sms_configuration_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-configuration-set-new" title="mbim_message_sms_configuration_set_new ()">mbim_message_sms_configuration_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-configuration-response-parse" title="mbim_message_sms_configuration_response_parse ()">mbim_message_sms_configuration_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-read-query-new" title="mbim_message_sms_read_query_new ()">mbim_message_sms_read_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-read-response-parse" title="mbim_message_sms_read_response_parse ()">mbim_message_sms_read_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-read-notification-parse" title="mbim_message_sms_read_notification_parse ()">mbim_message_sms_read_notification_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-send-set-new" title="mbim_message_sms_send_set_new ()">mbim_message_sms_send_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-send-response-parse" title="mbim_message_sms_send_response_parse ()">mbim_message_sms_send_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-delete-set-new" title="mbim_message_sms_delete_set_new ()">mbim_message_sms_delete_set_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-delete-response-parse" title="mbim_message_sms_delete_response_parse ()">mbim_message_sms_delete_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-message-store-status-query-new" title="mbim_message_sms_message_store_status_query_new ()">mbim_message_sms_message_store_status_query_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-message-store-status-response-parse" title="mbim_message_sms_message_store_status_response_parse ()">mbim_message_sms_message_store_status_response_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libmbim-glib-SMS.html#mbim-message-sms-message-store-status-notification-parse" title="mbim_message_sms_message_store_status_notification_parse ()">mbim_message_sms_message_store_status_notification_parse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-SMS.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecord" title="MbimSmsPduReadRecord">MbimSmsPduReadRecord</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecordArray" title="MbimSmsPduReadRecordArray">MbimSmsPduReadRecordArray</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecord" title="MbimSmsCdmaReadRecord">MbimSmsCdmaReadRecord</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecordArray" title="MbimSmsCdmaReadRecordArray">MbimSmsCdmaReadRecordArray</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord">MbimSmsPduSendRecord</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord">MbimSmsCdmaSendRecord</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-SMS.description"></a><h2>Description</h2>
+<p>This section implements support for requests, responses and notifications in the
+Sms service.</p>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-SMS.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-sms-pdu-read-record-array-free"></a><h3>mbim_sms_pdu_read_record_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_sms_pdu_read_record_array_free (<em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecordArray" title="MbimSmsPduReadRecordArray"><span class="type">MbimSmsPduReadRecordArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecord" title="MbimSmsPduReadRecord"><span class="type">MbimSmsPduReadRecord</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-sms-pdu-read-record-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecord" title="MbimSmsPduReadRecord"><span class="type">MbimSmsPduReadRecord</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-sms-cdma-read-record-array-free"></a><h3>mbim_sms_cdma_read_record_array_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_sms_cdma_read_record_array_free (<em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecordArray" title="MbimSmsCdmaReadRecordArray"><span class="type">MbimSmsCdmaReadRecordArray</span></a> *array</code></em>);</pre>
+<p>Frees the memory allocated for the array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecord" title="MbimSmsCdmaReadRecord"><span class="type">MbimSmsCdmaReadRecord</span></a> structs.</p>
+<div class="refsect3">
+<a name="mbim-sms-cdma-read-record-array-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> terminated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecord" title="MbimSmsCdmaReadRecord"><span class="type">MbimSmsCdmaReadRecord</span></a> structs.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-sms-pdu-send-record-free"></a><h3>mbim_sms_pdu_send_record_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_sms_pdu_send_record_free (<em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord"><span class="type">MbimSmsPduSendRecord</span></a> *var</code></em>);</pre>
+<p>Frees the memory allocated for the <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord"><span class="type">MbimSmsPduSendRecord</span></a>.</p>
+<div class="refsect3">
+<a name="mbim-sms-pdu-send-record-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord"><span class="type">MbimSmsPduSendRecord</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-sms-cdma-send-record-free"></a><h3>mbim_sms_cdma_send_record_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_sms_cdma_send_record_free (<em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord"><span class="type">MbimSmsCdmaSendRecord</span></a> *var</code></em>);</pre>
+<p>Frees the memory allocated for the <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord"><span class="type">MbimSmsCdmaSendRecord</span></a>.</p>
+<div class="refsect3">
+<a name="mbim-sms-cdma-send-record-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord"><span class="type">MbimSmsCdmaSendRecord</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-configuration-query-new"></a><h3>mbim_message_sms_configuration_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_configuration_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Configuration' query command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-configuration-set-new"></a><h3>mbim_message_sms_configuration_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_configuration_set_new
+                               (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> format</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sc_address</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Configuration' set command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the 'Format' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sc_address</p></td>
+<td class="parameter_description"><p>the 'ScAddress' field, given as a string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-configuration-response-parse"></a><h3>mbim_message_sms_configuration_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_configuration_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStorageState" title="enum MbimSmsStorageState"><span class="type">MbimSmsStorageState</span></a> *out_sms_storage_state</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> *out_format</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_max_messages</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_cdma_short_message_size</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **out_sc_address</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Configuration' response command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_sms_storage_state</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStorageState" title="enum MbimSmsStorageState"><span class="type">MbimSmsStorageState</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'SmsStorageState' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_format</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Format' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_max_messages</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MaxMessages' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_cdma_short_message_size</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'CdmaShortMessageSize' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_sc_address</p></td>
+<td class="parameter_description"><p>return location for a newly allocated string, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'ScAddress' field is not needed. Free the returned value with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-configuration-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-read-query-new"></a><h3>mbim_message_sms_read_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_read_query_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> format</code></em>,
+                                 <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFlag" title="enum MbimSmsFlag"><span class="type">MbimSmsFlag</span></a> flag</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> message_index</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Read' query command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-read-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the 'Format' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flag</p></td>
+<td class="parameter_description"><p>the 'Flag' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFlag" title="enum MbimSmsFlag"><span class="type">MbimSmsFlag</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message_index</p></td>
+<td class="parameter_description"><p>the 'MessageIndex' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-read-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-read-response-parse"></a><h3>mbim_message_sms_read_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_read_response_parse (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                      <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> *out_format</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_messages_count</code></em>,
+                                      <em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecordArray" title="MbimSmsPduReadRecordArray"><span class="type">MbimSmsPduReadRecordArray</span></a> **out_pdu_messages</code></em>,
+                                      <em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecordArray" title="MbimSmsCdmaReadRecordArray"><span class="type">MbimSmsCdmaReadRecordArray</span></a> **out_cdma_messages</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Read' response command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-read-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_format</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Format' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_messages_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MessagesCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_pdu_messages</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecord" title="MbimSmsPduReadRecord"><span class="type">MbimSmsPduReadRecord</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'PduMessages' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-SMS.html#mbim-sms-pdu-read-record-array-free" title="mbim_sms_pdu_read_record_array_free ()"><code class="function">mbim_sms_pdu_read_record_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimSmsPduReadRecord]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_cdma_messages</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecord" title="MbimSmsCdmaReadRecord"><span class="type">MbimSmsCdmaReadRecord</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'CdmaMessages' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-SMS.html#mbim-sms-cdma-read-record-array-free" title="mbim_sms_cdma_read_record_array_free ()"><code class="function">mbim_sms_cdma_read_record_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimSmsCdmaReadRecord]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-read-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-read-notification-parse"></a><h3>mbim_message_sms_read_notification_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_read_notification_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> *out_format</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_messages_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecordArray" title="MbimSmsPduReadRecordArray"><span class="type">MbimSmsPduReadRecordArray</span></a> **out_pdu_messages</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecordArray" title="MbimSmsCdmaReadRecordArray"><span class="type">MbimSmsCdmaReadRecordArray</span></a> **out_cdma_messages</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Read' notification command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-read-notification-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_format</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Format' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_messages_count</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MessagesCount' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_pdu_messages</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduReadRecord" title="MbimSmsPduReadRecord"><span class="type">MbimSmsPduReadRecord</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'PduMessages' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-SMS.html#mbim-sms-pdu-read-record-array-free" title="mbim_sms_pdu_read_record_array_free ()"><code class="function">mbim_sms_pdu_read_record_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimSmsPduReadRecord]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_cdma_messages</p></td>
+<td class="parameter_description"><p>return location for a newly allocated array of <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaReadRecord" title="MbimSmsCdmaReadRecord"><span class="type">MbimSmsCdmaReadRecord</span></a> items, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'CdmaMessages' field is not needed. Free the returned value with <a class="link" href="libmbim-glib-SMS.html#mbim-sms-cdma-read-record-array-free" title="mbim_sms_cdma_read_record_array_free ()"><code class="function">mbim_sms_cdma_read_record_array_free()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> MbimSmsCdmaReadRecord]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-read-notification-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-send-set-new"></a><h3>mbim_message_sms_send_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_send_set_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a> format</code></em>,
+                               <em class="parameter"><code>const <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord"><span class="type">MbimSmsPduSendRecord</span></a> *pdu_message</code></em>,
+                               <em class="parameter"><code>const <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord"><span class="type">MbimSmsCdmaSendRecord</span></a> *cdma_message</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Send' set command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-send-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the 'Format' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFormat" title="enum MbimSmsFormat"><span class="type">MbimSmsFormat</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pdu_message</p></td>
+<td class="parameter_description"><p>the 'PduMessage' field, given as a <a class="link" href="libmbim-glib-SMS.html#MbimSmsPduSendRecord" title="MbimSmsPduSendRecord"><span class="type">MbimSmsPduSendRecord</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cdma_message</p></td>
+<td class="parameter_description"><p>the 'CdmaMessage' field, given as a <a class="link" href="libmbim-glib-SMS.html#MbimSmsCdmaSendRecord" title="MbimSmsCdmaSendRecord"><span class="type">MbimSmsCdmaSendRecord</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-send-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-send-response-parse"></a><h3>mbim_message_sms_send_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_send_response_parse (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_message_reference</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Send' response command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-send-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_message_reference</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MessageReference' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-send-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-delete-set-new"></a><h3>mbim_message_sms_delete_set_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_delete_set_new (<em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFlag" title="enum MbimSmsFlag"><span class="type">MbimSmsFlag</span></a> flag</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> message_index</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Delete' set command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-delete-set-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>flag</p></td>
+<td class="parameter_description"><p>the 'Flag' field, given as a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsFlag" title="enum MbimSmsFlag"><span class="type">MbimSmsFlag</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message_index</p></td>
+<td class="parameter_description"><p>the 'MessageIndex' field, given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-delete-set-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-delete-response-parse"></a><h3>mbim_message_sms_delete_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_delete_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Delete' response command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-delete-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-delete-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-message-store-status-query-new"></a><h3>mbim_message_sms_message_store_status_query_new ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_message_sms_message_store_status_query_new
+                               (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Create a new request for the 'Message Store Status' query command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-query-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-query-new.returns"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>, which should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-message-store-status-response-parse"></a><h3>mbim_message_sms_message_store_status_response_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_message_store_status_response_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatusFlag" title="enum MbimSmsStatusFlag"><span class="type">MbimSmsStatusFlag</span></a> *out_flag</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_message_index</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Message Store Status' response command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-response-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_flag</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatusFlag" title="enum MbimSmsStatusFlag"><span class="type">MbimSmsStatusFlag</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Flag' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_message_index</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MessageIndex' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-response-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-message-sms-message-store-status-notification-parse"></a><h3>mbim_message_sms_message_store_status_notification_parse ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_message_sms_message_store_status_notification_parse
+                               (<em class="parameter"><code>const <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                                <em class="parameter"><code><a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatusFlag" title="enum MbimSmsStatusFlag"><span class="type">MbimSmsStatusFlag</span></a> *out_flag</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *out_message_index</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Parses and returns parameters of the 'Message Store Status' notification command in the 'SMS' service.</p>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-notification-parse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_flag</p></td>
+<td class="parameter_description"><p>return location for a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatusFlag" title="enum MbimSmsStatusFlag"><span class="type">MbimSmsStatusFlag</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'Flag' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_message_index</p></td>
+<td class="parameter_description"><p>return location for a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the 'MessageIndex' field is not needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-message-sms-message-store-status-notification-parse.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the message was correctly parsed, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="libmbim-glib-SMS.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MbimSmsPduReadRecord"></a><h3>MbimSmsPduReadRecord</h3>
+<pre class="programlisting">typedef struct {
+    guint32 message_index;
+    guint32 message_status;
+    guint32 pdu_data_size;
+    guint8 *pdu_data;
+} MbimSmsPduReadRecord;
+</pre>
+<p>A MbimSmsPduReadRecord element.</p>
+<div class="refsect3">
+<a name="MbimSmsPduReadRecord.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsPduReadRecord.message-index"></a>message_index</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsPduReadRecord.message-status"></a>message_status</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatus" title="enum MbimSmsStatus"><span class="type">MbimSmsStatus</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsPduReadRecord.pdu-data-size"></a>pdu_data_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the pdu_data array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimSmsPduReadRecord.pdu-data"></a>pdu_data</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimSmsPduReadRecordArray"></a><h3>MbimSmsPduReadRecordArray</h3>
+<pre class="programlisting">typedef MbimSmsPduReadRecord *MbimSmsPduReadRecordArray;
+</pre>
+<p>A NULL-terminated array of MbimSmsPduReadRecord elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-24.html#api-index-1.24">1.24</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimSmsCdmaReadRecord"></a><h3>MbimSmsCdmaReadRecord</h3>
+<pre class="programlisting">typedef struct {
+    guint32 message_index;
+    guint32 message_status;
+    gchar *address;
+    gchar *timestamp;
+    guint32 encoding;
+    guint32 language;
+    guint32 encoded_message_size;
+    guint8 *encoded_message;
+    guint32 encoded_message_size_in_characters;
+} MbimSmsCdmaReadRecord;
+</pre>
+<p>A MbimSmsCdmaReadRecord element.</p>
+<div class="refsect3">
+<a name="MbimSmsCdmaReadRecord.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.message-index"></a>message_index</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.message-status"></a>message_status</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsStatus" title="enum MbimSmsStatus"><span class="type">MbimSmsStatus</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimSmsCdmaReadRecord.address"></a>address</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimSmsCdmaReadRecord.timestamp"></a>timestamp</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.encoding"></a>encoding</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsCdmaEncoding" title="enum MbimSmsCdmaEncoding"><span class="type">MbimSmsCdmaEncoding</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.language"></a>language</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsCdmaLang" title="enum MbimSmsCdmaLang"><span class="type">MbimSmsCdmaLang</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.encoded-message-size"></a>encoded_message_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the encoded_message array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimSmsCdmaReadRecord.encoded-message"></a>encoded_message</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaReadRecord.encoded-message-size-in-characters"></a>encoded_message_size_in_characters</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimSmsCdmaReadRecordArray"></a><h3>MbimSmsCdmaReadRecordArray</h3>
+<pre class="programlisting">typedef MbimSmsCdmaReadRecord *MbimSmsCdmaReadRecordArray;
+</pre>
+<p>A NULL-terminated array of MbimSmsCdmaReadRecord elements.</p>
+<p class="since">Since: <a class="link" href="api-index-1-24.html#api-index-1.24">1.24</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimSmsPduSendRecord"></a><h3>MbimSmsPduSendRecord</h3>
+<pre class="programlisting">typedef struct {
+    guint32 pdu_data_size;
+    guint8 *pdu_data;
+} MbimSmsPduSendRecord;
+</pre>
+<p>A MbimSmsPduSendRecord element.</p>
+<div class="refsect3">
+<a name="MbimSmsPduSendRecord.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsPduSendRecord.pdu-data-size"></a>pdu_data_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the pdu_data array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimSmsPduSendRecord.pdu-data"></a>pdu_data</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimSmsCdmaSendRecord"></a><h3>MbimSmsCdmaSendRecord</h3>
+<pre class="programlisting">typedef struct {
+    guint32 encoding;
+    guint32 language;
+    gchar *address;
+    guint32 encoded_message_size;
+    guint8 *encoded_message;
+    guint32 encoded_message_size_in_characters;
+} MbimSmsCdmaSendRecord;
+</pre>
+<p>A MbimSmsCdmaSendRecord element.</p>
+<div class="refsect3">
+<a name="MbimSmsCdmaSendRecord.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaSendRecord.encoding"></a>encoding</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsCdmaEncoding" title="enum MbimSmsCdmaEncoding"><span class="type">MbimSmsCdmaEncoding</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaSendRecord.language"></a>language</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="libmbim-glib-Enumerations-and-Flags.html#MbimSmsCdmaLang" title="enum MbimSmsCdmaLang"><span class="type">MbimSmsCdmaLang</span></a> given as a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="MbimSmsCdmaSendRecord.address"></a>address</code></em>;</p></td>
+<td class="struct_member_description"><p>a string.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaSendRecord.encoded-message-size"></a>encoded_message_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the encoded_message array.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *<em class="structfield"><code><a name="MbimSmsCdmaSendRecord.encoded-message"></a>encoded_message</code></em>;</p></td>
+<td class="struct_member_description"><p>an array of <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> values.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> <em class="structfield"><code><a name="MbimSmsCdmaSendRecord.encoded-message-size-in-characters"></a>encoded_message_size_in_characters</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

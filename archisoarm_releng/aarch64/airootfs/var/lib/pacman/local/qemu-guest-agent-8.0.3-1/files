@@ -1,0 +1,25 @@
+%FILES%
+etc/
+etc/qemu/
+etc/qemu/fsfreeze-hook
+etc/qemu/fsfreeze-hook.d/
+etc/qemu/qemu-ga.conf
+usr/
+usr/bin/
+usr/bin/qemu-ga
+usr/lib/
+usr/lib/systemd/
+usr/lib/systemd/system/
+usr/lib/systemd/system/qemu-guest-agent.service
+usr/lib/udev/
+usr/lib/udev/rules.d/
+usr/lib/udev/rules.d/99-qemu-guest-agent.rules
+usr/share/
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/qemu-ga.8.gz
+
+%BACKUP%
+etc/qemu/qemu-ga.conf	c018b60dd1ec50550c2be25566d35918
+etc/qemu/fsfreeze-hook	15f6ff42cbc5550a07ee21c2a471d905
+

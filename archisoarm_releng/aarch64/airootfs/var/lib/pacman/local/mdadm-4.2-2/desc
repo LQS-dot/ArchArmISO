@@ -1,0 +1,46 @@
+%NAME%
+mdadm
+
+%VERSION%
+4.2-2
+
+%BASE%
+mdadm
+
+%DESC%
+A tool for managing/monitoring Linux md device arrays, also known as Software RAID
+
+%URL%
+https://git.kernel.org/pub/scm/utils/mdadm
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1648969702
+
+%INSTALLDATE%
+1691208585
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+1103468
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%REPLACES%
+raidtools
+
+%DEPENDS%
+glibc
+systemd
+
+%OPTDEPENDS%
+bash: mdcheck
+

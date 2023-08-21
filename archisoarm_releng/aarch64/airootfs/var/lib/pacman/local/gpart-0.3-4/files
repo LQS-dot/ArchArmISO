@@ -1,0 +1,13 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/gpart
+usr/share/
+usr/share/doc/
+usr/share/doc/gpart/
+usr/share/doc/gpart/Changes
+usr/share/doc/gpart/README.md
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/gpart.8.gz
+

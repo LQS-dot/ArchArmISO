@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PolkitSubject: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="subjects.html" title="Subjects">
+<link rel="prev" href="subjects.html" title="Subjects">
+<link rel="next" href="PolkitUnixProcess.html" title="PolkitUnixProcess">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#PolkitSubject.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#PolkitSubject.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#PolkitSubject.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_implementations">  <span class="dim">|</span> 
+                  <a href="#PolkitSubject.implementations" class="shortcut">Known Implementations</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="subjects.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="subjects.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="PolkitUnixProcess.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="PolkitSubject"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="PolkitSubject.top_of_page"></a>PolkitSubject</span></h2>
+<p>PolkitSubject — Type for representing subjects</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="PolkitSubject.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-hash" title="polkit_subject_hash ()">polkit_subject_hash</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-equal" title="polkit_subject_equal ()">polkit_subject_equal</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-exists" title="polkit_subject_exists ()">polkit_subject_exists</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-exists-finish" title="polkit_subject_exists_finish ()">polkit_subject_exists_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-exists-sync" title="polkit_subject_exists_sync ()">polkit_subject_exists_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-to-string" title="polkit_subject_to_string ()">polkit_subject_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="returnvalue">PolkitSubject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="PolkitSubject.html#polkit-subject-from-string" title="polkit_subject_from_string ()">polkit_subject_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="PolkitSubject.html#PolkitSubject-struct" title="PolkitSubject">PolkitSubject</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="PolkitSubject.html#PolkitSubjectIface" title="struct PolkitSubjectIface">PolkitSubjectIface</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> PolkitSubject
+</pre>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+PolkitSubject requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.implementations"></a><h2>Known Implementations</h2>
+<p>
+PolkitSubject is implemented by
+ <a class="link" href="PolkitSystemBusName.html" title="PolkitSystemBusName">PolkitSystemBusName</a>,  <a class="link" href="PolkitUnixProcess.html" title="PolkitUnixProcess">PolkitUnixProcess</a> and  <a class="link" href="PolkitUnixSession.html" title="PolkitUnixSession">PolkitUnixSession</a>.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.description"></a><h2>Description</h2>
+<p><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> is an abstract type for representing one or more
+processes.</p>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="polkit-subject-hash"></a><h3>polkit_subject_hash ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+polkit_subject_hash (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *subject</code></em>);</pre>
+<p>Gets a hash code for <em class="parameter"><code>subject</code></em>
+ that can be used with e.g. <a href="../glib/glib-Hash-Tables.html#g-hash-table-new"><code class="function">g_hash_table_new()</code></a>.</p>
+<div class="refsect3">
+<a name="polkit-subject-hash.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-hash.returns"></a><h4>Returns</h4>
+<p> A hash code.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-equal"></a><h3>polkit_subject_equal ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+polkit_subject_equal (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *a</code></em>,
+                      <em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *b</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>a</code></em>
+ and <em class="parameter"><code>b</code></em>
+ are equal, ie. represent the same subject.
+However, avoid calling <a class="link" href="PolkitSubject.html#polkit-subject-equal" title="polkit_subject_equal ()"><code class="function">polkit_subject_equal()</code></a> to compare two processes;
+for more information see the <code class="literal">PolkitUnixProcess</code> documentation.</p>
+<p>This function can be used in e.g. <a href="../glib/glib-Hash-Tables.html#g-hash-table-new"><code class="function">g_hash_table_new()</code></a>.</p>
+<div class="refsect3">
+<a name="polkit-subject-equal.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-equal.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>a</code></em>
+and <em class="parameter"><code>b</code></em>
+are equal, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-exists"></a><h3>polkit_subject_exists ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+polkit_subject_exists (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *subject</code></em>,
+                       <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                       <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously checks if <em class="parameter"><code>subject</code></em>
+ exists.</p>
+<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked in the</p>
+<GTKDOCLINK HREF="g-main-context-push-thread-default">thread-default
+main loop</GTKDOCLINK> of the thread you are calling this method
+<p>from. You can then call <a class="link" href="PolkitSubject.html#polkit-subject-exists-finish" title="polkit_subject_exists_finish ()"><code class="function">polkit_subject_exists_finish()</code></a> to get the
+result of the operation.</p>
+<div class="refsect3">
+<a name="polkit-subject-exists.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-exists-finish"></a><h3>polkit_subject_exists_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+polkit_subject_exists_finish (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *subject</code></em>,
+                              <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes checking whether a subject exists.</p>
+<div class="refsect3">
+<a name="polkit-subject-exists-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to <a class="link" href="PolkitSubject.html#polkit-subject-exists" title="polkit_subject_exists ()"><code class="function">polkit_subject_exists()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-exists-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the subject exists, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not or <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-exists-sync"></a><h3>polkit_subject_exists_sync ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+polkit_subject_exists_sync (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *subject</code></em>,
+                            <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>subject</code></em>
+ exists.</p>
+<p>This is a synchronous blocking call - the calling thread is blocked
+until a reply is received. See <a class="link" href="PolkitSubject.html#polkit-subject-exists" title="polkit_subject_exists ()"><code class="function">polkit_subject_exists()</code></a> for the
+asynchronous version.</p>
+<div class="refsect3">
+<a name="polkit-subject-exists-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-exists-sync.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the subject exists, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not or <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-to-string"></a><h3>polkit_subject_to_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+polkit_subject_to_string (<em class="parameter"><code><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> *subject</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>subject</code></em>
+ to a string that can be used in
+<a class="link" href="PolkitSubject.html#polkit-subject-from-string" title="polkit_subject_from_string ()"><code class="function">polkit_subject_from_string()</code></a>.</p>
+<div class="refsect3">
+<a name="polkit-subject-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-to-string.returns"></a><h4>Returns</h4>
+<p> A string representing <em class="parameter"><code>subject</code></em>
+. Free with <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="polkit-subject-from-string"></a><h3>polkit_subject_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="returnvalue">PolkitSubject</span></a> *
+polkit_subject_from_string (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *str</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates an object from <em class="parameter"><code>str</code></em>
+ that implements the <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>
+interface.</p>
+<div class="refsect3">
+<a name="polkit-subject-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>str</p></td>
+<td class="parameter_description"><p>A string obtained from <a class="link" href="PolkitSubject.html#polkit-subject-to-string" title="polkit_subject_to_string ()"><code class="function">polkit_subject_to_string()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="polkit-subject-from-string.returns"></a><h4>Returns</h4>
+<p>A <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is
+set. Free with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="PolkitSubject.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="PolkitSubject-struct"></a><h3>PolkitSubject</h3>
+<pre class="programlisting">typedef struct _PolkitSubject PolkitSubject;</pre>
+<p>Generic type for all objects that can be used as subjects.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="PolkitSubjectIface"></a><h3>struct PolkitSubjectIface</h3>
+<pre class="programlisting">struct PolkitSubjectIface {
+  GTypeInterface parent_iface;
+
+  guint    (*hash)          (PolkitSubject       *subject);
+
+  gboolean (*equal)         (PolkitSubject       *a,
+                             PolkitSubject       *b);
+
+  gchar *  (*to_string)     (PolkitSubject       *subject);
+
+  void     (*exists)        (PolkitSubject       *subject,
+                             GCancellable        *cancellable,
+                             GAsyncReadyCallback  callback,
+                             gpointer             user_data);
+
+  gboolean (*exists_finish) (PolkitSubject       *subject,
+                             GAsyncResult        *res,
+                             GError             **error);
+
+  gboolean (*exists_sync)   (PolkitSubject       *subject,
+                             GCancellable        *cancellable,
+                             GError             **error);
+};
+</pre>
+<p>An interface for subjects.</p>
+<div class="refsect3">
+<a name="PolkitSubjectIface.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="PolkitSubjectIface.parent-iface"></a>parent_iface</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent interface.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.hash"></a>hash</code></em> ()</p></td>
+<td class="struct_member_description"><p>Gets a hash value for a <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.equal"></a>equal</code></em> ()</p></td>
+<td class="struct_member_description"><p>Checks if two <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a>s are equal.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.to-string"></a>to_string</code></em> ()</p></td>
+<td class="struct_member_description"><p>Serializes a <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> to a string that can be
+used in <a class="link" href="PolkitSubject.html#polkit-subject-from-string" title="polkit_subject_from_string ()"><code class="function">polkit_subject_from_string()</code></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.exists"></a>exists</code></em> ()</p></td>
+<td class="struct_member_description"><p>Asynchronously check if a <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.exists-finish"></a>exists_finish</code></em> ()</p></td>
+<td class="struct_member_description"><p>Finishes checking if a <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="PolkitSubjectIface.exists-sync"></a>exists_sync</code></em> ()</p></td>
+<td class="struct_member_description"><p>Synchronously check if a <a class="link" href="PolkitSubject.html" title="PolkitSubject"><span class="type">PolkitSubject</span></a> exists.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

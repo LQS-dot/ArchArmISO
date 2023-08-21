@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>errors: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-reference.html" title="Part II. API Reference">
+<link rel="prev" href="libpskc-global.html" title="global">
+<link rel="next" href="libpskc-enums.html" title="enums">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libpskc-errors.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libpskc-global.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libpskc-enums.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libpskc-errors"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libpskc-errors.top_of_page"></a>errors</span></h2>
+<p>errors — Error handling.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libpskc-errors.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-errors.html#pskc-strerror" title="pskc_strerror ()">pskc_strerror</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libpskc-errors.html#pskc-strerror-name" title="pskc_strerror_name ()">pskc_strerror_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-errors.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="libpskc-errors.html#pskc-rc" title="enum pskc_rc">pskc_rc</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libpskc-errors.description"></a><h2>Description</h2>
+<p>Most library functions uses an int return value to indicate success
+or failure, using <a class="link" href="libpskc-errors.html#pskc-rc" title="enum pskc_rc"><span class="type">pskc_rc</span></a> values.  The values can be converted
+into human readable explanations using <a class="link" href="libpskc-errors.html#pskc-strerror" title="pskc_strerror ()"><code class="function">pskc_strerror()</code></a>.  The
+symbolic error codes can be converted into strings using
+<a class="link" href="libpskc-errors.html#pskc-strerror-name" title="pskc_strerror_name ()"><code class="function">pskc_strerror_name()</code></a>.</p>
+</div>
+<div class="refsect1">
+<a name="libpskc-errors.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="pskc-strerror"></a><h3>pskc_strerror ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_strerror (<em class="parameter"><code><span class="type">int</span> err</code></em>);</pre>
+<p>Convert return code to human readable string explanation of the
+reason for the particular error code.</p>
+<p>This string can be used to output a diagnostic message to the user.</p>
+<p>This function is one of few in the library that can be used without
+a successful call to <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p>
+<div class="refsect3">
+<a name="pskc-strerror.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>err</p></td>
+<td class="parameter_description"><p>error code, a <a class="link" href="libpskc-errors.html#pskc-rc" title="enum pskc_rc"><span class="type">pskc_rc</span></a> value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-strerror.returns"></a><h4>Returns</h4>
+<p> Returns a pointer to a statically allocated string
+containing an explanation of the error code <em class="parameter"><code>err</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="pskc-strerror-name"></a><h3>pskc_strerror_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+pskc_strerror_name (<em class="parameter"><code><span class="type">int</span> err</code></em>);</pre>
+<p>Convert return code to human readable string representing the error
+code symbol itself.  For example, pskc_strerror_name(<a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a>)
+returns the string "PSKC_OK".</p>
+<p>This string can be used to output a diagnostic message to the user.</p>
+<p>This function is one of few in the library that can be used without
+a successful call to <a class="link" href="libpskc-container.html#pskc-init" title="pskc_init ()"><code class="function">pskc_init()</code></a>.</p>
+<div class="refsect3">
+<a name="pskc-strerror-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>err</p></td>
+<td class="parameter_description"><p>error code, a <a class="link" href="libpskc-errors.html#pskc-rc" title="enum pskc_rc"><span class="type">pskc_rc</span></a> value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="pskc-strerror-name.returns"></a><h4>Returns</h4>
+<p> Returns a pointer to a statically allocated string
+containing a string version of the error code <em class="parameter"><code>err</code></em>
+, or NULL if
+the error code is not known.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libpskc-errors.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="pskc-rc"></a><h3>enum pskc_rc</h3>
+<p>Return codes for PSKC functions.  All return codes are negative
+except for the successful code <a class="link" href="libpskc-errors.html#PSKC-OK:CAPS"><code class="literal">PSKC_OK</code></a> which are guaranteed to be</p>
+<div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Positive values are reserved for non-error return codes.</p></li></ol></div>
+<p>Note that the <a class="link" href="libpskc-errors.html#pskc-rc" title="enum pskc_rc"><span class="type">pskc_rc</span></a> enumeration may be extended at a later date
+to include new return codes.</p>
+<div class="refsect3">
+<a name="pskc-rc.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-OK:CAPS"></a>PSKC_OK</p></td>
+<td class="enum_member_description">
+<p>Successful return.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-MALLOC-ERROR:CAPS"></a>PSKC_MALLOC_ERROR</p></td>
+<td class="enum_member_description">
+<p>Memory allocation failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-XML-ERROR:CAPS"></a>PSKC_XML_ERROR</p></td>
+<td class="enum_member_description">
+<p>Error returned from XML library.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-PARSE-ERROR:CAPS"></a>PSKC_PARSE_ERROR</p></td>
+<td class="enum_member_description">
+<p>Error parsing PSKC data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-BASE64-ERROR:CAPS"></a>PSKC_BASE64_ERROR</p></td>
+<td class="enum_member_description">
+<p>Error decoding base64 data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-UNKNOWN-OUTPUT-FORMAT:CAPS"></a>PSKC_UNKNOWN_OUTPUT_FORMAT</p></td>
+<td class="enum_member_description">
+<p>Unknown output format.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-XMLSEC-ERROR:CAPS"></a>PSKC_XMLSEC_ERROR</p></td>
+<td class="enum_member_description">
+<p>Error returned from XMLSec library.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="PSKC-LAST-ERROR:CAPS"></a>PSKC_LAST_ERROR</p></td>
+<td class="enum_member_description">
+<p>Meta-error indicating the last error code, for use
+  when iterating over all error codes or similar.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

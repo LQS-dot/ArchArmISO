@@ -1,0 +1,48 @@
+%NAME%
+xfsprogs
+
+%VERSION%
+6.4.0-1
+
+%BASE%
+xfsprogs
+
+%DESC%
+XFS filesystem utilities
+
+%URL%
+https://xfs.wiki.kernel.org
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1690289316
+
+%INSTALLDATE%
+1691208585
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+6473729
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+sh
+util-linux-libs
+device-mapper
+libinih
+liburcu
+
+%OPTDEPENDS%
+icu: for xfs_scrub
+python: for xfs_scrub_all script
+smtp-forwarder: for xfs_scrub_fail script
+

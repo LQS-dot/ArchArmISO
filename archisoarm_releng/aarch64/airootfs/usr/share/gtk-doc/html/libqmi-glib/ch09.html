@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>User Identity Module (UIM) service: libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="up" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="prev" href="libqmi-glib-PBM-Get-All-Capabilities-response.html" title="PBM Get All Capabilities response">
+<link rel="next" href="QmiClientUim.html" title="QmiClientUim">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="libqmi-glib-PBM-Get-All-Capabilities-response.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QmiClientUim.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.10"></a>User Identity Module (UIM) service</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="QmiClientUim.html">QmiClientUim</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the UIM service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-enumerations-and-flags.html">UIM enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the UIM service.</span>
+</dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.4">UIM Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Card-Status-indication.html">UIM Card Status indication</a></span><span class="refpurpose"> — Methods to manage the UIM Card Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Slot-Status-indication.html">UIM Slot Status indication</a></span><span class="refpurpose"> — Methods to manage the UIM Slot Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-indication.html">UIM Refresh indication</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch09s02.html">UIM Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Reset-response.html">UIM Reset response</a></span><span class="refpurpose"> — Methods to manage the UIM Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Register-Events-response.html">UIM Register Events response</a></span><span class="refpurpose"> — Methods to manage the UIM Register Events response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Set-PIN-Protection-response.html">UIM Set PIN Protection response</a></span><span class="refpurpose"> — Methods to manage the UIM Set PIN Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Verify-PIN-response.html">UIM Verify PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Verify PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Unblock-PIN-response.html">UIM Unblock PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Unblock PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Change-PIN-response.html">UIM Change PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Change PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Read-Transparent-response.html">UIM Read Transparent response</a></span><span class="refpurpose"> — Methods to manage the UIM Read Transparent response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Read-Record-response.html">UIM Read Record response</a></span><span class="refpurpose"> — Methods to manage the UIM Read Record response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-File-Attributes-response.html">UIM Get File Attributes response</a></span><span class="refpurpose"> — Methods to manage the UIM Get File Attributes response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Card-Status-response.html">UIM Get Card Status response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Card Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Supported-Messages-response.html">UIM Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Power-Off-SIM-response.html">UIM Power Off SIM response</a></span><span class="refpurpose"> — Methods to manage the UIM Power Off SIM response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Power-On-SIM-response.html">UIM Power On SIM response</a></span><span class="refpurpose"> — Methods to manage the UIM Power On SIM response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Change-Provisioning-Session-response.html">UIM Change Provisioning Session response</a></span><span class="refpurpose"> — Methods to manage the UIM Change Provisioning Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Depersonalization-response.html">UIM Depersonalization response</a></span><span class="refpurpose"> — Methods to manage the UIM Depersonalization response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Configuration-response.html">UIM Get Configuration response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Configuration response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Switch-Slot-response.html">UIM Switch Slot response</a></span><span class="refpurpose"> — Methods to manage the UIM Switch Slot response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Slot-Status-response.html">UIM Get Slot Status response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Slot Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Register-response.html">UIM Refresh Register response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Register-All-response.html">UIM Refresh Register All response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Register All response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Complete-response.html">UIM Refresh Complete response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Complete response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Remote-Unlock-response.html">UIM Remote Unlock response</a></span><span class="refpurpose"> — Methods to manage the UIM Remote Unlock response.</span>
+</dt>
+</dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.10.4"></a>UIM Indications</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

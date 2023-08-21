@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: dhash
+Description: A hash table which will dynamically resize to achieve optimal storage & access time properties
+Version: 0.5.0
+Libs: -L${libdir} -ldhash
+Cflags: -I${includedir}
+URL: https://github.com/SSSD/ding-libs

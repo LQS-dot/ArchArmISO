@@ -1,0 +1,383 @@
+#!/bin/bash
+# License: GPL 
+# Author: Steven Shiau <steven _at_ clonezilla org>
+# Description: Program to prepare Clonezilla live image home dir via URI (Uniform Resource Identifier)
+# //NOTE// This program uses some of the common variables and function with prep-ocsroot. If
+# it's modified, remember to check prep-ocsroot, too.
+
+# https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+# scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
+# General URI in Clonezilla:
+# [dev|smb|ssh|nfs|nfs4|http|https]:[//[user:password@]host[:port]][/]path
+# local_dev:     dev:///dev/partition, dev:///LABEL|UUID|PARTLABEL|PARTUUID=uuid|label
+# nfs_server:    nfs|nfs4://host/path
+# samba_server:  smb://[domain;user:password@]host/path
+# ssh_server:    ssh://[user@]host[:port]/path  (No password can be assigned in URI)
+# webdav_server: http|https://host[:port]/path  (No username and password can be assigned in URI)
+# E.g.
+# ocs_repository="dev:///dev/sdf1"
+# ocs_repository="dev:///UUID=84b012cc-5a4c-41e2-bf20-620d028072cb"
+# ocs_repository="nfs://192.168.100.254/home/partimag/"
+# ocs_repository="nfs4://192.168.100.254/partimag/"
+# ocs_repository="smb://administrator:mypasswd@192.168.100.175/images/"
+# ocs_repository="smb://my_domain;jack:mypasswd@192.168.1.1:445/images/"
+# ocs_repository="ssh://jack@192.168.100.211/home/partimag/"
+# ocs_repository="http://192.168.100.180/share"
+
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+
+# Load the config in ocs-live.conf. This is specially for Clonezilla live. It will overwrite some settings of /etc/drbl/drbl-ocs.conf, such as $DIA...
+[ -e "/etc/ocs/ocs-live.conf" ] && . /etc/ocs/ocs-live.conf
+
+# Settings
+cmdl_file_def="/proc/cmdline"
+chk_ocsroot_mountpont="yes"
+# Since this command is usually run for unattended mode, make it in batch mode
+ocs_batch_mode="on"
+force_to_run="no"
+
+#
+USAGE() {
+    echo "$ocs - Mount the Clonezilla image repository via URI in boot parameter"
+    echo "Usage:"
+    echo "To run $ocs:"
+    echo "$ocs [OPTION]"
+    echo "Options:"
+    echo "-c, --cmdline-file   Assign the kernel boot parameter file. If not assigned, \"$cmdl_file_def\" will be used."
+    echo "-f, --force          Force to run $ocs, no matter it has been run successfully or not."
+    echo "-s, --skip-ocsroot-mountpoint-chk   Skip checking if Clonezilla image $ocsroot is a mountpoint."
+    echo "The support URI format:"
+    echo "local_dev:     dev:///dev/partition"
+    echo "nfs_server:    nfs|nfs4://host/path"
+    echo "samba_server:  smb://[domain;user:password@]host/path"
+    echo "ssh_server:    ssh://[user@]host[:port]/path  (No password can be assigned in URI)"
+    echo "webdav_server: http|https://host[:port]/path  (No username and password can be assigned in URI)"
+    echo "The ocs_repository assigned in boot parameter can be, for example:"
+    echo "ocs_repository=\"dev:///dev/sdf1\""
+    echo "ocs_repository=\"nfs4://192.168.100.254/partimag/\""
+    echo "ocs_repository=\"smb://administrator:mypasswd@192.168.100.175/images/\""
+    echo "Ex:"
+    echo "To parse the boot parameter in my-cmdline and mount the one assigned in boot parameter \"ocs_live_repository\" with URI format as $ocsroot, run"
+    echo "   $ocs -c my-cmdline"
+    echo
+} # end of USAGE
+#
+set_ocs_batch_mode() {
+  # ocs_batch_mode will be passed to check_if_ocsroot_a_mountpoint 
+  # ocs_live_batch might be loaded from ocs-live.conf
+  local assign_m="$1"
+  # ocs_live_batch has higher prority, so it can overwrite the mode assigned by assign_m
+  if [ -n "$ocs_live_batch" ]; then
+    case "$ocs_live_batch" in
+      yes) ocs_batch_mode="on";;
+       no) ocs_batch_mode="off";;
+    esac
+  elif [ -n "$assign_m" ]; then
+      # Assigned, set it.
+      ocs_batch_mode="$assign_m"
+  fi
+} # end of set_ocs_batch_mode
+#
+get_ocsroot_src_from_ocs_repository_if_assigned() {
+  parse_cmdline_option -c $cmdl_file "ocs_repository"
+  case "$ocs_repository" in
+    dev://*)             ocsroot_src="local_dev" ;;
+    smb://*)             ocsroot_src="samba_server" ;; 
+    ssh://*)             ocsroot_src="ssh_server" ;; 
+    nfs://*)             ocsroot_src="nfs_server" ;;
+    nfs4://*)            ocsroot_src="nfs4_server" ;;
+    http://*|https://*)  ocsroot_src="webdav_server" ;;
+    "")                  ocsroot_src="none";;
+     *)                  ocsroot_src="unknown";;
+  esac
+}
+#
+do_uri_mount_local_dev() {
+  local rc
+  target_part="$(drbl-uriparse "$ocs_repository" path)"
+  # If it's LABEL=<label>, UUID=<uuid>, PARTLABEL=<label>, PARTUUID=<uuid>    
+  # The input format is like: ocs_repository="dev:///UUID=XYZ"
+  # we have to remove the leading "/"
+  target_part="$(echo $target_part | sed -r -e "s@^/(LABEL|UUID|PARTLABEL|PARTUUID)@\1@")"
+  # TODO: Browse
+  prepare_mnt_point_ocsroot
+  ocsroot_mnt_cmd_local="LC_ALL=C mount -t auto -o $ocsroot_def_mnt_opt,nodiratime $target_part $ocsroot"
+  echo "Mounting local device by:"
+  echo "$ocsroot_mnt_cmd_local"
+  eval $ocsroot_mnt_cmd_local
+  rc=$?
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_local_dev
+#
+do_uri_mount_samba_server(){
+  # The URI for samba:
+  # smb://[[domain;]username[:password]@]server[/share[/path]]
+  # TODO: Security mode option (smb_sec_opt)? e.g. sec=ntlm, sec=ntlmv2 or auto
+  local rc ask_ run_again_ans
+  smb_srv="$(drbl-uriparse "$ocs_repository" domain)"
+  smbfs_dir="$(drbl-uriparse "$ocs_repository" path)"
+  smb_username="$(drbl-uriparse "$ocs_repository" username)"
+  smb_password="$(drbl-uriparse "$ocs_repository" password)"
+  # smb_username from URI might contain domain, like: "mygroup;jack"
+  if [ -n "$(echo $smb_username | grep ";")" ]; then
+    smb_domain="$(echo $smb_username | awk -F";" '{print $1}')"
+    smb_account="$(echo $smb_username | awk -F";" '{print $2}')"
+  else
+    smb_account="$smb_username"
+  fi
+  network_config_if_necessary
+  if [ "$smb_domain" = "ask_user" ]; then
+    set_ocs_batch_mode off # interactive mode, so no batching.
+    echo $msg_delimiter_star_line
+    echo "Please input the domain name to access Samba server ${smb_srv}${smbfs_dir}:"
+    read smb_domain
+  fi
+  if [ "$smb_account" = "ask_user" ]; then
+    set_ocs_batch_mode off # interactive mode, so no batching.
+    echo $msg_delimiter_star_line
+    echo "Please input the account name to access Samba server ${smb_srv}${smbfs_dir}:"
+    read smb_account
+  fi
+  if [ -n "$smb_password" ]; then
+    smb_password_opt=",password=$smb_password"
+  else
+    set_ocs_batch_mode off # interactive mode, so no batching.
+  fi
+  if [ -n "$smb_domain" ]; then
+    smb_domain_opt=",domain=$smb_domain"
+  fi
+  if [ -z "$(LC_ALL=C lsmod | grep -Ew "^cifs")" ]; then
+    # In case cifs is not loaded
+    modprobe cifs
+  fi
+  prepare_mnt_point_ocsroot
+  load_ocsroot_mnt_cmd
+  # mount -t cifs "//${smb_srv}${smbfs_dir}" $ocsroot -o user="${smb_account}${smb_password_opt}${smb_domain_opt}"${smb_sec_opt} 
+  ask_="true"
+  while [ "$ask_" = "true" ]; do
+    echo "Mounting Samba server by:"
+    echo "$ocsroot_mnt_cmd_smb"
+    eval $ocsroot_mnt_cmd_smb
+    rc=$?
+    if [ "$rc" -ne 0 ]; then
+      echo $msg_delimiter_star_line
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+      echo "$msg_unable_to_mnt_ocsroot. $msg_do_u_want_to_do_it_again"
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+      echo -n "[Y/n] "
+      read run_again_ans
+      case "$run_again_ans" in
+        n|N|[nN][oO]) ask_="false" ;;
+                   *) ask_="true" ;;
+      esac
+    else
+      ask_="false"
+    fi
+  done
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_samba_server
+#
+do_uri_mount_nfs_server() {
+  local rc
+  # For NFS v2, v3
+  nfs_ver=nfs
+  nfsvers_opt="nfsvers=3"
+  nfs_srv="$(drbl-uriparse "$ocs_repository" domain)"
+  nfs_dir="$(drbl-uriparse "$ocs_repository" path)"
+  network_config_if_necessary
+  prepare_mnt_point_ocsroot
+  load_ocsroot_mnt_cmd
+  # mount -t $nfs_ver $nfs_srv:$nfs_dir $ocsroot -o $ocsroot_def_mnt_opt,nodiratime,$nfsvers_opt
+  echo "Mounting NFS2/NFS3 server by:"
+  echo "$ocsroot_mnt_cmd_nfs"
+  eval $ocsroot_mnt_cmd_nfs
+  rc=$?
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_nfs_server
+#
+do_uri_mount_nfs4_server() {
+  local rc
+  # For NFS v4
+  nfs_ver=nfs4
+  nfsvers_opt=""
+  nfs_srv="$(drbl-uriparse "$ocs_repository" domain)"
+  nfs_dir="$(drbl-uriparse "$ocs_repository" path)"
+  network_config_if_necessary
+  prepare_mnt_point_ocsroot
+  load_ocsroot_mnt_cmd
+  # mount -t $nfs_ver $nfs_srv:$nfs_dir $ocsroot -o $ocsroot_def_mnt_opt,nodiratime,$nfsvers_opt
+  echo "Mounting NFS4 server by:"
+  echo "$ocsroot_mnt_cmd_nfs"
+  eval $ocsroot_mnt_cmd_nfs
+  rc=$?
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_nfs4_server
+
+#
+do_uri_mount_webdav_server() {
+  local rc
+  # [dev|smb|ssh|nfs|nfs4|webdav]:[//[user:password@]host[:port]][/]path
+  davfs_scheme="$(drbl-uriparse "$ocs_repository" scheme)"
+  davfs_srv="$(drbl-uriparse "$ocs_repository" domain)"
+  davfs_dir="$(drbl-uriparse "$ocs_repository" path)"
+  davfs_url="$davfs_scheme"://"${davfs_srv}""${davfs_dir}"
+  ocs-tune-conf-for-webdav
+  network_config_if_necessary
+  prepare_mnt_point_ocsroot
+  load_ocsroot_mnt_cmd
+  set_ocs_batch_mode off # interactive mode, so no batching.
+  # mount -t davfs -o noexec $davfs_url $ocsroot
+  echo "Mounting WebDAV server by:"
+  echo "$ocsroot_mnt_cmd_webdav"
+  eval $ocsroot_mnt_cmd_webdav
+  rc=$?
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_webdav_server
+
+#
+do_uri_mount_ssh_server() {
+  local rc
+  ssh_port_def="22"
+  sshfs_extra_opt="-o nonempty,$ocsroot_def_mnt_opt"
+  ssh_srv="$(drbl-uriparse "$ocs_repository" domain)"
+  sshfs_dir="$(drbl-uriparse "$ocs_repository" path)"
+  ssh_account="$(drbl-uriparse "$ocs_repository" username)"
+  ssh_port="$(drbl-uriparse "$ocs_repository" port)"
+  [ -n "$ssh_port" ] || ssh_port="$ssh_port_def"
+  if [ "$ssh_account" = "ask_user" ]; then
+    echo $msg_delimiter_star_line
+    echo "Please input the account name to access SSH server ${ssh_srv}${sshfs_dir}:"
+    read ssh_account
+  fi
+  network_config_if_necessary
+  prepare_mnt_point_ocsroot
+  load_ocsroot_mnt_cmd
+  set_ocs_batch_mode off # interactive mode, so no batching.
+  # sshfs "$ssh_account"@$ssh_srv:"$sshfs_dir/" $ocsroot -p $ssh_port $sshfs_extra_opt
+  ask_="true"
+  while [ "$ask_" = "true" ]; do
+    echo "Mounting SSH server by:"
+    echo "$ocsroot_mnt_cmd_sshfs"
+    eval $ocsroot_mnt_cmd_sshfs
+    rc=$?
+    if [ "$rc" -ne 0 ]; then
+      echo $msg_delimiter_star_line
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+      echo "$msg_unable_to_mnt_ocsroot. $msg_do_u_want_to_do_it_again"
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+      echo -n "[Y/n] "
+      read run_again_ans
+      case "$run_again_ans" in
+        n|N|[nN][oO]) ask_="false" ;;
+                   *) ask_="true" ;;
+      esac
+    else
+      ask_="false"
+    fi
+  done
+  [ "$chk_ocsroot_mountpont" = "yes" ] && check_if_ocsroot_a_mountpoint
+  return $rc
+} # end of do_uri_mount_ssh_server
+
+#################
+##### MAIN ######
+#################
+
+ocs_file="$0"
+ocs=`basename $ocs_file`
+#
+while [ $# -gt 0 ]; do
+ case "$1" in
+   -c|--cmdline-file)
+      shift
+      if [ -z "$(echo $1 |grep ^-.)" ]; then
+        # skip the -xx option, in case 
+        cmdl_file="$1"
+        shift
+      fi
+      [ -z "$cmdl_file" ] && echo "-c is used, but no cmdl_file assigned." && exit 1
+      ;;
+   -f|--force) force_to_run="yes"; shift;;
+   -s|--skip-ocsroot-mountpoint-chk) chk_ocsroot_mountpont="no"; shift;;
+   -*)     echo "${0}: ${1}: invalid option" >&2
+           USAGE >& 2
+           exit 2 ;;
+   *)      break ;;
+ esac
+done
+
+check_if_root
+ask_and_load_lang_set
+
+# Only when not force to run, we will check the tag file
+if [ "$force_to_run" = "no" ]; then
+  # Checking if this program is already run
+  if [ -e /var/lib/clonezilla/$ocs ]; then
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
+    echo "Program $ocs has been successfully run before. Skip running it."
+    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+    exit 0
+  fi
+fi
+
+[ -z "$cmdl_file" ] && cmdl_file="$cmdl_file_def"
+if [ ! -e "$cmdl_file" ]; then
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+  echo "Kernel cmdline file ($cmdl_file) does _NOT_ exist!"
+  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+  echo "$msg_program_stop!"
+  exit 1
+fi
+
+#
+get_ocsroot_src_from_ocs_repository_if_assigned
+case $ocsroot_src in
+  local_dev)      do_uri_mount_local_dev
+                  RETVAL=$? ;;
+  samba_server)   do_uri_mount_samba_server
+                  RETVAL=$? ;;
+  ssh_server)     do_uri_mount_ssh_server
+                  RETVAL=$? ;;
+  nfs_server)     do_uri_mount_nfs_server
+                  RETVAL=$? ;;
+  nfs4_server)    do_uri_mount_nfs4_server
+                  RETVAL=$? ;;
+  webdav_server)  do_uri_mount_webdav_server
+                  RETVAL=$? ;;
+  none)           # Nothing assigned, just exit
+	          exit 9;;
+  *)              
+                  scheme="$(drbl-uriparse "$ocs_repository" scheme)"
+		  if [ -n "$scheme" ]; then
+		    error_msg="$scheme: Unknown or not supporting scheme!"
+	          else
+		    error_msg="No scheme is correctly assigned!"
+	          fi
+                  [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+                  echo $error_msg
+		  echo "Assigned URI: $ocs_repository"
+                  [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+                  echo "Program terminated!"
+                  exit 1
+		  ;;
+esac
+
+# Creating state file
+if [ "$RETVAL" -eq 0 ]; then
+  touch /var/lib/clonezilla/$ocs
+fi
+
+# if ocs_use_subdir is assigned in boot parameter, run ocs-live-bind-mount
+if [ -n "$(grep -Ew "ocs_use_subdir" $cmdl_file)" ]; then
+  ocs-live-bind-mount
+fi
+
+exit $RETVAL

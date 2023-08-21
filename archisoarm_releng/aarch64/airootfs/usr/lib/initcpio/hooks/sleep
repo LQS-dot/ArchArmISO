@@ -1,0 +1,16 @@
+#!/usr/bin/ash
+# SPDX-License-Identifier: GPL-2.0-only
+
+run_hook() {
+    if [ -z "${sleeptime}" ] || ! [ "${sleeptime}" -gt 0 ]; then
+        sleeptime=5
+    fi
+    if [ -n "${sleepdevice}" ]; then
+        poll_device "${sleepdevice}" "${sleeptime}"
+    else
+        msg "Sleeping for ${sleeptime} seconds."
+        sleep "${sleeptime}"
+    fi
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

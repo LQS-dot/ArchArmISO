@@ -1,0 +1,2012 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MbimDevice: libmbim-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmbim-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="MbimMessage.html" title="MbimMessage">
+<link rel="next" href="MbimProxy.html" title="MbimProxy">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MbimDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MbimDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#MbimDevice.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#MbimDevice.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#MbimDevice.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MbimMessage.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MbimProxy.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MbimDevice"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MbimDevice.top_of_page"></a>MbimDevice</span></h2>
+<p>MbimDevice — Generic MBIM device handling routines</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MbimDevice.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-new" title="mbim_device_new ()">mbim_device_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimDevice.html" title="MbimDevice"><span class="returnvalue">MbimDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-new-finish" title="mbim_device_new_finish ()">mbim_device_new_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../gio/GFile.html#GFile-struct"><span class="returnvalue">GFile</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-file" title="mbim_device_get_file ()">mbim_device_get_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../gio/GFile.html#GFile-struct"><span class="returnvalue">GFile</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-peek-file" title="mbim_device_peek_file ()">mbim_device_peek_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-path" title="mbim_device_get_path ()">mbim_device_get_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-path-display" title="mbim_device_get_path_display ()">mbim_device_get_path_display</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-is-open" title="mbim_device_is_open ()">mbim_device_is_open</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-ms-mbimex-version" title="mbim_device_get_ms_mbimex_version ()">mbim_device_get_ms_mbimex_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-set-ms-mbimex-version" title="mbim_device_set_ms_mbimex_version ()">mbim_device_set_ms_mbimex_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-check-ms-mbimex-version" title="mbim_device_check_ms_mbimex_version ()">mbim_device_check_ms_mbimex_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-consecutive-timeouts" title="mbim_device_get_consecutive_timeouts ()">mbim_device_get_consecutive_timeouts</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-open" title="mbim_device_open ()">mbim_device_open</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-open-finish" title="mbim_device_open_finish ()">mbim_device_open_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-open-full" title="mbim_device_open_full ()">mbim_device_open_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-open-full-finish" title="mbim_device_open_full_finish ()">mbim_device_open_full_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-close" title="mbim_device_close ()">mbim_device_close</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-close-finish" title="mbim_device_close_finish ()">mbim_device_close_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-close-force" title="mbim_device_close_force ()">mbim_device_close_force</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-transaction-id" title="mbim_device_get_transaction_id ()">mbim_device_get_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-get-next-transaction-id" title="mbim_device_get_next_transaction_id ()">mbim_device_get_next_transaction_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-command" title="mbim_device_command ()">mbim_device_command</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-command-finish" title="mbim_device_command_finish ()">mbim_device_command_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-check-link-supported" title="mbim_device_check_link_supported ()">mbim_device_check_link_supported</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-list-links" title="mbim_device_list_links ()">mbim_device_list_links</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-add-link" title="mbim_device_add_link ()">mbim_device_add_link</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-add-link-finish" title="mbim_device_add_link_finish ()">mbim_device_add_link_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-delete-link" title="mbim_device_delete_link ()">mbim_device_delete_link</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-delete-link-finish" title="mbim_device_delete_link_finish ()">mbim_device_delete_link_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-delete-all-links" title="mbim_device_delete_all_links ()">mbim_device_delete_all_links</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MbimDevice.html#mbim-device-delete-all-links-finish" title="mbim_device_delete_all_links_finish ()">mbim_device_delete_all_links_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="MbimDevice.html#MbimDevice--device-consecutive-timeouts" title="The “device-consecutive-timeouts” property">device-consecutive-timeouts</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *</td>
+<td class="property_name"><a class="link" href="MbimDevice.html#MbimDevice--device-file" title="The “device-file” property">device-file</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="MbimDevice.html#MbimDevice--device-in-session" title="The “device-in-session” property">device-in-session</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="MbimDevice.html#MbimDevice--device-transaction-id" title="The “device-transaction-id” property">device-transaction-id</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="MbimDevice.html#MbimDevice-device-error" title="The “device-error” signal">device-error</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="MbimDevice.html#MbimDevice-device-indicate-status" title="The “device-indicate-status” signal">device-indicate-status</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="MbimDevice.html#MbimDevice-device-removed" title="The “device-removed” signal">device-removed</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-FILE:CAPS" title="MBIM_DEVICE_FILE">MBIM_DEVICE_FILE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-IN-SESSION:CAPS" title="MBIM_DEVICE_IN_SESSION">MBIM_DEVICE_IN_SESSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-TRANSACTION-ID:CAPS" title="MBIM_DEVICE_TRANSACTION_ID">MBIM_DEVICE_TRANSACTION_ID</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-CONSECUTIVE-TIMEOUTS:CAPS" title="MBIM_DEVICE_CONSECUTIVE_TIMEOUTS">MBIM_DEVICE_CONSECUTIVE_TIMEOUTS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SIGNAL-REMOVED:CAPS" title="MBIM_DEVICE_SIGNAL_REMOVED">MBIM_DEVICE_SIGNAL_REMOVED</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SIGNAL-INDICATE-STATUS:CAPS" title="MBIM_DEVICE_SIGNAL_INDICATE_STATUS">MBIM_DEVICE_SIGNAL_INDICATE_STATUS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SIGNAL-ERROR:CAPS" title="MBIM_DEVICE_SIGNAL_ERROR">MBIM_DEVICE_SIGNAL_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MbimDevice-struct" title="struct MbimDevice">MbimDevice</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MbimDeviceOpenFlags" title="enum MbimDeviceOpenFlags">MbimDeviceOpenFlags</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-AUTOMATIC:CAPS" title="MBIM_DEVICE_SESSION_ID_AUTOMATIC">MBIM_DEVICE_SESSION_ID_AUTOMATIC</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-MIN:CAPS" title="MBIM_DEVICE_SESSION_ID_MIN">MBIM_DEVICE_SESSION_ID_MIN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-MAX:CAPS" title="MBIM_DEVICE_SESSION_ID_MAX">MBIM_DEVICE_SESSION_ID_MAX</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> MbimDevice
+</pre>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MbimDevice implements
+ <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.description"></a><h2>Description</h2>
+<p><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> is a generic type in charge of controlling the access to the
+managed MBIM port.</p>
+<p>A <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> can only handle one single MBIM port.</p>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mbim-device-new"></a><h3>mbim_device_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_new (<em class="parameter"><code><a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *file</code></em>,
+                 <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                 <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously creates a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> object to manage <em class="parameter"><code>file</code></em>
+.
+When the operation is finished, <em class="parameter"><code>callback</code></em>
+ will be invoked. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-new-finish" title="mbim_device_new_finish ()"><code class="function">mbim_device_new_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>file</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>optional <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> object, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> to ignore.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the initialization is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-new-finish"></a><h3>mbim_device_new_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="returnvalue">MbimDevice</span></a> *
+mbim_device_new_finish (<em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MbimDevice.html#mbim-device-new" title="mbim_device_new ()"><code class="function">mbim_device_new()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-new-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-new-finish.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-file"></a><h3>mbim_device_get_file ()</h3>
+<pre class="programlisting"><a href="../gio/GFile.html#GFile-struct"><span class="returnvalue">GFile</span></a> *
+mbim_device_get_file (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Get the <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> associated with this <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="mbim-device-get-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-file.returns"></a><h4>Returns</h4>
+<p>a <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> that must be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-peek-file"></a><h3>mbim_device_peek_file ()</h3>
+<pre class="programlisting"><a href="../gio/GFile.html#GFile-struct"><span class="returnvalue">GFile</span></a> *
+mbim_device_peek_file (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Get the <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> associated with this <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>, without increasing the reference count
+on the returned object.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="mbim-device-peek-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-peek-file.returns"></a><h4>Returns</h4>
+<p>a <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a>. Do not free the returned object, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-path"></a><h3>mbim_device_get_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_device_get_path (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Get the system path of the underlying MBIM device.</p>
+<div class="refsect3">
+<a name="mbim-device-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-path.returns"></a><h4>Returns</h4>
+<p> the system path of the device.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-path-display"></a><h3>mbim_device_get_path_display ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_device_get_path_display (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Get the system path of the underlying MBIM device in UTF-8.</p>
+<div class="refsect3">
+<a name="mbim-device-get-path-display.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-path-display.returns"></a><h4>Returns</h4>
+<p> UTF-8 encoded system path of the device.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-is-open"></a><h3>mbim_device_is_open ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_is_open (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Checks whether the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> is open for I/O.</p>
+<div class="refsect3">
+<a name="mbim-device-is-open.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-is-open.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em>
+is open, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-ms-mbimex-version"></a><h3>mbim_device_get_ms_mbimex_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint8"><span class="returnvalue">guint8</span></a>
+mbim_device_get_ms_mbimex_version (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *out_ms_mbimex_version_minor</code></em>);</pre>
+<p>Get the version number of the MS MBIMEx support.</p>
+<p>The reported version will be 1 if the initialization sequence to agree on
+which version to use hasn't been run (e.g. with <a class="link" href="MbimDevice.html#mbim-device-open-full" title="mbim_device_open_full ()"><code class="function">mbim_device_open_full()</code></a> and
+the explicit <a class="link" href="MbimDevice.html#MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V2:CAPS"><code class="literal">MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V2</code></a> or
+<a class="link" href="MbimDevice.html#MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V3:CAPS"><code class="literal">MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V3</code></a> flag).</p>
+<div class="refsect3">
+<a name="mbim-device-get-ms-mbimex-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_ms_mbimex_version_minor</p></td>
+<td class="parameter_description"><p>output location for the minor version number of
+the MS MBIMEx support, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not needed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-ms-mbimex-version.returns"></a><h4>Returns</h4>
+<p> the major version number of the MS MBIMEx support.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-set-ms-mbimex-version"></a><h3>mbim_device_set_ms_mbimex_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_set_ms_mbimex_version (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> ms_mbimex_version_major</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> ms_mbimex_version_minor</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Set the version number of the MS MBIMEx support assumed in the device
+instance, which may have been set already by a different process or
+device instance.</p>
+<p>If this operation specifies the wrong MBIMEx version agreed between host
+and device, the message processing on this device instance may fail.</p>
+<p>This operation does not do any MBIMEx version exchange with the device,
+the only way to do that is with <a class="link" href="MbimDevice.html#mbim-device-open-full" title="mbim_device_open_full ()"><code class="function">mbim_device_open_full()</code></a> and the explicit
+<a class="link" href="MbimDevice.html#MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V2:CAPS"><code class="literal">MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V2</code></a> or <a class="link" href="MbimDevice.html#MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V3:CAPS"><code class="literal">MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V3</code></a>
+flag.</p>
+<div class="refsect3">
+<a name="mbim-device-set-ms-mbimex-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ms_mbimex_version_major</p></td>
+<td class="parameter_description"><p>major version number of the MS MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ms_mbimex_version_minor</p></td>
+<td class="parameter_description"><p>minor version number of the MS MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-set-ms-mbimex-version.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-check-ms-mbimex-version"></a><h3>mbim_device_check_ms_mbimex_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_check_ms_mbimex_version (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> ms_mbimex_version_major</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> ms_mbimex_version_minor</code></em>);</pre>
+<p>Checks the version number of the MS MBIMEx support in the device instance
+against the one given as input.</p>
+<div class="refsect3">
+<a name="mbim-device-check-ms-mbimex-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ms_mbimex_version_major</p></td>
+<td class="parameter_description"><p>major version number of the MS MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ms_mbimex_version_minor</p></td>
+<td class="parameter_description"><p>minor version number of the MS MBIMEx support.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-check-ms-mbimex-version.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the version of the device instance is the same as or newer
+than the passed-in version.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-consecutive-timeouts"></a><h3>mbim_device_get_consecutive_timeouts ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mbim_device_get_consecutive_timeouts (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Gets the number of consecutive transaction timeouts in the device.</p>
+<div class="refsect3">
+<a name="mbim-device-get-consecutive-timeouts.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-consecutive-timeouts.returns"></a><h4>Returns</h4>
+<p> a <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-open"></a><h3>mbim_device_open ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_open (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                  <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                  <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously opens a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> for I/O.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-open-finish" title="mbim_device_open_finish ()"><code class="function">mbim_device_open_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-open.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>maximum time, in seconds, to wait for the device to be opened.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>optional <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> object, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> to ignore.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-open-finish"></a><h3>mbim_device_open_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_open_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an asynchronous open operation started with <a class="link" href="MbimDevice.html#mbim-device-open" title="mbim_device_open ()"><code class="function">mbim_device_open()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-open-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-open-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-open-full"></a><h3>mbim_device_open_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_open_full (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                       <em class="parameter"><code><a class="link" href="MbimDevice.html#MbimDeviceOpenFlags" title="enum MbimDeviceOpenFlags"><span class="type">MbimDeviceOpenFlags</span></a> flags</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                       <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                       <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously opens a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> for I/O.</p>
+<p>This method is an extension of the generic <a class="link" href="MbimDevice.html#mbim-device-open" title="mbim_device_open ()"><code class="function">mbim_device_open()</code></a>, which allows
+launching the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> with proxy support.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-open-full-finish" title="mbim_device_open_full_finish ()"><code class="function">mbim_device_open_full_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-open-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>a set of <a class="link" href="MbimDevice.html#MbimDeviceOpenFlags" title="enum MbimDeviceOpenFlags"><span class="type">MbimDeviceOpenFlags</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>maximum time, in seconds, to wait for the device to be opened.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>optional <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> object, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> to ignore.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-open-full-finish"></a><h3>mbim_device_open_full_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_open_full_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                              <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an asynchronous open operation started with <a class="link" href="MbimDevice.html#mbim-device-open-full" title="mbim_device_open_full ()"><code class="function">mbim_device_open_full()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-open-full-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-open-full-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-close"></a><h3>mbim_device_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_close (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                   <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                   <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously closes a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> for I/O.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-close-finish" title="mbim_device_close_finish ()"><code class="function">mbim_device_close_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-close.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>maximum time, in seconds, to wait for the device to be closed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>optional <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> object, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> to ignore.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-close-finish"></a><h3>mbim_device_close_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_close_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an asynchronous close operation started with <a class="link" href="MbimDevice.html#mbim-device-close" title="mbim_device_close ()"><code class="function">mbim_device_close()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-close-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-close-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-close-force"></a><h3>mbim_device_close_force ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_close_force (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Forces the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> to be closed.</p>
+<div class="refsect3">
+<a name="mbim-device-close-force.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-close-force.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>self</code></em>
+if no error happens, otherwise <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> and <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-transaction-id"></a><h3>mbim_device_get_transaction_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_device_get_transaction_id (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Acquire the transaction ID of this <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> without
+incrementing the internal transaction ID.</p>
+<div class="refsect3">
+<a name="mbim-device-get-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-transaction-id.returns"></a><h4>Returns</h4>
+<p> the current transaction ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-24-4.html#api-index-1.24.4">1.24.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-get-next-transaction-id"></a><h3>mbim_device_get_next_transaction_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+mbim_device_get_next_transaction_id (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>);</pre>
+<p>Acquire the next transaction ID of this <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.
+The internal transaction ID gets incremented.</p>
+<div class="refsect3">
+<a name="mbim-device-get-next-transaction-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-get-next-transaction-id.returns"></a><h4>Returns</h4>
+<p> the next transaction ID.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-command"></a><h3>mbim_device_command ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_command (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                     <em class="parameter"><code><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout</code></em>,
+                     <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                     <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously sends a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> to the device.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-command-finish" title="mbim_device_command_finish ()"><code class="function">mbim_device_command_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-command.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the message to send.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout</p></td>
+<td class="parameter_description"><p>maximum time, in seconds, to wait for the response.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-command-finish"></a><h3>mbim_device_command_finish ()</h3>
+<pre class="programlisting"><a class="link" href="MbimMessage.html" title="MbimMessage"><span class="returnvalue">MbimMessage</span></a> *
+mbim_device_command_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                            <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MbimDevice.html#mbim-device-command" title="mbim_device_command ()"><code class="function">mbim_device_command()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-command-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-command-finish.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> response, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if <em class="parameter"><code>error</code></em>
+is set. The returned value should be freed with <a class="link" href="MbimMessage.html#mbim-message-unref" title="mbim_message_unref ()"><code class="function">mbim_message_unref()</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-check-link-supported"></a><h3>mbim_device_check_link_supported ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_check_link_supported (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Checks whether link management is supported by the kernel.</p>
+<div class="refsect3">
+<a name="mbim-device-check-link-supported.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-check-link-supported.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if link management is supported, or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-list-links"></a><h3>mbim_device_list_links ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_list_links (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_ifname</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> **out_links</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Synchronously lists all virtual network interfaces that have been previously
+created with <a class="link" href="MbimDevice.html#mbim-device-add-link" title="mbim_device_add_link ()"><code class="function">mbim_device_add_link()</code></a> in <em class="parameter"><code>base_ifname</code></em>
+.</p>
+<div class="refsect3">
+<a name="mbim-device-list-links.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_ifname</p></td>
+<td class="parameter_description"><p>the base interface.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out_links</p></td>
+<td class="parameter_description"><p>a placeholder for the
+output <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of link names. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-list-links.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-add-link"></a><h3>mbim_device_add_link ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_add_link (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> session_id</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_ifname</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ifname_prefix</code></em>,
+                      <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                      <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously creates a new virtual network device node on top of
+<em class="parameter"><code>base_ifname</code></em>
+. This allows having multiple net interfaces running on top of
+another using multiplexing.</p>
+<p>If the kernel driver doesn't allow this functionality, a
+<a class="link" href="libmbim-glib-Errors.html#MBIM-CORE-ERROR-UNSUPPORTED:CAPS"><code class="literal">MBIM_CORE_ERROR_UNSUPPORTED</code></a> error will be returned.</p>
+<p>The operation may fail if the given interface name is not associated to the
+MBIM control port managed by the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p>
+<p>Depending on the kernel driver in use, the given <em class="parameter"><code>ifname_prefix</code></em>
+ may be
+ignored. The user should not assume that the returned link interface name is
+prefixed with <em class="parameter"><code>ifname_prefix</code></em>
+ as it may not be the case.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-add-link-finish" title="mbim_device_add_link_finish ()"><code class="function">mbim_device_add_link_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-add-link.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>session_id</p></td>
+<td class="parameter_description"><p>the session id for the link, in the
+[<a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-MIN:CAPS" title="MBIM_DEVICE_SESSION_ID_MIN"><span class="type">MBIM_DEVICE_SESSION_ID_MIN</span></a>,<a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-MAX:CAPS" title="MBIM_DEVICE_SESSION_ID_MAX"><span class="type">MBIM_DEVICE_SESSION_ID_MAX</span></a>] range, or
+<a class="link" href="MbimDevice.html#MBIM-DEVICE-SESSION-ID-AUTOMATIC:CAPS" title="MBIM_DEVICE_SESSION_ID_AUTOMATIC"><span class="type">MBIM_DEVICE_SESSION_ID_AUTOMATIC</span></a> to find the first available session id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_ifname</p></td>
+<td class="parameter_description"><p>the interface which the new link will be created on.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ifname_prefix</p></td>
+<td class="parameter_description"><p>the prefix suggested to be used for the name of the new link
+created.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-add-link-finish"></a><h3>mbim_device_add_link_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mbim_device_add_link_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *session_id</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MbimDevice.html#mbim-device-add-link" title="mbim_device_add_link ()"><code class="function">mbim_device_add_link()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-add-link-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>session_id</p></td>
+<td class="parameter_description"><p>the session ID for the link created.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-add-link-finish.returns"></a><h4>Returns</h4>
+<p> The name of the net interface created, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-delete-link"></a><h3>mbim_device_delete_link ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_delete_link (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ifname</code></em>,
+                         <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously deletes a virtual network interface that has been previously
+created with <a class="link" href="MbimDevice.html#mbim-device-add-link" title="mbim_device_add_link ()"><code class="function">mbim_device_add_link()</code></a>.</p>
+<p>If the kernel driver doesn't allow this functionality, a
+<a class="link" href="libmbim-glib-Errors.html#MBIM-CORE-ERROR-UNSUPPORTED:CAPS"><code class="literal">MBIM_CORE_ERROR_UNSUPPORTED</code></a> error will be returned.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-delete-link-finish" title="mbim_device_delete_link_finish ()"><code class="function">mbim_device_delete_link_finish()</code></a> to get the result of the operation.</p>
+<div class="refsect3">
+<a name="mbim-device-delete-link.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ifname</p></td>
+<td class="parameter_description"><p>the name of the link to remove.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-delete-link-finish"></a><h3>mbim_device_delete_link_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_delete_link_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MbimDevice.html#mbim-device-delete-link" title="mbim_device_delete_link ()"><code class="function">mbim_device_delete_link()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-delete-link-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-delete-link-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-delete-all-links"></a><h3>mbim_device_delete_all_links ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+mbim_device_delete_all_links (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_ifname</code></em>,
+                              <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                              <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously deletes all virtual network interfaces that have been previously
+created with <a class="link" href="MbimDevice.html#mbim-device-add-link" title="mbim_device_add_link ()"><code class="function">mbim_device_add_link()</code></a> in <em class="parameter"><code>base_ifname</code></em>
+.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="MbimDevice.html#mbim-device-delete-link-finish" title="mbim_device_delete_link_finish ()"><code class="function">mbim_device_delete_link_finish()</code></a> to get the result of the operation.</p>
+<div class="note"><p>
+There is no guarantee that other processes haven't created new links by the
+time this method returns. This method should be used with caution, or in setups
+where only one single process is expected to do MBIM network interface link
+management.
+</p></div>
+<div class="refsect3">
+<a name="mbim-device-delete-all-links.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_ifname</p></td>
+<td class="parameter_description"><p>the interface where all links are available.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the operation is finished.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>the data to pass to callback function.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mbim-device-delete-all-links-finish"></a><h3>mbim_device_delete_all_links_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+mbim_device_delete_all_links_finish (<em class="parameter"><code><a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self</code></em>,
+                                     <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="MbimDevice.html#mbim-device-delete-all-links" title="mbim_device_delete_all_links ()"><code class="function">mbim_device_delete_all_links()</code></a>.</p>
+<div class="refsect3">
+<a name="mbim-device-delete-all-links-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mbim-device-delete-all-links-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if successful, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MBIM-DEVICE-FILE:CAPS"></a><h3>MBIM_DEVICE_FILE</h3>
+<pre class="programlisting">#define MBIM_DEVICE_FILE "device-file"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice--device-file" title="The “device-file” property"><span class="type">“device-file”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-IN-SESSION:CAPS"></a><h3>MBIM_DEVICE_IN_SESSION</h3>
+<pre class="programlisting">#define MBIM_DEVICE_IN_SESSION "device-in-session"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice--device-in-session" title="The “device-in-session” property"><span class="type">“device-in-session”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-TRANSACTION-ID:CAPS"></a><h3>MBIM_DEVICE_TRANSACTION_ID</h3>
+<pre class="programlisting">#define MBIM_DEVICE_TRANSACTION_ID "device-transaction-id"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice--device-transaction-id" title="The “device-transaction-id” property"><span class="type">“device-transaction-id”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-CONSECUTIVE-TIMEOUTS:CAPS"></a><h3>MBIM_DEVICE_CONSECUTIVE_TIMEOUTS</h3>
+<pre class="programlisting">#define MBIM_DEVICE_CONSECUTIVE_TIMEOUTS "device-consecutive-timeouts"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice--device-consecutive-timeouts" title="The “device-consecutive-timeouts” property"><span class="type">“device-consecutive-timeouts”</span></a> property.</p>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SIGNAL-REMOVED:CAPS"></a><h3>MBIM_DEVICE_SIGNAL_REMOVED</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SIGNAL_REMOVED "device-removed"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice-device-removed" title="The “device-removed” signal"><span class="type">“device-removed”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SIGNAL-INDICATE-STATUS:CAPS"></a><h3>MBIM_DEVICE_SIGNAL_INDICATE_STATUS</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SIGNAL_INDICATE_STATUS "device-indicate-status"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice-device-indicate-status" title="The “device-indicate-status” signal"><span class="type">“device-indicate-status”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SIGNAL-ERROR:CAPS"></a><h3>MBIM_DEVICE_SIGNAL_ERROR</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SIGNAL_ERROR "device-error"
+</pre>
+<p>Symbol defining the <a class="link" href="MbimDevice.html#MbimDevice-device-error" title="The “device-error” signal"><span class="type">“device-error”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice-struct"></a><h3>struct MbimDevice</h3>
+<pre class="programlisting">struct MbimDevice;</pre>
+<p>The <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDeviceOpenFlags"></a><h3>enum MbimDeviceOpenFlags</h3>
+<p>Flags to specify which actions to be performed when the device is open.</p>
+<div class="refsect3">
+<a name="MbimDeviceOpenFlags.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-DEVICE-OPEN-FLAGS-NONE:CAPS"></a>MBIM_DEVICE_OPEN_FLAGS_NONE</p></td>
+<td class="enum_member_description">
+<p>None.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-DEVICE-OPEN-FLAGS-PROXY:CAPS"></a>MBIM_DEVICE_OPEN_FLAGS_PROXY</p></td>
+<td class="enum_member_description">
+<p>Try to open the port through the 'mbim-proxy'.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V2:CAPS"></a>MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V2</p></td>
+<td class="enum_member_description">
+<p>Try to enable MS MBIMEx 2.0 support. Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="MBIM-DEVICE-OPEN-FLAGS-MS-MBIMEX-V3:CAPS"></a>MBIM_DEVICE_OPEN_FLAGS_MS_MBIMEX_V3</p></td>
+<td class="enum_member_description">
+<p>Try to enable MS MBIMEx 3.0 support. Since 1.28.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SESSION-ID-AUTOMATIC:CAPS"></a><h3>MBIM_DEVICE_SESSION_ID_AUTOMATIC</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SESSION_ID_AUTOMATIC G_MAXUINT
+</pre>
+<p>Symbol defining a session id that will be automatically allocated during
+runtime when creating net links.</p>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SESSION-ID-MIN:CAPS"></a><h3>MBIM_DEVICE_SESSION_ID_MIN</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SESSION_ID_MIN 0
+</pre>
+<p>Symbol defining the minimum supported session id..</p>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MBIM-DEVICE-SESSION-ID-MAX:CAPS"></a><h3>MBIM_DEVICE_SESSION_ID_MAX</h3>
+<pre class="programlisting">#define MBIM_DEVICE_SESSION_ID_MAX 0xFF
+</pre>
+<p>Symbol defining the maximum supported session id.</p>
+<p class="since">Since: <a class="link" href="api-index-1-26.html#api-index-1.26">1.26</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MbimDevice--device-consecutive-timeouts"></a><h3>The <code class="literal">“device-consecutive-timeouts”</code> property</h3>
+<pre class="programlisting">  “device-consecutive-timeouts” <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of consecutive timeouts detected in requests sent to the device.</p>
+<p>Owner: MbimDevice</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-1-28.html#api-index-1.28">1.28</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice--device-file"></a><h3>The <code class="literal">“device-file”</code> property</h3>
+<pre class="programlisting">  “device-file”              <a href="../gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *</pre>
+<p>File to the underlying MBIM device.</p>
+<p>Owner: MbimDevice</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice--device-in-session"></a><h3>The <code class="literal">“device-in-session”</code> property</h3>
+<pre class="programlisting">  “device-in-session”        <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Flag to specify if the device is within a session.</p>
+<p>Owner: MbimDevice</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: <a class="link" href="api-index-1-4.html#api-index-1.4">1.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice--device-transaction-id"></a><h3>The <code class="literal">“device-transaction-id”</code> property</h3>
+<pre class="programlisting">  “device-transaction-id”    <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Current transaction ID.</p>
+<p>Owner: MbimDevice</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 1</p>
+<p class="since">Since: <a class="link" href="api-index-1-2.html#api-index-1.2">1.2</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MbimDevice.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MbimDevice-device-error"></a><h3>The <code class="literal">“device-error”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self,
+               <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>     *message,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>    user_data)</pre>
+<p>The ::device-error signal is emitted when a MBIM error is received.</p>
+<div class="refsect3">
+<a name="MbimDevice-device-error.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> error</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice-device-indicate-status"></a><h3>The <code class="literal">“device-indicate-status”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a>  *self,
+               <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> *message,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>The ::device-indication-status signal is emitted when a MBIM indication is received.</p>
+<div class="refsect3">
+<a name="MbimDevice-device-indicate-status.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimMessage.html" title="MbimMessage"><span class="type">MbimMessage</span></a> indication</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MbimDevice-device-removed"></a><h3>The <code class="literal">“device-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>    user_data)</pre>
+<p>The ::device-removed signal is emitted when an unexpected port hang-up is received.</p>
+<div class="refsect3">
+<a name="MbimDevice-device-removed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="MbimDevice.html" title="MbimDevice"><span class="type">MbimDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>None</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

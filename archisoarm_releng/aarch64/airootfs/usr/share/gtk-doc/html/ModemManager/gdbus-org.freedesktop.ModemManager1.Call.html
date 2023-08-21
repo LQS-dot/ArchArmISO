@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.ModemManager1.Call: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-dbus-object-call.html" title="The /org/freedesktop/ModemManager/Calls objects">
+<link rel="prev" href="ref-dbus-object-call.html" title="The /org/freedesktop/ModemManager/Calls objects">
+<link rel="next" href="ref-migrating.html" title="Part V. Migrating from ModemManager 0.6 to ModemManager 1.0">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Call.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Call.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.ModemManager1.Call.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-dbus-object-call.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ref-dbus-object-call.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-migrating.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.ModemManager1.Call"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-ModemManager1-Call.top_of_page"></a>org.freedesktop.ModemManager1.Call</span></h2>
+<p>org.freedesktop.ModemManager1.Call — The ModemManager Call interface.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.Start" title="The Start() method">Start</a>           ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.Accept" title="The Accept() method">Accept</a>          ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.Deflect" title="The Deflect() method">Deflect</a>         (IN  s number);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.JoinMultiparty" title="The JoinMultiparty() method">JoinMultiparty</a>  ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.LeaveMultiparty" title="The LeaveMultiparty() method">LeaveMultiparty</a> ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.Hangup" title="The Hangup() method">Hangup</a>          ();
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-method-org-freedesktop-ModemManager1-Call.SendDtmf" title="The SendDtmf() method">SendDtmf</a>        (IN  s dtmf);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.9.3.4"></a><h2>Signals</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-signal-org-freedesktop-ModemManager1-Call.DtmfReceived" title='The "DtmfReceived" signal'>DtmfReceived</a> (s dtmf);
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-signal-org-freedesktop-ModemManager1-Call.StateChanged" title='The "StateChanged" signal'>StateChanged</a> (i old,
+              i new,
+              u reason);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.5.9.3.5"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.State" title='The "State" property'>State</a>        readable   i
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.StateReason" title='The "StateReason" property'>StateReason</a>  readable   i
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.Direction" title='The "Direction" property'>Direction</a>    readable   i
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.Number" title='The "Number" property'>Number</a>       readable   s
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.Multiparty" title='The "Multiparty" property'>Multiparty</a>   readable   b
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.AudioPort" title='The "AudioPort" property'>AudioPort</a>    readable   s
+<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.AudioFormat" title='The "AudioFormat" property'>AudioFormat</a>  readable   a{sv}
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-ModemManager1-Call"></a><h2>Description</h2>
+<p>
+The Call interface Defines operations and properties of a single Call.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.ModemManager1.Call"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.Start"></a><h3>The Start() method</h3>
+<pre class="programlisting">
+Start ();
+</pre>
+<p>
+If the outgoing call has not yet been started, start it.
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-UNKNOWN:CAPS"><code class="constant">MM_CALL_STATE_UNKNOWN</code></a> and direction is
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-DIRECTION-OUTGOING:CAPS"><code class="constant">MM_CALL_DIRECTION_OUTGOING</code></a>.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.Accept"></a><h3>The Accept() method</h3>
+<pre class="programlisting">
+Accept ();
+</pre>
+<p>
+Accept incoming call (answer).
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-RINGING-IN:CAPS"><code class="constant">MM_CALL_STATE_RINGING_IN</code></a> and direction is
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-DIRECTION-INCOMING:CAPS"><code class="constant">MM_CALL_DIRECTION_INCOMING</code></a>.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.Deflect"></a><h3>The Deflect() method</h3>
+<pre class="programlisting">
+Deflect (IN  s number);
+</pre>
+<p>
+Deflect an incoming or waiting call to a new number. This call will be
+considered terminated once the deflection is performed.
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-RINGING-IN:CAPS"><code class="constant">MM_CALL_STATE_RINGING_IN</code></a> or
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-WAITING:CAPS"><code class="constant">MM_CALL_STATE_WAITING</code></a> and direction is
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-DIRECTION-INCOMING:CAPS"><code class="constant">MM_CALL_DIRECTION_INCOMING</code></a>.
+</p>
+<p>
+Since: 1.12
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>number</code></em></code>:</span></p></td>
+<td><p>
+new number where the call will be deflected.
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.JoinMultiparty"></a><h3>The JoinMultiparty() method</h3>
+<pre class="programlisting">
+JoinMultiparty ();
+</pre>
+<p>
+Join the currently held call into a single multiparty call with another
+already active call.
+</p>
+<p>
+The calls will be flagged with the
+'<a class="link" href="gdbus-org.freedesktop.ModemManager1.Call.html#gdbus-property-org-freedesktop-ModemManager1-Call.Multiparty" title='The "Multiparty" property'>Multiparty</a>'
+property while they are part of the multiparty call.
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-HELD:CAPS"><code class="constant">MM_CALL_STATE_HELD</code></a>.
+</p>
+<p>
+Since: 1.12
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.LeaveMultiparty"></a><h3>The LeaveMultiparty() method</h3>
+<pre class="programlisting">
+LeaveMultiparty ();
+</pre>
+<p>
+If this call is part of an ongoing multiparty call, detach it from the multiparty call,
+put the multiparty call on hold, and activate this one alone. This operation makes this
+call private again between both ends of the call.
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-ACTIVE:CAPS"><code class="constant">MM_CALL_STATE_ACTIVE</code></a> or
+<a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-HELD:CAPS"><code class="constant">MM_CALL_STATE_HELD</code></a> and
+the call is a multiparty call.
+</p>
+<p>
+Since: 1.12
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.Hangup"></a><h3>The Hangup() method</h3>
+<pre class="programlisting">
+Hangup ();
+</pre>
+<p>
+Hangup the active call.
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-UNKNOWN:CAPS"><code class="constant">MM_CALL_STATE_UNKNOWN</code></a>.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-ModemManager1-Call.SendDtmf"></a><h3>The SendDtmf() method</h3>
+<pre class="programlisting">
+SendDtmf (IN  s dtmf);
+</pre>
+<p>
+Send a DTMF tone (Dual Tone Multi-Frequency) (only on supported modem).
+</p>
+<p>
+Applicable only if state is <a class="link" href="ModemManager-Flags-and-Enumerations.html#MM-CALL-STATE-ACTIVE:CAPS"><code class="constant">MM_CALL_STATE_ACTIVE</code></a>.
+</p>
+<p>
+Since: 1.6
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>dtmf</code></em></code>:</span></p></td>
+<td><p>
+DTMF tone identifier [0-9A-D*#].
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-signals-org.freedesktop.ModemManager1.Call"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="gdbus-signal-org-freedesktop-ModemManager1-Call.DtmfReceived"></a><h3>The "DtmfReceived" signal</h3>
+<pre class="programlisting">
+DtmfReceived (s dtmf);
+</pre>
+<p>
+Emitted when a DTMF tone is received (only on supported modem)
+</p>
+<p>
+Since: 1.6
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">s <em class="parameter"><code>dtmf</code></em></code>:</span></p></td>
+<td><p>
+DTMF tone identifier [0-9A-D*#].
+</p></td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-signal-org-freedesktop-ModemManager1-Call.StateChanged"></a><h3>The "StateChanged" signal</h3>
+<pre class="programlisting">
+StateChanged (i old,
+              i new,
+              u reason);
+</pre>
+<p>
+Emitted when call changes state
+</p>
+<p>
+Since: 1.6
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">i <em class="parameter"><code>old</code></em></code>:</span></p></td>
+<td><p>
+Old state MMCallState
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">i <em class="parameter"><code>new</code></em></code>:</span></p></td>
+<td><p>
+New state MMCallState
+</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">u <em class="parameter"><code>reason</code></em></code>:</span></p></td>
+<td><p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMCallStateReason" title="enum MMCallStateReason">MMCallStateReason</a> value, specifying the reason for this state change.
+</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.ModemManager1.Call"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.State"></a><h3>The "State" property</h3>
+<pre class="programlisting">
+State  readable   i
+</pre>
+<p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMCallState" title="enum MMCallState">MMCallState</a> value,
+describing the state of the call.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.StateReason"></a><h3>The "StateReason" property</h3>
+<pre class="programlisting">
+StateReason  readable   i
+</pre>
+<p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMCallStateReason" title="enum MMCallStateReason">MMCallStateReason</a> value, describing why the state is changed.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.Direction"></a><h3>The "Direction" property</h3>
+<pre class="programlisting">
+Direction  readable   i
+</pre>
+<p>
+A <a class="link" href="ModemManager-Flags-and-Enumerations.html#MMCallDirection" title="enum MMCallDirection">MMCallDirection</a> value,
+describing the direction of the call.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.Number"></a><h3>The "Number" property</h3>
+<pre class="programlisting">
+Number  readable   s
+</pre>
+<p>
+The remote phone number.
+</p>
+<p>
+Since: 1.6
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.Multiparty"></a><h3>The "Multiparty" property</h3>
+<pre class="programlisting">
+Multiparty  readable   b
+</pre>
+<p>
+Whether the call is currently part of a multiparty conference call.
+</p>
+<p>
+Since: 1.12
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.AudioPort"></a><h3>The "AudioPort" property</h3>
+<pre class="programlisting">
+AudioPort  readable   s
+</pre>
+<p>
+If call audio is routed via the host, the name of the kernel device that
+provides the audio.  For example, with certain Huawei USB modems, this
+property might be "ttyUSB2" indicating audio is available via ttyUSB2 in
+the format described by the AudioFormat property.
+</p>
+<p>
+Since: 1.10
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-ModemManager1-Call.AudioFormat"></a><h3>The "AudioFormat" property</h3>
+<pre class="programlisting">
+AudioFormat  readable   a{sv}
+</pre>
+<p>
+If call audio is routed via the host, a description of the audio format
+supported by the audio port.
+</p>
+<p>
+This property may include the following items:
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">"encoding"</code></span></p></td>
+<td>
+The audio encoding format.  For example, "pcm" for PCM audio.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"resolution"</code></span></p></td>
+<td>
+The sampling precision and its encoding format. For example,
+"s16le" for signed 16-bit little-endian samples.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">"rate"</code></span></p></td>
+<td>
+The sampling rate as an unsigned integer.  For example, 8000 for
+8000hz.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p>
+Since: 1.10
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Command line pskctool: PSKC Library (libpskc) Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="PSKC Library (libpskc) Manual">
+<link rel="up" href="pskc-tutorial.html" title="Part I. PSKC Tutorial">
+<link rel="prev" href="pskc-tutorial-libpskc-create.html" title="Create PSKC data">
+<link rel="next" href="pskc-tutorial-pskctool-validate.html" title="Validate PSKC against XML Schema">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pskc-tutorial.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pskc-tutorial-libpskc-create.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pskc-tutorial-pskctool-validate.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="pskc-tutorial-pskctool"></a>Command line pskctool</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="pskc-tutorial-pskctool.html#pskc-tutorial-pskctool-parse">Parse and print summary of PSKC data</a></span></dt>
+<dt><span class="section"><a href="pskc-tutorial-pskctool-validate.html">Validate PSKC against XML Schema</a></span></dt>
+<dt><span class="section"><a href="pskc-tutorial-pskctool-sign.html">Digitally sign PSKC data</a></span></dt>
+<dt><span class="section"><a href="pskc-tutorial-pskctool-verify.html">Verify digitally signed PSKC data</a></span></dt>
+</dl></div>
+<p>
+	To simplify working with PSKC data a command line tool is also
+	provided, called "pskctool".  When invoked without parameters,
+	it will print some instructions describing what it does and
+	the parameters it accepts.
+      </p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></td>
+        <td class="listing_code"><pre class="programlisting">Usage<span class="gtkdoc opt">:</span> pskctool <span class="gtkdoc opt">[</span>OPTION<span class="gtkdoc opt">]... [</span><span class="gtkdoc kwb">FILE</span><span class="gtkdoc opt">]...</span>
+Manipulate Portable Symmetric Key <span class="function">Container</span> <span class="gtkdoc opt">(</span>PSKC<span class="gtkdoc opt">)</span> data<span class="gtkdoc opt">.</span>
+
+This tool allows you to parse<span class="gtkdoc opt">,</span> print<span class="gtkdoc opt">,</span> validate<span class="gtkdoc opt">,</span> sign <span class="keyword">and</span> verify PSKC data<span class="gtkdoc opt">.</span>  The
+input is provided in <span class="gtkdoc kwb">FILE</span> <span class="keyword">or</span> on standard input<span class="gtkdoc opt">.</span>
+
+  <span class="gtkdoc opt">-</span>h<span class="gtkdoc opt">, --</span>help             Print help <span class="keyword">and</span> exit
+  <span class="gtkdoc opt">-</span>V<span class="gtkdoc opt">, --</span>version          Print version <span class="keyword">and</span> exit
+      <span class="gtkdoc opt">--</span>strict           Fail hard on PSKC parse <span class="function">error</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+  <span class="gtkdoc opt">-</span>d<span class="gtkdoc opt">, --</span>debug            Show debug messages on <span class="function">stderr</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+  <span class="gtkdoc opt">-</span>q<span class="gtkdoc opt">, --</span>quiet            Quiet <span class="function">operation</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+  <span class="gtkdoc opt">-</span>v<span class="gtkdoc opt">, --</span>verbose          Produce more <span class="function">output</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+
+Selecting one of the following modes is required<span class="gtkdoc opt">:</span>
+
+ Mode<span class="gtkdoc opt">:</span> info
+  <span class="gtkdoc opt">-</span>i<span class="gtkdoc opt">, --</span>info             Parse <span class="keyword">and</span> print human readable summary of PSKC input
+                           <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+
+ Mode<span class="gtkdoc opt">:</span> validate
+  <span class="gtkdoc opt">-</span>e<span class="gtkdoc opt">, --</span>validate         Validate PSKC input against XML <span class="function">Schema</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+
+ Mode<span class="gtkdoc opt">:</span> sign
+  Digitally sign PSKC data
+      <span class="gtkdoc opt">--</span>sign             Sign PSKC <span class="function">input</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+      <span class="gtkdoc opt">--</span>sign<span class="gtkdoc opt">-</span>key<span class="gtkdoc opt">=</span><span class="gtkdoc kwb">FILE</span>    Private key to sign with
+      <span class="gtkdoc opt">--</span>sign<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">=</span><span class="gtkdoc kwb">FILE</span>    X<span class="number">.509</span> certificate to sign with
+
+ Mode<span class="gtkdoc opt">:</span> verify
+  Verify digitally <span class="gtkdoc kwb">signed</span> PSKC data
+      <span class="gtkdoc opt">--</span>verify           Verify <span class="gtkdoc kwb">signed</span> PSKC <span class="function">input</span>  <span class="gtkdoc opt">(</span><span class="keyword">default</span><span class="gtkdoc opt">=</span>off<span class="gtkdoc opt">)</span>
+      <span class="gtkdoc opt">--</span>verify<span class="gtkdoc opt">-</span>crt<span class="gtkdoc opt">=</span><span class="gtkdoc kwb">FILE</span>  Trusted X<span class="number">.509</span> certificate <span class="keyword">for</span> verification
+
+Report bugs to<span class="gtkdoc opt">:</span> oath<span class="gtkdoc opt">-</span>toolkit<span class="gtkdoc opt">-</span>help&#64;nongnu<span class="gtkdoc opt">.</span>org
+pskctool home page<span class="gtkdoc opt">: &lt;</span>https<span class="gtkdoc opt">:</span><span class="gtkdoc slc">//www.nongnu.org/oath-toolkit/&gt;</span>
+General help <span class="keyword">using</span> GNU software<span class="gtkdoc opt">: &lt;</span>https<span class="gtkdoc opt">:</span><span class="gtkdoc slc">//www.gnu.org/gethelp/&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	As you can see, the pskctool have a few different modes: info,
+	validate, sign and verify.  We describe each of them in the
+	next few sections.
+      </p>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="pskc-tutorial-pskctool-parse"></a>Parse and print summary of PSKC data</h2></div></div></div>
+<p>
+	  The most common parameter to use is --info (-i) to parse and
+	  print a human readable summary of PSKC data.  This step is
+	  also known as "pretty printing" the PSKC data.  A filename
+	  can be supplied to have the tool read PSKC data from that
+	  file, or if no filename is supplied, the tool will read from
+	  standard input.  To illustrate how the tool works, we will
+	  assume the following PSKC data is available in a file
+	  "pskc.xml".
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">&lt;?</span>xml version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span> encoding<span class="gtkdoc opt">=</span><span class="string">&quot;UTF-8&quot;</span><span class="gtkdoc opt">?&gt;</span>
+<span class="gtkdoc opt">&lt;</span>KeyContainer Version<span class="gtkdoc opt">=</span><span class="string">&quot;1.0&quot;</span>
+	      xmlns<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc&quot;</span><span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Manufacturer<span class="gtkdoc opt">&gt;</span>Manufacturer<span class="gtkdoc opt">&lt;/</span>Manufacturer<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>SerialNo<span class="gtkdoc opt">&gt;</span><span class="number">987654321</span><span class="gtkdoc opt">&lt;/</span>SerialNo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>DeviceInfo<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;</span>Key Id<span class="gtkdoc opt">=</span><span class="string">&quot;12345678&quot;</span>
+         Algorithm<span class="gtkdoc opt">=</span><span class="string">&quot;urn:ietf:params:xml:ns:keyprov:pskc:hotp&quot;</span><span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>ResponseFormat Length<span class="gtkdoc opt">=</span><span class="string">&quot;8&quot;</span> Encoding<span class="gtkdoc opt">=</span><span class="string">&quot;DECIMAL&quot;</span><span class="gtkdoc opt">/&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>AlgorithmParameters<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;</span>Data<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Secret<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span>MTIzNDU2Nzg5MDEyMzQ1Njc4OTA<span class="gtkdoc opt">=</span>
+          <span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Secret<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;</span>Counter<span class="gtkdoc opt">&gt;</span>
+          <span class="gtkdoc opt">&lt;</span>PlainValue<span class="gtkdoc opt">&gt;</span><span class="number">0</span><span class="gtkdoc opt">&lt;/</span>PlainValue<span class="gtkdoc opt">&gt;</span>
+        <span class="gtkdoc opt">&lt;/</span>Counter<span class="gtkdoc opt">&gt;</span>
+      <span class="gtkdoc opt">&lt;/</span>Data<span class="gtkdoc opt">&gt;</span>
+    <span class="gtkdoc opt">&lt;/</span>Key<span class="gtkdoc opt">&gt;</span>
+  <span class="gtkdoc opt">&lt;/</span>KeyPackage<span class="gtkdoc opt">&gt;</span>
+<span class="gtkdoc opt">&lt;/</span>KeyContainer<span class="gtkdoc opt">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  Running the tool with the --info parameter, i.e., "pskctool
+	  --info pskc.xml" will produce a human readable variant of
+	  the PSKC data.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td>
+        <td class="listing_code"><pre class="programlisting">Portable Symmetric Key <span class="function">Container</span> <span class="gtkdoc opt">(</span>PSKC<span class="gtkdoc opt">):</span>
+	Version<span class="gtkdoc opt">:</span> <span class="number">1.0</span>
+	Signed<span class="gtkdoc opt">:</span> NO
+	KeyPackage <span class="number">0</span><span class="gtkdoc opt">:</span>
+		DeviceInfo<span class="gtkdoc opt">:</span>
+			Manufacturer<span class="gtkdoc opt">:</span> Manufacturer
+			SerialNo<span class="gtkdoc opt">:</span> <span class="number">987654321</span>
+		Key<span class="gtkdoc opt">:</span>
+			Id<span class="gtkdoc opt">:</span> <span class="number">12345678</span>
+			Algorithm<span class="gtkdoc opt">:</span> urn<span class="gtkdoc opt">:</span>ietf<span class="gtkdoc opt">:</span>params<span class="gtkdoc opt">:</span>xml<span class="gtkdoc opt">:</span>ns<span class="gtkdoc opt">:</span>keyprov<span class="gtkdoc opt">:</span>pskc<span class="gtkdoc opt">:</span>hotp
+			Key <span class="function">Secret</span> <span class="gtkdoc opt">(</span>base64<span class="gtkdoc opt">):</span> MTIzNDU2Nzg5MDEyMzQ1Njc4OTA<span class="gtkdoc opt">=</span>
+			Key Counter<span class="gtkdoc opt">:</span> <span class="number">0</span>
+			Response Format Length<span class="gtkdoc opt">:</span> <span class="number">8</span>
+			Response Format Encoding<span class="gtkdoc opt">:</span> DECIMAL</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  If the --verbose (-v) parameter is given, the tool will also
+	  print an indented version of the XML structure.  Note that
+	  this will invalidate any digital signatures on the PSKC
+	  data.  Thus, this is normally only useful to simplify human
+	  reading of the XML code of an PSKC file.  The output will
+	  also contain the human readable summary, but you may use
+	  --quiet (-q) to suppress that part.  Together, the
+	  combination of --verbose and --quiet can be used in batch
+	  jobs to indent PSKC data (but beware that this breaks any
+	  signatures).
+	</p>
+<p>
+	  In some situations when using pskctool --info the tool may
+	  print a warning about unsupported elements.  The --debug
+	  parameter can be used in these situations to get more
+	  information about the source of the problem.  For example,
+	  running "pskctool --info --debug --quiet" on the data in
+	  figure 6 of RFC 6030 will currently yield the following
+	  output on stderr.
+	</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting">debug<span class="gtkdoc opt">:</span> unknown <span class="gtkdoc opt">&lt;</span>KeyContainer<span class="gtkdoc opt">&gt;</span> element <span class="gtkdoc opt">&lt;</span>EncryptionKey<span class="gtkdoc opt">&gt;</span>
+debug<span class="gtkdoc opt">:</span> unknown <span class="gtkdoc opt">&lt;</span>KeyContainer<span class="gtkdoc opt">&gt;</span> element <span class="gtkdoc opt">&lt;</span>MACMethod<span class="gtkdoc opt">&gt;</span>
+debug<span class="gtkdoc opt">:</span> non<span class="gtkdoc opt">-</span>compliant Manufacturer value<span class="gtkdoc opt">:</span> Manufacturer
+debug<span class="gtkdoc opt">:</span> unknown <span class="gtkdoc opt">&lt;</span>Secret<span class="gtkdoc opt">&gt;</span> element <span class="gtkdoc opt">&lt;</span>EncryptedValue<span class="gtkdoc opt">&gt;</span>
+debug<span class="gtkdoc opt">:</span> unknown <span class="gtkdoc opt">&lt;</span>Secret<span class="gtkdoc opt">&gt;</span> element <span class="gtkdoc opt">&lt;</span>ValueMAC<span class="gtkdoc opt">&gt;</span>
+warning<span class="gtkdoc opt">:</span> parse <span class="function">error</span> <span class="gtkdoc opt">(</span>use <span class="gtkdoc opt">-</span>d to diagnose<span class="gtkdoc opt">),</span> output may be incomplete</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+	  Even when noticing a problem, the tool continue with the
+	  parsing and will eventually print the information it managed
+	  to parse.  In some situations (e.g., batch jobs) you would
+	  prefer the tool to signal this error.  The --strict
+	  parameter can be used to make the tool fail when there is a
+	  parse error.
+	</p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

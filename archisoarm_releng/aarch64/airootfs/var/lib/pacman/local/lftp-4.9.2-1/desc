@@ -1,0 +1,47 @@
+%NAME%
+lftp
+
+%VERSION%
+4.9.2-1
+
+%BASE%
+lftp
+
+%DESC%
+Sophisticated command line based FTP client
+
+%URL%
+https://lftp.yar.ru/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1598218598
+
+%INSTALLDATE%
+1691208534
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+2382369
+
+%LICENSE%
+GPL3
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+gcc-libs
+readline
+gnutls
+expat
+sh
+hicolor-icon-theme
+
+%OPTDEPENDS%
+perl: needed for convert-netscape-cookies and verify-file
+

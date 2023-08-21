@@ -1,0 +1,32 @@
+libudffs
+	Ben Fennema
+	Pali Rohár <pali.rohar@gmail.com>
+
+mkudffs
+	Ben Fennema
+	Pali Rohár <pali.rohar@gmail.com>
+	Steve Kenton <skenton@ou.edu>
+
+udfinfo
+	Pali Rohár <pali.rohar@gmail.com>
+
+udflabel
+	Pali Rohár <pali.rohar@gmail.com>
+
+cdrwtool
+	Jens Axboe <axboe@suse.de>
+	Ben Fennema
+
+pktsetup
+	Jens Axboe <axboe@suse.de>
+	Pali Rohár <pali.rohar@gmail.com>
+
+wrudf
+	Enno Fennema <e.fennema@dataweb.nl>
+	Pali Rohár <pali.rohar@gmail.com>
+
+doc
+	Paul Thompson <set@pobox.com>
+	Ben Fennema
+	Pali Rohár <pali.rohar@gmail.com>
+	Steve Kenton <skenton@ou.edu>

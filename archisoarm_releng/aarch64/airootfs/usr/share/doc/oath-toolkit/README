@@ -1,0 +1,51 @@
+Copyright (C) 2009-2021 Simon Josefsson.  Licensed under the GPLv3+.
+
+OATH Toolkit provide components to build one-time password
+authentication systems.  It contains shared C libraries, command line
+tools and a PAM module.  Supported technologies include the
+event-based HOTP algorithm (RFC 4226), the time-based TOTP algorithm
+(RFC 6238), and Portable Symmetric Key Container (PSKC, RFC 6030) to
+manage secret key data.  OATH stands for Open AuTHentication, which is
+the organization that specify the algorithms.
+
+The components included in the package is:
+
+  * liboath: A shared and static C library for OATH handling.
+
+  * oathtool: A command line tool for generating and validating OTPs.
+
+  * pam_oath: A PAM module for pluggable login authentication for OATH.
+
+  * libpskc: A shared and static C library for PSKC handling.
+
+  * pskctool: A command line tool for manipulating PSKC data.
+
+See each sub-directory for more information.
+
+The file INSTALL contains generic installation and configuration
+instructions, however briefly the typical process is:
+
+  ./configure
+  make check install
+
+If the builtin self-tests fail, you should report it as a bug and not
+install the software.
+
+The file HACKING contains information that is useful if you are
+building for version controlled sources.
+
+For updates on the project please visit our web sites:
+
+  https://www.nongnu.org/oath-toolkit/
+  https://savannah.nongnu.org/projects/oath-toolkit/
+  https://gitlab.com/oath-toolkit/oath-toolkit
+
+For e-mail discussions related the OATH Toolkit, please send e-mail to
+oath-toolkit-help@nongnu.org after subscribing to the mailing list
+through this web page:
+
+  https://lists.nongnu.org/mailman/listinfo/oath-toolkit-help
+
+Note that the OATH Toolkit project used to be called "HOTP Toolkit",
+and there are still references to the old project name elsewhere.
+Please help and change them to point at OATH Toolkit instead.

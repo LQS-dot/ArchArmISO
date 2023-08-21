@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Part II. Low level API: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="index.html" title="libmm-glib Reference Manual">
+<link rel="prev" href="MMCallAudioFormat.html" title="MMCallAudioFormat">
+<link rel="next" href="MmGdbusOrgFreedesktopModemManager1.html" title="MmGdbusOrgFreedesktopModemManager1">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
+<td><a accesskey="p" href="MMCallAudioFormat.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="MmGdbusOrgFreedesktopModemManager1.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="part">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.3"></a>Part II. Low level API</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="MmGdbusOrgFreedesktopModemManager1.html">MmGdbusOrgFreedesktopModemManager1</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1 D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusOrgFreedesktopModemManager1Proxy.html">MmGdbusOrgFreedesktopModemManager1Proxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusOrgFreedesktopModemManager1Skeleton.html">MmGdbusOrgFreedesktopModemManager1Skeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusObjectManagerClient.html">MmGdbusObjectManagerClient</a></span><span class="refpurpose"> — Generated GDBusObjectManagerClient type</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusObject.html">MmGdbusObject</a></span><span class="refpurpose"> — Specialized GDBusObject types</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusObjectProxy.html">MmGdbusObjectProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusObjectSkeleton.html">MmGdbusObjectSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem.html">MmGdbusModem</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemProxy.html">MmGdbusModemProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSkeleton.html">MmGdbusModemSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gpp.html">MmGdbusModem3gpp</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Modem3gpp D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppProxy.html">MmGdbusModem3gppProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppSkeleton.html">MmGdbusModem3gppSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppProfileManager.html">MmGdbusModem3gppProfileManager</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Modem3gpp.ProfileManager D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppProfileManagerProxy.html">MmGdbusModem3gppProfileManagerProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppProfileManagerSkeleton.html">MmGdbusModem3gppProfileManagerSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppUssd.html">MmGdbusModem3gppUssd</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Modem3gpp.Ussd D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppUssdProxy.html">MmGdbusModem3gppUssdProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModem3gppUssdSkeleton.html">MmGdbusModem3gppUssdSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemCdma.html">MmGdbusModemCdma</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.ModemCdma D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemCdmaProxy.html">MmGdbusModemCdmaProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemCdmaSkeleton.html">MmGdbusModemCdmaSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemLocation.html">MmGdbusModemLocation</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Location D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemLocationProxy.html">MmGdbusModemLocationProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemLocationSkeleton.html">MmGdbusModemLocationSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemMessaging.html">MmGdbusModemMessaging</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Messaging D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemMessagingProxy.html">MmGdbusModemMessagingProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemMessagingSkeleton.html">MmGdbusModemMessagingSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemTime.html">MmGdbusModemTime</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Time D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemTimeProxy.html">MmGdbusModemTimeProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemTimeSkeleton.html">MmGdbusModemTimeSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemFirmware.html">MmGdbusModemFirmware</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Firmware D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemFirmwareProxy.html">MmGdbusModemFirmwareProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemFirmwareSkeleton.html">MmGdbusModemFirmwareSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSignal.html">MmGdbusModemSignal</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Signal D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSignalProxy.html">MmGdbusModemSignalProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSignalSkeleton.html">MmGdbusModemSignalSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemOma.html">MmGdbusModemOma</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Oma D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemOmaProxy.html">MmGdbusModemOmaProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemOmaSkeleton.html">MmGdbusModemOmaSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemVoice.html">MmGdbusModemVoice</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Voice D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemVoiceProxy.html">MmGdbusModemVoiceProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemVoiceSkeleton.html">MmGdbusModemVoiceSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSar.html">MmGdbusModemSar</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Sar D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSarProxy.html">MmGdbusModemSarProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSarSkeleton.html">MmGdbusModemSarSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSimple.html">MmGdbusModemSimple</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Modem.Simple D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSimpleProxy.html">MmGdbusModemSimpleProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusModemSimpleSkeleton.html">MmGdbusModemSimpleSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusBearer.html">MmGdbusBearer</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Bearer D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusBearerProxy.html">MmGdbusBearerProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusBearerSkeleton.html">MmGdbusBearerSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSim.html">MmGdbusSim</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Sim D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSimProxy.html">MmGdbusSimProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSimSkeleton.html">MmGdbusSimSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSms.html">MmGdbusSms</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Sms D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSmsProxy.html">MmGdbusSmsProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusSmsSkeleton.html">MmGdbusSmsSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusCall.html">MmGdbusCall</a></span><span class="refpurpose"> — Generated C code for the org.freedesktop.ModemManager1.Call D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusCallProxy.html">MmGdbusCallProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MmGdbusCallSkeleton.html">MmGdbusCallSkeleton</a></span><span class="refpurpose"></span>
+</dt>
+</dl>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

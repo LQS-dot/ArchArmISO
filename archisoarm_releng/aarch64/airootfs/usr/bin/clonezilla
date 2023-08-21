@@ -1,0 +1,178 @@
+#!/bin/bash
+# License: GPL 
+# Author: Steven Shiau <steven _at_ nchc org tw>
+
+# Load DRBL setting and functions
+DRBL_SCRIPT_PATH="${DRBL_SCRIPT_PATH:-/usr/share/drbl}"
+
+. $DRBL_SCRIPT_PATH/sbin/drbl-conf-functions
+. /etc/drbl/drbl-ocs.conf
+. $DRBL_SCRIPT_PATH/sbin/ocs-functions
+
+# Load the config in ocs-live.conf. This is specially for Clonezilla live. It will overwrite some settings of /etc/drbl/drbl-ocs.conf, such as $DIA...
+[ -e "/etc/ocs/ocs-live.conf" ] && . /etc/ocs/ocs-live.conf
+
+# Default settings
+do_prep_ocsroot="yes"
+wait_before_exit="yes"
+# Default to show lite server/client menu
+show_lite_menu="yes"
+
+#
+check_if_root
+
+# functions
+USAGE() {
+    echo "Usage:"
+    echo "Run clonezilla:"
+    echo "$0 [OPTION]"
+    language_help_prompt_by_idx_no
+    dialog_like_prog_help_prompt
+    # Note! OCS_OPT should not use -s/-S/-a/-b/-z/0-6
+    # because: /sbin/init [ -a ] [ -s ] [ -b ] [ -z xxx ] [ 0123456Ss ]
+    echo " -k, --skip-prep-ocsroot  Skip preparing the clonezilla image home directory (assume it's ready), this is specially for device <-> image clone."
+    echo " -p, --postaction [choose|poweroff|reboot|command|CMD]     When save/restoration finishs, choose action in the client, poweroff, reboot (default), in command prompt or run CMD"
+    echo " -s, --skip-lite-menu  Do not show live-server and lite-client in the dialog menu."
+    echo "Ex. $0 -l en"
+} # end of USAGE
+#
+lite_related_menu_dia_des() {
+  lite_server_msg_1="lite-server"
+  lite_server_msg_2="$(rep_whspc_w_udrsc "$msg_clonezilla_live_lite_server")"
+  lite_client_msg_1="lite-client"
+  lite_client_msg_2="$(rep_whspc_w_udrsc "$msg_clonezilla_live_lite_client")"
+} # end of lite_related_menu_dia_des
+#
+ocs_interactive() {
+  local TMP
+  TMP="$(mktemp /tmp/ocsmenu.XXXXXX)"
+  trap "[ -f "$TMP" ] && rm -f $TMP" HUP INT QUIT TERM EXIT
+  
+  if [ -z "$ocs_live_type" ]; then
+    $DIA --backtitle "$msg_nchc_free_software_labs" \
+    --title "$msg_nchc_clonezilla" \
+    --menu "$msg_clonezilla_is_free_and_no_warranty \n$msg_hint_multiple_choice_select_by_space \n$msg_device_image_device_clone. \n$msg_lite_server_and_client_are_provided \n$msg_choose_mode:" \
+    0 0 0 $DIA_ESC \
+    "device-image"         "$msg_device_image_clone" \
+    "device-device"        "$msg_device_device_clone" \
+    "remote-source"        "$msg_remote_clone_source" \
+    "remote-dest"          "$msg_remote_clone_destination" \
+    $lite_server_msg_1      $lite_server_msg_2 \
+    $lite_client_msg_1      $lite_client_msg_2 \
+    2> $TMP
+    ocs_live_type="$(cat $TMP)"
+    [ -f "$TMP" ] && rm -f $TMP
+    if [ -n "$ocs_live_type" ]; then
+      echo "Clonezilla mode is $ocs_live_type"
+    else
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
+      echo "Clone mode is not selected!!!"
+      [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
+      echo "$msg_program_stop!"
+      echo -n "Press Enter to exit..."
+      read
+      exit 1
+    fi
+  fi
+  case "$ocs_live_type" in
+    device-image|device-device|remote-source|remote-dest|lite-server|lite-client) true;;
+    *) 
+       echo "\"$ocs_live_type\" is an unknown or unsupported type! You have to specify a correct ocs_live_type (device-image or device-device)!"
+       echo "$msg_program_stop!"
+       exit 1
+       ;;
+  esac
+  #
+  case "$ocs_live_type" in
+    device-image)  ocs-live -l $lang $postaction_opt $dev_img_opt;;
+    device-device) ocs-onthefly -l $lang $postaction_opt -x -lo;;
+    remote-source) ocs-onthefly -l $lang $postaction_opt -x -ro;;
+    remote-dest)   ocs-onthefly -l $lang $postaction_opt -s ask_user -t ask_user;;
+    lite-server)   ocs-live-feed-img;;
+    lite-client)   ocs-live-get-img;;
+  esac
+} # end of ocs_interactive
+
+#
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -l|--language)
+            shift; n_shift=$((n_shift+1))
+            if [ -z "$(echo $1 |grep ^-.)" ]; then
+              # skip the -xx option, in case 
+	      specified_lang="$1"
+              shift; n_shift=$((n_shift+1))
+            fi
+            [ -z "$specified_lang" ] && USAGE && exit 1
+	    ;;
+    -d0|--dialog)   DIA="dialog" ; shift;;
+    -d1|--Xdialog)  DIA="Xdialog"; shift;;
+    -d2|--whiptail) DIA="whiptail"; shift;;
+    -d3|--gdialog)  DIA="gdialog"; shift;;
+    -d4|--kdialog)  DIA="kdialog"; shift;;
+    -s|--skip-lite-menu)  show_lite_menu="no"; shift;;
+    -p|--postaction)  
+            shift
+            if [ -z "$(echo $1 |grep ^-.)" ]; then
+              # skip the -xx option, in case 
+	      postaction="$1"
+              shift
+            fi
+	    [ -z "$postaction" ] && USAGE && exit 1
+            ;;
+    -k|--skip-prep-ocsroot)  
+	    do_prep_ocsroot="no"; shift;;
+    -n|--no-wait-before-exit)  wait_before_exit="no"; shift;;
+    -*)     echo "${0}: ${1}: invalid option" >&2
+            USAGE >& 2
+            exit 2 ;;
+    *)      break ;;
+  esac
+done
+
+#
+ask_and_load_lang_set $specified_lang
+
+# check DIA
+check_DIA_set_ESC $DIA
+
+##############
+#### main ####
+##############
+
+# //NOTE// For ocs-sr, the short option for postaction is: -p, while for ocs-onthelfy, it's  -pa. Therefore we use "--postaction"
+[ -n "$postaction" ] && postaction_opt="--postaction $postaction"
+[ "$do_prep_ocsroot" = "no" ] && dev_img_opt="-s"
+
+# Try to get some kernel param. If the kernel param is assigned by user. It has higher priority than the one in /etc/ocs/ocs-live.conf
+# 1. ocs_sr_opt
+# 2. ocs_onthefly_opt
+# If the above params are not found. Run the normal interactive mode of ocs.
+
+if [ "$show_lite_menu" = "yes" ]; then
+  lite_related_menu_dia_des
+fi
+
+ker_param_chklist="ocs_sr_opt ocs_onthefly_opt"
+for ik in $ker_param_chklist; do
+  parse_cmdline_option "$ik"	
+done
+
+#
+if [ -n "$ocs_sr_opt" ]; then
+  ocs-sr $ocs_sr_opt
+  rc=$?
+elif [ -n "$ocs_onthefly_opt" ]; then
+  ocs-onthefly $ocs_onthefly_opt
+  rc=$?
+else
+  ocs_interactive
+  rc=$?
+fi
+
+if [ "$wait_before_exit" = "yes" ]; then
+  echo -n "$msg_press_enter_to_continue..."
+  read
+fi
+
+exit $rc

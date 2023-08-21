@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MMCallAudioFormat: libmm-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libmm-glib Reference Manual">
+<link rel="up" href="ch07.html" title="The Call object">
+<link rel="prev" href="MMCallProperties.html" title="MMCallProperties">
+<link rel="next" href="pt02.html" title="Part II. Low level API">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#MMCallAudioFormat.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#MMCallAudioFormat.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="MMCallProperties.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pt02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="MMCallAudioFormat"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MMCallAudioFormat.top_of_page"></a>MMCallAudioFormat</span></h2>
+<p>MMCallAudioFormat — Helper object to handle voice call audio formats.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCallAudioFormat.html#mm-call-audio-format-get-encoding" title="mm_call_audio_format_get_encoding ()">mm_call_audio_format_get_encoding</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="MMCallAudioFormat.html#mm-call-audio-format-get-resolution" title="mm_call_audio_format_get_resolution ()">mm_call_audio_format_get_resolution</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="MMCallAudioFormat.html#mm-call-audio-format-get-rate" title="mm_call_audio_format_get_rate ()">mm_call_audio_format_get_rate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="MMCallAudioFormat.html#MMCallAudioFormat-struct" title="struct MMCallAudioFormat">MMCallAudioFormat</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> MMCallAudioFormat
+</pre>
+</div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.description"></a><h2>Description</h2>
+<p>The <a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a> is an object handling the voice call audio format
+which describes how to send/receive voice call audio from the host.</p>
+<p>This object is retrieved with either <a class="link" href="MMCall.html#mm-call-get-audio-format" title="mm_call_get_audio_format ()"><code class="function">mm_call_get_audio_format()</code></a> or
+<a class="link" href="MMCall.html#mm-call-peek-audio-format" title="mm_call_peek_audio_format ()"><code class="function">mm_call_peek_audio_format()</code></a>.</p>
+</div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="mm-call-audio-format-get-encoding"></a><h3>mm_call_audio_format_get_encoding ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_call_audio_format_get_encoding (<em class="parameter"><code><a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a> *self</code></em>);</pre>
+<p>Gets the encoding of the audio format.  For example, "pcm" for PCM-encoded
+audio.</p>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-encoding.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-encoding.returns"></a><h4>Returns</h4>
+<p> a string with the encoding, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if unknown. Do not free the
+returned value, it is owned by <em class="parameter"><code>self</code></em>
+.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-call-audio-format-get-resolution"></a><h3>mm_call_audio_format_get_resolution ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+mm_call_audio_format_get_resolution (<em class="parameter"><code><a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a> *self</code></em>);</pre>
+<p>Gets the resolution of the audio format.  For example, "s16le" for signed
+16-bit little-endian audio sampling resolution.</p>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-resolution.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-resolution.returns"></a><h4>Returns</h4>
+<p> a string with the resolution, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if unknown. Do not free the
+returned value, it is owned by <em class="parameter"><code>self</code></em>
+.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mm-call-audio-format-get-rate"></a><h3>mm_call_audio_format_get_rate ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+mm_call_audio_format_get_rate (<em class="parameter"><code><a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a> *self</code></em>);</pre>
+<p>Gets the sampling rate of the audio format.  For example, 8000 for an 8000hz
+sampling rate.</p>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-rate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="mm-call-audio-format-get-rate.returns"></a><h4>Returns</h4>
+<p> the sampling rate, or 0 if unknown.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-10.html#api-index-1.10">1.10</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MMCallAudioFormat.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MMCallAudioFormat-struct"></a><h3>struct MMCallAudioFormat</h3>
+<pre class="programlisting">struct MMCallAudioFormat;</pre>
+<p>The <a class="link" href="MMCallAudioFormat.html" title="MMCallAudioFormat"><span class="type">MMCallAudioFormat</span></a> structure contains private data and should
+only be accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

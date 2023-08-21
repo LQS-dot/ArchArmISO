@@ -1,0 +1,46 @@
+%NAME%
+talloc
+
+%VERSION%
+2.4.1-1
+
+%BASE%
+talloc
+
+%DESC%
+Hierarchical pool based memory allocator with destructors
+
+%URL%
+https://talloc.samba.org/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1690128577
+
+%INSTALLDATE%
+1691208528
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+159900
+
+%REASON%
+1
+
+%LICENSE%
+GPL3
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+libxcrypt
+
+%OPTDEPENDS%
+python: for python bindings
+

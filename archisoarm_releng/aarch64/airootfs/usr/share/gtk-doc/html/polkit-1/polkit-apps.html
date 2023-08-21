@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Writing polkit applications: polkit Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="polkit Reference Manual">
+<link rel="up" href="overview.html" title="Part I. polkit Overview">
+<link rel="prev" href="polkit-intro.html" title="Introduction">
+<link rel="next" href="polkit-agents.html" title="Writing polkit Authentication Agents">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="overview.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="polkit-intro.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="polkit-agents.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="polkit-apps"></a>Writing polkit applications</h2></div></div></div>
+<p>
+      polkit applications are applications using the polkit authority
+      as a decider component. They do this by installing a <code class="filename">.policy</code> file into the <code class="filename">/usr/share/polkit-1/actions</code>
+      directory and communicating with the polkit authority at runtime
+      (either via the <a class="link" href="ref-dbus-api.html" title="Part II. D-Bus API Reference">D-Bus API</a> or
+      indirectly through the <a class="link" href="ref-api.html" title="Part III. Library API Reference">libpolkit-gobject-1</a> library or the
+      <a class="link" href="pkcheck.1.html" title="pkcheck">pkcheck</a> command).
+    </p>
+<div class="simplesect">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="polkit-apps-best-practices"></a>Best practices</h2></div></div></div>
+<div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: opencircle; ">
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> use polkit if you are
+            writing a privileged mechanism (that is, running as
+            <span class="emphasis"><em>root</em></span> or otherwise has special
+            permissions) that is intended to be used by unprivileged
+            programs.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> carefully consider
+            what actions to define. In many cases there isn't a 1:1
+            mapping between operations and polkit actions. Often a
+            polkit action has more to do with the object the operation
+            is acting on than the operation itself. It is important to
+            strike the right balance between too fine-grained and too
+            coarse-grained.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> try to pick actions
+            and implicit authorizations so applications using your
+            mechanism will work out-of-the box for users logged in at
+            the console. Not interrupting console users with
+            authentication dialogs should be considered a
+            priority. For example, it is not wise to require console
+            users to authenticate for such mundane tasks as adding a
+            printer queue (if the administrator really wants the OS to
+            act this way, he can always deploy suitable authorization
+            rules).
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> consider the impact of the
+            chosen implicit authorizations on multi-user systems.  Generally,
+            ordinary users should be able to neither modify important system's
+            behavior for other users, nor view other users' private data.  If
+            your application needs an authorization framework at all, it is
+            fairly likely that the default configuration should deny
+            authorization in at least some cases.  Default to using
+            <code class="literal">auth_admin</code>* instead of
+            <code class="literal">auth_self</code>*.  (On single-user desktops, the
+            single user is typically configured as a polkit administrator, so
+            the two variants behave equally.  On multi-user systems,
+            non-administrator users will be restricted by the default
+            configuration.)
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> pass polkit variables
+            along with <a class="link" href="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.CheckAuthorization" title="CheckAuthorization ()">CheckAuthorization()</a>
+            requests so it's possible to write <span class="emphasis"><em>authorization
+            rules</em></span> matching on these. Also document these
+            variables in your documentation (for example, see the
+            <a class="ulink" href="http://udisks.freedesktop.org/docs/latest/udisks-polkit-actions.html" target="_top">udisks2
+            actions and variables</a>).
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> pass a customized
+            authentication message (using the
+            <code class="literal">polkit.message</code> and
+            <code class="literal">polkit.gettext_domain</code> variables) that
+            include more detailed information about the request than
+            whatever is declared in the <code class="filename">.policy</code> file's
+            <code class="literal">message</code> element. For example, it's
+            better to show <span class="quote">“<span class="quote">Authentication is needed to format
+            INTEL SSDSA2MH080G1GC (/dev/sda)</span>”</span> than just
+            <span class="quote">“<span class="quote">Authentication is needed to format the
+            device</span>”</span>.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DO</strong></span> make sure
+            your application works even when the
+            <code class="literal">org.freedesktop.PolicyKit1</code>
+            D-Bus service is not available (this can
+            happen if
+            <a class="link" href="polkitd.8.html" title="polkitd"><span class="citerefentry"><span class="refentrytitle">polkitd</span>(8)</span></a>
+            is not installed or if the <span class="emphasis"><em>polkit.service</em></span> systemd unit/service has been
+            <a class="ulink" href="http://0pointer.de/blog/projects/three-levels-of-off.html" target="_top">masked</a>). If you are using the
+            <a class="link" href="ref-api.html" title="Part III. Library API Reference">libpolkit-gobject-1</a> library this
+            means handling
+            <a class="link" href="PolkitAuthority.html#polkit-authority-get-sync" title="polkit_authority_get_sync ()">polkit_authority_get_sync()</a>
+            or
+            <a class="link" href="PolkitAuthority.html#polkit-authority-get-finish" title="polkit_authority_get_finish ()">polkit_authority_get_finish()</a>
+            returning <code class="constant">NULL</code> or
+            <a class="link" href="PolkitAuthority.html#polkit-authority-check-authorization" title="polkit_authority_check_authorization ()">polkit_authority_check_authorization()</a> /
+            <a class="link" href="PolkitAuthority.html#polkit-authority-check-authorization-sync" title="polkit_authority_check_authorization_sync ()">polkit_authority_check_authorization_sync()</a>
+            failing with an error not in the
+            <a class="link" href="polkit-1-PolkitError.html#POLKIT-ERROR:CAPS" title="POLKIT_ERROR">POLKIT_ERROR</a>
+            domain.
+            An appropriate way of dealing with the polkit authority
+            not being available, could be to allow only uid 0 to
+            perform operations, forbid all operations or something
+            else.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DON'T</strong></span> use polkit if your
+            program isn't intended to be used by unprivileged
+            programs. For example, if you are writing developer tools
+            or low-level core OS command-line tools it's fine to just
+            require the user to be root. Users can always run your
+            tool through e.g.
+            <span class="citerefentry"><span class="refentrytitle">sudo</span>(8)</span>,
+            <a class="link" href="pkexec.1.html" title="pkexec"><span class="citerefentry"><span class="refentrytitle">pkexec</span>(1)</span></a>
+            or write a simple polkit-using mechanism that allows
+            access to a (safe) subset of your tool.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DON'T</strong></span> use polkit unless
+            you actually have to. In other words, not every single
+            privileged program providing service to unprivileged
+            programs has to use polkit. For example, if you have a
+            small well-written <a class="ulink" href="http://en.wikipedia.org/wiki/Setuid" target="_top">setuid</a>
+            helper to help deal with some implementation-detail of the
+            OS (such as elevating the priority of the sound server
+            process to real-time for console users) it's not really
+            helpful to define a polkit action for this since,
+            realistically, no-one is going to choose to
+            <span class="emphasis"><em>not</em></span> grant the privilege. Remember, a
+            secure program is often one with little amount of code and
+            few dependencies.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DON'T</strong></span> call <a class="link" href="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.CheckAuthorization" title="CheckAuthorization ()">CheckAuthorization()</a>
+            for all your actions every time the authority emits the
+            <a class="link" href="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-signal-org.freedesktop.PolicyKit1.Authority::Changed" title='The "Changed" signal'>Changed</a>
+            signal. Not only is this a waste of resources, the result
+            may also be inaccurate as authorization rules can return
+            whatever they want, whenever they want.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DON'T</strong></span> block the main
+            thread in your mechanism (e.g. the one used to service IPC
+            requests from unprivileged programs) while waiting for the
+            authority to reply - calls to <a class="link" href="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.CheckAuthorization" title="CheckAuthorization ()">CheckAuthorization()</a>
+            may take a very long time (seconds, even minutes) to
+            complete as user interaction may be involved.  Instead,
+            use either the <a class="link" href="PolkitAuthority.html#polkit-authority-check-authorization" title="polkit_authority_check_authorization ()">asynchronous
+            API</a> or a dedicated thread with the <a class="link" href="PolkitAuthority.html#polkit-authority-check-authorization-sync" title="polkit_authority_check_authorization_sync ()">synchronous
+            API</a>.
+          </p></li>
+<li class="listitem" style="list-style-type: circle"><p>
+            <span class="bold"><strong>DON'T</strong></span> include any
+            authorization rules with your application as this is only
+            intended for administrators and special-purpose operating
+            systems / environments. See <a class="xref" href="polkit.8.html#polkit-rules" title="AUTHORIZATION RULES">the section called “AUTHORIZATION RULES”</a>
+            for more information.
+          </p></li>
+</ul></div>
+</div>
+<div class="simplesect">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="polkit-apps-unprivileged"></a>Usage in unprivileged programs</h2></div></div></div>
+<p>
+        An unprivileged program normally does not use polkit directly
+        - it simply calls into a privileged mechanism and the
+        mechanism either renders service (or refuses the request)
+        after checking with polkit (which may include presenting an
+        authentication dialog). In this setup, the unprivileged
+        program is oblivious to the fact that polkit is being used -
+        it simply just waits for the privileged mechanism to carry out
+        the request (which, if authentication dialogs are involved may
+        take many seconds). This is a good thing because not worrying
+        about implementation details like polkit, helps simplify the
+        unprivileged program.
+      </p>
+<p>
+        Occasionally unprivileged programs need to disable, modify or
+        remove UI elements to convey to the user that a certain action
+        cannot be carried out (because e.g. the user is not
+        authorized) or authentication is needed (by e.g. displaying a
+        padlock icon in the UI). In this case, the best approach is
+        usually to have the unprivileged program get this information
+        from the privileged mechanism instead of polkit. This is
+        especially true because often there is no reliable way that
+        the unprivileged program can know what polkit action is going
+        to be used. In general, there is no guarantee that operations
+        (such as D-Bus methods) map 1:1: to polkit action - for
+        example, a disk manager service's <code class="literal">Format()</code>
+        method may check for the action
+        <code class="literal">net.company.diskmanager.format-removable</code> if
+        the disk is removable and
+        <code class="literal">net.company.diskmanager.format-fixed</code>
+        otherwise.
+      </p>
+<p>
+        However, in certain cases, for example when using the
+        <span class="emphasis"><em>org.freedesktop.policykit.imply</em></span> annotation
+        (see the
+        <a class="link" href="polkit.8.html" title="polkit"><span class="citerefentry"><span class="refentrytitle">polkit</span>(8)</span></a> man page),
+        it is meaningful for an unprivileged program to query the
+        polkit authority (to e.g. update UI elements) and it is
+        in fact allowed to do so as long as the unprivileged program doesn't pass any variables along with the
+        <a class="link" href="eggdbus-interface-org.freedesktop.PolicyKit1.Authority.html#eggdbus-method-org.freedesktop.PolicyKit1.Authority.CheckAuthorization" title="CheckAuthorization ()">CheckAuthorization()</a>
+        call (otherwise it would be easy to spoof authentication dialogs and bypass authorization rules).
+        In fact, since this use-case is so common,
+        <a class="link" href="ref-api.html" title="Part III. Library API Reference">libpolkit-gobject-1</a> provides the
+        <a class="link" href="PolkitPermission.html" title="PolkitPermission"><span class="type">PolkitPermission</span></a> type (which is derived from
+        <a class="ulink" href="http://developer.gnome.org/gio/unstable/GPermission.html" target="_top"><span class="type">GPermission</span></a>)
+        that can be used together with
+        <a class="ulink" href="http://developer.gnome.org/gtk3/unstable/GtkLockButton.html" target="_top"><span class="type">GtkLockButton</span></a>.
+        Note that for <span class="type">GtkLockButton</span> to work well, the
+        polkit action backing it should use <code class="literal">auth_admin_keep</code>
+	for its implicit authorizations (or more rarely
+	<code class="literal">auth_self_keep</code> for services which don't affect other
+	users).
+        This is often used to implement an <a class="ulink" href="http://developer.gnome.org/hig-book/3.2/hig-book.html#windows-instant-apply" target="_top">instant
+        apply</a> paradigm whereby the user
+        <span class="emphasis"><em>unlocks</em></span> (by authenticating) e.g. a
+        preference pane window and is then free to change settings
+        until the authorization expires or is revoked.
+      </p>
+</div>
+<div class="simplesect">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="polkit-apps-no-auth-agent"></a>No authentication agent</h2></div></div></div>
+<p>
+        If a polkit application wants to handle the case where no
+        authentication agent exists (for example if the app is launched
+        via a
+        <span class="citerefentry"><span class="refentrytitle">ssh</span>(1)</span>
+        login), the application can use the <a class="link" href="PolkitAgentTextListener.html" title="PolkitAgentTextListener">PolkitAgentTextListener</a>
+        type to spawn its own authentication agent as
+        needed. Alternatively, the <a class="xref" href="pkttyagent.1.html" title="pkttyagent"><span class="refentrytitle">pkttyagent</span>(1)</a>
+        helper can be used to do this.
+      </p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

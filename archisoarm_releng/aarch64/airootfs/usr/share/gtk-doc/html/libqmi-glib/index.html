@@ -1,0 +1,1272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libqmi-glib Reference Manual: libqmi-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqmi-glib Reference Manual">
+<link rel="next" href="ch01.html" title="Core">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">libqmi-glib Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+      For libqmi-glib 1.32.4
+. The latest version of this documentation can be found on-line at
+     <a class="ulink" href="https://www.freedesktop.org/software/libqmi/libqmi-glib/latest/" target="_top">https://www.freedesktop.org/software/libqmi/libqmi-glib/latest/</a>.
+    </p></div>
+<div><p class="copyright">Copyright © 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 The libqmi-glib authors</p></div>
+<div><div class="legalnotice">
+<a name="id-1.1.4"></a><p>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the <em class="citetitle">GNU Free
+        Documentation License</em>, Version 1.3 or any later
+        version published by the Free Software Foundation with no
+        Invariant Sections, no Front-Cover Texts, and no Back-Cover
+        Texts. You may obtain a copy of the <em class="citetitle">GNU Free
+        Documentation License</em> from the Free Software
+        Foundation by visiting <a class="ulink" href="http://www.fsf.org" target="_top">their Web site</a> or by writing
+        to:
+        </p>
+<div class="address"><p><br>
+          The Free Software Foundation, Inc.<br>
+          <span class="street">51 Franklin Street</span>, Suite 500<br>
+          <span class="city">Boston</span>, <span class="state">MA</span> <span class="postcode">02110-1335</span><br>
+          <span class="country">USA</span><br>
+        </p></div>
+<p>
+      </p>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="chapter"><a href="ch01.html">Core</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-Version-and-feature-checks.html">Version and feature checks</a></span><span class="refpurpose"> — Version information in the API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QmiMessage.html">QmiMessage</a></span><span class="refpurpose"> — Generic QMI message handling routines</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="QmiMessageContext.html">QmiMessageContext</a></span><span class="refpurpose"> — the QMI message context</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="QmiDevice.html">QmiDevice</a></span><span class="refpurpose"> — Generic QMI device handling routines</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="QmiClient.html">QmiClient</a></span><span class="refpurpose"> — Generic QMI client handling routines</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="QmiProxy.html">QmiProxy</a></span><span class="refpurpose"> — QMI proxy handling routines</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-Common-enumerations-and-flags.html">Common enumerations and flags</a></span><span class="refpurpose"> — Common enumerations and flags in the library.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-Errors.html">Errors</a></span><span class="refpurpose"> — Common errors in the library.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-Common-utilities.html">Common utilities</a></span><span class="refpurpose"> — Common utilities in the library.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch02.html">Device Management Service (DMS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientDms.html">QmiClientDms</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the DMS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-enumerations-and-flags.html">DMS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the DMS service.</span>
+</dt>
+<dt><span class="section"><a href="ch02.html#id-1.3.4">DMS Indications</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Event-Report-indication.html">DMS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the DMS Event Report indication.</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch02s02.html">DMS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Reset-response.html">DMS Reset response</a></span><span class="refpurpose"> — Methods to manage the DMS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Event-Report-response.html">DMS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Capabilities-response.html">DMS Get Capabilities response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Capabilities response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Manufacturer-response.html">DMS Get Manufacturer response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Manufacturer response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Model-response.html">DMS Get Model response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Model response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Revision-response.html">DMS Get Revision response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Revision response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-MSISDN-response.html">DMS Get MSISDN response</a></span><span class="refpurpose"> — Methods to manage the DMS Get MSISDN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-IDs-response.html">DMS Get IDs response</a></span><span class="refpurpose"> — Methods to manage the DMS Get IDs response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Power-State-response.html">DMS Get Power State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Power State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Set-PIN-Protection-response.html">DMS UIM Set PIN Protection response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Set PIN Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Verify-PIN-response.html">DMS UIM Verify PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Verify PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Unblock-PIN-response.html">DMS UIM Unblock PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Unblock PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Change-PIN-response.html">DMS UIM Change PIN response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Change PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-PIN-Status-response.html">DMS UIM Get PIN Status response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get PIN Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Hardware-Revision-response.html">DMS Get Hardware Revision response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Hardware Revision response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Operating-Mode-response.html">DMS Get Operating Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Operating Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Operating-Mode-response.html">DMS Set Operating Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Operating Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Time-response.html">DMS Get Time response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Time response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-PRL-Version-response.html">DMS Get PRL Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Get PRL Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Activation-State-response.html">DMS Get Activation State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Activation State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Activate-Automatic-response.html">DMS Activate Automatic response</a></span><span class="refpurpose"> — Methods to manage the DMS Activate Automatic response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Activate-Manual-response.html">DMS Activate Manual response</a></span><span class="refpurpose"> — Methods to manage the DMS Activate Manual response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-User-Lock-State-response.html">DMS Get User Lock State response</a></span><span class="refpurpose"> — Methods to manage the DMS Get User Lock State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-User-Lock-State-response.html">DMS Set User Lock State response</a></span><span class="refpurpose"> — Methods to manage the DMS Set User Lock State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-User-Lock-Code-response.html">DMS Set User Lock Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Set User Lock Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Read-User-Data-response.html">DMS Read User Data response</a></span><span class="refpurpose"> — Methods to manage the DMS Read User Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Write-User-Data-response.html">DMS Write User Data response</a></span><span class="refpurpose"> — Methods to manage the DMS Write User Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Read-ERI-File-response.html">DMS Read ERI File response</a></span><span class="refpurpose"> — Methods to manage the DMS Read ERI File response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Restore-Factory-Defaults-response.html">DMS Restore Factory Defaults response</a></span><span class="refpurpose"> — Methods to manage the DMS Restore Factory Defaults response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Validate-Service-Programming-Code-response.html">DMS Validate Service Programming Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Validate Service Programming Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-ICCID-response.html">DMS UIM Get ICCID response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get ICCID response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Firmware-ID-response.html">DMS Set Firmware ID response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Firmware ID response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-CK-Status-response.html">DMS UIM Get CK Status response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get CK Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Set-CK-Protection-response.html">DMS UIM Set CK Protection response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Set CK Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Unblock-CK-response.html">DMS UIM Unblock CK response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Unblock CK response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-IMSI-response.html">DMS UIM Get IMSI response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get IMSI response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-UIM-Get-State-response.html">DMS UIM Get State response</a></span><span class="refpurpose"> — Methods to manage the DMS UIM Get State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Band-Capabilities-response.html">DMS Get Band Capabilities response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Band Capabilities response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Factory-SKU-response.html">DMS Get Factory SKU response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Factory SKU response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Firmware-Preference-response.html">DMS Get Firmware Preference response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Firmware Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Firmware-Preference-response.html">DMS Set Firmware Preference response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Firmware Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-List-Stored-Images-response.html">DMS List Stored Images response</a></span><span class="refpurpose"> — Methods to manage the DMS List Stored Images response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Delete-Stored-Image-response.html">DMS Delete Stored Image response</a></span><span class="refpurpose"> — Methods to manage the DMS Delete Stored Image response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Time-response.html">DMS Set Time response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Time response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Stored-Image-Info-response.html">DMS Get Stored Image Info response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Stored Image Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Alt-Net-Config-response.html">DMS Get Alt Net Config response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Alt Net Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Alt-Net-Config-response.html">DMS Set Alt Net Config response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Alt Net Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Boot-Image-Download-Mode-response.html">DMS Get Boot Image Download Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Boot Image Download Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Boot-Image-Download-Mode-response.html">DMS Set Boot Image Download Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Boot Image Download Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Software-Version-response.html">DMS Get Software Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Software Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-Service-Programming-Code-response.html">DMS Set Service Programming Code response</a></span><span class="refpurpose"> — Methods to manage the DMS Set Service Programming Code response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-MAC-Address-response.html">DMS Get MAC Address response</a></span><span class="refpurpose"> — Methods to manage the DMS Get MAC Address response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-HP-Change-Device-Mode-response.html">DMS HP Change Device Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS HP Change Device Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Get-Current-Firmware-response.html">DMS Swi Get Current Firmware response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Get Current Firmware response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Get-USB-Composition-response.html">DMS Swi Get USB Composition response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Get USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Swi-Set-USB-Composition-response.html">DMS Swi Set USB Composition response</a></span><span class="refpurpose"> — Methods to manage the DMS Swi Set USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Get-Firmware-Version-response.html">DMS Foxconn Get Firmware Version response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Get Firmware Version response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Set-FCC-Authentication-response.html">DMS Set FCC Authentication response</a></span><span class="refpurpose"> — Methods to manage the DMS Set FCC Authentication response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Change-Device-Mode-response.html">DMS Foxconn Change Device Mode response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Change Device Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Set-FCC-Authentication-response.html">DMS Foxconn Set FCC Authentication response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Set FCC Authentication response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Foxconn-Set-FCC-Authentication-v2-response.html">DMS Foxconn Set FCC Authentication v2 response</a></span><span class="refpurpose"> — Methods to manage the DMS Foxconn Set FCC Authentication v2 response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DMS-Get-Supported-Messages-response.html">DMS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the DMS Get Supported Messages response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch03.html">Network Access Service (NAS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientNas.html">QmiClientNas</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the NAS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-enumerations-and-flags.html">NAS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the NAS service.</span>
+</dt>
+<dt><span class="section"><a href="ch03.html#id-1.4.4">NAS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Event-Report-indication.html">NAS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the NAS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Time-indication.html">NAS Network Time indication</a></span><span class="refpurpose"> — Methods to manage the NAS Network Time indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Serving-System-indication.html">NAS Serving System indication</a></span><span class="refpurpose"> — Methods to manage the NAS Serving System indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-System-Info-indication.html">NAS System Info indication</a></span><span class="refpurpose"> — Methods to manage the NAS System Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Signal-Info-indication.html">NAS Signal Info indication</a></span><span class="refpurpose"> — Methods to manage the NAS Signal Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Operator-Name-indication.html">NAS Operator Name indication</a></span><span class="refpurpose"> — Methods to manage the NAS Operator Name indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Reject-indication.html">NAS Network Reject indication</a></span><span class="refpurpose"> — Methods to manage the NAS Network Reject indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s02.html">NAS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Reset-response.html">NAS Reset response</a></span><span class="refpurpose"> — Methods to manage the NAS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Event-Report-response.html">NAS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Register-Indications-response.html">NAS Register Indications response</a></span><span class="refpurpose"> — Methods to manage the NAS Register Indications response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Signal-Strength-response.html">NAS Get Signal Strength response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Signal Strength response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Network-Scan-response.html">NAS Network Scan response</a></span><span class="refpurpose"> — Methods to manage the NAS Network Scan response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Initiate-Network-Register-response.html">NAS Initiate Network Register response</a></span><span class="refpurpose"> — Methods to manage the NAS Initiate Network Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Attach-Detach-response.html">NAS Attach Detach response</a></span><span class="refpurpose"> — Methods to manage the NAS Attach Detach response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Serving-System-response.html">NAS Get Serving System response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Serving System response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Home-Network-response.html">NAS Get Home Network response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Home Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Preferred-Networks-response.html">NAS Get Preferred Networks response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Preferred Networks response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Preferred-Networks-response.html">NAS Set Preferred Networks response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Preferred Networks response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-Technology-Preference-response.html">NAS Set Technology Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Set Technology Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Technology-Preference-response.html">NAS Get Technology Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Technology Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-RF-Band-Information-response.html">NAS Get RF Band Information response</a></span><span class="refpurpose"> — Methods to manage the NAS Get RF Band Information response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Set-System-Selection-Preference-response.html">NAS Set System Selection Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Set System Selection Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-System-Selection-Preference-response.html">NAS Get System Selection Preference response</a></span><span class="refpurpose"> — Methods to manage the NAS Get System Selection Preference response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-System-Info-response.html">NAS Get System Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get System Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Signal-Info-response.html">NAS Get Signal Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Signal Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Config-Signal-Info-response.html">NAS Config Signal Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Config Signal Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Config-Signal-Info-v2-response.html">NAS Config Signal Info v2 response</a></span><span class="refpurpose"> — Methods to manage the NAS Config Signal Info v2 response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Force-Network-Search-response.html">NAS Force Network Search response</a></span><span class="refpurpose"> — Methods to manage the NAS Force Network Search response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-CDMA-Position-Info-response.html">NAS Get CDMA Position Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get CDMA Position Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Tx-Rx-Info-response.html">NAS Get Tx Rx Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Tx Rx Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Cell-Location-Info-response.html">NAS Get Cell Location Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Cell Location Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Supported-Messages-response.html">NAS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-LTE-Cphy-CA-Info-response.html">NAS Get LTE Cphy CA Info response</a></span><span class="refpurpose"> — Methods to manage the NAS Get LTE Cphy CA Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-Operator-Name-response.html">NAS Get Operator Name response</a></span><span class="refpurpose"> — Methods to manage the NAS Get Operator Name response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-PLMN-Name-response.html">NAS Get PLMN Name response</a></span><span class="refpurpose"> — Methods to manage the NAS Get PLMN Name response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Swi-Get-Status-response.html">NAS Swi Get Status response</a></span><span class="refpurpose"> — Methods to manage the NAS Swi Get Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-NAS-Get-DRX-response.html">NAS Get DRX response</a></span><span class="refpurpose"> — Methods to manage the NAS Get DRX response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch04.html">Wireless Data Service (WDS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientWds.html">QmiClientWds</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the WDS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-enumerations-and-flags.html">WDS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the WDS service.</span>
+</dt>
+<dt><span class="section"><a href="ch04.html#id-1.5.4">WDS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Event-Report-indication.html">WDS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the WDS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Packet-Service-Status-indication.html">WDS Packet Service Status indication</a></span><span class="refpurpose"> — Methods to manage the WDS Packet Service Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-LTE-Attach-PDN-List-indication.html">WDS Set LTE Attach PDN List indication</a></span><span class="refpurpose"> — Methods to manage the WDS Set LTE Attach PDN List indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Extended-Ip-Config-indication.html">WDS Extended Ip Config indication</a></span><span class="refpurpose"> — Methods to manage the WDS Extended Ip Config indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch04s02.html">WDS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Reset-response.html">WDS Reset response</a></span><span class="refpurpose"> — Methods to manage the WDS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Event-Report-response.html">WDS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Start-Network-response.html">WDS Start Network response</a></span><span class="refpurpose"> — Methods to manage the WDS Start Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Stop-Network-response.html">WDS Stop Network response</a></span><span class="refpurpose"> — Methods to manage the WDS Stop Network response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Packet-Service-Status-response.html">WDS Get Packet Service Status response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Packet Service Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Packet-Statistics-response.html">WDS Get Packet Statistics response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Packet Statistics response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Go-Dormant-response.html">WDS Go Dormant response</a></span><span class="refpurpose"> — Methods to manage the WDS Go Dormant response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Go-Active-response.html">WDS Go Active response</a></span><span class="refpurpose"> — Methods to manage the WDS Go Active response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Create-Profile-response.html">WDS Create Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Create Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Modify-Profile-response.html">WDS Modify Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Modify Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Delete-Profile-response.html">WDS Delete Profile response</a></span><span class="refpurpose"> — Methods to manage the WDS Delete Profile response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Profile-List-response.html">WDS Get Profile List response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Profile List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Profile-Settings-response.html">WDS Get Profile Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Profile Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Default-Profile-Number-response.html">WDS Get Default Profile Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Default Profile Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Default-Profile-Number-response.html">WDS Set Default Profile Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Default Profile Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Default-Settings-response.html">WDS Get Default Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Default Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Current-Settings-response.html">WDS Get Current Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Current Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Dormancy-Status-response.html">WDS Get Dormancy Status response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Dormancy Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Autoconnect-Settings-response.html">WDS Get Autoconnect Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Autoconnect Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-Autoconnect-Settings-response.html">WDS Set Autoconnect Settings response</a></span><span class="refpurpose"> — Methods to manage the WDS Set Autoconnect Settings response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Data-Bearer-Technology-response.html">WDS Get Data Bearer Technology response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Data Bearer Technology response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Current-Data-Bearer-Technology-response.html">WDS Get Current Data Bearer Technology response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Current Data Bearer Technology response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-IP-Family-response.html">WDS Set IP Family response</a></span><span class="refpurpose"> — Methods to manage the WDS Set IP Family response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Supported-Messages-response.html">WDS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-PDN-Throttle-Info-response.html">WDS Get PDN Throttle Info response</a></span><span class="refpurpose"> — Methods to manage the WDS Get PDN Throttle Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-LTE-Attach-Parameters-response.html">WDS Get LTE Attach Parameters response</a></span><span class="refpurpose"> — Methods to manage the WDS Get LTE Attach Parameters response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Max-LTE-Attach-PDN-Number-response.html">WDS Get Max LTE Attach PDN Number response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Max LTE Attach PDN Number response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-LTE-Attach-PDN-List-response.html">WDS Get LTE Attach PDN List response</a></span><span class="refpurpose"> — Methods to manage the WDS Get LTE Attach PDN List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Set-LTE-Attach-PDN-List-response.html">WDS Set LTE Attach PDN List response</a></span><span class="refpurpose"> — Methods to manage the WDS Set LTE Attach PDN List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Bind-Data-Port-response.html">WDS Bind Data Port response</a></span><span class="refpurpose"> — Methods to manage the WDS Bind Data Port response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Bind-Mux-Data-Port-response.html">WDS Bind Mux Data Port response</a></span><span class="refpurpose"> — Methods to manage the WDS Bind Mux Data Port response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Get-Channel-Rates-response.html">WDS Get Channel Rates response</a></span><span class="refpurpose"> — Methods to manage the WDS Get Channel Rates response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Swi-Create-Profile-Indexed-response.html">WDS Swi Create Profile Indexed response</a></span><span class="refpurpose"> — Methods to manage the WDS Swi Create Profile Indexed response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDS-Indication-Register-response.html">WDS Indication Register response</a></span><span class="refpurpose"> — Methods to manage the WDS Indication Register response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch05.html">Wireless Messaging Service (WMS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientWms.html">QmiClientWms</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the WMS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-enumerations-and-flags.html">WMS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the WMS service.</span>
+</dt>
+<dt><span class="section"><a href="ch05.html#id-1.6.4">WMS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Event-Report-indication.html">WMS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the WMS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-SMSC-Address-indication.html">WMS SMSC Address indication</a></span><span class="refpurpose"> — Methods to manage the WMS SMSC Address indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch05s02.html">WMS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Reset-response.html">WMS Reset response</a></span><span class="refpurpose"> — Methods to manage the WMS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Set-Event-Report-response.html">WMS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the WMS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Raw-Send-response.html">WMS Raw Send response</a></span><span class="refpurpose"> — Methods to manage the WMS Raw Send response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Raw-Write-response.html">WMS Raw Write response</a></span><span class="refpurpose"> — Methods to manage the WMS Raw Write response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Raw-Read-response.html">WMS Raw Read response</a></span><span class="refpurpose"> — Methods to manage the WMS Raw Read response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Modify-Tag-response.html">WMS Modify Tag response</a></span><span class="refpurpose"> — Methods to manage the WMS Modify Tag response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Delete-response.html">WMS Delete response</a></span><span class="refpurpose"> — Methods to manage the WMS Delete response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Get-Message-Protocol-response.html">WMS Get Message Protocol response</a></span><span class="refpurpose"> — Methods to manage the WMS Get Message Protocol response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-List-Messages-response.html">WMS List Messages response</a></span><span class="refpurpose"> — Methods to manage the WMS List Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Set-Routes-response.html">WMS Set Routes response</a></span><span class="refpurpose"> — Methods to manage the WMS Set Routes response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Get-Routes-response.html">WMS Get Routes response</a></span><span class="refpurpose"> — Methods to manage the WMS Get Routes response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Send-Ack-response.html">WMS Send Ack response</a></span><span class="refpurpose"> — Methods to manage the WMS Send Ack response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Send-From-Memory-Storage-response.html">WMS Send From Memory Storage response</a></span><span class="refpurpose"> — Methods to manage the WMS Send From Memory Storage response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WMS-Get-Supported-Messages-response.html">WMS Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the WMS Get Supported Messages response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch06.html">Persistent Device Configuration (PDC)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientPdc.html">QmiClientPdc</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the PDC service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-enumerations-and-flags.html">PDC enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the PDC service.</span>
+</dt>
+<dt><span class="section"><a href="ch06.html#id-1.7.4">PDC Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Activate-Config-indication.html">PDC Activate Config indication</a></span><span class="refpurpose"> — Methods to manage the PDC Activate Config indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Deactivate-Config-indication.html">PDC Deactivate Config indication</a></span><span class="refpurpose"> — Methods to manage the PDC Deactivate Config indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Config-Info-indication.html">PDC Get Config Info indication</a></span><span class="refpurpose"> — Methods to manage the PDC Get Config Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Selected-Config-indication.html">PDC Get Selected Config indication</a></span><span class="refpurpose"> — Methods to manage the PDC Get Selected Config indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-List-Configs-indication.html">PDC List Configs indication</a></span><span class="refpurpose"> — Methods to manage the PDC List Configs indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Load-Config-indication.html">PDC Load Config indication</a></span><span class="refpurpose"> — Methods to manage the PDC Load Config indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Set-Selected-Config-indication.html">PDC Set Selected Config indication</a></span><span class="refpurpose"> — Methods to manage the PDC Set Selected Config indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Refresh-indication.html">PDC Refresh indication</a></span><span class="refpurpose"> — Methods to manage the PDC Refresh indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch06s02.html">PDC Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Reset-response.html">PDC Reset response</a></span><span class="refpurpose"> — Methods to manage the PDC Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Register-response.html">PDC Register response</a></span><span class="refpurpose"> — Methods to manage the PDC Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Config-Change-response.html">PDC Config Change response</a></span><span class="refpurpose"> — Methods to manage the PDC Config Change response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Selected-Config-response.html">PDC Get Selected Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Get Selected Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Set-Selected-Config-response.html">PDC Set Selected Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Set Selected Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-List-Configs-response.html">PDC List Configs response</a></span><span class="refpurpose"> — Methods to manage the PDC List Configs response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Delete-Config-response.html">PDC Delete Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Delete Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Load-Config-response.html">PDC Load Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Load Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Activate-Config-response.html">PDC Activate Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Activate Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Config-Info-response.html">PDC Get Config Info response</a></span><span class="refpurpose"> — Methods to manage the PDC Get Config Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Config-Limits-response.html">PDC Get Config Limits response</a></span><span class="refpurpose"> — Methods to manage the PDC Get Config Limits response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Get-Default-Config-Info-response.html">PDC Get Default Config Info response</a></span><span class="refpurpose"> — Methods to manage the PDC Get Default Config Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDC-Deactivate-Config-response.html">PDC Deactivate Config response</a></span><span class="refpurpose"> — Methods to manage the PDC Deactivate Config response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch07.html">Position Determination Service (PDS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientPds.html">QmiClientPds</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the PDS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-enumerations-and-flags.html">PDS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the PDS service.</span>
+</dt>
+<dt><span class="section"><a href="ch07.html#id-1.8.4">PDS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Event-Report-indication.html">PDS Event Report indication</a></span><span class="refpurpose"> — Methods to manage the PDS Event Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-GPS-Ready-indication.html">PDS GPS Ready indication</a></span><span class="refpurpose"> — Methods to manage the PDS GPS Ready indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch07s02.html">PDS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Reset-response.html">PDS Reset response</a></span><span class="refpurpose"> — Methods to manage the PDS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Set-Event-Report-response.html">PDS Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the PDS Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Get-GPS-Service-State-response.html">PDS Get GPS Service State response</a></span><span class="refpurpose"> — Methods to manage the PDS Get GPS Service State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Set-GPS-Service-State-response.html">PDS Set GPS Service State response</a></span><span class="refpurpose"> — Methods to manage the PDS Set GPS Service State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Get-Auto-Tracking-State-response.html">PDS Get Auto Tracking State response</a></span><span class="refpurpose"> — Methods to manage the PDS Get Auto Tracking State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Set-Auto-Tracking-State-response.html">PDS Set Auto Tracking State response</a></span><span class="refpurpose"> — Methods to manage the PDS Set Auto Tracking State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Get-Default-Tracking-Session-response.html">PDS Get Default Tracking Session response</a></span><span class="refpurpose"> — Methods to manage the PDS Get Default Tracking Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Set-Default-Tracking-Session-response.html">PDS Set Default Tracking Session response</a></span><span class="refpurpose"> — Methods to manage the PDS Set Default Tracking Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Get-AGPS-Config-response.html">PDS Get AGPS Config response</a></span><span class="refpurpose"> — Methods to manage the PDS Get AGPS Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PDS-Set-AGPS-Config-response.html">PDS Set AGPS Config response</a></span><span class="refpurpose"> — Methods to manage the PDS Set AGPS Config response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch08.html">Phonebook Management Service (PBM)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientPbm.html">QmiClientPbm</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the PBM service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PBM-enumerations-and-flags.html">PBM enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the PBM service.</span>
+</dt>
+<dt><span class="section"><a href="ch08.html#id-1.9.4">PBM Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PBM-Indication-Register-response.html">PBM Indication Register response</a></span><span class="refpurpose"> — Methods to manage the PBM Indication Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PBM-Get-Capabilities-response.html">PBM Get Capabilities response</a></span><span class="refpurpose"> — Methods to manage the PBM Get Capabilities response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-PBM-Get-All-Capabilities-response.html">PBM Get All Capabilities response</a></span><span class="refpurpose"> — Methods to manage the PBM Get All Capabilities response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch09.html">User Identity Module (UIM) service</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientUim.html">QmiClientUim</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the UIM service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-enumerations-and-flags.html">UIM enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the UIM service.</span>
+</dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.4">UIM Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Card-Status-indication.html">UIM Card Status indication</a></span><span class="refpurpose"> — Methods to manage the UIM Card Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Slot-Status-indication.html">UIM Slot Status indication</a></span><span class="refpurpose"> — Methods to manage the UIM Slot Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-indication.html">UIM Refresh indication</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch09s02.html">UIM Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Reset-response.html">UIM Reset response</a></span><span class="refpurpose"> — Methods to manage the UIM Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Register-Events-response.html">UIM Register Events response</a></span><span class="refpurpose"> — Methods to manage the UIM Register Events response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Set-PIN-Protection-response.html">UIM Set PIN Protection response</a></span><span class="refpurpose"> — Methods to manage the UIM Set PIN Protection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Verify-PIN-response.html">UIM Verify PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Verify PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Unblock-PIN-response.html">UIM Unblock PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Unblock PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Change-PIN-response.html">UIM Change PIN response</a></span><span class="refpurpose"> — Methods to manage the UIM Change PIN response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Read-Transparent-response.html">UIM Read Transparent response</a></span><span class="refpurpose"> — Methods to manage the UIM Read Transparent response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Read-Record-response.html">UIM Read Record response</a></span><span class="refpurpose"> — Methods to manage the UIM Read Record response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-File-Attributes-response.html">UIM Get File Attributes response</a></span><span class="refpurpose"> — Methods to manage the UIM Get File Attributes response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Card-Status-response.html">UIM Get Card Status response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Card Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Supported-Messages-response.html">UIM Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Power-Off-SIM-response.html">UIM Power Off SIM response</a></span><span class="refpurpose"> — Methods to manage the UIM Power Off SIM response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Power-On-SIM-response.html">UIM Power On SIM response</a></span><span class="refpurpose"> — Methods to manage the UIM Power On SIM response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Change-Provisioning-Session-response.html">UIM Change Provisioning Session response</a></span><span class="refpurpose"> — Methods to manage the UIM Change Provisioning Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Depersonalization-response.html">UIM Depersonalization response</a></span><span class="refpurpose"> — Methods to manage the UIM Depersonalization response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Configuration-response.html">UIM Get Configuration response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Configuration response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Switch-Slot-response.html">UIM Switch Slot response</a></span><span class="refpurpose"> — Methods to manage the UIM Switch Slot response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Get-Slot-Status-response.html">UIM Get Slot Status response</a></span><span class="refpurpose"> — Methods to manage the UIM Get Slot Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Register-response.html">UIM Refresh Register response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Register-All-response.html">UIM Refresh Register All response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Register All response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Refresh-Complete-response.html">UIM Refresh Complete response</a></span><span class="refpurpose"> — Methods to manage the UIM Refresh Complete response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-UIM-Remote-Unlock-response.html">UIM Remote Unlock response</a></span><span class="refpurpose"> — Methods to manage the UIM Remote Unlock response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch10.html">Open Mobile Alliance Service (OMA)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientOma.html">QmiClientOma</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the OMA service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-enumerations-and-flags.html">OMA enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the OMA service.</span>
+</dt>
+<dt><span class="section"><a href="ch10.html#id-1.11.4">OMA Indications</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Event-Report-indication.html">OMA Event Report indication</a></span><span class="refpurpose"> — Methods to manage the OMA Event Report indication.</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch10s02.html">OMA Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Reset-response.html">OMA Reset response</a></span><span class="refpurpose"> — Methods to manage the OMA Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Set-Event-Report-response.html">OMA Set Event Report response</a></span><span class="refpurpose"> — Methods to manage the OMA Set Event Report response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Start-Session-response.html">OMA Start Session response</a></span><span class="refpurpose"> — Methods to manage the OMA Start Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Cancel-Session-response.html">OMA Cancel Session response</a></span><span class="refpurpose"> — Methods to manage the OMA Cancel Session response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Get-Session-Info-response.html">OMA Get Session Info response</a></span><span class="refpurpose"> — Methods to manage the OMA Get Session Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Send-Selection-response.html">OMA Send Selection response</a></span><span class="refpurpose"> — Methods to manage the OMA Send Selection response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Get-Feature-Setting-response.html">OMA Get Feature Setting response</a></span><span class="refpurpose"> — Methods to manage the OMA Get Feature Setting response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-OMA-Set-Feature-Setting-response.html">OMA Set Feature Setting response</a></span><span class="refpurpose"> — Methods to manage the OMA Set Feature Setting response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch11.html">Wireless Data Administrative Service (WDA)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientWda.html">QmiClientWda</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the WDA service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDA-enumerations-and-flags.html">WDA enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the WDA service.</span>
+</dt>
+<dt><span class="section"><a href="ch11.html#id-1.12.4">WDA Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDA-Set-Data-Format-response.html">WDA Set Data Format response</a></span><span class="refpurpose"> — Methods to manage the WDA Set Data Format response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDA-Get-Data-Format-response.html">WDA Get Data Format response</a></span><span class="refpurpose"> — Methods to manage the WDA Get Data Format response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-WDA-Get-Supported-Messages-response.html">WDA Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the WDA Get Supported Messages response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch12.html">Voice</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientVoice.html">QmiClientVoice</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the VOICE service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-Voice-enumerations-and-flags.html">VOICE enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the VOICE service.</span>
+</dt>
+<dt><span class="section"><a href="ch12.html#id-1.13.4">Voice Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-All-Call-Status-indication.html">VOICE All Call Status indication</a></span><span class="refpurpose"> — Methods to manage the VOICE All Call Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Supplementary-Service-indication.html">VOICE Supplementary Service indication</a></span><span class="refpurpose"> — Methods to manage the VOICE Supplementary Service indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Release-USSD-indication.html">VOICE Release USSD indication</a></span><span class="refpurpose"> — Methods to manage the VOICE Release USSD indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-USSD-indication.html">VOICE USSD indication</a></span><span class="refpurpose"> — Methods to manage the VOICE USSD indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Originate-USSD-No-Wait-indication.html">VOICE Originate USSD No Wait indication</a></span><span class="refpurpose"> — Methods to manage the VOICE Originate USSD No Wait indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch12s02.html">Voice Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Indication-Register-response.html">VOICE Indication Register response</a></span><span class="refpurpose"> — Methods to manage the VOICE Indication Register response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Dial-Call-response.html">VOICE Dial Call response</a></span><span class="refpurpose"> — Methods to manage the VOICE Dial Call response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-End-Call-response.html">VOICE End Call response</a></span><span class="refpurpose"> — Methods to manage the VOICE End Call response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Answer-Call-response.html">VOICE Answer Call response</a></span><span class="refpurpose"> — Methods to manage the VOICE Answer Call response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Get-Config-response.html">VOICE Get Config response</a></span><span class="refpurpose"> — Methods to manage the VOICE Get Config response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Get-Supported-Messages-response.html">VOICE Get Supported Messages response</a></span><span class="refpurpose"> — Methods to manage the VOICE Get Supported Messages response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Manage-Calls-response.html">VOICE Manage Calls response</a></span><span class="refpurpose"> — Methods to manage the VOICE Manage Calls response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Set-Supplementary-Service-response.html">VOICE Set Supplementary Service response</a></span><span class="refpurpose"> — Methods to manage the VOICE Set Supplementary Service response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Get-Call-Waiting-response.html">VOICE Get Call Waiting response</a></span><span class="refpurpose"> — Methods to manage the VOICE Get Call Waiting response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Originate-USSD-response.html">VOICE Originate USSD response</a></span><span class="refpurpose"> — Methods to manage the VOICE Originate USSD response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Answer-USSD-response.html">VOICE Answer USSD response</a></span><span class="refpurpose"> — Methods to manage the VOICE Answer USSD response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Cancel-USSD-response.html">VOICE Cancel USSD response</a></span><span class="refpurpose"> — Methods to manage the VOICE Cancel USSD response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Originate-USSD-No-Wait-response.html">VOICE Originate USSD No Wait response</a></span><span class="refpurpose"> — Methods to manage the VOICE Originate USSD No Wait response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Get-All-Call-Info-response.html">VOICE Get All Call Info response</a></span><span class="refpurpose"> — Methods to manage the VOICE Get All Call Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Burst-DTMF-response.html">VOICE Burst DTMF response</a></span><span class="refpurpose"> — Methods to manage the VOICE Burst DTMF response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Start-Continuous-DTMF-response.html">VOICE Start Continuous DTMF response</a></span><span class="refpurpose"> — Methods to manage the VOICE Start Continuous DTMF response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-VOICE-Stop-Continuous-DTMF-response.html">VOICE Stop Continuous DTMF response</a></span><span class="refpurpose"> — Methods to manage the VOICE Stop Continuous DTMF response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch13.html">Location Service (LOC)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientLoc.html">QmiClientLoc</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the LOC service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-enumerations-and-flags.html">LOC enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the LOC service.</span>
+</dt>
+<dt><span class="section"><a href="ch13.html#id-1.14.4">LOC Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Position-Report-indication.html">LOC Position Report indication</a></span><span class="refpurpose"> — Methods to manage the LOC Position Report indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-NMEA-indication.html">LOC NMEA indication</a></span><span class="refpurpose"> — Methods to manage the LOC NMEA indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-GNSS-Sv-Info-indication.html">LOC GNSS Sv Info indication</a></span><span class="refpurpose"> — Methods to manage the LOC GNSS Sv Info indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Engine-State-indication.html">LOC Engine State indication</a></span><span class="refpurpose"> — Methods to manage the LOC Engine State indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Fix-Recurrence-Type-indication.html">LOC Fix Recurrence Type indication</a></span><span class="refpurpose"> — Methods to manage the LOC Fix Recurrence Type indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Operation-Mode-indication.html">LOC Get Operation Mode indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Operation Mode indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Operation-Mode-indication.html">LOC Set Operation Mode indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Operation Mode indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Engine-Lock-indication.html">LOC Get Engine Lock indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Engine Lock indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Engine-Lock-indication.html">LOC Set Engine Lock indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Engine Lock indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-NMEA-Types-indication.html">LOC Set NMEA Types indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set NMEA Types indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-NMEA-Types-indication.html">LOC Get NMEA Types indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get NMEA Types indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Server-indication.html">LOC Set Server indication</a></span><span class="refpurpose"> — Methods to manage the LOC Set Server indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Server-indication.html">LOC Get Server indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Server indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Predicted-Orbits-Data-indication.html">LOC Inject Predicted Orbits Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Predicted Orbits Data indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Predicted-Orbits-Data-Source-indication.html">LOC Get Predicted Orbits Data Source indication</a></span><span class="refpurpose"> — Methods to manage the LOC Get Predicted Orbits Data Source indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Delete-Assistance-Data-indication.html">LOC Delete Assistance Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Delete Assistance Data indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Xtra-Data-indication.html">LOC Inject Xtra Data indication</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Xtra Data indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch13s02.html">LOC Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Start-response.html">LOC Start response</a></span><span class="refpurpose"> — Methods to manage the LOC Start response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Stop-response.html">LOC Stop response</a></span><span class="refpurpose"> — Methods to manage the LOC Stop response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Register-Events-response.html">LOC Register Events response</a></span><span class="refpurpose"> — Methods to manage the LOC Register Events response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Operation-Mode-response.html">LOC Get Operation Mode response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Operation Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Operation-Mode-response.html">LOC Set Operation Mode response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Operation Mode response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Engine-Lock-response.html">LOC Get Engine Lock response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Engine Lock response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Engine-Lock-response.html">LOC Set Engine Lock response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Engine Lock response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-NMEA-Types-response.html">LOC Set NMEA Types response</a></span><span class="refpurpose"> — Methods to manage the LOC Set NMEA Types response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-NMEA-Types-response.html">LOC Get NMEA Types response</a></span><span class="refpurpose"> — Methods to manage the LOC Get NMEA Types response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Set-Server-response.html">LOC Set Server response</a></span><span class="refpurpose"> — Methods to manage the LOC Set Server response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Server-response.html">LOC Get Server response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Server response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Predicted-Orbits-Data-response.html">LOC Inject Predicted Orbits Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Predicted Orbits Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Get-Predicted-Orbits-Data-Source-response.html">LOC Get Predicted Orbits Data Source response</a></span><span class="refpurpose"> — Methods to manage the LOC Get Predicted Orbits Data Source response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Delete-Assistance-Data-response.html">LOC Delete Assistance Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Delete Assistance Data response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-LOC-Inject-Xtra-Data-response.html">LOC Inject Xtra Data response</a></span><span class="refpurpose"> — Methods to manage the LOC Inject Xtra Data response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch14.html">QoS Service (QoS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientQos.html">QmiClientQos</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the QOS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-enumerations-and-flags.html">QOS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the QOS service.</span>
+</dt>
+<dt><span class="section"><a href="ch14.html#id-1.15.4">QoS Indications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Flow-Status-indication.html">QOS Flow Status indication</a></span><span class="refpurpose"> — Methods to manage the QOS Flow Status indication.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Network-Status-indication.html">QOS Network Status indication</a></span><span class="refpurpose"> — Methods to manage the QOS Network Status indication.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch14s02.html">QoS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Reset-response.html">QOS Reset response</a></span><span class="refpurpose"> — Methods to manage the QOS Reset response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Get-Flow-Status-response.html">QOS Get Flow Status response</a></span><span class="refpurpose"> — Methods to manage the QOS Get Flow Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Get-Network-Status-response.html">QOS Get Network Status response</a></span><span class="refpurpose"> — Methods to manage the QOS Get Network Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-QOS-Swi-Read-Data-Stats-response.html">QOS Swi Read Data Stats response</a></span><span class="refpurpose"> — Methods to manage the QOS Swi Read Data Stats response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch15.html">General Application Service (GAS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientGas.html">QmiClientGas</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the GAS service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GAS-enumerations-and-flags.html">GAS enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the GAS service.</span>
+</dt>
+<dt><span class="section"><a href="ch15.html#id-1.16.4">GAS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GAS-DMS-Set-USB-Composition-response.html">GAS DMS Set USB Composition response</a></span><span class="refpurpose"> — Methods to manage the GAS DMS Set USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GAS-DMS-Get-USB-Composition-response.html">GAS DMS Get USB Composition response</a></span><span class="refpurpose"> — Methods to manage the GAS DMS Get USB Composition response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GAS-DMS-Get-Firmware-List-response.html">GAS DMS Get Firmware List response</a></span><span class="refpurpose"> — Methods to manage the GAS DMS Get Firmware List response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GAS-DMS-Set-Active-Firmware-response.html">GAS DMS Set Active Firmware response</a></span><span class="refpurpose"> — Methods to manage the GAS DMS Set Active Firmware response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch16.html">General Modem Service (GMS)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientGms.html">QmiClientGms</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the GMS service.</span>
+</dt>
+<dt><span class="section"><a href="ch16.html#id-1.17.3">GMS Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GMS-Test-Set-Value-response.html">GMS Test Set Value response</a></span><span class="refpurpose"> — Methods to manage the GMS Test Set Value response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-GMS-Test-Get-Value-response.html">GMS Test Get Value response</a></span><span class="refpurpose"> — Methods to manage the GMS Test Get Value response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch17.html">Data System Determination (DSD)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientDsd.html">QmiClientDsd</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the DSD service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-enumerations-and-flags.html">DSD enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the DSD service.</span>
+</dt>
+<dt><span class="section"><a href="ch17.html#id-1.18.4">DSD Indications</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-System-Status-indication.html">DSD System Status indication</a></span><span class="refpurpose"> — Methods to manage the DSD System Status indication.</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch17s02.html">DSD Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-Get-System-Status-response.html">DSD Get System Status response</a></span><span class="refpurpose"> — Methods to manage the DSD Get System Status response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-System-Status-Change-response.html">DSD System Status Change response</a></span><span class="refpurpose"> — Methods to manage the DSD System Status Change response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-Get-APN-Info-response.html">DSD Get APN Info response</a></span><span class="refpurpose"> — Methods to manage the DSD Get APN Info response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DSD-Set-APN-Type-response.html">DSD Set APN Type response</a></span><span class="refpurpose"> — Methods to manage the DSD Set APN Type response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch18.html">Specific Absorption Rate (SAR)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientSar.html">QmiClientSar</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the SAR service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-SAR-enumerations-and-flags.html">SAR enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the SAR service.</span>
+</dt>
+<dt><span class="section"><a href="ch18.html#id-1.19.4">SAR Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-SAR-RF-Set-State-response.html">SAR RF Set State response</a></span><span class="refpurpose"> — Methods to manage the SAR RF Set State response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-SAR-RF-Get-State-response.html">SAR RF Get State response</a></span><span class="refpurpose"> — Methods to manage the SAR RF Get State response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch19.html">Data Port Mapper (DPM)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientDpm.html">QmiClientDpm</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the DPM service.</span>
+</dt>
+<dt><span class="section"><a href="ch19.html#id-1.20.3">DPM Requests</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DPM-Open-Port-response.html">DPM Open Port response</a></span><span class="refpurpose"> — Methods to manage the DPM Open Port response.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-DPM-Close-Port-response.html">DPM Close Port response</a></span><span class="refpurpose"> — Methods to manage the DPM Close Port response.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch20.html">Foxconn Modem Service (FOX)</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="QmiClientFox.html">QmiClientFox</a></span><span class="refpurpose"> — <span class="type">QmiClient</span> for the FOX service.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libqmi-glib-FOX-enumerations-and-flags.html">FOX enumerations and flags</a></span><span class="refpurpose"> — Enumerations and flags in the FOX service.</span>
+</dt>
+<dt><span class="section"><a href="ch20.html#id-1.21.4">FOX Requests</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-FOX-Get-Firmware-Version-response.html">FOX Get Firmware Version response</a></span><span class="refpurpose"> — Methods to manage the FOX Get Firmware Version response.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch21.html">Compatibility with older versions</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="libqmi-glib-Deprecated-Interface.html">Deprecated Interface</a></span><span class="refpurpose"> — Deprecated types and methods.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="object-tree.html">Object Hierarchy</a></span></dt>
+<dt><span class="chapter"><a href="api-index-full.html">Index</a></span></dt>
+<dt><span class="chapter"><a href="api-index-deprecated.html">Index of deprecated symbols</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-0.html">Index of new symbols in 1.0</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-4.html">Index of new symbols in 1.4</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-6.html">Index of new symbols in 1.6</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-8.html">Index of new symbols in 1.8</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-10.html">Index of new symbols in 1.10</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-12.html">Index of new symbols in 1.12</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-14.html">Index of new symbols in 1.14</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-16.html">Index of new symbols in 1.16</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-18.html">Index of new symbols in 1.18</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-20.html">Index of new symbols in 1.20</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-22.html">Index of new symbols in 1.22</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-22-4.html">Index of new symbols in 1.22.4</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-24.html">Index of new symbols in 1.24</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-24-6.html">Index of new symbols in 1.24.6</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-26.html">Index of new symbols in 1.26</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-26-2.html">Index of new symbols in 1.26.2</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-26-6.html">Index of new symbols in 1.26.6</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-28.html">Index of new symbols in 1.28</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-28-6.html">Index of new symbols in 1.28.6</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-30.html">Index of new symbols in 1.30</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-30-2.html">Index of new symbols in 1.30.2</a></span></dt>
+<dt><span class="chapter"><a href="api-index-1-32.html">Index of new symbols in 1.32</a></span></dt>
+<dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

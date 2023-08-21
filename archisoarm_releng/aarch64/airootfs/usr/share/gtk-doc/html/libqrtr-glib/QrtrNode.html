@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QrtrNode: libqrtr-glib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="libqrtr-glib Reference Manual">
+<link rel="up" href="ch01.html" title="Core">
+<link rel="prev" href="QrtrBus.html" title="QrtrBus">
+<link rel="next" href="QrtrClient.html" title="QrtrClient">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#QrtrNode.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#QrtrNode.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#QrtrNode.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#QrtrNode.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="QrtrBus.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="QrtrClient.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="QrtrNode"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="QrtrNode.top_of_page"></a>QrtrNode</span></h2>
+<p>QrtrNode — QRTR node handler.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="QrtrNode.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-service-info-get-service" title="qrtr_node_service_info_get_service ()">qrtr_node_service_info_get_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-service-info-get-port" title="qrtr_node_service_info_get_port ()">qrtr_node_service_info_get_port</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-service-info-get-version" title="qrtr_node_service_info_get_version ()">qrtr_node_service_info_get_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-service-info-get-instance" title="qrtr_node_service_info_get_instance ()">qrtr_node_service_info_get_instance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-service-info-free" title="qrtr_node_service_info_free ()">qrtr_node_service_info_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-get-id" title="qrtr_node_get_id ()">qrtr_node_get_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-peek-bus" title="qrtr_node_peek_bus ()">qrtr_node_peek_bus</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-get-bus" title="qrtr_node_get_bus ()">qrtr_node_get_bus</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-peek-service-info-list" title="qrtr_node_peek_service_info_list ()">qrtr_node_peek_service_info_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-get-service-info-list" title="qrtr_node_get_service_info_list ()">qrtr_node_get_service_info_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint32"><span class="returnvalue">gint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-lookup-port" title="qrtr_node_lookup_port ()">qrtr_node_lookup_port</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint32"><span class="returnvalue">gint32</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-lookup-service" title="qrtr_node_lookup_service ()">qrtr_node_lookup_service</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-wait-for-services" title="qrtr_node_wait_for_services ()">qrtr_node_wait_for_services</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="QrtrNode.html#qrtr-node-wait-for-services-finish" title="qrtr_node_wait_for_services_finish ()">qrtr_node_wait_for_services_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *</td>
+<td class="property_name"><a class="link" href="QrtrNode.html#QrtrNode--bus" title="The “bus” property">bus</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="QrtrNode.html#QrtrNode--node-id" title="The “node-id” property">node-id</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="QrtrNode.html#QrtrNode-node-removed" title="The “node-removed” signal">node-removed</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="QrtrNode.html#QrtrNode-service-added" title="The “service-added” signal">service-added</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="QrtrNode.html#QrtrNode-service-removed" title="The “service-removed” signal">service-removed</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="QrtrNodeServiceInfo"></a><div class="refsect1">
+<a name="QrtrNode.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo-struct" title="QrtrNodeServiceInfo">QrtrNodeServiceInfo</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QRTR-NODE-BUS:CAPS" title="QRTR_NODE_BUS">QRTR_NODE_BUS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QRTR-NODE-ID:CAPS" title="QRTR_NODE_ID">QRTR_NODE_ID</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QRTR-NODE-SIGNAL-SERVICE-ADDED:CAPS" title="QRTR_NODE_SIGNAL_SERVICE_ADDED">QRTR_NODE_SIGNAL_SERVICE_ADDED</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QRTR-NODE-SIGNAL-SERVICE-REMOVED:CAPS" title="QRTR_NODE_SIGNAL_SERVICE_REMOVED">QRTR_NODE_SIGNAL_SERVICE_REMOVED</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QRTR-NODE-SIGNAL-REMOVED:CAPS" title="QRTR_NODE_SIGNAL_REMOVED">QRTR_NODE_SIGNAL_REMOVED</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="QrtrNode.html#QrtrNode-struct" title="QrtrNode">QrtrNode</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> QrtrNodeServiceInfo
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> QrtrNode
+</pre>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.description"></a><h2>Description</h2>
+<p><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> represents a device on the QRTR bus and can be used to look up
+services published by that device.</p>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="qrtr-node-service-info-get-service"></a><h3>qrtr_node_service_info_get_service ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+qrtr_node_service_info_get_service (<em class="parameter"><code><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> *info</code></em>);</pre>
+<p>Get the service number from the <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-service.returns"></a><h4>Returns</h4>
+<p> the service number.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-service-info-get-port"></a><h3>qrtr_node_service_info_get_port ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+qrtr_node_service_info_get_port (<em class="parameter"><code><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> *info</code></em>);</pre>
+<p>Get the port number from the <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-port.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-port.returns"></a><h4>Returns</h4>
+<p> the port number.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-service-info-get-version"></a><h3>qrtr_node_service_info_get_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+qrtr_node_service_info_get_version (<em class="parameter"><code><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> *info</code></em>);</pre>
+<p>Get the version number from the <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-version.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-version.returns"></a><h4>Returns</h4>
+<p> the version number.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-service-info-get-instance"></a><h3>qrtr_node_service_info_get_instance ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+qrtr_node_service_info_get_instance (<em class="parameter"><code><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> *info</code></em>);</pre>
+<p>Get the instance number from the <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-instance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-service-info-get-instance.returns"></a><h4>Returns</h4>
+<p> the instance number.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-service-info-free"></a><h3>qrtr_node_service_info_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qrtr_node_service_info_free (<em class="parameter"><code><a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> *info</code></em>);</pre>
+<p>Frees a single <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>, as returned by <a class="link" href="QrtrNode.html#qrtr-node-get-service-info-list" title="qrtr_node_get_service_info_list ()"><code class="function">qrtr_node_get_service_info_list()</code></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-service-info-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-get-id"></a><h3>qrtr_node_get_id ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+qrtr_node_get_id (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>);</pre>
+<p>Gets the node ID in the QRTR bus.</p>
+<div class="refsect3">
+<a name="qrtr-node-get-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-get-id.returns"></a><h4>Returns</h4>
+<p> the node id.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-peek-bus"></a><h3>qrtr_node_peek_bus ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+qrtr_node_peek_bus (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>);</pre>
+<p>Get the <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> where this node is available, without increasing the
+reference count on the returned object.</p>
+<div class="refsect3">
+<a name="qrtr-node-peek-bus.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-peek-bus.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a>. Do not free the returned object, it is
+owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-get-bus"></a><h3>qrtr_node_get_bus ()</h3>
+<pre class="programlisting"><a class="link" href="QrtrBus.html" title="QrtrBus"><span class="returnvalue">QrtrBus</span></a> *
+qrtr_node_get_bus (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>);</pre>
+<p>Get the <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> where this node is available.</p>
+<div class="refsect3">
+<a name="qrtr-node-get-bus.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-get-bus.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> that must be freed with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-peek-service-info-list"></a><h3>qrtr_node_peek_service_info_list ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+qrtr_node_peek_service_info_list (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>);</pre>
+<p>Get the list of services currently supported by the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-peek-service-info-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-peek-service-info-list.returns"></a><h4>Returns</h4>
+<p>a <a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> elements. Do not
+free the returned object, it is owned by <em class="parameter"><code>self</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> QrtrNodeServiceInfo][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-get-service-info-list"></a><h3>qrtr_node_get_service_info_list ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+qrtr_node_get_service_info_list (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>);</pre>
+<p>Get the list of services currently supported by the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-get-service-info-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-get-service-info-list.returns"></a><h4>Returns</h4>
+<p>a <a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="QrtrNode.html#QrtrNodeServiceInfo"><span class="type">QrtrNodeServiceInfo</span></a> elements, that
+must be freed with <a href="../glib/glib-Doubly-Linked-Lists.html#g-list-free-full"><code class="function">g_list_free_full()</code></a> using <a class="link" href="QrtrNode.html#qrtr-node-service-info-free" title="qrtr_node_service_info_free ()"><code class="function">qrtr_node_service_info_free()</code></a>
+as <a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a>. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> QrtrNodeServiceInfo][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-lookup-port"></a><h3>qrtr_node_lookup_port ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint32"><span class="returnvalue">gint32</span></a>
+qrtr_node_lookup_port (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> service</code></em>);</pre>
+<p>If a server has announced itself for the given node and service number,
+return the port number of that service.</p>
+<p>If multiple instances are registered, this method returns the port number
+for the service with the highest version number.</p>
+<div class="refsect3">
+<a name="qrtr-node-lookup-port.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>a service number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-lookup-port.returns"></a><h4>Returns</h4>
+<p> the port number of the service in the node, or -1 if not found.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-lookup-service"></a><h3>qrtr_node_lookup_service ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint32"><span class="returnvalue">gint32</span></a>
+qrtr_node_lookup_service (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> port</code></em>);</pre>
+<p>If a server has announced itself for the given node and port number,
+return the service it serves.</p>
+<div class="refsect3">
+<a name="qrtr-node-lookup-service.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>port</p></td>
+<td class="parameter_description"><p>a port number.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-lookup-service.returns"></a><h4>Returns</h4>
+<p> the service number, or -1 if not found.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-wait-for-services"></a><h3>qrtr_node_wait_for_services ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+qrtr_node_wait_for_services (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *services</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout_ms</code></em>,
+                             <em class="parameter"><code><a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                             <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Asynchronously waits until all the services listed in <em class="parameter"><code>services</code></em>
+ are present
+on the node.</p>
+<p>The operation may fail if any of the requested services isn't notified, or
+if the node is removed from the bus while waiting.</p>
+<p>When the operation is finished <em class="parameter"><code>callback</code></em>
+ will be called. You can then call
+<a class="link" href="QrtrNode.html#qrtr-node-wait-for-services-finish" title="qrtr_node_wait_for_services_finish ()"><code class="function">qrtr_node_wait_for_services_finish()</code></a> to get the result of the
+operation.</p>
+<div class="refsect3">
+<a name="qrtr-node-wait-for-services.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>services</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> of service types. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint32]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout_ms</p></td>
+<td class="parameter_description"><p>the timeout, in milliseconds, to wait for the the services to
+be exposed in the node.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a>, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>callback</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data to pass to <em class="parameter"><code>callback</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="qrtr-node-wait-for-services-finish"></a><h3>qrtr_node_wait_for_services_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+qrtr_node_wait_for_services_finish (<em class="parameter"><code><a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self</code></em>,
+                                    <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Finishes an operation started with <a class="link" href="QrtrNode.html#qrtr-node-wait-for-services" title="qrtr_node_wait_for_services ()"><code class="function">qrtr_node_wait_for_services()</code></a>.</p>
+<div class="refsect3">
+<a name="qrtr-node-wait-for-services-finish.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result</p></td>
+<td class="parameter_description"><p>a <a href="../gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="qrtr-node-wait-for-services-finish.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if all requested services are present on this node,
+or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="QrtrNodeServiceInfo-struct"></a><h3>QrtrNodeServiceInfo</h3>
+<pre class="programlisting">typedef struct _QrtrNodeServiceInfo QrtrNodeServiceInfo;</pre>
+<p>Information for a service instance in the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-NODE-BUS:CAPS"></a><h3>QRTR_NODE_BUS</h3>
+<pre class="programlisting">#define QRTR_NODE_BUS "bus"
+</pre>
+<p>The QRTR bus.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-NODE-ID:CAPS"></a><h3>QRTR_NODE_ID</h3>
+<pre class="programlisting">#define QRTR_NODE_ID "node-id"
+</pre>
+<p>The node id.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-NODE-SIGNAL-SERVICE-ADDED:CAPS"></a><h3>QRTR_NODE_SIGNAL_SERVICE_ADDED</h3>
+<pre class="programlisting">#define QRTR_NODE_SIGNAL_SERVICE_ADDED "service-added"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrNode.html#QrtrNode-service-added" title="The “service-added” signal"><span class="type">“service-added”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-NODE-SIGNAL-SERVICE-REMOVED:CAPS"></a><h3>QRTR_NODE_SIGNAL_SERVICE_REMOVED</h3>
+<pre class="programlisting">#define QRTR_NODE_SIGNAL_SERVICE_REMOVED "service-removed"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrNode.html#QrtrNode-service-removed" title="The “service-removed” signal"><span class="type">“service-removed”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QRTR-NODE-SIGNAL-REMOVED:CAPS"></a><h3>QRTR_NODE_SIGNAL_REMOVED</h3>
+<pre class="programlisting">#define QRTR_NODE_SIGNAL_REMOVED "node-removed"
+</pre>
+<p>Symbol defining the <a class="link" href="QrtrNode.html#QrtrNode-node-removed" title="The “node-removed” signal"><span class="type">“node-removed”</span></a> signal.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrNode-struct"></a><h3>QrtrNode</h3>
+<pre class="programlisting">typedef struct _QrtrNode QrtrNode;</pre>
+<p>The <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> structure contains private data and should only be accessed
+using the provided API.</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="QrtrNode--bus"></a><h3>The <code class="literal">“bus”</code> property</h3>
+<pre class="programlisting">  “bus”                      <a class="link" href="QrtrBus.html" title="QrtrBus"><span class="type">QrtrBus</span></a> *</pre>
+<p>QRTR bus.</p>
+<p>Owner: QrtrNode</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrNode--node-id"></a><h3>The <code class="literal">“node-id”</code> property</h3>
+<pre class="programlisting">  “node-id”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>ID of the QRTR node.</p>
+<p>Owner: QrtrNode</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="QrtrNode.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="QrtrNode-node-removed"></a><h3>The <code class="literal">“node-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>  user_data)</pre>
+<p>The ::node-removed signal is emitted when the node fully disappears from
+the QRTR bus.</p>
+<div class="refsect3">
+<a name="QrtrNode-node-removed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrNode-service-added"></a><h3>The <code class="literal">“service-added”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>     service,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>  user_data)</pre>
+<p>The ::service-added signal is emitted when a new service registers
+on the QRTR node.</p>
+<div class="refsect3">
+<a name="QrtrNode-service-added.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>the service ID of the service that has been added</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="QrtrNode-service-removed"></a><h3>The <code class="literal">“service-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a> *self,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>     service,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>  user_data)</pre>
+<p>The ::service-removed signal is emitted when a service deregisters
+from the QRTR node.</p>
+<div class="refsect3">
+<a name="QrtrNode-service-removed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the <a class="link" href="QrtrNode.html" title="QrtrNode"><span class="type">QrtrNode</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service</p></td>
+<td class="parameter_description"><p>the service ID of the service that was removed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-1-0.html#api-index-1.0">1.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

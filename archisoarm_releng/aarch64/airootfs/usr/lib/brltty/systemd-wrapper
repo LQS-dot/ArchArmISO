@@ -1,0 +1,108 @@
+#!/bin/bash -p
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2022 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU Lesser General Public License, as published by the Free Software
+# Foundation; either version 2.1 of the License, or (at your option) any
+# later version. Please see the file LICENSE-LGPL for details.
+#
+# Web Page: http://brltty.app/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+set -e
+readonly defaultPath="/etc/brltty.conf"
+
+readonly programPrefix="brltty-"
+programName="${0##*/}"
+[ "${programName#${programPrefix}}" = "${programName}" ] && programName="${programPrefix}${programName}"
+readonly programName
+
+programMessage() {
+  local message="${1}"
+  local level="${2}"
+
+  logger -p "daemon.${level:-info}" -t "${programName}" -- "${1}" &&
+  [ ! -t 2 ] ||
+  echo >&2 "${programName}: ${message}"
+}
+
+errorMessage() {
+  local message="${1}"
+  local code="${2}"
+
+  programMessage "${message}" err
+  exit "${code:-1}"
+}
+
+syntaxError() {
+  local message="${1}"
+
+  errorMessage "${message}" 2
+}
+
+semanticError() {
+  local message="${1}"
+
+  errorMessage "${message}" 3
+}
+
+instancePath="${BRLTTY_SYSTEMD_INSTANCE:-${defaultPath}}"
+[ "${instancePath#/}" = "${instancePath}" ] && instancePath="/${instancePath}"
+readonly instancePath
+
+if [ "${instancePath#/sys/}" != "${instancePath}" ]
+then
+  isDeviceInstance=true
+  udevOption="path"
+elif [ -c "${instancePath}" ]
+then
+  isDeviceInstance=true
+  udevOption="name"
+elif [ -f "${instancePath}" ]
+then
+  isDeviceInstance=false
+elif [ -e "${instancePath}" ]
+then
+  semanticError "unsupported instance path: ${instancePath}"
+else
+  semanticError "instance path not found: ${instancePath}"
+fi
+
+if "${isDeviceInstance}"
+then
+  isUdevManaged=false
+
+  while read line
+  do
+    if [[ "${line}" =~ ^'N: ' ]]
+    then
+      isUdevManaged=true
+    elif [[ "${line}" =~ ^'E: '([^ =]+)=(.*) ]]
+    then
+      name="${BASH_REMATCH[1]}"
+      value="${BASH_REMATCH[2]}"
+
+      [[ "${name}" =~ ^'BRLTTY_' ]] || continue
+      [ -z "${!name}" ] || continue
+
+      export "${name}=${value}"
+    fi
+  done < <((udevadm info --"${udevOption}"="${instancePath}" --export 2>/dev/null))
+
+  "${isUdevManaged}" || semanticError "instance path not managed by udev: ${instancePath}"
+else
+  export BRLTTY_CONFIGURATION_FILE="${instancePath}"
+fi
+
+set -- "${BRLTTY_EXECUTABLE_PATH:-brltty}" -E ${BRLTTY_EXECUTABLE_ARGUMENTS} "${@}"
+programMessage "executing command: ${*}" info
+exec "${@}"
+exit "${?}"

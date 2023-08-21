@@ -1,0 +1,47 @@
+%NAME%
+liblouis
+
+%VERSION%
+3.26.0-1
+
+%BASE%
+liblouis
+
+%DESC%
+Braille translator and back-translator library
+
+%URL%
+https://liblouis.io/
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1686232014
+
+%INSTALLDATE%
+1691208520
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+13211559
+
+%REASON%
+1
+
+%LICENSE%
+LGPL3
+GPL3
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+
+%OPTDEPENDS%
+libyaml: lou_checkyaml command
+python: Python bindings
+

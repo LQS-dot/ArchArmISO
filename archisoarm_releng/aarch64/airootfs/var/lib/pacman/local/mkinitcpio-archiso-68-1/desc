@@ -1,0 +1,49 @@
+%NAME%
+mkinitcpio-archiso
+
+%VERSION%
+68-1
+
+%BASE%
+mkinitcpio-archiso
+
+%DESC%
+Initcpio scripts used by archiso
+
+%URL%
+https://gitlab.archlinux.org/mkinitcpio/mkinitcpio-archiso
+
+%ARCH%
+any
+
+%BUILDDATE%
+1676982295
+
+%INSTALLDATE%
+1691208571
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+44202
+
+%LICENSE%
+GPL3
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+bash
+device-mapper
+mkinitcpio
+
+%OPTDEPENDS%
+curl: for PXE over HTTP
+gnupg: for PGP signature verification of rootfs over PXE
+mkinitcpio-nfs-utils: for PXE over NFS
+nbd: for PXE over NBD
+openssl: for CMS signature verification of rootfs over PXE
+pv: for status display during copy to RAM
+

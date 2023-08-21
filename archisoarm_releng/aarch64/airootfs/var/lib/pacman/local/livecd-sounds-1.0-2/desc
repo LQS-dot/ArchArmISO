@@ -1,0 +1,36 @@
+%NAME%
+livecd-sounds
+
+%VERSION%
+1.0-2
+
+%BASE%
+livecd-sounds
+
+%DESC%
+Sound files for accessibility features in a boot medium
+
+%URL%
+https://alex19ep.me/public/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1679724661
+
+%INSTALLDATE%
+1691208567
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+seattle@archlinuxarm.org>
+
+%SIZE%
+313665
+
+%LICENSE%
+custom:CCPL
+
+%VALIDATION%
+pgp
+

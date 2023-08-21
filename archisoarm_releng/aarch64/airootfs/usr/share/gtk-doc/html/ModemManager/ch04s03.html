@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Post-probing filters: ModemManager Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="ModemManager Reference Manual">
+<link rel="up" href="ref-overview-modem-port-probing.html" title="Port probing">
+<link rel="prev" href="ch04s02.html" title="Probing sequence">
+<link rel="next" href="ch04s04.html" title="Probing setup examples">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-overview-modem-port-probing.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch04s02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch04s04.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.2.5.6"></a>Post-probing filters</h2></div></div></div>
+<p>
+        Post-probing filters are required to identify whether a plugin can handle a given
+        modem, in special cases where the information retrieved from udev is either not
+        enough or wrong. This covers, for example, RS232 modems connected through a RS232
+        to USB converter, where udev-reported vendor ID is that of the converter, not the
+        one of the modem.
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p><span class="emphasis"><em>Allowed vendor strings</em></span></p>
+<p>
+            Plugins can provide a list of vendor strings to be used as post-probing
+            filters. If the vendor string reported by the device via AT commands
+            is found in the list provided by the plugin, the plugin will report that
+            it can handle this modem.
+          </p>
+<p>
+            This filter is specified by the <span class="type">MM_PLUGIN_ALLOWED_VENDOR_STRINGS</span>
+            property in the <span class="structname">MMPlugin</span> object provided
+            by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Product strings</em></span></p>
+<p>
+            Plugins can provide a list of pairs of vendor and product
+            strings to be used as post-probing filters.
+          </p>
+<p>
+            If the vendor and product string pair reported by the device via AT
+            commands is found in the 'allowed' list provided by the plugin, the
+            plugin will report that it can handle this modem. This additional filter
+            should be used when the plugin is expected to work only with a given
+            specific product of a given vendor.
+          </p>
+<p>
+            If the vendor and product string pair reported by the device via AT
+            commands is found in the 'forbidden list provided by the plugin, the
+            plugin will report that it cannot handle this modem. This additional filter
+            should be used when the plugin supports all devices of a given vendor, except for some specific ones.
+          </p>
+<p>
+            These filters are specified by the <span class="type">MM_PLUGIN_ALLOWED_PRODUCT_STRINGS</span>
+            and <span class="type">MM_PLUGIN_FORBIDDEN_PRODUCT_STRINGS</span> properties in the
+            <span class="structname">MMPlugin</span> object provided by the plugin.
+          </p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Icera support</em></span></p>
+<p>
+            Plugins can specify that they only support Icera-based modems, or that they
+            do not support any Icera-based modem. When either of this configurations is
+            enabled, the Icera support checks will be included in the
+            probing sequence, and the result of the check will help to determine whether
+            the plugin supports the modem or not.
+          </p>
+<p>
+            This filter is specified by the <span class="type">MM_PLUGIN_ALLOWED_ICERA</span> and
+            <span class="type">MM_PLUGIN_FORBIDDEN_ICERA</span> properties in the
+            <span class="structname">MMPlugin</span> object provided by the plugin.
+          </p>
+</li>
+</ul></div>
+<div class="note"><p>
+          Plugins which require post-probing filters will always be sorted last, and
+          therefore they will be the last ones being checked for pre-probing filters. This
+          is due to the fact that we need to assume that these plugins aren't able to
+          determine port support just with pre-probing filters, as we want to avoid
+          unnecessary probing sequences launched. Also note that the Generic plugin is
+          anyway always the last one in the list.
+        </p></div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

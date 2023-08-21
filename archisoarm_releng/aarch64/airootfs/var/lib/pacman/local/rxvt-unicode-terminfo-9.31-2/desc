@@ -1,0 +1,36 @@
+%NAME%
+rxvt-unicode-terminfo
+
+%VERSION%
+9.31-2
+
+%BASE%
+rxvt-unicode
+
+%DESC%
+Terminfo files for urxvt
+
+%URL%
+http://software.schmorp.de/pkg/rxvt-unicode.html
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1683975296
+
+%INSTALLDATE%
+1691208578
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+5042
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+

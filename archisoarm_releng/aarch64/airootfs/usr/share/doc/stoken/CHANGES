@@ -1,0 +1,123 @@
+V0.92 - 2017/11/12
+
+ - Update MinGW dependencies to work with Fedora 25 (bug #31)
+
+ - Fix compatibility with libtomcrypt 1.18 (bug #38)
+
+ - Invoke locally-generated libtool binary instead of assuming there is
+   one in the $PATH (bug #37)
+
+ - Use $USERPROFILE instead of $HOME on Windows 7 (bug #22)
+
+V0.91 - 2017/01/08
+
+ - Fix segfault if ~/.stokenrc is empty and another program invokes libstoken
+
+ - Squash extraneous newline from `stoken tokencode` if stdin isn't a
+   tty (bug #29)
+
+V0.90 - 2015/08/09
+
+ - Change version number from v0.9 -> v0.90 to make life easier for packagers
+
+V0.9 - 2015/07/25
+
+ - Fix corner case in SDTID reader (bug #21)
+
+ - Support Nettle 3.x (bug #20)
+
+ - Other minor fixes
+
+V0.81 - 2014/12/08
+
+ - Fix "make check" failures in GMT+xx timezones (xx >= 1)
+
+V0.8 - 2014/12/07
+
+ - Update GUI from GTK+2 to GTK+3; use glade to define the layouts
+
+ - Add next tokencode and other information to the full GUI (stoken-gui).
+   The "stoken-gui --small" layout is unchanged.
+
+ - Add a list of known GUIDs used to bind tokens to specific device classes
+   (i.e. tokens can be bound to "any BlackBerry 10").  stoken will now try
+   each one of these IDs when importing a new bound token.
+
+ - Add new --qr and --show-qr export options to make it easy to pass tokens
+   to a mobile device
+
+ - Add "stoken --next" option to show the next tokencode
+
+ - Support using nettle+gmp as an alternative to libtomcrypt
+
+ - Generate valid TKNTrailer BatchSignature sections in .sdtid output files,
+   allowing use with RSA's official TokenConverter utility
+
+ - Fix parsing of RSA-supplied hard token seed files
+
+ - Add "make check" and several test cases
+
+ - Fix build errors on Mac OSX, enable OSX Travis builds, and submit a
+   Homebrew formula
+
+ - Fix build errors when using uClibc instead of glibc
+
+ - Add experimental Windows build using MinGW (see README for instructions)
+
+ - Relicense the JNI wrapper (BSD-3-clause) so that it is easier to incorporate
+   into non-free Android apps
+
+ - Various fixes for minor bugs, memory leaks, etc.
+
+v0.6 - 2014/06/21
+
+ - Add support for reading and writing v3 (base64-encoded) Android tokens
+
+ - Add support for 30-second tokens.  Library users should call
+   stoken_get_info() to check the token interval.
+
+ - Add "stoken-gui --small" mode to conserve desktop space
+
+ - Enable Alt-C and Alt-Q keyboard shortcuts in stoken-gui
+
+ - Fix handling of cached PINs for library callers
+
+ - Fix JNI symbol exports
+
+ - Fix "stoken issue" if no token is imported
+
+ - Add new stoken_get_info() API to query the S/N and expiration date
+
+ - Minor documentation updates
+
+v0.5 - 2014/03/15
+
+ - Add support for importing/exporting sdtid XML files.  The library now
+   depends on libxml.
+
+ - Add JNI code for integration into Android apps
+
+ - Add support for 6-digit tokencodes
+
+ - Fix problems decrypting some device-ID-bound tokens (bug #3)
+
+ - Fix build failures on kfreebsd and Android
+
+ - Fix handling of PIN-less tokens
+
+ - Fix out-of-tree builds
+
+ - Don't strip stoken / stoken-gui binaries by default
+
+v0.2 - 2013/05/18
+
+ - Fix a couple of problems seen when manipulating tokens tied to a device
+   ID, particularly if the token was intended for a smartphone (bug #1)
+
+ - Clean up pkg-config dependencies
+
+ - Other minor cleanups
+
+v0.1 - 2012/11/17
+
+ - Initial public release

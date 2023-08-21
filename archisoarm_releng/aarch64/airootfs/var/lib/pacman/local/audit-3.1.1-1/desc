@@ -1,0 +1,56 @@
+%NAME%
+audit
+
+%VERSION%
+3.1.1-1
+
+%BASE%
+audit
+
+%DESC%
+Userspace components of the audit framework
+
+%URL%
+https://people.redhat.com/sgrubb/audit
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1683158344
+
+%INSTALLDATE%
+1691208497
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+1143363
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+LGPL2.1
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+glibc
+krb5
+libkrb5.so=3-64
+libgssapi_krb5.so=2-64
+libcap-ng
+libcap-ng.so=0-64
+
+%OPTDEPENDS%
+libldap: for audispd-zos-remote
+sh: for augenrules
+
+%PROVIDES%
+libaudit.so=1-64
+libauparse.so=0-64
+
